@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Early Modern Drama — Character Clustering</title>
+<style>
+  :root {
+    --fg: #1d1d1f;
+    --muted: #6b6b73;
+    --accent: #5a4a8a;
+    --bg: #fafaf7;
+    --card: #ffffff;
+    --rule: #e5e5e0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--fg); background: var(--bg);
+    margin: 0; padding: 0;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 96px; }
+  h1 { font-size: 1.9rem; margin: 0 0 .25em; letter-spacing: -.01em; }
+  .lede { color: var(--muted); font-size: 1.05rem; margin: 0 0 2.5em; }
+  h2 { font-size: 1.15rem; margin: 2em 0 .75em; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 18px 22px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .15s, transform .15s;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .card h3 { margin: 0 0 .25em; font-size: 1.05rem; color: var(--accent); }
+  .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+  .meta { color: var(--muted); font-size: .9rem; margin-top: 1.5em; }
+  code { background: #f2f2ec; padding: 1px 6px; border-radius: 4px; font-size: .92em; }
+  a.repo { color: var(--accent); }
+  .footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Character Clustering in Early Modern English Drama</h1>
+  <p class="lede">An interactive map of dramatic-character archetypes built from the full speech of every named character in the early modern English repertoire. Each point is a character; color encodes cluster.</p>
+
+  <h2>Cluster maps</h2>
+  <div class="cards">
+    <a class="card" href="interactive_clusters__baseline.html">
+      <h3>Baseline preset</h3>
+      <p>UMAP n_neighbors=15, HDBSCAN min_cluster_size=20. The recommended view.</p>
+    </a>
+    <a class="card" href="interactive_clusters__tuned_less_outliers.html">
+      <h3>Less-outliers preset</h3>
+      <p>UMAP n_neighbors=35, HDBSCAN min_cluster_size=30, min_samples=10. Smoother neighborhood graph.</p>
+    </a>
+  </div>
+
+  <h2>How to read the map</h2>
+  <p>Each point is a single character. Colors encode cluster (HDBSCAN). Hover for play, author, date, genre, role, cluster, and the cluster's top distinguishing words. Use the dropdown menus at the right to highlight a single decade, genre, author, play, play type, or theater at a time.</p>
+
+  <h2>About</h2>
+  <p>Characters were extracted from <a href="https://textcreationpartnership.org/" target="_blank" rel="noopener">EEBO-TCP</a>; play metadata is merged from Wiggins &amp; Richardson's <em>British Drama: A Catalogue of Plays</em> and from <a href="https://deep.sas.upenn.edu/" target="_blank" rel="noopener">DEEP</a>. Each character's full speech is encoded with the <code>Alibaba-NLP/gte-Qwen2-1.5B-instruct</code> long-context sentence model — no chunking. Clustering uses UMAP (5-D, cosine) then HDBSCAN; the visible 2-D map is a separate UMAP projection of the same embeddings.</p>
+
+  <p><a class="repo" href="https://github.com/hkim1596/early-modern-drama-character-clustering">→ View the source code on GitHub</a></p>
+
+  <div class="footer">
+    Built with Python, sentence-transformers, UMAP, HDBSCAN, and Plotly.
+  </div>
+</div>
+</body>
+</html>

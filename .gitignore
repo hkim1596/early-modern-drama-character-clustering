@@ -1,0 +1,37 @@
+# --- macOS ---
+.DS_Store
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# --- Large data files (regenerable from the pipeline) ---
+data/character_json_all/
+data/character_table.csv
+data/character_documents.csv
+data/embeddings.npy
+data/cluster_xy_table__*.csv
+data/reduced_5d__*.npy
+data/reduced_2d__*.npy
+data/clusters_hdbscan__*.npy
+data/dropped_short_characters.csv
+
+# --- Leftover scripts-output folder (06_visualize now writes to docs/) ---
+results/
+
+# --- HTML outputs over 100 MB ---
+# The "tuned_stricter" preset produces one giant cluster on this dataset, which makes the
+# HTML ~166 MB (over GitHub's hard 100 MB limit). Skip it; the baseline and less-outliers
+# presets are the informative ones.
+docs/interactive_clusters__tuned_stricter.html
+
+# --- Editor / temp ---
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
