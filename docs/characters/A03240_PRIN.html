@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRIN in A Maidenhead Well Lost · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PRIN</span>
+</nav>
+
+<h1>PRIN</h1>
+<p class="lede">in <em>A Maidenhead Well Lost</em> — Heywood, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1634</td></tr>
+<tr><th>Words</th><td>569</td></tr>
+<tr><th>Characters</th><td>3026</td></tr>
+<tr><th>BritDrama no.</th><td>2289</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">I much suspect that Ladies Chastity. I haue said. Now <mark>heare</mark> my protestations: I receiue This Ladies hand on these Conditions; If you, my Lord, her father, or her selfe, Know her selfe faulty,</div>
+<div class="excerpt">Equall with that of my great Ancestours; All this I vow, as I am Prince and vertuous. Shee&#x27;s mine: Set forwards then. Oh friend, was neuer man blest with a Bride So chast! I&#x27;me fearce my selfe, till this be knowne To my faire Forrest friend: Lett&#x27;s mount <mark>away</mark>, The nights quite spent; and now begins the day. Good morrow Lady: Wher&#x27;s</div>
+<div class="excerpt">Pray may wee see her? You know the Princesse Iulia was suppos&#x27;d to <mark>bee</mark> Adulterate— Oh but faire friend, she was indeed bely&#x27;d! And I this morning rose from her chast bed: But wherefore sweete cast you that blushing smile? But you haue broak promise with me: For you told me That the same day and houre I took my Bride, You should</div>
+<div class="excerpt">Lords, I bosom&#x27;d with As true and chaste a Virgin, as ere lodg&#x27;d Within a Princes armes; All this I vow As I am Royall. Sweet, will you tel mee that? With which you <mark>did</mark> receiue a Ring the Duke My father gaue me. Nay, looke not you deiected beautious Bride, For this is done onely to honour you. Sure spare&#x27;t for the Mothers sake;</div>
+<div class="excerpt">beautious Lady, As you esteeme a Prince his name or honour, That youd be a Mecenas vnto vertue; If in the least of these you guilty be, Pull backe your hand. If chaste? she shall be dearer farre to me. Then my owne soule: I will respect her honour, Equall with that of my great Ancestours; All this I vow, as I am Prince and vertuous.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I much suspect that Ladies Chastity. I haue said. Now heare my protestations: I receiue This Ladies hand on these Conditions; If you, my Lord, her father, or her selfe, Know her selfe faulty, Oh confesse it here, Before the Ceremonies fasten on me: for if hereafter I find you once corrupted? by this right hand, My future hopes, my Fathers royalty, And all the honours due vnto our house, He haue as many liues and heads for it, As he hath Manners Castles, Liues and Towres; It shall be worthy to be bookt in Chronicles Of all strange tongues: And therefore beautious Lady, As you esteeme a Prince his name or honour, That youd be a Mecenas vnto vertue; If in the least of these you guilty be, Pull backe your hand. If chaste? she shall be dearer farre to me. Then my owne soule: I will respect her honour, Equall with that of my great Ancestours; All this I vow, as I am Prince and vertuous. Shee&#x27;s mine: Set forwards then. Oh friend, was neuer man blest with a Bride So chast! I&#x27;me fearce my selfe, till this be knowne To my faire Forrest friend: Lett&#x27;s mount away, The nights quite spent; and now begins the day. Good morrow Lady: Wher&#x27;s your daughter pray? Pray may wee see her? You know the Princesse Iulia was suppos&#x27;d to bee Adulterate— Oh but faire friend, she was indeed bely&#x27;d! And I this morning rose from her chast bed: But wherefore sweete cast you that blushing smile? But you haue broak promise with me: For you told me That the same day and houre I took my Bride, You should Inioy a Princely Husband. And are you married then? Is hee oft fortunes? What haue you then, some tokens that were his? You amaze mee! Yet Rings may bee alike: If then your husband Bee of such state and fortunes, What dowre are you allotted. I gaue no more vnto my Iulia. But where is the security you haue For the performance of it? This is the Indenture that I gaue to Iulia; Preethee Lauretta, but resolue me true, How came you by this Charter? Rise, dee not weepe, Oh I am strangely rapt Into deepe strange confusion? I haue bethought already how to be are mee; This Charter and this Ring, faire Loue, keepe you; And when I send for you, you shall repaire Vnto the Court: This all I shall inioyne you. Come Mounsieur, now &#x27;tis cast, Reuenge neere rules, so it be found at last. I doe protest, my Lords, I bosom&#x27;d with As true and chaste a Virgin, as ere lodg&#x27;d Within a Princes armes; All this I vow As I am Royall. Sweet, will you tel mee that? With which you did receiue a Ring the Duke My father gaue me. Nay, looke not you deiected beautious Bride, For this is done onely to honour you. Sure spare&#x27;t for the Mothers sake; t&#x27;was sent to vs: Which of the trayne is wanting? Stroza, where is this Charter and the Ring? A strife, that nought saue combat can deside, The cause so full of doubts, and intricate. See, they are both arm&#x27;d, and euenly, without odds, Saue what the iustice of the cause can yeeld. Know Parma, thou hast kindled such a Flame, That all the Oceans billowes scarce can quench: Bee that onr quarrells ground.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Maidenhead Well Lost</div><div class="body">Julia has given herself sexually to her flance, the Prince of Parma, but is now concerned that he mav have fost interest in her: she has been told of a dalliance between him and Lauretta. When lulia publicly strikes Eauretta, Parma breaks off the engagement. In fact, Julia’. informant, Stroza, was lying: he has a grudge agamoat ===== PAGE 406 ===== Lauretta’s father, General Sforza, and has also been working to secure his downfall by delaying the shipment of money and supplies to the front. News arrives that the war is won, but that Sforza, unable to pay his men, gave them everything he had and died of grief. His widow pays the soldiers’ arrears out of her estate and leaves Milan with Lauretta. Fearful of dishonour, Julia tries to persuade Parma to stay by telling him she is pregnant. He denies paternity — she consented so readily to pre-marital sex that, misled by Stroza, he believes she must also have had other men - and leaves anyway. Her father the Duke learns of the situation, and sends Stroza to fetch Parma back, dead or alive. Julia’s unborn child saves her from execution for her misdeed, and she goes into hiding until the baby is born. When it is, the Duke orders Stroza to dispose of it, and plans to conceal her shame with a hasty marriage to another foreign prince. Stroza leaves the baby in a grove to be found by passers-by; sure enough, when he returns a few hours later, it has gone, found by Parma and recognized as his own true issue. Lauretta and her mother are found in the forest by the Prince of Florence, and installed by him in a ducal hunting lodge. She falls in love with him, but, knowing herself too low-born, gives cryptic answers to his questions about her love-life. Stroza arrives in Florence as an ambassador to negotiate a marriage between the Prince and Julia. The Duke of Florence accepts, and the Prince is obliged to consent. When he tells Lauretta about it, she initially assumes herself to be the bride, and continues her cryptic answers, telling him that she too will be marrying a prince at the exact same time; on learning he is to wed Julia, she faints. The Prince receives a letter from Parma warning him that Julia is unchaste, and he interrupts the wedding to raise the matter; only on receiving assurances of the bride’s virginity does he allow the ceremony to be completed. To avoid the deception being exposed on the wedding night, Stroza plans to put a substitute bride in the Prince’s bed, and bribes Lauretta to undertake the…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

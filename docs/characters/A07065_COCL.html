@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COCL in 214 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>COCL</span>
+</nav>
+
+<h1>COCL</h1>
+<p class="lede">in <em>214</em> — [94]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1605</td></tr>
+<tr><th>Words</th><td>915</td></tr>
+<tr><th>Characters</th><td>4864</td></tr>
+<tr><th>BritDrama no.</th><td>214</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">preſently, hold. Nothing faith but a ieſt boy, drinke that, Ile recoile pre ſently. As I am an honeſt man, the 3. razers? Good, and if I ſhaue not M. Mulligrub, my wit <mark>has</mark> no edge, and I may <mark>goe</mark> cacke in my pewter, let me ſee, a Barbar, my ſcurule tongue will diſcouer me, muſt diſſemble, muſt diſguiſe, for my beard, my falſe hayre,</div>
+<div class="excerpt">frailtie, fraile a Fraile-Hall? onus noches my vbiquitari. Nay, and it be but ſuch a trifle, Lord I could weep, to ſee your good Worſhip in this taking: your Worſhippe <mark>has</mark> beene a good friend to me, and tho you haue forgot me, yet I knewe your wife before ſhe was married, and ſince I haue found your Worſh. dore open and I haue knockt,</div>
+<div class="excerpt">brimſtone already, hang toſtes, the execution approcheth. Good <mark>woman</mark> hold your peace, your prittles &amp; your prat tles your bibbles and your babbles, for I pray you <mark>heare</mark> mee in priuate, I am a widdower, and you are almoſt a widdow, ſhal I be welcom to your houſes, to your tables, and your other things. No knaue worſh. friend, no</div>
+<div class="excerpt">Cocledemoy. Mounſier, pleaſe you to buy a fine delicate b ll, ſweet ball; a Camphyer ball. Faire hower to you Miſtreſſe. Your Husband, and my Maiſter Mr. Garniſh <mark>has</mark> ſent you a Iole of freſh Salmon, and they both will come to dinner to ſeaſon your new cup with the beſt wine, which cup your hus band intreats you to ſend backe</div>
+<div class="excerpt">widdow, ſhal I be welcom to your houſes, to your tables, and your other things. No knaue worſh. friend, no knaue, for obſerue honeſt C cledemoy reſtores whatſoeuer he <mark>has</mark> got, to make you know, that whatſoere he <mark>has</mark> don, <mark>has</mark> bin only Euphoniae gratia, for Wits ſake: I acquit this Vintner as he <mark>has</mark> acquitted me, all <mark>has</mark> bin done for</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">The more foole he, I can lye for my ſelfe, worſhipfull friend, hang toaſtes, I vanniſh. Ha my fine boy thou art a ſchol ler, and haſt read Tullies Offices, my fine knaue, hang toaſtes. I will draw the Vintner to the ſtoope, and when he runs low tilt him, he my fine knaue, art going to thy recreation. Thou wilt looke like a foole then by and by. Why according to the old ſaying, A begger when he is lowſing of himſelfe lookes like a Philoſopher, a hard bound Philoſopher, when he is on the ſtoole, lookes like a tyrant, and a 〈…〉 when hee is in his be y 〈◊〉 , lookes like a foole, God gi e your worſhip good reſt, grace and mercy keepe your Syring ſtraight, and your Lotium vnſpile. Ago tibi gratias, my worſhipfull friend, how do&#x27;es your friend? Hang toaſtes, my fine boy, my companion as worſhip full. Mothers ſonne, a good witty boy, would liue to read an Homilie well, and to whome are you going now? Doe you know M. Mulligrub? Good boy hold vp thy chops, I pray thee doe one thing for me, my name is Gudgeon. Lend me thy baſon, razer, and Apron. Wel ſpoke ̄ , good engliſh, but whats thy furniture worth? Well ſpoken, a boy of a good wit, holde this pawne, where doſt dwell. A ſigne of good ſhauing my caraſtrophonicall fine boy, I haue an odde ieſt to trim M. Mulligrub for a wager, a ieſt boy, a humor, Ile returne thy thinges preſently, hold. Nothing faith but a ieſt boy, drinke that, Ile recoile pre ſently. As I am an honeſt man, the 3. razers? Good, and if I ſhaue not M. Mulligrub, my wit has no edge, and I may goe cacke in my pewter, let me ſee, a Barbar, my ſcurule tongue will diſcouer me, muſt diſſemble, muſt diſguiſe, for my beard, my falſe hayre, for my tongue Spaniſh Dutch, or Welſh, no, a Northerne Barbar, very good, widdow Raine-ſ ures man well, newly entertainde, right, to, hang toſtes, a cardes haue white backes, and all knaues would ſeeme to haue white breaſter, ſo proceede, now worſhipfull Cocledemoy. Mounſier, pleaſe you to buy a fine delicate b ll, ſweet ball; a Camphyer ball. Faire hower to you Miſtreſſe. Your Husband, and my Maiſter Mr. Garniſh has ſent you a Iole of freſh Salmon, and they both will come to dinner to ſeaſon your new cup with the beſt wine, which cup your hus band intreats you to ſend backe by mee, that his armes may bee grau&#x27;d a the ſide, which he forgot before it was ſent. He ſent me by the ſame token, that he was dry ſhaued this morning. Shall be moſt ſincerely welcome, worſhipfull Coclede moy, lurke cloſe, hang toaſts, be not aſhamed of thy qualitie, eue rie mans turd ſmels well in&#x27;s owne noſe, vaniſh Foyſt. Exit. I muſt haue the Sammon to worſhip, Cocledemoy, now for the Maſter peece, God bleſſe thy necke peece, and Fowtra. Faire Miſtreſſe my Maſter. And deſired me, to deſire you to ſend the loſe of Sam mon before, and your ſelfe to come after to them, my Miſtreſſe would bee right glad to ſee you. So now Figo worſhipfull Mall ough, and I will monch Cheaters &amp; Bawds go together like waſhing &amp; wringing. Exit. Gooddy fiſte, flump … 〈◊〉 pum, a my fine Wagtaile, Thou art as falſe as proſtituted and adulcerate as ſome tranſlated manuſcript Buſſe ſayre whore, buſſe. Hedemoy key, get you gon Punck rampant, key common vp-taile. Ah my fine puncks, good night, Franke, frailtie, fraile a Fraile-Hall? onus noches my vbiquitari. Nay, and it be but ſuch a trifle, Lord I could weep, to ſee your good Worſhip in this taking: your Worſhippe has beene a good friend to me, and tho you haue forgot me, yet I knewe your wife before ſhe was married, and ſince I haue found your Worſh. dore open and I haue knockt, and God knows what I haue ſaued: and doe I liue to ſee your Worſhip ſtockt? So, I ha loſt my Sergeant in an ecliptique miſt, drunke, horrible drunke, he is fine: ſo now will I fit my ſelfe, I hope this habit will do me no harme, I am an honeſt man already: fit, fit, fit as a puncks taile, that ſerues euery body: By this time my Vintner thinkes of nothing but hel and ſulpher, he farts fire and brimſtone already, hang toſtes, the execution approcheth. Good woman hold your peace, your prittles &amp; your prat tles your bibbles and your babbles, for I pray you heare mee in priuate, I am a widdower, and you are almoſt a widdow, ſhal I be welcom to your houſes, to your tables, and your other things. No knaue worſh. friend, no knaue, for obſerue honeſt C cledemoy reſtores whatſoeuer he has got, to make you know, that whatſoere he has don, has bin only Euphoniae gratia, for Wits ſake: I acquit this Vintner as he has acquitted me, all has bin done for Emphiſes of wit my fine boie, my worſhipfull friends. I am ſo, tis a good thriuing trade, it coms forward better then the 7. liberal Sciences, or the nine cardinall vertues, whiche may well appeare in this, you ſhall neuer haue flattering knaue turn courtyer: and yet I haue read of many Courtyers that haue turned flattring knaues.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KING in Alaham · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_10.html">Cluster 10 — 10: death, realme, porrex</a> ›
+  <span>KING</span>
+</nav>
+
+<h1>KING</h1>
+<p class="lede">in <em>Alaham</em> — Greville, Fulke</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>1459</td></tr>
+<tr><th>Characters</th><td>7998</td></tr>
+<tr><th>BritDrama no.</th><td>1225</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 10 (<em>death, realme, porrex, noble, both, lordes…</em>). Matches are highlighted.</p>
+<div class="excerpt">not thee, and me. Kings plagues by chance, or destinie should fall; Headlong he perish <mark>must</mark> that ruines all. Celica! and wilt thou Alaham exceed? His crueltie is <mark>death</mark>, you torments vse; He takes my Crowne, you take my selfe from me; A <mark>Prince</mark> of this falne Empire let me be. If disobedience, and obedience <mark>both</mark> Still doe me hurt;</div>
+<div class="excerpt"><mark>death</mark>. Chance hath left <mark>death</mark> no more to spoile, but sense. Ah! Stay thy hand. My State no equall hath, And much more matchlesse my strange vices be: One kinde of <mark>death</mark> becomes not thee, and me. Kings plagues by chance, or destinie should fall; Headlong he perish <mark>must</mark> that ruines all. Celica! and wilt thou Alaham exceed? His crueltie</div>
+<div class="excerpt">loath&#x27;d, and desolate: Life without ioy, or light: what can it bring, But inward horrour vnto outward hate? O safety! thou art then a hatefull thing, When childrens <mark>death</mark> assures the fathers State. No; Safe I am not, though my sonne were slaine, My frailty would beget such sonnes againe. Besides, if fatall be the heauens will, Repining</div>
+<div class="excerpt">those who would vs good, Is Destinie impossibly withstood. Celica then cease; importune me no more: My sonne, my age, the state where things are now Require my <mark>death</mark>. Who would consent to liue, Where loue cannot reuenge, nor truth forgiue? Occasion to my sonne hath turn&#x27;d her face; My inward wants all outward strengths betray;</div>
+<div class="excerpt">wretch can only goe amisse. &quot; If Nature saw no cause of suddaine ends, &quot; She; that but one way made to draw our breath, &quot; Would not haue left so many doores to <mark>death</mark>. This sword, thy hands, may offer vp my breath, And plague my lifes remissenesse in my <mark>death</mark>. Chance hath left <mark>death</mark> no more to spoile, but sense. Ah! Stay thy</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Celica! thou only child, whom I repent Not yet to haue begot! thy worke is vaine: Thou run&#x27;st against my Destinies intent. Feare not my fall; the steepe is fayrest plaine, And error safest guide vnto his end, Who nothing but mischance can haue to friend. We parents are but Natures nursery, When our succession springs then ripe to fall; Priuation vnto age is naturall. Age there is also in a Princes State, Which is contempt, growne of misgouernment; Where loue of change begetteth Princes hate: For hopes must wither, or grow violent, If fortune binde desires to one Estate. Then marke: Blinde, as a Man: Scorn&#x27;d, as a King: A Fathers kindnesse loath&#x27;d, and desolate: Life without ioy, or light: what can it bring, But inward horrour vnto outward hate? O safety! thou art then a hatefull thing, When childrens death assures the fathers State. No; Safe I am not, though my sonne were slaine, My frailty would beget such sonnes againe. Besides, if fatall be the heauens will, Repining adds more force to destinie, Whose iron wheeles stay not on fleshly wit, But headlong runne downe steep Necessity. And as in danger, we doe catch at it That comes to helpe; and vnaduisedly Oft doe our friends to our misfortune knit: So with the harme of those who would vs good, Is Destinie impossibly withstood. Celica then cease; importune me no more: My sonne, my age, the state where things are now Require my death. Who would consent to liue, Where loue cannot reuenge, nor truth forgiue? Occasion to my sonne hath turn&#x27;d her face; My inward wants all outward strengths betray; And so make that impossible I may. Whose ruines glasses are, Wherin see errors of my selfe I must, And hold my life of danger, shame, and care. Nothing is left me, but my selfe, to lose. Where chance is ripe, there counsell comes too late: Celica! by all thou ow&#x27;st the Gods, and me, I doe coniure thee; Leaue me to my chance. What&#x27;s past was errors way; the truth it is, Wherein I wretch can only goe amisse. &quot; If Nature saw no cause of suddaine ends, &quot; She; that but one way made to draw our breath, &quot; Would not haue left so many doores to death. This sword, thy hands, may offer vp my breath, And plague my lifes remissenesse in my death. Chance hath left death no more to spoile, but sense. Ah! Stay thy hand. My State no equall hath, And much more matchlesse my strange vices be: One kinde of death becomes not thee, and me. Kings plagues by chance, or destinie should fall; Headlong he perish must that ruines all. Celica! and wilt thou Alaham exceed? His crueltie is death, you torments vse; He takes my Crowne, you take my selfe from me; A Prince of this falne Empire let me be. If disobedience, and obedience both Still doe me hurt; in what strange state am I? But hold thy course: It well becomes my blood, To doe their parents mischiefe with their good. Celica! Call vp the dead; awake the blinde; Turne backe the time; bid windes tell whence they come; As vainly strength speakes to a broken minde. Fly from me Celica! hate all I doe: Misfortunes haue in blood successions too. Haue I not done amisse? Am I not ill, That ruin&#x27;d haue a Kings authority? And not one King alone; since Princes all Feele part of those scornes, wherby one doth fall. Treason against me cannot treason be: All lawes haue lost authority in me. Put downe my sonne: For that must be the way; A fathers shame, a Princes Tyrannie: The Scepter euer shall misiudged be. Danger is come: and must I now vnarme? And let in hope to weaken resolution? Passion! be thou my Legacie, and Will; To thee I giue my life, Crowne, reputation; My pompes to clouds; and (as forlorne with men) My strength to women; hoping this alone, Though fear&#x27;d, sought, and a King, to liue vnknowne. Celica! all these to thee: doe thou bestow This liuing darknesse, wherein I doe goe. What sound is this of Celica&#x27;s distresse? Alaham! wrong not a silly sisters faith. &#x27;Tis plague enough that she is innocent; My child, thy sister; borne (by thee, and me) With shame, and sinne to haue affinity. Breake me; I am the prison of thy thought: Crownes deare enough, with fathers blood, are bought. Flatter thy wickednesse; adorne thy rage; To weare a Crowne teare vp thy Fathers age. Kill not thy sister: It is lacke of wit, To doe an ill that brings no good with it. &quot; O God! who mad&#x27;st those lawes which this &quot; Wretch breaks, &quot; Let parents blood this curse vpon him bring; &quot; That he, who of a child breakes all respect, &quot; May, in his children, finde the same neglect. LIke as strong windes doe worke vpon the Sea, Stirring, and tossing waues to warre each other: So Princes doe with Peoples humors play, As if Confusion were the Scepters mother. But Crownes! take heed: when humble things mount high, The windes oft calme before those billowes lie. When we are all wrong&#x27;d, had we all one minde, Whom could you punish? what could you reserue? Againe, as hope, and feare distract mankinde; Knew Kings their strength, our freedome were to serue. But Fate doth to her selfe reserue both these, With each to punish other, when it please. Grant that we be the stuffe for Princes art, By, and on it, to build their Thrones aboue vs: Yet if Kings be the head, we be the heart; And know we loue no soule, that doth not loue vs. Mens many passions iudge the worst at length, And they that doe so, easily know their strength: With bruit, and rumor, as with hope, and feare, You lay vs low, or lift vs from our earth; You trie what nature, what our States can beare; By law you bind the liberties of birth; Making the People bellowes vnto Fame, Which vshers heauy doomes with euill name. Kings gouerne People, ouer-racke them not: Fleece vs; but doe not clippe vs to the quicke. Thinke not with good, and ill, to write, and blot: The good doth vanish, where the ill doth sticke. Hope not with trifles to grow popular; Wounds that are heal&#x27;d for euer leaue a scarre. To offer People showes makes vs too great: Princes descend not, keep your selues aboue. The Sunne drawes not our browes vp, but our swear: Your safest racke to winde vs vp is Loue. To maske your vice in pompes is vainly done: Motes lie not hidden in beames of a Sunne. The stampe of Soueraignty makes currant Home brasse to buy, or sell, as well as gold: Yet marke! the Peoples standard is the warrant What man ought not to doe, and what he should. Of words we are the Grammar, and of deeds The haruest both is ours, and eke the seeds. We are the glasse of Power, and doe reflect That Image backe, which it to vs presents: If Princes flatter, straight we doe neglect; If they be fine, we see, yet seeme content. Nor can the Throne, which Monarchs doe liue in, Shaddow Kings faults, or sanctifye their sinne. Make not the Church to vs an instrument Of bondage, to your selues of libertie: Obedience there confirmes your Gouernment; Our Soueraignes, Gods Subalternes you be: Else while Kings fashion God in humane light, Men see, and skorne what is not Infinite. Make not the end of Iustice, Checquer -gaine, It is the Liberality of Kings: Oppression, and Extortion euer raigne, When Lawes looke more on Scepters, than on things. Make crooked that line which you measure by; And marre the fashion straight of Monarchie. Why doe you then prophane your Royall line, Which we hold sacred, and dare not approach? Their wounds, and wrongs proue you are not diuine, And we learne, by example, to encroch. Your Fathers losse of eyes foretells his end: By craft, which lets downe Princes, we ascend. How shall the People hope? how stay their feare, When old foundations daily are made new? Vncertaine is a heauy loade to beare; What is not constant sure was neuer true. Excesse in one makes all indefinite: Where nothing is our owne, there what delight? Kings then take heed! Men are the bookes of fate, Wherein your vices deep engrauen lye, To shew our God the griefe of euery State. And though great bodies do not straightwaies die; Yet know, Your errors haue this proper doome, Euen in our ruine to prepare your tombe. Alaham alone.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Alaham</div><div class="body">Before the start of the action, an oracle foretold that the kingdom’s security depended on the death of the King’s eldest son, Zophi; but the pashas, ruling during the King’s senility, merely banished him. Hala, wife of the younger son, Alaham, has had a series of affairs with pashas: first Muhammad, who was forced into exile as a result, then Cain. Seeking to secure his position, Alaham has recalled Muhammad, ===== PAGE 189 ===== 1600 but Muhammad has recalled Zophi in turn, cutting Alaham out of the succession. Hala seeks to make Cain king, and persuades him to murder Muhammad; but he changes his mind after Muhammad warns him of Alaham’s ambition: Cain will tell Alaham that Muhammad is dead, but in reality he will go into hiding. Meanwhile Alaham corrupts the guard, blinds his father and brother, and seizes power. When Cain tells him of Muhammad&#x27;s death, he is sent for execution — if not for murder then for lying about it, as he is told when he tries to save himself. Alaham’s sister Caelica helps Zophi and their father to take sanctuary in the temple. Alaham has the city searched, finds Caelica, and arrests her. Her cries bring the old King out of hiding, and he too is arrested. The King, Caelica, and Zophi are all burned to death; as they die, their souls call out for vengeance. Seeking to avenge Cain’s death, Hala sends Alaham a poisoned robe, and plans to kill their son before his face, so that the other child, Cain’s bastard, will inherit the kingdom; but she mistakenly kills the wrong infant. The robe kills Alaham; Hala intends to kill herself too.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_10.html">Cluster 10 — 10: death, realme, porrex</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RON in Albumazar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>RON</span>
+</nav>
+
+<h1>RON</h1>
+<p class="lede">in <em>Albumazar</em> — Tomkis, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1615</td></tr>
+<tr><th>Words</th><td>1690</td></tr>
+<tr><th>Characters</th><td>9589</td></tr>
+<tr><th>BritDrama no.</th><td>1769</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">How! all your land sold at a hundreth yeares purchase Cannot repaire th&#x27;dammage of one poore rap, To thunder at the Phrontisterion Of great Albumazar ? Sir, you <mark>must</mark> know my master&#x27;s heauenly braine Pregnant with mysteries of Metaphisickes, Growes to an Embryo of rare contemplation, Which at full time brought forth, excel&#x27;s</div>
+<div class="excerpt">our vnknowne Philosophy. Albumazarro Meteoroscopico. I <mark>goe</mark> sir. Nere were those Authors cited to better purpose. For through that window all Pandolfo&#x27;s treasures <mark>Must</mark> take their flight and fall vpon my shoulders. Spoken by Art ▪ Albumazar : a provident setter: For so shall we receiue what thou hand&#x27;st out Free from discovery.</div>
+<div class="excerpt">houre or <mark>two</mark>, and laugh and get his cloath&#x27;s To make our sport vp. Wife, where&#x27;s the empty hogshead That wont to stand vnder the staires? Out with it quickly: I <mark>must</mark> haue it fil&#x27;d. I&#x27;le helpe thee: so, so. Foh! this vessel&#x27;s musty. Fetch out some water. So, so, now shake it, so, so. My life &#x27;tis Trincalo, For I haue heard that</div>
+<div class="excerpt">businesse. Good, good! a rich beginning: good! what&#x27;s next? So, there&#x27;s shirts And bands to furnish all on&#x27;s for a twelue-month. Furbo and I are those Intelligences That <mark>must</mark> attend vpon the Magistery. Were they hell-black, wee&#x27;d make a shift to eate them. A thousand thankes, thou&#x27;lt make a compleate cheate. Thus loaded with this treasure,</div>
+<div class="excerpt">seas. Now am I happy of this faire occasion To testifie my honest care to pay you: For you may need it. SIgnior Antonio ? I saw you as you landed, And in great hast follow&#x27;d to congratulate Your safe returne, with these most wish&#x27;t embraces. Haue you forgot Your deere friend Ronca, whom you lou&#x27;d so well? Thanks to the fortune</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Where good Albumazar ? My life h&#x27;as learnt out all, I know&#x27;t by&#x27;s musicke; Beare vp thy learned brow ALBVMAZAR, Liue long of all the world admir&#x27;d, For Art profound, and skill retir&#x27;d To cheating by the height of starres. Hence, Gypsies, hence, hence rogues of baser straine, That hazard life for little gaine: Stand off and wonder, gape and gaze a farre At the rare skill of great ALBVMAZAR. THere&#x27;s old Pandolfo, amorous as youthfull May, And gray as Ianuary. I&#x27;le attend him here. TIs well that servant&#x27;s gone: I shall the easier Wind vp his master to my purposes. A good ascendent blesse me: sir are you frantick? Of vulgar men and houses. His lodging? no: &#x27;tis the learn&#x27;d Phrontisterion Of most divine Albumazar. How! all your land sold at a hundreth yeares purchase Cannot repaire th&#x27;dammage of one poore rap, To thunder at the Phrontisterion Of great Albumazar ? Sir, you must know my master&#x27;s heauenly braine Pregnant with mysteries of Metaphisickes, Growes to an Embryo of rare contemplation, Which at full time brought forth, excel&#x27;s by farre The armed fruit of Vulcan&#x27;s Midwifry That leapt from Iupiter&#x27;s mightie Cranium. Thus one of your bold thunders may abortiue And cause that birth miscarry, that might haue prou&#x27;d An instrument of wonders greater and rarer Then Apollonius the Magitian wrought. Yes: why aske you? You need not ▪ with a wind instrument my master made, In fiue dayes you may breath ten languages As perfect as the Divell, or himselfe. When&#x27;t please the starres. He pul&#x27;s you not a haire, nor pare&#x27;s a naile, Nor stirre&#x27;s a foot without due figuring The Horoscope: sit downe a while and&#x27;t please you, I see the heavens incline to his approach. An engine to catch starres, A mase t&#x27;arrest such Planets as haue lurk&#x27;t Foure thousand yeares vnder protection Of Iupiter and Sol. Sir, &#x27;tis a perspicill, th&#x27;best vnder heauen: With this Ile read a leafe of that small Iliade That in a wall-nut shell was desk&#x27;t, as plainly Twelue long miles off, as you see Pauls from Highgate. &#x27;Twill draw the Moone so neere that you would sweare The bush of thornes in&#x27;t prick your eyes: the Chrystall Of a large Arch multiplie&#x27;s millions, Worke&#x27;s more then by poynt blanke: and by refractions Opticke and strange, searcheth like th&#x27;eye of truth, All closets that haue windowes. Haue at Rome, I see the Pope, his Card&#x27;nals and his mule, The English Colledge and the Iesuits, And what they write and doe. So farre you can not: for this glasse is fram&#x27;d For eyes of thirty: you are nigh threescore. But for some fifty miles &#x27;twill serue you, With helpe of a refractiue glasse that&#x27;s yonder. For triall sir: where are you now? Ha you found the glasse within that chamber? What see you? Why that&#x27;s the coure ▪ at Cambridge forty miles hence, what else? That&#x27;s th&#x27;Vniversity Larded with Townes-men. Look you there: what now? That&#x27;s Coriatus Persicus, and&#x27;s obseruations Of Asia and Affrick. I dare not sel&#x27;t. But here&#x27;s another of a stranger vertue: The great Albumazar by wondrous Art, In imitation of this Perspicill, Hath fram&#x27;d an Instrument that multiplies Obiects of hearing, as this doth of seeing, That you may know each whisper from Prester Iohn Against the winde, as fresh as &#x27;twere deliuered Through a trunke, or Glosters listning wall. &#x27;Tis somthing ceremonious; but you shall try&#x27;t. Stand thus. What heare you? And now? And now? Sing sweetly, that our notes may cause The heauenly Orbes themselues to pause: And at our musick stand as still As at Ioue&#x27;s amorous will. So now release them as before, Th&#x27;haue waited long enough, no more. What heare you now? Sir, this is cal&#x27;d an Otacousticon. True: for in such a forme the great Albumazar Hath fram&#x27;d it purposely, as fit&#x27;st receiuers Of sounds, as spectacles like eyes for sight. Nay rather giu&#x27;t to Flauia for her ioncture: For shee that marries you, deserues it richly. Pandolfo, are you mad? be wise and secret: See you th&#x27;steepe danger you are tumbling in? Know you not that these instruments haue power T&#x27;vnlocke the hidden&#x27;st closets of whole states? And you reueale such mysteries to a seruant? Sir be advis&#x27;d, or else you learne no more Of our vnknowne Philosophy. Albumazarro Meteoroscopico. I goe sir. Nere were those Authors cited to better purpose. For through that window all Pandolfo&#x27;s treasures Must take their flight and fall vpon my shoulders. Spoken by Art ▪ Albumazar : a provident setter: For so shall we receiue what thou hand&#x27;st out Free from discovery. But in my conscience All windowes poynt full South for such a businesse. Good, good! a rich beginning: good! what&#x27;s next? So, there&#x27;s shirts And bands to furnish all on&#x27;s for a twelue-month. Furbo and I are those Intelligences That must attend vpon the Magistery. Were they hell-black, wee&#x27;d make a shift to eate them. A thousand thankes, thou&#x27;lt make a compleate cheate. Thus loaded with this treasure, cheer&#x27;d with wine, Strengthned with meate: wee&#x27;l carry thee in triumph, As the great Generall of our atchieuement. To furnish out our banquet. How loose ten peeces? Harpax bestow the plate, Furbo our beards, Blacke patches for our eyes, and other properties, And at the time and place meet all at Supper. Iust Aesop&#x27;s Crow, prink&#x27;t vp in borrowed feathers. How his imagination boyles, and workes in all things He euer saw or heard! Hee&#x27;l grow starke mad I feare me. Signior Antonio ? Signior Antonio ? welcome ten thousand times: Blest be the Heau&#x27;ns and seas for your returne. This three months all your kindred, friends and children, Mourn&#x27;d for your death. Welcome ten thousand times from Barbarie. No friend more glad to see Antonio Then I: nor am I thus for hope of gaine; But that I finde occasion to be gratefull By your returne. Do you remember sir, Before you went, as I was once arrested, And could not put in baile; you passing by, Lent me ten pound, and so discharg&#x27;d the debt? Oft haue I waited at your house with money, And many thankes: but you were still beyond seas. Now am I happy of this faire occasion To testifie my honest care to pay you: For you may need it. SIgnior Antonio ? I saw you as you landed, And in great hast follow&#x27;d to congratulate Your safe returne, with these most wish&#x27;t embraces. Haue you forgot Your deere friend Ronca, whom you lou&#x27;d so well? Thanks to the fortune of the seas that sau&#x27;d you. My deere Antonio, Neuer so well as now I haue the power Thus to embrace my friend, whom all th&#x27;Exchange Gaue drown&#x27;d for three whole months. My deere Antonio. Most deare Antonio, Was not your passage dangerous from Barbarie ? We had great windes and tempests; and I feare me, You felt the force at sea. What&#x27;s your pleasure sir? Why here. Thinke you me the Giant with a hundred hands? There&#x27;s both my deere Antonio ▪ Keepe your selfe darke, eate broath; your fearefull passage, And want of naturall rest hath made you franticke. Signior Antonio, What ailes you? What kind of man was he? something like me? Met you with Ronca ? &#x27;tis the cunningst nimmer Of the whole company of cut-purse hall ▪ I am sorry I was not here to warne you of him. NOw is the Asse expecting of a banquet, Ready to court, embrace, and kisse his Mistresse. But I&#x27;le soone staue him. Tick, tock, what ho! &#x27;Tis I. Beuilona? Downe, or I&#x27;le breake the dores, and with the splinters Beate all thy bones to peeces: Downe you whore! Doubtlesse, this whore hath some of her companions That wrong mee thus. But if I catch the villaine, Il&#x27;e bath my hungry sword, and sharpe reuenge, In his heart-bloud. Come downe. Second me hansomely, wee&#x27;le entertaine him An houre or two, and laugh and get his cloath&#x27;s To make our sport vp. Wife, where&#x27;s the empty hogshead That wont to stand vnder the staires? Out with it quickly: I must haue it fil&#x27;d. I&#x27;le helpe thee: so, so. Foh! this vessel&#x27;s musty. Fetch out some water. So, so, now shake it, so, so. My life &#x27;tis Trincalo, For I haue heard that Coxcombe, That Asse, that Clowne, seekes to corrupt my wife, Sending his fruite and dainties from the Country. O that &#x27;twere he. How would I vse the villaine! First crop his eares, then slit his nose, and gueld him, And with a red hot Iron seare his raw wounds; Then barrell him againe, and send the Eunuch To the great Turk to keep his Concubines. Tick, tock, who&#x27;s with in heere? One that I dare not? Out villaine, out. Signior Antonio! Had it beene any but your selfe, hee had died. But as you sau&#x27;d my life before you went, So now command mine in your seruices ▪ I would haue sworne y&#x27;ad drown&#x27;d in Barbary. Sir I beleeue you. Sir, for your sake. My house and selfe are at your seruice. No, not a siluer spoone. &#x27;Tis our profession, As your&#x27;s Astrologie. And in th&#x27;daies of old, Good morrow Theefe, as welcome was receiu&#x27;d, As now your Worship. &#x27;Tis your owne instruction. Our promise! If honest men by Obligations, And instruments of Law, are hardly constrain&#x27;d T&#x27;obserue their word; Can wee, that make profession Of lawlesse courses, do&#x27;t? &#x27;Twas lent in an ill Second, worser Third, And lucklesse Fourth: &#x27;tis lost, Albumazar. Hali, Abenezra, Hiarcha, Brachman, Budda Babylonicus, And all the Chaldes and the Cabalists, Affirme that sad Aspect threat&#x27;s losse of debts. &#x27;Tis an ill course And full of feares. This treasure hath inrich&#x27;t vs, And giuen vs meanes to purchase, and liue quiet Of th&#x27;fruite of dangers past. When I vs&#x27;d robbing, All blocks before me look&#x27;t like Constables, And posts appear&#x27;d in shape of Gallowses. Therefore good Tutor take your pupils counsell: &#x27;Tis better beg then steale: Liue in poore clothes, Then hang in Sattin. Do, if thou long&#x27;st to see thy owne Anatomie. Fellowes away, nere&#x27;s company. Let&#x27;s hence. Exeunt.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Albumazar</div><div class="body">The neighbours Pandolfo and Antonio, both widowers, have arranged to marry each other’s daughters; but before they can do so, Antonio is lost and presumed dead on an overseas voyage, and the plan goes into abeyance because his son Lelio disapproves of Pandolfo as a potential brother-in-law. Albumazar’s accomplice Furbo has gained access to Pandolfo’s household, posing as his daughter’s tutor, and has learned of his .- amorous aspirations, and also his credulity about. magic and astrology. Albumazar plans to trick him, and sets about demonstrating his occult power. Ronca shows Pandolfo some of the astrologer’s amazing inventions: a telescope and an ‘otacousticon’ (actually a pair of ass’s ears) which allow him to see and hear things at a distance. Albumazar then predicts Pandolfo’s marriage, and also a stabbing which his associates then enact in a brawl. Pandolfo asks the astrologer to raise Antonio’s ghost, but instead Albumazar undertakes to transform the tenant farmer Trincalo into Antonio’s likeness for one day, so that he can give Flavia in marriage to Pandolfo. Trincalo agrees because this will give him access to Antonio’s household, and therefore to the maid Armellina, whom he loves. Pandolfo is required to prepare a room for the metamorphosis, laid out with valuable possessions. When he begins to have second thoughts about paying Albumazar, his servant Cricca suggests that he should pretend to have been robbed of his valuables; but when they are indeed stolen, Albumazar pretends in turn that the transformed Trincalo has just locked them away for safe keeping. After undergoing the fake metamorphosis, Trincalo is told he may not look at himself in a mirror for fear of breaking the spell. Ronca and Harpax greet him as Antonio, and pretend to be his debtor and creditor respectively, but Trincalo pays Harpax less than he was ===== PAGE 445 ===== 1615 given by Ronca, who has to steal back the balance. To buy time to spirit away Pandolfo’s goods, the tricksters divert him with Bevilona the courtesan, who pretends to be a gentlewoman in love with Antonio, and hides him from her husband. The real Antonio returns unexpectedly, and is taken for the transformed Trincalo: he does not understand when Pandolfo asks after his missing property, and his son and daughter, forewarned of the planned trick, beat him out of his own house. He meets Trincalo, who is still posing as him, and a duel is proposed. Lelio and Cricca realize the truth when they see the two men…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BOY in Love&#x27;s Labor&#x27;s Lost · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BOY</span>
+</nav>
+
+<h1>BOY</h1>
+<p class="lede">in <em>Love&#x27;s Labor&#x27;s Lost</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1598</td></tr>
+<tr><th>Words</th><td>1065</td></tr>
+<tr><th>Characters</th><td>5447</td></tr>
+<tr><th>BritDrama no.</th><td>1031</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">carriage, great carriage: for he carried the Towne-gates on his backe like a Porter: and he was in loue. A <mark>Woman</mark>, Maiſter. Of all the foure, or the three, or the <mark>two</mark>, or one of the foure. Of the ſea-water Greene ſir. As I haue read ſir, and the beſt of them too. It was ſo ſir ▪ for ſhe had a greene wit. Moſt maculate thoughts</div>
+<div class="excerpt">this ſuch a peece of ſtudie? Now heere is three ſtudied ere yele thrice wincke: and how eaſie it is to put yeeres to the worde three, and ſtudie three yeeres in <mark>two</mark> wordes, the dauncing Horſe will tell you. To proue you a Cypher. Hercules Maiſter. Sampſon Maiſter, he was a man of good carriage, great carriage: for he carried</div>
+<div class="excerpt">by good happ. To her will ſir, or ſo. Farewell to me ſir, and welcome to you. And euery ieſt but a word. I was as willing to grapple as he was to boord. Do you <mark>heare</mark> my mad Wenches? What then, do you ſee? You are too hard for mee. Concolinel. Maiſter, will you win your loue with a french braule? No my compl t Maiſter, but to</div>
+<div class="excerpt">A Phantaſime a Monarcho, and one that makes ſport To the Prince and his Booke-mates. Who is the ſhooter? Who is the ſhooter? I my continent of beautie. My Lady goes to kill hornes, but if thou marrie, hang me by the necke, if horns that yeere miſcarrie. Finely put on. And who is your Deare? So I may anſwere thee with one as</div>
+<div class="excerpt">Meaſure with you on this graſſe. If to come hither, you haue meaſurde miles, And manie miles: the Princeſſe bids you tell, How manie inches doth fill vp one mile? She heares her ſelfe. They will they will, God knowes, And leape for ioy, though they are lame with blowes: Therefore change Fauours, and when they repaire, Blow like ſweete</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Which the baſe vulgar do call three. Why ſir is this ſuch a peece of ſtudie? Now heere is three ſtudied ere yele thrice wincke: and how eaſie it is to put yeeres to the worde three, and ſtudie three yeeres in two wordes, the dauncing Horſe will tell you. To proue you a Cypher. Hercules Maiſter. Sampſon Maiſter, he was a man of good carriage, great carriage: for he carried the Towne-gates on his backe like a Porter: and he was in loue. A Woman, Maiſter. Of all the foure, or the three, or the two, or one of the foure. Of the ſea-water Greene ſir. As I haue read ſir, and the beſt of them too. It was ſo ſir ▪ for ſhe had a greene wit. Moſt maculate thoughts Maiſter, are maskt vnder ſuch colours. My fathers wit, and my mothers tongue asſiſt me. Yf ſhe be made of white and red, Her faultes will nere be knowne: For bluſh-in cheekes by faultes are bred, And feares by pale white ſhowne: Then if ſhe feare, or be to blame, By this you ſhall not know, Eor ſtill her cheeke poſſeſſe the ſame, Which natiue ſhe doth owe A dangerous rime maiſter againſt the reaſon of white &amp; red. The worlde was very guiltie of ſuch a Ballet ſome three ages ſince, but I thinke now tis not to be found: or if it were, it would neither ſerue for the writing, nor the tune. To be whipt: and yet a better loue then my maiſter. And thats great maruaile, louing a light Wench. Forbeare till this companie be paſt. Come you tranſgresſing ſlaue, away. No ſir, that were faſt and looſe: thou ſhalt to priſon. What ſhall ſome ſee? Proud of imployment, willingly I go. Katherin by good happ. To her will ſir, or ſo. Farewell to me ſir, and welcome to you. And euery ieſt but a word. I was as willing to grapple as he was to boord. Do you heare my mad Wenches? What then, do you ſee? You are too hard for mee. Concolinel. Maiſter, will you win your loue with a french braule? No my compl t Maiſter, but to Iigge off a tune at the tongues ende, canarie to it with your feete, humour it with turning vp your eylids, ſigh a note and ſing a note ſom time through the throate, if you ſwallowed loue with ſing ing loue ſometime through: noſe as if you ſnuff vp loue by ſmelling loue with your hat penthouſe like o e the ſhop of your eyes, with your armes croſt on your thinbellies doblet like a Rabbet on a ſpit, or your handes in your pocket like man after the ol e painting, and keepe not too long in one tune, but a ſ ip and away: theſe are complementes, theſe are humours, theſe betraie nice wenches that would be be traied without theſe, and make them men of note: do you note men that moſt are affected to theſe. By my penne of obſer tio . The Hobbie-horſe is forg t. No Maiſter, the Hobbi-horſe is but a olt, and your loue perhaps, a hacknie: But haue you forgot your Loue? Necligent ſtudent, learne her by hart. And out of hart Maiſter: all thoſe three I will proue. A man, if I liue (and this) by, in, and without, vpon the inſtan ▪ by hart you loue her, becauſe your hart cannot come by her: in hart you loue her, becauſe your hart is in loue with her: and out of hart you loue h r ▪ being out of hart that you cannot enioy her. And three times as much more, and yet nothing at all. A meſſage well ſimpa iſd, a Horſe to be embaſſa doure for an Aſſe. Marrie ſir, you muſt ſend the Aſſe vpon the Horſe, for he is verie ſlow gated: but I go. As ſwift as Lead ſir. Minnime honeſt Maiſter, or rather Maiſter no. You are too ſwift ſir to ſay ſo. Is that Lead ſlow which is fierd from a Gunne ▪ Thump then, and I fl e. By ſaying that a Coſt d was broken 〈…〉 Then cald you for the Lenuoy. Do not curſt wiues hold that ſelfe-ſoueraigntie Onely for praiſe ſake, when they ſtriue to be Lords ore their Lordes? I am much deceiued, but I remember the ſtile. This Armado is a Spaniard that keepes here in court. A Phantaſime a Monarcho, and one that makes ſport To the Prince and his Booke-mates. Who is the ſhooter? Who is the ſhooter? I my continent of beautie. My Lady goes to kill hornes, but if thou marrie, hang me by the necke, if horns that yeere miſcarrie. Finely put on. And who is your Deare? So I may anſwere thee with one as olde that was a woman when queene Guinouer of Brittaine was a litle wench as toching the hit it. And I cannot, cannot, cannot: and I cannot, an other can. And if my hand be out, then belike your hand is in. They haue been at a great feaſt of Languages, and ſtolne the ſcraps. Why that contempt will kill the ſpeakers hart, And quite diuorce his memorie from his part. The Trompet ſoundes, be maſkt, the maſkers come. True, out in deede. Nothing but peace, and gentle viſitation. She ſaies you haue it, and you may be gon. They ſay that they haue meaſurd many a mile, To tread a Meaſure with you on this graſſe. If to come hither, you haue meaſurde miles, And manie miles: the Princeſſe bids you tell, How manie inches doth fill vp one mile? She heares her ſelfe. They will they will, God knowes, And leape for ioy, though they are lame with blowes: Therefore change Fauours, and when they repaire, Blow like ſweete Roſes, in this ſommer aire. Faire Ladies maskt, are Roſes in their bud: Diſmaskt, their dammaske ſweete commixture ſhowne, Are Angels varling cloudes, or Roſes blowne. I will, and ſo will ſhe, I know my Lord. Moſt true, tis right: you were ſo Aliſander. True, and it was inioyned him in Rome for want of Linnen: ſince when, Ile be ſworne he wore none, but a diſh cloute of Jaquenetta s, and that a weares next his hart for a Fauour.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Love&#x27;s Labor&#x27;s Lost</div><div class="body">The King of Navarre has proclaimed a three-year period of study during which his courtiers must live abstemiously and refrain from seeing women; no woman may even approach the court. Unfortunately the Princess of France is due to arrive on a diplomatic mission concerning a dispute over money and territory, and the King is forced to meet her; however, the evidence in support of France’s claim against Navarre has not arrived, and the issue is deferred. Costard is caught canoodling with Jaquenetta and is remitted to Don Armado’s custody. Armado is himself enamoured of Jaquenetta, and sends Costard to her with a love-letter. Biron also pays Costard to carry a similar letter to his love, Rosaline, and Costard mixes up the two letters. Armado’s causes amusement to the French ladies when they receive it; Biron’s causes embarrassment to himself when, directed by Holofernes, Jaquenetta brings it to the King just after Biron has attacked him and the other lords for falling in love. Biron argues the illegitimacy of their original vows, and they set about wooing the ladies, first with gifts, then by appearing in a masque of Russians. The ladies confound the latter by wearing masks themselves and swapping gifts so that each lord woos the wrong lady; they also refuse to dance. Don Armado and the locals offer the court a pageant of the Nine Worthies, devised by the schoolmaster: it is mocked by the lords and breaks up in confusion when Costard accuses Don Armado of fathering the pregnant Jaquenetta’s baby. News then arrives that the King of France is dead. The lords propose marriage to the ladies, who refuse: the court of France is in mourning, and the lords must wait a year; given particular conditions by their ladies, the King will spend it in a hermitage and Biron trying vainly to entertain dying men. The play ends with a song of winter and spring, the owl and the cuckoo.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

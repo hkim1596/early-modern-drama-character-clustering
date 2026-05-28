@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BES in Darius · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> ›
+  <span>BES</span>
+</nav>
+
+<h1>BES</h1>
+<p class="lede">in <em>Darius</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>1030</td></tr>
+<tr><th>Characters</th><td>5699</td></tr>
+<tr><th>BritDrama no.</th><td>1404</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 25 (<em>did, whil, death, might, minde, fortune…</em>). Matches are highlighted.</p>
+<div class="excerpt">are made? How dare vaine worldlings vannt Of fortunes goods not laſting, Evils which our wits enchant? Expos&#x27;d to loſſe and waſting? Loe, we to <mark>death</mark> are haſting, <mark>Whil</mark>&#x27;ſt we thoſe things diſcuſſe: All things from their beginning, Still to an end are running, Heaven hath ordain&#x27;d it thus; We heare how it doth thunder, We ſee th&#x27;</div>
+<div class="excerpt"><mark>pow</mark>&#x27;r above Are mov&#x27;d to indignation Againſt this wretched nation, Which they no longer love: What are we but a paſſe of breath Who live aſſur&#x27;d of nothing but of <mark>death</mark>? Who was ſo happy yet As never had ſome croſſe? Though on a Throne he ſit, And is not ut&#x27;d with loſſe, Yet <mark>fortune</mark> once will toſſe Him, when that leaſt he would;</div>
+<div class="excerpt">(thus toſs&#x27;d) moſt deſp&#x27;rate is his ſtate, Who peace cannot obtaine, nor warre maintaine; To cleare his <mark>thoughts</mark> which many doubts doe ſway, He now craves each mans <mark>minde</mark> who ſquadrons leads; This for our purpoſe muſt prepare the way: &quot;Thoſe who would compaſſe Kings, need crafty heads: And that to gaine which we ſo much eſteeme,</div>
+<div class="excerpt">Hydaſpes precious ſtones, And yellow Tagus gold; The Orientall treaſure, And every earthly pleaſure, Even in the greateſt meaſure, It ſhould not ſmake him bold: For while he lives ſecure, His ſtate is moſt unſure; When it doth leaſt appeare, Some heavy plague drawes neare, Deſtruction to procure. Worlds glory is but like a flowre,</div>
+<div class="excerpt">bloom&#x27;d, and blaſted in an houre. In what we moſt repoſe, We finde our comfort light, The thing we ſooneſt loſe That&#x27;s pretious in our ſight; For honour, riches, <mark>might</mark>, Our lives in pawne we lay; Yet all like flying ſhadowes, Or flowers enamelling meadowes, Doe vaniſh and decay. Long time we toile to finde Thoſe Idols the <mark>minde</mark>,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">To Alexander one was ſent of late, To ſpeake of peace, whoſe ſpeech was ſpent in vaine, So that (thus toſs&#x27;d) moſt deſp&#x27;rate is his ſtate, Who peace cannot obtaine, nor warre maintaine; To cleare his thoughts which many doubts doe ſway, He now craves each mans minde who ſquadrons leads; This for our purpoſe muſt prepare the way: &quot;Thoſe who would compaſſe Kings, need crafty heads: And that to gaine which we ſo much eſteeme, We can upon no meanes more ſafe conclude, Then crooked counſels that doe upright ſeeme To maske our ſelves, and others to delude; He muſt (advis&#x27;d by ſome) renounce a ſpace The ſhew of pow&#x27;r, and from affaires retire, That for a faſhion one may uſe his place, Not as uſurp&#x27;d, but at his owne deſire: So may he try if others can bring backe That which his fortunes ebbe hath borne away, Then he againe his Diadem ſhall take, And (as before) the regall Scepter ſway. All that is one, which of us two receive it, Since every thing doth equally belong us, I&#x27;le take it for the forme, tis one who have it, For we will part his kingdomes all among us. But if he condeſcend to this we crave, To judgements raſh, which would at firſt ſeeme good, Let him not thinke us two ſuch fooles to leave, That which ſo many elſe have bought with bloud; &quot;Who once advanc&#x27;d, would willingly goe downe, &quot;And (prop&#x27;d with pow&#x27;r,) not love in ſtate to ſtand? &quot;This not the cuſtome is to quite a Crowne, &quot;When one hath knowne how ſweet it&#x27;s to command; &quot;This name of faith but to get credit fain&#x27;d, &quot;Is (weigh&#x27;d with kingdomes) lighter then a Crowne, &quot;And even in them whoſe thoughts are moſt reſtrain&#x27;d, &quot;A Scepters weight would preſſe all goodneſſe down. To idle ſounds and frivolous reports, Give ſtraight a paſport, for they laſt not long, And what thou do&#x27;ſt alledge, not much imports: &quot;A Crowne may cover any kinde of wrong; &quot;What hainous thing ſo odious is by nature, &quot;Which for a Kingdome not committed is? &quot;To be a King, let me be call&#x27;d a traitour, &quot;Faith (if for ought) may broken be for this. &quot;Thoſe are but feeble braines which fancies loade, &quot;With timorous dreams which bare ſurmiſing brings; &quot;Who feare vaine ſhadowes, muſt not walke abroad, &quot;Too warie wits dare never worke great things. If our brave project happily ſucceed, (As now I doubt not but it ſhall doe ſoone) We ſtraight will numbers finde to praiſe our deed, And ſooth us up in all that we have done. Let us hence-forth for nothing be diſmaid, But ſtrive our ſelves couragiouſly to beare. This dangerous action would not bedelay&#x27;d, Leaſt time make him to doubt, and us to feare. TIme, through Ioves judgement juſt, Huge alterations brings: Thoſe are but fooles who truſt In tranſitory things, Whoſe tailes be are mortall ſtings, Which in the end will wound; And let none thinke it ſtrange, Though all things earthly change: In this inferiour round What is from ruine free? The Elements which be At variance, (as we ſee) Each th&#x27;other doth confound: The Earth and Ayre make warre, The fire and water are Still wreſtling at debate, All thoſe through cold and heat, Through drought and moiſture ja re. What wonder though men change and fade, Who of thoſe changing Elements are made? How dare vaine worldlings vannt Of fortunes goods not laſting, Evils which our wits enchant? Expos&#x27;d to loſſe and waſting? Loe, we to death are haſting, Whil&#x27;ſt we thoſe things diſcuſſe: All things from their beginning, Still to an end are running, Heaven hath ordain&#x27;d it thus; We heare how it doth thunder, We ſee th&#x27; earth burſt aſunder, And yet we never ponder What this imports to us: Theſe fearefull ſigns 〈◊〉 prove, That th&#x27; angry pow&#x27;r above Are mov&#x27;d to indignation Againſt this wretched nation, Which they no longer love: What are we but a paſſe of breath Who live aſſur&#x27;d of nothing but of death? Who was ſo happy yet As never had ſome croſſe? Though on a Throne he ſit, And is not ut&#x27;d with loſſe, Yet fortune once will toſſe Him, when that leaſt he would; If one had all at once Hydaſpes precious ſtones, And yellow Tagus gold; The Orientall treaſure, And every earthly pleaſure, Even in the greateſt meaſure, It ſhould not ſmake him bold: For while he lives ſecure, His ſtate is moſt unſure; When it doth leaſt appeare, Some heavy plague drawes neare, Deſtruction to procure. Worlds glory is but like a flowre, Which both is bloom&#x27;d, and blaſted in an houre. In what we moſt repoſe, We finde our comfort light, The thing we ſooneſt loſe That&#x27;s pretious in our ſight; For honour, riches, might, Our lives in pawne we lay; Yet all like flying ſhadowes, Or flowers enamelling meadowes, Doe vaniſh and decay. Long time we toile to finde Thoſe Idols the minde, Which had, we cannot binde To bide with us one day: Then why ſhould we preſume On treaſures that conſume, Difficult to obtaine, Difficult to retaine, A dreame, a breath, a fume? Which vexe them moſt, that them poſſeſſe, Who ſtarve with ſtore, and famiſh with exceſſe. AH! muſt I poyſon now my Princes eares, With newes the worſt that ever burden&#x27;d fame: Had I as many tongues as I have teares, All would not ſerve my ſorrowes to proclaime. Take heed in time (Sir) to this ſubtile Greeke, The Grecian faith to all the world is knowne, I am enform&#x27;d he by all meanes doth ſeeke To gratifie your foe, as borne his owne; &quot;And marvell not, though mercenary men, &quot;Who ſell themſelves, ſell all, this is not ſtrange, &quot;They have no God but gold, nor houſe, how then &quot;Can they be conſtant, who doe live by change? Though this vaine man pre-occupy you thus, And ſuch as would themſelves abuſe your grace, Faith ſhall be found untainted ſtill in us, When our accuſer dare not ſhew his face. Well, Sir, you ſhall know ſhortly what we are, I will go ſee your Enſignes all diſplai&#x27;d.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Darius</div><div class="body">Vanquished by Alexander, Darius fears for his mother, wife, and children, who have been taken captive. He offers a ransom for them, and Parmenio encourages Alexander to accept (the money can be used to finance future campaigns), but Alexander refuses. The women assume that Darius is dead and ask leave to bury him. Alexander gives them his personal assurance that Darius is alive and that they v.ill be treated honourably. Bessus and Narbazanes plan to betray Darius to Alexander in the hope of getting kingdoms for themselves. Darius learns that his wife has died, but is impressed by Alexander&#x27;s honourable treatment of her. Narbazanes encourages him to resign the crown to Bessus, while others advise him not to trust the two traitors, and to rely on his mercenary troops if necessary. Darius meditates on tl1e inevitable fall of princes and accepts the coming of death. The traitors spread a rumour that he has committed suicide, then take him prisoner and offer him to Alexander. Darius dies with a speech honouring Alexander for his magnanimity in victory. Alexander vows to hunt down and dismember the traitors.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> page.
+</div>
+</div></body></html>

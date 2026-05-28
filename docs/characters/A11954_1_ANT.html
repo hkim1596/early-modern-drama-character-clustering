@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ANT in The Tempest · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ANT</span>
+</nav>
+
+<h1>ANT</h1>
+<p class="lede">in <em>The Tempest</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>945</td></tr>
+<tr><th>Characters</th><td>5013</td></tr>
+<tr><th>BritDrama no.</th><td>1652</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">None (man) all idle; Whores and knaues, Long liue Gonzalo. &#x27;Twas you vve laugh&#x27;d at. What a blow vvas there giuen? Nay good my Lord, be not angry. Go ſleepe, and <mark>heare</mark> vs. We <mark>two</mark> my Lord, will guard your perſon, While you take your reſt, and watch your ſafety. It is the quality o&#x27; th&#x27; Clymate. Nor I, my ſpirits are nimble: They</div>
+<div class="excerpt">ground indeed is tawny. He miſſes not much. If but one of his pockets could ſpeake, would it not ſay he lyes? Widow? A pox o&#x27; that: how came that Wid dow in? Widdow Dido! His word is more then the miraculous Harpe. What impoſsible matter wil he make eaſy next? And ſowing the kernels of it in the Sea, bring forth more Iſlands. Why</div>
+<div class="excerpt">matter wil he make eaſy next? And ſowing the kernels of it in the Sea, bring forth more Iſlands. Why in good time. And the rareſt that ere came there. O Widdow Dido ? I, Widdow Dido. That ſort was well fiſh&#x27;d for. And moſt Chirurgeonly. Very foule. Hee&#x27;d ſow&#x27;t vvith Nettle-ſeed. The latter end of his Common-wealth forgets</div>
+<div class="excerpt">fright a Monſters eare; To make an earthquake: ſure it was the roare Of a whole heard of Lyons. I am right glad, that he&#x27;s ſo out of hope: Doe not for one repulſe forgoe the purpoſe That you reſolu&#x27;d t&#x27; effect. Let it be to night, For now they are oppreſs&#x27;d with trauaile, they Will not, nor cannot vſe ſuch vigilance As when they</div>
+<div class="excerpt">not, nor cannot vſe ſuch vigilance As when they are freſh. Ile beleeue both: And what do&#x27;s elſe want credit, come to me And Ile beſworne &#x27;tis true: Trauellers nere <mark>did</mark> lye, Though fooles at home condemne &#x27;em. Ile be thy Second. Very like: one of them Is a plaine Fiſh, and no doubt marketable.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">The Viſitor will not giue him ore ſo. Fie, what a ſpend-thrift is he of his tongue. Which, of he, or Adrian, for a good wager, Firſt begins to crow? The Cockrell. A Laughter. So: you&#x27;r paid. He could not miſſe&#x27;t. Temperance was a delicate wench. Or, as &#x27;twere perfum&#x27;d by a Fen. True, ſaue meanes to liue. The ground indeed is tawny. He miſſes not much. If but one of his pockets could ſpeake, would it not ſay he lyes? Widow? A pox o&#x27; that: how came that Wid dow in? Widdow Dido! His word is more then the miraculous Harpe. What impoſsible matter wil he make eaſy next? And ſowing the kernels of it in the Sea, bring forth more Iſlands. Why in good time. And the rareſt that ere came there. O Widdow Dido ? I, Widdow Dido. That ſort was well fiſh&#x27;d for. And moſt Chirurgeonly. Very foule. Hee&#x27;d ſow&#x27;t vvith Nettle-ſeed. The latter end of his Common-wealth forgets the beginning. None (man) all idle; Whores and knaues, Long liue Gonzalo. &#x27;Twas you vve laugh&#x27;d at. What a blow vvas there giuen? Nay good my Lord, be not angry. Go ſleepe, and heare vs. We two my Lord, will guard your perſon, While you take your reſt, and watch your ſafety. It is the quality o&#x27; th&#x27; Clymate. Nor I, my ſpirits are nimble: They fell together all, as by conſent They dropt, as by a Thunder-ſtroke: what might Worthy Sebastian? O, what might? no more: And yet, me thinkes I ſee it in thy face, What thou ſhould&#x27;ſt be: th&#x27; occaſion ſpeaks thee, and My ſtrong imagination ſee&#x27;s a Crowne Dropping vpon thy head. Do you not heare me ſpeake? Noble Sebaſtian, Thou let&#x27;ſt thy fortune ſleepe: die rather: wink&#x27;ſt Whiles thou art waking. I am more ſerious then my cuſtome: you Muſt be ſo too, if heed me: which to do, Trebbles thee o&#x27;re. Ile teach you how to flow. O! If you but knew how you the purpoſe cheriſh Whiles thus you mocke it: how in ſtripping it You more inueſt it: ebbing men, indeed (Moſt often) do ſo neere the bottome run By their owne feare, or ſloth. Thus Sir: Although this Lord of weake remembrance; this Who ſhall be of as little memory When he is earth&#x27;d, hath here almoſt perſwaded (For hee&#x27;s a Spirit of perſwaſion, onely Profeſſes to perſwade) the King his ſonne&#x27;s aliue, &#x27;Tis as impoſsible that hee&#x27;s vndrown&#x27;d, As he that ſleepes heere, ſwims. O, out of that no hope, What great hope haue you? No hope that way, Is Another way ſo high a hope, that euen Ambition cannot pierce a winke beyond But doubt diſcouery there. Will you grant with me That Ferdinand is drown&#x27;d. Then tell me, who&#x27;s the next heire of Naples? She that is Queene of Tunis ſhe that dwels Ten leagues beyond mans life: ſhe that from Naples Can haue no note, vnleſſe the Sun were poſt: The Man i&#x27; th Moone&#x27;s too ſlow, till new-borne chinnes Be rough, and Razor-able: She that from whom We all were ſea-ſwallow&#x27;d, though ſome caſt againe, (And by that deſtiny) to performe an act Whereof, what&#x27;s paſt is Prologue; what to come In yours, and my diſcharge. A ſpace, whoſe eu&#x27;ry cubit Seemes to cry out, how ſhall that Claribell Meaſure vs backe to Naples ? keepe in Tunis, And let Sebaſtian wake. Say, this were death That now hath ſeiz&#x27;d them, why they were no worſe Then now they are: There be that can rule Naples As well as he that ſleepes: Lords, that can prate As amply, and vnneceſſarily As this Gonzallo : I my ſelfe could make A Chough of as deepe chat: O, that you bore The minde that I do; what a ſleepe were this For your aduancement? Do you vnderſtand me? And how do&#x27;s your content Tender your owne good fortune? True: And looke how well my Garments ſit vpon me, Much feater then before: My Brothers ſeruants Were then my fellowes, now they are my men. I Sir: where lies that? If &#x27;twere a kybe &#x27;Twould put me to my ſlipper: But I feele not This Deity in my boſome: &#x27;Twentie conſciences That ſtand &#x27;twixt me, and Millaine, candied be they, And melt ere they molleſt: Heere lies your Brother, No better then the earth he lies vpon, If he were that which now hee&#x27;s like (that&#x27;s dead) Whom I with this obedient ſteele (three inches of it) Can lay to bed for euer: whiles you doing thus, To the perpetuall winke for aye might put This ancient morſell: this Sir Prudence, who Should not vpbraid our courſe: for all the reſt They&#x27;l take ſuggeſtion, as a Cat laps milke, They&#x27;l tell the clocke, to any buſineſſe that We ſay befits the houre. Draw together: And when I reare my hand, do you the like To fall it on Gonzalo. Then let vs both be ſodaine. O, &#x27;twas a din to fright a Monſters eare; To make an earthquake: ſure it was the roare Of a whole heard of Lyons. I am right glad, that he&#x27;s ſo out of hope: Doe not for one repulſe forgoe the purpoſe That you reſolu&#x27;d t&#x27; effect. Let it be to night, For now they are oppreſs&#x27;d with trauaile, they Will not, nor cannot vſe ſuch vigilance As when they are freſh. Ile beleeue both: And what do&#x27;s elſe want credit, come to me And Ile beſworne &#x27;tis true: Trauellers nere did lye, Though fooles at home condemne &#x27;em. Ile be thy Second. Very like: one of them Is a plaine Fiſh, and no doubt marketable.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Tempest</div><div class="body">Twelve years ago, Prospero, Duke of Milan, was deposed. He devoted himself to his studies, leaving the management of the state to his brother Antonio. Antonio conspired with Alonso, King of Naples: he was installed as Duke in exchange for accepting the suzerainty of Naples over Milan. The people’s love saved Prospero from assassination; he was put to sea with his magic books and his infant daughter Miranda. He arrived on a Mediterranean island once ruled by an Algerian witch, released the spirit Ariel whom she had imprisoned in a tree, and took in her son Caliban as a household servant. Now, Alonso is passing the island when his ship encounters a tempest raised by Ariel, who creates the illusion of a shipwreck. The passengers come to shore in separate groups; Alonso and Ferdinand, father and son, are made to think one another dead. Ariel sees to 1611 it that Ferdinand meets Miranda and falls in love with her; but Prospero, seeking to test his love, makes him carry logs. After Ariel charms Alonso to sleep, Antonio persuades Sebastian to kill him and seize the Neapolitan throne; but Ariel warns the sleeping Gonzalo and the murder is forestalled. Prospero’s spirits serve the group a banquet, which disappears when they attempt to eat it; disguised as a harpy, Ariel reminds them of their treachery to Prospero, identifies this as the cause of their current disaster, and drives them out of their minds. Meanwhile, the butler Stephano has come ashore on a butt of wine. The liquor makes Caliban transfer his allegiance, and together they plot to murder Prospero, making Stephano king of the island. Prospero is satisfied with Ferdinand: he and Miranda are betrothed, and spirits present a masque of Ceres to celebrate the occasion. During the performance, Prospero remembers that he has Caliban’s conspiracy to deal with. Stephano and his associates are distracted by some elegant garments left outside Prospero’s cell, and driven away by spirits in the shape of dogs; Caliban realizes that he has given his loyalty to a fool. Prospero tells Ariel that he does not intend to take revenge on Alonso and Antonio, and promises him his freedom. Ariel brings the shipwrecked King, Duke, and courtiers before him, and their senses are restored. The remorseful Alonso gives up his claim to Milan. Prospero reclaims the dukedom from Antonio, then reveals Ferdinand, alive and engaged to Miranda: the future kings of Naples will be Prospero’s descendants. The ship proves to be undamaged.…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

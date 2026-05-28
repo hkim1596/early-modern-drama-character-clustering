@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BERO in Love&#x27;s Labor&#x27;s Lost · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BERO</span>
+</nav>
+
+<h1>BERO</h1>
+<p class="lede">in <em>Love&#x27;s Labor&#x27;s Lost</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1598</td></tr>
+<tr><th>Words</th><td>1453</td></tr>
+<tr><th>Characters</th><td>7655</td></tr>
+<tr><th>BritDrama no.</th><td>1031</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">How low ſo euer the matter, I hope in God for high word ▪ Well ſir, be it as the ſtile ſhall giue vs cauſe to clime in the merrines. In what manner? As we would <mark>heare</mark> an Oracle. Whats her name in the capp? This is the lyuer veine, which makes fleſh a deitie. A greene Gooſe, a Goddeſſe, pure pure ydotarie. God amende vs, God amende,</div>
+<div class="excerpt">but Minſtrels like of Sonnetting. But are you not a ſhamed? nay, are you not All three of you, to be thus much ore&#x27; ſhot? You found his Moth, the King your Moth <mark>did</mark> ſee: But I a Beame do finde in each of three. O what a Scaene of foolrie haue I ſeene, Of ſighes, of grones, of ſorrow, and of teene: O mee, with what ſtrickt patience</div>
+<div class="excerpt">ſelues, my wit is at an ende. Loe, he is tilting ſtraight. Peace, I haue don. My hat to a halfe-pennie, Pompey prooues the beſt Worthie. Pompey the great. Take <mark>away</mark> the Conquerour, take <mark>away</mark> Aliſander. A kisſing traytour. How art thou proud Iudas? Well folowed, Iudas was hanged on an Flder ▪ Becauſe thou haſt no face. A deaths</div>
+<div class="excerpt">forward, for we haue put thee in countenance. Falſe, we haue giuen thee faces. And thou weart a Lyon, we would do ſo. For the Aſſe to the Iude: giue it him. Judas <mark>away</mark> ▪ This cannot be Hector. A Lemmon. Greater then great, great, great, great Pompey: Pom pey the hudge. Pompey is mooued more Ates more Atees ſtir them or ſtir them</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">By yea and nay ſir, than I ſwore in ieſt. What is the ende of ſtudy, let me know? Com&#x27;on then, I will ſweare to ſtudy ſo, To know the thing I am forbid to know: As thus, to ſtudy where I well may dine, When I to faſt expreſſely am forbid. Or ſtudie where to meete ſome Miſtris fine. When Miſtreſſes from common ſenſe are hid. Or hauing ſworne too hard a keeping oth, Studie to breake it, and not breake my troth. If ſtudies gaine be thus, and this be ſo, Studie knowes that which yet it doth not know, Sweare me to this, and I will nere ſay no. Why? all delightes are vaine, but that moſt vaine Which with payne purchaſ&#x27;d, doth inherite payne, As paynefully to poare vpon a Booke, To ſeeke the lyght of trueth, while trueth the whyle Doth falſely blinde the eye-ſight of his looke: Light ſeeking light, doth light of light beguyle: So ere you finde where light in darknes lyes, Your light growes darke by looſing of your eyes. Studie me how to pleaſe the eye in deede, By fixing it vppon a fayrer eye, Who dazling ſo, that eye ſhalbe his heed, And giue him light that it was blinded by. Studie is lyke the heauens glorious Sunne, That will not be deepe ſearcht with ſawcie lookes: Small haue continuall plodders euer wonne, Saue baſe aucthoritie from others Bookes. Theſe earthly Godfathers of heauens lights, That giue a name to euery fixed Starre, Haue no more profite of their ſhyning nights, Then thoſe that walke and wot not what they are. Too much to know, is to know nought but fame: And euery Godfather can giue a name. Something then in rime. Well, ſay I am, why ſhould proude Sommer boaſt, Before the Birdes haue any cauſe to ſing? Why ſhould I ioy in any abhortiue byrth? At Chriſtmas I no more deſire a Roſe, Then wiſh a Snow in Mayes new fangled ſhowes: But like of each thing that in ſeaſon growes. So you to ſtudie now it is too late, Clymbe ore the houſe to vnlocke the little gate. No my good Lord, I haue ſworne to ſtay with you. And though I haue for barbariſme ſpoke more Then for that Angell knowledge you can ſay, Yet confident Ile keepe what I haue ſworne, And bide the pennance of each three yeeres day. Giue me the paper, let me reade the ſame, And to the ſtricteſt decrees Ile write my name. Sweete Lord and why? Armado is a moſt illuſtrious wight, A man of fier new wordes, Faſhions owne knight. How low ſo euer the matter, I hope in God for high word ▪ Well ſir, be it as the ſtile ſhall giue vs cauſe to clime in the merrines. In what manner? As we would heare an Oracle. Whats her name in the capp? This is the lyuer veine, which makes fleſh a deitie. A greene Gooſe, a Goddeſſe, pure pure ydotarie. God amende vs, God amende, we are much out a th&#x27; way. Now ſtep I foorth to whip hipocriſie. Ah good my Leidge, I pray thee pardon mee. Good hart, What grace haſt thou thus to reproue Theſe Wormes for louing, that art moſt in loue? Your eyes do make no couches in your teares. There is no certaine Princeſſe that appeares. Youle not be periurde, tis a hatefull thing: Tuſh, none but Minſtrels like of Sonnetting. But are you not a ſhamed? nay, are you not All three of you, to be thus much ore&#x27; ſhot? You found his Moth, the King your Moth did ſee: But I a Beame do finde in each of three. O what a Scaene of foolrie haue I ſeene, Of ſighes, of grones, of ſorrow, and of teene: O mee, with what ſtrickt patience haue I ſat, To ſee a King transformed to a Gnat. To ſee great Hercules whipping a Gigge, And profound Sallomon to tune a Iigge. And Neſtor play at puſh-pin with the boyes, And Crittick Tymon laugh at idle toyes. Where lies thy griefe, o tell me good Dumaine? And gentle Longauill, where lies thy paine? And where my Liedges? all about the breſt. A Caudle hou! True true, we are fower: will theſe turtles be gon ▪ We number nothing that we ſpend for you, Our duetie is ſo rich, ſo infinite, That we may do it ſtill without accompt. Vouchſafe to ſhew the ſunſhine of your face, That we (like ſauages) may worſhip it. See where it comes. Behauiour what wert thou? Till this mad man ſhewed thee, and what art thou now? This ieſt is drie to me, gentle ſweete, Your wits makes wiſe thinges fooliſh when we greete Wtih eies beſt ſeeing, heauens fierie eie: By light we looſe light, your capacitie Is of that nature, that to your hudge ſtoore, Wiſe thinges ſeeme fooliſh, and rich thinges but poore. I am a foole, and full of pouertie. Thus pooure the Starres downe plagues for periurie. Can anie face of braſſe hold longer out? Heere ſtand I, Ladie dart thy skill at me, Bruſe me with ſcorne, confound me with a flout. Thruſt thy ſharpe wit quite through my ignorance ▪ Cut me to peeces with thy keene conceit. And I will wiſh thee neuer more to daunce, Nor neuer more in Ruſsian habite waite. O neuer will I truſt to ſpeaches pend, Nor to the motion of a Schoole-boyes tongue ▪ Nor neuer come in vizard to my friend, Nor woo in rime like a blind harpers ſongue. Taffata phraſes, ſilken tearmes preciſe, Three pilde Hiberboles, ſpruce affection: Figures pedanticall, theſe ſommer flies, Haue blowne me full of maggot oſtentation. I do forſweare them, and I here proteſt, By this white Gloue (how white the hand God knowes) Hencefoorth my wooing minde ſhalbe expreſt In ruſſet yeas, and honeſt kerſie noes. And to begin Wench, ſo God helpe me law, My loue to thee is ſound, ſance cracke or flaw ▪ Yet I haue a tricke, Of the olde rage: beare with me, I am ſicke. Ile leaue it by degrees; ſoft, let vs ſee, Write Lord haue mercie on vs, on thoſe three, They are infected, in their hartes it lyes: They haue the Plague, and caught it of your eyes, Theſe Lordes are viſited, you are not free, For the Lords tokens on you do I ſee. Peace, for I will not haue to doe with you. Speake for your ſelues, my wit is at an ende. Loe, he is tilting ſtraight. Peace, I haue don. My hat to a halfe-pennie, Pompey prooues the beſt Worthie. Pompey the great. Take away the Conquerour, take away Aliſander. A kisſing traytour. How art thou proud Iudas? Well folowed, Iudas was hanged on an Flder ▪ Becauſe thou haſt no face. A deaths face in a Ring. Saint Georges halfe cheeke in a Brooch. I and worne in the cappe of a Tooth-drawer: And now forward, for we haue put thee in countenance. Falſe, we haue giuen thee faces. And thou weart a Lyon, we would do ſo. For the Aſſe to the Iude: giue it him. Judas away ▪ This cannot be Hector. A Lemmon. Greater then great, great, great, great Pompey: Pom pey the hudge. Pompey is mooued more Ates more Atees ſtir them or ſtir them on. I, if a&#x27;haue no more mans blood in his belly then w ſuppe a Flea. What reaſon haue you fort. Honeſt plaine words, beſt pearce the eare of griefe, And by theſe badges vnderſtand the King, For your faire ſakes, haue we neglected time. Plaide fouleplay with our othes: your beautie Ladies Hath much deformed vs, faſhioning our humours Euen to the oppoſed ende of our ententes. And what in vs hath ſeemed rediculous: As Loue is full of vnbefitting ſtraines, All wanton as a childe, ſkipping and vaine. Formd by the eye, and therefore like the eye. Full of ſtraying ſhapes, of habites and of formes ▪ Varying in ſubiectes as the eye doth roule. To euery varied obiect in his glaunce: Which partie coted preſence of looſe loue Put on by vs, if in your heauenly eyes, Haue miſbecombd our othes and grauities. Thoſe heauenly eyes that looke into theſe faultes, Suggeſted vs to make, therefore Ladies Our loue being yours, the errour that Loue makes Is likewiſe yours: we to our ſelues proue falſe, By being once falce, for euer to be true To thoſe that make vs both faire Ladies you. And euen that falſhood in it ſelfe a ſinne, Thus purifies it ſelfe and turns to grace.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Love&#x27;s Labor&#x27;s Lost</div><div class="body">The King of Navarre has proclaimed a three-year period of study during which his courtiers must live abstemiously and refrain from seeing women; no woman may even approach the court. Unfortunately the Princess of France is due to arrive on a diplomatic mission concerning a dispute over money and territory, and the King is forced to meet her; however, the evidence in support of France’s claim against Navarre has not arrived, and the issue is deferred. Costard is caught canoodling with Jaquenetta and is remitted to Don Armado’s custody. Armado is himself enamoured of Jaquenetta, and sends Costard to her with a love-letter. Biron also pays Costard to carry a similar letter to his love, Rosaline, and Costard mixes up the two letters. Armado’s causes amusement to the French ladies when they receive it; Biron’s causes embarrassment to himself when, directed by Holofernes, Jaquenetta brings it to the King just after Biron has attacked him and the other lords for falling in love. Biron argues the illegitimacy of their original vows, and they set about wooing the ladies, first with gifts, then by appearing in a masque of Russians. The ladies confound the latter by wearing masks themselves and swapping gifts so that each lord woos the wrong lady; they also refuse to dance. Don Armado and the locals offer the court a pageant of the Nine Worthies, devised by the schoolmaster: it is mocked by the lords and breaks up in confusion when Costard accuses Don Armado of fathering the pregnant Jaquenetta’s baby. News then arrives that the King of France is dead. The lords propose marriage to the ladies, who refuse: the court of France is in mourning, and the lords must wait a year; given particular conditions by their ladies, the King will spend it in a hermitage and Biron trying vainly to entertain dying men. The play ends with a song of winter and spring, the owl and the cuckoo.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

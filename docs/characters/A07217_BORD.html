@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BORD in The Turk (Muleasses the Turk) · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BORD</span>
+</nav>
+
+<h1>BORD</h1>
+<p class="lede">in <em>The Turk (Muleasses the Turk)</em> — Mason, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1610</td></tr>
+<tr><th>Words</th><td>1404</td></tr>
+<tr><th>Characters</th><td>7467</td></tr>
+<tr><th>BritDrama no.</th><td>1557</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">lackes, Courtiers and Porters liue by able backes. Exeunt Priapus thou womans God assist me with a Iouiall abi lity: this night I may beget a Hercules : Fortune I <mark>must</mark> con fesse thou hast turnd vp thy muffler, and cast a gratious aspect on Bordello : for I am not onely in the state of cleane linnen; but also thou hast made me</div>
+<div class="excerpt">Pantofle. Thou hast bene at my pleasure indeed P ntofle, I will retreate into the country, hate this amourous, Court nd betake my selfe to obscurity: I tel thee boye I wil returne</div>
+<div class="excerpt">lotium are recip ocall, their sauour is noysome. To depart in debted boy, is the onely way to be praid for, seeing they knowe it is my prosperity and welfare that <mark>must</mark> make them satisfaction. Most willingly, for I am not possest of a pennikin, and if he be not before with me, I take it we are euen, and may walke in campage. Pantofle</div>
+<div class="excerpt">a Goate, Cock-sparrowes braines, and such like this after an houres receipt, hath a fourefold operation: and least I should be like a Peacocke all taile and no <mark>heart</mark>, heere is a distillation of ten pound a pinte, that comforts the inward, fires the braines, cheeres vp the spirit, and makes a man lay about him like a dutchman.</div>
+<div class="excerpt">poore Bordello in minde of pennance before he hath trespassed? Se, it makes toward me: infortunate Bordello that the de uill should be an enemy to lechery. Ladies <mark>did</mark> you not see a spirit passe this way? Without iest a meere Ghost, standing bolt vpright at Timocleas chamber, so nye Court Incubus on my life. How: terrefied? I</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Pantofle. Thou hast bene at my pleasure indeed P ntofle, I will retreate into the country, hate this amourous, Court nd betake my selfe to obscurity: I tel thee boye I wil returne by this Ci cyan Isle without transformation since Hebe hath discouered her secrets I will turne I p ter, hate the whole sexe of women, and onely embrace thee my Gammede. I tel thee should the Lady Iulia when she was aliue haue profered me her cheeke to kisse, I would not haue bowed to that painted image for her whole D kedome: Mercury h d no good aspect in the horoscope of my natiuity: women and lotium are recip ocall, their sauour is noysome. To depart in debted boy, is the onely way to be praid for, seeing they knowe it is my prosperity and welfare that must make them satisfaction. Most willingly, for I am not possest of a pennikin, and if he be not before with me, I take it we are euen, and may walke in campage. Pantofle vanish. Eunuchus, Venus restore thee to thy generation: what doings are now in your quarters? you are aboue me, I meane not their ingenys or vpper galleries: The beauteous Timoclea. The truth is I am earthly, and like not to participate with the element of the fire: good Eunuchus commend me to your Lady, and tell her by importuning my affection, she seekes the fall of an innocent. I see no hope of it. Faith Eunuche I haue made a vow not to vncase my selfe to any of that sexe. Verily since the relapse of my Sempstresse, I haue not addicted my selfe to that neat &amp; cleanly carriage As I am, so fates assist me: and Eunuchus here&#x27;s my hand thou shalt haue ample share in my fortunes. Deere Eunuch let me hugge thee: how I long to ma nifest thy seruice to my Lady Timoclea. You will meete? It shall suffice. By women man first fell, by them Ile rise. Exit. Eunuchus? Thy Ladie shall see that in my deeds Eunuchus if all the sweet meates in Florence be prouocatiue. True, were I not a man of warre whose vallour &amp; mag nanimious courage is not to be deiected so long as his weapon holds. If I should, doubt not her gratious hand in my erection: but gentle Eunucus, the key that opens to the Via lactea : I had thought an entrance rough, manly and boistrou had bene more pleasing to Ladyes: Enter Madam Fulsome, But see Eunuchus I shall be troubled I shall be tormented with this court owle if you assist me not: sfoote the flesh-fly hath espied me, she will neuer linne sucking at me so long as I haue any matter for her to worke vpon. I verily beleue it, for her very countenance and com plexion shewes she is able to allay any mans courage liuing with a breath. What is that Ph go Eunuchus doe you know him? I should account it none of my neerest mishaps, being interdicted so worthy a presence by more then vrgent affaires. Sweet Sir beare my excuse with all respectiue desire of pardon. Being vpon my departure Lady, I am inforced to see to the conuaying of my goods, and the trussing away of my bagage. For our Ladyes Madam they are few or none, our coun trey men are not so addicted to titles of honour: they vse knight hood as rich Iewellers desire Iemms rather for traficque then or nament. Great Commoditie, and that is the reason so many mar chants and yeomen sonnes hunt after it. For the bettring of mine inward parts, some few notions I haue committed to memory. Since my comming to Florence I haue seene ignorance in the shape of a Ci tizen mufled in the scarlet of magistracy that coul not write his owne name. Generally I haue noted through the whole Country great enmity betweene witt and clokes lin&#x27;d through with veluet: and yet beggers &amp; gallants agree together very f miliarly. There is no thriuing but by impudence and pan arisme: he that is furnished with one of these two quallities shal begg more of a foolish Lord at a mar bone breakfast, then all the Poets in the whole towne shall rime out of him in an age: You shall finde vs as forward in as hot a seruice in the Lobby or elsewhere at your Ladiships appoint, but— Your Ladiship shall finde vs ready to put in— our spoones. You see Eunuchus, familliarity and curtesie hath en wrapt me in the knowledge of these meanest vassels of honour: but henceforth my countenance shalbe estranged, and I wil bury my acquaintance in scilence. I were inhumaine if I should forget you the latest mi nute of my life: pray heauens my Page Pantofle haue procured in my absence the embrodered shirt I gaue directions for vpon both our wardrops: that care once ouer, I shal neuer henceforth taste of lowsie misfortune. Venus supplying what Bordello most lackes, Courtiers and Porters liue by able backes. Exeunt Priapus thou womans God assist me with a Iouiall abi lity: this night I may beget a Hercules : Fortune I must con fesse thou hast turnd vp thy muffler, and cast a gratious aspect on Bordello : for I am not onely in the state of cleane linnen; but also thou hast made me gratious in the eye of Signior Diaspermaton my Apothecary, who hath furnished me with this receipt: heere is a compound of Cantharid s Diositerion, marrow of an Oxe, haires of a Lyon, stones of a Goate, Cock-sparrowes braines, and such like this after an houres receipt, hath a fourefold operation: and least I should be like a Peacocke all taile and no heart, heere is a distillation of ten pound a pinte, that comforts the inward, fires the braines, cheeres vp the spirit, and makes a man lay about him like a dutchman. Let me see, it is more then time that I commit this deuine pill to his hopefull working: least my staffe be out of the rest when my aduersary is in the carriere. So Cupids faire mother be thy mid wife: out and alas I am mare rid, what Som ners Ghost or limme of Lucifer, puts poore Bordello in minde of pennance before he hath trespassed? Se, it makes toward me: infortunate Bordello that the de uill should be an enemy to lechery. Ladies did you not see a spirit passe this way? Without iest a meere Ghost, standing bolt vpright at Timocleas chamber, so nye Court Incubus on my life. How: terrefied? I no sooner beheld it, but drawing my better parts together Enter Timoclea. Helpe, helpe! All run out, Timoclea followes the Eunuch out. Was euer man thus distracted betweene the flesh and the spirit? s&#x27;foot this Pill hath so fiered my mansion that vnlesse I light on some water-worke, I shall loose the rain s like a second Phaeton, and burne my Fabricke. Surely I am that Tantalus the hungry Poets talke of, and am as dry as an Eele in a sand-bagge, and yet want water for the reaching: Let me see, why should I feare spirits that haue raised vp such an able one at my pleasure, that like a bold Orator stands on tip-toes to speake in Barre: and yet me thinkes he should be no good pleader, he was so suddenly deiected and out of countenance with an apparition. I would the case were laid open, that I might see how my young mooter would bestir himselfe: Ha: who is this? no more ghosts I hope: if it be it is the more womanlie of the two. She lyes as if she knewe the end of her creation. On my life some wayting mayde that hath a Court Epilepsie come vpon her: Ile see if she fome at the mouth. Out &amp; alas, the heauens haue conspired poore Bordellos ouerthrowe. The vertuous Timoclea wretched and most accursed hands, that haue trust vp my fortunes in thy Elfe-knot. A most deiected parcell of mans flesh. Wrong: heauens knowe I meant to haue done her a much right as could haue bene done to one of her sexe. Alas Sir my shaking proceedes of a standing ague I haue had this two houres.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Turk (Muleasses the Turk)</div><div class="body">Julia, the under-age Duchess of Florence, has been promised by her uncle, Borgias, in marriage to the Duke of Ferrara; but the Senate has promised her to the Duke of Venice. The rival dukes lay siege to Florence, but Borgias gets them to raise the siege by hiding Julia and telling them that she is dead. To supply a body for the funeral, he has his wife Timoclea poisoned by the Turk Muleasses. Borgias intends to marry his daughter Amada to Muleasses, marry Julia himself now that he is a widower, and make himself King of Italy; Muleasses will help him in order to secure Turkey a foothold in Christendom. They also plot to murder Venice and Ferrara, using a poison with a thirty-day time delay, so that they will not die until after they have left Florence. But Borgias still has another dead body to find, to stand in for Timoclea at her funeral, and he asks Eunuchus to help supply one. Eunuchus inveigles Bordello into a false assignation with Timoclea, intending to leave him instead in Borgias’s bedchamber to be killed. In fact, Timoclea is not dead: Muleasses only gave her a sleeping draught, and when she wakes he releases her from Julia’s tomb and promises to help her take revenge on her husband. She appears to Venice posing as Julia’s ghost, and denounces Borgias as her murderer. Bordello sees her en route to his assignation, and is scared off. Eunuchus is also haunted, flees, and ends up running into Ferrara’s dagger, with fatal consequences. After overhearing Muleasses express his passion for Amada, Timoclea jealously kills her. Muleasses encourages her to haunt and kill Borgias too. She tells her husband that she has been having an affair with the Turk, and he pretends to commit suicide by throwing himself off a balcony. This frees her to enjoy Muleasses, but he rejects her, intending that she 1607 should take her own life in despair. Muleasses calls for Eunuchus to remove Borgias’s body, but it is Ferrara who comes, in disguise, having substituted himself for the dead eunuch. Borgias, who is not really dead, stabs him; Ferrara lives long enough to reveal his true identity. In order to touch his wife’s conscience, Borgias poses as an echo, then as his own ghost; finally he strangles her with her own hair. Borgias plans to pin the murders of both Ferrara and Timoclea on Muleasses, but Bordello comes upon Timoclea’s body and is caught with it by Venice. Muleasses attempts to rape Julia, but Venice saves her. Muleasses explains Borgias’s plot; the two…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

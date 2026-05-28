@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NER in The Merchant of Venice (The Jew of Venice) · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>NER</span>
+</nav>
+
+<h1>NER</h1>
+<p class="lede">in <em>The Merchant of Venice (The Jew of Venice)</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>532</td></tr>
+<tr><th>Characters</th><td>2774</td></tr>
+<tr><th>BritDrama no.</th><td>1047</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">him. Tis well you offer it behind her back, the wiſh would make elſe an vnquiet houſe. Sir, I would ſpeake with you: Ile ſee if I can get my husbands ring vvhich I <mark>did</mark> make him ſweare to keepe for euer. Come good ſir, will yov ſhew me to this houſe. When the moone ſhone we <mark>did</mark> not ſee the candle? It is your muſique Madame of the</div>
+<div class="excerpt">ſee the candle? It is your muſique Madame of the houſe? Silence beſtowes that vertue on it Madam? What talke you of the poſie or the valew: You ſwore to me when I <mark>did</mark> giue you, that you would weare it till your houre of death, and that it ſhould lie with you in your graue, though not for me, yet for your vehement oathes, you</div>
+<div class="excerpt">that you would weare it till your houre of death, and that it ſhould lie with you in your graue, though not for me, yet for your vehement oathes, you ſhould haue beene reſpectiue and haue kept it. Gaue it a Iudges Clarke: no Gods my Iudge the Clarke will nere weare haire ons face that had it. Nor I in yours till I againe ſee</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">You would be ſweet Madam, if your miſeries were in the ſame aboundance as your good fortunes are: and yet for ought I ſee, they are as ſicke that ſurfeite with too much, as they that ſtarue with nothing; it is no meane happines therfore to be ſeated in the meane, ſuperfluitie comes ſooner by white haires, but competen cie liues longer. They would be better if well followed. Your Father was euer vertuous, and holy men at theyr death haue good inſpirations, therefore the lottrie that he hath de uiſed in theſe three cheſts of gold, ſiluer, and leade, whereof who chooſes his meaning chooſes you, will no doubt neuer be choſen by any rightlie, but one who you ſhall rightly loue: But what warmth is there in your affection towardes any of theſe Princelie ſuters that are already come? Firſt there is the Neopolitane Prince. Than is there the Countie Palentine. How ſay you by the French Lord, Mounſier Le Boune? What ſay you then to Fauconbridge, the young Barron of England? How like you the young Germaine, the Duke of Saxo nies nephew? Yf hee ſhoulde offer to chooſe, and chooſe the right Caſ ket, you ſhould refuſe to performe your Fathers will, if you ſhould refuſe to accept him. True maddam, hee of all the men that euer my fooliſh eyes look&#x27;d vpon, was the beſt deſeruing a faire Ladie. Quick, quick I pray thee, draw the curtain ſtrait, The Prince of Arragon hath tane his oath, and comes to his election preſently. My Lord and Lady, it is now our time that haue ſtoode by and ſeene our wiſhes proſper, to cry good ioy, good ioy my Lord and Lady. Maddam it is, ſo you ſtand pleaſd withall. What and ſtake downe? From both? my L. Bellario greetes your grace? He attendeth here hard by to know your aunſwer whether youle admit him. Tis well you offer it behind her back, the wiſh would make elſe an vnquiet houſe. Sir, I would ſpeake with you: Ile ſee if I can get my husbands ring vvhich I did make him ſweare to keepe for euer. Come good ſir, will yov ſhew me to this houſe. When the moone ſhone we did not ſee the candle? It is your muſique Madame of the houſe? Silence beſtowes that vertue on it Madam? What talke you of the poſie or the valew: You ſwore to me when I did giue you, that you would weare it till your houre of death, and that it ſhould lie with you in your graue, though not for me, yet for your vehement oathes, you ſhould haue beene reſpectiue and haue kept it. Gaue it a Iudges Clarke: no Gods my Iudge the Clarke will nere weare haire ons face that had it. Nor I in yours till I againe ſee mine? I but the Clarke that neuer meanes to doe it, vnleſſe he liue vntill he be a man. I, and ile giue them him without a fee. There doe I giue to you and Ieſſica from the rich Iewe, a ſpeciall deede of gift after his death, of all he dies poſſeſt of.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Merchant of Venice (The Jew of Venice)</div><div class="body">Bassanio plans to woo the heiress Portia, hoping that, if successful, her wealth will get him out of debt. His friend and principal creditor, the melancholy merchant Antonio, agrees to finance the venture, but all his money is tied up in commercial activity. He seeks a loan from the Jew Shylock, who himself raises the money by borrowing from his co-religionist Tubal. ===== PAGE 342 ===== 342 |. 1047. The Merchant of Venice Shylock is resentful of Antonio’s attacks on him for taking interest on loans, but frames a ‘merry bond’ which will entitle him only to a pound of Antonio’s flesh should the money not be repaid on the due date. Lancelot Gobbo leaves Shylock’s service and is hired by Bassanio, who is planning a going-away feast. Lancelot brings a letter from Shylock’s daughter Jessica to Lorenzo, whom she wishes to marry. Shylock is invited to the supper, and, while he is away, Lorenzo helps Jessica to escape from her father’s house; afterwards, it is unclear whether Shylock is more distressed by the loss of his daughter or the money she took with her. Bassanio leaves for Belmont, accompanied by Gratiano. Portia’s marital prospects are regulated by the will of her dead father: her suitors must choose which of three caskets contains her picture, and she may only wed the suitor who gets it right, while suitors who get it wrong must remain unmarried ever after. The Prince of Morocco chooses the golden casket, signifying a much-desired object, but gets only a death’s head. The Prince of Aragon chooses silver, signifying the suitor’s desert, and gets a fool’s head. Bassanio chooses lead, signifying that the suitor must risk everything, and gets Portia. She gives him a ring, which he promises never to remove. oo Rumours circulate in Venice that Antonio is ruined by the loss of all his ships. Unable to pay his debt to the vindictive Shylock, he writes to Belmont for Bassanio’s help. Lorenzo also comes to Belmont with Jessica, and, leaving her household in their care, Portia. secretly follows her new husband to Venice. Having acquired a disguise and a testimonial from a lawyer kinsman, she takes part in the hearing of Antonio’s case before the Duke. Shylock refuses either to accept the repayment of his money or to be merciful; but Portia points out that the bond entitles him to take no blood with his pound of flesh. Having plotted to kill a Venetian citizen, his life and goods are forfeit, but he is spared, on condition that he becomes a Christian and makes over…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

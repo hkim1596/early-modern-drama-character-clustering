@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIS in The Devil&#x27;s Charter, or Pope Alexander the Sixth · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>GIS</span>
+</nav>
+
+<h1>GIS</h1>
+<p class="lede">in <em>The Devil&#x27;s Charter, or Pope Alexander the Sixth</em> — Barnes, Barnabe</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>433</td></tr>
+<tr><th>Characters</th><td>2556</td></tr>
+<tr><th>BritDrama no.</th><td>1523</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">bitternesse! M. P. S. A. These are the same letters with the first begin ning at the last, Magnum Petrum Sequitur Antichristus. Phy Diabolo, our blessed Alexander (beeing Saint Peeters successor) this diuilish libeller calls Antichrist. Read it good Barbarossa. Oh most intollerable abhomination? By the blessed alter of Saint Peeter</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Signior Barbarossa in happy time well encountred, for I haue some businesse this morning with my brother the Duke of Candie, wherein I would both vse your counsell and coun tenance. Pardon mee deere sir no seruice more then reciprocall, and in due paritie betwixt vs, and since wee be so neere it, let vs not passe Pasquill without an Aue: what scandalous hyerogli phickes haue wee heere? A. S. P. M. Auaritia, Superbia, Perfidiae, Malitiae, Alexander, Sextus, Pontifex, Maximus. Against my Lord the Popes holinesse such blasphemous impu dence, such intollerable bitternesse! M. P. S. A. These are the same letters with the first begin ning at the last, Magnum Petrum Sequitur Antichristus. Phy Diabolo, our blessed Alexander (beeing Saint Peeters successor) this diuilish libeller calls Antichrist. Read it good Barbarossa. Oh most intollerable abhomination? By the blessed alter of Saint Peeter this villanie surpasseth patience. Read it good Barbarossa : more mischeife of my wife nay read it. Nay read out all, it is but of a whore. Malignant aspect of vngratious stars, Why haue you poynted at my miseries? Patienza per forza, but this wounds to th&#x27;quick. Oh villamies of monstrous people, Fashions and times deformed and vnseasonable, Mallice performe thy worst least comming late, I with anticipation crosse that fate. Read it, toot man. Mortall miseries? but we are all mortall, Fortune I scorne thy malice, and thy meed, Keepe them vp safe that I may shew them to his holines, Is this the licence which our citty Rome Hath giuen to beastly Bardes, and satyrists, Ribbaldly Rimesters, and malicious curs, To leaue no state of Church nor seculer, Free from their ordure, and polution. Good Barbarossa beare me Company: Exile and Punishment for such base poets, And str pes with wiery scourges were too litle. Which breathing here in Rome, and taking grace ▪ From the faire Sunne-shine of this hemisphere, Contaminate that ayre with their vile breath. Obumbrating this light by which they liue, If these were truth: this times impietie, May soone sincke downe vnder the diety. Exeunt. W at my Lucretia walking alone? Th e solitarie assions should bewray Some discontentment, and those gracious eyes Seeme to be moon&#x27;d with anger, not with loue: Tell me Lucretia, may thy Gismond know? Here in the presence of the powers in Heauen, I doe not speake n scorne, but in meere loue: And further Lucrese, (of thy clemencie, For loue, and b autie ▪ both are riche in bountie) F rgiue me what is past, and I will sweare, Neuer to vex thee with more ie lousie.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Devil&#x27;s Charter, or Pope Alexander the Sixth</div><div class="body">During a papal election, Roderigo Borgia both bribes the conclave and sells his soul to the Devil. These actions ensure his election as Pope Alexander VI. He makes his son Caesar a cardinal and his other son, the Duke of Gandy, the general of the papal armies. To nepotism he adds incest with his daughter, Lucretia; among many other crimes, he also poisons cardinals for their money and makes homosexual advances to the vanquished prince, Astor Manfredi. Later, seeking to acquire the lands of Astor and his brother, he has them put to sleep with opium, then kills them with poisonous snakes and gives out that they died from over-exerting themselves at tennis. King Charles of France enters Italy to press his claim to the Neapolitan throne, and is given assistance by Lodowick Sforza. Their army marches on Rome. Alexander has secured a marriage alliance with the current rulers of Naples, and so: favours Ferdinand, Charles’s rival claimant. On Caesar’s advice, he ===== PAGE 344 ===== reluctantly allows Charles to enter Rome and capitulates to his demands. Charles takes Naples, but dies after returning to France, and Ferdinand takes back the throne; Charles’s successor, King Louis, invades again. Frustrated by the restrictions imposed by her jealous husband, Lucretia Borgia traps him in a trick chair which immobilizes him; she agrees to spare his life on condition that he signs a document she has prepared, but afterwards she stabs him to death anyway. The document turns out to be a forged suicide note. Informed by devils of the truth of the affair, Alexander sends her a poisoned perfume, pretending it to be a gift from her lover, Sforza; she uses it when preparing for an assignation with a cardinal, and dies. Despite Alexander’s efforts to foster good relations between his sons, Caesar and Gandy are bitterly jealous of one another. Caesar engages Frescobaldi to help him murder Gandy; the corpse is disposed of in the Tiber, and Caesar throws in Frescobaldi after it. He plans to throw suspicion onto Cardinal Ascanio Sforza, but devils have already revealed his guilt to Alexander. Father and son confront one another with their respective villainies, and are reconciled: Caesar is appointed the papal general in his brother’s place. Caesar leads the armies to conquer Italy. He besieges Forli, but the Countess will not surrender even when shown that Caesar has her sons as hostages. He orders them beheaded, and storms the city; but once the Countess is taken, he reunites…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEB in Love&#x27;s Cruelty · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SEB</span>
+</nav>
+
+<h1>SEB</h1>
+<p class="lede">in <em>Love&#x27;s Cruelty</em> — Shirley, James</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1640</td></tr>
+<tr><th>Words</th><td>1403</td></tr>
+<tr><th>Characters</th><td>7322</td></tr>
+<tr><th>BritDrama no.</th><td>2349</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">shake thee. More welcome then my liberty, Eubella <mark>Has</mark> made my <mark>heart</mark> glad with your new character And now my sonne Hippolito. You will not leave us this morning? We <mark>must</mark> expect you then. Signior you are most welcome, I entreat you To call my girle your daughter Sir please you retire, he is new departed Nay we <mark>did</mark> not examine his</div>
+<div class="excerpt">iniquity a trade Why should any Promotion charme my honest tongue? Ide rather Plough my owne acres with my innocence Then have my name advanc&#x27;d by poisoned honor, He <mark>must</mark> not Whoore my daughter Great sir We <mark>heare</mark> you are to be married. Be resolute for thy honor, I weigh not The titles he would heape, remember girle Thy mothers vertue,</div>
+<div class="excerpt">drinke my selfe into a heate above his conjuration, if there be a spirit in wine Ile swallow it: How is man falne; that to preserue his name and defend innocence <mark>must</mark> fly to shame. WE might with more discretion sent for wine ▪ To my owne lodgings. Here I am not knowne, let no body interrupt us After a cup or <mark>two</mark> Ile tell thee.</div>
+<div class="excerpt">my daughter sir, and though I say&#x27;t She is yet a virgin, would you part with such A child to buy a Kinghthood? bribe at such Expence for a poore title? I wod I <mark>did</mark>, the way To be assurd is to aske the question sir I know not what to say, but do you thinke She shall be safe here, is the Court a Sanctuary For virgins? It depends</div>
+<div class="excerpt">fret do what he can, The world shall call, Sebastian honest man. Exit. Give me leave to tell Your highnesse I suspect it. Why should a Prince dissemble? Sir sir I <mark>must</mark> be honest Eubella expresse thy duty To him thou calst a father, for thy owne Sake leave this place, the Court&#x27;s a fire Canst thou not see the flames that threaten</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Hold that constant my Eubella ▪ She was She has found a miserie Nor I. Do not, do not You ever have beene held an honest man. Pray, do not mock me, it has pleas&#x27;d his grace To give, me a new name; a riban in my forehead But there&#x27;s a price too great set for the honor, That is my daughter sir, and though I say&#x27;t She is yet a virgin, would you part with such A child to buy a Kinghthood? bribe at such Expence for a poore title? I wod I did, the way To be assurd is to aske the question sir I know not what to say, but do you thinke She shall be safe here, is the Court a Sanctuary For virgins? It depends upon the Princes chastity Whose example builds up vertue Or makes iniquity a trade Why should any Promotion charme my honest tongue? Ide rather Plough my owne acres with my innocence Then have my name advanc&#x27;d by poisoned honor, He must not Whoore my daughter Great sir We heare you are to be married. Be resolute for thy honor, I weigh not The titles he would heape, remember girle Thy mothers vertue, since thy birth, though noble Cannot expect his Courtship for thy selfe, Scorne to be cald a Lady for his pleasure I know not, still I feare her innocence Is not enough to guard her, if the Duke Pursue her vitiously, what is a virgin Against so many flattering temptations? I would you would be pleasd my Lord Shall I be choakd with honors and not speake? Where is my courage, shall a few gay titles Corrupt a father? Bovaldo thou art reported a Good fellow. Is there no tricke to give a man a spirit? I would be valiant; I dare not talke; Well thought on, that shall arme me against all His flattery shall&#x27;s to a Tauerne? It shall be so; the Courts too open, You shall command Sebastian No titles, Ile thither to forget em and drinke my selfe into a heate above his conjuration, if there be a spirit in wine Ile swallow it: How is man falne; that to preserue his name and defend innocence must fly to shame. WE might with more discretion sent for wine ▪ To my owne lodgings. Here I am not knowne, let no body interrupt us After a cup or two Ile tell thee. Her&#x27;es a good health to him The same justice that mine had. By no meanes, it takes from our owne mirth This is the tricke of Tavernes, when men desire to be private. A Mistresse at my yeeres? New come to Court? Ile pray for her, is she vertuous? Yet more o&#x27;these raskalls? Presto be gon, or ile teach you a tricke for your Iackanapes Learning, they will be deceiued that choose a Tauerne for privacie Poore girle, I thanke you sir. Of what? Her complexion is naturall, she has no tricke of art A litle breeding she has had; and some precepts to guard her Honesty It should be every where I speake Bonaldo what I thinke, and it would be no Dishonour to the greatest to be the first examples. Name it The Duke, he does not love me No Bovaldo he does not, Tis not Princely, Nay I shall dare to tell him so, but To his health. I begin to be warme already. As ill thou wodst say? Thou knewest me a Gentleman No I&#x27;me a Knight, a Lord I know not what, I&#x27;me lost within a wildernesse of names But I will be my selfe agen—the tother cup. This skirmish will doe well Now I could talke me thinkes. I will not prostitute Eubella for The wealth of his whole Dukedome, ther&#x27;es no honor To a noble conscience, he is the greatest coward. Dares not be honest. Dares cut his fathers throat I prethee leave this humor, tis not generous, I shanot eate my words Thou art all for wenching, Dee not feare to talke thus? This is uncivilll, and I shall tell Bonaldo Y&#x27;are too bold, and forget your selfe, I am Ashamd of this converse; because the Duke? Did his hand graspe the Scepters of the world And would propound e&#x27;m all to buy the honor Of my Eubella, I would scorne his salarie And tell him he were poorer in his soule Then he that feedes ith hospitall, I&#x27;me armd And shall grow very angry with your humor Which ere it nam&#x27;d my daughter carried wickednesse Enough, but in her cause I am easily Provok&#x27;d to teach that tongue repentance dares Traduce her whitnesse, I allow a mirth But do not love this madnesse, and if I Might counsell you, there is a way to quench These wild licencious flames, earnest of those Our soules shall feele hereafter, we are both In yeeres, and should looke out our winding sheet Not women, Hee&#x27;s drunke already That which has raisd me but to noble anger Is his distraction, theres for your wine Now to the wanton Duke, heaven let him see His shame and know, great men that practise lust Both kill their body and corrupt their dust, Let him fret do what he can, The world shall call, Sebastian honest man. Exit. Give me leave to tell Your highnesse I suspect it. Why should a Prince dissemble? Sir sir I must be honest Eubella expresse thy duty To him thou calst a father, for thy owne Sake leave this place, the Court&#x27;s a fire Canst thou not see the flames that threaten thee? But you would make her tame, looke looke Eubella The Duke himselfe burnes, do not his eyes sparcke With lust, his very breath will blast thee If yet thou hast not lost thy innocence I charge thee, by thy mothers memory And colder ashes, keepe thy selfe unstaind Let no temptation corrupt a thought Th&#x27;art richer in thy chastity, then all The Kings of earth can make thee, if thou fall Thou kilst my heart Lord me no Lords I grone under the burden of your honors And here resigne all, give me but my daughter Let not a sinne so blacke as lust degrade A Prince and register thy dishonord name With foule adulteries I would preserve the name of our yet honest famil I feare she is ore come already, I do not like her silence. Oh let Sebstian fall Lower sir, I beseech you tread upon me So you will still be honest to my child, She is all my comfort But will you not Hereafter study to betray her innocence? Or give her licence to returne with me? Ile aske no more assurance, grant but this And when we are at home, it shall oblige us Beside the duties we already owe In heart to pray for you Then Ile vnthanke your Goodnesse And dare thus boldy tell your highnesse, lawes Are most unjust that punish petty theeves And let the great ones scape, Princes may take our children from us, not To aduance but kill their names, corrupt their vertues; When needy men, that steale to feed their lives Are doo&#x27;md to the Gallouse. Take hence the ravisher Although he ravish not Eubella From her selfe, yet he does ravish A daughter from her father, and ile voice it Through every streete, I am not bound to whisper When griefes so loud within me. It will but spread thy infamy, when men Shall speake my cause, and thy lasciviousnes Which I will tell so often to the stones The vault shall be ashamd to eccho thee Eubella Do bury me alive, be strong Eubella And let not death by my example shake thee. More welcome then my liberty, Eubella Has made my heart glad with your new character And now my sonne Hippolito. You will not leave us this morning? We must expect you then. Signior you are most welcome, I entreat you To call my girle your daughter Sir please you retire, he is new departed Nay we did not examine his affaire But we expect his quicke returne Eubella His griefe has overchargd him Be comforted Eubella, all thy teares Will not recall his life Does your grace meane this honor? After this shower is over, she will shine Doubt not my Lord, and blesse her happy starres</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Love&#x27;s Cruelty</div><div class="body">Hippolito has decided to avoid seeing his friend Bellamente’s fiancée Clariana before they are married, for fear that he will fall in love with her. On learning this, Clariana pays him a visit, without revealing her identity, and he woos her. The session is interrupted by a summons from the Duke, so Hippotite leaves Clariana in his room, locking the door behind him. The Duke’s business turns out to take longer than anticipated: he has brought the virgin Eubella to court to be his mistress, but, despite bestowing promotien: on her father Sebastian, he cannot persuade Rubella into bed, and wants Hippolito to do the jab ter him. Hippolito asks Bellamente to go and release the unnamed gentlewoman from his unsuccessfully attempts his blandishments on Bubs Meanwhile, Bellamente is dismayed to find dit bh: friend’s visitor was Clariana; she argues coyenth thet her visit was innocent curiasity. but decides to make sure of her by advanciny the dete their wedding. , Having seen Clariana, Hippolite: talix fur her ia he expected. Bellamente’s servant discevers thet i + locked room together and, iooking threuuh os oralt the wall, sees them having sex. Puid «4 the on Bellamente swears revenge and catuhe: thera ten in bed. He forces Hippolito inte the Gosct ani oa orders Clariana to tidy the bed. and thes --2 the servant and rebukes him te: Released from his hiding-place. Hipruiies.: Bellamente to be a true Italien amd biit si Bellamente cannot bring himiselt tc: declares that he will never ayer seo bry: sleep with Clariana. Determined tx compromising Eubella’s chastity. and is imprisoned tor it. The Puke sunene. POT. alte Betlaipcit: prevent to exercise his silver tongue again dogs pe ae woos her for himself. net for theo Gece fe 4 learns his lessun and sitiles any then ocece Not so Clariana: she asks Hiippoittes te sige ss wedding morning on the pretuar ihe sao ue of a plot against him. and tries fe per tes up Eubella. When he ts adetngns shies last act is to Rill her mm tur Sua Bellamente drops dead we grant compensate Fubetla by miarrvitis fee Pa + SCENE DESTOUN NEON Piet Bea aba ge epi AA only)</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

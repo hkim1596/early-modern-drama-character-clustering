@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>POG in Pedantius · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_11.html">Cluster 11 — 11: ego, que, est</a> ›
+  <span>POG</span>
+</nav>
+
+<h1>POG</h1>
+<p class="lede">in <em>Pedantius</em> — Forsett, Edward</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>1440</td></tr>
+<tr><th>Characters</th><td>9232</td></tr>
+<tr><th>BritDrama no.</th><td>697</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 11 (<em>ego, que, est, non, mihi, quid…</em>). Matches are highlighted.</p>
+<div class="excerpt">assentatiunculas expecto. Ostende (quaeso) quo modo: meos suaviari priùs te volo. Siccine of ficium negligis pessime? facito actutùm. At <mark>mihi</mark> <mark>non</mark> placet hypocrisis. Quarè <mark>ego</mark> Crobolus sum reuera, iàm <mark>que</mark> Lydiam ambibo amatoriè: tu Poggloste vide vt meum <mark>Hoc</mark> secteris accuratè, vt vestigijs semper insistas meis: pallium, pileum, calcei,</div>
+<div class="excerpt">potione vincias: Apud mensam plenam rostrum <mark>hoc</mark> deliges, sicque vinclis constrictum cibarijs, <mark>vel</mark> cap tivum habe. <mark>Vel</mark> meo etiàm, si placet, nàm <mark>non</mark> multum interest. <mark>Ego</mark> huc &amp; illuc vortar, quo imperabis. Enimverò Crob: magna moliris: scilicet vxorem ducere, parvulam vrbem hanc augere ciuibus vtilissimis liberis tuis: servulos &amp;</div>
+<div class="excerpt">rei <mark>est</mark> cum meis natibus, obsecro? Here, frigent nunc dierum praecepta, exemplis erudimur omnes aptiùs. Quarè tu paulisper docendi causâ seruum te simules; sic <mark>ego</mark> tuos ediscam gestus, vultus, mores, verba foelicissimè. Servum pol probum; <mark>sed</mark> assentatiunculas expecto. Ostende (quaeso) quo modo: meos suaviari priùs te volo.</div>
+<div class="excerpt">brachium lacertosum habeo. Tun&#x27; seruus tàm confidentèr he rum irritas? At familiarem esse oportet Poggloste. Quaeso tege caput, nihil <mark>est</mark> quòd ità submissè te geras: <mark>ego</mark> sodalis sum tuus: sequere me ocyus. Fiat, fiat, aegrè ferrem virum me splendidum rubiginoso perire gla dio: vt tibi prosim ere, nullam cru cem aut restim reformidabo.</div>
+<div class="excerpt">Fiat, fiat, aegrè ferrem virum me splendidum rubiginoso perire gla dio: vt tibi prosim ere, nullam cru cem aut restim reformidabo. Verum istoc <mark>est</mark> verbum here: Nàm <mark>ego</mark>, dùm te sequor, esurio <mark>vel</mark> pa rasito magis. Iàm, in redintegratae gratiae testimonium, tu me complectere, dùm <mark>ego</mark> te deosculor. Vis vt te honorificè, supplex, prostratus,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Tu omnia potes videlicèt. Vis experiri Martem meum? Quid tibi rei est cum meis natibus, obsecro? Here, frigent nunc dierum praecepta, exemplis erudimur omnes aptiùs. Quarè tu paulisper docendi causâ seruum te simules; sic ego tuos ediscam gestus, vultus, mores, verba foelicissimè. Servum pol probum; sed assentatiunculas expecto. Ostende (quaeso) quo modo: meos suaviari priùs te volo. Siccine of ficium negligis pessime? facito actutùm. At mihi non placet hypocrisis. Quarè ego Crobolus sum reuera, iàm que Lydiam ambibo amatoriè: tu Poggloste vide vt meum Hoc secteris accuratè, vt vestigijs semper insistas meis: pallium, pileum, calcei, caligae, vide vt tersae mundae que sint: laudis nostrae buccina tor sis, pendeas ex nutu , in verba iures, mandata celeritèr exequare, ista si feceris, ero tibi patronus pater: sin omiseris, ecce brachium lacertosum habeo. Tun&#x27; seruus tàm confidentèr he rum irritas? At familiarem esse oportet Poggloste. Quaeso tege caput, nihil est quòd ità submissè te geras: ego sodalis sum tuus: sequere me ocyus. Fiat, fiat, aegrè ferrem virum me splendidum rubiginoso perire gla dio: vt tibi prosim ere, nullam cru cem aut restim reformidabo. Verum istoc est verbum here: Nàm ego, dùm te sequor, esurio vel pa rasito magis. Iàm, in redintegratae gratiae testimonium, tu me complectere, dùm ego te deosculor. Vis vt te honorificè, supplex, prostratus, vt Iouem venerer meum? Iuuans, pater fortassè haudqua quàm: nàm ex stirpe sat scio oriundus sum nobili, genitor quicunque fuit: Etenim veste sub lacera latet genero sum quiddam, imperio dignu ̄ : Tu me ad pedes abiectum tuos postulas? Respon deo, primùm, Nescit seruire virtus: postremò nos aulici abiecimus istam ineptam consuetudinem honorandi su periores, imò ne pares quidèm ag noscimus. Vix possum cò altos spiritus demittere: sed tamèn tuam in gratiam simulabo hoc. Nàm certè plurimi te facio. At si me audies, cohibebis ira cundiam. Here, inest mihi naturalis quaedam imbecillitas, quae duorum pondus pugnorum perferre profectò non potest. Sum, idque tibi mea fide praesto, totique reipublicae. Mihi olim porticus templi nostri erat pro incunabulis: ibi enim expositu ̄ me mater mea reliquit, aufugitque: ex quo sacer, totus, totus, quantus, quantus fui illicò. Id verò iam anteà denuntio, detineri me ne vnum in diem posse, in cibo &amp; potione vincias: Apud mensam plenam rostrum hoc deliges, sicque vinclis constrictum cibarijs, vel cap tivum habe. Vel meo etiàm, si placet, nàm non multum interest. Ego huc &amp; illuc vortar, quo imperabis. Enimverò Crob: magna moliris: scilicet vxorem ducere, parvulam vrbem hanc augere ciuibus vtilissimis liberis tuis: servulos &amp; familiam alere: tùm etiàm gerere magistratum in repub. Primò cauponariam artem pro fitebor: nam Lydia cibos condire nouit lautissimè. Ego accipiam conuivas hu manissimè: efficiam vt aedes meas ge nerosi frequentent. Filias si ferat mihi pulchellas Lydia mea (&amp; feret semper necessariò, quod ego volo) istas elocabo callidè: vitam traducam omnibus lepidè lautitijs, esculentis, poculentis ventrem beabo meum: chartis pictis, globulis ludam assiduè, interdum (severiorum bonâ pace vixerim) &amp; aleâ: post haec cùm cognita satis virtus nostra fuerit, multis petitis &amp; adeptis honoribus, nunquam desista ̄ donec mihi &amp; haeredi bus de corpore meo legitimè procreatis Baronis titulum aut Comitis compara uero. Sed quis hic, qui tàm odiosè iam interuenit mihi tàm iucunda meditanti? Quid ità coelum, terram attonitus intu etur? Oh, noui hominem. Dij vos fortunent, Generesi. Misereat vos mei, pauperis &amp; boni, miserandi semi-hominis. Oh, venerabilis Domine, nunquam istarum ullam didici; Domine verè Reuerende, fui quondàm semi doctus, &amp; è nouem musis colebam non nullas. Sed oblivio iam extinxit. Quaeso, doctissimi Musarum sacerdotes, inopem &amp; egenum iuuate benignitate vestrâ. Vt maneam qualis hactenus fui, vir innocuus, quaesoaliquid detis. Illudi me sentio: vultis gladi um istum, quàm sit acutus, experiri? Equidèm, viri optimi, si vellem iàm latronem agere, possem vobis vel in vitis eripere: sed spero daturos. Aliquid etiàm (nisi molestus essem) in crastinum vt detis, postu larem. Hoc telum petet vos à parte ante, &amp; post. Ignoscite, si a vobis summis Magistris ego Incipiens in hac arte pe tam audacius: caligas mihi libenter no u as emerem, &amp; libros alia que necessaria, vos si hunc sumptum seceritis, Maece nates eritis mihi. Vnum quiddam restat, in quo exorandi mihi estis: vt etiàm crumenam detis, in quâ nummos reponam istos. Nisi hilari vultu dederitis, ego non accipiam. Non multùm refert, si tradas cum appertinentibus etiàm. Hanc ego (cum tàm ornata sit) in dies festos reservabo. Tu fortas sè habes quam quotidiè terere possum. Quaeso, sine te exorem, vir doctissime, Obtestor te per acumen in genij tui, &amp; ensis mei. Munificentissimi viri, dedistis haec mihi, annon? Sed mutuò, annon? Valete. Deteriores fiunt homines, dùm agimus cum ijs humanitèr: sed con testor carcerem ipsum (patriam meam) non passurum deinceps injurias istas malevolorum, qui ne tangere unquàm vel spectare sinunt nummos me suos: adihibebo posthac leoninam vim; nunc revertor ut videam, her us meus num quid intereà temporis lucrifecerit, ut cum eo etiàm (pace eius) participem: ego siquid fortè capio, mihi id omne reseruo, eo ut fundos aliquandò emam. Tyrophagum (quem vt convenirem emisit me) dicam domi non esse, quem nè quaesivi quidem; nec quis, qualisve sit, vel scio, vel curo. Liberabimus te hoc onere, &amp; in collegam tuam conferemus. Imò mihi in longinquas regio nes peregrinandum est, quarè hoc à te volo viaticum. Tu fontem videlicèt habes domi, non est itàque cur mihi rivulos istos deneges: age, dato marsupium. Expedi, inquam, si sapis: mihi enìm abeundum est. Acturus sum, uti spero, aptissi mè: quarè nisi appositè respondeas mihi quod rogo, ego machaeram istam aptabo ventri tuo, velut vaginae, idque statim. Ego Rex ipse sum, fac quod jubeo. Et ego vno vicissim utar verbo ▪ ( Gladius. ) Iàm reddes quod requiro ▪ annon? Age, sic urgeo. Responde bre vitèr, daturusnè es? Hic homo nugas nectit, sis ani mo forti, Poggloste, &amp; vel homicida sis, modò crumenicida. Ego Here. Sceleratus hic, quem vides, me maximis &amp; indignissimis af fecit iniurijs. Tu amico tuo potius quàm servo credis? tùm ego amicus tuus posthàe non servus ero. Rogitas? irrisit, maledixit, me servu ̄ aiebat esse miselli hominis &amp; nequam: se verò (quià satelles esset regius) posse queinvis impunè occidere, &amp; nisi ego opem tuam &amp; gladij mei implorassem, mactasset me carnifex: Tamen (ut plerunque solent isti ne bulones) me jàm accusat, quem ille nun quàm aequabit virtute. Quid si tibi largiar petijsse me? (quod tamèn adhuc non concedam) non tu supplicantem repulisti inhumanitèr? Interroges hunc ipsum, num quid me non jocatum fuisse dixerit: Tu me (Here) censes furem esse? Eripere? Nihil minus: specta re fortassè volui. Hoccine praemium est honestae vitae, sic immeritò suspectum haberi? Si voluissem ego per fraudes &amp; iniurias crescere, non ità tenuitèr nunc viverem. Ego vix tibi possum ignosce re, ità perversè restitisti. Latronis vero? quaeso igitur gaudeat simile simili (Aedepol ità eam amo, ut vel è reste penderem ejus causâ) patere precor vt cultro meo eam hoc solvam suspendio. Visne etìam, vt Templum ali quod, vel Capitolium ipsum huc feram humeris meis? Ego quidem etiàmsi Dijs, ho minibusque invisus essem, etiàm si crux ipsa mihi honorificè salutanda esset, (quam ego adepturum me spero tan dèm tot laboribus exantlatis) licet rueret resp: aut periret patria, haud pilo tamen tristior proptereà. Here, vis sal tèm paulispèr experiamur agilitatem meam? Si pugnandum est, Here, habebis me instar omnium fustiferorum, Scuti gerorum Armigerorum. Hèm, aperite, ecquis hic intùs est? Volui quendam convenire ex Senatoribus, qui intùs consultant. Muti sedent. Certè in Senatu ipso dormiunt, velut Aldermannj. Crucem minitaris? Sepul chrum hoc Majoru ̄ meorum: Crucem? Suspe ̄ dium mihi compendium. Interim ne que est satis tuam urgere sortem, Here, qui amando cerebrum defloccas, &amp; ex enteras epar: Exuas istam muliebrem mentem, &amp; aliquod Herculeum aggre dia mur facinus. Aurum Here (metallum praestan tissimum &amp; optimè de repub: meritu ̄ ) è vinclis, è carcere, è custodiâ avarissimo ru ̄ hominu ̄ liberemus ingenio, viribus que nostris: Tùm Genio suavitèr indulge amus, corda refocillemus applicatione vini (quod est cos Fortitudinis) mandi bulas etiàm exerceamus, oportet, ne rubigo eas inficiat. Quid tu ad ista, qui palatum habes sapiens, &amp; ventrem ses quipedalem? Curmetuerem? Moriendum est omnibus semel. Certè Alexandro, Caesari, Pompeio, &amp; hujusmodi, qui ex vulgi opinione veram gloriam metiuntur: mea verò nobilitas (quae non famâ sed virtute fundata est) nulla maculari po test ignominia. Ego nihil duco sordidius, quàm in lectulo expirare, &amp; tanquàm in tene bris: splendidius enìm est palam in conspectu civium, in coronâ &amp; consessu spectatorum, quàm in angulo quopiàm mori inglorium. Is verò diviniùs moritur, qui evehitur in altum, &amp; ab hac terrenâ faece segregatus affinis coeli fit: anima enim ejus minus viae conficiet, dùm in aethera volat. Tu pusilli es spiritus, nec habes in te nobilem hunc sanguinem. Tenta bo te in rebus facilioribus. Vis mecum aleâ ludere paulispèr?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Pedantius</div><div class="body">Crobolus and the schoolmaster Pedantius are rivals. for the love of Lydia. Crobolus asks his servant Pogglostus to bilkk money from Pedantius and his friend Dromodotus. After failing with a hard-luck story, Pogglostus robs them at sword-point. Crobolus wins Lydia’s love by entertaining her to dinner. He is slow to pay his landlady for the meal, but assures her he can easily trick the money out of Pedantius. Through the parasite Tyrophagus, he lets Pedantius know that a former pupil, Leonidas, has secured a position at court, and intends to use his influence to get a royal appointment for his old tutor. On the strength of this, Pedantius is persuaded to loan Leonidas money. Tyrophagus is bringing the cash back to Crobolus when he is robbed by Pogglostus, who doesn’t know that he and his master are in league. Pedantius tries to woo Lydia, but has less success, partly because he does it using academic logic and partly because she has already accepted Crobulus. In any event, whoever wins her will need to pay her avaricious master to manumit her. She feigns interest in him after hearing of his supposed successes at court, and he tries to raise the money by offering to sell his books to the audience. The tailor Gilbert pursues him for payment of his bills, but Pedantius only gives him a string of classical authorities and quotations; Gilbert threatens to sue him. Pedantius sends Lydia money and a ring, but the news comes back that she is dead. She has sent him back his ring, and, with her last breath, told him not to grieve for her, and to leave the country. Assured of her love for him, Pedantius complies and goes into exile. With him out of the way, Crobulus is free to marry Lydia, who is not really dead, using the money he has tricked out of the pedant. |</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_11.html">Cluster 11 — 11: ego, que, est</a> page.
+</div>
+</div></body></html>

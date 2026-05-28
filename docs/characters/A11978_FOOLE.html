@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FOOLE in King Lear · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FOOLE</span>
+</nav>
+
+<h1>FOOLE</h1>
+<p class="lede">in <em>King Lear</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1608</td></tr>
+<tr><th>Words</th><td>1504</td></tr>
+<tr><th>Characters</th><td>7687</td></tr>
+<tr><th>BritDrama no.</th><td>1486</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">had <mark>two</mark> coxcombes, and <mark>two</mark> daughters. If I gaue them any liuing, id&#x27;e keepe my coxcombs my selfe, ther&#x27;s mine, beg another of thy daughters. Truth is a dog that <mark>must</mark> to kenell, hee <mark>must</mark> <mark>bee</mark> whipt out, when Ladie oth&#x27;e brach may stand by the fire and stincke. Sirra ile teach thee a speech. Marke it vncle, haue more then thou</div>
+<div class="excerpt">cold shortly, there take my coxcombe; why this fellow hath banisht <mark>two</mark> on&#x27;s daughters, and done the third a blessing against his will, if thou follow him, thou <mark>must</mark> needs weare my coxcombe, how now nuncle, would I had <mark>two</mark> coxcombes, and <mark>two</mark> daughters. If I gaue them any liuing, id&#x27;e keepe my coxcombs my selfe, ther&#x27;s mine,</div>
+<div class="excerpt">vs&#x27;d it nuncle, euer since thou mad&#x27;st thy daugh ters thy mother, for when thou gauest them the rod, and put&#x27;st downe thine own breeches, then they for sudden ioy <mark>did</mark> weep, and I for sorrow sung, that such a King should play bo-peepe, and <mark>goe</mark> the fooles among, prethe Nunckle keepe a schoolema ster that can teach thy foole to</div>
+<div class="excerpt">shee made mouthes in a glasse. Marry heers Grace, &amp; a codpis, that&#x27;s a wiseman and a foole. Hee that <mark>has</mark> a little tine witte, with hey ho the wind and the raine, <mark>must</mark> make content with his fortunes fit, for the raine, it raineth euery day. Come not in here Nunckle, her&#x27;s a spirit, helpe me, helpe mee. A spirit, he sayes, his</div>
+<div class="excerpt">man be a Gen tleman or a Yeoman. He&#x27;s mad, that trusts in the tamenes of a Wolfe, a hor ses health, a boyes loue, or a whores oath. Her boat hath a leake, and she <mark>must</mark> not speake, Why she dares not come, ouer to thee. Come hither mistrisse is your name Gonorill.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Let me hire him too, heer&#x27;s my coxcombe. Sirra, you were best take my coxcombe. Why for taking on&#x27;s part, that&#x27;s out of fauour, nay and thou can&#x27;st not smile as the wind sits, thou&#x27;t catch cold shortly, there take my coxcombe; why this fellow hath banisht two on&#x27;s daughters, and done the third a blessing against his will, if thou follow him, thou must needs weare my coxcombe, how now nuncle, would I had two coxcombes, and two daughters. If I gaue them any liuing, id&#x27;e keepe my coxcombs my selfe, ther&#x27;s mine, beg another of thy daughters. Truth is a dog that must to kenell, hee must bee whipt out, when Ladie oth&#x27;e brach may stand by the fire and stincke. Sirra ile teach thee a speech. Marke it vncle, haue more then thou shewest, speake lesse then thou knowest, lend lesse then thou owest, ride more then thou goest, learne more then thou trowest, set lesse then thou throwest, leaue thy drinke and thy whore, and keepe in a doore, and thou shalt haue more, then two tens to a score. Then like the breath of an vnfeed Lawyer, you gaue me nothing for&#x27;t, can you make no vse of nothing vncle? Preethe tell him so much the rent of his land comes to, he will not beleeue a foole. Doo&#x27;st know the difference my boy, betweene a bitter foole, and a swecte foole. That Lord that counsail&#x27;d thee to giue away thy land, Come place him heere by mee, doe thou for him stand, The sweet and bitter foole will presently appeare, The one in motley here, the other found out there. All thy other Titles thou hast giuen away, that thou wast borne with. No faith, Lords and great men will not let me, if I had a monopolie out, they would haue part an&#x27;t, and lodes too, they will not let me haue all the foole to my selfe, they&#x27;l be snatching; giue me an egge Nuncle, and ile giue thee two crownes. Why, after I haue cut the egge in the middle and eate vp the meate, the two crownes of the egge; when thou clouest thy crowne it&#x27;h middle, and gauest away both parts, thou borest thy asse at&#x27;h backe or&#x27;e the durt, thou had&#x27;st little wit in thy bald crowne, when thou gauest thy golden one away, if I speake like my selfe in this, let him be whipt that first finds it so. Fooles had nere lesse wit in a yeare, For wise men are growne foppish, They know not how their wits doe weare, Their manners are so apish. I haue vs&#x27;d it nuncle, euer since thou mad&#x27;st thy daugh ters thy mother, for when thou gauest them the rod, and put&#x27;st downe thine own breeches, then they for sudden ioy did weep, and I for sorrow sung, that such a King should play bo-peepe, and goe the fooles among, prethe Nunckle keepe a schoolema ster that can teach thy foole to lye, I would faine learne lye. I maruell what kin thou and thy daughters are, they&#x27;l haue me whipt for speaking true, thou wilt haue mee whipt for ing, and sometime I am whipt for holding my peace, I had rather be any kind of thing then a foole, and yet I would not bee thee Nuncle, thou hast pared thy wit a both sides, &amp; left nothing in the middle, here comes one of the parings. Thou wast a prettie fellow when thou had&#x27;st no need to care for her frowne, thou, thou art an O without a figure, I am better then thou art now, I am a foole, thou art nothing, yes for sooth I will hould my tongue, so your face bids mee, though you say nothing. Mum, mum, he that keepes neither crust nor crum, Wearie of all, shall want some. That&#x27;s a sheald pescod. For you trow nuncle, the hedge sparrow fed the Coo kow so long, that it had it head bit off beit young, so out went the candle, and we were left darkling. May not an Asse know when the cart drawes the horse, whoop Iug I loue thee. Which they, will make an obedient father. Nunckle Lear, Nunckle Lear, tary and take the foole with a fox when one has caught her, and such a daughter should sure to the slaughter, if my cap would buy a halter, so the foole followes after. If a mans braines where in his heeles, wert not in dan ger of kibes; Then I prethe be mery, thy wit shal nere goe slipshod. Shalt see thy other daughter will vse thee kindly, for though shees as like this, as a crab is like an apple, yet I con, what I can tel. Sheel tast as like this, as a crab doth to a crab, thou canst not tell why ones nose stande in the middle of his face? Why, to keep his eyes on either side&#x27;s nose, that what a man cannot smell out, a may spie into. Canst tell how an Oyster makes his shell. Nor I neither, but I can tell why a snayle has a house. Why, to put his head in, not to giue it away to his daughter, and leaue his hornes without a case. Thy Asses are gone about them, the reason why the seuen starres are no more then seuen, is a prettie reason. Yes thou wouldst make a good foole. Thou shouldst not haue beene old, before thou hadst beene wise. Shee that is maide now, and laughs at my departure, Shall not be a maide long, except things be cut shorter. Ha ha, looke he weares crewell garters, Horses are tide by the heeles, dogges and beares Byt&#x27;h necke, munkies bit&#x27;h loynes, and men Byt&#x27;h legges, when a mans ouer lusty at legs, Then he weares wooden neatherstockes. And thou hadst beene set in the stockes for that questi on, thou ha&#x27;dst well deserued it. Weele set thee to schoole to an Ant, to teach thee ther&#x27;s no labouring in the winter, all that follow their noses, are led by their eyes, but blind men, and ther&#x27;s not a nose among a 100. but can smell him thats stincking, let goe thy hold when a great wheele runs downe a hill, least it breake thy necke with follow ing it, but the great one that goes vp the hill, let him draw thee after, when a wise man giues thee better councell, giue mee mine againe, I would haue none but knaues follow it, since a foole giues it. That Sir that serues for gaine, And followes but for forme: Will packe when it begin to raine, And leaue thee in the storme. But I will tarie, the foole will stay, And let the wise man flie: The knaue turnes foole that runs away, The foole no knaue perdy. Kent. Where learnt you this foole? Foole. Not in the stockes. Cry to it Nunckle, as the Cokney did to the eeles, when she put vm ith pâst aliue, she rapt vm ath coxcombs with a stick, and cryed downe wantons downe, twas her brother, that in pure kindnes to his horse buttered his hay. O Nunckle, Court holly water in a drie house Is better then this raine water out a doore, Good Nunckle in, and aske thy daughters blessing, Heers a night pities nether wise man nor foole. Hee that has a house to put his head in, has a good headpeece, the Codpeece that will house before the head, has any the head and hee shall lowse, so beggers mary many, the man that makes his toe, what hee his heart should make, shall haue a corne cry woe, and turne his sleepe to wake, for there was neuer yet faire woman hut shee made mouthes in a glasse. Marry heers Grace, &amp; a codpis, that&#x27;s a wiseman and a foole. Hee that has a little tine witte, with hey ho the wind and the raine, must make content with his fortunes fit, for the raine, it raineth euery day. Come not in here Nunckle, her&#x27;s a spirit, helpe me, helpe mee. A spirit, he sayes, his nam&#x27;s poore Tom. Nay he reseru&#x27;d a blanket, else we had beene all sham&#x27;d. This cold night will turne vs all to fooles &amp; madmen. Prithe Nunckle be content, this is a naughty night to swim in, now a little fire in a wild field, were like an old leachers heart, a small sparke, all the rest in bodie cold, looke here comes a walking fire. Prithe Nunckle tell me, whether a mad man be a Gen tleman or a Yeoman. He&#x27;s mad, that trusts in the tamenes of a Wolfe, a hor ses health, a boyes loue, or a whores oath. Her boat hath a leake, and she must not speake, Why she dares not come, ouer to thee. Come hither mistrisse is your name Gonorill.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — King Lear</div><div class="body">King Lear intends to divide his kingdom between his sons-in-law: they will become the effective rulers, while he remains titular king with a retinue of knights, residing with each by monthly turns. His elder daughters, Goneril and Regan, are already married to dukes of the north and west of Britain; his youngest, Cordelia, is being courted by two suitors from mainland Europe. Lear requires that each daughter make a public statement of her love for him, to determine her merit and therefore her share of the kingdom. Goneril and Regan give it their all, but Cordelia refuses to make a self-serving and insincere statement which will encroach on the rights of her future husband. In consequence, she gets nothing, and the Earl of Kent is banished when he tries to intervene; the King of France marries her anyway, without a dowry. Kent stays in the kingdom, disguises himself, and gets himself a place in Lear’s service. Lear proves a difficult house-guest, and Goneril an ungracious hostess. When she asks him to reduce his retinue, he angrily moves on early to stay with Regan. Father and daughter both send letters ahead to explain the situation, carried by Kent and Oswald respectively; Goneril’s messenger meets with a better reception. Kent brawls with Oswald and is put in the stocks, which offends Lear when he arrives, closely followed by Goneril. The two daughters demand progressively greater diminutions in the number of Lear’s knights. Rather than stay with either of them, he furiously goes out into a storm, and goes mad. Meanwhile, Edmund the bastard, envious of his legitimate brother Edgar, uses a forged letter to persuade their father, the Earl of Gloucester, that Edgar is plotting to murder him. He induces Edgar to flee as if he were guilty. Edgar evades the hue and cry, disguises himself as a beggar, Poor Tom, and meets Lear in a hovel. The French army lands in Britain near Dover. Kent sends a gentleman with a message to Cordelia, and Gloucester confides in Edmund that he has received secret information about the invasion. He goes out into the storm to help Lear, disobeying Cornwall’s orders to the contrary, and helps him to escape onto the Dover road to join Cordelia and the French. Edmund betrays his father and is created Earl of Gloucester; Cornwall sends him to liaise with Albany about war preparations. The elder Gloucester is arrested, interrogated, and blinded, despite a servant’s efforts to save him; Cornwall is wounded in the struggle, and…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

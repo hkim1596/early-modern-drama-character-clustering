@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>THEOD in Thierry and Theodoret · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>THEOD</span>
+</nav>
+
+<h1>THEOD</h1>
+<p class="lede">in <em>Thierry and Theodoret</em> — AnonymousFletcher, JohnMassinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1621</td></tr>
+<tr><th>Words</th><td>1549</td></tr>
+<tr><th>Characters</th><td>8287</td></tr>
+<tr><th>BritDrama no.</th><td>1848</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">reueng&#x27;d: If not for piety, yet for policy, Since some are of necessity to be spar&#x27;d, I might, and now I wish I had not look&#x27;d With such strict eyes into her follies. I <mark>must</mark> grant Your reasons good ( Martell ) if as she is My Mother, she had bene my subiect, or That only here she could make challenge to A place of beeing; but I know</div>
+<div class="excerpt">to others, though alike diseas&#x27;d, So she considering what she is, may challenge Those cordialls to restore her, by her birth, And priuiledge, which at no suite <mark>must</mark> be Granted to others. What laught you at Sir? Why, what&#x27;s the matter? I am glad to <mark>heare</mark> it, Prethee what course takes she to do this? How? I <mark>heare</mark> a tempest comming,</div>
+<div class="excerpt">my kingdomes ruine; hast, And cause a troope of horse to fetch her backe: Yet stay, why should I vse meanes to bring in A plague that of her selfe hath left me? Muster Our souldiers vp, we&#x27;ele stand vpon our gard, For we shall be attempted; yet forbeare The inequality of our powers will yeeld me Nothing but losse in their defeature:</div>
+<div class="excerpt">This is an impudence, And he <mark>must</mark> tell you, that till now mother Brought yee a sonnes obedience, and now breakes it Aboue the sufferance of a sonne. These trueths are no mans tales, but all mens</div>
+<div class="excerpt">vp, we&#x27;ele stand vpon our gard, For we shall be attempted; yet forbeare The inequality of our powers will yeeld me Nothing but losse in their defeature: something <mark>Must</mark> be done, and done suddainely, saue your labor, In this i&#x27;le vse no counsell but mine owne, That course though dangerous is best. Command Our daughter be in readinesse,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">This is an impudence, And he must tell you, that till now mother Brought yee a sonnes obedience, and now breakes it Aboue the sufferance of a sonne. These trueths are no mans tales, but all mens trobles, They are, though your strange greatnesse would out stare v&#x27;m: VVitnesse the daily Libels, almost Ballads In euery place, almost in euery Prouince, Are made vpon your lust, Tauerne discourses, Crowds cram&#x27;d with whisperes; Nay, the holy Temples Are not without your curses: Now you would blush, But your blacke tainted blood dare not appeare For feare I should fright that too. Doe not abuse their names: they see your actions, And your conceald sinnes, though you worke like Moles, Lyes leuell to their iustice. The more my shame is of so bad a mother, And more your wretchednesse you let me bee so; But woman, for a mothers name hath left me Since you haue left your honour; mend these ruines, And build againe that broken fame, and fairely; Your most intemperate fiers haue burnt, and quickly VVithin these ten dayes take a Monasterie, A most strickt house, a house where none may whisper, VVhere no more light is knowne but what may make yee Beleeue there is a day where no hope dwels, Nor comfort but in teares And there to cold repentance, and starud penance Tye your succeeding dayes; or curse me heauen If all your guilded knaues, brokers, and bedders, Euen he you built from nothing, strong Portalyde, Be not made ambling Geldings; all your maydes, If that name doe not shame vm, fed with spunges To sucke away their rancknesse; and your selfe Onely to emptie Pictures and dead Arras Offer your olde desires. But that I know these teares I could dote on em. And knecle to catch vm as they fall, then knit vm Into an Armlet, euer to be honourd; But woman, they are dangerous drops, deceitfuil, Full of the weeper, anger, and ill nature. That Text should tell, How vgly it becomes you to erre thus; Your flames are spent, nothing but smoake maintaines ye, And those your fauour and your bounty suffers Lye not with you, they doe but lay lust on you, And then imbrace you as they caught a palsie; Your power they may loue, and like spanish Iennetts Commit with such a gust. But were yee once disgraced, Or fallen in wealth, like leaues they would flie from you, And become browse for euery beast; you will&#x27;d me To stocke my selfe with better friends, and seruants; With what face dare you see mee, or any mankind, That keepe a race of such vnheard of relicks, Bawds, Leachers, Letchecs, femall fornications, And children in their rudiments to vices, Old men to shew examples: and lest Art Should loose her selfe in act, to call backe custome, Leaue these, and liue like Thought I assure my selfe ( Martell ) your counsell Had no end but alleagance and my honour: Yet I am Iealous, I haue pass&#x27;d the bounds Of a sonnes duty; for suppose her worse Then you report, not by bare circumstance But euident proofe confirmd ha&#x27;s giuen her out: Yet since all weakenesses in a kingdome, are No more to be seuerely punished, then The faults of Kings are by the Thunderer As oft as they offend, to be reueng&#x27;d: If not for piety, yet for policy, Since some are of necessity to be spar&#x27;d, I might, and now I wish I had not look&#x27;d With such strict eyes into her follies. I must grant Your reasons good ( Martell ) if as she is My Mother, she had bene my subiect, or That only here she could make challenge to A place of beeing; but I know her temper And feare (if such a word become a king,) That in discouering her, I haue let loose A Tigres, whose rage being shut vp in darkenesse, Was grieuous only to her selfe; which brought Into the view of light, her cruelty Prouok&#x27;d by her owne shame, will turne on him That foolishly presum&#x27;d to let her see The loth&#x27;d shape of her owne deformity. &#x27;Tis true, And such a desperate cure I would haue vs&#x27;d, If the intemperate patient had not bene So neere me as a mother; but to her, And from me gentle vnguents only were To be appli&#x27;d: and as phisitians When they are sicke of feuers, eate themselues Such viands as by their directions are Forbid to others, though alike diseas&#x27;d, So she considering what she is, may challenge Those cordialls to restore her, by her birth, And priuiledge, which at no suite must be Granted to others. What laught you at Sir? Why, what&#x27;s the matter? I am glad to heare it, Prethee what course takes she to do this? How? I heare a tempest comming, That sings mine and my kingdomes ruine; hast, And cause a troope of horse to fetch her backe: Yet stay, why should I vse meanes to bring in A plague that of her selfe hath left me? Muster Our souldiers vp, we&#x27;ele stand vpon our gard, For we shall be attempted; yet forbeare The inequality of our powers will yeeld me Nothing but losse in their defeature: something Must be done, and done suddainely, saue your labor, In this i&#x27;le vse no counsell but mine owne, That course though dangerous is best. Command Our daughter be in readinesse, to attend vs: Martell, your company, and honest Vitry, Thou wilt along with me. How? Not one poore welcome, In answere of so long a iorney made Only to see your brother. That she that long since had the boldnes to Be a bad woman, (though I wish some other Should so report her) could not want the cunning, (Since they go hand in hand) to lay faire colours On her blacke crimes, I was resolude before, Nor make I doubt but that shee hath impoysonde Your good opinion of me, and so far Incensde your rage against me, that too late I come to plead my innocence. This moues not mee, and yet had I not beene Transported on my owne integrity, I neither am so odious to my subiects, Nor yet so barren of defence, but that By force I could haue iustified my guilt, Had I bene faulty: but since innocence Is to it selfe an hundred thousand gardes, And that there is no sonne, but though he owe That name to an ill mother, but stands bound Rather to take away with his owne danger From the number of her faults, then for his owne Security, to adde vnto them. This, This hath made me to preuent th&#x27;expence Of bloud on both sides, the iniuries, the rapes, (Pages, that euer waite vpon the war:) The accompt of all which, since you are the cause, Beleeue it, would haue bene required from you; Rather I say to offer vp my daughter, Who liuing only could reuenge my death, With my hart blood a sacrifice to your anger, Then that you shold draw on your head more curses Then yet you haue deserued. Which ioynde with duty, Vpon my knees I should be proud to tender, Had she not vs&#x27;d her selfe so many swords To cut those bonds that tide me to it. Alas it is a theame, I take no pleasure to discourse of; would It could asloone be buried to the world, As it should die to me: nay more, I wish (Next to my part of heauen) that shee would spend The last part of her life so here, that all Indifferent Iudges might condemne me, for A most malicions slanderer: nay texde it Vpon my forehead, if you hate me mother, Put me to such a shame, pray you do, beleeue it There is no glory that may fall vpon me, Can equall the delight I should receiue In that disgrace; prouided the repeale Of your long banishde vertues, and good name, Vsher&#x27;d me to it. Tis a good signe, the comfortablest raine I euer saw. Yes Sir, To that end we cast the proiect. That&#x27;s the thing. You&#x27;le hune no more Sir, Martell, If you remember Sir, will grace your feast With something that will yeeld matter of mirth, Fit for no common view. You haue it. Looke Sir, he has it, Nay wee shall haue peace when so great a souldier As the renoumde Protaldye, will giue vp His sword rather then vse it. Obserue but how shefrets. You are to violent. The worst that can come Is blanketting; for beating, and such vertues I haue bene long acquainted with. Nay, Martell, you must bee patient. And to you pleasant labour: Martell your company, Madam good night. There shall want Nothing to expresse our shares in your delight Sir. Nay credulity. Your Generall, mother, will display himselfe Spight of our peace I see. There&#x27;s somewhat for thy labor, more then was promis&#x27;d, ha, ha, ha: Foote I shall burst vnlesse I vent my selfe, ha, ha, ha. The fortune of the foole petswades my laughter More then his cowardice; was euer ratte Tane by the taile thus? ha, ha, ha. Ha, did you not see one neere me?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Thierry and Theodoret</div><div class="body">up her attempts lascivious to make his mother life and enter holy Brunhild orders. give Her · . 60 I 1848. Thierry, King of France, and his Brother Theodoret 1617 response is to abscond to her other son, Thierrv, whom she persuades to appoint her lover, Protaldi, tda senior military command. Theodoret follows her and Thierry faces a conflict of loyalty, which he resolves in his brother&#x27;s favour. With Thierry&#x27;s agreement, Martel demonstrates comprehensively that Protaldi is a coward, first by tricking him into giving up his sword without a fight, then showing to what lengths he will go to avoid having to fight a duel. Brunhild fears that Thierry&#x27;s bride, Ordella, will eclipse her in preeminence, so at the wedding banquet she gives Thierry a potion that makes him impotent that night. Ordella is very understanding , but Thierry is concerned about the need to beget an heir, so Brunhild suggests he should consult a local hermit and astrologer. Her parasite, Lecure, impersonates the wise man, and tells Thierry that he will regain his potency ifhe kills the first female person he encounters the next day, whoever she may be. Lecure arranges for this to be Ordella herself. Not recognizing her in her veil, Thierry explains why she must die, and she agrees; but he cannot bring himself to go through with it when he realizes who she is. Martel dissuades Ordella from loyally committing suicide, and, suspecting a plot, has her pretend to be dead in order to smoke it out Meanwhile Brunhild spreads a rumour that Theodoret is illegitimate and has him secretly murdered by Protaldi at the continuing wedding revels. Believing that Theodoret was not his brother and that Ordella is dead, Thierry offers to make amends by marrying Memberge, Theodoret&#x27;s daughter. Brunhild is forced to admit her lies in order to prevent an incestuous marriage. She gives Thierry a poisoned handkerchief, which kills him; Martel brings Ordella to his deathbed. Brunhild admits complicity in his murder, and is sentenced to remain awake for the rest of her life; disturbed by the sight of Protaldi being tortured to death, she commits suicide. Thierry and Ordella die together , and Martel becomes King of France.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

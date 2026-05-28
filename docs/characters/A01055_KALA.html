@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KALA in 420 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>KALA</span>
+</nav>
+
+<h1>KALA</h1>
+<p class="lede">in <em>420</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1629</td></tr>
+<tr><th>Words</th><td>629</td></tr>
+<tr><th>Characters</th><td>3344</td></tr>
+<tr><th>BritDrama no.</th><td>420</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">the worse sor&#x27;t. They are come; On goes my set of Faces most demurely. Yes, Madame. I shall. Sweet Venus, turne his courage to a Snow-ball, I heartily beseech it. <mark>Did</mark> your Ladiship call me? Your seruant Menaphon desires admittance. all will out. Not I? I doe protest, I haue been, Madam. That Anticke! The trim old Youth shall</div>
+<div class="excerpt">as may be, I beseech yee; There is a backe-staire to conuey yee forth Vnseene or vnsuspected.—He that cheates A Waiting-<mark>woman</mark> of a free good turne She longs for, <mark>must</mark> expect a shrewd reuenge. Sheepe-spirited Boy, although he had not married me, He might haue proferd kindnesse in a corner, And ne&#x27;er haue been the worse sor&#x27;t.</div>
+<div class="excerpt">your sake: Ile tell him so; but Faith I am not, Lady. Trust mee. May I not be offensiue, Sir? Then briefly, good, resolue mee: Haue you a Mistris, or a Wife? Nor <mark>did</mark> you euer loue in earnest any Faire Lady, whom you wisht to make your owne? What your friends or meanes are I will not be inquisitiue to know, Nor doe I care to</div>
+<div class="excerpt">I cannot stand on points. The thing is sure a Gelding—Shall not? well, Y&#x27;are best to prate vnto my Lady now, What proffer I haue made. Doe, doe, tis but a kind <mark>heart</mark> of mine owne, And ill lucke can vndoe me.—Be refus&#x27;d? O sciruy.—Pray walke on, Ile ouertake &#x27;ee. What a greene-sickness-liuer&#x27;d Boy is this! My Maiden-head will</div>
+<div class="excerpt">greene-sickness-liuer&#x27;d Boy is this! My Maiden-head will shortly grow so stale, That&#x27;twill be mouldy: but Ile marre her market. Yes, I can direct&#x27;ee: But you (Sir) <mark>must</mark> forbeare. I said so. Your bounty h&#x27;as ingag&#x27;d my truth; receiue A secret, that will, as you are a man, Startle your Reason: tis but meere respect Of what I owe</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Lady. Locke your secrets close then: I am not to be forc&#x27;d. You are in loue. Hee&#x27;s handsome, Richly indow&#x27;d; he hath a louely face, A winning tongue. Madame, I will make it Mine owne case; he shall thinke I am in loue with him. Tis for your sake: Ile tell him so; but Faith I am not, Lady. Trust mee. May I not be offensiue, Sir? Then briefly, good, resolue mee: Haue you a Mistris, or a Wife? Nor did you euer loue in earnest any Faire Lady, whom you wisht to make your owne? What your friends or meanes are I will not be inquisitiue to know, Nor doe I care to hope for. But admit A dowre were throwne downe before your choyce, Of Beauty, Noble birth, and sincere affection, How gladly would you intertaine it? (Young man) I doe not tempt you idly. You said I should. Madame, no: We were not come to that. I haue not verily deseru&#x27;d this cruelty. Are you so quick? Well, I may chance to crosse Your peeuishnesse. Now though I neuer meant The young man for my selfe; yet if he loue me, Ile haue him, or Ile run away with him, And let her doe her worst then: what, we are all But flesh and blood; the same thing that will doe My Lady good, will please her woman too. My Lady do&#x27;s expect&#x27;ee, thinks all time Too slow till you come to her: wherefore young man, If you intend to loue me, and me onely, Before we part, without more circumstance Let vs betroth our selues. Wrong me no more Then I wrong you: be mine, and I am yours: I cannot stand on points. The thing is sure a Gelding—Shall not? well, Y&#x27;are best to prate vnto my Lady now, What proffer I haue made. Doe, doe, tis but a kind heart of mine owne, And ill lucke can vndoe me.—Be refus&#x27;d? O sciruy.—Pray walke on, Ile ouertake &#x27;ee. What a greene-sickness-liuer&#x27;d Boy is this! My Maiden-head will shortly grow so stale, That&#x27;twill be mouldy: but Ile marre her market. Yes, I can direct&#x27;ee: But you (Sir) must forbeare. I said so. Your bounty h&#x27;as ingag&#x27;d my truth; receiue A secret, that will, as you are a man, Startle your Reason: tis but meere respect Of what I owe to thankfulnesse. (Deare Sir) The Stranger whom your courtesie receiued For Friend, is made your Riuall. My Lady Doates on him: I will place you in a roome, Where, though you cannot heare, yet you shall see Such passages as will confirme the truth Of my intelligence. Yes, yes: it makes me mad too, that a Gentle man So excellently sweet, so liberall, So kind, so proper, should be so betray&#x27;d By a young smooth-chind straggler: but for loues sake Beare all with manly courage.—Not a word, I am vndone then. O speake little. Walke vp these staires, and take this key, it opens A Chamber doore, where at that window yonder, You may see all their courtship. As little noyse as may be, I beseech yee; There is a backe-staire to conuey yee forth Vnseene or vnsuspected.—He that cheates A Waiting-woman of a free good turne She longs for, must expect a shrewd reuenge. Sheepe-spirited Boy, although he had not married me, He might haue proferd kindnesse in a corner, And ne&#x27;er haue been the worse sor&#x27;t. They are come; On goes my set of Faces most demurely. Yes, Madame. I shall. Sweet Venus, turne his courage to a Snow-ball, I heartily beseech it. Did your Ladiship call me? Your seruant Menaphon desires admittance. all will out. Not I? I doe protest, I haue been, Madam. That Anticke! The trim old Youth shall wait yee.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 420</div><div class="body">A group of mounted knights arrive at a wedding, and one of their number explains their presence. They worship Diana for as long as they remain unmarried, but also sacrifice to Hymenaeus, god of marriage. When they were last doing so, the god spoke, telling them one of Diana’s nymphs had got married to an earl favoured by Minerva. Diana is particularly pleased to know that the couple have agreed to wait a year before consummating the marriage. The two goddesses have asked Hymenaeus to arrange for the marriage- feast to be honoured, so he sends the knights with gifts: Minerva sends the groom a garland, Diana sends the bride a veil, and Hymenaeus sends them respectively a picture of a dove and a coronet. The knights present their shields and dance with ladies from the audience.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

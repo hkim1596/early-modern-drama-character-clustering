@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LADY in 542 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LADY</span>
+</nav>
+
+<h1>LADY</h1>
+<p class="lede">in <em>542</em> — [173]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>728</td></tr>
+<tr><th>Characters</th><td>3953</td></tr>
+<tr><th>BritDrama no.</th><td>542</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">neighbour-hood. A Ladie can ill be without you. Can he Poetise Mris. Tongall? What estate hath he? A cold bed fellow. But Religion and Conscience. Now &#x27;tis done I <mark>must</mark> love him. Would hee were not jealous. Secretarie. <mark>Goe</mark>, and direct the Cooke. Fie, Mr. Ierker! besides the words incivility, I <mark>did</mark> not expect such absurditie in</div>
+<div class="excerpt">Come, come, forbeare these wicked sollicits, or I shall disclaime the promise of my favours reversion when my old Hus band die&#x27;s, if nature be not mercilesse, and I <mark>goe</mark> first. My Husband. He shall neuer be but a Vnicorne. Farewell Mistris Tongall. Why doe you gaze upon me? And why so? What humour have you got? you have sure beene</div>
+<div class="excerpt">your hornes so lop-heavy they make you hang the head. Never droop at it man. A Lord may <mark>bee</mark> a Cuck old and never the wiser: you have gotten the knowledge of what o <mark>did</mark> but suspect before. I <mark>did</mark> it Sir to cure your jealousie More then for satisfaction of desire, Which I have often satiated, when Your cold abilities were comforted</div>
+<div class="excerpt">whilst either live. If you resolve divorce, you l onely force me To an unwil ing widdow-hood; and how little My innocence deserves, the least suspect, Though I <mark>did</mark> faigne a guilt for better ends, Iust heaven can witnesse. There was no necessity To tempt my <mark>woman</mark> to discover us. It was my first command. Whilst you persever</div>
+<div class="excerpt">would not. Revenge should be a remedie. Nay, to her againe; you are not the first That hath abus&#x27;d his Lady. I want but th&#x27; opportunity of their absence, Which I <mark>must</mark> straight contrive. Pray daughter oversee the servants. Pray let&#x27;s sit, And enter on the project, though it be nice When wit masks vertue in a cloke of vice. Secretarie.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">You see how my obedient youth Hath j yn&#x27;d it selfe with an unequall mate; You ag d father, onely to satisfie The Provident will of Parents. Doe you so. Fortune hath made me now your Mother. Had nature don&#x27;t, my care could not be greater, Nor more my providence to dispose your good. Ther. tell me, Now time hath given your age perfection; Your roses are full blowne, and fit for gathering, Doe you not long for a husband? But take heed: There are a sort of fond effeminate men, Deepe studied in discoursive complement, That many times will wast more ayery language To take a sollemne leave, then would make up A Citty Oratour. Beware that no such oyle-tongu&#x27;d amorist Sigh forth his passions in thy credulous eares, And captivate thy weaknesse. &#x27;Tis their practise To glory in diversity of Mistrisses: And when one frownes or chides their over-daring With a repulse, will not stick to revenge it With a foule defamation of her honour. The resolution&#x27;s noble; I commend it. Welcome Mistris Tongall; welcome. You are the onely company in the neighbour-hood. A Ladie can ill be without you. Can he Poetise Mris. Tongall? What estate hath he? A cold bed fellow. But Religion and Conscience. Now &#x27;tis done I must love him. Would hee were not jealous. Secretarie. Goe, and direct the Cooke. Fie, Mr. Ierker! besides the words incivility, I did not expect such absurditie in a reputed wit. Could you not haue couch&#x27;d it better; shall I have leave to doe your Ladiship a piece of night service; or so. Come, come, forbeare these wicked sollicits, or I shall disclaime the promise of my favours reversion when my old Hus band die&#x27;s, if nature be not mercilesse, and I goe first. My Husband. He shall neuer be but a Vnicorne. Farewell Mistris Tongall. Why doe you gaze upon me? And why so? What humour have you got? you have sure beene tipling. Fie Secretary. You know Mr. Ierker? No Secretary; what thinke you of me? But not as I doe ▪ I could betray mine honour to his l ve; And s ll my fame for his 〈…〉 embraces ▪ Give those delights which are my Husbands due To his enjoying. Thy employment shall be Whe wee are closely set at dallyance Blush not what ere thou seest; but call thy Master; The service may be worth a new gowne. As earnest as resolves can make me. Dispute not my commands, but doe them: O I shall stop the current of my favours. That hitherto have flow&#x27;d so fully on thee. I could wish it much better for Master Ierkers sake. How now Sir Generous? Courting my woman? am not I warme enough To thaw your frozen appetite? Indeed it would not. Revenge should be a remedie. Nay, to her againe; you are not the first That hath abus&#x27;d his Lady. I want but th&#x27; opportunity of their absence, Which I must straight contrive. Pray daughter oversee the servants. Pray let&#x27;s sit, And enter on the project, though it be nice When wit masks vertue in a cloke of vice. Secretarie. You forget your imployment. Doe we not kisse! Nay, blush not Mr. Ierker, ours is no act of shame, but to be gloried in; youth to youth. Sir Generous are your hornes so lop-heavy they make you hang the head. Never droop at it man. A Lord may bee a Cuck old and never the wiser: you have gotten the knowledge of what o did but suspect before. I did it Sir to cure your jealousie More then for satisfaction of desire, Which I have often satiated, when Your cold abilities were comforted With downe and sileuce; when your dreames presented The quiet of a grave. Pray good Sir Generous stay. I have not yet consented; and I thinke The Law cannot dispense whilst either live. If you resolve divorce, you l onely force me To an unwil ing widdow-hood; and how little My innocence deserves, the least suspect, Though I did faigne a guilt for better ends, Iust heaven can witnesse. There was no necessity To tempt my woman to discover us. It was my first command. Whilst you persever in&#x27;t, I shall preserve you in my purest thoughts; But never to infect them. Then will my joyes be setled.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 542</div><div class="body">The Queen is greeted on her arrival by the Genius of the House. The house is transformed into the semblance of a ship, and a mock sea-fight ensues.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

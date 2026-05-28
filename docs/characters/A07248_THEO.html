@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>THEO in The Unnatural Combat · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>THEO</span>
+</nav>
+
+<h1>THEO</h1>
+<p class="lede">in <em>The Unnatural Combat</em> — Massinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1639</td></tr>
+<tr><th>Words</th><td>409</td></tr>
+<tr><th>Characters</th><td>2121</td></tr>
+<tr><th>BritDrama no.</th><td>2185</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">me a certaine ruine. O sir. Pray you turne <mark>away</mark> Your face and <mark>heare</mark> me, and with my last breath Give me leave to accuse you. What offence From my first infancie <mark>did</mark> I commit That for a punishment you should give up My Virgin chastity to the trecherous guard Of Gotish Montrevile? Abus&#x27;d me fir by violence, and this told I cannot</div>
+<div class="excerpt">counsell into act, Provided it be honest. You are a naughty man, indeed you are, And I will sooner perish with my father Then at this price redeeme him. Doe you <mark>heare</mark>? Take a pander with you. Great Sir, my father My brave deserving father, but that sorrow Forbids the use of speech. I stand prepard, To indure the shocke of it.</div>
+<div class="excerpt">Great Sir, my father My brave deserving father, but that sorrow Forbids the use of speech. I stand prepard, To indure the shocke of it. What? Heaven is just! Heaven <mark>has</mark> my thankes With all humility payd for your faire fortune, And so farre duty bindes me, yee a little To mou ne a brothers losse however wicked, The tendernesse familiar</div>
+<div class="excerpt">The tendernesse familiar to our sex May if you please excuse You forget Sir The presence we are in. You gripe it too hard Sir. May I still deserve it. HAve you beene carefull? I am anything That you shall please to make mee. You teach me Sir, What I should say, since from your san of favour, I like dimme Phoebe, in her elfe</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">These light words ir Doe ill become the weight of my sad fortune And I much wonder you that doe professe Your selfe to be my fathers bosome friend, Can raise mirth from his misery. With all reall joy, I shall put what you counsell into act, Provided it be honest. You are a naughty man, indeed you are, And I will sooner perish with my father Then at this price redeeme him. Doe you heare? Take a pander with you. Great Sir, my father My brave deserving father, but that sorrow Forbids the use of speech. I stand prepard, To indure the shocke of it. What? Heaven is just! Heaven has my thankes With all humility payd for your faire fortune, And so farre duty bindes me, yee a little To mou ne a brothers losse however wicked, The tendernesse familiar to our sex May if you please excuse You forget Sir The presence we are in. You gripe it too hard Sir. May I still deserve it. HAve you beene carefull? I am anything That you shall please to make mee. You teach me Sir, What I should say, since from your san of favour, I like dimme Phoebe, in her elfe 〈◊〉 Borrow that light I have. I have Already in my wishes, modesty Forbids me to speake more. Choose any Suiting your love distinguished from lust, To aske and mine to grant. You may Sir. Ever rew to you Sir, And may they loofe th&#x27; abilitie of fight, When they seeke other object. All I can give, But what they are I know not. Tis most true fir, I am dead indeed to all but misery. O come not neere me sir, I am infectious, To looke on me at distance is as dangerous As from a pinacles cloud-kissing spire, With giddy eyes to view the steepe descent But to acknowledge me a certaine ruine. O sir. Pray you turne away Your face and heare me, and with my last breath Give me leave to accuse you. What offence From my first infancie did I commit That for a punishment you should give up My Virgin chastity to the trecherous guard Of Gotish Montrevile? Abus&#x27;d me fir by violence, and this told I cannot live to speake more: may the cause In you finde pardon, but the speeding curse Of a ravish&#x27;d maid fall heavie, heavie on him, Beaufort my lawfull love, farewell for ever.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Unnatural Combat</div><div class="body">Malefort Junior, son of the Admiral, has committed treason by allying himself with pirates and threatening the ruin of Marseilles. The Admiral is suspected of complicity and imprisoned. Theocrine, his daughter, reluctantly offers herself to Beaufort Junior, son of the Governor of Marseilles, if he will only persuade his father to allow hers a hearing. Beaufort Senior can refuse his son nothing, so the Admiral gets his opportunity to protest his innocence. Malefort Junior ‘challenges his father to a duel over a wrongdoing which he will not specify. The Admiral refuses to be held accountable by his son, and accepts the challenge. Malefort Junior is killed: the threat to Marseilles is over, and Admiral Malefort is lauded a hero. Malefort suggests that Theocrine should marry Beaufort Junior; Beaufort Senior half-heartedly agrees and invites them to a nuptial feast. The Governor&#x27;s table is open to any former soldier who needs a free ~ meal, a custom regularly invoked by Belgarde, who is unemployed in peacetime and angry at being denied - his -back pay. Fearing embarrassment at the feast, Beaufort Senior has his steward discourage Belyarde with the suggestion that he is underdressed for the ===== PAGE 200 ===== occasion; but the upshot is that Belgarde turns up in a suit of armour and declares his worthiness. His plain- speaking wins him respect and a gift of money from the Governor. He spends it all on new clothes, but the signs of prosperity attract his creditors, and he is still unable to pay them. People are noticing Malefort’s excessive solicitude towards his daughter. This comes to a head when Beaufort Junior takes her off to woo her in private, with a priest ready to perform the marriage. Malefort reacts by calling off the marriage and taking Theocrine home. He harbours an incestuous passion for his daughter, who is very like his dead second wife. Struggling to conquer the urge, he confesses to his friend Montreville and asks him to abduct her: he cannot be tempted if he never sees her again. Beaufort Junior realizes something is wrong and has Belgarde muster troops to besiege Montreville’s fort. Montreville demands sexual favours from Theocrine, and reveals her father’s secret. Meanwhile Malefort reasons from classical precedent that incest is not wicked after all, and goes to fetch his daughter back. Montreville denies him access and reveals that he has.a long-standing grudge: Theocrine’s mother was his mistress before Malefort stole her, poisoning his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

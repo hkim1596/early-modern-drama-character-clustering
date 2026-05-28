@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FORZA in The Duke of Milan · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FORZA</span>
+</nav>
+
+<h1>FORZA</h1>
+<p class="lede">in <em>The Duke of Milan</em> — Massinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>489</td></tr>
+<tr><th>Characters</th><td>2586</td></tr>
+<tr><th>BritDrama no.</th><td>1994</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">tongues, vile creatures, And let your inward horror fright your soules For hauing belide that purenesse, to come neere which All women that posterity can bring forth <mark>Must</mark> be, though striuing to be good, poore Riualls. And for that dog Francisco (that seduc&#x27;d me In wounding her to raise a temple built To Chastitie and sweetnesse)</div>
+<div class="excerpt">duty In me is not sufficient) let her see me Compell my mother (from whom I looke life) And this my sister, Partner of my being, To bow thus low vnto her, let her <mark>heare</mark> vs In my acknowledgement freely confesse That we in a degree as high are guilty, As she is innocent; bite your tongues, vile creatures, And let your inward horror</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Shee was euer kind And her displeasure though call&#x27;d on, short liu&#x27;de Vpon the least submission. O you powers That can conucy our thoughts to one another Without the end of eies, or eares, assist me, Let her behold me in a pleasing dreame, Thus on my knees before her (yet that duty In me is not sufficient) let her see me Compell my mother (from whom I looke life) And this my sister, Partner of my being, To bow thus low vnto her, let her heare vs In my acknowledgement freely confesse That we in a degree as high are guilty, As she is innocent; bite your tongues, vile creatures, And let your inward horror fright your soules For hauing belide that purenesse, to come neere which All women that posterity can bring forth Must be, though striuing to be good, poore Riualls. And for that dog Francisco (that seduc&#x27;d me In wounding her to raise a temple built To Chastitie and sweetnesse) let her know I&#x27;ll follow him to hell, but I will find him, And there liue a fourth fury to torment him. Then for this cursed hand and arme that guided The wicked steele, I&#x27;ll haue them ioynt by ioynt, With burning irons seard of, which I will eate. I being a vultur fit to tast such carrion, Lastly. I am hush&#x27;d, yet giue vs leaue Thus prostrate at her feet, our eies bent downewards, Vnworthy, and asham&#x27;d to looke vpon her, T&#x27;expect her gracious sentence. From whence came that sound? Was it from my Marcelia? if it were I rise and ioy will giue me wings to meet it. I liue againe In my full confidence that Marcelia may Pronounce my pardon. Can the speake yet? By all the dues of loue I haue had from her, This hand seemes as it was when first I kist it, These lips inuite to, I could euer feed Vpon these roses, they still keepe their colour And natiue sweetnesse, only the nectar&#x27;s wanting That like the morning dew in flowry May Preseru&#x27;d them in their beauty. Speake. Call forth the tortures For all that flesh can feele. Eugenia. Like one, That learnes to know in death what punishment; Waites on the breath of faith, ô now I feele An AEtna in my entrailes, I haue liu&#x27;d A Prince, and my last breath shalbe commaund I burne, I burne, yet er&#x27;e life be consum&#x27;d Let me pronounce vpon this wretch all torture That witty cruelty can inuent. I come death, I obey thee, Yet I will not die raging, for alas, My whole life was a phrensie. Good Eugenia In death forgiue me, As you loue me beare her To some religious house, there let her spend The remnant of her life, when I am ashes Perhaps shee&#x27;ll be appear&#x27;d, and soare a prayer For my poore soule. Bury me with Marcelia And let our Epitaph be—</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Duke of Milan</div><div class="body">Sforza, Duke of Milan, dotes on his haughty Duchess Marcelia, and fears the prospect of losing her. Her birthday banquet is interrupted by bad news: Sforza rebuffed Charles the Emperor’s overtures and chose to ally Milan with France instead; but now the Empire has routed France at the Battle of Pavia. Sforza expects imperial reprisals, and goes to submit himself to Charles. Before he leaves, he appoints Francisco his deputy, with instructions that, should he not return, Marcelia is to be murdered so that nobody else shall enjoy her. He submits himself to Charles, offers an explanation but no excuse for his supporting France, and expresses his willingness to pay with his life in order to prevent the imperial army from sacking Milan, thus sparing his subjects further bloodshed. His dignity impresses Charles, who confirms his ducal title. In Sforza’s absence, the tensions between Marcelia and his sister Mariana break out into open violence. Though Mariana is his own wife, Francisco takes Marcelia’s side in the quarrel and imprisons Mariana. Believing that Sforza will not return, he propositions Marcelia, shows her the warrant for her execution, and suggests that they should seize power together. She refuses him, so he explains the excessive love which led Sforza to order her death. This annoys her. When Sforza returns to Milan, she greets him coldly, which gives offence. Mariana learns of Francisco’s efforts to seduce Marcelia, and informs Sforza, who will not believe her. Francisco finds out her plans in advance and sets up the situation to favour his revenge: three years before, his sister Eugenia was seduced by Sforza with a promise of marriage on which he then reneged. First he presents himself to Marcelia as a potential victim of Sforza’s jealousy, inducing her to promise to protect him. Then he tells Sforza that Marcelia has tried to seduce him. As a test of her fidelity, Sforza pretends to have murdered ===== PAGE 365 ===== 1621 Francisco; Marcelia’s outrage seems to confirm her guilt, and Sforza wounds her fatally. News arrives that Francisco has fled Milan; Marcelia tells her husband the truth, and dies. Sforza is distracted with grief. His physicians persuade him that she is merely in a coma and may one day be revived, but realize that putrefaction will soon put an end to the ruse. Francisco returns to court posing as a Jewish doctor, and offers to treat the body to prolong the appearance of life. In fact, he puts poison in her mouth, claiming it…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

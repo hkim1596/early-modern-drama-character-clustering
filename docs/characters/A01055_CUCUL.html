@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CUCUL in 420 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>CUCUL</span>
+</nav>
+
+<h1>CUCUL</h1>
+<p class="lede">in <em>420</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1629</td></tr>
+<tr><th>Words</th><td>1190</td></tr>
+<tr><th>Characters</th><td>6353</td></tr>
+<tr><th>BritDrama no.</th><td>420</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">should haue more wit; knaues more honesty; and beggers more money. Peace you Squall. Hang him, hee&#x27;l nothing but raile. Close Page, close. Here are my Mistrisses mustred in white and blacke. Kala the Waiting-<mark>woman</mark>. I will first begin at the soote: stand thou for Kala. I <mark>must</mark> looke bigge, and care little or nothing for her, because</div>
+<div class="excerpt">do&#x27;st thinke so? Ile neuer beleeue it by this hand. This shall serue well enough for the Waiting-<mark>woman</mark>. My next Mistris is Cleophyla, the old mad-mans daughter: I <mark>must</mark> come to her in whining tune, sigh, wipe mine eyes, fold my Armes, and blubber out my speech as thus: Euen as a Kennell of Hounds (sweet Lady) cannot catch a Hare,</div>
+<div class="excerpt">no—thing. Yes, I know I am a rare man, and I euer held my selfe so. Tis false. Marry shall she. For the Deuice. They that will learne to drinke a health in Hell, <mark>Must</mark> learne on earth to take Tobacco well, To take Tobacco well, to take Tobacco well: For in Hell they drink nor Wine, nor Ale, nor Beere, But fire, and smoake, and</div>
+<div class="excerpt">to little purpose. There you come to me agen: O, to <mark>bee</mark> in the fauour of great Ladies, is asmuch to say, as to be great in Ladies fauours. By this light but you <mark>must</mark>, for now I come toot. The most excellent, most wise, most dainty, precious, lo uing, kinde, sweet, intolerably faire Lady Thamasta commends to your little hands,</div>
+<div class="excerpt">a most ex cellent maker Of Shittle-cocks. A Gull, an arrant Gull by Proclamation. Aha: here&#x27;s one will tickle the ban-dog. There, there, there; O braue Doctor. <mark>Must</mark> I make one? Wench, take my buckler. Saue yee, Nobilities: doe your Lordships take notice of my Page? Tis a fashion of the newest edition, spick and span new, without</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Reach me my sword and buckler. How now ( Minkes ) how now? Where is your duty, your distance? Let me haue seruice methodically tendred; you are now One of vs. Your cursey; good: remember that you are To practise Courtship ▪ was thy father a Piper, saist thou? That art yet but simple. I haue a braine; I haue a head-piece; O my conscience, if I take paines with thee, I shood Raise thy vnderstanding (Girle) to the height of a nurse, Or a Court-midwife at least, I will make thee big In time, wench. Would &#x27;twere in thy belly, there tis. Who cares? we can be as blunt as he for&#x27;s life. Monstrous Sow-pig! ist true? I? Why, my nurses husband was a most ex cellent maker Of Shittle-cocks. A Gull, an arrant Gull by Proclamation. Aha: here&#x27;s one will tickle the ban-dog. There, there, there; O braue Doctor. Must I make one? Wench, take my buckler. Saue yee, Nobilities: doe your Lordships take notice of my Page? Tis a fashion of the newest edition, spick and span new, without example. Doe your honour, Houswife. I thinke so; I hope the Chronicles will reare me one day for a head-piece— Deuill take thee: I say nothing to thee now; canst let me be quiet? Good Girle, if we begin to puffe once. O the Prince: Wench, thou shalt see the Prince now. Hang &#x27;em Mungrels. But not of the ancient fashion, an&#x27;t like your Highnesse. Tis I; I, that am the credit of the Court, Noble Prince: and if thou would&#x27;st by Proclamation or Patent, create me Ouerseer of all the Taylers in thy Do minions; then, then the golden dayes should appeare againe; bread should be cheaper; fooles should haue more wit; knaues more honesty; and beggers more money. Peace you Squall. Hang him, hee&#x27;l nothing but raile. Close Page, close. Here are my Mistrisses mustred in white and blacke. Kala the Waiting-woman. I will first begin at the soote: stand thou for Kala. I must looke bigge, and care little or nothing for her, because shee is a creature that stands at liuery. Thus I talke wisely, and to no purpose. Wench, as it is not fit that thou should&#x27;st be either faire or honest; so considering thy seruice, thou art as thou art, and so are thy betters, let them bee what they can bee. Thus in despite and defiance of all thy good parts, if I cannot in dure thy basenesse, tis more out of thy courtesie, then my deseruing, and so I expect thy answer. Well said. That&#x27;s true too. Away, away, do&#x27;st thinke so? Ile neuer beleeue it by this hand. This shall serue well enough for the Waiting-woman. My next Mistris is Cleophyla, the old mad-mans daughter: I must come to her in whining tune, sigh, wipe mine eyes, fold my Armes, and blubber out my speech as thus: Euen as a Kennell of Hounds (sweet Lady) cannot catch a Hare, when they are full pauncht on the Carrion of a dead Horse: so, euen so the gorge of my affections being full cramm&#x27;d with the garboyles of your condolements, doth tickle me with the prick (as it were) about mee, and fellow-feeling of howling out right. Thou seest I am crying ripe, I am such another tender-hearted foole. By this hand tis excellent. Haue at thee last of all: for the Princesse Thamasta, she that is my Mistris indeed, she is abominably proud. A Lady of a damna ble, high, turbulent, and generous spirit. But I haue a loud-mouth&#x27;d Cannon of mine owne to batter her, and a pen&#x27;d speech of purpose obserue it. Though haughty as the Diuell or his Dam, Thou dost appeare, great Mistris: yet I am Like to an vgly fire-worke, and can mount Aboue the Region of thy sweet Ac—count. Wert thou the Moone her selfe, yet hauing seene thee, Behold the man ordain&#x27;d to mooue within thee. —Looke to your selfe, Houswife; answer me In strong Lines y&#x27;are best. S&#x27;foot, this is downe-right roaring. Pish, I haue not a ragge of loue about me. Tis only a foolish humour I am possest with, to be surnam&#x27;d the Conquerour. I will court any thing; be in loue with nothing, nor no—thing. Yes, I know I am a rare man, and I euer held my selfe so. Tis false. Marry shall she. For the Deuice. They that will learne to drinke a health in Hell, Must learne on earth to take Tobacco well, To take Tobacco well, to take Tobacco well: For in Hell they drink nor Wine, nor Ale, nor Beere, But fire, and smoake, and stench, as we do heere. Hang thee. To lash your sides, To taeme your hides, To scourge your prides, And bang thee. By your leaue, Gallants, I come to speake with a young Lady, as they say, the old Troianes daughter of the house. Peace; do&#x27;st not see in what case he is? I would doe my owne commendations to her; that&#x27;s all. So, I am glad he is gone. Page, walke aside. Sweet Beauty, I am sent Embassadour from the Mistris of my thoughts, to you, the Mistris of my desires. That you may know, I am not as they say, an Animall; which is as they say, a kinde of Cokes, which is as the learned terme, an Asse, a Puppy, a Widgin, a Dolt, a Noddy, a— Pardon me for that, it shall be as you please indeed. Forsooth I loue to be courtly, and in fashion. Marry what is more then I know? for to know what&#x27;s what, is to know what&#x27;s what, and for what&#x27;s what : but these are foolish figures, and to little purpose. There you come to me agen: O, to bee in the fauour of great Ladies, is asmuch to say, as to be great in Ladies fauours. By this light but you must, for now I come toot. The most excellent, most wise, most dainty, precious, lo uing, kinde, sweet, intolerably faire Lady Thamasta commends to your little hands, this letter of impor tance. By your leaue, let me first kisse and then deliuer it in fashion, to your owne proper beauty. Good, O that I had not resolu&#x27;d to liue a sin gle life! Heer&#x27;s temptation able to coniure vp a spirit with a witnesse. So so: she has read it. They shall Mad-dame. Thats my opinion cleerely and without doubt. Reuenge, I must haue reuenge; I will haue re uenge bitter and abominable reuenge; I will haue re uenge. This vnfashionable Mungrill, this Linsey-wool sey of mortality by this hand, Mistris, this shee-Roague is drunke, and clapper-clawd me without any reuerence to my person, or good garments, why d&#x27;ee not speake, Gentlemen. A Boy, an arrant Boy in long coates. Oh thou Cock vermine of iniquity. Euer after a bloody nose do I dreame of good lucke. I horribly thanke your Ladiship. Whil&#x27;st I&#x27;m in office, the old garbe shall agen Grow in request, and Taylors shall be men. Come Trollio, helpe to wash my face, prethee.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 420</div><div class="body">A group of mounted knights arrive at a wedding, and one of their number explains their presence. They worship Diana for as long as they remain unmarried, but also sacrifice to Hymenaeus, god of marriage. When they were last doing so, the god spoke, telling them one of Diana’s nymphs had got married to an earl favoured by Minerva. Diana is particularly pleased to know that the couple have agreed to wait a year before consummating the marriage. The two goddesses have asked Hymenaeus to arrange for the marriage- feast to be honoured, so he sends the knights with gifts: Minerva sends the groom a garland, Diana sends the bride a veil, and Hymenaeus sends them respectively a picture of a dove and a coronet. The knights present their shields and dance with ladies from the audience.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

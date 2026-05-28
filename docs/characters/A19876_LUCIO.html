@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LUCIO in The Cruel Brother · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LUCIO</span>
+</nav>
+
+<h1>LUCIO</h1>
+<p class="lede">in <em>The Cruel Brother</em> — Davenant, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1630</td></tr>
+<tr><th>Words</th><td>1767</td></tr>
+<tr><th>Characters</th><td>9768</td></tr>
+<tr><th>BritDrama no.</th><td>2202</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">eternally. Why ſhould the ſtricken deare bem ane his death: His obſequies, were full of noble rites: Acteons Quire, a iolly Requiem gaue: And th&#x27; Arrow from the bow <mark>did</mark> ſing his dirge. O Foreſte! the fatall Houre is come Ring out your Bells, vntill they wake the dead. Let the Drumme murmure in a able Bagge. Reuerſe your Muskets,</div>
+<div class="excerpt">Muskets, and traile your ſtubborne Pikes In ſlimy-Channels. Let Trumpets groane, And the ſhrill Phiph be hoarce. The fatall Hower, Is come. O my wife! by this ſhe <mark>did</mark> entreat me Suddenly, (vpon ſome vrgent cauſe) To haſte from Lucca to her: Iuſt now; I lighted from my Horſe, enter&#x27;d her Chamber: And found her newly murdered in</div>
+<div class="excerpt">haſte from Lucca to her: Iuſt now; I lighted from my Horſe, enter&#x27;d her Chamber: And found her newly murdered in her Chayre. My Seruants ſay that my arriuall there, <mark>Did</mark> iuſt ſucceed your departure from her. Hence, and expect me ſtrait at home. Doeſt thou call it Iuſtice? O Villaine! more bloody then the Tyger; Whoſe empty Entrailes</div>
+<div class="excerpt">ſtrait at home. Doeſt thou call it Iuſtice? O Villaine! more bloody then the Tyger; Whoſe empty Entrailes noyſe, doth (Trumpet like) Encourage cruelty; Though thou didſt flight her As my poore Wife: yet ſhe might well expect Some mercy, as being thy owne ſiſter. A bloody kindneſſe to diſtinguiſh ſo She was no Adultereſſe, but</div>
+<div class="excerpt">my Prince. O horror! furnish vs (ſweet Heauen) with ſome Inſtinct. Inſpire remorſe: or we accuſe Thy skilfulneſſe to predeſtine vs a Prince: Murdring, whom thou didſt annoint our Soueraigne. Foreſte ſheath thy ſword. It muſt not be. He was our Royall Maſter once, and might In modeſty compare himſelfe; with all But Princes;</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">This way to madneſſe leads, teach not my heart Such modern Heraldry. Let it diſpoſe Of charitable thoughts, with naturall eies, Vnlimmited by cuſtomary forme, Which gaine, and nicetie haue made an Art, Virtue, not blood enobles vs, and ernes Her atribute, without hereditary helpe From anceſtors. O my deere Foreſte? Thy ſiſter with ſuch noble wealth is fraught, That to be couetous for her, appeares, A holy ſinne. But thou art cruell growne Thy memory is ſick. The old effects That witneſſe how I loue thy learned ſoule, Are quite forgot. Heart of Viper! Sure Time hath loſt his feathers from his Heeles, Marke how ſlow he goes? Shall I neere be olde That my deſignes may repute haue, And credit in the World. I doe not aske Thy Siſter for my Whore; but for my Wife. In this, I dare diſcredite Fate. They are not ſo wealthy in affliction: With ſorrow ſo well ſtor&#x27;d; as could ſuffice To trie my ſufferance: in the behalfe Of you my Prince, and ſtill royall Maſter. It were (Sir) but ingratitude in me To l ſſen thus, the number ſanctifide Of your true friends. Be you pleas&#x27;d to ſheath it, In that ſame part, which you doe moſt abhorre. It is their humble skill not to arriue Before your Grace, but by an Aduocate A Mediatour bleſſed in your Eies. My zeale vnto my ſelfe forbids my ſpeech. Since if I make reply to this, I but Diſparedge duty, and conſume my breath. Where ight is young, and cleere, there Spectacles Are troubleſome; and rather hide, then ſhew The obiect. The moſt deuout obedience Which I ſhall euer owe vnto your Grace Becomes my heart, much better then my tongue. My gracious Lord!— Your Grace will bring vs both within the reach Of publique enuy. Since you (the royall maker) doe commend The mettall, and your workemanſhippe; it ſhewes There&#x27;s little skill in thoſe which enuy him. Foreſte is your Creature. Many times I doe acquaint him what the generall voyce Doth vrge in his diſgrace. He laughs it out And ſweares he would not looſe that priuiledge Which Nature gaue him by her kinde miſtake In his natiuitie, for the Seas worth. As if from&#x27;s Iſſue, he could ne&#x27;re deſerue. A nument, v leſſe himſelfe doe hewe The ſtones whereof t&#x27;is built: vnleſſe he raiſe His Monument on a Wart; his dignitie On pouertie obſcure and baſe. O gentle Corſa! make it ſo with me, Faine would I (if I durſt) reueale to him The heate of my affection, and where t&#x27;is fix&#x27;d. I ſhall be earneſt to my vtmoſt skill. Signior Foreſte, You ſee my loue is rude, and bolde. am The vſher to my owne entrance. I am in debt for both. wilt thou not childe. To ſee my heart aſſume this libertie. Vpon my Tongue: before it rightly knowes! Thy ſiſters heart: The Duke conſent, as yet vnasked too: h arke? How Foreſt? Haſt thou eares? and wilt thou 〈◊〉 ſuch hopefull harmony, 〈…〉 Thy thriſt vnnaturall, wilt thou forbid Thy friend to ſhare in what is good, ſweet tongue And hand, perſiſt in what your kindneſſe profferd. Shew me the way Foreſte. My heart is ſtolne out of my eare; let me But know the thiefe, and Ile forgiue the robbery. Speake; who iſt that, with a voyce ſo amorous And ſhrill, confounds the others hollow organ? Still ſo reſeru&#x27;d, and vnto me. Is this that child of Orpheus? how? kneele to me? Dare you authorize this Idolatry? Then I&#x27;le kneele too. Such is my prayer too. O Foreſte! Exceſsiue ioy diſturbs my vtterance. My words are parted on any tongue. O ſpeake! Thou know&#x27;ſt my heart! Tell her, there may lie hope, I ſhall deſerue thoſe Teares that ſhew like deaw Vpon the Morning cheeke. Intreat her, that My yeeres may not diſgrace my loue. Though I Am young, I cannot counterfeit, I euer ſpeake my thoughts. I am o&#x27;recome. Excellent wretch! I am vndone with ioy I will not blame the Coward to feare death, Since the world containes ſuch ioy as this. Why doe you weepe Lady? can you ſuppoſe Foreſte would conſent to what is done, Vnleſſe he knew there were no danger in&#x27;t? Sure his Mother was a Sibyll; he ſees With a prophetique aime; the end of his Deſignes; before they come to action. He is too wiſe to erre. Why weepe you then? Marke then the bondage I impoſe on mine, My poore eies haue no obiect, but your face: Of which I will depriue them thus— Shroude thee in thy veſtall ornaments. Creepe, creepe, my glorious Sunne, behind a cloud. For els my eies, will ſu feit with delight. I neuer felt true ioy till now. Me thinks A briske alacritie, a nimble fire, Con ayes me ſtrangely from my fleſh. Not the Cannons, Iron-entraile, when wrapp&#x27;d Within a ſwarthy caſe of troubled Aire, Could quall me in emphaſis of Motion. Come then (my deare Corſa ) the Prieſt attends Within; the world wants Men; and Hymen is A nimble God. When all is paſt preuention The Duke ſhall know my choice. It is no crime Vnleſſe againſt that great prerogatiue Youre eare hath ouerrune. Perhaps my Heart, Hath made eſcape through theſe fonde Eies. And I (I&#x27;th&#x27; raſh diſcretion of my youthfull blood) Confin&#x27;d my ſelfe in Matrimoniall bonds. Heauen orb d, your Grace ſhould er&#x27;e imploy Your 〈…〉 as to diſcourſe with her &#x27;Till grew 〈◊〉 . As if the obiect were but new to him. And his owne heart vnſetled in his b aſt. euer. My ſoule abhorrs ſuch tyranny. Neuer, ſince my diſtinction was of power, To helpe its choyce. Neuer. Neuer. From whom is this ſir? I humbly kiſſe his hand. Sir, haue you euer bin in ſeruice, Vnder any eminent Commander? Reade theſe Foreſte. How Reputation leſſens in eſteme. Courteſie growes ſo cheape, that deniall, Seemes leſſe troubleſome then conſent. And performance is only Lazy. The labor of ſubſcription hinders more, Then thought of that, to which it doth ſubſcribe. This Letter would faine make you a Captaine In the new Troupes, ſent to the Valtaline. But ſure your modeſty will teach you baulke The graunt, though I ſhould beg ye to receau&#x27;t. No, the frien ſhip of the noble Marquiſſe Shall neuer countenance vniuſt deeds. Finde a Sute more capable of my grant, And your acceptance, it is your owne. I feare, yet my hopes would faine comfort me, Farewell. Foreſte, I haue tane my leaue o&#x27;th&#x27; Duke. Now, preſently. My followers attend At doore. I onely came to kiſſe thy hands. I muſt through. His grace will haue it ſo. Why doſt thou make thy head, to ſhake and reele, Vpon thy ſhoulders thus. Is it o&#x27;recome With thoughts, and ſuch as muſt be hid from me? He&#x27;s too moderate, that will at my yeeres, Be ſatiſfied thus. Foreſte is this all? Yong thoughts encourage me to ſufferance. Each ſtorme is vſher to a gentle calme: Why toyles with ſpeede, gets ſooneſt home to reſt. The plodding Mule ſhall ſleepe eternally. Why ſhould the ſtricken deare bem ane his death: His obſequies, were full of noble rites: Acteons Quire, a iolly Requiem gaue: And th&#x27; Arrow from the bow did ſing his dirge. O Foreſte! the fatall Houre is come Ring out your Bells, vntill they wake the dead. Let the Drumme murmure in a able Bagge. Reuerſe your Muskets, and traile your ſtubborne Pikes In ſlimy-Channels. Let Trumpets groane, And the ſhrill Phiph be hoarce. The fatall Hower, Is come. O my wife! by this ſhe did entreat me Suddenly, (vpon ſome vrgent cauſe) To haſte from Lucca to her: Iuſt now; I lighted from my Horſe, enter&#x27;d her Chamber: And found her newly murdered in her Chayre. My Seruants ſay that my arriuall there, Did iuſt ſucceed your departure from her. Hence, and expect me ſtrait at home. Doeſt thou call it Iuſtice? O Villaine! more bloody then the Tyger; Whoſe empty Entrailes noyſe, doth (Trumpet like) Encourage cruelty; Though thou didſt flight her As my poore Wife: yet ſhe might well expect Some mercy, as being thy owne ſiſter. A bloody kindneſſe to diſtinguiſh ſo She was no Adultereſſe, but enforc&#x27;d. Her thoughts Were pure: and ſuch a noble ſympathy Indeerd her Soule to mine; that her owne Teares, Might ſoone haue waſh&#x27;d away her Bodys ſtaine, And ſhe againe ſeeme cleane. Corſa! O my Wife! my boſome Girle! where art thou? Speake, no reply? Art thou ſo much buſied With thy new acquaintance now in Heauen: That thy poore Lord, may not borrow one word At parting? Draw, draw ingratefull Monſter! That haſt preuented thus our Dialogue. No falſe Syren! thou holy Hypocrite! I know thy tricks too well! &#x27;Cauſe I am yong, Too ſoft of heart, and apt to melt In euery flame of my owne triuiall loue; Therefore thou thinkſt to practiſe on me now With ſubtill phraſe. Draw, or elſe thou dy&#x27;ſt. A ſacrifice to me! O Foreſte! Why doſt thou multiply thy skill To thy friends pr iudice? It is not well, In troth it is not. Imploy thy owne heart: Thinke vpon&#x27;t thy ſelfe. Tis not kindely done: I ſhould not haue vs&#x27;d you thus— You ſhall. But doe not execute reuenge, Vpon the Duke; till my aſſent encourage thee. That name will prick my fury on: although I ſtriue to be propitious. A rude ſummons, that calls me as a Iudge, To cenſure on the errors of my Prince. O horror! furnish vs (ſweet Heauen) with ſome Inſtinct. Inſpire remorſe: or we accuſe Thy skilfulneſſe to predeſtine vs a Prince: Murdring, whom thou didſt annoint our Soueraigne. Foreſte ſheath thy ſword. It muſt not be. He was our Royall Maſter once, and might In modeſty compare himſelfe; with all But Princes; whom Fame reſerues as Paternes, For my ſake ſheath your Sword. And that&#x27;s the ſurgery, which I deſire. I will endure all. O my Lord, my Lord; I will not bid Poſterity tell tales: nor charge Hiſtorians to inſert in Annalls; On ſuch a Night a great Italian. Duke, Rauiſh&#x27;d his Creature Lucio&#x27;s Wife: Siſter To Foreſte, his actiue Councellor. And Foreſte, whose induſtry, and care Outwatch&#x27;d Leane-vigilance, &#x27;till ſhe grew mad. But come, Let&#x27;s leaue him to contriue our deaths. My Heart ſo fills my mouth, I cannot ſpeake. Foreſte come away. My Royall Maſter bleeding on the Ground: O murderous Villaines: I am foyld by a baſe hand. Sir, I forgiue you all. Amen, Amen.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Cruel Brother</div><div class="body">As a favour to Lucio, to whom he is devoted, the Duke appoints the low-born Foreste his secretary, the first port of call for ali suitors seeking monopolies and preferment. Lucio also wants to marry Foreste’s sister, 1627 Corsa, arguing that she is ennobled by her virtue, though not her ancestry. He goes through with the marriage secretly, without the Duke’s permission; but the Duke is impressed by Corsa when they are introduced, and has her brought to court so that the marriage can be properly celebrated with masques and revels. Foreste humiliates the satirist Castruccio, but his elevation to the secretaryship prevents Castruccio from challenging him to a duel. The poet initially takes a literary revenge, but, when the Duke asks about his satires, he is too cowardly to admit that Foreste is the target. The rustic Lothario comes to court, dressing foppishly in the hope of becoming a ducal favourite. Castruccio persuades him that his lack of success is Foreste’s fault. Lothario accosts Foreste offensively and finds himself imprisoned in a tiny cell. The Duke’s real intention in bringing Corsa to court is to seduce her. He engages Foreste’s wife as an unwitting go-between, then sends Lucio away overnight on a diplomatic mission. With Castruccio’s assistance, he visits Corsa, and rapes her. Foreste learns of the rape and slits the dishonoured Corsa’s wrist; she bleeds to death. On his return, Lucio takes a more lenient view than Foreste — he places more weight on the compulsion than the sexual penetration — but both agree to take revenge on the Duke, and visit him in bed. In the end, they decide to spare him, but he has already arranged assassins to dispose of them: the job was given to Castruccio, who subcontracted it to Lothario. Lothario kills the Duke by mistake; Castruccio and his accomplice kill him, then finish the job by killing Foreste and Lucio. The conspirators are kept alive to answer questions, and then suffer a death of exemplary horribleness.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEWFANG in Like Will to Like (Quoth the Devil to the Collier) · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>NEWFANG</span>
+</nav>
+
+<h1>NEWFANG</h1>
+<p class="lede">in <em>Like Will to Like (Quoth the Devil to the Collier)</em> — Fulwell, Ulpian</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1587</td></tr>
+<tr><th>Words</th><td>814</td></tr>
+<tr><th>Characters</th><td>3931</td></tr>
+<tr><th>BritDrama no.</th><td>472</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">how say you little Mec. Rafe roister and Tom tospot are not now woorth a grote, So wel with them it is: I would I had a pot for now I am so whot, by the ma e I <mark>must</mark> <mark>goe</mark> pis e. Philip fleming and Haunce hath daunst a prity daunce, that all is now spent out: And now a great mischaunce came on while they <mark>did</mark> praunce, they lye</div>
+<div class="excerpt">turned from nichol to lick hole with tom Colier I say no more tom but hold thy nose there. ‡ Wel tom Colier let these things passe <mark>away</mark>, tel me what market thou hast made of thy coles to day, ¶ But hast thou no conscience to begile thy poore neighboure. ¶ Thou art a good fellow I swere by the masse. As fit a companion for the</div>
+<div class="excerpt">case, Speak for in faith I meane not to kneell to that ill face. If our Lady Walsingham had no fairer face and visage, By the masse they were fooles that would <mark>goe</mark> to her on pil gremage ¶ Tush, tush, that is alredy brought to passe, For a very skip iack is prouder I swere by the mas, And seeketh to <mark>goe</mark> more gayer and braue:</div>
+<div class="excerpt">the masse. As fit a companion for the Deuil as may be, Lo good father deuil this felow wil I match with th e. ‡ God father wilt thou daunce a little before thou <mark>goe</mark> home to hell ¶ Why then haue at it by my fathers soule. Tom Colier of Croidon hath solde his Coles, and made his market to day: And now he daunceth with the Deuil,</div>
+<div class="excerpt">Deuill wil be, much like to like alway. ¶ Thou art haunce the haugman of Callis town, ¶ To thee shall come our hobling Ione. ¶ Amen. ‡ VVel Tom tospot first let me <mark>heare</mark> thee, How canst thou proue thy self a verier knaue then hee ‡ I speak of no dauncing little belied Haunce: But seing thou saist thou canst so wel daunce. Let me</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">¶ Then speak aloof of, to come nie I am afraid. ‡VVel Godfather if you will say ought to me in this case, Speak for in faith I meane not to kneell to that ill face. If our Lady Walsingham had no fairer face and visage, By the masse they were fooles that would goe to her on pil gremage ¶ Tush, tush, that is alredy brought to passe, For a very skip iack is prouder I swere by the mas, And seeketh to goe more gayer and braue: then dooth a Lord though himselfe be a knaue. ¶ Your minde is sith I fast three meales euery good friday. that I eat nothing but Onions and leekes alway. ¶ Tush, tush godfather Deuil for that haue thou no care, thou knowest that like wil to like quod the deuil to the Colier. And thou shalt see that such a match I shall make anon: That thou shalt say I am thy good good sweet sweet godson. ¶ Wel Godfather no more woords but mum, For yonder comes the Collier as seemeth me, By the mas he wil make a good mate for thee. what olde acquaintance small remembraunce, welcome to town with? very vengeance. Now welcome Tom Colier giue me thy hand: As very a knaue as any in Englank. ¶ By God and welcome ientle tom lick hole, ¶ And nothing els but euen plain nichol? ‡ It is turned from nichol to lick hole with tom Colier I say no more tom but hold thy nose there. ‡ Wel tom Colier let these things passe away, tel me what market thou hast made of thy coles to day, ¶ But hast thou no conscience to begile thy poore neighboure. ¶ Thou art a good fellow I swere by the masse. As fit a companion for the Deuil as may be, Lo good father deuil this felow wil I match with th e. ‡ God father wilt thou daunce a little before thou goe home to hell ¶ Why then haue at it by my fathers soule. Tom Colier of Croidon hath solde his Coles, and made his market to day: And now he daunceth with the Deuil, for like wil to like alway. ¶ Wherfore let vs reioyce and sing, let vs be mery and glad, Sith that the Colier and the Deuill, this match and baunce hath made. ¶ Now of this daunce we make an and, with mirth and eke with ioy: The Colier and the Deuill wil be, much like to like alway. ¶ Thou art haunce the haugman of Callis town, ¶ To thee shall come our hobling Ione. ¶ Amen. ‡ VVel Tom tospot first let me heare thee, How canst thou proue thy self a verier knaue then hee ‡ I speak of no dauncing little belied Haunce: But seing thou saist thou canst so wel daunce. Let me see where thou canst daunce liuely: ¶ Stay a while for he saith his Pater noster, ¶ Ha, ha, ha, there is a brace of hounds wel woorth a dozen Crowns beholde the huntsman leadeth away: I think in twenty towns, on hills and eke on downs, they taken haue their pray. So well liked was their hunting on hill and eke on mountain. that now they be vp in a leace: To keep within a string it is now a gay thing, doo all you holde your peace. Why then good gentle boy, how likest thou this play? no more but say thy minde: I swere by this day, if thou wilt this assay, I wil to thee be kinde. This is wel brought to passe of me I swere by the masse, some to hang and other some to beg: I would I had Balams asse to cary me where I was, how say you little Mec. Rafe roister and Tom tospot are not now woorth a grote, So wel with them it is: I would I had a pot for now I am so whot, by the ma e I must goe pis e. Philip fleming and Haunce hath daunst a prity daunce, that all is now spent out: And now a great mischaunce came on while they did praunce, they lye sick of the gout. And in a spittle house, with little Laurence louse, they be fame to dwell: if they eate a morsel of souce, or els a rosted mouce, they think they doo fare well. But as for pierce pickpurse, and cutbert cutpurse, you saw them both right now: with them it is much wurse, for they doo ban and curse, for the halter shall them bow. Now if I had my nag, to see the world wag. I would straight ride about: Ginks doo fil the bag, I would not passe a rag, to hit you on the snout.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Like Will to Like (Quoth the Devil to the Collier)</div><div class="body">The devil commissions the vice Nichol Newfangle to tempt men into a preoccupation with new fashions, which will lead them to hell. The ensuing action turns on the recurrent introduction of similar characters to one another. The vice introduces a dishonest collier to the devil, then Tom Tosspot to Rafe Roister; ina ~ mock trial he judges which is the bigger wastrel ===== PAGE 35 ===== 1568 (the prize, unknown to them, is to be hanged), but considers them equal. A comic drinking scene follows with Tosspot’s followers. He also sets in motion a plot to cozen two cutpurses over an inheritance of land. The vicious characters are driven off stage by the arrival of Virtuous Life, who is enthroned and crowned. Tosspot and Roister lose all their possessions: Roister gambles his away, and Tosspot has to leave his as security for his alehouse bill. Newfangle gives them the equipment to start a mew career as beggars, and they assault him. He is found injured by a judge, Severity, and betrays the two cutpurses; they are led away to execution, and Nichol and the hangman share their clothes. Tosspot’s followers end up in hospital suffering from gout. Lucifer carries the vice away on his back. The virtuous characters pray for the Queen, the Lords, and commons.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

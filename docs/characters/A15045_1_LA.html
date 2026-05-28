@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LA in 1 Promos and Cassandra · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LA</span>
+</nav>
+
+<h1>LA</h1>
+<p class="lede">in <em>1 Promos and Cassandra</em> — Whetstone, George</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1578</td></tr>
+<tr><th>Words</th><td>936</td></tr>
+<tr><th>Characters</th><td>4879</td></tr>
+<tr><th>BritDrama no.</th><td>615</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">thee, what trade doth he profeſſe? All the better, ſuſpition wyll be the leſſe. Well, go thy wayes, and if thou him eſpye, Tell him from mee, that I a cauſe or <mark>two</mark>. Woulde put to him, at leyſure wyllinglie. Aye me alas, leſſe Phallax helpe, poore wench vndone I am: My foes nowe in the winde, wyll lye to worke my open ſhame:</div>
+<div class="excerpt">home hye: And will Dalia pop him in the neather roome, And kéepe the falling doore cloſe tyll I come And tell my thraule his fortune wyll not ſtaye? Pratyng vixen <mark>away</mark>. Gallants adue. I venter muſt Hipolito to ſée. He is both young and welthy yet, the better ſpoyle for mée. My haſſard for his ſake I trewe, Note ſhall make him</div>
+<div class="excerpt">and pay: He: he: ſhal pranck me in my plumes, and deck mee braue and gay, Of Curtiſie, I praye you yet, if Phallax come this waye, Report to put a caſe with him, <mark>heare</mark> Lamia long dyd ſtay. Teare not my clothes my friends, they coſt more the ̄ you are a ware, Worſhipfull Sir, my ſelfe I happy reake, VVith patience that my aunſwer</div>
+<div class="excerpt">dyd ſtay. Teare not my clothes my friends, they coſt more the ̄ you are a ware, Worſhipfull Sir, my ſelfe I happy reake, VVith patience that my aunſwer you will <mark>heare</mark>: Theſe naughtie men, theſe wordes on mallice ſpeake, And for this cauſe, yll wyll to me they beare. I ſcornde to kéepe, their mindes with money playe, I meane to</div>
+<div class="excerpt">haſſarde life, vpon my yeelding loue: The man is painde with preſent death, that vſeth wanton pleaſure. If lawe you do profeſſe. I gladlie craue, In a cauſe or <mark>two</mark>, your aduiſe to haue. You are a merie man, but leaue to ieaſt, To morrowe night, if you will be my Geaſt: At my poore houſe, you ſhall my cauſes knowe, For good</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Rosko, what newes, that in ſuch haſte you come blowing? What ſo they be, fooliſh knaue, tell mee true? For mee good fellowe, I praye thee why ſo? Go too, ſaye on: Why, what&#x27;s the matter man? Is this offence, in queſtion come againe? Tell, tell, no more, &#x27;tys tyme this tale were done: See, ſée, howe ſoone, my triumphe turnes to paine. Alas poore Rosko, our dayntie dyet, Our brauerie and all we muſt forgo. Yea, but out alas, ſorrowe wyll not ſerue: Thou ſhalt haue a Paſporte, Why, that thou wart my man. Neuer feare: honeſtly Lamia nowe meanes to lyue, euen tyll ſhe dye. Admitte I woulde, my hazarde were in vaine. Thou comforts mée, good Rosko, tell mée howe? I dyd but ieaſt, good ſwéete ſeruaunt tell mée. Tuſh, to trye thy vnwillingneſſe. I dyd but ieaſt. I thought thy talke was too ſweete to be true. No, I dyd ſo long ſince, but inforſte by neede, To byd him welcome home againe, I was decréede. And what of this? A good deuice, God graunt vs good ſucceſſe: But I praye thee, what trade doth he profeſſe? All the better, ſuſpition wyll be the leſſe. Well, go thy wayes, and if thou him eſpye, Tell him from mee, that I a cauſe or two. Woulde put to him, at leyſure wyllinglie. Aye me alas, leſſe Phallax helpe, poore wench vndone I am: My foes nowe in the winde, wyll lye to worke my open ſhame: Now enuious eyes will prie abroade, offenders to intrap, Of force now Lamia, muſt be chaſte, to ſhun a more miſhap. And wanton girle, how wilt thou ſhift, for garments fine and gay? For dainty fare, can cruſts co ̄ tent? who ſhal thy houſerent pay? And that delights thee moſt of all, thou muſt thy daliaunce leaue? And can then the force of lawe, or death, thy minde of loue bereaue? In good faith, no: the wight that once, hath taſt the fruits of loue, Vntill hir dying daye will long, Sir Chaucers ieſts to proue. Were you borne in a myll, curtole? you prate ſo hye: What young Hipolito? Leaſt he be gone, home hye: And will Dalia pop him in the neather roome, And kéepe the falling doore cloſe tyll I come And tell my thraule his fortune wyll not ſtaye? Pratyng vixen away. Gallants adue. I venter muſt Hipolito to ſée. He is both young and welthy yet, the better ſpoyle for mée. My haſſard for his ſake I trewe, Note ſhall make him pray and pay: He: he: ſhal pranck me in my plumes, and deck mee braue and gay, Of Curtiſie, I praye you yet, if Phallax come this waye, Report to put a caſe with him, heare Lamia long dyd ſtay. Teare not my clothes my friends, they coſt more the ̄ you are a ware, Worſhipfull Sir, my ſelfe I happy reake, VVith patience that my aunſwer you will heare: Theſe naughtie men, theſe wordes on mallice ſpeake, And for this cauſe, yll wyll to me they beare. I ſcornde to kéepe, their mindes with money playe, I meane to kéepe, my life from open ſhame, Yea, if I lyu&#x27;d, as lewdlie as they ſaye: But I that knewe, my ſelfe vnworthy ſhame: Shrunk not, to come vnto my triall nowe. My tale is tolde, conceyue as lyketh you. Indeede I graunt (although I could reproue, Their lewde Complayntes, with goodneſſe of my lyfe) Your curteſy, your detter doth me proue, In that you tooke ▪ my honeſt fame in ſtryfe,) My aunſwere for diſcharge of their report: For which good turne, I at your pleaſure reſt, To worke amends, in any honeſt ſort: Tuſh, I warrant thee, I am not ſo whot, Your wordes are too harde Sir, for me to conſter. I ſee no ſigne of death, in your face to appeare, Tis but ſome vſuall qualme you haue, pitifull Dames to fears. Well, I admit it ſo, onelie to argue in your caſe. I am maried, ſo that to ſet your loue on me were vaine: Though for pleaſure, or to proue me, theſe profers you do moue, You are to wiſe, to haſſarde life, vpon my yeelding loue: The man is painde with preſent death, that vſeth wanton pleaſure. If lawe you do profeſſe. I gladlie craue, In a cauſe or two, your aduiſe to haue. You are a merie man, but leaue to ieaſt, To morrowe night, if you will be my Geaſt: At my poore houſe, you ſhall my cauſes knowe, For good cauſe, which I meane not here to ſhowe. Your good welcome Sir, your beſt cheere will be. Well (in ſeeréete, be it ſayde) how ſo I ſéemd diuine, I feared once, a blew gowne, would haue bene my ſhrine. But nowe that paine is flead, and pleaſure kéepes his holde, I knowe that Phallax will, my Fame henceforth vpholde: To entertaine which Geaſt, I will ſome dayntie chéere prepare, Yet ere I go, in pleaſant Song, I meane to purge my care. ❧ A due poore care, adue, Go, cloye ſome helples wretche: My life, to make me rue, Thy forces do not ſtretche. Thy harbor, is the harte, Whom wrong, hath wrapt, in woe: But wrong, doth take my parte, VVith cloke of right in shoe. My faultes, inquirie ſcape, At them the Iudges winke: Thoſe for my fall that gape, To ſhowe my lewdneſſe ſhrinke. Then ſilly care go packe, Thou art no Geaſt for mee: I haue, and haue, no lacke, And lacke, is ſhrowde for thee.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 1 Promos and Cassandra</div><div class="body">The King of Hungary appoints Lord Promos as his deputy in the city of Gyula. Believing in the efficacy of judicial severity, Promos re-enacts legislation against promiscuity. The brothel business instantly goes from prosperity to disaster, and Cassandra’s brother, Andrugio, who has had premarital sex with Polina, is condemned to death. Cassandra pleads with Promos, and, attracted to her, he grants a temporary stay of execution to allow her to plead further, At this meeting, ===== PAGE 167 ===== 1577 he offers her a reprieve in return for her love: the price of her brother&#x27;s life is her participation in the very crime for which he was condemned, She refuses, but he gives her two days to think about it; if she changes her mind, she is to come to court at night dressed as a page. When she visits her brother to tell him to prepare for death, they dispute which is the lesser of two evils, and he persuades her to submit to Promos. Phallax, Promos’s corrupt deputy, is busy making himself rich by taking bribes. His accomplices bring in the courtesan Lamia, but he dismisses them and tries to seduce her. She invites him to her house the following night. Lamia can now live with impunity, and her servants lay in food to entertain Phallax. Grimball is keen to seduce Dalia, the maid, but when he goes to clean himself up, Rosko arranges for him to be robbed while being barbered. Cassandra submits to sex with Promos, but not before extracting from him a promise of marriage. Promos double-crosses her and orders Andrugio secretly beheaded. Cassandra is presented with a severed head; she determines to bury the head and expose Promos’s corruption to the King. In fact, however, Andrugio has been saved by the Jailer, and he goes into exile, leaving Polina to mourn him and Cassandra to seek the King’s justice.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

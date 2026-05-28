@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IAQ in The Case Is Altered · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>IAQ</span>
+</nav>
+
+<h1>IAQ</h1>
+<p class="lede">in <em>The Case Is Altered</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1609</td></tr>
+<tr><th>Words</th><td>1848</td></tr>
+<tr><th>Characters</th><td>9638</td></tr>
+<tr><th>BritDrama no.</th><td>1072</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">then a dead man, The more we ſpare my child, the more we gaine. Miſchiefe and hell, what is this man a ſpirit, Haunts he my houſes ghoſt? ſtill at my doore? He <mark>has</mark> beene at my doore, he <mark>has</mark> beene in, In my deere doore: pray God my gold be ſafe. Gods pitty, heres another. Rachel, ho Rachel. Rachel, Gods light, come to me, Rachel,</div>
+<div class="excerpt">call me ſir. You are moſt welcome ſir, I meant almoſt; and would your worſhip ſpeake? Would you abaſe your ſelfe to ſpeake to me? My gold is in his noſtrels, he <mark>has</mark> ſmelt it, Breake breaſt, breake <mark>heart</mark>, fall on the earth my entrailes, With this ſame burſting admiration! He knowes my gold, he knowes of all my treaſure, How</div>
+<div class="excerpt">Lord, Ile tell you all; how my poore hapleſſe daughter Got that attire ſhe weares from top to toe. O yes, good my Lord. Nay ſweet Lord pardon me? do not diſſemble, <mark>Heare</mark> your poore beadſ-man ſpeake; tis requiſite That I (ſo huge a beggar) make account Of things that paſſe my calling: ſhe was borne T&#x27;enioy nothing vnderneath the</div>
+<div class="excerpt">bombard ſlops, what is it crams hem ſo. Thats true, I had almoſt forgot this rug, this hedghogs neſt, this hay mowe, this beares ſkin, this heath, this firſbuſh. <mark>Heart</mark>, thou art ſomewhat eas&#x27;d? halfe of my feare Hath tane his leaue of my, the other halfe Still keepes poſſeſſion in diſpight of hope, Vntill theſe amorous eyes, court</div>
+<div class="excerpt">heauen, no, no, my houſe I hope Is haunted with a Fairy. My deere Lar, My houſhold God, My Fairy on my knees. My Lar doth call me, ô ſweet voyce. Muſicall as the ſpheares, ſee, ſee, more gold. Shut faſt my doore, a golden crowne, Iaques ſhall be a king. O in what golden circle haue I dan&#x27;ſt? Millaine theſe od&#x27;rous and enfloured</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">What ſhould this meane? Rachel open the dore. Rachel I muſt abroad. Lock thy ſelfe in, but yet take out the key, That whoſoeuer peepes in at the key-hole, May yet imagine there is none at home. But harke thee Rachel: ſay a theefe ſhould come, And miſſe the key, he would reſoule indeede None were at home, and ſo breake in the rather: Ope the doore Rachel, ſet it open daughter; But ſit in it thy ſelfe: and talke alowd, As if there were ſome more in houſe with thee: Put out the fire, kill the chimnies hart, That it may breath no more then a dead man, The more we ſpare my child, the more we gaine. Miſchiefe and hell, what is this man a ſpirit, Haunts he my houſes ghoſt? ſtill at my doore? He has beene at my doore, he has beene in, In my deere doore: pray God my gold be ſafe. Gods pitty, heres another. Rachel, ho Rachel. Rachel, Gods light, come to me, Rachel, Rachel! Tis ſafe, tis ſafe, they haue notrob&#x27;d my treaſure. Sir, Gods my life, ſir, ſir, call me ſir. You are moſt welcome ſir, I meant almoſt; and would your worſhip ſpeake? Would you abaſe your ſelfe to ſpeake to me? My gold is in his noſtrels, he has ſmelt it, Breake breaſt, breake heart, fall on the earth my entrailes, With this ſame burſting admiration! He knowes my gold, he knowes of all my treaſure, How do you know ſir? whereby do you gueſſe? I aske, an&#x27;t pleaſe your Gentle worſhip, how you know? I meane, how I ſhould make your worſhip know That I haue nothing — To giue with my poore daughter? I haue nothing: The very aire, bounteous to euery man, Is ſcant to me, ſir. He thinkes ſo, harke, but thinke ſo: He thinkes not ſo, he knowes of all my treaſure. Yet all is ſafe within, is none without? No body breake my walles? I haue no dowry to beſtow vpon her. That is well, Then I beſeech your worſhip make no queſtion Of that you wiſh, tis too much fauour to me. So, hee&#x27;s gone, would all were dead and gone, That I might liue with my deere gold alone. Out of my ſoule another, comes he hither? To me by heauen, Turne ribs to braſſe, turne voice into a trumpet, To rattle out the battels of my thoughts, One comes to hold me talke, while th&#x27;other robbes me. And yet tis ſafe: they meane not to vſe force, But fawning comming. I ſhall eaſly know By his next queſtion, if he thinke me rich, Whom ſee I? my good Lord? O, ſo, ſo, ſo, ſo, ſo, this is for gold, Now it is ſure, this is my daughters neatneſſe, Makes them beleeue me rich. No, my good Lord, Ile tell you all; how my poore hapleſſe daughter Got that attire ſhe weares from top to toe. O yes, good my Lord. Nay ſweet Lord pardon me? do not diſſemble, Heare your poore beadſ-man ſpeake; tis requiſite That I (ſo huge a beggar) make account Of things that paſſe my calling: ſhe was borne T&#x27;enioy nothing vnderneath the ſonne: But that, if ſhe had more then other beggars She ſhould be enuied: I will tell you then How ſhe had all ſhe weares, her warme ſhooes (God wot) A kind maide gaue her, ſeeing her go barefoot In a cold froſty morning; God requite her; Her homely ſtockings O good my Lord, Mock not the poore, remembers not your Lordſhip, That pouerty is the precious gift of God. As well as riches, tread vpon me, rather Then mocke my poorenes. He&#x27;s gone: I knew it; this is our hot louer, I will beleeue them! I! they may come in Like ſimple woers, and be arrant theeues, And I not know them! tis not to be told, What ſeruile villanies, men will do for gold, O it began to haue a huge ſtrong ſmell, Which lying ſo long together in a place; Ile giue it vent, it ſhall ha ſhift inough, And if the diuell, that enuies all goodneſſe, Haue told them of my gold, and where I kept it, Ile ſet his burning noſe once more a worke, To ſmell where I remou&#x27;d it, here it is: Ile hide and couer it with this horſe-dung: Who will ſuppoſe that ſuch a precious ne t Is crownd with ſuch a dunghill excrement? In my deere life, ſleepe ſweetly my deere child. &quot;Scarce lawfully begotten, but yet gotten, &quot;And thats enough. Rot all hands that come neere thee Except mine owne. Burne out all eyes that ſee thee, Except mine owne. All thoughts of thee be poyſon To their enamor&#x27;d harts, except mine owne, Ile take no leaue, ſweet Prince great Emperour, But ſee thee euery minute, King of Kings, Ile not be rude to thee, and turne my backe, In going from thee, but go backward out: With my face toward thee, with humble curteſies, None is within. None ouerlookes my wall. To haue gold, and to haue it ſafe, is all. What Rachel my girle what Rachel; What Rachel, How in my back ſide? where? what come they for? Where are they? Rachel? theeues, theeues? Stay villaine ſlaue: Rachel? vntye my dog. Nay theife thou canſt not ſcape. Why Rachel: when I ſay: let looſe my dog? garlique my maſtiue, let him looſe I ſay. well then deliuer, come deliuer ſlaue? O thou wouldſt haue me tell thee? wouldſt thou ſhew me thy hands, what haſt thou in thy hands? Stay are not thy fingers ends begrimd with durt, no thou haſt wipt them. I thou villaine? thou art a ſubtile knaue, put off thy ſhewes, come I will ſee them, giue me a knife here Rachel, Ile rip the ſoles. Ortographie, Anatomy? I can feele nothing. Soft ſir, you are not yet gon, ſhake your legs, come, and your armes, be briefe, ſtay let me ſee theſe drums, theſe kil derkins, theſe bombard ſlops, what is it crams hem ſo. Thats true, I had almoſt forgot this rug, this hedghogs neſt, this hay mowe, this beares ſkin, this heath, this firſbuſh. Heart, thou art ſomewhat eas&#x27;d? halfe of my feare Hath tane his leaue of my, the other halfe Still keepes poſſeſſion in diſpight of hope, Vntill theſe amorous eyes, court my faire gold: Deare I come to thee: friend, why art not gone? Auoid my ſoules vexation, Sathan hence? Why doeſt thou ſtare on me, why doeſt thou ſtay? Why por&#x27;ſt thou on the ground with theeuiſh eyes? What ſee&#x27;ſt thou there, thou curre? what gap&#x27;ſt thou at? Hence from my houſe, Rachel, ſend garlick forth. Pack, and thanke God thou ſcap&#x27;ſt ſo well away. I cannot ſee by any Characters Writ on this earth, that any fellon foote Hath tane acquaintance of this hallowed ground. None ſees me: knees do homage to your Lord. Tis ſafe, tis ſafe, it lyes and ſleepes ſo ſoundly, Twould do one good to looke on&#x27;t. If this bliſſe Be giuen to any man that hath much gold, Iuſtly to ſay tis ſafe, I ſay tis ſafe. O what a heauenly round theſe two words dance Within me and without me: Firſt I thinke hem, And then I ſpeake hem, then I watch their ſound, And drinke it greedily with both mine eares, Then thinke, then ſpeake, then drinke their ſound againe, And racket round about this bodies court. Theſe two ſweet words: tis ſafe: ſtay I will feed My other ſences, ô how ſweet it ſmels Downe to thy graue againe, thou beauteous Ghoſt, Angels men ſay, are ſpirits: Spirits be Inuiſible, bright angels are you ſo? Be you inuiſible to euery eye. Saue onely theſe: Sleepe, Ile not breake your reſt, Though you breake mine: Deare Saints adiew, adiew: My feete part from you, but my ſoule dwels with you. Who cals? whoſe there? Who cals? What voice is this? no body here, was I not cald? I was. And one cride Iaques with a hollow voyce, I was deceiu&#x27;d, no I was not deceiu&#x27;d, See ſee, it was an Angell cald me forth, Gold, gold, man ▪ making gold, another ſtarre, Drop they from heauen, no, no, my houſe I hope Is haunted with a Fairy. My deere Lar, My houſhold God, My Fairy on my knees. My Lar doth call me, ô ſweet voyce. Muſicall as the ſpheares, ſee, ſee, more gold. Shut faſt my doore, a golden crowne, Iaques ſhall be a king. O in what golden circle haue I dan&#x27;ſt? Millaine theſe od&#x27;rous and enfloured fields Are none of thine, no heres Elizium, Heere bleſſed ghoſts do walke, this is the Court And glorious palace where the God of gold Shines like the ſonne, of ſparkling maieſty; O faire fethered, my red-breſted birds, Come flye with me, ile bring you to a quier, Whoſe conſort being ſweetned with your ſound: The muſique will be fuller, and each hower Theſe eares ſhall banquet with your harmony ô, ô, ô, O God, the caſe is alterd. Angels? I where? mine Angels? wher&#x27;s my gold? Why Rachel? O thou theeuiſh Canibal, Thou eateſt my fleſh in ſtealing of my gold. What gold? Rachel call help, come forth, Ile rip thine entrailes, but ile haue my gold: Rachel why comes thou not? I am vndone, Ay me ſhe ſpeakes not, thou haſt ſlaine my child. Tis too true, Th&#x27;aſt made away my child, how haſt my gold: O what Hienna cald me out of dores, The theife is gone: my gold&#x27;s gone, Rachels gone, Al&#x27;s gone? ſaue I that ſpend my cries in vaine, But ile hence too, and die or end this paine. My gold, my gold, my life, my ſoule, my heauen, What is become of thee? ſee, ile impart My miſerable loſſe to my good Lord, Let me haue ſearch my Lord, my gold is gone. I know your Lordſhip may find out my gold, For Gods ſake pitty me, iuſtice, ſweet Lord. Who would thinke, That looking to my gold with ſuch hares eyes, That euer open, I euen when thy ſleepe, I thus ſhould looſe my gold, my noble Lord, what ſaies your Lordſhip? My moſt hony gold. Heare me moſt honor&#x27;d Lord. And that my gold, being ſo hid in earth, ſhould bee found out. O that I could ſo ſoone forget to know the thiefe a gaine, that had my gold, my gold. My gold Rachel? my gold? I beſeech you maddam vrge your father. I can be ſtill no longer, my good Lord, Do a poore man ſome grace mongſt all your ioyes. I am robd, I am vndone my Lord, robd and vndone: A heape of thirty thouſand golden crownes, Stolne from me in one minnte, and I feare: By her confedracy, that cals me father, But ſhe&#x27;s none of mine, therefore ſweet Lord: Let her be tortured to confeſſe the truth. No, I diſclaime in her, I ſpit at her,</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

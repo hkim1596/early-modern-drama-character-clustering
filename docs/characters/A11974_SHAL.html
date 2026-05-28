@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SHAL in 2 Henry the Fourth · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SHAL</span>
+</nav>
+
+<h1>SHAL</h1>
+<p class="lede">in <em>2 Henry the Fourth</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>1014</td></tr>
+<tr><th>Characters</th><td>5266</td></tr>
+<tr><th>BritDrama no.</th><td>1083</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">I commend you well: Francis Feeble. What trade art thou Feeble? Shall I pricke him sir? Peter Bul-calfe o&#x27;th greene. Here is <mark>two</mark> more cald then your number, you <mark>must</mark> haue but foure here sir, and so I pray you <mark>goe</mark> in with mee to dinner. O sir Iohn, do you remember since we lay all night in the windmil in saint Georges field?</div>
+<div class="excerpt">remember since we lay all night in the windmil in saint Georges field? Ha, twas a merry night, and is lane Night-worke a liue? She neuer could <mark>away</mark> with me. Nay she <mark>must</mark> be old, she cannot chuse but be old, cer tain shees old, &amp; had Robin Night-work by old Night-work, before I came to Clements inne. Ha cousen Scilens that thou hadst</div>
+<div class="excerpt">say e shal haue no wrong, look about Dauy: where are you sir Io n? come, come, come, off with your boots, giue me your hand master Bardolfe. I thank thee with my <mark>heart</mark> kind master Bardolfe, and welcome my tall fellow, come sir Iohn. Sir Iohn. Nay you shall see my orchard, where, in an arbour we will eate a last yeeres pippen of</div>
+<div class="excerpt">Dauy. Be mery master Bardolfe, and my litle souldier there, be merry. Dauy? Honest Bardolfe, welcome, if thou wantst any thing, and wilt not call, be shrew thy <mark>heart</mark>, welcome my little tiny theefe, and welcome indeede too, Ile drink to master Bardolfe, and to all the cabileros about London. By the mas youle crack a quarte together,</div>
+<div class="excerpt">ha will you not master Bardolfe? Honest gentleman, I know not your breeding. Giue me pardon sir, if sir you come with newes from the court, I take it theres but <mark>two</mark> waies, either to vtter them, or conceale them, I am sir vnder the King in some authoritie. Vnder King Harry. Harry the fourth. It is best certain: but to stand</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">It is well said infaith sir, and it is well said indeed too, better accomodated, it is good, yea indeede is it, good phrases are surely, and euer were, very commendable, accommodated, it comes of accommodo, very good, a good phrase. No sir Iohn, it is my cosen Scilens in commssion with me. Mary haue we sir, wil you sit? Wheres the roule? wheres the roule? wheres the roule? let me see, let me see ▪ let me see, so, so, so, so, so, (so, so) yea mary sir, Rafe Mouldy let them appeare as I cal, let them do, so, let them do, so, let me see, where is Mouldy? What think you sir Iohn, a good limbde, felow, yong, strong, and of good friends. Ha, ha, ha, most excellent yfaith, things that are moul dy lacke vse: very singular good, infaith well said sir Iohn very well said. Iohn prickes him. Peace fellow, peace, stand aside, know you where you are? for th&#x27;other sir Iohn: let me see Simon Shadow. Wheres Shadow? Do you like him sir Iohn? Thomas Wart. Shall I pricke him sir Iohn? Ha, ha, ha, you can do it sir, you can do it, I commend you well: Francis Feeble. What trade art thou Feeble? Shall I pricke him sir? Peter Bul-calfe o&#x27;th greene. Here is two more cald then your number, you must haue but foure here sir, and so I pray you goe in with mee to dinner. O sir Iohn, do you remember since we lay all night in the windmil in saint Georges field? Ha, twas a merry night, and is lane Night-worke a liue? She neuer could away with me. Nay she must be old, she cannot chuse but be old, cer tain shees old, &amp; had Robin Night-work by old Night-work, before I came to Clements inne. Ha cousen Scilens that thou hadst seene that that this Knight and I haue seene, ha sir Iohn, said I wel? Foure of which you please. Come sir Iohn, which foure wil you haue? Mary then, Mouldy, Bulcalfe, Feeble, and Sadow. Sir Iohn, sir Iohn, doe not your selfe wrong, they are your likeliest men, and I would haue you serude with the best. He is not his crafts-master, he doth not do it right; I remember at Mile-end-greene, when I lay at Clements Inne, I was then sir Dagonet in Arthurs show, there was a little quiuer fellow, and a would mannage you his peece thus, and a would about and about, and come you in, and come you in, rah, tah, tah, would a say, bounce would a say, and away again would a go, and againe would a come: I shall nere see such a fellow. Sir Iohn, the Lord blesse you, God prosper your af faires, God send vs peace at your returne, visit our house, let our old acquaintance be renewed, peraduenture I will with ye to the court. Go to, I haue spoke at a word, God keep you By cock and pie sir, you shal not away to night, what Dauy I say? I will not excuse you, you shall not be excusde, ex cuses shall not be admitted, there is no excuse shall serue, you shall not be excusde: why Dauy. Dauy, Dauy, Dauy, Dauy, let me see Dauy, let me see Dauy, let me see, yea mary VVilliam Cooke, bid him come hither, sir Iohn, you shal not be excused. VVith red wheat Dauy, but for VVilliam Cooke are there no yong pigeons? Let it be cast and payed: sir Iohn, you shal not be ex cused. A shall answer it: some pigeons Dauy, a couple of short legg&#x27;d hens, a ioynt of mutton, and any pretty little tinie Kick-shawes, tell william Cooke. Yea Dauy, I will vse him well, a friend i&#x27;th court is better then a penie in purse: vse his men wel Dauy, for they are arrant knaues, and will backbite. VVell conceited Dauy, about thy businesse Dauy. Go to I say e shal haue no wrong, look about Dauy: where are you sir Io n? come, come, come, off with your boots, giue me your hand master Bardolfe. I thank thee with my heart kind master Bardolfe, and welcome my tall fellow, come sir Iohn. Sir Iohn. Nay you shall see my orchard, where, in an arbour we will eate a last yeeres pippen of mine owne graffing, with a dish of carrawaies and so forth: come coosin Scilens, and then to bed. Barraine, barraine, barraine, beggars all, beggars all sir Iohn, mary good ayre: spread Dauy, spread Dauy, well saide Dauy. A good varlet, a good varlet, a very good varlet sir Iohn: by the mas I haue drunke too much sacke at supper: a good varlet: now sit downe, now sit downe, come cosin. Giue master Bardolfe some wine, Dauy. Be mery master Bardolfe, and my litle souldier there, be merry. Dauy? Honest Bardolfe, welcome, if thou wantst any thing, and wilt not call, be shrew thy heart, welcome my little tiny theefe, and welcome indeede too, Ile drink to master Bardolfe, and to all the cabileros about London. By the mas youle crack a quarte together, ha will you not master Bardolfe? Honest gentleman, I know not your breeding. Giue me pardon sir, if sir you come with newes from the court, I take it theres but two waies, either to vtter them, or conceale them, I am sir vnder the King in some authoritie. Vnder King Harry. Harry the fourth. It is best certain: but to stand stained with trauaile, and sweating with desire to see him, thinking of nothing els, putting 〈◊〉 affaires else in obliuion, as if there were nothing els to bee done, but to see him. Tis so indeede. Yea mary sir Iohn, which I beseech you to let me haue home with me. I cannot perceiue how, vnlesse you giue me your dublet, and stuffe me out with straw: I beseech you good sir Iohn let me haue fiue hundred of my thousand.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 2 Henry the Fourth</div><div class="body">After the battle of Shrewsbury, there are contradictory rumours abroad as to the outcome: some say that the King and his son have vanquished Lord Hotspur of Lancaster, whereas in fact they won. Now Lord John of Lancaster is travelling north with a power, including Sir John Falstaff, to crush the regrouping remnants of the Percy rebellion. Mistress Quickly tries to have Falstaff arrested for debt, while threatens to prevent him setting out for London, but he talks his way out of it. Back from a military expedition in Wales, Prince Henry and Poins disguise themselves as drawers and eavesdrop on Falstaff’s conversation: he says uncomplimentary things about them, but Falstaff excuses himself inventively when confronted. Northumberland’s family persuade him to flee to Scotland rather than join the other northern rebels. Falstaff musters troops in Gloucestershire, but the best men bribe their way out, leaving him with the least suitable soldiers. Prince John sees the rebels and agrees to redress their grievances if they disband their army; but when they do so, he has them arrested for treason. Falstaff arrives in the north late, but meets the rebel Sir John Colville, who promptly surrenders without a fight, having heard Falstaff’s reputation. Prince John returns to court, but Falstaff goes via Gloucestershire to visit Justice Shallow. The sickly King prepares for death, and worries about the kingdom’s future in the hands of his eldest son. News arrives of the defeat of all the rebels. Prince Henry finds his father asleep with the crown beside him, and, thinking him dead, tries it on. The King wakes to find his crown gone. Brought back, the Prince excuses himself, and the King gives deathbed advice: he should pursue an aggressive foreign policy to distract from internal dissent. He dies in the Jerusalem chamber, fulfilling a prophecy that he will die in Jerusalem. Henry V is not the King everyone expected the Prince to be. He confirms in office the Lord Chief Justice, who had imprisoned him for his misdemeanours. Pistol brings to Gloucestershire news of his accession, and Falstaff anticipates power for himself and his associates. He is disappointed: when he accosts the King at his coronation, Henry refuses to acknowledge him, and banishes him — though with a pension to ensure that poverty does not lead him back into crime. Falstaff is convinced that this is only a public show of rejection, which will later be countermanded in private; but in fact he and his crew…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

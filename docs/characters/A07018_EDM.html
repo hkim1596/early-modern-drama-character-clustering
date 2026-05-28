@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EDM in Edward the Second · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>EDM</span>
+</nav>
+
+<h1>EDM</h1>
+<p class="lede">in <em>Edward the Second</em> — Marlowe, Christopher</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1594</td></tr>
+<tr><th>Words</th><td>638</td></tr>
+<tr><th>Characters</th><td>3499</td></tr>
+<tr><th>BritDrama no.</th><td>927</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">Fraunce, blowe gentle gale, Till Edmund be arriude for Englands good, Nature, yeeld to my countries cause in this, A brother, no, a butcher of thy friends, Proud <mark>Edward</mark>, doost thou banish me thy presence? But ile to Fraunce, and cheere the wronged <mark>Queene</mark>, And certifie what Edwards loosenes is, Vnnaturall king, to slaughter noble</div>
+<div class="excerpt">but hath thy potion wrought so happilie? Feare it not. Exeunt. Madam, long may you liue, Much happier then your friends in <mark>England</mark> do. Would all were well, and <mark>Edward</mark> well reclaimd, For Englands honor, peace, and quietnes. Sir Iohn of Henolt, pardon vs I pray, These comforts that you giue our wofull <mark>queene</mark>, Binde vs in kindenes</div>
+<div class="excerpt">comforts that you giue our wofull <mark>queene</mark>, Binde vs in kindenes all at your commaund. I would he neuer had bin flattered more. This way he fled, but I am come too late, <mark>Edward</mark>, alas my hart relents for thee, Proud traytor Mortimer why doost thou chase Thy lawfull king thy soueraigne with thy sword? Vilde wretch, and why hast thou of all</div>
+<div class="excerpt">armes against thy brother and thy king? Raigne showers of vengeance on my cursed head Thou God, to whom in iustice it belongs, To punish this vnnaturall reuolt: <mark>Edward</mark>, this Mortimer aimes at thy life: O fly him then, but Edmund calme this rage, Dissemble or thou diest, for Mortimer And Isabell doe kisse while they conspire, And</div>
+<div class="excerpt">Longshankes blood Is false, be not found single for suspect: Proud Mortimer pries neare into thy walkes. Madam, without offence if I may aske, How will you deale with <mark>Edward</mark> in his fall? Nephew, your father, I dare not call him king. This <mark>Edward</mark> is the ruine of the realme. I heare of late he hath deposde himselfe. Not I my lord: who</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Barons &amp; Earls, your pride hath made me mute, But now ile speake, and to the proofe I hope: I do remember in my fathers dayes, Lord Percie of the North being highly mou&#x27;d, Brau&#x27;d Mowberie in presence of the king, For which, had not his highnes lou&#x27;d him well, He should haue lost his head, but with his looke, The vndaunted spirit of Percie was appeasd, And Mowberie and he were reconcild: Yet dare you braue the king vnto his face, Brother reuenge it, and let these their heads, Preach vpon poles for trespasse of their tongues. Warwicke, these words do ill beseeme thy yeares. What Mortimer, you will not threaten him? Mine honor shalbe hostage of my truth, If that will not suffice, farewell my lords. Brother, in regard of thee and of thy land, Did they remooue that flatterer from thy throne. Faire blowes the winde for Fraunce, blowe gentle gale, Till Edmund be arriude for Englands good, Nature, yeeld to my countries cause in this, A brother, no, a butcher of thy friends, Proud Edward, doost thou banish me thy presence? But ile to Fraunce, and cheere the wronged Queene, And certifie what Edwards loosenes is, Vnnaturall king, to slaughter noble men And cherish flatterers: Mortimer I stay Thy sweet escape, stand gratious gloomie night to his deuice. Mortimer tis I, but hath thy potion wrought so happilie? Feare it not. Exeunt. Madam, long may you liue, Much happier then your friends in England do. Would all were well, and Edward well reclaimd, For Englands honor, peace, and quietnes. Sir Iohn of Henolt, pardon vs I pray, These comforts that you giue our wofull queene, Binde vs in kindenes all at your commaund. I would he neuer had bin flattered more. This way he fled, but I am come too late, Edward, alas my hart relents for thee, Proud traytor Mortimer why doost thou chase Thy lawfull king thy soueraigne with thy sword? Vilde wretch, and why hast thou of all vnkinde, Borne armes against thy brother and thy king? Raigne showers of vengeance on my cursed head Thou God, to whom in iustice it belongs, To punish this vnnaturall reuolt: Edward, this Mortimer aimes at thy life: O fly him then, but Edmund calme this rage, Dissemble or thou diest, for Mortimer And Isabell doe kisse while they conspire, And yet she beares a face of loue forsooth: Fie on that loue that hatcheth death and hate. Edmund away, Bristow to Longshankes blood Is false, be not found single for suspect: Proud Mortimer pries neare into thy walkes. Madam, without offence if I may aske, How will you deale with Edward in his fall? Nephew, your father, I dare not call him king. This Edward is the ruine of the realme. I heare of late he hath deposde himselfe. Not I my lord: who should protect the sonne, But she that gaue him life, I meane the Queene? The more cause haue I now to make amends. Sister, Edward is my charge, redeeme him. Souldiers, let me but talke to him one worde. Where is the court but heere, heere is the king, And I will visit him, why stay you me? O miserable is that commonweale, where lords Keepe courts, and kings are lockt in prison! I, load me whether you will, euen to my death, Seeing that my brother cannot be releast. Mortimer, I did, he is our king, And thou compelst this prince to weare the crowne. Strike of my head, base traitor I defie thee. Art thou king, must I die at thy commaund? Let me but stay and speake, I will not go, Either my brother or his sonne is king, And none of both, then thirst for Edmunds bloud, And therefore soldiers whether will you hale me?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Edward the Second</div><div class="body">GavestGn, banished by KangpyBdwardl is recalled to England on the accession of BdWardllll. His presence exacerbates tension between the King and barons, but Edward gives him multiple offices of state. Together they assault the BiSHOplomi@oventry, whose title also goes to Gaveston. The nobles and church contrive the minion’s banishment, but QWeenilsabella, neglected by Edward, arranges his reprieve in the hope of winning favour. King and barons make their peace and Lord MOrtimier, leaving for war in Scotland, advises his nephew to tolerate Edward’s love for Gaveston. The King’s preoccupation with his minion leads him to neglect public affairs, jeopardizing the political and economic stability of the crown: the unpaid army mutinies, rebellion breaks out in Ireland, and English territory is invaded by both Scotland and France. Lord Mortimer is taken prisoner in Scotland, but Edward refuses to ransom him. The barons, now joined by Edward’s brother, the B@gi§6fK@nt, increase the pressure to banish Gaveston again, while Edward begins to suspect Isabella of adultery with the younger Mortimer. Gaveston is captured by the barons. Edward asks to see him one last time; P@mibrOke agrees to conduct Gaveston there and back, but the minion is captured and killed en route by WaRWIEK’s treachery. Isabella and the Prince go to parley with the French King over the invasion of Normandy. The barons demand the removal of the Sp@me@r family, whom Edward has advanced, and battle ensues. The King wins: some barons are executed, and Mortimer is imprisoned. He escapes by drugging his guard, and absconds to France with Kent. He rendezvouses with Isabella, who has failed to gather allies because the Spencers have bribed the French nobility. Both are offered refuge in Hainault. Isabella returns to England in arms, accompanied by Mortimer and the increasingly dubious Kent. Edward flees, taking refuge in an abbey. He is betrayed by a mower, taken prisoner, and forced to give up the crown; his flatterers are executed, and Mortimer becomes Lord Protector. After Kent plots to free Edward, Mortimer has the royal prisoner moved around the country at night in the charge of Maltravers and Gourney; they forcibly shave off his beard to prevent recognition, and keep him in fou] conditions. PRICE EdWard is crowned. Kent is arrested and executed. Lightborne, sent by Mortimer, murders Edward with a hot spit and then is killed himself. Edward III receives news of his father’s death and Mortimer’s…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

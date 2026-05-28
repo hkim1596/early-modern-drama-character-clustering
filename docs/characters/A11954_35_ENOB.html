@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ENOB in Antony and Cleopatra · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> ›
+  <span>ENOB</span>
+</nav>
+
+<h1>ENOB</h1>
+<p class="lede">in <em>Antony and Cleopatra</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>787</td></tr>
+<tr><th>Characters</th><td>4244</td></tr>
+<tr><th>BritDrama no.</th><td>1517</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 29 (<em>brutus, did, rome, antonius, anthony, cleopatra…</em>). Matches are highlighted.</p>
+<div class="excerpt">I the wearer of Anthonio&#x27;s Beard, I would not ſhaue&#x27;t to day. That trueth ſhould be ſilent, I had almoſt for got. Go too then: your Conſiderate ſtone. I Sir, we <mark>did</mark> ſleepe day out of countenaunce: and made the night light with drinking. When ſhe firſt met Marke <mark>Anthony</mark>, ſhe purſt vp his heart vpon the Riuer of Sidnis. Sir,</div>
+<div class="excerpt">muſt puzle <mark>Anthony</mark>, Take from his heart, take from his Braine, from&#x27;s time, What ſhould not then be ſpar&#x27;d. He is already Traduc&#x27;d for Leuity, and &#x27;tis ſaid in <mark>Rome</mark>, That Photinus an Eunuch, and your Maides Mannage this warre. So hath my Lord, dar&#x27;d him to ſingle fight. Your Shippes are not well mann&#x27;d, Your Marriners are Militers,</div>
+<div class="excerpt">(Sir) as Caeſar ha&#x27;s, Or needs not vs. If Caeſar pleaſe, our Maſter Will leape to be his Friend: For vs you know, Whoſe he is, we are, and that is Caeſars. Alexas <mark>did</mark> reuolt, and went to Iewrij on Affaires of <mark>Anthony</mark>, there <mark>did</mark> diſſwade Great Herod to incline himſelfe to Caeſar, And leaue his Maſter <mark>Anthony</mark>. For this paines,</div>
+<div class="excerpt">purſt vp his heart vpon the Riuer of Sidnis. Sir, I neuer lou&#x27;d you much, but I ha&#x27; prais&#x27;d ye, When you haue well deſeru&#x27;d ten times as much, As I haue ſaid you <mark>did</mark>. At Sea, I thinke. You haue done well by water. I will praiſe any man that will praiſe me, thogh it cannot be denied what I haue done by Land. Yes ſome-thing you</div>
+<div class="excerpt">latter part of life. Oh beare me witneſſe night. Be witneſſe to me (O thou bleſſed Moone) When men reuolted ſhall vpon Record Beare hatefull memory: poore Enobarbus <mark>did</mark> Before thy face repent. Oh Soueraigne Miſtris of true Melancholly, The poyſonous dampe of night diſpunge vpon me, That Life, a very Rebell to my will, May hang</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Bring in the Banket quickly: Wine enough, Cleopatra &#x27;s health to drinke. Mine, and moſt of our Fortunes to night, ſhall be drunke to bed. Huſh, heere comes Anthony. No Lady. Madam. I ſhall doo&#x27;t. I ſhall intreat him To anſwer like himſelfe: if Caeſar moue him, Let Anthony looke ouer Caeſars head, And ſpeake as lowd as Mars. By Iupiter, Were I the wearer of Anthonio&#x27;s Beard, I would not ſhaue&#x27;t to day. That trueth ſhould be ſilent, I had almoſt for got. Go too then: your Conſiderate ſtone. I Sir, we did ſleepe day out of countenaunce: and made the night light with drinking. When ſhe firſt met Marke Anthony, ſhe purſt vp his heart vpon the Riuer of Sidnis. Sir, I neuer lou&#x27;d you much, but I ha&#x27; prais&#x27;d ye, When you haue well deſeru&#x27;d ten times as much, As I haue ſaid you did. At Sea, I thinke. You haue done well by water. I will praiſe any man that will praiſe me, thogh it cannot be denied what I haue done by Land. Yes ſome-thing you can deny for your owne ſafety: you haue bin a great Theefe by Sea. There I deny my Land ſeruice: but giue mee your hand Menas, if our eyes had authority, heere they might take two Theeues kiſſing. But there is neuer a fayre Woman, ha&#x27;s a true Face. We came hither to fight with you. If he do, ſure he cannot weep&#x27;t backe againe. Caeſars Siſter is call&#x27;d Octauia. But ſhe is now the wife of Marcus Anthonius. &#x27;Tis true. If I were bound to Diuine of this vnity, I wold not Propheſie ſo. I thinke ſo too. But you ſhall finde the band that ſeemes to tye their friendſhip together, will bee the very ſtrangler of their Amity: Octauia is of a holy, cold, and ſtill conuerſation. I ſhall take it ſir: we haue vs&#x27;d our Throats in Egypt. Not till you haue ſlept: I feare me you&#x27;l bee in till then. Ha my braue Emperour, ſhall we daunce now the Egyptian Backenals, and celebrate our drinke? Well, I could reply: if wee ſhould ſerue with Horſe and Mares together, the Horſe were meerly loſt: the Mares would beare a Soldiour and his Horſe. Your preſence needs muſt puzle Anthony, Take from his heart, take from his Braine, from&#x27;s time, What ſhould not then be ſpar&#x27;d. He is already Traduc&#x27;d for Leuity, and &#x27;tis ſaid in Rome, That Photinus an Eunuch, and your Maides Mannage this warre. So hath my Lord, dar&#x27;d him to ſingle fight. Your Shippes are not well mann&#x27;d, Your Marriners are Militers, Reapers ▪ people Ingroft by ſwift Impreſſe. In Caeſars Fleete, Are thoſe, that often haue &#x27;gainſt Pompey fought, Their ſhippes are yare, yours heauy: no diſgrace Shall fall you for refuſing him at Sea, Being prepar&#x27;d for Land. Alacke, alacke. I, are you thereabouts? Why then goodnight indeede. He needs as many (Sir) as Caeſar ha&#x27;s, Or needs not vs. If Caeſar pleaſe, our Maſter Will leape to be his Friend: For vs you know, Whoſe he is, we are, and that is Caeſars. Alexas did reuolt, and went to Iewrij on Affaires of Anthony, there did diſſwade Great Herod to incline himſelfe to Caeſar, And leaue his Maſter Anthony. For this paines, Caeſar hath hang&#x27;d him: Camindius and the reſt That fell away, haue entertainment, but No honourable truſt: I haue done ill, Of which I do accuſe my ſelfe ſo forely, That I will ioy no more. I am alone the Villaine of the earth, And feele I am ſo moſt. Oh Anthony, Thou Mine of Bounty, how would&#x27;ſt thou haue payed My better ſeruice, when my turpitude Thou doſt ſo Crowne with Gold. This blowes my hart, If ſwift thought breake it not: a ſwifter meane Shall out-ſtrike thought, but thought will doo&#x27;t. I feele I fight againſt thee: No I will go ſeeke Some Dit h, wherein to dye: the foul&#x27;ſt beſt fits My latter part of life. Oh beare me witneſſe night. Be witneſſe to me (O thou bleſſed Moone) When men reuolted ſhall vpon Record Beare hatefull memory: poore Enobarbus did Before thy face repent. Oh Soueraigne Miſtris of true Melancholly, The poyſonous dampe of night diſpunge vpon me, That Life, a very Rebell to my will, May hang no longer on me. Throw my heart Againſt the flint and hardneſſe of my fault, Which being dried with greefe, will breake to powder, And finiſh all foule thoughts. Oh Anthony, Nobler then my reuolt is Infamous, Forgiue me in thine owne particular, But let the world ranke me in Regiſter A Maſter leauer, and a fugitiue: Oh Anthony ! Oh Anthony !</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Antony and Cleopatra</div><div class="body">Antony dallies with Cleopatra in Egypt while the Roman world collapses into faction. His wife and brother make war on Caesar, and Pompey takes advantage of his absence to foment a sea war with the state and avenge his murdered father. At first Antony ignores Caesar’s messages, but his wife’s death draws him back to Rome, where he and Caesar are reconciled; to seal the league, Antony marries Caesar’s sister, Octavia. A soothsayer, who has told the fortunes of members of Cleopatra’s court, warns him that, although he is a better man than Caesar, Caesar will always prove the more successful of the two. Antony, Caesar, and Lepidus meet Pompey with an army, but war is averted. Lepidus gets egregiously drunk at the feast on Pompey’s galley to celebrate the treaty. Pompey refuses his ally Menas’ dishonourable proposal to kill the triumvirate and make him master of the world. Antony’s lieutenant Ventidius defeats the Parthians in battle, but is cautious about taking too much of the credit for himself. Meanwhile, news of Antony’s marriage reaches Cleopatra; she does not take it well. Antony leaves Rome with his new wife, but absence breeds suspicion between him and Caesar. Caesar breaks the truce with Pompey and deposes Lepidus on a pretext. Antony, in turn, sends Octavia home and returns to Egypt, where he creates Cleopatra queen of several dominions. War between east and west follows. Antony perversely chooses to fight by sea, and Cleopatra insists on being present at the battle. They are routed when Cleopatra flees and Antony follows her. Antony’s followers begin to defect to Caesar, but Enobarbus remains loyal. Caesar attempts to divide the lovers by offering Cleopatra security if she will banish or kill Antony. Antony has the messenger whipped for over-familiarity with Cleopatra, and determines to fight to the bitter end. Enobarbus decides finally to go over to Caesar, but leaves behind his treasure; Antony sends it after him, and the guilt-stricken Enobarbus dies. Antony defeats Caesar in a land battle, but loses the next day at sea. Spurned by Antony, Cleopatra takes refuge in her monument and sends him false news of her death. He stabs himself and is pulled up, dying, to join Cleopatra in the monument. Caesar hopes to display Cleopatra in his triumph at Rome, but she frustrates him by smuggling an asp past her guard and committing suicide.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> page.
+</div>
+</div></body></html>

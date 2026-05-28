@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FID in Holland&#x27;s Leaguer · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FID</span>
+</nav>
+
+<h1>FID</h1>
+<p class="lede">in <em>Holland&#x27;s Leaguer</em> — Marmion, Shackerley</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1632</td></tr>
+<tr><th>Words</th><td>1084</td></tr>
+<tr><th>Characters</th><td>5740</td></tr>
+<tr><th>BritDrama no.</th><td>2351</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">W Hat Snarle, my deare Democritus, how is&#x27;t? You are a Courtier growne, I <mark>heare</mark>. I hope you doe not ſhare in their deſires. Hold there, you&#x27;ll run your ſelf out of breath elſe: And now reſolve me of the Lord Philautus: Is all that true that</div>
+<div class="excerpt">charg&#x27;d her by an oath, To marry none, till ſeven yeares were expir&#x27;d, Six parts of which are gone, yet ſhee remaines Conſtant to what ſhe promis&#x27;d, though his death, <mark>Has</mark> partly quit her: To live in her ſight, And not enioy her, is a heavenly torment, But unſufferable, I muſt liue apart, Till the praefixed minute be expir&#x27;d. In the</div>
+<div class="excerpt">him, I&#x27;ll try her conſtancy. I muſt prepare her for his entertainment, Becauſe ſhe will admit no Company, Nor will be knowne to any, but my ſelfe. Come Sir, let&#x27;s <mark>goe</mark>, by that which ſhall enſue, You ſhall affirme, what I relate, is true. IS there no meanes t&#x27; abſolue you of your oath? The blame on me, let the bright day no longer</div>
+<div class="excerpt">cannot performe. I wonder at the temper of your bloud, So differing from your Sexe, when your old women Doe burne with luſtfull thoughts, as with a Feaver, Yet you <mark>goe</mark> on, in the old track of vertue, Now overgrowne with ſeeds of vice. But I muſt begone favour at your hands, And ſuffer no repulſe. It may offend you. Then know that</div>
+<div class="excerpt">ſoules as ſhall aſpire To come neere the holy fire Of thine eyes, which were of late, By Cupids torch illuminate. Vſe all the deluſiue art That may captiuate his <mark>heart</mark>. I&#x27;ll haue him puniſht. He caſts aſperſions of diſloyalty, On all your ſexe, and you ſhall vindicate them When he is plung&#x27;d in love irrevocable, As conquerd by</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">W Hat Snarle, my deare Democritus, how is&#x27;t? You are a Courtier growne, I heare. I hope you doe not ſhare in their deſires. Hold there, you&#x27;ll run your ſelf out of breath elſe: And now reſolve me of the Lord Philautus: Is all that true that is reported of him? My ſence will note be able to endure him. Is none his friend to tell him of his faults? O they are ſtill in faſhion: in them A wry necke is a comely preſident: Diſorder, diſagreement in their lives And manners is thought regular, their actions Are ſtill authenticke, if it be receiv&#x27;d; To be illiterate, is a point of ſtate. But the worſt thing which I diſlike in him, Which he does more by words then action: He gives out that the Ladies dote upon him, And that he can command them at his pleaſure, And ſwears, there&#x27;s ſcarce an honeſt woman. How. You are deceiv&#x27;d, There are a thouſand chaſte. Tis ill To be incredulous, when charity Exacts your beleefe: but let that paſſe: What will you ſay, if I finde out a meanes To cure him of his folly? Nay, I&#x27;ll doe it: I&#x27;ll make him in love, and doe it. Suſpend your judgement, till I confirme you. What is he? We all do wiſh, Your beauty, or your vanity were leſſe. For by this meanes, that which would elſe commend you, Proves your diſgrace, you take the edge of prayſe off, Is due to you, by too much whetting it. You are the Center of all womens love then. It ſeemes that you are of opinion, There is no text of woman-kinde ſo holy, But may be corrupted, though a Deity. But I thinke otherwiſe; and can iuſtifie it. What if I bring you now unto a beauty As glorious as the Sunne, but in deſire Cold, as the middle Region of the ayre, And free from all reflexion of luſt? You ſhall converſe with her, and ſhe ſhall feed Your ſenſe with ſuch diſcourſive influence, And a voyce ſweeter than the Lydian tunes Iove would bow downe his eare to, yet her bloud Shall runne as cold as Iulips through her veynes: The ſpring-tide of her youth, ſhall ſwell with more Delights, then there be drops in Aprill, yet ſhee As chaſt as Salmacis, amidſt the ſtreames. Her eye ſhall ſparkle like the Diamond, And be as pure, her kiſſes ſoft and melting, As the South wind; but undefil&#x27;d as heaven. And you ſhall feele the Elementall fire Of her unſpotted love, and grieve, and ſweare Shee is ſo celeſtiall, and Divine a creature, Thats onely hot in her effect, not nature. I&#x27;ll bring you to her. This Lady 〈◊〉 ſiſter and 〈◊〉 M ſ ris. Yet both unknowne to him, ſome few yeares ſince, Her father iealous of my love, becauſe I was a Gentleman of no great fortune, Sent her away, and charg&#x27;d her by an oath, To marry none, till ſeven yeares were expir&#x27;d, Six parts of which are gone, yet ſhee remaines Conſtant to what ſhe promis&#x27;d, though his death, Has partly quit her: To live in her ſight, And not enioy her, is a heavenly torment, But unſufferable, I muſt liue apart, Till the praefixed minute be expir&#x27;d. In the meane time, I&#x27;ll worke by ſome good meanes, To winne his love, and draw him from his folly. But firſt by him, I&#x27;ll try her conſtancy. I muſt prepare her for his entertainment, Becauſe ſhe will admit no Company, Nor will be knowne to any, but my ſelfe. Come Sir, let&#x27;s goe, by that which ſhall enſue, You ſhall affirme, what I relate, is true. IS there no meanes t&#x27; abſolue you of your oath? The blame on me, let the bright day no longer nvy the darkeneſſe, that conceales ſuch beauty: You are no Votarie, and yet force your youth To ſuch a ſtrict and ſolitary life, Which others bound by vow, cannot performe. I wonder at the temper of your bloud, So differing from your Sexe, when your old women Doe burne with luſtfull thoughts, as with a Feaver, Yet you goe on, in the old track of vertue, Now overgrowne with ſeeds of vice. But I muſt begone favour at your hands, And ſuffer no repulſe. It may offend you. Then know that I have boaſted of your beauty. Nay more, expos&#x27;d thy vertues to the triall. And you muſt uſe all art for his content, With Muſicke, Songs, and dancing, ſuch as are The ſtirrers of hot appetites. Miſtake me not, the difference &#x27;twixt the Poles Is not ſo great, as betwixt me, and baſeneſſe: Nor is&#x27;t a ſiniſter intent to make Your favours ſtale, and common as a drugge, Which are ſo deare to me, that both the Iudies Are not of equall value to ingroſſe, But for a noble and peculiar end. &#x27;Tis true. Then if you pleaſe to grant reliefe To my deſires, take them in briefe; I would haue you firſt expreſſe All the skill that comelineſſe Can invent, to make you ſeeme Faire, and pleaſant, as loves Queene. When ſhee Anchiſes came to kiſſe On the Bankes of Simois. Call the graces, and ſuborne Them thy beauty to adorne, Thy face, the table where loue writes A thouſand ſtories of delights: Make it all over, ſmooth and plaine, But ſee you ſhadow it with diſdaine. Weave a net out of thy haire, A ſubtle net, that may enſnare Such fond ſoules as ſhall aſpire To come neere the holy fire Of thine eyes, which were of late, By Cupids torch illuminate. Vſe all the deluſiue art That may captiuate his heart. I&#x27;ll haue him puniſht. He caſts aſperſions of diſloyalty, On all your ſexe, and you ſhall vindicate them When he is plung&#x27;d in love irrevocable, As conquerd by thy all ſubduing looke, Then you ſhall binde him to conditions, As I ſhall firſt inſtruct you, ſhall redeeme Him from his folly, and next cleare your honour. I haue with much entreaty gain&#x27;d your admittance I doe not uſe the profeſſion. She is as I told you: But harke you, Sir, You need not be known who you are. YOu ſee that I have brought you to the treaſure, And the rich garden of th&#x27;Heſperides: If you can charme thoſe ever-watchfull eyes That keepe the tree, then you may pull the fruit, And after glorie in the ſpoyle of honour. I &#x27;ll leave you.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Holland&#x27;s Leaguer</div><div class="body">Six years ago, Faustina’s father sent her abroad to keep her away from her love, Fidelio, and made her swear not to marry for seven years. Now the old man is dead, she has returned to London, known only to Fidelio, but insists on keeping her oath for the last remaining year. Her brother Philautus is in love with himself, which distresses his friends and offends his wife, but gives his servant Ardelio the opportunity to steal from him by conveying away property into storage at an accomplice’s house. Fidelio plans to make him fall in love with Faustina; this will both cure him and test her fidelity. He explains it to Faustina as a plan to humiliate a lord who has cast aspersions on women. Philautus makes advances to Faustina on the assumption that all women are libidinous and enjoy being raped from time to time; but he is impressed by her militant chastity, and accedes to her demand that he prove his honour in battle. He later returns from the wars, cured of narcissism, and asks Faustina’s pardon for his earlier insolence. She identifies herself as his sister, and he gives his blessing to her marriage to Fidelio; so she agrees to abandon her oath before the seven years are out. On learning that Ardelio is a villain, Philautus dismisses him. He goes to collect the stolen goods, only to find that his partner in crime will not acknowledge that the items even exist. The ensuing argument is overheard, and the miscreants are both arrested, In the sub-plot, Agurtes intends to cheat the courtly name-dropper Trimalchio by introducing him to a young heiress - who is, in reality, his daughter and lifelong accomplice Millicent. When he visits Millicent, Trimalchio brings along Philautus’ brother-in-law ===== PAGE 537 ===== 1631 as Capritio, wiie: has’ been brought to towit: oleae: courtly manners.:Agurtés suggests to Trimalchio that: an Italian. (or Italianated) - Signor MisexE Kandy apritio’s tutor traveller, he may have&#x27;rivals for the heiress’s hand ii marriage. ~ AL PANDER at Holland’s} 1 daa Meanwhile Capritio woos Millicent’ 3 ‘Maids: ‘Margery. |ee Trimalchio declines to join. ‘Philautus: atthe. Anilitary — leaguer, preferring to visit: Holland&#x27;s: premises and arrests the: cliente: including T. sionals ; : They are ‘brought 4 and Capritio’s. tutor, ‘Miscellank before..a justice; who is really Agurtes. in @ second disguise; but freed when a letter arrives trom. hadlltéent ! asking.-for their reprieve. Miscellanio: is convinced that the letter was sent on his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

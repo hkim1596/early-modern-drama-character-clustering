@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ANTI in Jocasta · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> ›
+  <span>ANTI</span>
+</nav>
+
+<h1>ANTI</h1>
+<p class="lede">in <em>Jocasta</em> — Gascoigne, GeorgeKinwelmershe, FrancisYelverton, ChristopherEuripidesDolce, Lodovico</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1573</td></tr>
+<tr><th>Words</th><td>1064</td></tr>
+<tr><th>Characters</th><td>5699</td></tr>
+<tr><th>BritDrama no.</th><td>438</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 18 (<em>death, thebes, did, myne, eke, wyth…</em>). Matches are highlighted.</p>
+<div class="excerpt">lye one by an other deade. Loe father, here, lo, nowe you touche them <mark>both</mark>. O louely name of my <mark>deare</mark> Pollinice, Why can I not of cruell Creon craue, Ne with my <mark>death</mark> nowe purchase thée a graue? Loe, here all prest my <mark>deare</mark> beloued father, A féeble guyde, and <mark>eke</mark> a simple skowte, To passe the perills in a doubtfull waye. In this</div>
+<div class="excerpt">dread Dare not presume to ende this wretched life. O dolefull day, wherein my sory sire Was borne, and yet O more vnhappie houre When he was crowned king of sta ely <mark>Thebes</mark>, The Hymene in vnhappie bed, And wicked wedlocke, wittingly <mark>did</mark> ioyne The giltlesse <mark>mother</mark> with hir gil e sonne, Out of which roote we be the braunthes borne, To</div>
+<div class="excerpt">thy fathers blinded eyes, Into the light I was not worthy of? Or what suche sight (O cruell destenie) Without tormenting cares might I beholde, That image am of deathe and not of man? O father mine, I bring vnluckie newes Unto your eares, your sonnes are nowe <mark>both</mark> slayne, Ne doth your wife, that wonted was to guyde So piteously</div>
+<div class="excerpt">wounde: And thus, without mo words, gaue vp the ghost, Embracing <mark>both</mark> hir sonnes with <mark>both</mark> hir armes. In these affrightes this frosen heart of mine, By feare of <mark>death</mark> maynteines my dying life. He cruel was, you fonde to hold his hestes. When his co ̄ maunde is cruel and vniust. He not deseru&#x27;d so cruell punishment. Or else was</div>
+<div class="excerpt">for mée ▪ Whyle thou yet liuedst I had a liuely hope To haue some noble wight to be my phéere, By whome I might be crownde a royall Quéene: But now, thy hastie <mark>death</mark> hath done to dye This dying hope of mine, that hope hencefoorth None other wedlocke, but tormenting woe, If so these trembling hands for cowarde dread Dare not</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">And who (alas) doth warrant his aduenture, That of Eteocles he take no harme? Ah swete mother, ah my beloued mother, Alas alas what cause doth moue ye now From trembling voice to send such carefull cries? What painefull pang? what griefe doth gripe you nowe? Alas what say you? alas what do you say? Can I (alas) endure to sée him dead, Whom I thus long haue sought to sée aliue? Ah my swéete mother, whither shall I go? Alas how can I go? vnles I go In daunger of my life, or of good name? Come then, lets go, good mother let vs go, But what shall we be able for to doe, You a weake old woman for worne with yeares, And I God knowes a silly simple mayde? O Polinice, now hast thou with thy bloud Bought all too deare the title to this realme, That cruell he Eteocles thée reste, And now also hath reft thée of thy life, Alas, what wicked dede can wrath not doe? And out alas for mée ▪ Whyle thou yet liuedst I had a liuely hope To haue some noble wight to be my phéere, By whome I might be crownde a royall Quéene: But now, thy hastie death hath done to dye This dying hope of mine, that hope hencefoorth None other wedlocke, but tormenting woe, If so these trembling hands for cowarde dread Dare not presume to ende this wretched life. O dolefull day, wherein my sory sire Was borne, and yet O more vnhappie houre When he was crowned king of sta ely Thebes, The Hymene in vnhappie bed, And wicked wedlocke, wittingly did ioyne The giltlesse mother with hir gil e sonne, Out of which roote we be the braunthes borne, To beare the scourge of their so foule offence: And thou, O father, thou that for this facte, Haste torne chine eyes from thy tormented head, Giue eare to this, come foorth, and bende th e eare To bloudie newes, that canst not them beholde: Happie in this, for if thine eyes could sée Thy sonnes bothe slayne, and euen betwéene them bothe Thy wife and mother dead, bathed and imbrude All in one bloud, then wouldst thou dye for dole, And so might ende all our vnluckie stocke. But most vnhappie nowe, that lacke of sighte Shall linger, life within thy lucklesse brest, And still tormented in suche miserie, Shall alwayes dye, bicause thou canst not dye. WHy dost thou call out of this darkesome denne, The lustleste lodge of my lamenting yeres, O daughter deare, thy fathers blinded eyes, Into the light I was not worthy of? Or what suche sight (O cruell destenie) Without tormenting cares might I beholde, That image am of deathe and not of man? O father mine, I bring vnluckie newes Unto your eares, your sonnes are nowe both slayne, Ne doth your wife, that wonted was to guyde So piteously your staylesse stumbling sleppes, Now see this light, alas and welaway. Without offence to speake, deare father mine, The lucklesse lotte, the frowarde frowning fate That gaue you life to ende your fathers life, Haue ledde your sonnes to reaue eche others life. When as my mother sawe hir deare sonnes dead, As pensiue pangs had prest hir tender heart, With bloudlesse cheekes and gastly lookes she fell, Drawing the dagger from Eteocles side, She gorde hirselfe with wide recurelesse wounde: And thus, without mo words, gaue vp the ghost, Embracing both hir sonnes with both hir armes. In these affrightes this frosen heart of mine, By feare of death maynteines my dying life. He cruel was, you fonde to hold his hestes. When his co ̄ maunde is cruel and vniust. He not deseru&#x27;d so cruell punishment. Or else was he that helde him from his right. Offendeth he that sekes to winne his owne? Perforce to thée these hands shall burie him. So graunt the gods, I get none other graue, Then with my Polinices deare to rest. I will not leaue this corps vnburied. A wicked foule decrée to wrong the dead. Creon, yet I beseche thée for the loue. That thou didst beare Iocasta in hir life, Yet graunt me leaue to washe his wounded corps ▪ O my deare Polinice, this tirant yet With all his wrongfull force can not fordoe, But I will kisse these colde pale lippes of thine, And washe thy wounds with my waymenting teares. No, no for Hemone will I neuer wed. I will nor him, nor any other wed. If thou me force, I sweare thou shalt repent. With bloudy knife I can this knot vnknit. I will ensue some worthie womans steppes. This hardie hand shall soone dispatche his life. Why should I dread to doe so doughtie deede? In cruell exile for to folow him. If néede require, with him eke will I dye. Father, I will neuer come in company And you alone wander in wildernesse. And who shall guide these aged féete of yours, That banisht bene, in blind necessitie? O father, now where is your glory gone? Yet will I beare a part of your mishappes. &quot;Deare father yes, let youth giue place to age. Here father, here hir corps, here put your hand. Lo here ▪ they lye one by an other deade. Loe father, here, lo, nowe you touche them both. O louely name of my deare Pollinice, Why can I not of cruell Creon craue, Ne with my death nowe purchase thée a graue? Loe, here all prest my deare beloued father, A féeble guyde, and eke a simple skowte, To passe the perills in a doubtfull waye. In this all onely equall to my father. Here father here, and here set forth your féete. &quot;O father, father, Iustice lyes on sléepe, &quot;Ne doth regarde the wrongs of wretchednesse, &quot;Ne princes swelling pryde it doth redresse. Your daughters pitie is but due to you: Woulde God I might as well ingraue the corps Of my deare Pollinice, but I ne maye, And that I can not, doubleth all my dole. &quot;Beléeue me father, when dame fortune frownes, &quot;Be fewe that fynde trustie companions. From thée, O countrey, am I forst to parte, Despoyled thus in floure of my youth, And yet I leaue within mine enimies rule Ismene my infortunate sister.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Jocasta</div><div class="body">Oedipus unknowingly murdered his father and married his mother Jocasta; on learning the truth, he blinded himself. His sons imprisoned him and agreed to alternate annually as kings of Thebes: Polynices went into exile while Eteocles took the first turn on the throne; but Eteocles refused to give it up at the end of his year in office, and Polynices has besieged Thebes in association with the King of Argos. Jocasta intervenes as their mother, and persuades Polynices to enter Thebes and meet Eteocles under truce. Eteocles will not hand over power, but offers to accept his brother back as a private citizen. Jocasta is unable to reconcile her sons, and Polynices’ forces prepare for battle. Eteocles names Creon as his successor, and asks him to marry Antigone to his son Haemon. Creon consults Tiresias, and learns that Thebes is doomed to destruction in divine revenge for Jocasta’s incest; only the death of his other son, Menoeceus, can save the city. Keen to die for his country, Menoeceus refuses to go into exile as his father wishes, reports the prophecy to Eteocles, and kills himself. Meanwhile, the battle is indecisive, and Eteocles and Polynices agree to settle their dispute in single combat. Jocasta and Antigone are too late to stop them killing each other: arriving to find them both dying, Jocasta stabs herself with Polynices’ dagger. The besieging army is massacred by the Thebans. Antigone brings the three bodies back to Thebes and tells her father what has happened. Creon declares himself King of Thebes and gives order for the funerals of Jocasta and Eteocles, but demands that Polynices, as an enemy of the city, should remain unburied. Antigone protests, pleads, and refuses to marry Haemon, threatening to kill him and then herself should Creon try to force her. Creon banishes both her and Oedipus. She helps her blind father to touch the dead bodies, and he asks her to see that Polynices is buried.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> page.
+</div>
+</div></body></html>

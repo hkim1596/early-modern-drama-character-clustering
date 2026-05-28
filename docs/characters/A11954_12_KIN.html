@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KIN in All&#x27;s Well That Ends Well · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>KIN</span>
+</nav>
+
+<h1>KIN</h1>
+<p class="lede">in <em>All&#x27;s Well That Ends Well</em> — Shakespeare, WilliamMiddleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1394</td></tr>
+<tr><th>Characters</th><td>7493</td></tr>
+<tr><th>BritDrama no.</th><td>1461</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">our quick&#x27;ſt decrees Th&#x27; inaudible, and noiſeleſſe foot of time Steales, ere we can effect them. You remember The daughter of this Lord? Well excus&#x27;d: That thou didſt loue her, ſtrikes ſome ſcores <mark>away</mark> From the great compt: but loue that comes too late, Like a remorſefull pardon ſlowly carried To the great ſender, turnes a</div>
+<div class="excerpt">mak&#x27;ſt connecturall feares to come into me, Which I would faine ſhut out, if it ſhould proue That thou art ſo inhumane, &#x27;twill not proue ſo: And yet I know not, thou didſt hate her deadly, And ſhe is dead, which nothing but to cloſe Her eyes my ſelfe, could win me to beleeue, More then to ſee this Ring. Take him <mark>away</mark>, My fore-paſt</div>
+<div class="excerpt">fearing the diſpleaſure of your maſter: Which on your iuſt proceeding, Ile keepe off, By him and by this <mark>woman</mark> heere, what know you? Come, come, to&#x27; th&#x27; purpoſe: <mark>Did</mark> hee loue this <mark>woman</mark>? How I pray you? How is that? As thou art a knaue and no knaue, what an equi uocall Companion is this? But wilt thou not ſpeake all thou know&#x27;ſt?</div>
+<div class="excerpt">I would I had that corporall ſoundneſſe now, As when thy father, and my ſelfe, in friendſhip Firſt tride out ſouldierſhip: he <mark>did</mark> looke farre Into the ſeruice of the time, and was Diſcipled of the braueſt. He laſted long, But on vs both <mark>did</mark> haggiſh Age ſteale on, And wore vs out of act: It</div>
+<div class="excerpt">haſt ſpoken all alreadie, vnleſſe thou canſt ſay they are maried, but thou art too fine in thy euidence, therefore ſtand aſide. This Ring you ſay was yours. Where <mark>did</mark> you buy it? Or who gaue it you? Who lent it you? Where <mark>did</mark> you finde it then? If it were yours by none of all theſe wayes, How could you giue it him? This Ring</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I would I had that corporall ſoundneſſe now, As when thy father, and my ſelfe, in friendſhip Firſt tride out ſouldierſhip: he did looke farre Into the ſeruice of the time, and was Diſcipled of the braueſt. He laſted long, But on vs both did haggiſh Age ſteale on, And wore vs out of act: It much repaires me To talke of your good father; in his youth He had the wit, which I can well obſerue To day in our yong Lords: but they may ieſt Till their owne ſcorne returne to them vnnoted Ere they can hide their leuitie in honour: So like a Courtier, contempt nor bitterneſſe Were in his pride, or ſharpneſſe; if they were, His equall had awak&#x27;d them, and his honour Clocke to it ſelfe, knew the true minute when Exception bid him ſpeake: and at this time His tongue obey d his hand. Who were below him, He vs&#x27;d as creatures of another place, And bow&#x27;d his eminent top to their low rankes, Making them proud of his humilitie, In their poore praiſe he humbled: Such a man Might be a copie to theſe yonger times; Which followed well, would demonſtrate them now But goers backward. I fill a place I know&#x27;t: how long iſt Count Since the Phyſitian at your fathers died? He was much fam&#x27;d. If he were liuing, I would try him yet. Lend me an arme: the reſt haue worne me out With ſeuerall applications: Nature and ſickneſſe Debate it at their leiſure. Welcome Count, My ſonne&#x27;s no deerer. Methinks in thee ſome bleſſed ſpirit doth ſpeak His powerfull ſound, within an organ weake: And what impoſſibility would ſlay In common ſence, ſence ſaues another way: Thy life is deere, for all that life can rate Worth name of life, in thee hath eſtimate: Youth, beauty, wiſedome, courage, all That happines and prime, can happy call: Thou this to hazard, needs muſt intimate Skill infinite, or monſtrous deſperate, Sweet practiſer, thy Phyſicke I will try, That miniſters thine owne death if I die. Make thy demand. I by my Scepter, and my hopes of helpe. Heere is my hand, the premiſes obſeru&#x27;d, Thy will by my performance ſhall be ſeru&#x27;d: So make the choice of thy owne time, for I Thy reſolv&#x27;d Patient, on thee ſtill relye: More ſhould I queſtion thee, and more I muſt, Though more to know, could not be more to truſt: From whence thou can&#x27;ſt, how tended on, but reſt Vnqueſtion&#x27;d welcome, and vndoubted bleſt. Giue me ſome helpe heere hoa, if thou proceed, As high as word, my deed ſhall match thy deed. Good fortune, and the fauour of the King Smile vpon this Contract: whoſe Ceremonie Shall ſeeme expedient on the now borne briefe, And be perform&#x27;d to night: the ſolemne Feaſt Shall more attend vpon the coming ſpace, Expecting abſent friends. As thou lou&#x27;ſt her, Thy loue&#x27;s to me Religious: elſe, do&#x27;s erre. We loſt a Iewell of her, and our eſteeme Was made much poorer by it: but your ſonne, As mad in folly, lack&#x27;d the ſence to know Her eſtimation home. My honour&#x27;d Lady, I haue forgiuen and forgotten all, Though my reuenges were high bent vpon him, And watch&#x27;d the time to ſhoote. Praiſing what is loſt, Makes the remembrance deere. Well, call him hither, We are reconcil&#x27;d, and the firſt view ſhall kill All repetition: Let him not aske our pardon, The nature of his great offence is dead, And deeper then obliuion, we do burie Th&#x27; incenſing reliques of it. Let him approach A ſtranger, no offender; and informe him So &#x27;tis our will he ſhould ▪ What ſayes he to your daughter, Haue you ſpoke? Then ſhall we haue a match. I haue letters ſent me, that ſets him high in fame. I am not a day of ſeaſon, For thou maiſt ſee a ſun-ſhine, and a haile In me at once: But to the brighteſt beames Diſtracted clouds giue way, ſo ſtand thou forth, The time is faire againe. All is whole, Not one word more of the conſumed time, Let&#x27;s take the inſtant by the forward top: For we are old, and on our quick&#x27;ſt decrees Th&#x27; inaudible, and noiſeleſſe foot of time Steales, ere we can effect them. You remember The daughter of this Lord? Well excus&#x27;d: That thou didſt loue her, ſtrikes ſome ſcores away From the great compt: but loue that comes too late, Like a remorſefull pardon ſlowly carried To the great ſender, turnes a ſowre offence, Crying, that&#x27;s good that&#x27;s gone: Our raſh faults, Make triuiall price of ſerious things we haue, Not knowing them, vntill we know their graue, Oft our diſpleaſures to our ſelues vniuſt, Deſtroy our friends, and after weepe their duſt: Our owne loue waking, cries to ſee what&#x27;s don,e While ſhamefull hate ſleepes out the afternoone. Be this ſweet Helens knell, and now forget her. Send forth your amorous token for faire Maudlin, The maine conſents are had, and heere wee&#x27;l ſtay To ſee our widdowers ſecond marriage day: Which better then the firſt, O deere heauen bleſſe, Or, ere they meete in me, O Nature ceſſe. Platus himſelfe, That knowes the tinct and multiplying med&#x27;cine, Hath not in natures myſterie more ſcience, Then I haue in this Ring. &#x27;Twas mine, &#x27;twas Helens, Who euer gaue it you: then if you know That you are well acquainted with your ſelfe, Confeſſe &#x27;twas hers, and by what rough enforcement You got it from her. She call&#x27;d the Saints to ſuretie, That ſhe would neuer put it from her finger, Vnleſſe ſhe gaue it to your ſelfe in bed, Where you haue neuer come: or ſent it vs Vpon her great diſaſter. Thou ſpeak&#x27;ſt it falſely: as I loue mine Honor, And mak&#x27;ſt connecturall feares to come into me, Which I would faine ſhut out, if it ſhould proue That thou art ſo inhumane, &#x27;twill not proue ſo: And yet I know not, thou didſt hate her deadly, And ſhe is dead, which nothing but to cloſe Her eyes my ſelfe, could win me to beleeue, More then to ſee this Ring. Take him away, My fore-paſt proofes, how ere the matter fall Shall taze my feares of little vanitie, Hauing vainly fear&#x27;d too little. Away with him, Wee&#x27;l ſift this matter further. The heauens haue thought well on thee Lafew, To bring forth this diſcou&#x27;rie, ſeeke theſe ſutors: Go ſpeedily, and bring againe the Count. I am a-feard the life of Hellen (Ladie) Was fowly ſnatcht. Sir for my thoughts, you haue them il to friend, Till your deeds gaine them fairer: proue your honor, Then in my thought it lies. What ſaiſt thou to her? Finde him, and bring him hether. She hath that Ring of yours. What Ring was yours I pray you? Know you this Ring, this Ring was his of late. The ſtory then goes falſe, you threw it him Out of a Caſement. You boggle ſhrewdly, euery feather ſtarts you: Is this the man you ſpeake of? Tell me ſirrah, but tell me true I charge you, Not fearing the diſpleaſure of your maſter: Which on your iuſt proceeding, Ile keepe off, By him and by this woman heere, what know you? Come, come, to&#x27; th&#x27; purpoſe: Did hee loue this woman? How I pray you? How is that? As thou art a knaue and no knaue, what an equi uocall Companion is this? But wilt thou not ſpeake all thou know&#x27;ſt? Thou haſt ſpoken all alreadie, vnleſſe thou canſt ſay they are maried, but thou art too fine in thy euidence, therefore ſtand aſide. This Ring you ſay was yours. Where did you buy it? Or who gaue it you? Who lent it you? Where did you finde it then? If it were yours by none of all theſe wayes, How could you giue it him? This Ring was mine, I gaue it his firſt wife. Take her away, I do not like her now, To priſon with her: and away with him, Vnleſſe thou telſt me where thou hadſt this Ring, Thou dieſt within this houre. Take her away. I thinke thee now ſome common Cuſtomer. She does abuſe our eares, to priſon with her. Is there no exorciſt Beguiles the truer Office of mine eyes? Is&#x27;t reall that I ſee?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — All&#x27;s Well That Ends Well</div><div class="body">When Béftrami’s father dies, he becomes a royal ward, and is summoned to court. H@léfhi loves him and is sad to see him go, but knows she can never have him because of the disparity in their rank. Phe@uDowager (@GuntEesS learns of her love and permits her to go to court and use her father’s medical knowledge, passed on to her on his deathbed, to cure the King of the fistula which afflicts him. ‘The Kimig has been advised to remain neutral in the war between Florence and Siena, but allows his lords to join on either side; Bertram, however, is deemed too young and required to stay at court. Helen wagers her life on the efficacy of her cure, and asks as her reward to be allowed her own choice of husband. She successfully heals the fistula and selects Bertram. He protests vehemently, but the King browbeats him into marriage. Rather than consummate the union, however, he runs away to the war and sends Helen word that he will only acknowledge her as his wife if she gets the ring from his finger and presents him with a child which he has lawfully begotten on her. She takes herself off, leaving word that she is going on a pilgrimage. Bertram acquits himself well in battle, but his companion Paroles allows the company’s drum to be captured by the Sienese. Passing through Florence, Helen encounters a widow whose daughter, Diama, is being solicited by Bertram for sex. She arranges for the widow to agree, on condition that Bertram gives up his ring; Helen then takes Diana’s place in bed, has sex with her husband, and exchanges rings with him. Meanwhile Paroles insists on trying to recover the lost drum, intending to return with no drum and a heroic story of insurmountable obstacles. He is ambushed by Florentine soldiers posing as the enemy, blindfolded, and put in fear of his life; under interrogation, he betrays the Florentine army’s military secrets and makes some uncomplimentary remarks about Bertram, only to find when the blindfold is removed that his captors are Florentines and that Bertram is present. With the war coming to an end, Bertram returns to France. Since Helen is presumed dead, he makes preparations to marry again, and sends his proposed fiancée his ring. The King identifies it as the ring he himself gave to Helen. Diana arrives, claiming the right to marry him after their supposed night together in Florence, and produces his own ring as proof. Bertram attempts to lie his way out of the situation, but is repeatedly caught out. Diana introduces Helen,…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

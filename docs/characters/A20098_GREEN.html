@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GREEN in Northward Ho · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>GREEN</span>
+</nav>
+
+<h1>GREEN</h1>
+<p class="lede">in <em>Northward Ho</em> — Dekker, ThomasWebster, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>1103</td></tr>
+<tr><th>Characters</th><td>5866</td></tr>
+<tr><th>BritDrama no.</th><td>1483</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">tle-womans dishonor, only by the passage of my discource to haue you censure the state of our quarrel. Frequenting the company of many marchants wiues in the Citty, my <mark>heart</mark> by chance leapt into mine eye to affect the fairest but with al the falsest creature that euer affectio ̄ stoopt to. She was and by report still is wife to a most</div>
+<div class="excerpt">some tion: not <mark>heare</mark> neither: vdslife, I would laugh if she were in Maister Fetherstones Chamber, shee would fright him, Mai er Fetherstone, Maister Fetherstone. <mark>Did</mark> you leaue your doore open last night? Gods light shee&#x27;s there then, will you know the iest, my wife hath her old tricks, Ile hold my life, my wife&#x27;s in your chamber,</div>
+<div class="excerpt">O hone, hone, hone ononero. Lets make him drunke then, a simple catching wit I. Why so he would in his foole. Get old Maibery merry: tha any man should take to <mark>heart</mark> thus the downe fall of a <mark>woman</mark>, I thinke when he comes home poore snaile, heele not dare to peepe forth of doores least his hornes vsher him. Exit. Out of mine</div>
+<div class="excerpt">horribly, off with thy maske sweete sinner of the North: these maskes are foiles to good faces, and to bad ones they are like new sattin out-sides to lousie linings. <mark>Goe</mark> to then, old Poet I haue tane her vp already as a pinnis bound for the straights, she knowes her burden yonder. O well bould Tom ( ) we haue presedents, for&#x27;t ▪</div>
+<div class="excerpt">your reuersion. You are a dambd villaine. No, vdslife, Ile go instantly take a purse, be apprehen ded and hang&#x27;d for&#x27;t, better then be a Cockold. Tis this thou hast not vsed me like a Gentleman.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Most kindly welcome—I beseech you hold our bould nesse excused Sir. Tis altogither triuial in-sooth: but to passe away the time till supper, Ile deliuer it to you, with protestation before hand, I seeke not to publish euery ge ̄ tle-womans dishonor, only by the passage of my discource to haue you censure the state of our quarrel. Frequenting the company of many marchants wiues in the Citty, my heart by chance leapt into mine eye to affect the fairest but with al the falsest creature that euer affectio ̄ stoopt to. She was and by report still is wife to a most graue and well reputed Cittizen. As Meddowes do Aprill: the violence as it seemed of her affection—but alas it proued her dissembling, would at my comming and departing be-dew her eyes with loue dropps; O she could the art of woman most feelingly. O you shall pardon mee his name, it seemes you are a Cittizen, it would bee discourse inough for you vpon the ex change this fort-night should I tell his name. In the passage of our loues, (amongst other fauours of greater valew) she bestowed vpon me this inge which she pro tested was her husbands gift. Not many nights comming to her and being familiar with her. I Sir. Lying with her as I say: and rising some-what early fro ̄ her in the morning, I lost this ring in her bed. Right Sir, in Mistris Maiberies sheetes. Beshrew my tongue for blabbing, I presume vpon your secresy. Where I found her falsnesse: with this Gentleman; who by his owne confession pertaking the like inioyment; found this ring the same morning on her pillowe, and sham&#x27;d not in my sight to weare it. Yes she hath reason for&#x27;t, for in some countries, where men and women haue good trauailing stomackes, they begin with porredge; then they fall to Capon or so-forth: but if Ca pon come short of filling their bellies, to their porridge againe, tis their onely course, so for our women in England. Her ring Sir. What my Mistris gift? Troth and mine, with your promise to conceale it from her husband. No Sir. Most willingly; Excellent, hee&#x27;s heat to the proofe, lets with-draw, and giue him leaue to raue a little. You haue not made her acquainted with the discouery. I protest it was the strangest, and yet with-all the hap piest fortune that wee should meete you two at Ware, that euer redeemed such desolate actions: I would not wrong you agen for a million of Londons. Yes and shele do it, I left her at Bosomes Inne, sheele be here, presently. Enter Maybery. Was there euer any walking spirit, like to my wife? what reason s ould there bee in nature for this ▪ I will question some tion: not heare neither: vdslife, I would laugh if she were in Maister Fetherstones Chamber, shee would fright him, Mai er Fetherstone, Maister Fetherstone. Did you leaue your doore open last night? Gods light shee&#x27;s there then, will you know the iest, my wife hath her old tricks, Ile hold my life, my wife&#x27;s in your chamber, rise out of your bed, and see and you can feele her. So I said euen now to my selfe before God la: take her vp in your armes, and bring her hether softly, for feare of waking her: I neuer knew the like of this before God la, alas poore Kate, looke before God; shees a sleepe with her eyes open: prit tie little roague, Ile wake her, and make her ashamd of it. I warrant you; would all women thought no more hurt then thou doost, now sweet villaine, Kate, Kate. She talkes in her sleepe. Why Kate, Kate ? I pray thee be not frighted. I haue the worst luck; I thinke I get more bumps and shrewd turnes ith&#x27; darke, how do&#x27;s she maister Fetherstone. Good night Sir. A scratch, a scratch. Exit. Ist a bargen. Wee shall stay too long. The troth is maister Full-m one, diuers traines haue bin laide to bring him hither, without gaping of people, and neuer any tooke effect till now. For a woman, looke you sir: here&#x27;s a crowne to pro uide his supper: hee&#x27;s a Gentleman of a very good house, you shall bee paid well if you conuert him; to morrow morning, bedding, and a gowne shall be sent in, and wood and coale. No, why looke what straw you buy for him, shall re turne you a whole haruest. Get a couple of your sturdiest fellowes, and bind him I pray, whilst wee slip out of his sight. Come will you to horse sir? Gods pretious ist come to this: perswade him as you are a Gentleman, there will be ballads made of him, &amp; the bur then thereof will be, if you had rode out 5. mile forward, he had found the fatall house of Braineford North-ward, O hone, hone, hone ononero. Lets make him drunke then, a simple catching wit I. Why so he would in his foole. Get old Maibery merry: tha any man should take to heart thus the downe fall of a woman, I thinke when he comes home poore snaile, heele not dare to peepe forth of doores least his hornes vsher him. Exit. Out of mine nostrils tapster, thou smel t like Guild-hall wo daies after Simon and I de, of drinke most horribly, off with thy maske sweete sinner of the North: these maskes are foiles to good faces, and to bad ones they are like new sattin out-sides to lousie linings. Goe to then, old Poet I haue tane her vp already as a pinnis bound for the straights, she knowes her burden yonder. O well bould Tom ( ) we haue presedents, for&#x27;t ▪ O well bould Tom ( ) wee haue presedents for&#x27;t. Now will shee put some notable trick, vpon her Cuck oldly husband. Hange of thou diuill, away. A pox of your wit and your singing. God refuse mee Gentlemen, you may laugh and bee merry: but I am a Cockold and I thinke you knew of it, who lay ith segges with you to night wild-ducke. Fetherstone. Good. Very good Fetherstone he comes. Enter Fetherstone. You are a villaine, and Ile mak&#x27;t good vpon you, I am no seruingman, to feede vpon your reuersion. You are a dambd villaine. No, vdslife, Ile go instantly take a purse, be apprehen ded and hang&#x27;d for&#x27;t, better then be a Cockold. Tis this thou hast not vsed me like a Gentleman.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Northward Ho</div><div class="body">Luke Greenshield has failed to seduce Moll Mayberry in her husband’s absence; now he dines with Mayberry at Ware and describes how he slept with an unnamed wife, showing him her wedding ring. Mayberry grows jealous and hurries back to London to confront Moll, but is satisfied by her explanation that the ring was stolen. Seeking revenge, he has her play up to Greenshield’s advances on his next visit to the house. Greenshield arranges lodgings at one of Mayberry’s houses for himself and Kate, a young woman whom he introduces as his sister, but who is actually his wife. The servants are soon aware that they are sleeping together, and also that Kate has a habit of sleep- walking around the house and ending up in Featherstone’s bedroom; actually she is shamming with a view to visiting Featherstone, her lover. ===== PAGE 241 ===== 1605 Meanwhile, Philip is arrested for debt after spending lavishly on the prostitute Doll. His father Bellamont grudgingly pays up and he is released; the price of Philip’s freedom is to have to listen to some moralistic exhortation. In response, he conspires with Doll (who has a tendency to swindle her clients out of money and valuables by way of love-gifts). She poses as a wealthy lady who wants to hire Bellamont to write some verses; Philip then introduces her as the girlfriend whom Bellamont criticized. Doll is smitten with the old man and visits him at home; but when she arrives, he is engaged with Captain Jenkins, Doll’s client, who also wants to buy his poetical talents to write a love poem for her. Jenkins hides during Bellamont’s meeting with Doll, and hears her ease her conscience by confessing that she is a common whore; he proceeds to blacken her name among her other lovers. Doll blames Bellamont and swears vengeance. The characters now gravitate back northward to Ware. Featherstone plans an assignation there with Kate, using a ruse to get Greenshield out of London. Mayberry encourages Greenshield to think that Moll is also going there for sexual purposes, and they follow together, accompanied by Bellamont, Philip, and others. Bellamont proposes that they enliven the journey by playing practical jokes on one another, and he is the first victim when they stop off at Bedlam and the young men try to have him committed as a lunatic. On arrival at Ware, the old men trick Greenshield into offering Mayberry the disguised Kate for a night’s pleasure. Greenshield also learns that Featherstone has been sleeping with Kate;…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

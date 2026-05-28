@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ADR in The Comedy of Errors · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ADR</span>
+</nav>
+
+<h1>ADR</h1>
+<p class="lede">in <em>The Comedy of Errors</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1441</td></tr>
+<tr><th>Characters</th><td>7483</td></tr>
+<tr><th>BritDrama no.</th><td>944</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">earneſt, yea or no: Look&#x27;d he or red or pale, or ſad or merrily? What obſeruation mad&#x27;ſt thou in this caſe? Oh, his hearts Meteors tilting in his face. He meant he <mark>did</mark> me none: the more my ſpight And true he ſwore, though yet forſworne hee were. And what ſaid he? With what perſwaſion <mark>did</mark> he tempt thy loue? <mark>Did</mark>&#x27;ſt ſpeake him faire?</div>
+<div class="excerpt">patience would releeue me; But if thou liue to ſee like right bereft , This foole-beg&#x27;d patience in thee will be left. Say, is your tardie maſter now at hand? Say, didſt thou ſpeake with him? knowſt thou his minde? By thee, and this thou didſt returne from him. That he <mark>did</mark> buffet thee, and in his blowes, Denied my houſe for his,</div>
+<div class="excerpt">enter: Come ſiſter, Dromio play the Porter well. I, and let none enter, leaſt I breake your pate. Who is that at the doore y t keeps all this noiſe? Ah Luciana, <mark>did</mark> he tempt thee ſo? Might&#x27;ſt thou perceiue auſteerely in his eie, That he <mark>did</mark> plead in earneſt, yea or no: Look&#x27;d he or red or pale, or ſad or merrily? What obſeruation</div>
+<div class="excerpt">me at whoſe ſuite? Go fetch it Siſter: this I wonder at. Thus he vnknowne to me ſhould be in debt: Tell me, was he areſted on a band? The houres come backe, that <mark>did</mark> I neuer here. Go Dromio, there&#x27;s the monie, beare it ſtraight, And bring thy Maſter home imediately. Come ſiſter, I am preſt downe with conceit: Conceit, my comfort</div>
+<div class="excerpt">theſe ſlanders, and this open ſhame. Is&#x27;t good to ſooth him in theſe crontraries? Alas, I ſent you Monie to redeeme you, By Dromio heere, who came in haſt for it. I <mark>did</mark> not gentle husband locke thee forth. Diſſembling Villain, thou ſpeak&#x27;ſt falſe in both Oh binde him, binde him, let him not come neere me. What wilt thou do, thou</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Neither my husband nor the ſlaue return&#x27;d, That in ſuch haſte I ſent to ſeeke his Maſter? Sure Luciana it is two a clocke. Why ſhould their libertie then ours be more? Looke when I ſerue him ſo, he takes it thus. There&#x27;s none but aſſes will be bridled ſo. But were you wedded, you wold bear ſome ſway How if your husband ſtart ſome other where? Patience vnmou&#x27;d, no maruel though ſhe pauſe, They can be meeke, that haue no other cauſe: A wretched ſoule bruis&#x27;d with aduerſitie, We bid be quiet when we heare it crie. But were we burdned with like waight of paine, As much, or more, we ſhould our ſelues complaine: So thou that haſt no vnkinde mate to greeue thee, With vrging helpeleſſe patience would releeue me; But if thou liue to ſee like right bereft , This foole-beg&#x27;d patience in thee will be left. Say, is your tardie maſter now at hand? Say, didſt thou ſpeake with him? knowſt thou his minde? By thee, and this thou didſt returne from him. That he did buffet thee, and in his blowes, Denied my houſe for his, me for his wife. Come, come, no longer will I be a foole, To put the finger in the eie and weepe; Whil&#x27;ſt man and Maſter laughes my woes to ſcorne: Come ſir to dinner, Dromio keepe the gate: Husband Ile dine aboue with you to day, And ſhriue you of a thouſand idle prankes: Sirra, if any aske you for your Maſter, Say he dines forth, and let no creature enter: Come ſiſter, Dromio play the Porter well. I, and let none enter, leaſt I breake your pate. Who is that at the doore y t keeps all this noiſe? Ah Luciana, did he tempt thee ſo? Might&#x27;ſt thou perceiue auſteerely in his eie, That he did plead in earneſt, yea or no: Look&#x27;d he or red or pale, or ſad or merrily? What obſeruation mad&#x27;ſt thou in this caſe? Oh, his hearts Meteors tilting in his face. He meant he did me none: the more my ſpight And true he ſwore, though yet forſworne hee were. And what ſaid he? With what perſwaſion did he tempt thy loue? Did&#x27;ſt ſpeake him faire? I cannot, nor I will not hold me ſtill, My tongue, though not my heart, ſhall have his will. He is deformed, crooked, old, and ſere, Ill-fac&#x27;d, worſe bodied, ſhapeleſſe euery where: Vicious, vngentle, fooliſh, blunt, vnkinde, Stigmaticall in making worſe in minde. Ah but I thinke him better then I ſay: And yet would herein others eies were worſe: Farre from her neſt the Lapwing cries away: My heart praies for him, though my tongue doe curſe. Where is thy Maſter Dromio ? Is he well? Why man, what is the matter? What is he arreſted? tell me at whoſe ſuite? Go fetch it Siſter: this I wonder at. Thus he vnknowne to me ſhould be in debt: Tell me, was he areſted on a band? The houres come backe, that did I neuer here. Go Dromio, there&#x27;s the monie, beare it ſtraight, And bring thy Maſter home imediately. Come ſiſter, I am preſt downe with conceit: Conceit, my comfort and my iniurie. There&#x27;s not a man I meete but doth ſalute me As if I were their well acquainted friend, And euerie one doth call me by my name: Some tender monie to me, ſome inuite me; Some other giue me thankes for kindneſſes; Some offer me Commodities to buy. Euen now a&#x27; tailor cal&#x27;d me in his ſhop, And ſhow&#x27;d me Silkes that he had bought for me, And therewithall tooke meaſure of my body. Sure theſe are but imaginarie wiles, And lapland Sorcerers inhabite here. Oh that thou wer&#x27;t not, poore diſtreſſed ſoule. O husband, God doth know you din&#x27;d at home Where would you had remain&#x27;d vntill this time, Free from theſe ſlanders, and this open ſhame. Is&#x27;t good to ſooth him in theſe crontraries? Alas, I ſent you Monie to redeeme you, By Dromio heere, who came in haſt for it. I did not gentle husband locke thee forth. Diſſembling Villain, thou ſpeak&#x27;ſt falſe in both Oh binde him, binde him, let him not come neere me. What wilt thou do, thou peeuiſh Officer? Haſt thou delight to ſee a wretched man Do outrage and diſpleaſure to himſelfe? I will diſcharge thee ere I go from thee, Beare me forthwith vnto his Creditor, And knowing how the debt growes I will pay it. Good Maſter Doctor ſee him ſafe conuey&#x27;d Home to my houſe, oh moſt vnhappy day. Go beare him hence, ſiſter go you with me: Say now, whoſe ſuite is he arreſted at? I know the man: what is the ſumme he owes? Say, how growes it due. He did beſpeake a Chain for me, but had it not. It may be ſo, but I did neuer ſee it. Come Iailor, bring me where the Goldſmith is, I long to know the truth heereof at large. And come with naked ſwords, Let&#x27;s call more helpe to haue them bound againe. Hold, hurt him not for God ſake, he is mad, Some get within him, take his ſword away: Binde Dromio too, and beare them to my houſe. To fetch my poore diſtracted husband hence, Let vs come in, that we may binde him faſt, And beare him home for his recouerie. This weeke he hath beene heauie, ſower ſad, And much different from the man he was: But till this afternoone his paſſion Ne&#x27;re brake into extremity of rage. To none of theſe, except it be the laſt, Namely, ſome loue that drew him oft from home. Why ſo I did. As roughly as my modeſtie would let me. And in aſſemblies too. It was the copie of our Conference. In bed he ſlept not for my vrging it, At boord he fed not for my vrging it: Alone, it was the ſubiect of my Theame: In company I often glanced it: Still did I tell him, it was vilde and bad. I will attend my husband, be his nurſe, Diet his ſickneſſe, for it is my Office, And will haue no atturney but my ſelfe, And therefore let me haue him home with me. I will not hence, and leaue my husband heere: And ill it doth beſeeme your holineſſe To ſeparate the husband and the wife. Come go, I will fall proſtrate at his feete, And neuer riſe vntill my teares and prayers Haue won his grace to come in perſon hither, And take perforce my husband from the Abbeſſe. Iuſtice moſt ſacred Duke againſt the Abbeſſe. May it pleaſe your Grace, Antipholus my husba ̄ d, Who I made Lord of me, and all I had, At your important Letters this ill day, A moſt outragious fit of madneſſe tooke him: That deſp&#x27;rately he hurried through the ſtreete, With him his bondman, all as mad as he, Doing diſpleaſure to the Citizens, By ruſhing in their houſes: bearing thence Rings, Iewels, any thing his rage did like. Once did I get him bound, and ſent him home, Whil&#x27;ſt to take order for the wrongs I went, That heere and there his furie had committed, Anon I wot not, by what ſtrong eſcape He broke from thoſe that had the guard of him, And with his mad attendant and himſelfe, Each one with irefull paſſion, with drawne ſwords Met vs againe, and madly bent on vs Chac&#x27;d vs away: till raiſing of more aide We came againe to binde them: then they fled Into this Abbey, whether we purſu&#x27;d them, And heere the Abbeſſe ſhuts the gates on vs, And will not ſuffer vs to fetch him out, Nor ſend him forth, that we may beare him hence. Therefore moſt gracious Duke with thy command, Let him be brought forth, and borne hence for helpe. Peace foole, thy Maſter and his man are here, And that is falſe thou doſt report to vs. Ay me, it is my husband: witneſſe you, That he is borne about inuiſible, Euen now we hous&#x27;d him in the Abbey heere. And now he&#x27;s there, paſt thought of humane reaſon. No my good Lord. My ſelfe, he, and my ſiſter, To day did dine together: ſo befall my ſoule, As this is falſe he burthens me withall. I ſee two husbands, or mine eyes deceiue me. Which of you two did dine with me to day? And are not you my husband? I ſent you monie ſir to be your baile By Dromio, but I thinke he brought it not.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Comedy of Errors</div><div class="body">Egeon, a merchant of Syracuse, has been arrested under an Ephesian law which forbids Syracusans to set foot in Ephesus; he is unable to pay the fine and must face execution. He tells the Dike his story: long ago, a storm at sea separated him from his wife and one of his twin baby sons, along with one of a pair of infant twins destined to be family servants; once his remaining son grew up, he went looking for his lost brother; and now Egeon is looking for him. The Duke pities him and grants him a day to raise his fine from the Ephesians. Altipholis of Syracuse arrives in Ephesus and is advised to lie about his place of origin; he sends his servant D¥@iiio to take money to his lodgings. But Ephesus has an identical Antipholus and Dromio already in residence. The local Antipholus is late for dinner, much to his wife M@#iana’s annoyance, but it is the visiting Antipholus who is summoned by the local Dromio. When the latter reports that Antipholus denies even being married, Adriana suspects infidelity. She upbraids the Syracusan Antipholus and cajoles him in to eat. Though he suspects that her uncanny knowledge of him is attributable to witchcraft, he decides to take advantage of the proffered meal, and instructs Dromio to keep intruders out of the house. One prospective intruder is the house’s rightful owner, Antipholus of Ephesus; but Dromio of Syracuse refuses to open the door to him. He is ready to break in, but his friends advise him that this would publicly dishonour his wife. He goes off to dine with a courtesan, and sends for a chain he had ordered as a present for Adriana, to give to his hostess instead. Midian tries to encourage Antipholus of Syracuse to treat Adriana better, but he is attracted to her instead. Dromio also discovers an unexpected romantic entanglement in the rotund shape of a kitchen wench, the fiancée of his Ephesian counterpart. The chain goes astray: it is handed to the wrong Antipholus, but Aligeléithe goldsmith refuses to accept sews meter hie enattprne! Shanon athe ite ===== PAGE 207 ===== 1593 payment on delivery, insisting on calling back later instead. Angelo quickly mins into financial difficulties: he owes money to a merchant who is leaving town and needs it quickly; but happily the debt is equal to the sum Antipholus owes for the chain. Antipholus of Ephesus sends his Dromio to buy a rope’s end with which to beat his wife. Angelo asks him for his money and, when he denies receiving the chain, has him arrested for debt.…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

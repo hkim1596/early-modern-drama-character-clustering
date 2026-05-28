@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PERD in The Winter&#x27;s Tale · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PERD</span>
+</nav>
+
+<h1>PERD</h1>
+<p class="lede">in <em>The Winter&#x27;s Tale</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>923</td></tr>
+<tr><th>Characters</th><td>5045</td></tr>
+<tr><th>BritDrama no.</th><td>1631</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">difference forges dread (your Greatneſſe Hath not beene vs&#x27;d to feare:) euen now I tremble To thinke your Father, by ſome accident Should paſſe this way, as you <mark>did</mark>: Oh the Pates, How would he looke, to ſee his worke, ſo noble, Vildely bound vp? What would he ſay? Or how Should I (in theſe my borrowed Flaunts) behold The ſternneſſe</div>
+<div class="excerpt">Flaunts) behold The ſternneſſe of his preſence? O but Sir, Your reſolution cannot hold, when &#x27;tis Oppos&#x27;d (as it muſt be) by th&#x27; powre of the King: One of theſe <mark>two</mark> muſt be neceſsities, Which then will ſpeake, that you muſt change this pur poſe, Or I my life. O Lady Fortune, Stand you auſpicious. Sir, welcome: It is my Fathers</div>
+<div class="excerpt">This youth ſhould ſay &#x27;twer well: and onely therefore Deſire to breed by me. Here&#x27;s flowres for you: Hot Lauender, Mints, Sauory, Mariorum, The Mary-gold, that goes to bed with Sun, And with him riſes, weeping: Theſe are flowres Of middle ſummer, and I thinke they are giuen To men of middle age. Y&#x27; are very welcome. Out alas:</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Sir: my gracious Lord, To chide at your extreames, it not becomes me: (Oh pardon, that I name them:) your high ſelfe The gracious marke o&#x27; th&#x27; Land, you haue obſcur&#x27;d With a Swaines wearing: and me (poore lowly Maide) Moſt Goddeſe-like prank&#x27;d vp: But that our Feaſts In euery Meſſe, haue folly; and the Feeders Digeſt with a Cuſtome, I ſhould bluſh To ſee you ſo attyr&#x27;d: ſworne I thinke, To ſhew my ſelfe a glaſſe. Now Ioue affoord you cauſe: To me the difference forges dread (your Greatneſſe Hath not beene vs&#x27;d to feare:) euen now I tremble To thinke your Father, by ſome accident Should paſſe this way, as you did: Oh the Pates, How would he looke, to ſee his worke, ſo noble, Vildely bound vp? What would he ſay? Or how Should I (in theſe my borrowed Flaunts) behold The ſternneſſe of his preſence? O but Sir, Your reſolution cannot hold, when &#x27;tis Oppos&#x27;d (as it muſt be) by th&#x27; powre of the King: One of theſe two muſt be neceſsities, Which then will ſpeake, that you muſt change this pur poſe, Or I my life. O Lady Fortune, Stand you auſpicious. Sir, welcome: It is my Fathers will, I ſhould take on mee The Hoſteſſeſhip o&#x27; th&#x27; day: you&#x27;re welcome ſir. Giue me thoſe Flowres there (Dorcas.) Reuerend Sirs, For you, there&#x27;s Roſemary, and Rue, theſe keepe Seeming, and ſauour all the Winter long: Grace, and Remembrance be to you both, And welcome to our Shearing. Sir, the yeare growing ancient, Not yet on ſummers death, nor on the birth Of trembling winter, the fayreſt flowres o&#x27; th ſeaſon Are our Carnations, and ſtreak&#x27;d Gilly-vors, (Which ſome call Natures baſtards) of that kind Our ruſticke Gardens barren, and I care not To get ſlips of them. For I haue heard it ſaid, There is an Art, which in their pideneſſe ſhares With great creating-Nature. So it is. Ile not put The Dible in earth, to ſet one ſlip of them: No more then were I painted, I would wiſh This youth ſhould ſay &#x27;twer well: and onely therefore Deſire to breed by me. Here&#x27;s flowres for you: Hot Lauender, Mints, Sauory, Mariorum, The Mary-gold, that goes to bed with Sun, And with him riſes, weeping: Theſe are flowres Of middle ſummer, and I thinke they are giuen To men of middle age. Y&#x27; are very welcome. Out alas: You&#x27;ld be ſo leane, that blaſts of Ianuary Would blow you through and through. Now my fa ſt Friend, I would I had ſome Flowres o&#x27; th Spring, that might Become your time of day: and yours, and yours, That weare vpon your Virgin-branches yet Your Maiden-heads growing: O Proſerpina, For the Flowres now, that (frighted) thou let&#x27;ſt fall From Dyſſes Waggon: Daffadils, That come before the Swallow dares ▪ and take The windes of March with beauty: Violets (dim, But ſweeter then the lids of Iuno&#x27;s eyes, Or Cytherea&#x27;s breath) pale Prime-roſes, That dye vnmarried, ere they can behold Bright Phoebus in his ſtrength (a Maladie Moſt incident to Maids:) bold Oxlips, and The Crowne Imperiall: Lillies of all kinds, (The Flowre-de-Luce being one.) O, theſe I lacke, To make you Garlands of) and my ſweet friend, To ſtrew him o&#x27;re, and ore. No, like a banke, for Loue to lye, and play on: Not like a Coarſe: or if: not to be buried, But quicke, and in mine armes. Come, take your flours, Me thinkes I play as I haue ſeene them do In Whitſo -Paſtorals: Sure this Robe of mine Do&#x27;s change my diſpoſition: O Doricles, Your praiſes are too large: but that your youth And the true blood which peepes fairely through&#x27;t, Do plainly giue you out an vnſtain&#x27;d Sphepherd With wiſedome, I might feare (my Doricles ) You woo&#x27;d me the falſe way. Ile ſweare for &#x27;em. Forewarne him, that he vſe no ſcurrilous words in&#x27;s tunes. I, good brother, or go about to thinke. Lawne as white as driuen Snow, Cypreſſe blacke as ere was Crow, Gloues as ſweete as Damaske Roſes, Maskes for faces, and for noſes: Bugle-bracelet, Necke-lace Amber, Perfume for a Ladies Chamber: Golden Quoiſes, and Stomachers For my Lads, to giue their deers: Pins, and poaking-ſtickes of ſteele. What Maids lacke from head to heele: Come buy of me, come: come buy, come buy, Buy Lads, or elſe your Laſſes cry: Come buy. Euen heere vndone: I was not much a-fear&#x27;d: for once, or twice I was about to ſpeake, and tell him plainely, The ſelfe-ſame Sun, that ſhines vpon his Court, Hides not his viſage from our Cottage, but Lookes on alike. Wilt pleaſe you (Sir) be gone? I told you what would come of this: Beſeech you Of your owne ſtate take care: This dreame of mine Being now awake, Ile Queene it no inch farther, But milke my Ewes, and weepe. One of theſe is true: I thinke Affliction may ſubdue the Cheeke, But not take-in the Mind. Your pardon Sir, for this, Ile bluſh you Thanks. Happy be you: All that you ſpeake, ſhewes faire. I ſee the Play ſo lyes, That I muſt beare a part. Oh my poore Father: The Heauen ſets Spyes vpon vs, will not haue Our Contract celebrated. And giue me leaue, And doe not ſay &#x27;tis Superſtition, that I kneele, and then implore her Bleſſing. Lady, Deere Queene, that ended when I but began, Giue me that hand of yours, to kiſſe. So long could I Stand-by, a looker-on.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Winter&#x27;s Tale</div><div class="body">Polixenes of Bohemia is coming to the end of a nine- month stay at the Sicilian court of Leontes, his childhood playmate. Leontes cannot persuade him to extend his stay, but the pregnant queen, Hermione, has more success. Leontes conceives a suspicion that Polixenes and Hermione have committed adultery, and that her unborn child is a bastard. He commands Camillo to poison Polixenes, but instead Camillo warns the intended victim and escapes with him to Bohemia. Leontes arrests Hermione and sends to the oracle of Apollo for confirmation of her adultery. She gives birth to a daughter in prison, and Paulina hopes to bring Leontes to his senses by showing him the baby; instead, he orders her husband, Antigonus, to take it out of his dominions and abandon it. Hermione is tried for adultery and treason. The oracle, when read, exonerates her and foretells that, unless the lost be found, Leontes will have no heir. Leontes refuses to believe it, whereupon his son Mamillius, who fell sick when his mother was arrested, dies. Hermione collapses in court and is later reported dead. Antigonus abandons the baby on the coast of Bohemia, and is eaten by a bear. The child, Perdita, is found and adopted by an old shepherd. Sixteen years pass. The penitent Leontes, still mourning Hermione, attempts to recall Camillo to Sicily, but Polixenes will not let him go. Worried by rumours that Prince Florizel is courting a shepherd’s daughter, Polixenes attends the sheep-shearing feast in disguise. When it becomes clear that Florizel intends to marry Perdita without consulting his father, Polixenes intervenes and threatens awful reprisals. Camillo helps Florizel and Perdita to abscond to Sicily, knowing that Polixenes will follow them, enabling him to return home at last. Leontes welcomes the newcomers, who include not only the Bohemian royal family but also the old shepherd, who produces the objects found with baby Perdita; these establish her identity as Leontes’ long-lost daughter. The two kings are reconciled, and Polixenes withdraws his objection to his son’s marriage. The court visits a newly sculpted statue of Hermione in Paulina’s chapel. It turns out to be Hermione herself, still alive and awaiting the return of her daughter.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

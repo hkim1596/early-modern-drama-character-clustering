@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QUEE in Love&#x27;s Labor&#x27;s Lost · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>QUEE</span>
+</nav>
+
+<h1>QUEE</h1>
+<p class="lede">in <em>Love&#x27;s Labor&#x27;s Lost</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1598</td></tr>
+<tr><th>Words</th><td>1235</td></tr>
+<tr><th>Characters</th><td>6603</td></tr>
+<tr><th>BritDrama no.</th><td>1031</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">by ſport orethrowne: To make theirs ours, and ours none but our owne. So ſhall we ſtay mocking entended game, And they wel mockt depart <mark>away</mark> with ſhame. Berowne <mark>did</mark> ſweare him ſelfe out of all ſu te. Qualme perhapt. <mark>Goe</mark> ſicknes as thou art. And quicke Berowne hath plighted Fayth to me. Will they returne? How blow? how blow?</div>
+<div class="excerpt">will reade it, I ſweare. Breake the necke of the Waxe, and euery one giue eare. What plume of fethers is he that indited this letter? What vaine? What Wethercock? <mark>Did</mark> you euer <mark>heare</mark> better? Els your memorie is bad, going ore it erewhile. Thou fellow, a worde. Who gaue thee this letter? To whom ſhouldſt thou giue it? From which</div>
+<div class="excerpt">it? Any thing like? Beautious as Incke: a good concluſion. A Poxe of that ieſt, and I beſhrow all Shrowes. But Katherine what was ſent to you From faire Dumaine? <mark>Did</mark> he not ſend you twaine? I thinke no leſſe: Doſt thou not wiſh in hart The Chaine were longer, and the Letter ſhort. We are wiſe girles to mocke our Louers ſo. No,</div>
+<div class="excerpt">free that gaue theſe tokens to vs. The faireſt is confeſſion. Were not you here but euen now, diſguyſde? And were you well aduiſde? When you then were heere, What <mark>did</mark> you whiſper in your Ladies eare? When ſhe ſhall challenge this, you will reiect her. Peace peace, forbeare: your Oth once broke, you force not to forſweare. I will,</div>
+<div class="excerpt">ſhall challenge this, you will reiect her. Peace peace, forbeare: your Oth once broke, you force not to forſweare. I will, and therefore keepe it. Roſaline, What <mark>did</mark> the Rusſian whiſper in your eare? God giue thee ioy of him: the Noble Lord Moſt honourablie doth vphold his word ▪ Pardon me ſir, this Iewell <mark>did</mark> ſhe weare, And</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Was that the king that ſpurd his horſe ſo hard, Againſt the ſteepe vp riſing of the hill? Who ere a was, a ſhowd a mounting minde. Well Lords, to day we ſhall haue our diſpatch, Ore Saterday we will returne to Fraunce. Then Forreſter my friend, Where is the Buſh That we muſt ſtand and play the murtherer in? I thanke my Beautie, I am faire that ſhoote ▪ And thereupon thou ſpeakſt the faireſt ſhoote. What, what? Firſt praiſe mee, and againe ſay no. O ſhort liu&#x27;d pride. Not faire? alacke for woe Nay, neuer paint me now, Where faire is not, praiſe cannot mend the brow. Heere (good my glaſſe) take this for telling trew: Faire payment for foule wordes, is more then dew. See ſee, my beautie wilbe ſau&#x27;d by merrit. O hereſy in faire, fit for theſe dayes, A giuing hand, though fowle, ſhall haue faire praiſe. But come, the Bow: Now Mercie goes to kill, And ſhooting well, is then accounted ill: Thus will I ſaue my Credite in the ſhoote, Not wounding, pittie would not let me doote. If wounding then it was to ſhew my skill, That more for praiſe, then purpoſe meant to kill. And out of queſtion ſo it is ſometimes: Glorie growes guyltie of deteſted crimes, When for Fames ſake, for praiſe an outward part, We bend to that, the working of the hart. As I for praiſe alone now ſeeke to ſpill The poore Deares blood, that my hart meanes no ill. Onely for praiſe, and praiſe we may afford, To any Lady that ſubdewes a Lord. The thickeſt, and the talleſt. Whats your will ſir? Whats your will? We will reade it, I ſweare. Breake the necke of the Waxe, and euery one giue eare. What plume of fethers is he that indited this letter? What vaine? What Wethercock? Did you euer heare better? Els your memorie is bad, going ore it erewhile. Thou fellow, a worde. Who gaue thee this letter? To whom ſhouldſt thou giue it? From which Lord, to which Ladie? Thou haſt miſtaken his letter. Come Lords away. Here ſweete, put vp this, twilbe thine annother day. Sweete hartes we ſhalbe rich ere we depart, Yf Fayrings come thus plentifully in. A Ladie walde about with Diamondes: Looke you, what I haue from the louing King. Nothing but this: yes as much loue in Rime, As would be crambd vp in a ſheete of paper Writ a both ſides the leafe, margent and all, That he was faine to ſeale on Cupids name. Well bandied both, a ſet of Wit well played. But Raſaline, you haue a Fauour too? Who ſent it? and what is it? Any thing like? Beautious as Incke: a good concluſion. A Poxe of that ieſt, and I beſhrow all Shrowes. But Katherine what was ſent to you From faire Dumaine? Did he not ſend you twaine? I thinke no leſſe: Doſt thou not wiſh in hart The Chaine were longer, and the Letter ſhort. We are wiſe girles to mocke our Louers ſo. No, to the death we will not moue a foot, Nor to their pend ſpeach render we no grace: But while tis ſpoke each turne away his face. Therefore I do it, and I make no doubt, The reſt will ere come in, if he be out. Theres no ſuch ſport, as ſport by ſport orethrowne: To make theirs ours, and ours none but our owne. So ſhall we ſtay mocking entended game, And they wel mockt depart away with ſhame. Berowne did ſweare him ſelfe out of all ſu te. Qualme perhapt. Goe ſicknes as thou art. And quicke Berowne hath plighted Fayth to me. Will they returne? How blow? how blow? Speake to be vnderſtood. Auaunt perplexitie, What ſhall we do, If they returne in their owne ſhapes to woe? Whip to our Tents as Roes runs ore land. Faire in all Haile is foule, as I conceaue. Then wiſh me better, I will giue you leaue. This Feelde ſhall holde me, and ſo hold your vow: Nor God nor I delights in periurd men. Not ſo my Lord, it is not ſo I ſweare, We haue had paſtimes here and pleaſant game, A meſſe of Russians left vs but of late. I in trueth My Lord. Trim gallants, full of Courtſhip and of ſtate. Amazde my Lord? Why lookes your highnes ſad? No, they are free that gaue theſe tokens to vs. The faireſt is confeſſion. Were not you here but euen now, diſguyſde? And were you well aduiſde? When you then were heere, What did you whiſper in your Ladies eare? When ſhe ſhall challenge this, you will reiect her. Peace peace, forbeare: your Oth once broke, you force not to forſweare. I will, and therefore keepe it. Roſaline, What did the Rusſian whiſper in your eare? God giue thee ioy of him: the Noble Lord Moſt honourablie doth vphold his word ▪ Pardon me ſir, this Iewell did ſhe weare, And Lord Berowne (I thanke him) is my deare. What? will you haue me, or your Pearle againe? Stand aſide good Pompey. Alas poore Machabeus, how hath he bin bayted. Speake braue Hector, we are much delighted. Welcome Marcade, but that thou interruppteſt our merriment. Dead for my life. Boyet prepare, I will away to nyght. Prepare I ſay: I thanke you gracious Lords For all your faire endeuours and intreat: Out of a new ſad-ſoule, that you vouchſafe, In your rich wiſedome to excuſe, or hide, The liberall oppoſition of our ſpirites, If ouerboldly we haue borne our ſelues, In the conuerſe of breath (your gentlenes Was guyltie of it.) Farewell worthy Lord: A heauie hart beares not a humble tongue. Excuſe me ſo comming too ſhort of thankes, For my great ſute, ſo eaſely obtainde. I vnderſtand you not, my griefes are double. We haue receiud your Letters, full of Loue: Your Fauours, embaſſadours of Loue. And in our mayden counſaile rated them, At courtſhyp pleaſantieſt and courtecie, As bombaſt and as lyning to the time: But more deuout then this our reſpectes, Haue we not been, and therefore met your Loues, In their owne faſhyon like a merriment. A time me thinkes too ſhort, To make a world-without-end bargaine in: No no my Lord, your Grace is periurde much, Full of deare guiltines, and therefore this, If for my Loue (as there is no ſuch cauſe) You will do ought, this ſhall you do for me: Your oth I will not truſt, but goe with ſpeede To ſome forlorne and naked Hermytage, Remote from all the pleaſurs of the world: There ſtay vntill the twelue Celeſtiall Signes Haue brought about the annuall reckoning. If his Auſtere inſociable life, Change not your offer made in heate of blood. If ro es and faſtes, hard lodging, and thin weedes, Nip not the gaudie bloſſomes of your Loue: But that it beare this tryall, and laſt Loue, Then at the expiration of the yeere, Come challenge me, challenge me by theſe deſertes: And by his Virgin palme now kisſing thine, I wi be thine: and till that inſtance ſhutt My wofull ſelfe vp in a mourning houſe, Rayning the teares of lamentation, For the remembraunce of my Fathers death. If this thou do deny, let our hand s part, Neither intiled in the others hart.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Love&#x27;s Labor&#x27;s Lost</div><div class="body">The King of Navarre has proclaimed a three-year period of study during which his courtiers must live abstemiously and refrain from seeing women; no woman may even approach the court. Unfortunately the Princess of France is due to arrive on a diplomatic mission concerning a dispute over money and territory, and the King is forced to meet her; however, the evidence in support of France’s claim against Navarre has not arrived, and the issue is deferred. Costard is caught canoodling with Jaquenetta and is remitted to Don Armado’s custody. Armado is himself enamoured of Jaquenetta, and sends Costard to her with a love-letter. Biron also pays Costard to carry a similar letter to his love, Rosaline, and Costard mixes up the two letters. Armado’s causes amusement to the French ladies when they receive it; Biron’s causes embarrassment to himself when, directed by Holofernes, Jaquenetta brings it to the King just after Biron has attacked him and the other lords for falling in love. Biron argues the illegitimacy of their original vows, and they set about wooing the ladies, first with gifts, then by appearing in a masque of Russians. The ladies confound the latter by wearing masks themselves and swapping gifts so that each lord woos the wrong lady; they also refuse to dance. Don Armado and the locals offer the court a pageant of the Nine Worthies, devised by the schoolmaster: it is mocked by the lords and breaks up in confusion when Costard accuses Don Armado of fathering the pregnant Jaquenetta’s baby. News then arrives that the King of France is dead. The lords propose marriage to the ladies, who refuse: the court of France is in mourning, and the lords must wait a year; given particular conditions by their ladies, the King will spend it in a hermitage and Biron trying vainly to entertain dying men. The play ends with a song of winter and spring, the owl and the cuckoo.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

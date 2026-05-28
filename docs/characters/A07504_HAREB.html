@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HAREB in A Mad World, My Masters · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>HAREB</span>
+</nav>
+
+<h1>HAREB</h1>
+<p class="lede">in <em>A Mad World, My Masters</em> — Middleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1608</td></tr>
+<tr><th>Words</th><td>1654</td></tr>
+<tr><th>Characters</th><td>9040</td></tr>
+<tr><th>BritDrama no.</th><td>1479</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Gulman, my wifes onely company! welcome; and how do&#x27;s the vertuous Matron, that good old Gentlewoman thy mother? I per ſwade my ſelfe, if modeſty be in the world ſhe <mark>has</mark> part on&#x27;t: a <mark>woman</mark> of an excellent carriage all her life time, in Court, Ci tie, and Countrey. And welcome ſweete Virgin, the onely compani on, my ſoule wiſhes</div>
+<div class="excerpt">aduices; Thou wilt find comfort in e&#x27;m in the end; Thou&#x27;lt feele an alteration, prethee thinke on&#x27;t: Mine eyes can ſcarce refraine. I&#x27;ue pawnde my credite on&#x27;t, ah didſt thou know, The ſweete fruit once, thoud&#x27;ſt neuer let it <mark>goe</mark>. And ſtill do ſo. You&#x27;r kindly welcome to my houſe; good Maſter Ineſſe, and Maſter Poſſibilitie. Rafe?</div>
+<div class="excerpt">this hand Ouer familiar, or this, too neglectfull, It do&#x27;s behoue her carry her ſelfe euen. True, I <mark>heare</mark> you ſir; wa&#x27;ſt you ſaid? Right, ſo I ſay. Oh, ſicknes <mark>has</mark> no mercy ſir, It neither pitties Ladies lip, nor eye, It crops the Roſe out of the Virgins cheeke, And ſo deſlowres her that was nere deſlorw&#x27;d, Fooles then are</div>
+<div class="excerpt">plucke, and neuer yeeld e&#x27;m pleaſure; Ah gentlemen, tho I ſhadow it, that ſweet Virgins ſicknes griues mee not lightly, ſhee was my wiues onely delight and company; <mark>Did</mark> you not <mark>heare</mark> her gentlemen, it&#x27;h midſt Of her extreameſt ſit, ſtill how ſhe cald vpon my wife, Remembred ſtill my wife, ſweet miſtris Harebraine, When ſhe ſent</div>
+<div class="excerpt">reade to her a little. True, true, and this will confirme it the more, ther&#x27;s a chapter of Hell, tis good to reade this cold weather, terrifie her, terrifie her; <mark>goe</mark>, reade to her the horrible pun iſhments for itching wantonnes, the paines alotted for adul terie; tell her her thoughts, her very dreames are anſwerable, ſay ſo;</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">She may make nightwork ont, twas wel recouered, Hee Cats and Curtizans ſtrowle moſt i&#x27;th night, Her friend may be receiude and conuayde forth, nightly, He be at charge for watch and ward, for watch &amp; ward yfaith, and here they come. Welcome my friends, I muſt deſerue your dili gence in an imployment ſerious: the troth is, there is a cun ning plot laid, but happily diſcouered, to robbe my houſe: the night vncertaine when, but fixt within the circle of this month: nor do&#x27;s this villany conſiſt in numbers: Or many partners, onely ſome one Shall in the forme of my familiar friend, Be receiude priuately into my houſe, By ſome perfidious ſeruant of mine owne, Addreſt fit for the practiſe. If you be faithfull watchmen, ſhew your goodnes, And with theſe Angels ſhoare vp your eye-lids: Let me not be purloind, purloind indeed; the merry Greekes conceiue me: there is a Iem I would not looſe, Kept by the Italian vnder locke and key: we Engliſh men are careleſſe creatures: well, I haue ſaid enough. Why wel ſaid, watch me a good turne now, ſo, ſo, ſo, Riſe villany with the Larke, why tis preuented, Or ſteal&#x27;t by with the leather winged Bat: The euening cannot ſaue it, peace; Oh Lady Gulman, my wifes onely company! welcome; and how do&#x27;s the vertuous Matron, that good old Gentlewoman thy mother? I per ſwade my ſelfe, if modeſty be in the world ſhe has part on&#x27;t: a woman of an excellent carriage all her life time, in Court, Ci tie, and Countrey. And welcome ſweete Virgin, the onely compani on, my ſoule wiſhes for her; I left her within at her Lute, pre thee giue her good counſell. Yet, yet, yet, a little of thy inſtructions will not come amiſſe to her. Doe, labour her prethee; I haue conuay&#x27;d away all her wanton Pamphlets, as Hero and Leander, Venus and Adonis, oh two luſhious mary-bone pies for a yong mar ried wife, here, here, prethie take the reſolution, and reade to her a little. True, true, and this will confirme it the more, ther&#x27;s a chapter of Hell, tis good to reade this cold weather, terrifie her, terrifie her; goe, reade to her the horrible pun iſhments for itching wantonnes, the paines alotted for adul terie; tell her her thoughts, her very dreames are anſwerable, ſay ſo; rip vp the life of a Curtiza, &amp; ſhew how loath ſom tis. This is the courſe I take, Ile teach the married man A new ſelected ſtraine, I admit none But this pure virgin to her company, Puh, that&#x27;s enough; Ile keepe her to her ſtint, Ile put her to her penſion, She gets but her allowance, thats bare-one, Few women but haue that beſide theire owne, Ha, ha, ha, nay Ile put her hard toote. How earneſtly ſhee labours her, like a good hol ſome ſiſter of the familie, ſhe wil preuaile I hope. She&#x27;s round with her yfaith. She puts it home yfaith, eu&#x27;n to the quicke From her Elaborate action I reach that, I muſt requite this maide, faith Im&#x27;e forgetfull. What done ſo ſoone? away, too&#x27;t againe, too&#x27;t a gain, good wench too&#x27;t again, leaue her not ſo, where left you. come. No; let me come, Fie wife, you muſt conſent; what opinion i&#x27;ſt, let&#x27;s heare? Oh fie, fie, wife! Pea, pea, pea, pea, how haue you loſt your time? for ſhame be conuerted: theres a diabalocall opinion indeed; then you may think that vſury were dambd: you&#x27;re a fine merchant yfaith; or briberie? you know the law well; or ſloth? would ſome of the Clergy heard you yfaith; or pride? you come at Court; or gluttony? you&#x27;re not wor thie to dine at an Aldermans table: Your onely deadly ſin&#x27;s Adultery, That villanous ring-worme, womans worſt requitall, Tis onely lechery thats dambd to&#x27;th pit-hole; Ah, that&#x27;s an arch-offence, beleeue it ſquall, All ſinnes are veniall but veneriall. And ſhe will be rulde by you. Ile pawne my credit ont; come hither Lady, I will not altogether reſt ingratefull, Here, weare this Rubie for thy paines and counſell. Goo too I ſay. Thou haſt don&#x27;t already: farewell ſweet Virgin, prethee let&#x27;s ſee thee oftner. Wife, as thou lou&#x27;ſt the quiet of my breaſt, Embrace her counſell, yeeld to her aduices; Thou wilt find comfort in e&#x27;m in the end; Thou&#x27;lt feele an alteration, prethee thinke on&#x27;t: Mine eyes can ſcarce refraine. I&#x27;ue pawnde my credite on&#x27;t, ah didſt thou know, The ſweete fruit once, thoud&#x27;ſt neuer let it goe. And ſtill do ſo. You&#x27;r kindly welcome to my houſe; good Maſter Ineſſe, and Maſter Poſſibilitie. Rafe? Call downe your miſtris to welcome theſe two Gentlemen my friends. I will obſerue her carriage, and watch The ſlipperie reuolotions of her eye, Ile lie in waite for euery glance ſhe giues, And poyze her words it&#x27;h ballance of ſuſpect, If ſhe but ſwag ſhee&#x27;s gon, either on this hand Ouer familiar, or this, too neglectfull, It do&#x27;s behoue her carry her ſelfe euen. True, I heare you ſir; wa&#x27;ſt you ſaid? Right, ſo I ſay. Oh, ſicknes has no mercy ſir, It neither pitties Ladies lip, nor eye, It crops the Roſe out of the Virgins cheeke, And ſo deſlowres her that was nere deſlorw&#x27;d, Fooles then are maides to locke from men that treaſure, Which death will plucke, and neuer yeeld e&#x27;m pleaſure; Ah gentlemen, tho I ſhadow it, that ſweet Virgins ſicknes griues mee not lightly, ſhee was my wiues onely delight and company; Did you not heare her gentlemen, it&#x27;h midſt Of her extreameſt ſit, ſtill how ſhe cald vpon my wife, Remembred ſtill my wife, ſweet miſtris Harebraine, When ſhe ſent for me, a one ſide of her bed ſtood the Phiſiti an, the Scriuener on the other, two horrible obiects, but, meere oppoſites in the courſe of their liues, for the Scriuener bindes folkes, and the Phiſitian makes them looſe. No by my faith ſir, I ſay not ſo, if the Phiſitian could make e&#x27;m looſe of their bonds, ther&#x27;s many a one would take Phiſick, that dares not now for poyſoning, but as I was telling of you, her Will was faſhioning, Wherein I found her beſt and richeſt Iewell, Giuen as a Legacie vnto my wife, When I read that, I could not refraine weeping, well of all other, my wife ha&#x27;s moſt reaſon to viſit her, if ſhee haue any good nature in her, ſhee&#x27;le ſhew it there, now ſir wher&#x27;s your miſtris? Where do&#x27;s it ſhake her moſt? Shake all her body? t&#x27;is a ſaucie fit, Im&#x27;e iealous of that Ague, pray walke in gentlemen, Ile ſee you inſtantly. What? No; viſit her againe, commend me to her, Tell her they&#x27;r gon, and onely I my ſelfe Walke here to exchange a word or two with her. Foole that I am, and madman, beaſt! what worſe? Suſpitious or&#x27;e a creature that deſerues The beſt opinion, and the pureſt thought, Watchfull or&#x27;e her that is her watch her ſelfe, To doubt her waies, that lookes too narrowly Into her owne defects; I, fooliſh-fearefull Haue often rudely, out of giddie flames Bard her thoſe obiects which ſhee ſhuns her ſelfe, Thrice I&#x27;ue had proofe of her moſt conſtant temper, Come I at vnawares by ſtealth vpon her, I find her cercled in with Diuine Writs Of heauenly meditations; here and there Chapters with leaues tuckt vp, which when I ſee They either taxe pride or adulterie, Ah let me curſe my ſelfe, that could be iealous Of her whoſe mind no ſinne can make rebellious. And here the vnmatched comes, now wife yfaith they&#x27;r gon, Puſh, ſee how fearefull tis, will you not credit me? They&#x27;r gon yfaith, why, hinke you Ile betray you? come, come, thy delight and mine, thy onely vertuous friend, thy ſweete inſtructreſſe is violently taken, grieuous ſicke, and which is worſe, ſhe mends not. Shee cals ſtill vpon thee, poore ſoule, remembers thee ſtill, thy name whirles in her breath, wher&#x27;s miſtris Hare braine ſayes ſhee? She made me weepe thrice, ſh&#x27;as put thee in a iewel in her Will. Take my man, goe, viſit her. Oh yet the kindnes of a thing wife; ſtill ſhe holds the ſame rare temper; take my man I ſay. No? thy reaſon? Mine? prethee wife, I haue beene there alreadle. Thu&#x27;rt ſuch a wife; why I will bring thee thither then, but not goe vp I ſweare. Why then content. Why ther&#x27;s my lip I will. With me or no man, incomparable ſuch a woman. Exeunt. Ile liſten, now the fleſh drawes nie her end, At ſuch a time women exchange their ſecrets, And ranſack the cloſe corners of their hearts; What many yeares hath whelm&#x27;d, this houre imparts. And ſo I doe yfaith, tis right my humour. Not ſo, not ſo neither, ſhee&#x27;s better lookt to. Shee&#x27;s weeping, t&#x27;as made her weepe, my wife ſhewes her good nature already. All this do&#x27;s her good, beſhrew my heart and I pi ty her, let her ſhed teares till morning; Ile ſtay for her, ſhe ſhall haue enough on&#x27;t by my good will; Ile not be her hin derance. Poore ſoule, how ſhee&#x27;s tormented. There&#x27;s ſome comfort in that yet, ſhe may ſcape it. I&#x27;me ſory for that yfaith, ſhee&#x27;le hardly ſcape it. I&#x27;me glad of that yfaith, that&#x27;s a good ſigne, I ſmell, ſhee&#x27;le ſcape it now. Fall backe, ſhee&#x27;s comming. I could do that my ſelfe now. Welcome ſweete wife, alight vpon my lip, neuer was hower ſpent better. I that I was yfaith, to my great comfort; I deceiud you there wife, ha, ha; I doe intreat thee, nay coniure thee wife Upon my love, or what can more be ſaid? Oftner to viſit this ſicke vertuous maid. Why then I ſee thou lou&#x27;ſt me. Both my wifes friend and mine ſir.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Mad World, My Masters</div><div class="body">Sir Bounteous Progress is much sought after for his generosity, but one person who has not benefited is his heir, Follywit. Down on his luck, Follywit decides to take some of his inheritance early. He poses as a lord and invites himself to stay with Sir Bounteous, and, during the night, changes clothes and burgles the house. Sir Bounteous is aghast that a lord has been robbed under his roof, and reimburses Follywit’s pretended losses. Harebrain is suspicious of his wife: he hires men to watch the house, takes away her bawdy reading matter, and allows her only the company of Lady Gullman, whom he takes for a pious virgin. In fact, Gullman is a courtesan working as a go-between for Penitent Brothel, and devises a plan to allow him access: she feigns sickness, and Harebrain allows his wife to visit her; Penitent Brothel poses as her physician. Other visitors include Sir Bounteous, Gullman’s principal client, and two other would-be clients, all of whom give money to ‘the doctor’. Mistress Harebrain arrives and has sex with Penitent Brothel. Meanwhile Gullman pretends to hold a conversation with her for the benefit of the eavesdropping Harebrain, who takes his wife home confident in her chastity. Worried that Sir Bounteous may leave his estate to a courtesan, Follywit poses as Gullman, visits the knight’s country house, and steals jewels. Back in London, he persuades Gullman to marry him on the expectation of his inheritance, not realizing who she is. Meanwhile, Penitent Brothel undergoes a spiritual conversion: his horror at his own lust is compounded by an encounter with a succubus in the shape of Mistress Harebrain. He visits the real Mistress Harebrain, partly to establish that it wasn’t her and partly to apologise for having endangered her chastity. Harebrain overhears them and is delighted. The Harebrains are invited to a feast at Sir Bounteous’s house. Follywit and his associates, disguised as actors, provide the entertainment, a comedy entitled The Slip, and Follywit persuades Sir Bounteous to hand over more valuables, including a watch, for use as props. The ‘actors’ are arrested escaping with their loot, but Follywit improvises to suggest that the constable is only a character in the ===== PAGE 231 ===== 1605 play. They tie him up get away, but return in their own persons. The truth comes out when the stolen watch starts to chime in Follywit’s pocket. He assures Sir Bounteous that he will settle down now that he has a wife, and is discomfited to…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

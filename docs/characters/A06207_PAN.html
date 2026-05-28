@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PAN in A King and No King · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PAN</span>
+</nav>
+
+<h1>PAN</h1>
+<p class="lede">in <em>A King and No King</em> — Beaumont, FrancisFletcher, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1619</td></tr>
+<tr><th>Words</th><td>1703</td></tr>
+<tr><th>Characters</th><td>8270</td></tr>
+<tr><th>BritDrama no.</th><td>1636</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">that while My <mark>heart</mark> will beate. I, I prethee leaue it, and <mark>goe</mark> on with my brother. Alas. All this is of thy ſelfe, I prethee Beſſus Tell ſomething of my brother, <mark>did</mark> he nothing? See, for his owne part. Still of himſelfe. He ſlips ore all the fight. I will <mark>heare</mark> no more. I tell thee, I will <mark>heare</mark> no further. I will not wiſh it:</div>
+<div class="excerpt">yet vncertaine; found here in the Court, And onely ſufferd to walke vp and downe, As one not worth the owning. O you wrong me more in this, Then in your rage you <mark>did</mark>: you mocke me now. If you be in earneſt, Stand vp, and giue me but a gentle looke, And <mark>two</mark> kind words, and I ſhall be in Heauen. This is better Then if you had</div>
+<div class="excerpt">Countrey, and this Land Shall ſhew vnto you all the kindneſſes That I can make it; what&#x27;s your name? Y are verie welcome, you haue got a letter To put you to me, that <mark>has</mark> power enough To place mine Enemy here; then much more you, That are ſo farre from being ſo to me, That you nere ſaw me. Why Captaine, doe you thinke I am afraid</div>
+<div class="excerpt">dearely, So dearely, that if any thing I write For my inlarging, ſhould bege hi anger; Heauen e a itneſſe with mee, and my faith I had rather liue in omb&#x27;d here. Peace <mark>goe</mark> with you, You are a good man; my paconia VVhy are you euer ſad thus? Sir, does it pleaſe you, I ſhould ſpeake. Be it ſo, I will. I am the firſt that euer had a</div>
+<div class="excerpt">another: for the truth— But is there nothing elſe That we may doe, but onely walke; me thinkes Brothers and ſiſters lawfully may kiſſe. If you haue any mercy, let me <mark>goe</mark> To priſon, to my death, to any thing: I feele a ſinne growing vpon my bloud, Worſe then all theſe, hotter I feare then yours. Flie it for Gods ſake. VVhy kneele</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I would my heart Were ſtone, before my ſoftneſſe ſhould be vrg&#x27;d Againſt my Mother, a more troubled thought No Virgin beares about her; ſhould I excuſe My Mothers fault, I ſhould let light a life, In looſing which, a brother and a King Were taken from me; If I ſeeke to ſaue That life ſo lou&#x27;d, I looſe another life That gaue me being, I ſhall looſe a Mother, A word of ſuch a ſound in a childes eare, That it ſtrikes reuerence through it: May the will Of Heauen be done, and if one needes muſt fall, Take a poore Virgins life to anſwere all. I will not open mine til doe know My brothers health; good Captaine is he well? But howes that, is he hurt? I doe not aske how ſtrange that Souldier is That gets no hurt; but whether he haue one? And is he well againe? I doe not care how thou doſt, is he well? Why, I will care, I am glad that thou art well; I prethee is he ſo? My prayers are heard; now I will open mine. I prethee doe, And if my brother were in any danger, Let not thy tale make him abide there long, Before thou bring him off; for all that while My heart will beate. I, I prethee leaue it, and goe on with my brother. Alas. All this is of thy ſelfe, I prethee Beſſus Tell ſomething of my brother, did he nothing? See, for his owne part. Still of himſelfe. He ſlips ore all the fight. I will heare no more. I tell thee, I will heare no further. I will not wiſh it: what is this the Ladie My Brother writes to me to take? Y&#x27;are welcome from your Countrey, and this Land Shall ſhew vnto you all the kindneſſes That I can make it; what&#x27;s your name? Y are verie welcome, you haue got a letter To put you to me, that has power enough To place mine Enemy here; then much more you, That are ſo farre from being ſo to me, That you nere ſaw me. Why Captaine, doe you thinke I am afraid ſheele ſteale? Why Captaine, heres no body thinkes otherwiſe. Good Bacurius: O my Lord, The kindeſt words, Ile keepe vm whilſt I liue Here in my boſome; theres no art in vm, They lie diſordred in this paper, Iuſt As hearty Nature ſpeakes vm. My Lord, no Maide longs more for any thing, or feeles more heate and cold within her breſt, then I doe now, In hope to ſee him. And ſo he will my Lord, I warrant you He will but offer, and giue me the power To take ▪ or leaue. But I am not built on ſuch wild humors, If I find time worthy, he is not leſſe, Becauſe hee ▪ s offerd. Would I might ſee him: I thanke you good my Lord. Yes. Sirs leaue me all. That were a ſtrange requeſt. Then doe not vtter it. VVhats the meaning of it? VVhy then tis idle, prethee ſpeake it out. Truſt me, I could weepe Rather, for I haue found in all thy words A ſtrange diſiointed ſorrow. His owne deſire, why credit me Thaleſtris I am no common wooer: If he ſhall wooe me, His worth may be ſuch, that I dare not ſweare I will not loue him; but if he will ſtay To haue me wooe him, I will promiſe thee He may keepe all his graces to himſelfe, And feare no rauiſhing from me. Then be feareleſſe, For if he were a thing twixt God and man, I could gaze on him; (if I knew it ſinne, To loue him) without paſſion: Dry your eyes, I ſweare you ſhall enioy him ſtill for me, I will not hinder you; but I perceiue You are not what you ſeeme: Riſe, riſe, Thaleſtris. If your right name be ſo. Why, by me You ſhall not, I will neuer doe you wrong, What good I can, I will; thinke not my birth, Or education ſuch, that I ſhould iniure A ſtranger Virgin: you are welcome hither. In company you wiſh to be commanded, But when we are alone, I ſhall be ready To be your ſeruant. Now let me die, Since I haue ſeene my Lord the King returne In ſafety, I haue ſeene all good that life ▪ Can ſhew me; I haue nere another wiſh ▪ For Heauen to grant, nor were it fit I ſhould: For I am bound to ſpend my age to come In giui g than kes that this was granted me. Alas Sir, I am fearefull, you doe looke On me, as if I were ſome loathed thing That you were finding out a way to ſhunne. I know I am vnworthy, yet not ill, Arm&#x27;d ▪ with which innocence here I will kneele, Till I am one with earth: but I will gaine Some words, and kindneſſe from you. vvill you not ſpeake at all, are you ſo farre From kind words? yet to ſaue my modeſty That muſt talke till you anſwer: doe not ſtand As you were dumbe, ſay ſomething, though it be Poyſon&#x27;d with anger that may ſtrike me dead: Sir, I will ſpeake but once: By the ſame power You make my bloud a ſtranger vnto yours; You may command me dead, and ſo much loue A ſtranger may importune, pray you doe; If this requeſt appeare too much to grant, Adopt me of ſome other Family By your vnqueſtion&#x27;d word; elſe I ſhall liue Like ſinfull iſſues that are left in ſtreetes By their regardleſſe Mothers, and no name Will be found for me. I would I were paſt ſpeaking. Pray God it doe. You are welcome Sir I thinke, but if you be not, tis paſt me To make you ſo: for I am here a ſtranger, Greater then you: we know from whence you come, But I appeare a loſt thing, and by whom Is yet vncertaine; found here in the Court, And onely ſufferd to walke vp and downe, As one not worth the owning. O you wrong me more in this, Then in your rage you did: you mocke me now. If you be in earneſt, Stand vp, and giue me but a gentle looke, And two kind words, and I ſhall be in Heauen. This is better Then if you had not frown&#x27;d, it comes to me Like mercy at the blocke; and when I leaue To ſerue you with my life, your curſe be with me. Alas Sir, why? Good Sir. Yet heare me ſpeake. Yes, good Gobrias. I haue ſent words enough, if words may winne him From his diſpleaſure, and ſuch words I hope As ſhall gaine much vpon his goodneſſe, Gobrius: Yet fearing ſince th&#x27;are many, and a womans, A poore beliefe may follow; I haue wouen As many truthes within vm to ſpeake for me, That if he be but gracious, and receiue vm. I beleeue it, Howſoeuer I am ſure I loue him dearely, So dearely, that if any thing I write For my inlarging, ſhould bege hi anger; Heauen e a itneſſe with mee, and my faith I had rather liue in omb&#x27;d here. Peace goe with you, You are a good man; my paconia VVhy are you euer ſad thus? Sir, does it pleaſe you, I ſhould ſpeake. Be it ſo, I will. I am the firſt that euer had a wrong So farre from being fit to haue redreſſe, That twas vnfit to heare it; I will backe To priſon rather, then diſquiet you, And waite till it be fit. Alas Sir, am I venom? Sir this is that I would, I am of late, Shut from the world, and why it ſhould be thus Is all I wiſh to know. Children a oo s are e e credulous; And I am both I thi ke, for I b l eue: If you diſſemble be it on your head, Ile backe vnto my riſon ▪ yet me thinkes I might be kept in ſome place where you are: For in my ſelfe finde, I know not what To call it, but it is a great deſire To ſee you often. Then I muſt endure it Sir, God keepe you. Heauen forbid. Farre be it from me to r uile the King: But it is true, that I ſhould rather chuſe To ſearch out death, that elſe would ſearch out me, And in a graue ſleepe with my innocence, Then welcome ſuch a ſinne: It is my fate, To theſe croſſe accidents I was ordaind, And muſt haue patience; and but that my eyes Haue more of woman in vm then my heart, I would not weepe: peace enter you againe. Sir, I will pray for you ▪ yet you ſhall know It is a ſullen ate that gouernes vs. For I could wiſh as heartilie as you I were no ſiſter to you ▪ I ſhould then Imbrace your lawfull loue ſooner then health. So perfectly That as it is, I nere ſhall ſway my heart To like another. There is nothing elſe But theſe alas will ſeperate vs more Then twentie worlds betwixt vs. But tis not in the power of any Force Or pollicie to conquer them. Would I could doe ſo; But I ſhall weepe out mine. Sir, I diſturbe you, And my ſelfe too; twere better I were gone: I will not be ſo fooliſh as I was. I hope not. No by Heauen. True, but for another: for the truth— But is there nothing elſe That we may doe, but onely walke; me thinkes Brothers and ſiſters lawfully may kiſſe. If you haue any mercy, let me goe To priſon, to my death, to any thing: I feele a ſinne growing vpon my bloud, Worſe then all theſe, hotter I feare then yours. Flie it for Gods ſake. VVhy kneele you To me that am your vaſſall? Alas, what can I grant you? VVhat I can I will. Is that all? More willingly, then I would draw this ayre.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A King and No King</div><div class="body">Arbaces has been away from his kingdom for many years fighting a war with Armenia, which he has just won. He has received reports from his Lord Protector, Gobrias, about the virtue and accomplishments of his younger sister Panthea, whom he has not seen since she was nine years old. He offers her hand in marriage to Tigranes, the vanquished Armenian King, but Tigranes demurs. Arbaces takes him back to Iberia to see her for himself. Tigranes’ objection lies in the fact that he already has a girlfriend, Spaconia, and he bribes the cowardly Bessus to bring her along and place her in Panthea’s household. Once there, she begs Panthea not to marry Tigranes, and Panthea agrees. Arane, Arbaces’ mother, has been trying to assassinate him since he came to the throne. Another attempt is foiled, but he pardons her when he returns in triumph. She clearly has an ulterior motive which is known to Gobrias, but both are discreet about its precise nature. Arbaces’ first meeting with Panthea as an adult proves unsettling: he falls in love with her. So does Tigranes. Identifying a rival, Arbaces imprisons him. Torn between desire and conscience, he also imprisons Panthea. Panthea gives Spaconia a token authorizing her to visit Tigranes in prison. He rejects her, but Arbaces finds them together and assumes that she is a go-between. Gobrias importunes him to release Panthea, who persuades him that his suspicions are unfounded: she loves him, and would act upon that love if to do so were not incestuous. The Armenians send Spaconia’s father as an ambassador to negotiate for Tigranes’ release. He believes his daughter has eloped with Bessus, but his denunciations of her bring Tigranes to his senses: he will make Spaconia his Queen. When Arbaces decides to kill Gobrias for corrupting him to incest, the truth comes out. Arbaces is not of royal blood. The old King married Arane when he was old and impotent, and, fearful about the succession, Gobrias and Arane conspired to produce an heir: Gobrias gave Arane his new-born son, and she faked his birth. Later, it proved that the King was not so impotent after all, and he died leaving Arane pregnant with Panthea, but by the time this was known, the young Arbaces had already succeeded to the throne. Since then, Gobrias and Arane have both been trying to put matters to rights, Arane with her murder plots and Gobrias by encouraging Arbaces to marry his putative sister and so establish the legitimacy of his teign. Arbaces publicly announces…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

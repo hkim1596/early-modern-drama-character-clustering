@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ING in The Devil Is an Ass · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ING</span>
+</nav>
+
+<h1>ING</h1>
+<p class="lede">in <em>The Devil Is an Ass</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>874</td></tr>
+<tr><th>Characters</th><td>4600</td></tr>
+<tr><th>BritDrama no.</th><td>1810</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">You know. And hee&#x27;s a pleasant wit! will hurt Nothing you purpose. Then, he&#x27;is of opinion, That Robinson might want audacity, She being such a gallant. Now, hee <mark>has</mark> beene, In Spaine, and knowes the fashions there; and can Discourse; and being but mirth (hee saies) leaue much, To his care: For that, He <mark>has</mark> the brauest deuice!</div>
+<div class="excerpt">giues him the Play- bill. I&#x27;, had forgot to gi&#x27;t you. Trust not your Ingine, Breake me to pieces else, as you would doe A rotten Crane, or an old rusty Iacke, That <mark>has</mark> not one true wheele in him. Doe but talke with him. No Sir, the Wit, the Braine, the great Proiector, I told you of, is newly come to towne. I ha&#x27;brought him (H&#x27;is</div>
+<div class="excerpt">and compell&#x27;d &#x27;hem, To enter such great bonds, they dare not practice. O, Sir! you&#x27;ll grow the richer for the rest. By my meanes? You do not know, S r , What he <mark>has</mark>: and by what arts! A monei&#x27;d man, Sir, And is as great with your Almanack-Men, as you are! You make the other wait too long, here: And hee is extreme punctuall.</div>
+<div class="excerpt">comes now from Court. But heere him speake: Minister matter to him, and then tell mee. S Ir, money&#x27;s a whore, a bawd, a drudge; Fit to runne out on errands: Let her <mark>goe</mark>. Via pecunia ! when she&#x27;s runne and gone, And fled and dead; then will I fetch her, againe, With Aqua-vitae, out of an old Hogs-head! While there are lees of wine,</div>
+<div class="excerpt">baudy: and send frolicks! o! It would haue burst your buttons, or not left you A seame. O Sir! and dresses himselfe, the best! beyond Forty o&#x27;your very Ladies ! <mark>did</mark> you ne&#x27;r see him? Sir, the young Gentleman I tell you of, can command him. Shall I attempt it? Excellent well! Here is the Gentleman, Sir. VVill vndertake t&#x27;himselfe.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I&#x27;ll warrant you for halfe a piece. It was neuer made, Sir, For three score pound, I assure you: &#x27;Twill yeeld thirty. The plush, Sir, cost three pound, ten shillings a yard! And then the lace, and veluet. ô here&#x27;s the bill, S r . Hee giues him the Play- bill. I&#x27;, had forgot to gi&#x27;t you. Trust not your Ingine, Breake me to pieces else, as you would doe A rotten Crane, or an old rusty Iacke, That has not one true wheele in him. Doe but talke with him. No Sir, the Wit, the Braine, the great Proiector, I told you of, is newly come to towne. I ha&#x27;brought him (H&#x27;is without) Ere hee pull&#x27;d off his boots, Sir, but so follow&#x27;d, For businesses: Why, one Sir, that proiects Wayes to enrich men, or to make &#x27;hem great, By suites, by marriages, by vndertakings: According as hee sees they humour it. I thinke he can, Sir. (To tell you true) but, you doe know, of late, The State hath tane such note of &#x27;hem, and compell&#x27;d &#x27;hem, To enter such great bonds, they dare not practice. O, Sir! you&#x27;ll grow the richer for the rest. By my meanes? You do not know, S r , What he has: and by what arts! A monei&#x27;d man, Sir, And is as great with your Almanack-Men, as you are! You make the other wait too long, here: And hee is extreme punctuall. Sir, you shall see: He&#x27;is in his riding suit, As hee comes now from Court. But heere him speake: Minister matter to him, and then tell mee. S Ir, money&#x27;s a whore, a bawd, a drudge; Fit to runne out on errands: Let her goe. Via pecunia ! when she&#x27;s runne and gone, And fled and dead; then will I fetch her, againe, With Aqua-vitae, out of an old Hogs-head! While there are lees of wine, or dregs of beere, I&#x27;le neuer want her! Coyne her out of cobwebs, Dust, but I&#x27;ll haue her! Raise wooll vpon egge-shells, Sir, and make grasse grow out o&#x27; marro-bones. To make her come. (Commend mee to your Mistresse, Say, let the thousand pound but be had ready, To a waiter. And it is done) I would but see the creature (Of flesh, and blood) the man, the prince, indeed, That could imploy so many millions As I would help him to. Sir. Harken? why S r , do you doubt his eares? Alas! You doe not know Master Fitz-dottrel. Good, S r . Thorowout England ? A gallant tract Of land it is! Of the Kings glouer? Sir, I doe know you can. Is not that strange, S r , to make wine of raisins? But, how, S r , if you raise the other commodity, Raysin s? Sir, of what dispatch, He is! Do you marke? Yes, Sir, he was writing This morning, very hard. Is it past? O Sir! your worship takes Infinit paines. And such a blessing followes it· That&#x27;s sure, Sir. Yes; It goes like Groen-land, Sir, if you marke it. He saies true. That was your bed-fellow, The other moneth. Sir. Doe you remember the conceipt you had— O&#x27;the Spanish gowne, at home? Why, Sir your best will be one o&#x27;the players! What if they doe? the iest will brooke the Stage. But, there be some of&#x27;hem Are very honest Lads. There&#x27;s Dicke Robinson A very pretty fellow, and comes often To a Gentlemans chamber, a friends of mine. We had The merriest supper of it there, one night, The Gentlemans Land-lady invited him To&#x27;a Gossips feast, Now, he Sir brought Dick Robinson, Drest like a Lawyers wife, amongst &#x27;hem all; (I lent him cloathes) but, to see him behaue it; And lay the law; and carue; and drinke vnto &#x27;hem; And then talke baudy: and send frolicks! o! It would haue burst your buttons, or not left you A seame. O Sir! and dresses himselfe, the best! beyond Forty o&#x27;your very Ladies ! did you ne&#x27;r see him? Sir, the young Gentleman I tell you of, can command him. Shall I attempt it? Excellent well! Here is the Gentleman, Sir. VVill vndertake t&#x27;himselfe. I haue acquainted him, VVhy, Robinson would ha&#x27;told him, You know. And hee&#x27;s a pleasant wit! will hurt Nothing you purpose. Then, he&#x27;is of opinion, That Robinson might want audacity, She being such a gallant. Now, hee has beene, In Spaine, and knowes the fashions there; and can Discourse; and being but mirth (hee saies) leaue much, To his care: For that, He has the brauest deuice! He excepts at his sta ture. (you&#x27;ll loue him for&#x27;t) To say, he weares Cioppinos: and they doe so In Spaine. And Robinson&#x27;s as tall, as hee. Euery iot. Pray you goe to him, then, Sir, and salute him. At my house, Sir. The foole&#x27;s in sight, Dottrel. Yes, boy, till the Session, That so thou mayest haue a triumphall egression. No, Child, in a Carre, The charriot of Triumph, which most of them are. And in the meane time, to be greazy, and bouzy, And nasty, and filthy, and ragged and louzy, With dam&#x27;n me, renounce me, and all the fine phrases; That bring, vnto Tiborne, the plentifull gazes.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Devil Is an Ass</div><div class="body">. _ Pug the junior devil is keen to visit earth. Satan svarns him that his ideas of effective devilment are half a century out of date, but grants him leave to spend the day in London, made flesh and subject to all the frailties and limitations of the human body. A ready-made body is available, in the shape of a recently hanged cutpurse, but Pug will have to make his own arrangements for clothes. Another proviso is that he must serve the first man he meets. Unfortunately for Pug, he turns out to be a twit: Fabian Fitzdottrel. Fitzdottrel longs to see the devil, and agrees to accept Pug as an unpaid servant because he gives his mame as Devil. The same obsession makes Fitzdottrel eager to see a new play, The Devil is an Ass, but he needs some finery to show off as he sits on the stage. Wittipol is eager to sleep with Fitzdottrel’s wife, and offers him a suitable cloak in exchange for fifteen minutes’ uninterrupted conversation with the lady. He uses the time to proposition her, and engages her interest even though she has been forbidden to reply. Fitzdottrel is introduced to Merecraft, a purveyor of imaginative financial schemes, who offers to make him rich and a duke through land reclamation in the eastern fens. Fitzdottrel agrees to meet with him, leaving Pug to ensure that nobody attempts to visit his wife. Pug instead brings her a follow-up message from Wittipol, then makes advances to her on his own account, but is caught by Fitzdottrel and gets a beating. Wittipol’s friend Manly has a room which abuts Mistress Fitzdottrel’s gallery, which he uses to have a second meeting with her. This is much more intimate than the first, despite being conducted through the windows of adjacent buildings. Pug gets back into favour by tipping off Fitzdottrel, who puts a stop to the assignation and threatens to take up another woman to share his expectations and be his Duchess. Merecraft suggests that what Fitzdottrel’s wife needs is to be taught proper manners, and recommends a widow who knows the ways of the Spanish court, who might be persuaded to undertake the task if sent an expensive ring as a gift, and who is entirely fictitious. His accomplice Engine proposes hiring an actor to impersonate her, but Merecraft worries that his business methods might be leaked to a playwright and end up on stage; in the event, Engine finds a gentleman to take on the role instead, who happens to be Wittipol. Fitzdottrel cannot get his wife to part with a ring of her own, so…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

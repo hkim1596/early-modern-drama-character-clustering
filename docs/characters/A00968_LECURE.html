@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LECURE in Thierry and Theodoret · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LECURE</span>
+</nav>
+
+<h1>LECURE</h1>
+<p class="lede">in <em>Thierry and Theodoret</em> — AnonymousFletcher, JohnMassinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1621</td></tr>
+<tr><th>Words</th><td>695</td></tr>
+<tr><th>Characters</th><td>3675</td></tr>
+<tr><th>BritDrama no.</th><td>1848</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">And then If she haue any part of <mark>woman</mark> in her, She&#x27;le or fly out, or at least giue occasion Of such a breach which 〈◊〉 can be made vp, Since he that to all else <mark>did</mark> neuer faile Of as much as could be performide by man, Proues only ice to her. I haue it ready. You honor me. Feare not. Vnto your wish, I warrant you, For this</div>
+<div class="excerpt">carefull of the proiect cast, To raise Protaldies credit. His houres vpon the stroake. The gentleman is within your reach Sir. Doest thinke Lefortes sure enough? Thou hast cast a figure which shall raise thee, direct my haire a little; and in my likenes to him reade a fortune suiting thy largest hopes. I haue profitabler vse in hand,</div>
+<div class="excerpt">cast a figure which shall raise thee, direct my haire a little; and in my likenes to him reade a fortune suiting thy largest hopes. I haue profitabler vse in hand, hast to the Queene, And tell her how you left me chang&#x27;d. Who would not serue this vertuous actiue Queene? She that loues mischiefe &#x27;boue the man that does it, And</div>
+<div class="excerpt">falling with most ease Of any doubt you could haue named, he is a Prince Whose fortune you enquire. He had a dukedome lately falne vnto him By one call&#x27;d brother, who <mark>has</mark> left a daughter. Heires, yes he shall haue heires. Nor thou, I neither can nor will Giue farther knowledge to thee. Your grace doth wrong your stars; if this be</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I feare not gelding As long as she holds this way. But what safety Madam Finde you in staying here? This place you will. For me I am your owne, nor since I first Knew what it was to serue you, haue remembred I had a soule, but such a one whose essence Depended wholy on your Highnesse pleasure, And therefore Madam--- She meanes on her. Amazement leaue me, &#x27;tis hee. The beadle will resolue you, for I cannot, There is something that more neere concernes myselfe, That calls vpon me. Which if You had preuented, or would teach vs how They might againe be seuerde, we could easily Remoue all other hindrances, that stop The passage of your pleasures. If so, from whence Growes your affliction? Giue me leaue, If my art faile me not, I haue thought on A speeding proiect. The Lady is faire. And young. And loues the King with equall ordor. VVell then, what thinke you if I make a drinke VVhich giuen vnto him on the bridall night, Shall for fiue dayes so rob his faculties Of all ability to pay that duty, VVhich new made wiues expect, that she shall sweare She is not matchde to a man. And then If she haue any part of woman in her, She&#x27;le or fly out, or at least giue occasion Of such a breach which 〈◊〉 can be made vp, Since he that to all else did neuer faile Of as much as could be performide by man, Proues only ice to her. I haue it ready. You honor me. Feare not. Vnto your wish, I warrant you, For this night I durst trust him with my mother. My life vpon it. The ground answeres your purpose, the conueiance Being secure and easie, falling iust Behind the state set for Theodoret. Who constellated your faire birth. I left him carefull of the proiect cast, To raise Protaldies credit. His houres vpon the stroake. The gentleman is within your reach Sir. Doest thinke Lefortes sure enough? Thou hast cast a figure which shall raise thee, direct my haire a little; and in my likenes to him reade a fortune suiting thy largest hopes. I haue profitabler vse in hand, hast to the Queene, And tell her how you left me chang&#x27;d. Who would not serue this vertuous actiue Queene? She that loues mischiefe &#x27;boue the man that does it, And him aboue her pleasure, yet knowes no heauen else: The same to you, you bring Sir. A resolution falling with most ease Of any doubt you could haue named, he is a Prince Whose fortune you enquire. He had a dukedome lately falne vnto him By one call&#x27;d brother, who has left a daughter. Heires, yes he shall haue heires. Nor thou, I neither can nor will Giue farther knowledge to thee. Your grace doth wrong your stars; if this be yours, You may haue children. You may haue fruitefull issue. It was the fatall meanes first strooke my bloud With the cold hand of wonder, when I read it, Printed vpon your birth. We that behold the sad aspects of heauen, Leading sence blinded, men feele griese enough To know, though not to speake their miseries. Then thus, The first of femalls which your eye shall meete Before the sun next rise, comming from out The Temple of Diana, being slaine, you liue Father of many sonnes. If in the supposition Of her death in whose life you die, you aske me, I thinke you are safe. I haue vsde All meanes to make her so, I saw him waiting At the Temple doore, and vsde such art within, That only she of all her sexe, was first Giuen vp vnto his fury. If you are so resolude, I haue prouided A meanes to ship him hence: looke vpon this, But touch it sparingly, for this once vsde, Say but to drie a teare, will keepe the eyelidde From closing, vntill death performe that office. Nor will be anything without you. The King. Madam. He&#x27;s past all cure, that only touch is death. Aboue the helpe of phisicke. Our seruice.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Thierry and Theodoret</div><div class="body">up her attempts lascivious to make his mother life and enter holy Brunhild orders. give Her · . 60 I 1848. Thierry, King of France, and his Brother Theodoret 1617 response is to abscond to her other son, Thierrv, whom she persuades to appoint her lover, Protaldi, tda senior military command. Theodoret follows her and Thierry faces a conflict of loyalty, which he resolves in his brother&#x27;s favour. With Thierry&#x27;s agreement, Martel demonstrates comprehensively that Protaldi is a coward, first by tricking him into giving up his sword without a fight, then showing to what lengths he will go to avoid having to fight a duel. Brunhild fears that Thierry&#x27;s bride, Ordella, will eclipse her in preeminence, so at the wedding banquet she gives Thierry a potion that makes him impotent that night. Ordella is very understanding , but Thierry is concerned about the need to beget an heir, so Brunhild suggests he should consult a local hermit and astrologer. Her parasite, Lecure, impersonates the wise man, and tells Thierry that he will regain his potency ifhe kills the first female person he encounters the next day, whoever she may be. Lecure arranges for this to be Ordella herself. Not recognizing her in her veil, Thierry explains why she must die, and she agrees; but he cannot bring himself to go through with it when he realizes who she is. Martel dissuades Ordella from loyally committing suicide, and, suspecting a plot, has her pretend to be dead in order to smoke it out Meanwhile Brunhild spreads a rumour that Theodoret is illegitimate and has him secretly murdered by Protaldi at the continuing wedding revels. Believing that Theodoret was not his brother and that Ordella is dead, Thierry offers to make amends by marrying Memberge, Theodoret&#x27;s daughter. Brunhild is forced to admit her lies in order to prevent an incestuous marriage. She gives Thierry a poisoned handkerchief, which kills him; Martel brings Ordella to his deathbed. Brunhild admits complicity in his murder, and is sentenced to remain awake for the rest of her life; disturbed by the sight of Protaldi being tortured to death, she commits suicide. Thierry and Ordella die together , and Martel becomes King of France.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

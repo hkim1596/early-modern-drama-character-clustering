@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LOD in The Wedding · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LOD</span>
+</nav>
+
+<h1>LOD</h1>
+<p class="lede">in <em>The Wedding</em> — Shirley, James</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1629</td></tr>
+<tr><th>Words</th><td>1876</td></tr>
+<tr><th>Characters</th><td>9555</td></tr>
+<tr><th>BritDrama no.</th><td>2184</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">transported hither, and Be drunke insteed of French wines: For my part, I am but one. This citadell may endure as long a siege As another, if the pride of my flesh <mark>must</mark> be Puld downe, farewell it t&#x27;<mark>has</mark> done me Seruice this forty yeare: let it <mark>goe</mark>. Yes Sir Iohn, I saw him but — twas three dayes agoe. I haue no stomacke sir to your</div>
+<div class="excerpt">with in three furlongs of a wind-mill, ile set one a top of Paules to watch thee—sha&#x27;t forfeit thy soule, and ile cancell thy body worse then any debtor of thine <mark>did</mark> his obligation—hee&#x27;s gone—and now I thinke vpon the matter, I haue somewhat the worst on&#x27;t, for if I should kill him, I shall neuer <mark>bee</mark> able to flye, and hee <mark>has</mark></div>
+<div class="excerpt">Where is Sir Iohn Belfare? I congratulate.— Yes I saw him, but— I kn w not how he does, Where is the Lady that <mark>must</mark> be vndone to night, Your daughter? The newes? Why wo&#x27;d yee know the newes? tis none a&#x27;ch best. They say for certayne, There were fou e and twenty Colliers cast</div>
+<div class="excerpt">worse newes broad. They say that Canary sacke, m st dance Agen to the Apothecaries, and be sold for Physicke, in hum-glasses, and thin bles ▪ that the Spaw-water <mark>must</mark> be transported hither, and Be drunke insteed of French wines: For my part, I am but one. This citadell may endure as long a siege As another, if the pride of my</div>
+<div class="excerpt">good qualities, if sh want any: I ha tra uail&#x27;d for em. The Langu ges. Diggon a cam ag. Pocas palabras. Troth I haue such a confusion of languages in my head, you <mark>must</mark> e&#x27;en take em as they come. Serge-dubois, —Calli-mancho, et Perpetu-ana. Me cie Madame— Salutes Iane. I cannot tell how you stand affected, but if you can loue a</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Where is Sir Iohn Belfare? I congratulate.— Yes I saw him, but— I kn w not how he does, Where is the Lady that must be vndone to night, Your daughter? The newes? Why wo&#x27;d yee know the newes? tis none a&#x27;ch best. They say for certayne, There were fou e and twenty Colliers cast away, Comming from New-Castle tis cold newes ith&#x27; Citty, But there is worse newes broad. They say that Canary sacke, m st dance Agen to the Apothecaries, and be sold for Physicke, in hum-glasses, and thin bles ▪ that the Spaw-water must be transported hither, and Be drunke insteed of French wines: For my part, I am but one. This citadell may endure as long a siege As another, if the pride of my flesh must be Puld downe, farewell it t&#x27;has done me Seruice this forty yeare: let it goe. Yes Sir Iohn, I saw him but — twas three dayes agoe. I haue no stomacke sir to your acquaintance, You are a thought too leane. Loosing Lodam I. I do giue you great thanke, and do meane to dance at your Wedding for&#x27;t, I doe maruaile Master Beauford is not earlier, I shud ha beene here with musique Lady, and haue fidled you too, before you were vp, these leane Louers, ha nothing in em, slow men of London. Who&#x27;s this? shee has a mortall eye. I do fore-see a fall of this tower already, Loue beginnes to vnder-mine it. Mistresse, a word in priuate. Good sir Iohn, ile waite vpon you, It is dinner time. Exeunt. Sir I doe loue your daughter:— I thought it necessary to acquaint you first, because I would go about the businesse iu dicially. Ile promise you one thing. Ile bring your daughter no wealth. But I will bring her that which is greater then wealth. My selfe. Nay, ile bring her more. I can bring her good qualities, if sh want any: I ha tra uail&#x27;d for em. The Langu ges. Diggon a cam ag. Pocas palabras. Troth I haue such a confusion of languages in my head, you must e&#x27;en take em as they come. Serge-dubois, —Calli-mancho, et Perpetu-ana. Me cie Madame— Salutes Iane. I cannot tell how you stand affected, but if you can loue a man, I know not what is wanting, greatnesse is a thing that your wisest Ladies haue an itch after: for my owne part I was ne uer in loue before, and if you haue me not, neuer wilbee agen. Thinke on&#x27;t betweene this and after dinner, I will stay o&#x27;purpose for your answere. I wod not be kept in expectation aboue an houre, for loue is worse then a Lent to me, and fasting is a thing my flesh abhorres, if my do blet be not fi &#x27;d, I know who fa es the worse for&#x27;t. I would keepe my flesh to sweare by, and if you and I cannot agree vpon the matter, I would loose nothing by you. Euer while you liue, a fat man, and a man of resolution goe together: I doe not commend my selfe, but there are no such fiery things in nature. Tis prou&#x27;d, put em to my action, and see, if they do not smoake it, they are men of mettle, and the greatest melters in the World, one hot seruice makes em rost, and they haue enough in em to bast a hundred — you may take a leane man, marry your selfe to famine, and beg for a great belly, you see what be came of sir Iohns daughter: —come I would wish you be well aduis&#x27;d, there are more commodities in me, then you are aware of, if you and I couple, you shall fare like an Empresse. Not a token. I haue a priuiledge: — I was at the Ta uerne tother day, i&#x27;the next roome I smelt hot Venison, I sent but a D awer to tell the Company, one in the house with a great belly, long&#x27;d for a corner, and I had halfe a pasty sent me immediately: I will hold intelligence with all the Cookes i&#x27;the Towne, and what dainty, but I haue greatnesse enough to command? Next time you ride post, wind your horne, that one may get out a&#x27;the way. Let him take heed another time. Let me alone, no-body hold me. Whorson mole-catcher — Come not neere me Weezel. Agen shall I kicke thee to peeces. For this time I am content with kicking of thee. You spider catcher, ha you not enough? you see I doe not draw. Meete thee by this flesh, if thou dost but prouoke me: —you do not challenge me—do not—d&#x27;ee long to be minc&#x27;d? Say but such another word. Sirra Nouerint, if I can but prooue, thou dost come with in three furlongs of a wind-mill, ile set one a top of Paules to watch thee—sha&#x27;t forfeit thy soule, and ile cancell thy body worse then any debtor of thine did his obligation—hee&#x27;s gone—and now I thinke vpon the matter, I haue somewhat the worst on&#x27;t, for if I should kill him, I shall neuer bee able to flye, and hee has left a peece of his scull, I thinke, in my shoulder — whither am I bound to meet him, or no? I will consult some o&#x27;the sword men, and know whether it be a competent challenge— Cameleon. Has the Rat, your master that was, any spirit in him? Saist thou so? I will meet him then, and hew him to peeces. Tis granted, follow me, ile cut him vp I warrant thee. Exe. Cam, see and if he be come yet, bring mee word hither. Is there so? lets steale way before we be discouered, I do not like when m n lye p rdue, beside, there may be three or foure of a heape, for ought we know: lets backe I say. Hang him iade, I knew it could bee nothing else: is the coast cleare Cameleon? Fiue or sixe: treachery! an ambush, tis valour to runne. And yet, thou wo &#x27;st perswade me, twas an ambush for me. Come thou wert afraide, and the truth were knowne; but be valiant: I haue a sword; and if I doe draw ▪ it shall—be against my will: is he not come yet? If he come, some body sha l smell ll a uouredly, re he and I part:—ha! by this sh tis he; Cam, go ell him I am sicke. A brace of bullets to my heare. I haue expected you this two hour s, which is more then I had one to all the men I ha fought withall, since I slew the high Germaine in Tutle. Draw Spider. Con erie me no conferrings: I will haue no more mercy on thee, then an Infidell: and t&#x27;hadst beene wise, thou mightest ha kept thee at home, with thy melanchol y Cat, that keepes thy Study, with whom thou art in Commons, and doest feede on Rats a Sundayes; then perhaps a legge or an arme, with thy Iewes eares had satisfied me, when I met thee next: draw I say, why doest not draw? What with words? Sirra Tartar, my Foxe shall scratch thy guts out, which I will send to the Beare-Garden: Doest heare Vsuring dog, ile tell thee my resolution. I doe meane to giue thee as many Wounds before I kill thee, as a Surgeons signe has; and when I am weary of skar rifying thy flesh, ile bore thy heart — which done: mark what I say; I will diuide thy quarters: obserue and tremble; then will I ha thee put into a tub or Barrell, and powder thee, and after three dayes in pickle, this thing that was thy seruant, this Caco demon whom thou didst statue once, Cameleon, shall in reuenge of his pityfull famine, eate thee vp, deuoure thee, and grow fat i&#x27;the ribs agen with thy flesh. Mammon — Which is more, after thou art dead, I wonot leaue thy soule quiet, ile torment thy Ghost: for I will streight to thy house where I will breake open thy Chests, lin&#x27;d with white and yellow mettle, which I will cast away on pious vses: then summon all thy debrors by a Drum, and giue em in, all their Bills, Bonds, E uidences, Indentures, Defesances, Morgages, Statutes. And there were a million on em. Draw I say. His sword appeares Cam. Pox a&#x27;my dulues: dost heare scoundrell, if I should in cline to mercy, what submission? ha? let mee see — I, I, liue, thou shalt vpon thy knees confesse thy rascality, and aske me for giuenesse in priuate, in the presence of mistresse Iane, and the twelue Companies which at thy charge shalbe feasted that day, in More-fields. Then say when thou art dead, thou wer offred conditions for thy life: Cam, thou shalt feed, and feed high Cameleon, — let me see; —come tis my foolish nature to ha compassion o&#x27;thee, I know th&#x27;art sorry, shat onely confesse thy selfe a rascall vnder thy hand then, and stay my in ended reuenge which else would ha beene immortall. Oh Cam. — How? Is this Rawbone the Coward? Doest heare thing— consider what thou doest, come among friends, thy word shall bee as good as a note vnder thy nd, 〈◊〉 not my fury—wod I were off, with asking him forgiue nesse. Hold: I demaund a par e. Tis not for your reputation to deale with a Gentle-man vpon vnequall termes. Examine our bodies: I take it I am the fairer marke, tis a disaduantage: feede til you be as fat as I, and ile fight w&#x27;ee as I am a Gentle-man. Hold, murder, murder. Captayne, shud a come but a little sooner, and ha seene good sport, by this flesh hee came vp handsomely to me; a pritty sparke faith Captay e. But if you be his friend, runne for a Surgeon for him, I haue hurt him vnder the short ribs, beside a cut or two ith&#x27;shoul der: would I were in a Millars sacke yonder, though I were ground for&#x27;t, to be quit onem. I were best deliuer my sword ere I be compeld too&#x27;t— a pritty fellow, and one that will make a souldier, because I see th&#x27;ast a spirit, and c nst vse thy Weapon, ile bestow a dull blade vppon thee Squirrell. In loue in loue Captaine, hea&#x27;s a sparke a my reputation, and worthy your acquaintance. When I am dis-arm&#x27;d. What? when I haue geent thee: tis at thy seruice, and it were a whole Cutlers shop: be confident. I will accompany thee, th&#x27;art noble, and fit for my con uersation, honest master Rawbone — a poxe vpon you. Lady 〈…〉 by this time, you are able to distinguish A difference 〈◊〉 Ra bone and my selfe. I allow it ▪ and will dine with you. How? I knew, by instinct, I had no quarell to thee: Art thou Rawbone? No, but thou art disguis&#x27;d shrewdly. I to dinner bullies. Say you so, let my foo e be in too then. I, I, we may come backe, and take him napping.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Wedding</div><div class="body">Beauford is to marry Sir John Belfare’s daughter, Gratiana, but on the eve of the wedding his kinsman Marwood tells him that she is unchaste: he himself has slept with her. Beauford fights a duel with him in the park; Marwood is wounded, but still insists that his story is true. Beauford sends a surgeon to him, but the body disappears before he arrives, taken away for treatment by the park gamekeeper’s wife. Beauford accuses and jilts Gratiana on the day of the wedding. Questioned by. Beauford’s friend Captain Landby, Gratiana insists that she is a virgin, and he offers to help vindicate her. At his instigation, she writes to Beauford pretending to have drowned herself, and shuts herself away in the house of Landby’s uncle, Justice Landby. Milisent, a boy servant, tells Gratiana that Marwood has died insisting on the veracity of his accusation: he slept with Gratiana with the connivance of her guardian Cardona. Milisent then tells Beauford that Marwood was mistaken: Gratiana is innocent, and Cardona is to blame. The boy also claims to have brought him Marwood’s body, but the coffin actually contains the living Gratiana, and the lovers are reconciled. Beauford is arrested for Marwood’s murder arid brought before Justice Landby. Belfare rushes to the judge&#x27;s house to lay an additional accusation for the rourder of the missing Gratiana, only to find her there alive. The other murder charge proves. equally iiitounded: Marwood too is present in disguise. Cardona admits that she arranged an -assignation between Marwood and Gratiana, but substituted her 1626 own daughter Lucibel, who subsequently disappeared. She too is present: she took on a male identity and became Milisent. Marwood agrees to marry her, and Beauford and Gratiana resume their engagement. In the sub-plot, Justice Landby encourages his daughter Jane to consider two inappropriate suitors, the thin Rawbone and the obese Loadum, in order to test her judgement. She is already in love with Haver, who has got himself a job as Rawbone’s servant in order to have access to her. Loadum and Rawbone consider fighting a duel over Jane; Rawbone agrees when Haver offers to fight in his place, while Loadum is persuaded upon learning that Rawbone is not considered to be much of a duellist - so he gets a surprise when his opponent, Haver in disguise, proves ready and able to fight. Justice Landby finds a love- letter from Haver in Jane’s prayer book and, disapproving of a marriage to the impecunious Haver, decides…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

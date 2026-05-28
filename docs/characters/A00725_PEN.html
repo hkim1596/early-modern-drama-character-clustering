@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PEN in A Woman Is a Weathercock · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PEN</span>
+</nav>
+
+<h1>PEN</h1>
+<p class="lede">in <em>A Woman Is a Weathercock</em> — Field, Nathan</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1612</td></tr>
+<tr><th>Words</th><td>1857</td></tr>
+<tr><th>Characters</th><td>9591</td></tr>
+<tr><th>BritDrama no.</th><td>1599</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">worke, and can no more Make man so louelie, being diseasd with loue. You are the worlds Minion, of a little man; Ile say no more, I would not be a <mark>woman</mark>, For all <mark>has</mark> beene got by them. Hart, I should follow you like a yong rank whore, That runs proud for her loue, plucke you by &#x27;th sleeue, Who ere were with you, in the open</div>
+<div class="excerpt">Snake) casts a sute euerie quarter, which I slip into; therfore, thou art worse then mad, if thou wilt cast <mark>away</mark> thy self vpon me No by my troth: but tell mee this, <mark>has</mark> not Sir A braham bin familiar with you. Couldst <mark>bee</mark> content to marrie him. Nay, and there ha beene any iot of the thing, be side that, Ile warrant thee lay the</div>
+<div class="excerpt">Heauen vnmatcheable, for none fit but Lords, And yet for no Lord fit, but my good Lord. Strange: No, not strange at all, By Cupid, there&#x27;s no <mark>woman</mark> in the world But <mark>must</mark> needs loue you, doate, go madde for you; If you vouchsafe reflection; Tis a thing That does it home: thus much reflection Catches em vp by Dozens, like wilde foule.</div>
+<div class="excerpt">What&#x27;s the matter. By me? why by me? a good iest ifaith. Pray do not sweare, I do not vrge you too&#x27;t; Zoones, now I am vndone; you walke somewhat rounde, Sweet-hart, <mark>has</mark> Nobody bin tampering with you els, think ont, for by this light, I am not worth the estate of an Ap ple wife, I do liue vpon commending my Lord, the Lorde of hoasts</div>
+<div class="excerpt">thing, be side that, Ile warrant thee lay the childe to him, stand stif ly to it, leaue the rest to me, By that Foole thou shalt saue thy honestie. Exeunt And I <mark>must</mark> needs say as my Lord saies. My Lords for you for that too: the onely, Bowler in London, that is not a Church warden. Who my Lord? the only Fencer in Christendom,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Good morrow my thrice honor&#x27;d &amp; heroick Lord. I thanke your Lordship. Foregod this Dublet sits in print my Lord. And the Hose excellent; the Pickadell rare. Your Honor sayes true; their Knauerie will be dis cern&#x27;d by day-light, But thou maist watch at night with bill in hand, And no man dares finde fault with it. Scarse seauen my Lord. Why to all women, like Diana among hir Nimphs. A beautie of that purenesse and delight, That none is worthy of her but my Lord, My Honorable Lord. By Heauen vnmatcheable, for none fit but Lords, And yet for no Lord fit, but my good Lord. Strange: No, not strange at all, By Cupid, there&#x27;s no woman in the world But must needs loue you, doate, go madde for you; If you vouchsafe reflection; Tis a thing That does it home: thus much reflection Catches em vp by Dozens, like wilde foule. Nature her selfe hauing made you, fell sicke In loue with her owne worke, and can no more Make man so louelie, being diseasd with loue. You are the worlds Minion, of a little man; Ile say no more, I would not be a woman, For all has beene got by them. Hart, I should follow you like a yong rank whore, That runs proud for her loue, plucke you by &#x27;th sleeue, Who ere were with you, in the open streete, With the impudence of a drunken Oyster-wise, Put on my fighting wastcoate, and the Ruffe That feares no tearing, batter downe the windowes VVwhere I suspected you might lie all night, Scratch faces, like a VVilde-Cat of Pict-hatch. Narcissus by this hand, had farre lesse cause. How do I know, I speake my Conscience. His beauties were but shaddowes to my Lord, VVhy Boy his presence would enkindle sin, And longing thoughts in a deuoted Nun: Oh foote, Oh Legge, oh Hand, oh body, face, By Ioue it is a little man of wax. My Lorde tels you true Captaine, it woulde haue sau&#x27;d meat. Faith I know not, Mistris Kate likes me not, shee sayes I speake as if I had a pudding in my mouth, and I aunswered her, If I had it was a white pudding, and then I was the better arm&#x27;d for a woman; for I had a case about mee, so one laught, and the other eried fie: the third saide I was a Bawdy Captaine, and there was all I could get of them. Haue you not heard my Lord, or de&#x27;e not know. Then you know nothing that is worth the know ing. There&#x27;s a young Merchant, a late Sutor, that deals by wholesale, and Heire to Land, well descended, of wor thy education, beholding to Nature. And you may kill the Merchant with a looke, I&#x27;de threaten him to death: my honor&#x27;d Lord Shall be your friend, goe too, I say he shall, You shall haue his good word, shall he my Lord? Law, Tis the worthiest Lord in Christendome: Oh Captaine, for some fourscore braue Spirits, once To follow such a Lord in some attempt. It is Sir Innocent Ninne, that&#x27;s his Lady, And that M. Abraham their onely sonne. So tis said Captaine. One may see by her Nose, what Pottage shee loues. Gods precious: Saue you Mistris Wagtaile. Oh, my Lord. I faith my Lord, such Venison as a Beare is. If you crosse him, hee&#x27;l blow you vp with Gunpowder My Lord shall be your warrant. Looke you my Lorde; There&#x27;s Lucida weares the Willow Garland, for you; and will so go to Church I hear: and looke you Captaine, that&#x27;s the Merchant. Nay, Gods will, you are too blame indeede, if my Lord say so. Life my Lord, you had best marrie em all three, Theyle neuer be content else. I know he is in loue, by his Verse vaine. Young Scudmore. Ile aske my Lord: What is the matter Sir. Pish, nothing else; set forward. My honor&#x27;d Lord, Say but the word, Ile force him from the doors. And I will be your third. Will, Will. Within. Why Will I say, go, my Lord cals extreamely, What&#x27;s the matter. By me? why by me? a good iest ifaith. Pray do not sweare, I do not vrge you too&#x27;t; Zoones, now I am vndone; you walke somewhat rounde, Sweet-hart, has Nobody bin tampering with you els, think ont, for by this light, I am not worth the estate of an Ap ple wife, I do liue vpon commending my Lord, the Lorde of hoasts knowes it; and all the world besides, for mee to marrie thee, will vndo thee more, and that thou maist keepe me, keepe thee in fashion, Sell thee to English, French, to Scot, and all, Till I haue brought thee to an Hospitall: and there I leaue you, ha you not heard nor read, Of some base slaue, that wagging his faire head, Does whistling at one end of his shop walke, VVhilst some Gay-man doth vomit bawdy talke In his wiues eares at the other; such a Rogue or woorse shall I be: For looke ye Mistris Wagtaile, I doo liue like a Chamelion vpon the ayre, and not like a Moale vppon the earth, Land I haue none, I pray God send me a graue when I am dead. For my good ones, they are altogether vnknown, because they haue not yet bin seene, nor euer will bee, for they haue no being, in plaine tearmes, as God helpe me, I haue none. By vndoing Taylors, and then my Lord (like a Snake) casts a sute euerie quarter, which I slip into; therfore, thou art worse then mad, if thou wilt cast away thy self vpon me No by my troth: but tell mee this, has not Sir A braham bin familiar with you. Couldst bee content to marrie him. Nay, and there ha beene any iot of the thing, be side that, Ile warrant thee lay the childe to him, stand stif ly to it, leaue the rest to me, By that Foole thou shalt saue thy honestie. Exeunt And I must needs say as my Lord saies. My Lords for you for that too: the onely, Bowler in London, that is not a Church warden. Who my Lord? the only Fencer in Christendom, hee&#x27;l hit you. Who my Lord; the onely Drunkard i&#x27;th VVoild, drinker I would say. Hardly, berladie, hardlie. I haue lost my monie, and Sir Abraham too, yon der he sits at his Muse by heauen, drownd in the Ocean of his loue, Lord how hee labours, like a hard bounde Poet, whose braines had a frost in em, now it comes. Good: because she is hard-hearted. He has di&#x27;de three times, and come againe. You say true intro h Sir. Tie vnto thee: well, if shee do not pittie both, tis pittie she should liue. In good faith I do not know, but Nobody that is wise, I am sure of that. It will be an excellent matter sung to the knacking of the tongues. But to my businesse, God saue the right Worthy and Woorshipfull Sir Abraham: what musing and writing: oh, this loue will vndoo vs all, and that made me preuent loue, and vndoo my selfe: but what newes of Mistris Lucida, ha, will shee not come off, not cannot you come on little Abraham. Laughes, why that&#x27;s a signe she is pleasd; doo you not know when a woman laughes, shees pleasd. Loue has made you witty little Nab, but what a mad villaine art thou, a striker, a fiftieth part of Hercules, to get one VVench with Childe, and go a wooing to ano ther. Why Mistris Wagtaile is with childe, and will bee deposd as yours, she is my Kinswoman, and I wold be loth our house should suffer any disgrace in her, if there be law in England, which there should be, if wee may iudge by their Consciences, or if I haue any friendes, the VVench shall take no wrong, I cannot tell, I thinke my Lorde will sticke to me. Recant your words, or die. But will you fight in this quarrell. Hart, I haue puld an olde house ouer my heade; heeres like to bee a tall fray, I perceiue a foole&#x27;s valianter then a Knaue at all times, would I were well riddle of him, I had as liue meet Hector God knowes, if he dare fight at all: they are all one to mee, or to speake more modernly, with one of the Roaring Boyes. Pray giue me leaue Sir, put vp an&#x27;t please you: are you sure my Cofsen Wagtaile is a Whore? VVell, it shall neuer bee saide Iacke Peudant would venter his blood in a VVhores quarrell: but VVhore or no VVhore, she is most desperately in Loue with you, praises your head, your face, your nose, your eies, your mouth; the fire of her commendations, makes the potte of your good parts runne ouer; and to conclude, if the whore haue you not, I thinke the Pond at Islington, will bee her Bathing-tubbe, and giue an ende to mortall Miserie, but if shee belye you (pray put vppe Sir:) she is an arrant whore, and so let her go. Yes, yes, out of all question the whore does loue you abhominable. I, but hang her who ore, dallying will get no Chil dren. Condouling her misfortune in the Gallery, Vpon the rushes, sitting all alone, and for Sir Abrahams loue venting her mone. One way it takes yet, tis a Fooles condition, Whom none can loue: out of his penurie, To catch most greedily at any wench That giues way to his loue, or faignes herowne, First vnto him, and so Sir Abraham now I hope will buy the poole where I will Fish, Thus a quicke Knaue makes a fat foole his dish. Exit. They say euerie woman has a Sprindge to catch a Wood-cocke, remember my instructions, and let mee see what a Paradice thou canst bring this foole into. 15. hun dered a yeare wench, wil make vs all merrie, but a foole to boot; why we shall throw the ouse out at window; Let mee see, there are two thinges in this foolish Transitorie world, which should be altogether regarded, profite and pleasure, or pleasure and profit, I know not which to place first, for indeed, they are Twinnes, and were borne toge ther; for Profit, this Marriage (God speed it) marries you to it, and for pleasure, if I helpe you not to that as cheape as any man in England, call me Cut, and so remember my instructions, for Ile go fetch Sir Abraham. Exit. De&#x27;e heare Sir Abraham ? Meane Somebodie else, you shall heare her name you by and by. Law ye there. Very good, de&#x27;e marke that head like wise? Ile now into her, Sir obserue what followes, Now Turtle mourning still For the partie, for whome are you working that purse? Let me see mine. Married not you the Earle?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Woman Is a Weathercock</div><div class="body">Scudmore is in love with Bellafront, and his friend Nevill persuades him, with difficulty, to show the love- letter he has received from her. There is a slight complication: Nevill is on his way to .Bellafront’s wedding. She is to marry Count Frederick that morning. The whole family is mired in matrimonial competition. Bellafront’s sister Lucida also loves Frederick, and has sworn never to marry for his sake; but she is being courted by the foolish Sir Abraham Ninny, who has got himself knighted expressly to make himself a more eligible son-in-law. The youngest daughter, Katherine, is also to be married that morning, to Strange the merchant, but she too has another admirer, Captain Pouts. Unbeknown to Scudmore, Nevill impersonates the parson who is to officiate at the wedding. Scudmore tries to catch Bellafront at the church door, but she refuses him; this convinces him that all women are perfidious. After the wedding, Pouts publicly declares that Katherine has slept with him on many previous occasions. Strange seems reluctant to seek legal redress for this slander, but only because he doesn’t want anyone to stop him secretly taking a more immediate revenge. He tries to see Pouts at his lodging, but Pouts assumes he has come to serve a writ and will not let him in. Pouts then prepares to flee England and his creditors, but Strange intercepts him disguised as a soldier, claiming that Katherine engaged him to murder her new husband and that she loves only Pouts. Pouts admits that he slandered her; Strange wounds him in a fight and forces him to sign a document affirming her innocence. By a pretext, Scudmore gets in to see Bellafront, rebukes her, and returns her love-letters. She tells him that her father forced her to marry Frederick, and that she will kill herself rather than consummate the marriage. He mistrusts her, but Nevill arranges for him to participate in a wedding masque that evening. He and Bellafront sneak away during the dancing and are married, this time by the right parson. Suspicions of polyandry are dispelled when Nevill explains that the parson that morning was really him, so that the marriages are invalid. Strange brings Pouts to apologise to the gathering, but is almost arrested for his own murder until he reveals his identity. Pouts returns to the war, abjuring women. Strange is confirmed as Katherine’s husband, and Frederick will marry Lucida. In the sub-plot, Wagtail is pregnant, but wants to ensure that the child has a wealthier…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

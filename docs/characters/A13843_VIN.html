@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VIN in The Revenger&#x27;s Tragedy · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>VIN</span>
+</nav>
+
+<h1>VIN</h1>
+<p class="lede">in <em>The Revenger&#x27;s Tragedy</em> — Middleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>1309</td></tr>
+<tr><th>Characters</th><td>6913</td></tr>
+<tr><th>BritDrama no.</th><td>1520</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">downe thou blessed dew, Rise Mother, troth this shower <mark>has</mark> made you higher. So, so, he leanes well, take heede you wake him not bro ther Thats a good lay, for I <mark>must</mark> kill my selfe? Brother thats I: that sits for me: do you marke it, And I <mark>must</mark> stand ready here to make <mark>away</mark> my selfe yonder—I <mark>must</mark> sit to <mark>bee</mark> kild, and stand to</div>
+<div class="excerpt">Sister y&#x27;aue sentenc&#x27;d most direct, and true, The Lawes a <mark>woman</mark>, and would she were you: Mother I <mark>must</mark> take leaue of you. I Intend speedy trauaile. Oh fie, fie, that&#x27;s the wrong end my Lord. Tis meere impos sible that a mother by any gifts should become a bawde to</div>
+<div class="excerpt">looke it. Loose but a Pearle, we search and cannot brooke it. But that once gone, who is so mad to looke it. Oh, that&#x27;s good manners my Lord, the Mother for her age <mark>must</mark> <mark>goe</mark> formost you know. When his pleasure conducts him this way. My Lord my Lord. Shadowes the Duchesse— O tis able, to make a man spring vp, &amp; knock his for-head</div>
+<div class="excerpt">conducts him this way. My Lord my Lord. Shadowes the Duchesse— O tis able, to make a man spring vp, &amp; knock his for-head Against yon siluar seeling. Then those that <mark>did</mark> eate are eaten. Thou shalt not loose that sight for all thy Duke-doome. What? is not thy tongue eaten out yet? Then weele inuent a silence? brother stifle the Torch,</div>
+<div class="excerpt">vnusuall shine, to me seemes proud, I dare not looke till the sunne be in a cloud, The better for you rasking. Ime couetuous, To know the villayne, All this is I. <mark>Did</mark> you brother. He shall furely die that <mark>did</mark> it. Would you not my Lord, Twas wondrous honorably donne, Out slaue. Vindice my Lord. Yfaith tis a sweete shower, it dos</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Sister y&#x27;aue sentenc&#x27;d most direct, and true, The Lawes a woman, and would she were you: Mother I must take leaue of you. I Intend speedy trauaile. Oh fie, fie, that&#x27;s the wrong end my Lord. Tis meere impos sible that a mother by any gifts should become a bawde to her owne Daughter! Lady the best of wishes to your sexe. Faire skins and new gownes, Oh from a deere and worthy friend, mighty! The Dukes sonne! It is the sweetest Boxe, That ere my nose came nye, The finest drawne-worke cuffe that ere was worne, Ile loue this blowe for euer, and this cheeke Shall still hence forward take the wall of this. Oh Ime a boue my tong: most constant sister, In this thou hast right honorable showne, Many are cald by their honour that haue none, Thou art approu&#x27;d for euer in my thoughts. It is not in the power of words to taynt thee, And yet for the saluation of my oth, As my resolue in that poynt; I will lay, Hard seige vnto my Mother, tho I know, A Syrens tongue could not bewitch her so. Masse fitly here she comes, thankes my disguize, Madame good af ernoone. Holla. True, for most there are as proud as he for his heart ifaith Who&#x27;de sit at home in a neglected roome, Dealing her short-liu&#x27;de beauty to the pictures, That are as vse-lesse as old men, when those Poorer in face and fortune then her-selfe, Walke with a hundred Acres on their backs, Faire Medowes cut into Greene fore-parts—oh It was the greatest blessing euer happened to women; When Farmers sonnes agreed, and met agen, To wash their hands, and come vp Gentlemen; The common-wealth has flourisht euer since, Lands that were meat by the Rod, that labors spar&#x27;d, Taylors ride downe, and measure em by the yeard; Faire trees, those comely fore-tops of the Field, Are cut to maintaine head-tires—much vntold, All thriues but Chastity, she lyes a cold, nay shall I come neerer to you, marke but this: Why are there so few honest women, but because &#x27;tis the poorer profession, that&#x27;s accounted best, thats best followed, least in trade, least in fashion, and thats not honesty beleeue it, and doe but note the loue and deiected price of it: Loose but a Pearle, we search and cannot brooke it. But that once gone, who is so mad to looke it. Loose but a Pearle, we search and cannot brooke it. But that once gone, who is so mad to looke it. Oh, that&#x27;s good manners my Lord, the Mother for her age must goe formost you know. When his pleasure conducts him this way. My Lord my Lord. Shadowes the Duchesse— O tis able, to make a man spring vp, &amp; knock his for-head Against yon siluar seeling. Then those that did eate are eaten. Thou shalt not loose that sight for all thy Duke-doome. What? is not thy tongue eaten out yet? Then weele inuent a silence? brother stifle the Torch, Tis foode to some my Lord. There are olde men at the present, that are so poysoned with the affectatio ̄ of law-words, (hauing had many suites can uast,) that their common talke is nothing but Barbery lattin: they cannot so much as pray, but in law, that their sinnes may be remou&#x27;d, with a writ of Error, and their soules fetcht vp to heauen, with a sasarara. In picture my Lord. Marry this it is —A vsuring Father to be boyling in hell, and his sonne and Heire with a Whore dancing ouer him. And as for the sonne and heire, he shall be an eyefore to no young Reuellers, for hee shall bee drawne in cloth of gold breeches. O true I cry you heartly mercy I hnow the reason, for some of&#x27;em had rather be dambd indeed, the ̄ dambd in colours. Money, ho, ho, Tas beene my want so long, tis now my scoffe. Iue ene forgot what colour siluers off, I get good cloths, Of those that dread my humour, and for table-roome, I feed on those that cannot be rid of me, O mine eyes, Almost strucke blind, This bright vnusuall shine, to me seemes proud, I dare not looke till the sunne be in a cloud, The better for you rasking. Ime couetuous, To know the villayne, All this is I. Did you brother. He shall furely die that did it. Would you not my Lord, Twas wondrous honorably donne, Out slaue. Vindice my Lord. Yfaith tis a sweete shower, it dos much good, The fruitfull grounds, and meadowes of her soule, Has beene long dry: powre downe thou blessed dew, Rise Mother, troth this shower has made you higher. So, so, he leanes well, take heede you wake him not bro ther Thats a good lay, for I must kill my selfe? Brother thats I: that sits for me: do you marke it, And I must stand ready here to make away my selfe yonder—I must sit to bee kild, and stand to kill my selfe, I could varry it not so little as thrice ouer agen, tas some eight returnes like Michelmas Tearme. E&#x27;en newly my Lord, iust as your Lordship enterd now? a bout this place we had notice giuen hee should bee, but in some Puh, I warrant you my Lord, weele stiflle in our breaths. And leaue none to warme your Lordships Gols withall; For he that dyes drunke, falls into hell fire like a Bucket a water, qush qush. Youle beare vs out my Lord? Ha&#x27;s lost, he may. How—his lips by&#x27;th masse they bee. That Nobleman, has bin ith Country, for he dos not lie? Why it hits, past the apprehension of indifferent wits. Post-horse ha ha. Come my Lords, Prepare for deeds, let other times haue words. Surgeons, Surgeons,—heart dos he breath so long. Looke to my Lord the Duke-a vengeance throttle him. Confesse thou murdrous and vnhollowed man, Didst thou kill all these? How came the Duke slaine then; Harke. Law you now sir. O marble impudence! will you confesse now? New marrow no I cannot be exprest, How faires my Lord the Duke. Ayre Gentlemen, ayre, Now thoult not prate ont, twas Vindice murdred thee, Murdred thy Father. And I am he-tell no-body, so so, the Dukes departed, My Lord was vnlikely, Your hayre, will make the siluer age agen, When there was fewer but more honest men, The rape of your good Lady has beene quited, With death on death. All for your graces good we may be bould to speake it now, Twas some-what witty carried tho we say it. Twas we two murdred him, None else ifaith my Lord nay twas well managde, How? on vs? Heart wast not for your good my Lord? I t come about; May not we set as well as the Dukes sonne, Thou hast no conscience, are we not reuengde? Is there one enemy left aliue amongst those? Tis time to die, when we are our selues our foes. When murders shut deeds closse, this curse does seale &#x27;em, If none disclose&#x27; em they them selues reueale &#x27;em! This murder might haue slept in tonglesse brasse, But for our selues, and the world dyed an asse; Now I remember too, here was Piato. Brought forth a knauish sentance once, no doubt (said he) but time Will make the murderer bring forth himselfe? Tis well he died, he was a witch, And now my Lord, since we are in for euer: This worke was ours which else might haue beene slipt, And if we list we could haue Nobles clipt, And go for 〈…〉 beggers, but we hate 〈…〉 we haue ynough, 〈…〉 Mother turn&#x27;d our Sister true, 〈◊〉 after a nest of 〈◊〉 〈◊〉</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Revenger&#x27;s Tragedy</div><div class="body">Nine years ago, the DUKE poisoned Gl@fiana when she refused to submit to his sexual advances; Windies has preserved her skull. HippOlit6 is given the task of recruiting a pander for the Duke’s son [iisstinioso, and brings Mimdiee, his brother, to court in disguise. The object of seduction turns out to be their sister, @AStiZa. Vindice undertakes the task, incognito as the pander (Piato’; he is delighted at Castiza’s outraged rejection, but less pleased at their mother’s venal readiness to countenance a liaison between her daughter and the heir apparent. ‘Piato’ reports this limited success back to Lussurioso. The Prince changes his initial plans to visit Castiza that night when he learns of a chance to catch his bastard brother Spud in bed with the DweHessl However, Spurio has changed his plans too, in the expectation of catching Lussurioso in the act of raping Castiza; so when Lussurioso bursts in on the Duchess with his sword drawn, it is the Duke who is with her, and he is arrested. Two of the Duchess’s sons plead insincerely for their stepbrother’s release, and put their pleas into reverse when the Duke, recognizing their malice, agrees to pardon him. Finally, without their knowledge, he sends order for Lussurioso to be freed. Meanwhile, the Duchess’s younger son, Jaimi6r has raped Ammtonio&#x27;siwifé at a recent court masque. He is tried and convicted for the crime, but the Duke defers sentencing until a later date. The victim poisons herself in shame; and a group of lords, including Hippolito, decide to take the law into their own hands should the Duke grant a reprieve. AlbiHOS6 and Sipenvaeuo use the Duke’s signet to order Lussurioso’s immediate execution, not knowing that he has already been released; in consequence it is Jiii6r who is beheaded. His brothers receive the severed head and are busy congratulating themselves on their stratagem when [bussurioss arrives, with his head still on. The Duke engages ‘Piato’ to get him a girl in secret. Waimedice arranges the assignation at a place where the Duchess and Spurid have agreed to meet. The ‘lady’ is also not what the Duke expects: Gléfianasiskull The Duke kisses the skull and is poisoned by it; the last thing he sees is the Duchess and Spurio together. Later, the brothers violently force their mother to repent; (Castiza then tests her by pretending to agree to sex with Lussurioso. Dissatisfied with ‘Piato’, IGSSii0sS6 asks Hippolito to bring his brother Vindice to court as a replacement; his first…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

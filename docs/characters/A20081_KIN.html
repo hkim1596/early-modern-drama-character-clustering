@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KIN in Satiromastix, or The Untrussing of the Humorous Poet · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>KIN</span>
+</nav>
+
+<h1>KIN</h1>
+<p class="lede">in <em>Satiromastix, or The Untrussing of the Humorous Poet</em> — Dekker, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1602</td></tr>
+<tr><th>Words</th><td>915</td></tr>
+<tr><th>Characters</th><td>4984</td></tr>
+<tr><th>BritDrama no.</th><td>1304</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Good words Sir Vau han, I prethee giue vs leaue. That turne faire Bride shews you <mark>must</mark> turne at night, In that sweet daunce which steales <mark>away</mark> delight. True, he s the thiefe, but women the receiuer. This change sweet Maide, saies you <mark>must</mark> change your</div>
+<div class="excerpt">Nature Crown&#x27;d. But in what molde so ere this man <mark>bee</mark> east; We make him thine Crispinus, wit and iudgement, Shine in thy numbers, and thy soule I know, Will not <mark>goe</mark> arm&#x27;d in passion gainst thy foe: Therefore be thou our selfe; whilst our selfe 〈◊〉 , But as spectator of this Sceane of wit. Not vnder vs, but next vs take thy</div>
+<div class="excerpt">agen. Agen kinde VVat, and then I know thou darst. To Court? Why, she&#x27;s confirmed in thee; I now approoue her, If constant in thy thoughts who then can mooue her? I <mark>goe</mark> good Knight; Wat thy oath. My song of parting doth this burden beare; A ki e the Ditty, and I s t it heere. Your lips are well in tune, strung with delight, By</div>
+<div class="excerpt">faithfull subiect, thou a con tant wife. Am I confounded twice? Blasted with wonder. Mirrour of Maidens, wonder of thy name, I giue thee that art giuen, pure, chaste, the same Heere Wat: I would not part (for the worlds pride) So true a Bride-groome, and so chaste a Bride. Dreadfull in his proportion or his pen? If a cleare</div>
+<div class="excerpt">craue. He glue thee Kingly honour: Night and Sleepe, With silken Ribands would tye vp our eyes, But Mistris Bride, one measure shall be led, In scorne of Mid-nights hast ▪ and then to bed.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Good words Sir Vau han, I prethee giue vs leaue. That turne faire Bride shews you must turne at night, In that sweet daunce which steales away delight. True, he s the thiefe, but women the receiuer. This change sweet Maide, saies you must change your life, As Virgins doe. But she that dyes a Maide;— Leades Apes in hell. Well met. Why faire sweet? Your bloud speakes like a coward, A coward bloud, why whom should maidens feare? Onelie my heart takes measure of thy beautie. Sir Walter Terrill. Thy Bride, thy choice, thy wife, She that is now thy fadom, thy new world, That brings thee people, and makes little subiects; Kneele at thy feete, obay in euerie thing, So euerie Father is a priuate King. Doe not back-bite her beauties, they all shine, Brighter on thee, because the beames are thine, To thee more faire, to others her two lips Shew like a parted Moone in thine Eclipse; That glaunce, which louers mongst themselues deuise, Walkes as inuisible to other eies: Giue me thine eare. Thou darst not Wat. Thou darst not VVat: let to night be to morrow, Thou darst not Wat ▪ Speake that agen. Agen kinde VVat, and then I know thou darst. To Court? Why, she&#x27;s confirmed in thee; I now approoue her, If constant in thy thoughts who then can mooue her? I goe good Knight; Wat thy oath. My song of parting doth this burden beare; A ki e the Ditty, and I s t it heere. Your lips are well in tune, strung with delight, By this faire Bride remember soone at night: Sir Walter. Till then my leaue commend. Why so, euen thus the Mercury of 〈◊〉 ▪ Vshers th&#x27;ambrosiate banquet of the Gods, When a long traine of Angels in a ranke, Serue the first course, and bow their Christall knees, Before the Siluer table; where Ioues page Sweet Ganimed filles Nectar: when the Gods. Drinke healthes to Kings, they pledge them; none but Kings Dare pledge the Gods; none but Gods drinke to Kings. Men of our house are we prepar&#x27;d? The Bride? Yea, euery senceles thing, which she beholdes, Wil looke on her agen, her eyes reflection, Will make the walles all eyes, with her perfection: Obserue me now, because of Maskes and Reuels, And many nuptiall ceremonies: Marke, This I create the Presence, heere the State, Our Kingdomes seate, shall sit in honours Pride, Like pleasures Queene, there will I place the Bride: Be gone, be speedy, let me see it done. A King in Loue, is Steward to himselfe, And neuer scornes the office, my selfe buy, All glances from the Market of her eye. Sound Musicke, thou sweet suiter to the ayre, Now wooe the ayre agen ▪ this is the houre, Writ in the Calender of time, this houre, Musicke shall spend, the next and next the Bride; Her tongue will read the Musicke-Lecture: Wat I loue thee Wat, because thou art not wise; Not deep-read in the volume of a man, Thou neuer sawst a thought, poore soule thou thinkst, The heart and tongue is cut out of one peece, But th&#x27;art deceau&#x27;d, the world hath a false light, Fooles thinke tis day, when wise men know tis night. Now—the spirit of Loue vshers my bloud. Come Bride, the Sceane of blushing entred first, Your cheekes are setled now, and past the worst; Vn asks her A mistery? oh none plaies heere but death, This is deaths motion, motionles; speake you, Flatter no longer; thou her Bride-groome; thou Her Father speake. How? Doe not confound me quite; for mine owne guilt, Speakes more within me then thy tongue containes; Thy sorrow is my shame: yet heerein springs, oy out of sorrow, boldnes ont of sham ; For I by this haue found, once in my life, A faithfull subiect, thou a con tant wife. Am I confounded twice? Blasted with wonder. Mirrour of Maidens, wonder of thy name, I giue thee that art giuen, pure, chaste, the same Heere Wat: I would not part (for the worlds pride) So true a Bride-groome, and so chaste a Bride. Dreadfull in his proportion or his pen? If a cleare merrit stand vpon his praise, Reach him a Poets Crowne (the honour&#x27;d Bayes) But if he claime it, wanting right thereto, (As many bastard Sonnes of Poesie doe) Race downe his vsurpation to the ground. rue Poets are with Arte and Nature Crown&#x27;d. But in what molde so ere this man bee east; We make him thine Crispinus, wit and iudgement, Shine in thy numbers, and thy soule I know, Will not goe arm&#x27;d in passion gainst thy foe: Therefore be thou our selfe; whilst our selfe 〈◊〉 , But as spectator of this Sceane of wit. Not vnder vs, but next vs take thy Seate, &quot; Arts nourished by Kings make Kings more great, Vse thy Authority. What news with thee Sir Vaughan? Sir Vaughan, what&#x27;s this iolly Captaines name? How? counterfeit? does hee vsurpe that name? Our spirits haue well been feasted; he whose pen Drawes both corrupt, and cleare bloud from all men: (Careles what veine he prickes) let him not raue, When his owne fides are strucke, blowes, blowes, doe craue. He glue thee Kingly honour: Night and Sleepe, With silken Ribands would tye vp our eyes, But Mistris Bride, one measure shall be led, In scorne of Mid-nights hast ▪ and then to bed.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Satiromastix, or The Untrussing of the Humorous Poet</div><div class="body">Celestine and Sir Walter Terrill are married. At the wedding dinner, the King becomes enamoured of Celestine and induces the bridegroom to swear to give up his first night of sex with her: he must deliver her to court that evening, still a virgin. Her father, Sir Quintilian, devises a scheme to save both her honour and Sir Walter’s: he gives her a cup of poison, and she drinks it. She keeps her marriage vows, and Sir Walter delivers her body to the King as part of a masque. The King is abashed to discover that she is a chaste, faithful wife. Then she wakes up: it was only a sleeping draught, and Sir Quintilian has proved both the bride’s constancy and the bridegroom’s love. In the sub-plot, Sir Quintilian and two other knights all become interested in marrying the widow Mistress Miniver, and each independently bribes Tucca to advance his suit. Miniver seems most interested in the bald Sir Adam, so Sir Vaughan engages Horace to write a satire against baldness. He invites the ladies, including Miniver, to a banquet of plums, and there Horace recites his poem on the glories of hair. The poem has the desired effect on Miniver; but Sir Adam hires Horace’s rival, Crispinus, to write a defence of baldness. It all comes to naught, however, for Tucca ends up marrying Miniver himself. In the third plot, Horace’s bitter epigrams against Tucca get into circulation among the gallants. Tucca swears vengeance, and stabs Horace, but with an edgeless sword; Horace’s response is shown to derive from fear rather than physical pain. Horace is accused of giving up a useful trade, bricklaying, and of unlawfully arraigning his rivals on the stage. He is brought to court dressed as a satyr, and the King appoints Crispinus to judge him. Crowned with a nettle wreath, Horace is exposed as an impostor (the real Horace was a better poet), and is made to forswear his inclination to arrogance and personal satire.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

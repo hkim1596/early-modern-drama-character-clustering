@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ALP in The Wonder of A Kingdom · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ALP</span>
+</nav>
+
+<h1>ALP</h1>
+<p class="lede">in <em>The Wonder of A Kingdom</em> — Dekker, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1636</td></tr>
+<tr><th>Words</th><td>1923</td></tr>
+<tr><th>Characters</th><td>9989</td></tr>
+<tr><th>BritDrama no.</th><td>2017</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Vanni&#x27;s wife had beene heere, all the parts about you had mov&#x27;d. So &#x27;tis, for Ile sweare, all this stirre is about having a wo man brought to bed; marry I doubt it <mark>must</mark> be a mans lying in. I had rather it were a <mark>woman</mark>, to tell trueth. Sadnesse, I pittie thee, And will to doe thee service, venture life, Mine honour being kept spotlesse.</div>
+<div class="excerpt">night: and this wenching fier will be burnt out of you. Alas, poore brother now I pitty thee and wo&#x27;d doe Any thing to helpe thee to thy longing, but that a Gap <mark>must</mark> be broken, in another mans hedge to rob His orchard, within there Luca Angelo, give him Musick: Musicke <mark>has</mark> helpt some mad-men, let it then Charme him, Love makes</div>
+<div class="excerpt">declining age. Before he beare your answer let him sleep. Why I would ha&#x27;you (tho&#x27;you be in womans apparrell) to be your selfe a man, and do what you come for. <mark>Must</mark> thou needs at thy first encounter tell her thou art a man, why when you walke together, cannot you begin a tale to her, with once upon a time there was a loving</div>
+<div class="excerpt">the greene sicknes. Tent it, tent it, and keepe it from ranckling, you are Over head and eares in love. There&#x27;s no hurt in that. And faith what doctresse is she <mark>must</mark> call you patient? How! Dariene? can no feather fit you but the broach in an Old mans hatt? were there so many dainty dishes To fill your belly, and <mark>must</mark> you needs</div>
+<div class="excerpt">brother, Our doings are alike, for by Trebatio (Whome I with honour name) his fathers foulenes shall be Cut off and crost. My Lord. Who is there with you? I feare I <mark>must</mark> entreate you to stay a little. I would be loth to loose all upon rest, For mine honour being once crack&#x27;t. Say you should get me with childe. Is the night hush&#x27;t?</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Why brother, what&#x27;s the matter? That&#x27;s not well. Surfet? you eate some Meate against your stomack. Was it fish or flesh? I&#x27;st not the missing of a marke (which you long to hit) Makes you draw sighes in stead of arrowes? By casting of thy water thy, I guesse thou would&#x27;st Have a medcine for the greene sicknes. Tent it, tent it, and keepe it from ranckling, you are Over head and eares in love. There&#x27;s no hurt in that. And faith what doctresse is she must call you patient? How! Dariene? can no feather fit you but the broach in an Old mans hatt? were there so many dainty dishes To fill your belly, and must you needs long for that dish The master of the house setts up for his owne tooth. Love? a disease as common with young-gallants as Swaggering and drinking Tobacco, there&#x27;s not one Of &#x27;um all but will to day ly drawing on for a Woman, as if they were puffing and blowing at a streight boot, And to morrow be ready to knock at deathes doore, But I wo&#x27;d faine see one of you enter and set in His staffe. I shall looke so old first, I shall be taken for thy gran dame; come, come &#x27;tis but a worme betweene the skinne And the flesh, and to be taken out with the point of a Waiting-womans needle, as well as a great Countesses. Leave thee in sicknes? I had more need give thee a Caudle; and thrust thy adle-head into a night-Capp, for looke you brother— If what you will might so too, then would you be in Tune: I warrant, if the sucket stood here before Thee, thy stomach would goe against it. Despaire for a woman? they hang about mens Neckes in some places thicker then hope upon poles. Walls of chastitie? walls of wafer-cakes, I have Knowne a woman carry a fether-bed, and a man in&#x27;t In her minde, when in the streete she cast up the white of Her eye like a Puritane. Well brother, since you will need s saile by such a Starre as I shall point out, looke you heere it is; if she were Your Fether-makers, Taylors or Barbers wife, Baite a hooke with gold, and with it— That cunning woman you take me to be, and because I see you dissemble not, heer&#x27;s my medcine. First send for your Barber. Your barber shall not come to rob you of your beard, I&#x27;le deale in no concealements— But let him by rubbing of you quicken Your spirits. Then whistle your gold-finches (your gallants) to your fist. Into a Tanerne, Drinke stiffe, sweare stiffe; have your musicke, and your brace, dance, and whiffe Tobacco, Till all smoake Agen, and split Sir. And doe thus, but till the Moore cutts off her hornes; Laugh in the day, and sleepe in the night: and this wenching fier will be burnt out of you. Alas, poore brother now I pitty thee and wo&#x27;d doe Any thing to helpe thee to thy longing, but that a Gap must be broken, in another mans hedge to rob His orchard, within there Luca Angelo, give him Musick: Musicke has helpt some mad-men, let it then Charme him, Love makes fooles of the wisest men. Thankes worthy sir. Our humblest dutie to my Lord the Duke; If in my Brothers name, and mine, you tender For this his noble love, wee both shall rest Highly indebted to you all. Signior, your love. And all faire fortunes doubled on your selfe. So: me-thinkes a Lady had more need have a new paire of lips, then a new paire of gloves, for tho&#x27; they were both of one skinne, yet one would weare out sooner then the other; I thinke these Courtiers have al offices in the Spicerie, And taking my lips for sweet-meates, are as sawcie with &#x27;em, as if they were Fees; I wonder Tibaldo thou can&#x27;st fit still, and not come in for a share; If old Vanni&#x27;s wife had beene heere, all the parts about you had mov&#x27;d. So &#x27;tis, for Ile sweare, all this stirre is about having a wo man brought to bed; marry I doubt it must be a mans lying in. I had rather it were a woman, to tell trueth. Sadnesse, I pittie thee, And will to doe thee service, venture life, Mine honour being kept spotlesse. But aske and have. &#x27;Tis yours. Be rul&#x27;d by me then; in an ashie sheete, Cover these glowing embers of defire. Come, and set hand to paper, Ile indite. Then prethee take this Phisick; be not the sea, to drinke strange Rivers up, yet still be drie; Be like a noble streame, co vet to runne betwixt faire bankes, which thou may&#x27;st call thine owne, and let those bankes be some faire Ladies armes, fit for thy youth, and birth. Ile hollow them: this Deere runnes in my Lords Parke, And if you steale it, looke to have Blood-hounds scent you. Yes, you shall finde venison-sawce deerer then other flesh. Are all my warme cawdles come to this? now I see th&#x27;art too farre gone, this Lady hath overspent thee therefore settle thine estate, plucke up a good heart, and Ile pen thy will. Bequeath thy kisses to some Taylor, that hunts out wed dings every sunday; Item, Thy sighes to a noyse of fidlers ill paid, thy palenesse to a Fencer fighting at sharpe, thy want of stomack to one of the Dukes guard. What&#x27;s that? It&#x27;s an Instrument ever plaid on, cause well strung, Who&#x27;s that come into the Chamber there? Oh, Mr. Cargo. Oh sir, I thanke your Lord, and this your paines; have him into the Buttery—let me see, Lady, that I love you, I dare sweare like a Lord (I shall have oathes enough then) I send you all that is mine, in hope all shall bee mine that is yours, for it stands to reason, that mine being yours, yours should bee mine, and yours being mine, mine should be yours. Love me, or I die, If I die, you kill me, If you kill me, I will say nothing, but take the blow patiently. I hold my life this Lord has bin bastinado&#x27;d, out upon him rammish foxe, he stinks hither; Prethee good Bro ther reade. Is&#x27;t Gander moneth with him? How the devill is my may denhead blasted? that among such shoales of Gallants, that swim up and downe the Court, no fish bites at the baite of my poore beautie, but this tough Cods-head? Sr, I have you. And I goeing vpon so weightie a busi nesse, as getting of children, you would ha&#x27; me pin you to my sleeve. You care not so I turne whore to pleasure you. In the flame I&#x27;le sindge My wings, unlesse I put the candle out, That you i&#x27;th&#x27;darke may bring your hopes about. You have wonne me. Have a care you cast not your selfe downe too soone now. As for my old Huck-sters artillery, I have walls of Chastity strong enough shoote he never so hard, to keepe him From making any breach. My best. Mine be your will; Oh me! what paines we take to bring forth ill! Such a disguise is safe too, since you never but once Were seene there. Send in the fellow there that brought the letter; Why how now? doe his leggs faile him already? A staffe for his declining age. Before he beare your answer let him sleep. Why I would ha&#x27;you (tho&#x27;you be in womans apparrell) to be your selfe a man, and do what you come for. Must thou needs at thy first encounter tell her thou art a man, why when you walke together, cannot you begin a tale to her, with once upon a time there was a loving couple that ha ving tyred themselves with walking, sat downe upon a banck, and kist, and embraced, and plaid, and so by degrees bring the tale about to your owne purpose. Can you not? fie, you are the worst at these things Sir. And the more foole you indeed: you see how the old stinking fox her husband is stil rubbing me as if I had the palsy, Ile not have his wither&#x27;d hands (which are as moist as the side of stock-fish) lye pidling in my bosome, therefore determine some thing, or farewell. Come on, out with&#x27;t then. Very good. The clocke for your businesse thus far goes true, but now for me, what shall I do with the old cock in my Roost? No not I beleeve me, I know not what to doe with him, unlesse I should give him a little Nux vomica, to make him sleep away the night, but brother, to pleasure you, Ile venter a joynte, and yet it troubles me too, that I should prove a Traytor to my sex, I doe betray an Innocent Lady, to what ill I know not. But Love the author of it wil I hope Turne it quite otherwise, and perhaps it may be So welcome to her as a courtesie. We nothing can, Vnlesse man woman helpe, and woman man. No, feare me not. Mine eyes are full of sleepe; Ile follow you. Brother. Such a fury as thou. Ile sweare thou hast, for thou hast candled Thy sweete but poysonous language to dishonour Me thy most wretched sister, who no better then a vile Instrument to thy desires, deserves to be stil&#x27;d, Baud, worse then the bauds. Who every day i&#x27;th&#x27;weeke shake hands with hell. Thou shalt not then by heaven. My noble brother, Our doings are alike, for by Trebatio (Whome I with honour name) his fathers foulenes shall be Cut off and crost. My Lord. Who is there with you? I feare I must entreate you to stay a little. I would be loth to loose all upon rest, For mine honour being once crack&#x27;t. Say you should get me with childe. Is the night hush&#x27;t? Ile doe that then, which some Citizens will not doe, to some Lord. Take your word, I come. What&#x27;s the matter sir? My most lov&#x27;d Lord, step you aside, I would not have you seene for the saving of my right hand, preserve mine honour, as I preserve your love. To an unworthy window, who is thus kind? Trebatio. Neither of both good sir; Pray play upon some other, you a buse mee, And that which seemes worse, in your fathers house. But you are young enough to be forgiven, If you will mend hereafter, the night has in it Vnwholsome foggs, and blasts; to bed my Lord, Least they attach your beautie: nothing more, Ile pay you for your song. Now in good sooth my Lord, shee has but vs&#x27;d you As watermen use their fares, for shee look&#x27;d one way, And row&#x27;d another, you but wore her glove, The hand was Angeloes, and she dealt wisely. Let woman ne&#x27;re love man, or if she doe, Let him nere know it, make him write, waite woe, Court, cogge, and curse, and sweare, and lie, and pine, Till Love bring him to death&#x27;s doore, else hee&#x27;s not mine, That flesh eates sweetest that&#x27;s pick&#x27;d close to th&#x27; bone, Water drinkes best, that&#x27;s hew&#x27;d euen from the stone; Men must be put to &#x27;t home. Since such good gamsters are together met, As you like this, wee&#x27;le play another sett.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Wonder of A Kingdom</div><div class="body">The Duke of Florence has betrothed his daughter, Fiametta, to the Prince of Pisa, and, to facilitate the political marriage, banished her lover, Angelo. Fiametta sickens for her absent love, and he returns to court disguised as a French doctor, offering the Duke his services to save her life. He diagnoses sexual frustration, and proposes a cure which requires the patient to drink a potion made from the beloved’s powdered heart: she will then hate him. In order to obtain the key ingredient, Angelo must be murdered. Angelo reveals his presence to Fiametta, but she insists on identifying him to her father, in the expectation that the Duke will relent. Angelo passes this off as an insane delusion, then flees to sanctuary. He is found and brought to court with a friar. He seems to reject Fiametta, and she agrees to marry Pisa the following day, but asks for the friar to hear her confession overnight. In fact, he secretly marries her to Angelo, pre-empting Pisa; the Duke and Prince are annoyed, but recognize there is nothing to be done about it. In the sub-plot, Lord Vanni has amorous inclinations younger than his physical age, and sends a love-letter and jewel to the chaste Alphonsina Neri. Meanwhile, Alphonsina’s brother Tibaldo has fallen sick for love of Vanni’s wife Dariene. He asks Alphonsina to accept Vanni’s advances, and Vanni duly excuses himself from Dariene’s bed. Tibaldo has arranged for himself to be present disguised as Alphonsina’s sister, and offers himself as an alternative, ‘female’ bedfellow for Dariene. His plan is aborted when he learns that Vanni’s daughter Alisandra loves Trebatio and Trebatio’s son. When Vanni pays his nocturnal visit, he is scared off by Trebatio’s lute-playing, then caught by his wife and blamed for the adultery he never committed. Alphonsina and Tibaldo marry Trebatio and Alisandra. In the third plot, the hospitable Jacomo has built a house in which to entertain his guests: his uncle, who is suspected of getting rich through supernatural agency, gave him a deathbed injunction to spend his inheritance virtuously. Torrenti envies Jacomo his new house, and plans a magnificent lifestyle of his own; but whereas Jacomo entertains the poor and needy, Torrenti is only interested in luxury and guests of a high social standing. When his brother arrives, ragged and dirty after escaping from slavery in a Turkish galley, Torrenti is appalled and turns him away. He entertains the Duke with a lavishness that bankrupts him. War…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

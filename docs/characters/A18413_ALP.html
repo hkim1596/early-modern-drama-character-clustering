@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ALP in 226 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ALP</span>
+</nav>
+
+<h1>ALP</h1>
+<p class="lede">in <em>226</em> — [84]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1606</td></tr>
+<tr><th>Words</th><td>1263</td></tr>
+<tr><th>Characters</th><td>6696</td></tr>
+<tr><th>BritDrama no.</th><td>226</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">We will peruse it strait: well met Vine … tio, And good Lord Strozza, we commend you both For your attendance: but you <mark>must</mark> conceiue, Tis no true hunting we intend to day, But an inducement to a certaine shew, Wherewith we will present our beateous loue, And therein we bespeake your</div>
+<div class="excerpt">Vincentio. How likes Vincentio? Lets see that I pray. See see, he hath his furniture and all. Thankes good Seigneur Sarpego. How like you Lords, this stirring action? <mark>Bee</mark>&#x27;t so resolu&#x27;d; vnartificiall truth An vnfaind passion can descipher best. None but my selfe, and the Lord 〈◊〉 . No be assur&#x27;d, But for another cause; a word Lord</div>
+<div class="excerpt">the Lord 〈◊〉 . No be assur&#x27;d, But for another cause; a word Lord Strozza, I tell you true, I feare Lord Medice Will scarce discharge the speach effectually: As we <mark>goe</mark> therefore, ile explaine to you My whole intent; that you may second him If neede and his debilitie require. Why how now sonne? forbeare; yet tis no matter Wee talke</div>
+<div class="excerpt">haue tied me more. Thanks Strozza for your speech, no thanks to you. Aduaunce your selfe, faire Dutchesse to this Throne ▪ As we haue long since raisde you to our <mark>heart</mark>, Better decorum neuer was beheld, Then twixt this state and you: And as all eyes Now fixt on your bright Graces thinke it fit, So frame your fauour to continue</div>
+<div class="excerpt">and I p … rdon all. Dis … ightfull Dame, Ile dis inherit him, And thy good Father heere shall cast off thee, And both shall feede on ayre, or staru … , and die. Haste Iulio, follow thou my sons pursuit, And will Lord Medice not to hurt nor touch him, But either banish him, or bring him backe: Charge him to vse no violence to</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">We will peruse it strait: well met Vine … tio, And good Lord Strozza, we commend you both For your attendance: but you must conceiue, Tis no true hunting we intend to day, But an inducement to a certaine shew, Wherewith we will present our beateous loue, And therein we bespeake your company. See then, heere is a Poeme that requires Your worthy censures; offerd if it like To furnish our intended amorous shew: Reade it Uincentio. Still are your wits at warre: heere, read this poeme. High words and strange: Reade on Vincentio. How likes Vincentio? Lets see that I pray. See see, he hath his furniture and all. Thankes good Seigneur Sarpego. How like you Lords, this stirring action? Bee&#x27;t so resolu&#x27;d; vnartificiall truth An vnfaind passion can descipher best. None but my selfe, and the Lord 〈◊〉 . No be assur&#x27;d, But for another cause; a word Lord Strozza, I tell you true, I feare Lord Medice Will scarce discharge the speach effectually: As we goe therefore, ile explaine to you My whole intent; that you may second him If neede and his debilitie require. Why how now sonne? forbeare; yet tis no matter Wee talke of other busi … esse Medice And come, we will prepare vs to our shew. Now my Lord. Pea 〈◊〉 Vincentio. Medice, forth. No. lesse, no lesse ▪ no more, no more: speake you. V … entio, peace. Excellent good. Performe it then sweete loue, it is a deede Worthy the office of your honor&#x27;d hand. Thanks gracious loue; why made you strange of this? I rest no lesse your captiue then before, For me vntying, you haue tied me more. Thanks Strozza for your speech, no thanks to you. Aduaunce your selfe, faire Dutchesse to this Throne ▪ As we haue long since raisde you to our heart, Better decorum neuer was beheld, Then twixt this state and you: And as all eyes Now fixt on your bright Graces thinke it fit, So frame your fauour to continue it. Lo what attention and state beautie breedes, Whose moning silence no shrill herauld needes. Thanks good master Broomeman, Leaue this warre with Rushes, Good master pedant; pray forth with your shew. Generally well, and pleasingly performed. Well you became it Lady, and I know All heere could wish it might be euer so. I thanke your Lordship much. Good wench forbeare. Now what a merrie harmlesse dame it is! Tis good my Lord sometimes: Come, to our hunting; now tis time I thinke. Then my Lord, I will take my leaue till night, Reseruing thanks for all my entertainment, Till I returne; in meane time, louely dame, Remember the high state you last presented, Vin. &amp; St. haue all this while talked togither a prettie way. And thinke it was not a mere festiuall shew, But an essentiall type of that you are In full consent of all my faculties And harke you good my Lord. Now my deere Mistresse, till our sports intended end with my absence, I will take my leaue. Why should the humorous boy forsake the chace? As if he tooke aduantage of my absence, To some act that my pre … ence would offend. I sweare I will: and can I proue he aymes At any interruption in my loue, Ile 〈◊〉 his life. I know not these things; but come: let me reade some of these letters. Madam, in this deed You deserue highly of my Lord the Duke. Passion of death! See, see, Lord Medice, my trait&#x27;rous sonne, Hath long ioyde in the fauours of my loue: Woe to the wombe that bore him: and my care To bring him vp to this accursed houre, In which all cares possesse my wretched life. Not by any. If this be true, the traitrous boy shall die. If I shall see my loue in any sort Preuented, or abusde, th&#x27;abuser dies. A little, pr … y my Lord, for I b … leeue We shall discouer very notable knaue … y. No more, no more, aduise me what is best, To be the penance of my gracelesse sonne? Death or his banishment, he shall indure, For wreake of that ioyes exile I sustaine. Come, call our Gard, and apprehend him strait. Lay hands vpon them all, pursue, pursue. Lord Medice, Leade you our Guard, and see you app … ehend The treacherous boy ▪ nor let him scape with life, Vnlesse he ye … lde to his externall exile. Yet loue me Lady, and I p … rdon all. Dis … ightfull Dame, Ile dis inherit him, And thy good Father heere shall cast off thee, And both shall feede on ayre, or staru … , and die. Haste Iulio, follow thou my sons pursuit, And will Lord Medice not to hurt nor touch him, But either banish him, or bring him backe: Charge him to vse no violence to his life. O Natu … e! how alas Art thou and Reason thy true guide opposde? More bane thou tak&#x27;st, to guide Sense, led amisse, Then being guided, Reason giues thee blisse. I wonder how farre they pursu&#x27;d my Son … , That no returne of him or them appears, I feare some haplesse accident is chanc&#x27;d, That makes the newes so loath to pierce mine eares. Beleeue then sonne, And know me pierst as deeply with thy wounds: And pardon vertuous Ladie that haue lost The dearest treasure proper to your sexe. Ay me, it seemes by my vnhappie meanes! O would to God, I could with present cure Of these vnnaturall wounds; and moning right Of this abused beautie, ioyne you both, (As last I left you) in eternall nupt … als. Graue Be … uenius, honorable Doctor, On whose most soueraigne Aesculapian hand, Fame with her richest miracles attends, Be fortunate, as euer heeretofore, That we may q … ite thee both with gold and honour, And by thy happy meanes, haue powre to make My Sonne, and his much iniur&#x27;d loue amends, Whose well proportion&#x27;d choice we now applaud, And blesse all those that euer further&#x27;d it. Where is your discreete Vsher my good Lord, The speciall furtherer of this eq … all match? Giue me your hand friend, pardon vs I pray, We much haue wrong&#x27;d your worth, as one that knew the fitnesse of this match aboue our selues. Nor I my Lord: But sure he saw the fitnes of the match, With freer and more noble cies then we. Vnworthie Lo … d, put vp: … hirst&#x27;st … ou more blood? T … y life is … tt&#x27;st to be call&#x27;d in question, For thy most murthrous cowardise on my sonne ▪ Thy forwardnesse to euery cruelty Calls thy pretended Noblesse in suspect. His life is thine Lord Strozza, Giue him death. Not for the world. But you shall my Lord, Or I will take his life out of your hand. Strange, and vnspeakeable. Neuer was heard so strange a counterfet. Hence then, be euer banish&#x27;d from my rule ▪ And liue a monster, loath&#x27;d of all the world. Doe so I pray thee, rid me of his sight. Let vs forget it honourable friends, And satisfie all wrongs with my sonnes right, In solemne mariage of his loue and him. Which my deere Sonne shall with thy full re … re Be celebrate in greater Maiesty, Than euer grac&#x27;d our greatest Ancestrie. Then take thy loue, which heauen with all ioyes ble … e, And make yee both mirrors of happinesse.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 226</div><div class="body">The swords and daggers ordered for the masque suggest that the action included fighting, which presumably arose from the supposed drunkenness of the masquers.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

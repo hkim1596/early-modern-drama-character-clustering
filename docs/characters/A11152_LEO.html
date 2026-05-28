@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LEO in A Shoemaker a Gentleman · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LEO</span>
+</nav>
+
+<h1>LEO</h1>
+<p class="lede">in <em>A Shoemaker a Gentleman</em> — Rowley, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>1345</td></tr>
+<tr><th>Characters</th><td>7000</td></tr>
+<tr><th>BritDrama no.</th><td>1868</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">all, <mark>goe</mark>, yet answer to me first. Was this young Shoo-maker ere here before? Wast not a pretty youth? He drew my shooes on finely, quietly. Tis that he wants, he <mark>must</mark> know it Call him agen. The length of my foot, a pretty figure If he be a good Anatomist, he may by one quantity Guesse at another, and in the end take the whole</div>
+<div class="excerpt">Britany, out old doting foole. My shoo-maker minion. Yet as great as you have doted on as base as he. Hast thou History for this? Nay prethee tell it on Nurse. <mark>Did</mark> not I watch with thee? So could a young Batchelor yet, widdow, I prethe finish but Thy last discourse &#x27;mongst all thy Cotations of men made; Great that were ignoble</div>
+<div class="excerpt">you&#x27;le come to your promise. No matter, Ile hazard his good will, to morrow let me have An other paire, and bring them your selfe. Come hither view my foot well, you <mark>must</mark> be better Acquainted with it. No &#x27;tis a little higher. Now sir what will you doe? You have hit it Sir. I hope he will: well, faile 〈◊〉 omorrow, There is an Idoll</div>
+<div class="excerpt">commend it selfe. You are too hard of beleefe, I meane plainely, I have Some skill in Magicke, what would you give To see her amply personated in a glasse, that <mark>must</mark> be your wife? I could by Metroposcopie read thy fate here in thy fore-head; By Chyromancie find it in thy Palme, but these are petty Arts, no Ile shew thee by speculatory</div>
+<div class="excerpt">thy fore-head; By Chyromancie find it in thy Palme, but these are petty Arts, no Ile shew thee by speculatory magick, her face In this glasse; kneele sir, for&#x27;t <mark>must</mark> be done with reverence I tell you: now tell me what thou seest? &#x27;Tis but a shadow, hold up thy right hand and looke agen, What seest thou now? any substance yet?</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Choose for your selfe Lady, I have an eye to pleasure My selfe? Nurse? Are the shoo-makers gone that brought my Shopes? My shooe wrings me so it goes to the heart of me. How? does the Gods forbid to Marry wench? Pre hee doe, but stay a little; Thou sai&#x27;st true, call &#x27;em then, yet harke, &#x27;twere as good not, The fault cannot be mended now: I thou saist true in that, doe, harke are thou goest. How&#x27;s that, youle not controule your Princes will yee? Is it not stately to be Phantasticall, goe call the Shoo-maker yet you shall not neither. You shall doe all, goe, yet answer to me first. Was this young Shoo-maker ere here before? Wast not a pretty youth? He drew my shooes on finely, quietly. Tis that he wants, he must know it Call him agen. The length of my foot, a pretty figure If he be a good Anatomist, he may by one quantity Guesse at another, and in the end take the whole bodies length Ha, some strange fantasies are crept within me, I&#x27;me not Acquainted with, tis a pretty youth if I may credit my Judgement at the first sight, and whats that to me, and Why not to me as well as to another: I am alone, and why Should I feare to tell my selfe my thoughts, I could love him, This tasts well of my tongue; Oh, but the coursenes of his condition Offends my stomacke, when I should disgest it, some Sectarist Now to scrwe and wrest a Text from his native sence, would Helpe me well in this, what am I, a woman, whats he a men ▪ Where&#x27;s the inequality? my bloud Royall, his perhaps ignoble, Whence springs that fount that runs all Royalty, tis the Sea It selfe, the lesser Rivolets and running Brookes are those of Common sence, yet all doe mixe and run in one another, What are Titles, Honors bestow&#x27;d ad Regis placitum, should My Father make that shoo-maker a Lord, then were he Noble, Yet where&#x27;s his bloud refine, tush tush, greatnesse is like a Glistering stone, more pretious in the esteeme than in the vertue: So, I am well cald out of my contemplation. Who made my shooes sirra, they pinch me? A tunable heele, I prethee English it. You&#x27;re pleasant sir, and what is this a Prentice? And how farr&#x27;s that, which are your bounds? You have done well sir, and so no doubt will he by my Instructions; whats thy name? Is it so long since thou lost them? You promise well, let them be of your making then, that I May see how neare you&#x27;le come to your promise. No matter, Ile hazard his good will, to morrow let me have An other paire, and bring them your selfe. Come hither view my foot well, you must be better Acquainted with it. No &#x27;tis a little higher. Now sir what will you doe? You have hit it Sir. I hope he will: well, faile 〈◊〉 omorrow, There is an Idoll or bed in his eye, that I could ever worship And if I should, sure he would blesse me, love and folly, Inseperate and joynt companions, you are too violent upon Me now; to beate affection with such downe right strokes On a Mechanicke drudge, a base, how base? how base? is there no President That great Ladies have yoakt their underlings in fellowship? I take some counsell, on&#x27;t Nurse. Out witch, dost know my thoughts: the shoo-maker, and why The shoo-maker? I thought of him, why call him? Thor&#x27;t in love with him, I beleeve thou art, if I were certaine That thou wert so base, I&#x27;de banish thee my presence; nay, My Father should banish thee the bounds of Britany, out old doting foole. My shoo-maker minion. Yet as great as you have doted on as base as he. Hast thou History for this? Nay prethee tell it on Nurse. Did not I watch with thee? So could a young Batchelor yet, widdow, I prethe finish but Thy last discourse &#x27;mongst all thy Cotations of men made; Great that were ignoble borne, this I most desire; was Dioclesian joynt ceaser with my Father, that oft hath made Rome gorgeous with his triumphs, but of so meane discent As thou reports? And yet is that no blemish to his sonne? My Grace be pledge, out, prethee speake freely? &#x27;Tis true, I have heard my Father boast it, yet had I forgot it. Oh Majesty! thou may mest the memory, it looseth all Records That are beneath us, now no more: prethee see if my Shoo-maker be come yet, Ile walke abroad perhaps to take the aire. I have not slept to night, I shall be tame if I be if I be kept th 〈2… pages missing〉 My former words, I say thou art a Sutor to my woman? Thou shalt not sweare and lye, Ile make it plaine To thy confession; art not her shoo-maker? Then her Sutor; I am a Roman sir, and speake that tongue; Is not a Sutor a Shoo-maker? I would thou wert, in the plaine English sence, Thou shouldst have then few nayes. Not: since I am so farre in discourse with you, Ile bring it To some end: suppose shoo-maker my woman did love you, and Would have me to speake for her, what answer should I have? Be bold, and say what answer shall I have? Old! this is a new answer; will not her dignity, wealth, And Estate, make her yong agen? You would have one yong then I perceive? For doubling of your prentiship? So &#x27;twere one you lov&#x27;d, &#x27;twere pleasing servitude? Dare you venture on a wife of my chusing? That&#x27;s no venture, Ile promise she shall be yong, good Parentage, honest, let her beauty commend it selfe. You are too hard of beleefe, I meane plainely, I have Some skill in Magicke, what would you give To see her amply personated in a glasse, that must be your wife? I could by Metroposcopie read thy fate here in thy fore-head; By Chyromancie find it in thy Palme, but these are petty Arts, no Ile shew thee by speculatory magick, her face In this glasse; kneele sir, for&#x27;t must be done with reverence I tell you: now tell me what thou seest? &#x27;Tis but a shadow, hold up thy right hand and looke agen, What seest thou now? any substance yet? How lik&#x27;st her now, has she a good face? Who does she resemble? I, shees very like me. Why wouldst not have her like me? &#x27;Tis too long to dally, away with shadowes, and imbra The substance, introth I love thee; nay, doe not feare—Ile Share all dangers with thee. Wrong not my love with doubt, looke Ile pay thee backe Thy duty given to me, th&#x27;art my better by vertue of my Honourable love, I make thee here my head: Thou shalt No more descend unto my foot, here thy worke shall be, Whilst in thine eyes two wanton Cupids skip, Thou shalt lay Velvet touches on my lip. Yet all&#x27;s not done, two paire of Rosie cheeks shall tye them on: Shall I not neede to feare thee? If I could love thee better than I did I should, but introth I cannot, but for the safest gardian of thy life, &#x27;tis in my Heart, and that shall be pluckt out ere it be found to harme thee. Our instant Marriage, that&#x27;s the surest way, hazard a Chiding for thy negligence, and linger here about the Court to night, to morrow morning in some humble Habit weele steale the gardian; it shall be my taske 〈◊〉 provide the Church-man. May I ever lye alone if there want a Bride, and that&#x27;s a 〈◊〉 that I should be loath to indure, mean time be this the contract, 〈◊〉 the word of troth. There goes my heart. Shut night, sweet Phebe on thy swiftest Arrow. Exit Leo.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Shoemaker a Gentleman</div><div class="body">The Roman Emperors, Diocletian and Maximinus, bring an army to Britain to crush the Christians. Alured, the British King, is killed in battle. His sons, Eldred and Offa, change their identities and get themselves apprenticed to a shoemaker. They see their mother taken to prison after being captured on the battlefield; their sympathy for her plight impresses their new master. Alban is appointed to rule Britain and continue the persecution. Amphiabel comes from Wales and converts him to Christianity. Maximinus arrests Alban, and Amphiabel flees back to Wales, pursued by the Roman army. Meanwhile, the Welsh Queen Winifred, also converted by Amphiabel, asks her suitor Sir Hugh for a moratorium on his wooing efforts; when he completes the agreed period, however, she announces that she has given herself wholly to heaven and cannot marry him. One of the Romans pursuing Amphiabel mocks the power of Winifred’s holy well, and smears the water on his eyes; it blinds him. His sight is restored, but he ascribes the miracle to the pagan gods. Winifred and Amphiabel are both arrested and brought to see the martyrdom of Alban. Leodice, Maximinus’ daughter, becomes enamoured of her new shoemaker, Crispin, who is really Offa; she continually finds reasons to asks for new shoes and new fitting sessions. She offers to show him the image of his future wife in a magic mirror; but in fact it is an ordinary mirror, and he sees her reflection. He confides that he is not really base-born, but a disguised prince, and they are secretly married. The Romans are mustering an army to resist an invasion of the Empire by Goths and Vandals. Eldred volunteers, and the shoemaker employs Sir Hugh to fill his place. Eldred distinguishes himself in battle: he saves Diocletian’s life, takes back the eagle standard after it has been seized by the enemy, and captures the Vandal king Roderick. The barbarians are expelled, and Diocletian knights Eldred. Sir Hugh is arrested after he sees Winifred a prisoner and reviles the Roman gods. Alban and Amphiabel are tortured in an attempt to make them renounce Christianity, but they remain steadfast and are sent for execution; Alban becomes Britain’s first Christian martyr ~ but not the last. Winifred is allowed to choose the manner of her own execution; she opts to bleed to death. Sir Hugh is made to drink her blood, mixed with poison. He bequeaths his bones to the shoemakers who have come to support him, and declares that, since a prince has been a…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

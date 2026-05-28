@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>T.TOS in Like Will to Like (Quoth the Devil to the Collier) · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>T.TOS</span>
+</nav>
+
+<h1>T.TOS</h1>
+<p class="lede">in <em>Like Will to Like (Quoth the Devil to the Collier)</em> — Fulwell, Ulpian</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1587</td></tr>
+<tr><th>Words</th><td>820</td></tr>
+<tr><th>Characters</th><td>3909</td></tr>
+<tr><th>BritDrama no.</th><td>472</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">woords are best among freends this is true, Wherfore I shall breefly shew my name vnto you. Tom tospot it is, it need not be painted, Wherfore with Rafe Roister I <mark>must</mark> needs be acquainted. ¶ I thank you that mine acquainta ̄ ce you wil take in good part. And by my troth I wil be your sworn brother: ¶ And to tell you my properties</div>
+<div class="excerpt">like by gogs soule. ‡ Gogs wounds I am like Phalaris y e made a bul of brasse, ‡ Nay I am like Phalaris that made a bul of brasse, As a cruell torment for such as <mark>did</mark> offend: and he him self first therin put was: Euen so are we brought to this end. In ordaining him a iudge who wil be honored as a God: So for our own tailes we</div>
+<div class="excerpt">they haue vnthriftily. So that my company they think to be so good: that in short space their haire growes through their hood. ¶ Tush I am acquainted with many a <mark>woman</mark>. That with me wil sit in euery house and place: But then their husbands had need to fend their face. For when they come home they wil not be a feard: to shake the</div>
+<div class="excerpt">white sonne. ‡ I wil help thee vp Haunce giue me thy hand, He riseth. ¶ Mary Phillip euen as I was wunt to doo. ¶ Lo Haunce heer is Phillip Fleming come now, we wil <mark>goe</mark> drink togither now, how saist thou? ¶ How say you maister Nichol wil you keep vs company? ¶ By Gogs wounds euen so it is with me: I am in my doublet and my hose</div>
+<div class="excerpt">Ale: By the masse I am as bare as my naile. Not a Crosse of money to blesse me haue I, But I trow we shall meet with Nichol newfangle by and by. ¶ Now farwell thou hast thy iust meed:</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">‡ Nichole newfangle? why we are of olde acquaintance, ‡ At your first comming into England wel I wot, You were very wel acquainted with Tom tospot. ¶ You kno whe ̄ you brought into engla ̄ d this new fa ̄ gled kinde That tospots and Ruffins with you were first acquainted, ¶ It is an olde saying, that mountains and hills neuer meet, But I see that men shall meet, though they doo not seek. And I promise you more ioy in my hart I haue found: Then if I had gained an hundred pound. ‡ Indeed Nichole newfangle ye say the veritie, Heer entreth Rafe Roister. For like wil to like it wil none otherwise be. ‡ My freend you are welcome with all my hart. ¶ I am one, which of thy company would be very glad. ¶ It should appeere by your sayings y t we are of one minde, For I knowe that roisters and tospots come of one kinde. And as our names be much of one accord and much like, So I think our condicions be not far vnlike. ¶ Few woords are best among freends this is true, Wherfore I shall breefly shew my name vnto you. Tom tospot it is, it need not be painted, Wherfore with Rafe Roister I must needs be acquainted. ¶ I thank you that mine acquainta ̄ ce you wil take in good part. And by my troth I wil be your sworn brother: ¶ And to tell you my properties also I shall not spare. ¶ I were to blame if any fault should be in me. * Stay your self I pray you hartely. ¶ I neuer saw the like by gogs soule. ‡ Gogs wounds I am like Phalaris y e made a bul of brasse, ‡ Nay I am like Phalaris that made a bul of brasse, As a cruell torment for such as did offend: and he him self first therin put was: Euen so are we brought to this end. In ordaining him a iudge who wil be honored as a God: So for our own tailes we haue made a rod. ‡ You know that Tom tospot men doo me call, ‡ My conditions I am sure ye know as wel as I, ‡ But that you are a iudge. I would say vnto you, Knaues are Christen men els you are a iew. ¶ Then I trow I am he that this patrimony shal possesse, For I am Tom tospot to vse this trade doutles. From morning til night I sit tossing the black hole: then come I home and pray for my fathers soule. Saying my praiers with wounds, bloud guts and hart, Swearing and staring thus play I my parts. If any poore man haue in a whole week earnd a grote: He shal spend it in one houre in tossing the pot. I vse to call seruants and poore men to my company, and make them spend all they haue vnthriftily. So that my company they think to be so good: that in short space their haire growes through their hood. ¶ Tush I am acquainted with many a woman. That with me wil sit in euery house and place: But then their husbands had need to fend their face. For when they come home they wil not be a feard: to shake the goodman, and sometime shaue his beard. And as for flemish seruants I haue such a train: that wil quasse and carous, and therin spend their gain. From week to week I haue this company, Wherfore I am woorthy to haue the patrimony. ¶ Farwel brother Raie I wil come to you ano . ¶ I knew Haunce when he was as he saith, For he was once a Scholler in good faith. But through my company he was with drawn from thence, through his riote and excessiue expence. Vnto this trade which now you doo in him see: So that now he is wholy addicted to followe me. And one of my garde he is now become: VVel Haunce wel, thou wast once a white sonne. ‡ I wil help thee vp Haunce giue me thy hand, He riseth. ¶ Mary Phillip euen as I was wunt to doo. ¶ Lo Haunce heer is Phillip Fleming come now, we wil goe drink togither now, how saist thou? ¶ How say you maister Nichol wil you keep vs company? ¶ By Gogs wounds euen so it is with me: I am in my doublet and my hose as ye see. For all that I had dooth lye at pledge for Ale: By the masse I am as bare as my naile. Not a Crosse of money to blesse me haue I, But I trow we shall meet with Nichol newfangle by and by. ¶ Now farwell thou hast thy iust meed:</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Like Will to Like (Quoth the Devil to the Collier)</div><div class="body">The devil commissions the vice Nichol Newfangle to tempt men into a preoccupation with new fashions, which will lead them to hell. The ensuing action turns on the recurrent introduction of similar characters to one another. The vice introduces a dishonest collier to the devil, then Tom Tosspot to Rafe Roister; ina ~ mock trial he judges which is the bigger wastrel ===== PAGE 35 ===== 1568 (the prize, unknown to them, is to be hanged), but considers them equal. A comic drinking scene follows with Tosspot’s followers. He also sets in motion a plot to cozen two cutpurses over an inheritance of land. The vicious characters are driven off stage by the arrival of Virtuous Life, who is enthroned and crowned. Tosspot and Roister lose all their possessions: Roister gambles his away, and Tosspot has to leave his as security for his alehouse bill. Newfangle gives them the equipment to start a mew career as beggars, and they assault him. He is found injured by a judge, Severity, and betrays the two cutpurses; they are led away to execution, and Nichol and the hangman share their clothes. Tosspot’s followers end up in hospital suffering from gout. Lucifer carries the vice away on his back. The virtuous characters pray for the Queen, the Lords, and commons.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

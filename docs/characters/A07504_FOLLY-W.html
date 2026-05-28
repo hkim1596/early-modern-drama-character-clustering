@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FOLLY-W in A Mad World, My Masters · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FOLLY-W</span>
+</nav>
+
+<h1>FOLLY-W</h1>
+<p class="lede">in <em>A Mad World, My Masters</em> — Middleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1608</td></tr>
+<tr><th>Words</th><td>1715</td></tr>
+<tr><th>Characters</th><td>9094</td></tr>
+<tr><th>BritDrama no.</th><td>1479</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">their healths; they cannot a bide to ſee vs merry all the while the&#x27;re aboue ground; and that makes ſo many laugh at their fathers funerals: I know my Grandſire <mark>has</mark> his Will in a Boxe, and <mark>has</mark> bequeath&#x27;d all to me, when he can carry nothing <mark>away</mark>; but ſtood I in neede of poore tenne pounds now, by his will I ſhould hang my ſelte</div>
+<div class="excerpt">uerne, and riſe in a Tabacco-ſhop: her&#x27;s a transformation: I was wont yet to pitie the ſimple, and leaue e&#x27;m ſome money: ſl&#x27;id, now I gull e&#x27;m without conſcience; I <mark>goe</mark> without order, ſweare without number, gull without mercie, &amp; drinke without meaſure. How proue you that ſir? Maſle that was well found out all drunkerds may lawfully</div>
+<div class="excerpt">done of him yfaith; it came ſomewhat hard from him at firſt; for indeed nothing comes ſtiffe from an old man but money: and he may well ſtand vpon that, when he <mark>has</mark> nothing elſe to ſtand vpon: where&#x27;s our Port-mantua? In with the purchaſe, t&#x27;will lie ſafe enough there vnder&#x27;s noſe I warrant you: what, is all ſure? You know</div>
+<div class="excerpt">it. How now Singleſtone? What haue I loſt? ſpeake? Speake, what haue I loſt I ſay? That&#x27;s true, my cloth&#x27;s come. Waſt not wel manag&#x27;de, you neceſſary miſchiefs? <mark>did</mark> the plot want either life or Art? Puſh, I knew he could not ſleep quietly til he had pay&#x27;d me for robing of him too, tis his humour, &amp; the humor of moſt of your</div>
+<div class="excerpt">and giue them more, that haue too much alreadie; and what call you that, but robing of themſelues a Courtlyer way; Oh. A cold fit that comes ouer my memory, and <mark>has</mark> a ſhrode pull at my fortunes. Is it for certaine, Lieftenant, that my Grandſire keepes an vncertaine creature, a Queane? So much the more &#x27;prepoſterous for mee,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Call mee your Forecaſt, you whore ſons, when you come drunk out of a Ta uerne, t&#x27;is I muſt caſt your plots into forme ſtil; tis I muſt ma nage the Pranck, or Ile not giue a louſe for the proceeding: I muſt let flie my ciuil fortunes, turne wilde-braine, lay my wits vpo&#x27;th Tenters, you raskals, to maintaine a company of vil laines, whom I loue in my very ſoule and conſcience. Hang you, you haue bewitcht me among you, I was as well giuen till I fell to be wicked, my Grandſire had hope of me, I went all in blacke, ſwore but a Sundaies, neuer came home drunke, but vpon faſting nights to clenſe my ſto macke; ſl&#x27;id now I&#x27;me quite altered, blowne into light co lours, let out othes by&#x27;th minute, ſit vp late till it bee early, drinke drunke till I am ſober, ſincke downe dead in a Ta uerne, and riſe in a Tabacco-ſhop: her&#x27;s a transformation: I was wont yet to pitie the ſimple, and leaue e&#x27;m ſome money: ſl&#x27;id, now I gull e&#x27;m without conſcience; I goe without order, ſweare without number, gull without mercie, &amp; drinke without meaſure. How proue you that ſir? Maſle that was well found out all drunkerds may lawfully ſay, they drinke within meaſure by that tricke, dna now I&#x27;me put i&#x27;th mind of a tricke can you keepe your coun tenance villaines? yet I am a foole to aske that, for how can they keepe their countenance that haue loſt their credits? I eaſily beleeue that Antient, for thou loſt thy co lours once; Nay faith as for bluſhing, I thinke ther&#x27;s grace little enough amongſt you all, tis lent in your cheekes, the flag&#x27;s downe; wel, your bluſhing face I ſuſpect not, nor in deed greatly your laughing-face, vnleſſe you had more mo ney in your purſes: then thus compendiouſly now, you all know the poſſibilities of my hereafter fortunes, and the humor of my frolike Grandſire Sir Bounteous Progreſſe ; whoſe death makes all poſſible to me: I ſhall haue all, when he ha&#x27;s nothing; but now he ha&#x27;s all, I ſhall haue nothing: I thinke one minde runnes through a million of e&#x27;m; they loue to keepe vs ſober all the while the&#x27;re aliue, that when the&#x27;re dead we may drinke to their healths; they cannot a bide to ſee vs merry all the while the&#x27;re aboue ground; and that makes ſo many laugh at their fathers funerals: I know my Grandſire has his Will in a Boxe, and has bequeath&#x27;d all to me, when he can carry nothing away; but ſtood I in neede of poore tenne pounds now, by his will I ſhould hang my ſelte e&#x27;re I ſhould get it, ther&#x27;s no ſuch word in his Will I war rant you, nor no ſuch thought in his mind. A French ruffe, a thinne beard, and a ſtrong per fume will doo&#x27;t: I can hire blew coats for you all by Weſt minſter clocke, and that colour will be ſooneſt beleeued. Why carry your ſelues but probably, and carry away enough with your ſelues. Thankes good ſir Bounteous. Heard of e&#x27;m ſir Bounteous, but neuer heared e&#x27;m. Indeed ſir Bounteous ? To me ſir Bounteous, and you could nere ſpeake at fitter time? for I&#x27;me here preſent to grant you. Some fiue yeare ſir. So we haue beene all ſir. And thats worth all ſir. You wrong both his worth, and your bountie, and you cal that boldnes; Sir I haue heard much good of that yong Gentleman. H&#x27;as caried himſelfe alwaies generouſly. Well ſir, for your ſake, and his own deſeruing, Ile reſerue a place for him neereſt to my ſecrets. The&#x27;re ſeldome match&#x27;t beleeue it. Oh I beſeech you ſir Bounteous. A very proud Ayre yfaith ſir. And why ſhould you be glad of that? Puſh, Money, money, we come for money. Tut, tut ſir, money. Who my L. Owemuch? we haue tooke order with him before hand, he lies bound in his bed and al his followers. Which is the Key, come? Away now, ceaze vpon him, binde him. Oh ho ſir! Oh no, heeres better muſicke ſir. Diſpatch with him, away; ſo, thanke you good Grandſire; this was bounteouſly done of him yfaith; it came ſomewhat hard from him at firſt; for indeed nothing comes ſtiffe from an old man but money: and he may well ſtand vpon that, when he has nothing elſe to ſtand vpon: where&#x27;s our Port-mantua? In with the purchaſe, t&#x27;will lie ſafe enough there vnder&#x27;s noſe I warrant you: what, is all ſure? You know what followes now, one villane binds his fellowes; go, we muſt be all bound for our owne ſecuri ties raskals, there&#x27;s no dallying&#x27; vppo&#x27;th point; you conceit me: there is a L. to be found bound in the morning, and al his followers, can you picke out that L. now? You nere plot for your ſafeties, ſo your wants be ſatisfied. Pox on&#x27;t, Ile haue the footman ſcape. The Footman of all other will be ſuppoſde to ſcape, for he comes in no bed all night; but lies in&#x27;s clothes, to be firſt ready i&#x27;th morning: the horſe and he lies in litter to gether; that&#x27;s the right faſhion of your bonny Footman: and his freedome will make the better for our purpoſe; for we muſt haue one i&#x27;th morning to vnbinde the Knight, that we may haue our ſport within our ſelues: we now arriue at the moſt tickliſh point, to rob, and take our eaſe, to be theeues and lie by&#x27;t, looker to&#x27;t lads, it concernes euery mans gullet; Ile not haue the jeſt ſpoilde, that&#x27;s certaine, tho it hazard a winde pipe: Ile either go like a L. as I came, or be hangd like a theeſe as I am; and that&#x27;s my reſolution. Singleſtone! Suchman- Who&#x27;s that i&#x27;th chamber? Sir Bounteous good morrow, I would giue you my hand ſir, but I cannot come at it; is this the curteſie a&#x27;th coun trie ſir Bounteous ? Truſt me, I thought you had beene better be lou&#x27;d ſir Bounteous ; but I ſee you haue enemies ſir, and your friends fare the worſe for em: I like your talke better then your lodging; I nere lay harder in a bedde of Downe; I haue had a madde nights reſt on&#x27;t: can you not geſle what they ſhould be Sir Bounteous ? How? fie, fie, beleeue it not ſir, theſe lie not far off I warrant you. I&#x27;le be burnt &amp; they doe, ſome that vſe to your houſe ſir, and are familiar with all the couneiances. They were reſolute villaines, I made my ſelfe knowne to e&#x27;m, told e&#x27;m what I was; gaue e&#x27;m my honora ble word not to diſcloſe e&#x27;m. And thinke you the ſlaues would truſt me vpon my word? Forſooth no, I muſt pardon e&#x27;m, they told mee Lords promiſes were mortal, and commonly die within halfe an houre after they are ſpoken; they were but griſtles, and not one amongſt a hundred come to any full groth, or per fection, and therefore tho I were a L. I muſt enter into bond. Troth Im&#x27;e of that mind Sir Bounteous you far&#x27;d the worſe for my coming hither. Pray pittie not me ſir. About this place Sir Bounteous ? I, ee&#x27;n a twinge, you ſay right. But that which diſturbs mee moſt Sir Bounteous lies here. You ſay true Sir. Maſſe ſo I geſt it. How now Singleſtone? What haue I loſt? ſpeake? Speake, what haue I loſt I ſay? That&#x27;s true, my cloth&#x27;s come. Waſt not wel manag&#x27;de, you neceſſary miſchiefs? did the plot want either life or Art? Puſh, I knew he could not ſleep quietly til he had pay&#x27;d me for robing of him too, tis his humour, &amp; the humor of moſt of your rich men in the courſe of their liues; for you know, they alwaies feaſt thoſe mouthes that are leaſt nedie, and giue them more, that haue too much alreadie; and what call you that, but robing of themſelues a Courtlyer way; Oh. A cold fit that comes ouer my memory, and has a ſhrode pull at my fortunes. Is it for certaine, Lieftenant, that my Grandſire keepes an vncertaine creature, a Queane? So much the more &#x27;prepoſterous for mee, I ſhall hop ſhorter by that tricke; ſhe carries away the thirds at leaſt; twill proue en-tayld land I am afraid when al&#x27;s done, yfaith nay, I haue knowne a vicious-old-thought-acting Father, Damb&#x27;d onely in his dreames, thirſting for game, (When his beſt parts hung downe their heads for ſhame,) For his blancht harlot diſpoſſeſſe his ſonne, And make the pox his heire, twa&#x27;s grauely done: How had&#x27;ſt thou firſt knowledge on&#x27;t Lieftenant? Dull ſlaue that ne&#x27;re could&#x27;ſt ſpie it. How is the manner prethee? Beſide the coachman? That&#x27;s my Grandſires chiefe Gentleman it&#x27;h chaine of gold, that hee ſhould liue to bee a Pander, and yet looke vpon his chaine and his veluet iacket Peace, tis mine owne yfaith, I haa&#x27;te. Thankes, thankes to any ſpirit, That mingled it mongſt my inuentions. Giue me ſcope and heare me, I haue begot that meanes which will both furniſh me, And make that queane walke vnder his conceit. And all at one dealing? And thou ſhalt ſee&#x27;t quickly yfaith; nay tis in graine, I warrant it hold colour: Leiftenant, ſtep behind yo&#x27;n hanging; if I miſtooke not at my entrance, there hangs the lower part of a gentlewomans gowne, with a maske and a chinclout; bring all this way: Nay, but doo&#x27;t cunningly now, tis a friends houſe, and I&#x27;de vfe it ſo, ther&#x27;s a taſt for you. Why vſe it. Come, come, thou ſhalt ſee a woman quickely made vp here. And is not moſt they doe againſt kind I prethee? to lie with their Horſe-keeper, is not that againſt kind? to weare half moons made of anothers haire, is not that againſt kind? to drinke downe a man, ſhe that ſhould ſet him vp, pray is not that monſtrouſly againſt kind now? nay ouer with it Leiftenant, ouer with it, euer while you liue put a womans clothes ouer her head: Cupid plaies beſt at blind-man buff.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Mad World, My Masters</div><div class="body">Sir Bounteous Progress is much sought after for his generosity, but one person who has not benefited is his heir, Follywit. Down on his luck, Follywit decides to take some of his inheritance early. He poses as a lord and invites himself to stay with Sir Bounteous, and, during the night, changes clothes and burgles the house. Sir Bounteous is aghast that a lord has been robbed under his roof, and reimburses Follywit’s pretended losses. Harebrain is suspicious of his wife: he hires men to watch the house, takes away her bawdy reading matter, and allows her only the company of Lady Gullman, whom he takes for a pious virgin. In fact, Gullman is a courtesan working as a go-between for Penitent Brothel, and devises a plan to allow him access: she feigns sickness, and Harebrain allows his wife to visit her; Penitent Brothel poses as her physician. Other visitors include Sir Bounteous, Gullman’s principal client, and two other would-be clients, all of whom give money to ‘the doctor’. Mistress Harebrain arrives and has sex with Penitent Brothel. Meanwhile Gullman pretends to hold a conversation with her for the benefit of the eavesdropping Harebrain, who takes his wife home confident in her chastity. Worried that Sir Bounteous may leave his estate to a courtesan, Follywit poses as Gullman, visits the knight’s country house, and steals jewels. Back in London, he persuades Gullman to marry him on the expectation of his inheritance, not realizing who she is. Meanwhile, Penitent Brothel undergoes a spiritual conversion: his horror at his own lust is compounded by an encounter with a succubus in the shape of Mistress Harebrain. He visits the real Mistress Harebrain, partly to establish that it wasn’t her and partly to apologise for having endangered her chastity. Harebrain overhears them and is delighted. The Harebrains are invited to a feast at Sir Bounteous’s house. Follywit and his associates, disguised as actors, provide the entertainment, a comedy entitled The Slip, and Follywit persuades Sir Bounteous to hand over more valuables, including a watch, for use as props. The ‘actors’ are arrested escaping with their loot, but Follywit improvises to suggest that the constable is only a character in the ===== PAGE 231 ===== 1605 play. They tie him up get away, but return in their own persons. The truth comes out when the stolen watch starts to chime in Follywit’s pocket. He assures Sir Bounteous that he will settle down now that he has a wife, and is discomfited to…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

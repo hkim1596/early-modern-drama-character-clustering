@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ANTI in The Comedy of Errors · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ANTI</span>
+</nav>
+
+<h1>ANTI</h1>
+<p class="lede">in <em>The Comedy of Errors</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>666</td></tr>
+<tr><th>Characters</th><td>3455</td></tr>
+<tr><th>BritDrama no.</th><td>944</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">and more ſparing gueſt: But though my cates be meane, take them in good part, Better cheere may you haue, but not with better hart. But ſoft, my doore is lockt; <mark>goe</mark> bid them let vs in. What art thou that keep&#x27;ſt mee out from the howſe I owe? Doe you <mark>heare</mark> you minion, you&#x27;ll let vs in I hope? Thou baggage let me in. Are you</div>
+<div class="excerpt">quiet, And in deſpight of mirth meane to be merrie: I know a wench of excellent diſcourſe, Prettie and wittie; wilde, and yet too gentle; There will we dine: this <mark>woman</mark> that I meane My wife (but I proteſt without deſert) Hath oftentimes vpbraided me withall: To her will we to dinner, get you home And fetch the chaine, by this I</div>
+<div class="excerpt">art ſenſible in nothing but blowes, and ſo is an Aſſe. Wilt thou ſtill talke? Peace doting wizard, peace; I am not mad. You Minion you, are theſe your Cuſtomers? <mark>Did</mark> this Companion with the ſaffron face Reuell and feaſt it at my houſe to day, Whil&#x27;ſt vpon me the guiltie doores were ſhut, And I denied to enter in my houſe. Din&#x27;d</div>
+<div class="excerpt">the guiltie doores were ſhut, And I denied to enter in my houſe. Din&#x27;d at home? Thou Villaine, what ſayeſt thou? Were not my doores lockt vp, and I ſhut out? And <mark>did</mark> not ſhe her ſelfe reuile me there? <mark>Did</mark> not her Kitchen maide raile, taunt, and ſcorne me?</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">By what rule ſir? And welcome more common, for thats nothing but words. I, to a niggardly Hoſt, and more ſparing gueſt: But though my cates be meane, take them in good part, Better cheere may you haue, but not with better hart. But ſoft, my doore is lockt; goe bid them let vs in. What art thou that keep&#x27;ſt mee out from the howſe I owe? Doe you heare you minion, you&#x27;ll let vs in I hope? Thou baggage let me in. Are you there Wife? you might haue come before. There is ſomething in the winde, that we can not get in. You haue preuail&#x27;d, I will depart in quiet, And in deſpight of mirth meane to be merrie: I know a wench of excellent diſcourſe, Prettie and wittie; wilde, and yet too gentle; There will we dine: this woman that I meane My wife (but I proteſt without deſert) Hath oftentimes vpbraided me withall: To her will we to dinner, get you home And fetch the chaine, by this I know &#x27;tis made, Bring it I pray you to the Porpentine, For there&#x27;s the houſe: That chaine will I beſtow (Be it for nothing but to ſpight my wife) Vpon mine hoſteſſe there, good ſir make hafte ▪ Since mine owne doores refuſe to entertaine me, Ile knocke elſe-where, to ſee if they&#x27;ll diſdaine me. Do ſo, this ieſt ſhall coſt me ſome expence. What claime laies ſhe to thee? What is ſhe? How doſt thou meane a fat marriage? What complexion is ſhe of? That&#x27;s a fault that water will mend. What&#x27;s her name? Then ſhe beares ſome bredth? In what part of her body ſtands Ireland ? Where ſtood Belgia, the Netherlands ? Go hie thee preſently poſt to the rode, And if the winde blow any way from ſhore, I will not harbour in this Towne to night. If any Barke put forth, come to the Mart, Where I will walke till thou returne to me: If euerie one knowes vs, and we know none, &#x27;Tis time I thinke to trudge, packe, and be gone. There&#x27;s none but Witches do inhabite heere, And therefore &#x27;tis hie time that I were hence: She that doth call me husband, euen my ſoule Doth for a wife abhorre. But her faire ſiſter Poſſeſt with ſuch a gentle ſoueraigne grace, Of ſuch inchanting preſence and diſcourſe, Hath almoſt made me Traitor to my ſelfe: But leaſt my ſelfe be guilty to ſelfe wrong, Ile ſtop mine eares againſt the Mermaids ſong. I that&#x27;s my name. What is your will that I ſhal do with this? Made it for me ſir, I beſpoke it not. I pray you ſir receiue the money now, For feare you ne&#x27;re ſee chaine, nor mony more. I am not furniſh&#x27;d with the preſent monie: Beſides I haue ſome buſineſſe in the towne, Good Signior take the ſtranger to my houſe, And with you take the Chaine, and bid my wife Disburſe the ſumme, on the receit thereof, Perchance I will be there as ſoone as you. No beare it with you, leaſt I come not time e nough. Good Lord, you vſe this dalliance to excuſe Your breach of promiſe to the Porpentine, I ſhould haue chid you for not bringing it, But like a ſhrew you firſt begin to brawle. But where&#x27;s the Money? Thou whoreſon ſenſeleſſe Villaine. Thou art ſenſible in nothing but blowes, and ſo is an Aſſe. Wilt thou ſtill talke? Peace doting wizard, peace; I am not mad. You Minion you, are theſe your Cuſtomers? Did this Companion with the ſaffron face Reuell and feaſt it at my houſe to day, Whil&#x27;ſt vpon me the guiltie doores were ſhut, And I denied to enter in my houſe. Din&#x27;d at home? Thou Villaine, what ſayeſt thou? Were not my doores lockt vp, and I ſhut out? And did not ſhe her ſelfe reuile me there? Did not her Kitchen maide raile, taunt, and ſcorne me?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Comedy of Errors</div><div class="body">Egeon, a merchant of Syracuse, has been arrested under an Ephesian law which forbids Syracusans to set foot in Ephesus; he is unable to pay the fine and must face execution. He tells the Dike his story: long ago, a storm at sea separated him from his wife and one of his twin baby sons, along with one of a pair of infant twins destined to be family servants; once his remaining son grew up, he went looking for his lost brother; and now Egeon is looking for him. The Duke pities him and grants him a day to raise his fine from the Ephesians. Altipholis of Syracuse arrives in Ephesus and is advised to lie about his place of origin; he sends his servant D¥@iiio to take money to his lodgings. But Ephesus has an identical Antipholus and Dromio already in residence. The local Antipholus is late for dinner, much to his wife M@#iana’s annoyance, but it is the visiting Antipholus who is summoned by the local Dromio. When the latter reports that Antipholus denies even being married, Adriana suspects infidelity. She upbraids the Syracusan Antipholus and cajoles him in to eat. Though he suspects that her uncanny knowledge of him is attributable to witchcraft, he decides to take advantage of the proffered meal, and instructs Dromio to keep intruders out of the house. One prospective intruder is the house’s rightful owner, Antipholus of Ephesus; but Dromio of Syracuse refuses to open the door to him. He is ready to break in, but his friends advise him that this would publicly dishonour his wife. He goes off to dine with a courtesan, and sends for a chain he had ordered as a present for Adriana, to give to his hostess instead. Midian tries to encourage Antipholus of Syracuse to treat Adriana better, but he is attracted to her instead. Dromio also discovers an unexpected romantic entanglement in the rotund shape of a kitchen wench, the fiancée of his Ephesian counterpart. The chain goes astray: it is handed to the wrong Antipholus, but Aligeléithe goldsmith refuses to accept sews meter hie enattprne! Shanon athe ite ===== PAGE 207 ===== 1593 payment on delivery, insisting on calling back later instead. Angelo quickly mins into financial difficulties: he owes money to a merchant who is leaving town and needs it quickly; but happily the debt is equal to the sum Antipholus owes for the chain. Antipholus of Ephesus sends his Dromio to buy a rope’s end with which to beat his wife. Angelo asks him for his money and, when he denies receiving the chain, has him arrested for debt.…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

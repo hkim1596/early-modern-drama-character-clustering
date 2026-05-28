@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UAL in 219 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>UAL</span>
+</nav>
+
+<h1>UAL</h1>
+<p class="lede">in <em>219</em> — [84]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1605</td></tr>
+<tr><th>Words</th><td>428</td></tr>
+<tr><th>Characters</th><td>2207</td></tr>
+<tr><th>BritDrama no.</th><td>219</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">this and that braue Gallant ▪ and such Gallants, As I protest I saw but through a Grate. Sfoote, Hee&#x27;s not ashamde besides to charge mee With a late Promise: I <mark>must</mark> yeeld in deed, I <mark>did</mark> (to shift him with some contentment) Make such a friuall promise. Nay Sir, he makes his claime by debt of friendship. Forsooth y&#x27;are welcome</div>
+<div class="excerpt">her, I had lost my life, Which life indeed I would haue lost before, I had displeasd you, had I not receau&#x27;d it From such a kinde, a wise, and honour&#x27;d Father. I <mark>did</mark>, but if my father Will haue his sonne foresworne, vpon his soule, The blood of my black periurie shall lye, For I will seeke his fauour though I dye. Worshipfull</div>
+<div class="excerpt">fauour though I dye. Worshipfull Father. And vnderstand him too, Ile be sworne of a booke. Page, L t mee see that 〈◊〉 ▪ 〈◊〉 a rancke stincking Satyre: this had been Enough to haue poy ned euerie man of vs. Well, th&#x27;old verse is, A Ap tibus incipe io- . Well said Fortunio, O y&#x27;are a rar Courtier, Your knee good Signior, I beseech</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Come Fortunio, now take hold On this occ ▪ as my selfe on this: One couple more would make a Barly-breake. I pray thee good Scholards giue vs cause. All this by learning ▪ I before him, I do not greatlie care, Nor anie where in deed; my Sister heere Shall be my spie if shee will wrong her selfe, And giue her right to my wife, I am pleasd. Soft Sir, I hope you need not do it yet, Let mee take this time. No not before my Father? Sfoote, let him lead A better Husbands life, and liue not idlely, Spending his time, his coyne, and selfe on Wenches. Cry mercie Sir; why there comes messengers From this and that braue Gallant ▪ and such Gallants, As I protest I saw but through a Grate. Sfoote, Hee&#x27;s not ashamde besides to charge mee With a late Promise: I must yeeld in deed, I did (to shift him with some contentment) Make such a friuall promise. Nay Sir, he makes his claime by debt of friendship. Forsooth y&#x27;are welcome by my Fathers leaue. Let me alone boy. But soft Sir, see Her ielous Iaylor followes at her heeles ▪ Come, we will watch some fitter time to boord her, And in the meane time seeke out our mad crue. My spirit 〈◊〉 to swagger. Had I not had her, I had lost my life, Which life indeed I would haue lost before, I had displeasd you, had I not receau&#x27;d it From such a kinde, a wise, and honour&#x27;d Father. I did, but if my father Will haue his sonne foresworne, vpon his soule, The blood of my black periurie shall lye, For I will seeke his fauour though I dye. Worshipfull Father. And vnderstand him too, Ile be sworne of a booke. Page, L t mee see that 〈◊〉 ▪ 〈◊〉 a rancke stincking Satyre: this had been Enough to haue poy ned euerie man of vs. Well, th&#x27;old verse is, A Ap tibus incipe io- . Well said Fortunio, O y&#x27;are a rar Courtier, Your knee good Signior, I beseech your knee. Drawer make euen th&#x27;impartiall skales of Iustice, Giue it to C audio, and from him fill round. Come Dariotto, sett mee, let mee rest, Come in when they haue done the Ladyes right. Father, hee comes vpon you ▪ Is&#x27;t come to this? then will I make a speech in praise of this reconcilement, including therein the praise and honor of the most fashionable and autenticall HORNE: stande close Gentles, and be silent.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 219</div><div class="body">Christ has recently come to Jewry, and Infidelity is keen to interfere with his work: his plan is to influence the religious establishment against Christ and thereby ensure his crucifixion. Meanwhile, he encourages Mary Magdalen to enjoy her youth while she can, and introduces her to three companions who will help: Pride, Cupidity, and Carnal Concupiscence (all of whom go under less damaging names). They recommend fashionable clothes and hairstyles, which will attract men, but also advise her against marriage. Mary meets The Law of God and Knowledge of Sin, and experiences the stirrings of conscience: she despairs, thinking herself surely damned and God unjust. Christ casts seven devils out of Mary and drives away Infidelity: she is given the grace to repent. Simon the Pharisee is suspicious of Christ because he is lower-class and uneducated, and invites him to dinner. During the meal, Mary washes his feet with her tears and anoints them. Simon is outraged, but Christ emphasizes the universality of forgiveness: Mary is a genuine penitent, whereas Simon is merely a hypocrite wanting to show off his wealth and presumed holiness. Simon is offended and sets Infidelity and Malicious Judgement to follow Christ, spy on his preaching, and have him brought to trial. Mary ends the play in the company of Love and Justification, who emphasize that she is saved through her faith alone.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LUCE in The London Prodigal · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LUCE</span>
+</nav>
+
+<h1>LUCE</h1>
+<p class="lede">in <em>The London Prodigal</em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1605</td></tr>
+<tr><th>Words</th><td>611</td></tr>
+<tr><th>Characters</th><td>3047</td></tr>
+<tr><th>BritDrama no.</th><td>1443</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">aith and thy tongue trips trench-more. Y faith I like not shadowes, bubbles, broath, I hate a light a loue, as I hate death. <mark>Away</mark> you foolish knaue, let my hand <mark>goe</mark>. Ile haue your coate stript ore your eares for this, You sawcie rascall. Your man is something sawcie. Syr, as I am a maid, I doe affect you aboue any shuter that</div>
+<div class="excerpt">was borne. Alas my friend, I know not what to do, My father and my friends, they haue despised me: And I a wretched maid, thus cast <mark>away</mark>, Knowes neither where to <mark>goe</mark>, nor what to say. I thanke you syr. Vat is your vill wi 〈◊〉 ? Do not perswade me, once to 〈◊〉 thought, Imagine yet, that he is worse then naught: Yet one louers</div>
+<div class="excerpt">〈◊〉 ? Do not perswade me, once to 〈◊〉 thought, Imagine yet, that he is worse then naught: Yet one louers time, may all that ill vndo, That all his former life, <mark>did</mark> run into ▪ Therefore kind sister doe not disclose my estate, If ere his <mark>heart</mark> doth turne, tis nere too late. Vat is de matter, Vat be you yonker? Vat bin you yonker,</div>
+<div class="excerpt">scarce knowes how to loue. I neither doubt your vallour, nor your loue, but there be some that bares a souldiers forme, that sweares by him they neuer thinke vpon, goes swaggering vp and downe from house to house, crying God payes: and. Yet these are great gentlemen souldiers. Both for your selfe, and for your forme of life, If</div>
+<div class="excerpt">not speake? O here God, so young an armine. Are you not a married man, vere bin your vife? Here is all I haue, take dis. Why speake you not, were be yo r 〈◊〉 ? <mark>Did</mark> you vse her vell? Indeed dat vas not scone. Yes me doe. Stay one doth call, I shall come by and by againe. Where is the doore, are we not past it Artichoake? O</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Peace, let them talke: Fooles may haue leaue to prattle as they walke. Y aith and thy tongue trips trench-more. Y faith I like not shadowes, bubbles, broath, I hate a light a loue, as I hate death. Away you foolish knaue, let my hand goe. Ile haue your coate stript ore your eares for this, You sawcie rascall. Your man is something sawcie. Syr, as I am a maid, I doe affect you aboue any shuter that I haue, altho that souldiers scarce knowes how to loue. I neither doubt your vallour, nor your loue, but there be some that bares a souldiers forme, that sweares by him they neuer thinke vpon, goes swaggering vp and downe from house to house, crying God payes: and. Yet these are great gentlemen souldiers. Both for your selfe, and for your forme of life, If I may choose, ile be a souldiers wife. I afore God, either take me now, or take me neuer, Else what I thought should be our match, shal be our parting, So fare you well for euer. Neuer feare, she will not trouble you. Alas the day that euer I was borne. Alas my friend, I know not what to do, My father and my friends, they haue despised me: And I a wretched maid, thus cast away, Knowes neither where to goe, nor what to say. I thanke you syr. Vat is your vill wi 〈◊〉 ? Do not perswade me, once to 〈◊〉 thought, Imagine yet, that he is worse then naught: Yet one louers time, may all that ill vndo, That all his former life, did run into ▪ Therefore kind sister doe not disclose my estate, If ere his heart doth turne, tis nere too late. Vat is de matter, Vat be you yonker? Vat bin you yonker, why doe you not speake? O here God, so young an armine. Are you not a married man, vere bin your vife? Here is all I haue, take dis. Why speake you not, were be yo r 〈◊〉 ? Did you vse her vell? Indeed dat vas not scone. Yes me doe. Stay one doth call, I shall come by and by againe. Where is the doore, are we not past it Artichoake? O heeres his Vnckle, welcome gentlemen, welcome all, Such a cozoner gentlemen, a murderer too For any thing I know, my daughter is missing: Hath bin looked for, cannot be found, a vild vpon thee. O my life here, where will you ha de man? Vat ha de younker done? His vife, dat is not good, dat is not seene. Haue me no, and or way doe you haue him, He tell me dat he loue me hartily. I am no trull, neither outlandish Frowe, Nor he, nor I shall to the prison goe: Know you me now? nay neuer stand amazed. Father I know I haue offended you, And tho that dutie wills me bend my knees To you in dutie and obedience: Yet this wayes doe I turne, and to him yeeld My loue, my dutie and my humblenesse. O M. 〈◊〉 , if too much griefe Haue not stopt vp the orgens of your voyce, Then speake to her that is thy faithfull wife, Or doth contempt of me, thus tye thy tongue: Turne not away, I 〈◊〉 Aethyope, No wanton Cressed, nor a changing Hello ▪ But rather one made wretched by thy losse. What turnst thou still from me? O then I gesse thee wofulst among haplesse men. Not trust him, by hopes after blisse, I know no sorrow can be compar&#x27;d to his. I thanke, you sister.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The London Prodigal</div><div class="body">Old Flowerdale returns secretly from Venice and hears tales of his son’s prodigality. Wanting to think the best of his offspring, he tests the young man by posing as Christopher, a sailor bringing news of his own death and a will disinheriting his son. Under his new identity he lends his son money to enable him to pursue an advantageous marriage to Sir Lancelot’s daughter Luce, and enters his service to observe him at close quarters. Sir Lancelot is trying to get husbands for all three of his daughters, but Delia prefers a virgin life. For Luce, Sir Lancelot initially favours the wealthy bumpkin Oliver, and takes his part when Young Flowerdale challenges him to a duel. However, ‘Christopher’ forges a will which makes Flowerdale seem richer than Oliver, so Sir Lancelot changes his mind and persuades Flowerdale to go to his own wedding rather than keep his appointment to fight Oliver. It is to be a double wedding: another daughter, Frances, is marrying a merchant’s son. Flowerdale makes no secret of the fact that he intends to exploit Luce financially. Disappointed in him, Old Flowerdale arranges for his uncle to have him arrested for debt immediately after the wedding; apart from teaching the young man a lesson, it will also establish whether Luce genuinely loves him. When Sir Lancelot tries to shrug off the debt, the will is exposed as a fraud. Luce, who only married Flowerdale in obedience to her father, now insists on honouring her marital vows. Intending that Flowerdale should rot in beggary, Sir Lancelot disowns her. Her entreaties get Flowerdale released, but he too rejects her, so ‘Christopher’ gets her a job in Frances’s household, disguised as a Dutch chambermaid. Destitute and starving after squandering his money in gambling and dissolute living, Young Flowerdale is reduced to theft and begging: first he robs his sister- in-law Delia, then seeks people’s sympathy, and money, with a lie that his wife is dead. He finds that begging is a profitable trade, but the report of Luce’s death causes Sir Lancelot to seek his arrest on suspicion of murder. Luce reveals herself, Flowerdale repents, and most of the characters give Luce money and presents, but Sir Lancelot is not reconciled until ‘Christopher’ reveals who he really is. Though offered the choice of Sir Arthur and Oliver, Delia opts to remain unmarried, and everyone goes off for a celebratory feast.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

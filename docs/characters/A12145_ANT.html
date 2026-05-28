@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ANT in The Maid&#x27;s Revenge · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ANT</span>
+</nav>
+
+<h1>ANT</h1>
+<p class="lede">in <em>The Maid&#x27;s Revenge</em> — Shirley, James</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1639</td></tr>
+<tr><th>Words</th><td>2100</td></tr>
+<tr><th>Characters</th><td>11156</td></tr>
+<tr><th>BritDrama no.</th><td>2173</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">shall enjoy him. Twere not charity to starve you thus with shaddowes, Take him and with him in thy bosome locke The Mirrour of fidelity, Don Sebastiano. But he <mark>must</mark> be dearer Castabella, harke you sister, I have beene bold upon thy vertue, to Invite him to you, if your <mark>heart</mark> be free. Let it be empty ever, if he doe not Fill</div>
+<div class="excerpt">tooke our leave, The ground it selfe was hallowed So much with his owne piety, Diego saw it. Come I will tell you all, to your chamber sister, Diego ▪ our plot <mark>must</mark> on, all time is lost Vntill we try the mooving. Come Castabella, and prepare to <mark>heare</mark> A story not of length but worthy your eare. Art sure thou hast the time right.</div>
+<div class="excerpt">with my wishes, praid his leave I might be servant to Berinthia, But thus he briefly answered, untill His eldest daughter were dispos&#x27;d in marriage His youngest <mark>must</mark> not love, and therefore wisht me Vnlesse I could place Catalina here, Leave off soliciting, yet I was welcome, u fed on nothing but Berinthia, From whose faire</div>
+<div class="excerpt">say but you can love me, And I will waite an age, not wish to move But by commission from you, to whom I render the possession of my selfe: Ha? we are betrai&#x27;d, I <mark>must</mark> use cunning, She lives in you, and take not in worse sence; You are more gracious, in that you are So like your eldest sister, in whom lives The coppy of so much</div>
+<div class="excerpt">justice of my cause, all vallour fights But with a sayle against it. Now Sebestiano Puts on his judgement, and assumes his noblenesse, Whilst he loves equity. Sir she <mark>must</mark> not yet, tis dangerous. Tis done, Sebastiano shall report 〈◊〉 just and noble, Sforza sweare Vpon my Sword, oh doe not hinder me If victory crowne Sebastianoes arme.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">How now Sebastiano will you forfeit The name of friend then I did hope our love Had outgrowne complement. What? take heede, do not prophane; Wouldst thou be more then friend? It is a name, Vertue can onely answer to, couldst thou Vnite into one, all goodnesse whatsoe&#x27;re Mortality can boast of, thou shalt finde,. The circle narrow bounded to containe This swelling treasure; every good admits Degrees, but this being so good it cannot: For he&#x27;s no friend is not s perlative, Indulgent parents, brethre , kindred, tied By the naturall flow of blood; alliances, And what you can imagine, is to light, To weigh with name of friend: they execute At best, but what a nature pron e&#x27;m to, Are often lesse then friends, whe they remaine ur kinsmen still, but friend is never lost. Cata lina and Berinthia Repo t speakes loud their beauties, and no less Vertue in either well, I see you strive To leave no 〈◊〉 where you meane to honour, I 〈◊〉 otherwise escape the censure Of ne ingratefull, but by waiting on you Home to ero Ha? I have not so much choise Sebastiane, But if one S ster of Antonios, May have a commendation to your thoughts, I will not spend much Art in praysing her, Her vertue speake it selfe, I shall be happy, And be confirmd you brother, though I misse Acceptance at Avero. You shall teach me a lesson Against we meete at Eluas Castle sit. It will become me thus to waite on you. The strangest resolution of a father I ever heard, I was covetous To acquaint him with my wishes, praid his leave I might be servant to Berinthia, But thus he briefly answered, untill His eldest daughter were dispos&#x27;d in marriage His youngest must not love, and therefore wisht me Vnlesse I could place Catalina here, Leave off soliciting, yet I was welcome, u fed on nothing but Berinthia, From whose faire eyes love threw a thousand flames nto Antonio heart, her cheeks bewraying As many amorous blushings, which brake out Like a forc&#x27;d lightning from a troubled cloud, Discovering a restraint, as if within She were at conflict, which her colour onely Tooke liberty to speake, but soone fell backe, And as it were checkt by silence. Desperate, why sit? The Dona Catalina? do you love her? She is a Lady in whom onely lives Natures and Arts perfection, borne to shame All former beauties, and to be the wonder Of all succeeding, which shall fade and wither When she is but remembred. Sir I will do you right. Does it become me sir, to prosecute Where such a noble Count is interessed, Vpon my soule I wish the Lady yours, Here my suite fals, with tender of my service ̄ ; Would you were married, nay in bed together My honourable Count. Oh you are bounteous Ladie. Doe not feare me, I am not worthie your opinion, It shall be happinesse for me to kisse This Ivory hand, I were unworthy such a friend, his care Becomes him nobly; has not younder Count Some hope of Catalina. Ile backe to Eluas noble sir, This entertainement is so much above Antonio merit, if I leave you not I shall be out of hope to — Ha I am resolv&#x27;d, like Barge-men when they row. Ile looke auother way then that I goe. But in love They have no power, it is but tyranny, Plaine usurpation to command the minde Against its owne election; I am yours, Vow&#x27;d yours for ever, send me not away Shipwrack&#x27;d ith&#x27; habour, say but you can love me, And I will waite an age, not wish to move But by commission from you, to whom I render the possession of my selfe: Ha? we are betrai&#x27;d, I must use cunning, She lives in you, and take not in worse sence; You are more gracious, in that you are So like your eldest sister, in whom lives The coppy of so much perfection, All other seeme ̄ to imitate. But here she is, Madam, not finding you ith&#x27; garden, I met this Lady. Diego what newes? Diego. You observe the waiting creatures in the blacke, Harke, you apprehend me. The gods would sonner be sicke with Nectar, than Antoni Crow weary of such faire societie; But I am at home expected, a poore sister, My fathers care alive, and dying was His Legacy, having out-staid my time Is tender of my absence. I humbly thank your honour, Ile not be so trouble some. I have now a charge upon me, I hope it may Excuse me, if I hasten my returne. My Lord the favours done me, would proclaime I were too much unworthy not to visit you, Oft as I see Avero; Madam I part with some unhappinesse To lose your presence, give me leave I may Be absent your admirer, to whose memory I write my selfe a servant, The shallow rivers glide away with noise, The deepe are silent, fare you well Lady. Gentlemen happinesse and successe in your desires. Diego. Come lets away Diego our horses— Oh sister, ere you let fall words of welcome, Let me unlade a treasure in your eare Able to weigh downe man. Never was man so blest, As heavens had studied to enrich me here, So am I fortunate. I have a friend. But I have one more worth then millions, And he doth onely keepe alive that name Of friendship in his breast, pardon Villandros, Tis not to straine your love, whom I have tried, My worthiest cozen. His Commission Stretch&#x27;d not so farre, a Fathers tie was on him, But I have his noble promise, er&#x27;t be long, We shall enjoy him. Twere not charity to starve you thus with shaddowes, Take him and with him in thy bosome locke The Mirrour of fidelity, Don Sebastiano. But he must be dearer Castabella, harke you sister, I have beene bold upon thy vertue, to Invite him to you, if your heart be free. Let it be empty ever, if he doe not Fill it with noblest love, to make relation, What zeale he gave of a worthy nature, At our last parting (when betwixt a sonne, And friend he so divided his affections And out did both) you would admire him: were I able I would build a temple where We tooke our leave, The ground it selfe was hallowed So much with his owne piety, Diego saw it. Come I will tell you all, to your chamber sister, Diego ▪ our plot must on, all time is lost Vntill we try the mooving. Come Castabella, and prepare to heare A story not of length but worthy your eare. Art sure thou hast the time right. I. Madam feare not I am your friend. THe welcom&#x27;st guest that ever Eluas had Sister, Villandras yare not sensible what treasure You po esse, I have no loves, I would not here divide. Dishonour, it is a language I never understood, yet Throw off your feares Berinthia, yare ith&#x27; power Of him that dares not thinke The least dishonour to you. Come b not sad. Can you be ignorant what plot was l id To take your faire life from you. You are secure Faine not your selfe so haplesse my Berinthi , Ralse your dejected thoughts, be merry, come, Thinke I am your Antonio. Dare keepe thee here? with thy consent, I dare Deny thy Father, by this sword I dare, And all the world. Your brother Lady, and my honoured friend, Why doe the gates not spread themselves, to open At his arrivall Sforza, tis Berinthiaes brother, Sebastiano the example of all worth And friendship, is come after his sweete sister, Be not such a coward Lady, he cannot come Without all goodnesse waiting on him, Sforza, Sforza I say, what pretious time we lose, Sebastiano, I almost lose my selfe In joy to meete him, breake the iron barre And give him entrance. Sister, now hees come, he did promise me But a short absence, he of all the world I would call brother, Castabella more Then for his sisters love, oh hees a man Made up of merit, my Berinthia Throw off all cloudes, Sebastianoes come. What, to see thee? he shall see the ̄ e he ̄ re. Respected like thy selfe, Berinthia, Attended with Antonio, begirt with armies of thy servants Oh my friend. What face have you put on? am I awake? Or doe I dreame Sebastiano frownes. No more, I guiltie of an action so dishonourable Has made me unworthy of your friendship; Come y&#x27;are not in earnest, tis enough I know My se&#x27;fe Antonio. Twas a foule breath delivered it, and wert any But Sebastiano, he should feele the weight Of such a falshood. Now by my Fathers soule, he that takes her hence Vnlesse she give consent, treads on his grave, Sebas iano, y&#x27;are unnoble then, Tis I that said it. Promise me the hearing, And hat have any satisfaction, Becomes my fame. Were in your power, would you not account it A pretious victory, in your sisters cause, To dye your sword with any blood of him, S v&#x27;d both her life and honour? You have told your selfe, and I have argume ̄ nt to prove this. Oh Sebastiano, Thou dost not thinke what devill lies at home Within a sisters bosome, Catalina, (I know not with what worst of envy) laid Force to this goodly building, and through poyso H d rob&#x27;d the earth of more then all the world, Her vertue. Be not cozend, With your credulity, for my blood, I value it Beneath my honour, and I dare by goodnesse, I such a quarrell kill thee: but heare all, And then you shall have fighting your heart full. Valasco was the man, appointed by That goodly sister to steale Berinthia, And Lord himselfe of this possession, Just at that time; but heare and tremble at it, Shee by a cunning poyson should have breath&#x27;d Her soule into his armes, within two houres, And so Valasco should have borne the shame Of thest and murther; how doe you like this sir. Tis true by honours selfe, heare it confirm&#x27;d, And when you will, I am ready. Holds your resolve yet constant ▪ if you have Better opinion of your sword, then truth, I am bound to answer, but I would I had Such an advantage gainst another man, As the justice of my cause, all vallour fights But with a sayle against it. Now Sebestiano Puts on his judgement, and assumes his noblenesse, Whilst he loves equity. Sir she must not yet, tis dangerous. Tis done, Sebastiano shall report 〈◊〉 just and noble, Sforza sweare Vpon my Sword, oh doe not hinder me If victory crowne Sebastianoes arme. I charge thee by thy honesty restore This Lady to him, on whose lip I seale My unstain&#x27;d faith. Never man fought with a lesser heart, the conquest Will be but many deathes, he is her brother, My friend, this poore girles joy. Then friend againe, and as Sebastiano, I bid him welcome, and who loves Antonio Must speake that language. Well said my brave Adelautado, come Sebasti , And my Birinthia by to morrow we shall know The truth of our felicity. Ha? Some conceit of Sforza the old Captaine ▪ Lets entertaine it, some souldiers device, A maske of Souldiers. odamercy Sfor . Friends; Sforza. I doubt you&#x27;le never be better, ou shall now owe me More than you shall account for. Villandra . Sfor , there is no remedie, but by all honour doe it, Sister, I am to waite on him, oh my poore girle 〈…〉 be with thee, for a 〈…〉 my absence. 〈◊〉 , I know not with what soule draw my sword against thee An onio I am driven in a storme To 〈◊〉 my selfe on thee, if not, any curse— We must on sir. Mee e him my Lord, you will become his place of a Spectator best. When thou liv&#x27;st againe shalt be more honorable Sebastiano doe you observe the advantage, Yet thinke upon&#x27;t. Where art Berinthia, let me breath my last upon thy lip, make haste, least I die else. To die by thee is more then death, Sforza be honest, But love thy sister for me, I me past hope, Thou hast undone another in my death. Berinthia thy lip farewell, and friend, and all the world.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Maid&#x27;s Revenge</div><div class="body">PLOT Sebastiano hopes that his friend Antonio will marry one of his sisters, and introduces him to the family, even though the girls both have suitors already. Antonio falls for Berinthia, but her father, Vilarezo, will not allow her to marry until the elder daughter, Catalina, is wed. Catalina herself becomes enamoured of Antonio, which makes her jealous of her sister and annoys her suitor, Montenegro. After Antonio is called away, Catalina plots to frustrate his wooing: she persuades Valasco, Berinthia’s other suitor, to damn her reputation by claiming that Berinthia has promised to marry him; Vilarezo responds by ordering Berinthia’s confinement in Catalina’s custody. Antonio writes to Berinthia, but the letter falls into Catalina’s hands. Catalina proposes that Valasco should force the issue by kidnapping Berinthia; but her real plan is for him to take the blame for Berinthia’s death by poison. Antonio’s servant overhears the plot and warns his master. Antonio comes to rescue Berinthia, and is admitted by Catalina’s chambermaid, who takes him for Valasco; together they escape to Antonio’s castle. Upon realizing that Antonio is his daughter’s abductor, Vilarezo sends Sebastiano to take reprisals. Though told the truth and treated honourably, he feels obliged to fight a duel with Antonio, and wins: Antonio is killed and Berinthia brought home. Antonio’s sister Castabella, who has fallen in love with Sebastiano despite her brother’s death, follows him disguised as a page. Montenegro asks Catalina’s chambermaid to give her a love philtre, but Berinthia overhears the conversation and substitutes a poison; Catalina dies in agony. To avenge Antonio, Berinthia stabs Sebastiano in his sleep, then kills herself. Castabella enters a religious house.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

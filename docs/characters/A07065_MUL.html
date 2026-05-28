@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MUL in 214 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MUL</span>
+</nav>
+
+<h1>MUL</h1>
+<p class="lede">in <em>214</em> — [94]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1605</td></tr>
+<tr><th>Words</th><td>1488</td></tr>
+<tr><th>Characters</th><td>7538</td></tr>
+<tr><th>BritDrama no.</th><td>214</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Welcome friend, whoſe man? How long haue you beene a Barbar Andrew? What and a good worke man already, I dare ſcarſe truſt my heade to thee. As you will, what trade didſt liue by, before thou turnedſt Barbar Andrew. Wha&#x27;s the newes Barbar, thou art ſometimes at Court. And what newes? what newes? good Andrew. Very well, I was waſht</div>
+<div class="excerpt">before I was maryed, an honeſt man hee is, and a crafty, hee comes forward in the world well, I warrant him, and his wife is a proper <mark>woman</mark> that ſhe is, well, ſhe <mark>has</mark> ben as proper a <mark>woman</mark> as any in Cheape, ſhe paints now, and yet ſhe keeps her husbands old Cuſtomers to him ſtill. Introth a fine fac&#x27;d wife, in a wainſcot carued</div>
+<div class="excerpt">de ſpairfull, ile hyre a Knaue a purpoſe, ſhal aſſure him he is damn&#x27;d, and after ſee him with mine owne eyes, hanged without ſinging any Pſalme. Lord that hee <mark>has</mark> but one necke. No Sir, lend mee your ſeruant, onely to carry the plate home, I haue occaſion of an houres abſence. Be very carefull I pray thee to my wifes owne</div>
+<div class="excerpt">carefull I pray thee to my wifes owne hands. Nay, I pray you ſtay and drinke, and how do&#x27;s your Miſtreſſe, I know her verie well, I haue ben inward with her, and ſo <mark>has</mark> many more, ſhe was euer a good patient creature yfaith, with all my hart ile reme ̄ ber your maſter an honeſt man, he knew me before I was maryed, an honeſt man</div>
+<div class="excerpt">the cauſe of my hanging, I hartily forgiue him, and if he would come forth he might ſaue me, for he only knowes the why, and the wherfore. That hard hart of mine <mark>has</mark> procurd all this, but I forgiue as I would be forgiuen.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Hic finis Priami. Well Cocledemoy tis thou putſt me to this charge, but and I catch thee, I&#x27;le charge thee with as many irons: well, is the Barbar come, ile be trimd and then to Cheapeſide, to buy a faire peece of plate, to furniſh the loſſe, is the Barbar come? Goe looke to your buſines, mend the matter and skore falfe with a vengeance. Welcome friend, whoſe man? How long haue you beene a Barbar Andrew? What and a good worke man already, I dare ſcarſe truſt my heade to thee. As you will, what trade didſt liue by, before thou turnedſt Barbar Andrew. Wha&#x27;s the newes Barbar, thou art ſometimes at Court. And what newes? what newes? good Andrew. Very well, I was waſht there one day, and ſo was my wiſe, you might haue wrung her ſmocke ifaith, but what a thoſe holes? Bleſſe vs. By the Lord and this may be: my wife and I will go ſee them, this portends ſomething. And what more newes, you ſhaue the worlde, eſpecially you Barbar Surgeons you know the ground of many thinges, you are cunning priuie ſearchers, by the mas you skowre all: what more newes? O monſtrous! this is a lie a my word, nay and this bee not a lie, I am no foole I warrant, nay make an Aſſe of mee once? I do winke. Ha, ha, ha, 25. couple of Spaniſh Iennets to daunce the olde meaſures. Andrew, makes my worſhippe laugh, ifaith, doſt take me for an Aſſe Andrew, doſt know one Cocledemoy in towne, he made mee an Aſſe laſt night, but ile aſſe him, art thou free Andrew, ſhaue me well, I ſhall bee one of the common Councell ſhortly, and then Andrew, why Andrew, Andrew, doeſt leaue me in the Suddes? Cantat. why Andrew I ſhall be blinde with winking. Ha Andrew, wife Andrew, what meanes this, wife, my money wife. My money, 15. l. plague of all Andrewes, who waſt trimd me? I am not at this time furniſhed, but ther&#x27;s my bond for your Plate. Tis my hard fortune, I will hang the knaue, no, firſt he ſhall halfe rot in fetters in the Dungeon, his conſcience made de ſpairfull, ile hyre a Knaue a purpoſe, ſhal aſſure him he is damn&#x27;d, and after ſee him with mine owne eyes, hanged without ſinging any Pſalme. Lord that hee has but one necke. No Sir, lend mee your ſeruant, onely to carry the plate home, I haue occaſion of an houres abſence. Be very carefull I pray thee to my wifes owne hands. Nay, I pray you ſtay and drinke, and how do&#x27;s your Miſtreſſe, I know her verie well, I haue ben inward with her, and ſo has many more, ſhe was euer a good patient creature yfaith, with all my hart ile reme ̄ ber your maſter an honeſt man, he knew me before I was maryed, an honeſt man hee is, and a crafty, hee comes forward in the world well, I warrant him, and his wife is a proper woman that ſhe is, well, ſhe has ben as proper a woman as any in Cheape, ſhe paints now, and yet ſhe keeps her husbands old Cuſtomers to him ſtill. Introth a fine fac&#x27;d wife, in a wainſcot carued ſeat, is a worthy ornament to a Tradeſman ſhop, and an a tractiue I warrant, her husband ſhall finde it in the cuſtome of his ware, Ile aſſure him, God bee with you good youth, I ac knowledge the receit. Exit Lion. I acknowledge all the rece t ſure, tis very well ſpoken, I acknowledge the receit, thus tis to haue good education and to bee brought vp in a Tauerne, I doe keepe as gallant and as good companie, though I ſay it, as any ſhe in London, Squiers, Gentlemen, and Knightes diet at my ta ble, and I doe lend ſome of them money, and full many fine men goe vpon my ſcore, as ſimple as I ſtand heere, and I truſt them and truely they verie knightly and courtly promiſe faire, giue 〈◊〉 verie good words, and a peece of fleſh when time of yere ſeruet, nay, though my husband be a Citizen and&#x27;s caps made of wooll, yet I ha wit, and can ſee my good aſſoone as another, for I haue all the thankes, my ſilly husband, a laſſe, hee knowes nothing of it, tis I that beare, tis I that muſt beare a braine for all. Mind, be not deſperate, ile recouer all thinges with me, ſhall ſeeme honeſt, that can be profitable, He muſt nere winch, that would or thriue, or ſaue, To be cal Nigard, cuckold, Cut-throat, Knaue. Who? what, how n w? what feaſt towards in my pri uate Parlour. Come, who come? Strange? Peace, not I, peace, the Meſſenger hath miſtaken the houſe, let&#x27;s eat it vp quickly, before it be enquir&#x27;d for ſit to it, ſom vineg r, quicke, ſome good luck yet faith, I neuer taſted ſalmon reliſht better, oh when a man feeds at other mens coſt. No. No. No, no. Bowle? Backe? Ha? Pah, how this Sammon ſtinkes. Wife, doe not vexe, me, is the bowle gone, is it deliuer&#x27;d? I will neuer more ſay my prayers, doe not make mee madde, tis common, let me not crie like a woman, is it gone? Looke to my houſe, I am haunted with euill ſpirites, here mee, doe; heare me, if I haue not my Goblet againe, hea uen, I&#x27;le to the Diuell, I&#x27;le to a Coniurer, looke to my houſe, I&#x27;le raiſe all the wiſe men ithe ſtreete. Whether now? Whats the matter with you now? whe ther are you a gadding? Whether, in the ranke name of madneſſe: whether? Why ſo, why ſo. Tis well, tis very well. OI, I, I, art in thy right w s? Nay wife be pa ent, for looke you, I may be madde, or drunke, or ſo, for my wiſe part, though you can bear more then I, yet I can do well: I will not cauſe nor cary, but heauen knows what I thinke. Come, lets goe neare ſome muſicke, I will neuer more ſay my praiers. Lets goe heare ſome dolefull muſicke. Nay if Heauen forget o proſper 〈◊〉 . Ile goe no more to the Syna gogue. Now I am diſcontented, Ile turne Sectarie that is faſhion. It was his voice, tis he: he ſuppes with his cupping glaſ ſes. Tis late, he muſt paſſe this waie: Ile ha him, Ile ha my fine boy, my worſhipfull Cocledemoy, Ile moy him, he ſhall be hangd in lowſie linnen, Ile hire ſome ſectary to make him an hereticke before he die? And when he is dead Ile piſſe on his graue. Ware polling and ſhauing Sir. Heers ſomething yet, a Cloke, a cloke, yet Ile after, he cannot ſcape the watch, Ile hang him if I haue any mercy ▪ Ile ſlice him. Exit. An honeſt man and a Cittiezen. A ſimple Vintner. What meanes this violence, as I am an honeſt man I tooke the cloke. But heare me, heare me, Ile tell you what I am. I tell you my name is Mullegrub. Why but I tell thee. Am I not mad, am I not an aſſe, Why ſcabs, Gods foot: let me out. Who goes there: I lo, ho, ho: zounds ſhall I run mad, Looſe my wits: ſhall I be hangd, hark: who goes there? Do not feare to be poore Mullegrub, Thou haſt a ſure ſtocke now. Zounds man I tell thee I am lockt. For (a plague ont) ſuſpition of Fellonie. Doe, and then let me alone with Cockledemoy, Ile moy him. Ha: does your Raſcalſhip yet know my Worſhip In the end? Ha, goodman Conſtable, heeres an honeſt fellow can tell you what I am? Why but doſt heare Bel-man, Rogue, Raſcall, Gods Whie but? The conſtable drags awaie mulligrub. What meane you Gentlemen? by heauen, I praie you do not lead me to execution through cheape ſide, I owe M. Burniſh the gold-ſmith monie, and I feare heele ſet a Seriant on my backe for it. I do here make my confeſsion, if I owe anie man anie thing, I do hartilie forgiue him: if any man owe me anie thing, let him paie my wife. And now good yoke-fellow leaue thy poor mulligrub. I confeſſe, I confeſſe, and I forgiue as I would be forgiue ̄ , Do you know one Cocledemoy? Wel, wherſoere he is, or whatſoere he is, Ile take it on my death hees the cauſe of my hanging, I hartily forgiue him, and if he would come forth he might ſaue me, for he only knowes the why, and the wherfore. That hard hart of mine has procurd all this, but I forgiue as I would be forgiuen.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

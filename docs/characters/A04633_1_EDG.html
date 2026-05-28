@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EDG in Bartholomew Fair · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>EDG</span>
+</nav>
+
+<h1>EDG</h1>
+<p class="lede">in <em>Bartholomew Fair</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>1076</td></tr>
+<tr><th>Characters</th><td>5686</td></tr>
+<tr><th>BritDrama no.</th><td>1757</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">pull&#x27;d! That his little Ouerseer had beene heere now, and beene but tall enough, to see him steale peares, in exchange, for his beauer-hat, and his cloake thus? I <mark>must</mark> <mark>goe</mark> finde him out, next, for his blacke boxe, and his Patent (it seemes) hee <mark>has</mark> of his place; which I thinke the Gentleman would haue a reuersion of; that spoke</div>
+<div class="excerpt">Master Nightingale, come hither, leaue your mart a little. All the purses, and purchase, I giue you to day by con ueyance, bring hither to Vrsla&#x27;s presently. This they whisper, that Ouerdoo heares it not. Heere we will meet at night in her odge, and</div>
+<div class="excerpt">Heere we will meet at night in her odge, and share. Looke you choose good places, for your standing i&#x27;the Fayre, when you sing, Nightingale. And i&#x27;your singing, you <mark>must</mark> vse your hawks eye nimbly, and flye the purse to a marke, still, where &#x27;tis worne, and o&#x27;which side; that you may gi&#x27;me the signe with your beake, or hang your</div>
+<div class="excerpt">and carry her comfort: see it told. This fellow was sent to vs by fortune, for our first fairing. This fellow is very charitable, would he had a purse too! but, I <mark>must</mark> not be too bold, all at a time. Faith, and he&#x27;ll trye ere you be out o&#x27;the Fayre. Yonder he is buying o&#x27;Ginger-bread: set in quickly, be fore he part wirh too much</div>
+<div class="excerpt">more then a thing giuen him in stead of salt, onely to keepe him from stinking, I&#x27;le be hang&#x27;d afore my time, presently, where should it be trow? in his blood; hee <mark>has</mark> not so much to&#x27;ard it in his whole body, as will maintaine a good Flea; And if hee take this course, he will not ha&#x27; so much land left, as to reare a Calfe within</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Master Nightingale, come hither, leaue your mart a little. All the purses, and purchase, I giue you to day by con ueyance, bring hither to Vrsla&#x27;s presently. This they whisper, that Ouerdoo heares it not. Heere we will meet at night in her odge, and share. Looke you choose good places, for your standing i&#x27;the Fayre, when you sing, Nightingale. And i&#x27;your singing, you must vse your hawks eye nimbly, and flye the purse to a marke, still, where &#x27;tis worne, and o&#x27;which side; that you may gi&#x27;me the signe with your beake, or hang your head that way i&#x27;the tune. And shall we ha&#x27; smockes Vrsla, and good whimsies, ha? Halfe I haue, Master Dan. Knockhum, is alwaies at your seruice, Not a whit, these fellowes were too fine to carry mo ney. Nightingale, stay a little. Indeede I&#x27;le heare some o&#x27; this! S&#x27;light, hee will call company, you shall see, and put vs into doings presently. Yes, Sir. Nor you feele. In, to Vrsla, Nightingale, and carry her comfort: see it told. This fellow was sent to vs by fortune, for our first fairing. This fellow is very charitable, would he had a purse too! but, I must not be too bold, all at a time. Faith, and he&#x27;ll trye ere you be out o&#x27;the Fayre. Yonder he is buying o&#x27;Ginger-bread: set in quickly, be fore he part wirh too much on his money. Friend, let mee ha&#x27; the first, let mee ha&#x27; the first, I pray you. Sir, I cry you mercy; I&#x27;le not hinder the poore mans profit: pray you mistake me not. Are you sure you ha&#x27; lost it, Sir? Thee? that were a iest indeede! Dost thou thinke the Gentleman is foolish? where hadst thou hands, I pray thee? Away Asse, away. Sir, I suspect an odde fellow, yonder, is stealing away. With me, Sir? what&#x27;s your pleasure? good Sir. Good Gentlemen, doe not vndoe me; I am a ciuill young man, and but a beginner, indeed. The little old Gouernour, Sir? Would you ha&#x27; the boxe and all, Sir? or onely that, that is in&#x27;t? I&#x27;le get you that, and leaue him the boxe, to play with still: (which will be the harder o&#x27;the two) because I would gaine your worships good opinion of me. I, and &#x27;twill be the longer a missing, to draw on the sport. Sir, if euer I breake my word, with a Gentleman, may I neuer read word at my need. Where shall I find you? Warrant, for what, Sir? What meanes hee? Beshrew him, he startled me: I thought he had knowne of our plot. Guilt&#x27;s a terrible thing! ha&#x27; you prepar&#x27;d the Costard monger? I, I know; I should ha&#x27; follow&#x27;d his Protector-ship for a feat I am to doe vpon him: But this offer&#x27;d it selfe, so i&#x27;the way, I could not let it scape: heere he comes, whistle, Nightin gale whistles be this sport call&#x27;d Dorring the Dottrell. A delicate great boy! me thinks, he out-scrambles &#x27;hem all. I cannot perswade my selfe, but he goes to grammer-schole yet; and playes the trewant, to day. Purse? a man might cut out his kidneys, I thinke; and he neuer feele &#x27;hem, he is so earnest at the sport. Away, Nightingale: that way. Away, Costermonger, come to vs to Vrsla&#x27;s. Talke of him to haue a soule? &#x27;heart, if hee haue any more then a thing giuen him in stead of salt, onely to keepe him from stinking, I&#x27;le be hang&#x27;d afore my time, presently, where should it be trow? in his blood; hee has not so much to&#x27;ard it in his whole body, as will maintaine a good Flea; And if hee take this course, he will not ha&#x27; so much land left, as to reare a Calfe within this twelue month. Was there euer greene Plouer so pull&#x27;d! That his little Ouerseer had beene heere now, and beene but tall enough, to see him steale peares, in exchange, for his beauer-hat, and his cloake thus? I must goe finde him out, next, for his blacke boxe, and his Patent (it seemes) hee has of his place; which I thinke the Gentleman would haue a reuersion of; that spoke to me for it so earnestly. Not yet, Sir, except you would goe with mee, and see&#x27;t, it&#x27;s not worth speaking on. The act is nothing, without a witnesse. Yonder he is, your man with the boxe falne into the fi nest company, and so transported with vapours, they ha&#x27; got in a Northren Clothier, and one Puppy, a Westerne man, that&#x27;s come to wrastle before my Lord Maior, anone, and Captaine Whit, and one Val Cutting, that helpes Captaine Iordan to roare, a circling boy: with whom your Numps, is so taken, that you may strip him of his cloathes, if you will. I&#x27;le vndertake to geld him for you; if you had but a Surgeon, ready, to feare him. And Mistresse Iustice, there, is the goodest woman! shee do&#x27;s so loue &#x27;hem all ouer, in termes of Iustice, and the Stile of authority, with her hood vp right—that I beseech you come away Gentlemen, and see&#x27;t. Here, Sir, you are o&#x27;the backeside o&#x27;the Booth already, you may heare the noise. WHit, bid Vall Cutting continue the vapours for a lift, Whit, for a lift. They are at it stil, Sir, this they call vapours. You shall see, Sir. Will you take that, Master Waspe, that no body should minde you? No, but me thinks you should not be vnminded, though, Sir, will it please you, enter in here, at Vrsla&#x27;s ; and take part of a silken gowne, a veluet petticoate, or a wrought smocke; I am promis&#x27;d such: and I can spare any Gentleman a moity. Madame, you are very welcom hither. This is a very priuate house, Madame. The Cut-purse courts Mistresse Litt wit. What else Madame ? O, by no meanes. Is not this a finer life, Lady, then to be clogg&#x27;d with a husband? By and by Madame, they stay but for company. That was you, Lady ; but now you are no such poore thing. Sir, it shall not need, in my minde; he offers him a fairer course, to end it by disputation! hast thou nothing to say for thy selfe, in defence of thy quality? By my faith, there he has answer&#x27;d you, friend; by playne demonstration. Iustice Ouerdoo! Now, mercy vpon mee.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Bartholomew Fair</div><div class="body">Bartholomew Cokes has two objectives in life: to visit the fair which shares his name, and to marry Grace Wellborn, who, as a ward, faces a financial penalty should she refuse. He sends his servant Wasp to Littlewit the proctor to obtain a marriage licence, but then, impatiently, comes himself. He brings Grace with him, and she attracts the interest of Winwife, present with his friend Quarlous as a suitor to Littlewit’s mother-in-law, Dame Purecraft. Littlewit is more interested in Cokes’s talk of the fair, having secretly written one of the puppet plays to be performed there. The only snag is that the puritanical Dame Purecraft will disapprove of their visit, thinking fairs profane. Busy, an elder of Purecraft’s church, advises the family that fairs may lawfully be visited for good reason, and comes along with them to partake of the pork. After some unfortunate experiences involving mistaken identity, Justice Overdo no longer trusts informers and has decided to do his spying personally. He visits the fair in disguise to seek out ‘enormities’ perpetrated by the fairground folk. He is impressed by one young man, Edgeworth, and decides to rescue him from the clutches of the cheaters; but he does not know that Edgeworth is a cutpurse. While Overdo is busy telling him about the wickedness of tobacco, Edgeworth steals Cokes’s purse; Overdo gets the blame. When it happens a second time, Overdo is arrested and put in the stocks. There he encounters the madman Trouble-All, who persistently demands Overdo’s warrant for any action; it transpires that he was a court official driven out of his mind by Overdo’s own actions. The watchmen, concerned to get better authority, release Overdo from the stocks for the time being. Meanwhile, the Littlewits arrive at the fair, but Busy becomes over-excited in his condemnation, attacks the fairground booths, and is arrested; Dame Purecraft goes after him, leaving Littlewit and Win free to enjoy themselves. Edgeworth tricks Wasp into making affidavit so that, at Quarlous’s instigation, he can steal Cokes’s marriage licence. Wasp too is arrested and put in the stocks, but escapes by a ruse when Overdo and Busy are put in beside him. The women visitors to the fair are separated from the men. Littlewit leaves Win in the care of two fairground bawds while he goes off to check the arrangements for his puppet show. Cokes abandons Grace and Mistress Overdo to try and get back his stolen property. Desperate for the toilet, Mistress…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

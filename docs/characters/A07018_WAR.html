@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WAR in Edward the Second · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>WAR</span>
+</nav>
+
+<h1>WAR</h1>
+<p class="lede">in <em>Edward the Second</em> — Marlowe, Christopher</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1594</td></tr>
+<tr><th>Words</th><td>571</td></tr>
+<tr><th>Characters</th><td>3065</td></tr>
+<tr><th>BritDrama no.</th><td>927</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">secretary to, and lord of Man. Thus leaning on the shoulder of the king. He nods, and scornes, and smiles at those that passe. Here comes my lord of Canterburies <mark>grace</mark>. And war must be the meanes, or heele stay stil. But say my lord, where shall this meeting bee? But I long more to see him banisht hence. Ignoble vassaile that</div>
+<div class="excerpt">let him know his peeres. Think you that we can brooke this vpstart pride? And to behold so sweete a sight as that, Theres none here, but would run his horse to <mark>death</mark>. Then speake not for him, let the pesant go. No, doe but marke how earnestly she pleads. She smiles, now for my life his mind is changd. All that he speakes, is</div>
+<div class="excerpt">changd. All that he speakes, is nothing, we are resolu&#x27;d. Marke you but that my lord of Lancaster. And so will Penbrooke and I. Slay me my lord, when I offend your <mark>grace</mark>. Welcome Lord gouernour of the Ile of man. Looke to your owne crowne, if you back him thus. Lets to our castels, for the king is mooude. Ile haue his bloud, or</div>
+<div class="excerpt">villaine, soldiers come away, Weel make quick worke, co ̄ mend me to your maister My friend, and tell him that I watcht it well, Come, let thy shadow parley with king <mark>Edward</mark>. The king of heauen perhaps, no other king, Away. Exeunt Warwike and his men, with Gauest. Come fellowes, it booted not for vs to striue, We will in hast go certifie</div>
+<div class="excerpt">hast go certifie our Lord. Exeunt. And shall or Warwicks sword shal smite in vaine. A desperate and vnnaturall resolution, Alarum to the fight, saint George for <mark>England</mark>, And the Barons right. Tyrant, I scorne thy threats and menaces, Tis but temporall that thou canst inflict. Farewell vaine worlde.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Tis true, the Bishop is in the tower, And goods and body giuen to Gaueston. I, and besides, lord Chamberlaine of the realme, And secretary to, and lord of Man. Thus leaning on the shoulder of the king. He nods, and scornes, and smiles at those that passe. Here comes my lord of Canterburies grace. And war must be the meanes, or heele stay stil. But say my lord, where shall this meeting bee? But I long more to see him banisht hence. Ignoble vassaile that like Phaeton, Aspir&#x27;st vnto the guidance of the sunne. VVe know our duties, let him know his peeres. Think you that we can brooke this vpstart pride? And to behold so sweete a sight as that, Theres none here, but would run his horse to death. Then speake not for him, let the pesant go. No, doe but marke how earnestly she pleads. She smiles, now for my life his mind is changd. All that he speakes, is nothing, we are resolu&#x27;d. Marke you but that my lord of Lancaster. And so will Penbrooke and I. Slay me my lord, when I offend your grace. Welcome Lord gouernour of the Ile of man. Looke to your owne crowne, if you back him thus. Lets to our castels, for the king is mooude. Ile haue his bloud, or die in seeking it. Meane time my lord of Penbrooke and my selfe, Will to Newcastell heere, and gather head. I warrant you. And ile follow thee. Forslowe no time, sweet Lancaster lets march. Vpon him souldiers, take away his weapons. Lancaster, why talkst thou to the slaue? Go souldiers take him hence, For by my sword, his head shall off: Gaueston, short warning shall serue thy turne: It is our countries cause, That here seuerelie we will execute, Vpon thy person: hang him at a bough: Souldiers, haue him away: But for thou wert the fauorit of a King, Thou shalt haue so much honor at our hands. Arundell, say your message. No, it needeth not, Arundell, we will gratifie the king In other matters, he must pardon vs in this, Souldiers away with him. When can you tell? Arundell no, we wot, He that the care of realme remits, And driues his nobles to these exigents For Gaueston, will if he zease him once, Violate any promise to possesse him. Penbrooke, what wilt thou do? Cause yet more bloudshed: is it not enough That we haue taken him, but must we now Leaue him on had-I wist, and let him go? Nay, do your pleasures, I know how twill prooue. My lord of Penbrookes men, Striue you no longer, I will haue that Gaueston. No Iames, it is my countries cause I follow, Goe, take the villaine, soldiers come away, Weel make quick worke, co ̄ mend me to your maister My friend, and tell him that I watcht it well, Come, let thy shadow parley with king Edward. The king of heauen perhaps, no other king, Away. Exeunt Warwike and his men, with Gauest. Come fellowes, it booted not for vs to striue, We will in hast go certifie our Lord. Exeunt. And shall or Warwicks sword shal smite in vaine. A desperate and vnnaturall resolution, Alarum to the fight, saint George for England, And the Barons right. Tyrant, I scorne thy threats and menaces, Tis but temporall that thou canst inflict. Farewell vaine worlde.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Edward the Second</div><div class="body">GavestGn, banished by KangpyBdwardl is recalled to England on the accession of BdWardllll. His presence exacerbates tension between the King and barons, but Edward gives him multiple offices of state. Together they assault the BiSHOplomi@oventry, whose title also goes to Gaveston. The nobles and church contrive the minion’s banishment, but QWeenilsabella, neglected by Edward, arranges his reprieve in the hope of winning favour. King and barons make their peace and Lord MOrtimier, leaving for war in Scotland, advises his nephew to tolerate Edward’s love for Gaveston. The King’s preoccupation with his minion leads him to neglect public affairs, jeopardizing the political and economic stability of the crown: the unpaid army mutinies, rebellion breaks out in Ireland, and English territory is invaded by both Scotland and France. Lord Mortimer is taken prisoner in Scotland, but Edward refuses to ransom him. The barons, now joined by Edward’s brother, the B@gi§6fK@nt, increase the pressure to banish Gaveston again, while Edward begins to suspect Isabella of adultery with the younger Mortimer. Gaveston is captured by the barons. Edward asks to see him one last time; P@mibrOke agrees to conduct Gaveston there and back, but the minion is captured and killed en route by WaRWIEK’s treachery. Isabella and the Prince go to parley with the French King over the invasion of Normandy. The barons demand the removal of the Sp@me@r family, whom Edward has advanced, and battle ensues. The King wins: some barons are executed, and Mortimer is imprisoned. He escapes by drugging his guard, and absconds to France with Kent. He rendezvouses with Isabella, who has failed to gather allies because the Spencers have bribed the French nobility. Both are offered refuge in Hainault. Isabella returns to England in arms, accompanied by Mortimer and the increasingly dubious Kent. Edward flees, taking refuge in an abbey. He is betrayed by a mower, taken prisoner, and forced to give up the crown; his flatterers are executed, and Mortimer becomes Lord Protector. After Kent plots to free Edward, Mortimer has the royal prisoner moved around the country at night in the charge of Maltravers and Gourney; they forcibly shave off his beard to prevent recognition, and keep him in fou] conditions. PRICE EdWard is crowned. Kent is arrested and executed. Lightborne, sent by Mortimer, murders Edward with a hot spit and then is killed himself. Edward III receives news of his father’s death and Mortimer’s…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

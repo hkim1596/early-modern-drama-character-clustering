@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LAU in The Two Gentlemen of Verona · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LAU</span>
+</nav>
+
+<h1>LAU</h1>
+<p class="lede">in <em>The Two Gentlemen of Verona</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>656</td></tr>
+<tr><th>Characters</th><td>3284</td></tr>
+<tr><th>BritDrama no.</th><td>970</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Lubber: as thou reporteſt him to <mark>bee</mark>. Why Foole, I meant not thee, I meant thy Maſter. Why, I tell thee, I care not, though hee burne himſelfe in Loue. If thou wilt <mark>goe</mark> with me to the Ale-houſe: if not, thou art an Hebrew, a Iew, and not worth the name of a Chriſtian. Becauſe thou haſt not ſo much charity in thee as to <mark>goe</mark> to the</div>
+<div class="excerpt">and goes me to the fellow that whips the dogges: friend (quoth I) you meane to whip the dog: I marry doe I (quoth he) you doe him the more wrong (quoth I) &#x27;twas I <mark>did</mark> the thing you wot of: he makes me no more adoe, but whips me out of the chamber: how many Maſters would doe this for his Seruant? nay, ile be ſworne I haue ſat</div>
+<div class="excerpt">he hath kil&#x27;d, otherwiſe he had ſufferd for&#x27;t: thou think&#x27;ſt not of this now: nay, I remember the tricke you ſeru&#x27;d me, when I tooke my leaue of Madam Siluia : <mark>did</mark> not I bid thee ſtill marke me, and doe as I doe, when <mark>did</mark>&#x27;ſt thou ſee me heaue vp my leg, and make water againſt a Gentlewomans farthingale? <mark>did</mark>&#x27;ſt thou euer ſee</div>
+<div class="excerpt">thou art an Hebrew, a Iew, and not worth the name of a Chriſtian. Becauſe thou haſt not ſo much charity in thee as to <mark>goe</mark> to the Ale with a Chriſtian: Wilt thou <mark>goe</mark>? So-hough, Soa hough — Him we <mark>goe</mark> to finde, There&#x27;s not a haire on&#x27;s head, but t&#x27;is a Valentine. Can nothing ſpeake? Maſter, ſhall I ſtrike? Nothing. Why Sir, Ile</div>
+<div class="excerpt">ſhould ſay) one that takes vp on him to be a dog indeede, to be, as it were, a dog at all things. If I had not had more wit then he, to take a fault vpon me that he <mark>did</mark>, I thinke verily hee had bin hang&#x27;d for&#x27;t: ſure as I liue he had ſuffer&#x27;d for&#x27;t: you ſhall iudge: Hee thruſts me himſelfe into the company of three or foure gentleman-like-dogs,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Why, he that&#x27;s tide here, Crab my dog. Sir: call me what thou dar&#x27;ſt. Marry after they cloas&#x27;d in earneſt, they parted very fairely in ieſt. No. No, neither. No; they are both as whole as a fiſh. Marry thus, when it ſtands well with him, it ſtands well with her. What a blocke art thou, that thou canſt not? My ſtaffe vnderſtands me? I, and what I do too: looke thee, Ile but leane, and my ſtaffe vnderſtands me. Why, ſtand-vnder: and vnder-ſtand is all one. Aske my dogge, if he ſay I, it will: if hee ſay no, it will: if hee ſhake his taile, and ſay nothing, it will. Thou ſhalt neuer get ſuch a ſecret from me, but by a parable. I neuer knew him otherwiſe. A notable Lubber: as thou reporteſt him to bee. Why Foole, I meant not thee, I meant thy Maſter. Why, I tell thee, I care not, though hee burne himſelfe in Loue. If thou wilt goe with me to the Ale-houſe: if not, thou art an Hebrew, a Iew, and not worth the name of a Chriſtian. Becauſe thou haſt not ſo much charity in thee as to goe to the Ale with a Chriſtian: Wilt thou goe? So-hough, Soa hough — Him we goe to finde, There&#x27;s not a haire on&#x27;s head, but t&#x27;is a Valentine. Can nothing ſpeake? Maſter, ſhall I ſtrike? Nothing. Why Sir, Ile ſtrike nothing: I pray you. Sir, there is a proclamation, y t you are vaniſhed. When a mans ſeruant ſhall play the Curre with him (looke you) it goes hard: one that I brought vp of a puppy: one that I ſau&#x27;d from drowning, when three or foure of his blinde brothers and ſiſters went to it: I haue taught him (euen as one would ſay preciſely, thus I would teach a dog) I was ſent to deliuer him, as a pre ſent to Miſtris Siluia, from my Maſter; and I came no ſooner into the dyning-chamber, but he ſteps me to her Trencher, and ſteales her Capons-leg: O, &#x27;tis a foule thing, when a Cur cannot keepe himſelfe in all compa nies: I would haue (as one ſhould ſay) one that takes vp on him to be a dog indeede, to be, as it were, a dog at all things. If I had not had more wit then he, to take a fault vpon me that he did, I thinke verily hee had bin hang&#x27;d for&#x27;t: ſure as I liue he had ſuffer&#x27;d for&#x27;t: you ſhall iudge: Hee thruſts me himſelfe into the company of three or foure gentleman-like-dogs, vnder the Dukes table: hee had not bin there (bleſſe the marke) a piſſing while, but all the chamber ſmelt him: out with the dog (ſaies one) what cur is that (ſaies another) whip him out (ſaies the third) hang him vp (ſaies the Duke.) I hauing bin ac quainted with the ſmell before, knew it was Crab; and goes me to the fellow that whips the dogges: friend (quoth I) you meane to whip the dog: I marry doe I (quoth he) you doe him the more wrong (quoth I) &#x27;twas I did the thing you wot of: he makes me no more adoe, but whips me out of the chamber: how many Maſters would doe this for his Seruant? nay, ile be ſworne I haue ſat in the ſtockes, for puddings he hath ſtolne, otherwiſe he had bin executed: I haue ſtood on the Pillorie for Geeſe he hath kil&#x27;d, otherwiſe he had ſufferd for&#x27;t: thou think&#x27;ſt not of this now: nay, I remember the tricke you ſeru&#x27;d me, when I tooke my leaue of Madam Siluia : did not I bid thee ſtill marke me, and doe as I doe, when did&#x27;ſt thou ſee me heaue vp my leg, and make water againſt a Gentlewomans farthingale? did&#x27;ſt thou euer ſee me doe ſuch a tricke?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Two Gentlemen of Verona</div><div class="body">Walefifihe leaves Verona to broaden his horizons. Protelis stays at home and woos Jiilia) but no sooner is his suit successful than his father decides to send him after Valentine to court. He and Julia exchange rings. In Milan, Proteus finds that Valentine has fallen in love with Sil¥ia and plans to elope with her, using a rope ladder to reach the tower in which her father locks her up at night. Proteus falls for Silvia himself and, knowing that her father prefers Valentine’s rival Hiro, betrays his friend’s confidence to the Duke, who duly banishes Valentine. This only succeeds in ‘alienating Silvia from Thurio and her father, so Proteus is asked to woo her on Thurio’s behalf. Valentine is ambushed by banished Saws, who make him their chief. Leaving her property in the care of her waiting- woman Hwee’, Julia follows Proteus to Milan disguised as a page-boy; there she learns of Proteus’ interest in Silvia, and witnesses one of his wooing attempts. Proteus sends Silvia a gift of a dog, but Bane loses it and offers her his own dog, which behaves badly and relieves itself under the table; Lance takes the blame for the latter offence. Proteus employs the disguised Julia as a go-between, sending her ring as a gift to Silvia, who will not accept it. With Bglami6ii’s help, Silvia absconds to join Valentine; the Duke rides after her with Thurio; Proteus follows in search of Silvia, and the disguised Julia follows him. All except Eglamour are captured by the outlaws. When Silvia rejects Proteus’ advances, he threatens to rape her. Valentine sees him for what he is, but is won over by his repentance, and offers to give up Silvia. Julia faints and mixes up the two rings in her possession; thus her identity is revealed. Threatened by Valentine, Thurio gives up his suit to Silvia; the Duke accepts Valentine as a son-in-law and agrees to recall the outlaws from banishment.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

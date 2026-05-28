@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PHI in Supposes · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_06.html">Cluster 6 — 6: damon, erostrato, pithias</a> ›
+  <span>PHI</span>
+</nav>
+
+<h1>PHI</h1>
+<p class="lede">in <em>Supposes</em> — Gascoigne, GeorgeAriosto, Ludovico</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1573</td></tr>
+<tr><th>Words</th><td>1710</td></tr>
+<tr><th>Characters</th><td>8619</td></tr>
+<tr><th>BritDrama no.</th><td>419</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 6 (<em>damon, erostrato, pithias, pasiphilo, dionisius, suche…</em>). Matches are highlighted.</p>
+<div class="excerpt">whence you are. What part of Sicilia? What shall I call your name? What trade doe you occupie? What marchandise brought you hither? What call they your sonne? Is <mark>Erostrato</mark> your sonne? And are you <mark>Philogano</mark>. And a marchant of Cathanea? Yes, you haue tolde me a false lie, and thou arte a villaine and no better. Nay, I will doe more</div>
+<div class="excerpt">become of me? Surely sir I thinke no lesse, for I thinke that not so muche as a leafe falleth from the tree, withoute the ordy nance of god. But let vs goe seke <mark>Damon</mark>, for me thinketh euery day a yeare, euery houre a daye, and euery minute to much till I see my <mark>Erostrato</mark>.</div>
+<div class="excerpt">bosome, yea my bréeches, that I assure you I thought they would haue flayed me to searche betwene the fell and the fl she for fardings. Yea be you well assured, for <mark>suche</mark> an office is the in heritance of a knaue, and an honest man will not meddle with it. Nay, that was not y matter, for I had rather haue him giue ouer his studie</div>
+<div class="excerpt">to studie, and put in his electio ̄ what place he would go to. At the last he came hither, and I thinke he was scarce here so sone as I felt the want of him, in <mark>suche</mark> sorte, as from that daye to this I haue passed fewe nightes without teares: I haue written to him very often that he shoulde come home, but continually he refused</div>
+<div class="excerpt">arte. Holde thy peace foole. Well, what shall we do? By our Lady I am wery, I will run no longer a bout to seke him, I am sure hither he will come at the last. <mark>Erostrato</mark>? this is not <mark>Erostrato</mark>, thys séemeth ra ther to bée Dulippo, and it is Dulippo in déede. Mary sir, in déede you are so honorably cladde, it is no maruell if you</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Yea be you sure: I came in companie with certaine gentlemen of my countrey, who had affaires to dispatche as far as to Ancona, from thence by water to Rauenna, and from Rauenna hither, continually against the tide. The worst y e euer man had, but that was nothing to the stirre that y e serchers kept with me whe ̄ I came aborde y ship, Iesus how ofte ̄ they vntrussed my male &amp; ransacked a litle capcase that I had, tossed &amp; turned all that was with in it, serched my bosome, yea my bréeches, that I assure you I thought they would haue flayed me to searche betwene the fell and the fl she for fardings. Yea be you well assured, for suche an office is the in heritance of a knaue, and an honest man will not meddle with it. Nay, that was not y matter, for I had rather haue him giue ouer his studie altogether and come home. I will tell you: when he was at home he did as most yong men doe, he played many mad prankes and did many things that liked me not very well, and I thinking, that by that time he had sene the worlde, he would learne to know himselfe better, exhorted him to studie, and put in his electio ̄ what place he would go to. At the last he came hither, and I thinke he was scarce here so sone as I felt the want of him, in suche sorte, as from that daye to this I haue passed fewe nightes without teares: I haue written to him very often that he shoulde come home, but continually he refused still, beseching me to continue his studie, wherin he doubted not (as he said) but to profite greatly. I am glad he hath not lost his time, but I care not greatly for so muche knowledge, I woulde not be without the sighte of hym againe so long, for all the learning in the worlde. I am olde nowe, and if God shoulde call mée in his absence, I promise you I thinke it woulde driue me into desperation. Well, I confesse it is my faulte: and yet I will tell you another cause of my comming hither, more waightie than this. Diuers of my countrey haue bene here since he came hither, by whom I haue sente vnto him, and some of the ̄ haue bene thrice, some foure or fiue times at his house, and yet could neuer speake with him: I feare he applies his studie so, that he will not léese the minute of an houre from his booke. What, alas, he might yet talke with his country men for a while, he is a yong man, tenderly brought vp, and if he fare thus continually night and day at his booke, it may be enough to driue him into a frenesie. Yea, I pray you knocke. Knocke againe. Open the dore good fellow I pray thée. A good fellow, and much for thy maisters honesty by our Ladie: and what guestes I pray thée? Thou speakest truer than thou arte aware of, he wil be, by that time thou hast opened the dore: open I pray thée hartely. Of whom? And when came he? Good fellow, I thinke thou haste good sport to mocke mée. I thinke he be drunken. Abide fellow, what Philogano is it whome thou talkest of? And where is he? May we sée him? Go to, go tell him here is one wold speake with him. I can not tell what I should saye to this géere, Litio what thinkest thou of it? Peraduenture thou arte a f le, and he was another that answered vs euen now. But be you sure honest man, that you mistake not the house? Yea sir, I would faine knowe whence you are. What part of Sicilia? What shall I call your name? What trade doe you occupie? What marchandise brought you hither? What call they your sonne? Is Erostrato your sonne? And are you Philogano. And a marchant of Cathanea? Yes, you haue tolde me a false lie, and thou arte a villaine and no better. Nay, I will doe more than I haue yet proffered to doe, for I will proue thée a lyer, and a knaue to take vpon thée that thou art not. Oh, sée the boldnesse of this brute beast, what a bra sen face he setteth on it? I wonder at thy impudencie, for thou, nor nature that framed thée, can euer counterfaite thée to be me, ribauld villaine, and lying wretch that thou arte. Holde thy peace foole. Well, what shall we do? By our Lady I am wery, I will run no longer a bout to seke him, I am sure hither he will come at the last. Erostrato? this is not Erostrato, thys séemeth ra ther to bée Dulippo, and it is Dulippo in déede. Mary sir, in déede you are so honorably cladde, it is no maruell if you loke bigge. What, God helpe, do you not know me? Harke Litio, here is good géere, this honest man will not know me. Peace I say. Ah runnagate, ah villaine traitour, doest thou vse thy master thus? what hast thou done with my son villaine? Out and alas, he whom I sent hither with my sonne to be his seruaunt, and to giue attendance on him, hath ey ther cut his thr ate, or by some euill meanes made hym a way, and hath not onely taken his garmentes, his bookes, his money, and that which he broughte oute of Sicilia wyth him, but vsurpeth his name also, and turneth to his owne commoditie the bills of exchaunge that I haue alwayes al lowed for my sonnes expences, Oh miserable Philogano, oh vnhappie olde man: oh eternall god, is there no iudge? no officer? no higher powers whom I maye complaine vnto for redresse of these wrongs? Bring me then to the Iudges, to the potestates, or to whome you thinke best: for I will disclose a pa t of the greatest knauerie, a fardell of the fowlest falsehode that euer was heard of. Haue you no regarde to his woordes, he is but a 〈◊〉 . Then shall I giue my selfe, as it were a pray to the doctors, whose insatiable iawes I am not able to féede, al though I had here all the goods and landes which I possesse in mine owne cou ̄ trey, much lesse being a strau ̄ ger in this miserie. I know their cautels of old: at the first time I come they will so extoll my cause, as though it were alredy woon: but within in seue ̄ night or ten dayes, if I do not continually féede them as the crow doth hir brattes, twentie times in an houre, they will beginne to waxe colde, and to finde ca nels in my cause, saying, that at the firste I did not well in structe them: till at the laste, they will not onely drawe the stuffing oute of my purse, but the marrow oute of my bones. Well saide Litio, in déede I haue but small confi dence in their smothe lookes. Why? what hatred is betwixt them? Why? is the villeine become of such estimati n that he dare presume to be a suter to any gentlewoma ̄ of a good familie? How call you his aduersarie? For gods loue let vs goe to him. I will tell you sir, let me e kepte héere faste in prison, and at my charges let there be some man sente into Sicilia ▪ that may bring hither with him two or thrée of the honestest men in Cath nea and by them let it be proued if I or this other be Philogano, and whether he be Erostra to or Dulipo my seruant: and if you finde me contrarie, let me suffer death for it. O sir, stay your wisedome. Sir, I perceiue your pacience is moued. This fellow hath disquieted you sir, peraduenture you would be lothe to be troubled any further. I say, let them send at my charge to Cathanea. I will tell you sir: when the Turkes won Otranto. How sir? Alas, a pitifull case by saint Anne. At that time (as I saide) there were certaine of oure countrey that scoured those costes vpon the seas, with a good barke well appoynted for the purpose, and had espiall of a Turkey vessell that came laden from thence with great aboundance of riches. So they boarded them, &amp; in the end ouercame them, and brought the goods to Palermo, from whence they came, and amongst other things that they had, was this villeine my seruaunte, a boy at that time, I thinke not paste fiue yeres olde. And I beyng there, and lyking the Childes fauour well, proffered them foure and twentie ducattes for him, and had him. They saide he was a Childe of Otranto, but what is that to the matter? once .xxiiij Ducattes he cost me, that I wot well. Why, whom meane you sir? What the deuill hast thou to doe? Dulipo? no sir, his name was Carino. We called him Dulippo, bycause when he cryed as Children doe sometimes, he woulde alwayes cry on that name Dulippo. He did remember them, and could name his mother also, but sure I haue forgotten the name. Tell it then. Tell it I say, if thou can. Yea how small am I beholde ̄ to fortune, that know not where my sonne is become, and you whom I chose to be mine aduocate, will nowe by the meanes of this Dulipo become mine aduersarie? God graunt, goe we then. Alas Litio, if my sonne be loste what care I what become of me? Surely sir I thinke no lesse, for I thinke that not so muche as a leafe falleth from the tree, withoute the ordy nance of god. But let vs goe seke Damon, for me thinketh euery day a yeare, euery houre a daye, and euery minute to much till I see my Erostrato.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Supposes</div><div class="body">Polynesta loves Dulippo, whose suit has been promoted by her nurse, and who is supposed a poor servant. In fact he is not Dulippo at all but Erostrato, who two years ago gained access to Polynesta by swapping identities with his servant and entering her father Damon’s household. Meanwhile Cleander seeks her hand, and the supposed Erostrato (the true Dulippo) becomes his rival for trust with him. Cleander appears to offer the best dowry, but Damon gives ‘Erostrato’ a fortnight’s grace pending his father Philogano’s arrival to underwrite his counter-offer. ‘Erostrato’ duly arranges to produce a false Philogano, recruiting a Sienese gentleman for the role by persuading him that a diplomatic incident has made Ferrara an unsafe place for a Sienese visitor. Overhearing an argument between two women servants, Damon discovers that ‘Dulippo’ and Polynesta have been sleeping together. ‘Dulippo’ is apprehended and imprisoned in the dungeon of his master’s house, and therefore unable to warn his servant of the arrival of the true Philogano: he misses his son and has come to take him back to Sicily. By chance, Philogano meets the true Dulippo, who refuses to acknowledge him. After the locals confirm that they know the young man as Erostrato, Philogano suspects that he has murdered his master and stolen his identity, and seeks legal assistance from Cleander. However, Dulippo turns out to be Cleander’s son, whom he lost as a child when evacuating Otranto during the Turkish conquest; he was later captured by Sicilians and sold to Philogano. The exchange of identities is revealed, allaying Damon’s worries about his daughter’s reputation. Cleander withdraws his suit: he no longer needs to marry and beget an heir now that his lost son has been restored to him. The true Erostrato is confirmed as Polynesta’s future husband.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_06.html">Cluster 6 — 6: damon, erostrato, pithias</a> page.
+</div>
+</div></body></html>

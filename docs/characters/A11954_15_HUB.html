@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HUB in King John · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>HUB</span>
+</nav>
+
+<h1>HUB</h1>
+<p class="lede">in <em>King John</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1346</td></tr>
+<tr><th>Characters</th><td>7238</td></tr>
+<tr><th>BritDrama no.</th><td>1043</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">thee. Silence, no more; go cloſely in with mee, Much danger do I vndergo for thee. My Lord, they ſay fiue Moones were ſeene to night: Foure fixed, and the fift <mark>did</mark> whirle about The other foure, in wondrous motion. Old men, and Beldames, in the ſtreets Do propheſie vpon it dangerouſly: Yong Arthurs <mark>death</mark> is common in their</div>
+<div class="excerpt">were embattailed, and rank&#x27;d in Kent. Another leane, vnwaſh&#x27;d Artificer, Cuts off his tale, and talkes of Arthurs <mark>death</mark>. Heere is your hand and Seale for what I <mark>did</mark>. My Lord. Arme you againſt your other enemies: Ile make a peace betweene your ſoule, and you. Yong Arthur is aliue: This hand of mine Is yet a maiden, and an innocent</div>
+<div class="excerpt">And giue you entrance: but without this match, The ſea enraged is not halfe ſo deafe, Lyons more confident, Mountaines and rockes More free from motion, no not <mark>death</mark> himſelfe In mortall furie halfe ſo peremptorie, As we to keepe this Citie. Why anſwer not the double Maieſties, This friendly treatie of our threatned Towne. I</div>
+<div class="excerpt">Boy. But with my breath I can reuiue it Boy. Well, ſee to liue: I will not touch thine eye, For all the Treaſure that thine Vnckle owes, Yet am I ſworne, and I <mark>did</mark> purpoſe, Boy, With this ſame very Iron, to burne them out. Peace: no more. Adieu, Your Vnckle muſt not know but you are dead. Ile fill theſe dogged Spies with falſe</div>
+<div class="excerpt">Whilſt he that heares, makes fearefull action With wrinkled browes, with nods, with rolling eyes. I ſaw a Smith ſtand with his hammer (thus) The whilſt his Iron <mark>did</mark> on the Anuile coole, With open mouth ſwallowing a Taylors newes, Who with his Sheeres, and Meaſure in his hand, Standing on ſlippers, which his nimble haſte Had</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">The king of England, when we know the king. Heare vs great kings, vouchſafe awhile to ſtay And I ſhall ſhew you peace, and faire-fac&#x27;d league: Win you this Citie without ſtroke, or wound, Reſcue thoſe breathing liues to dye in beds, That heere come ſacrifices for the field. Perſeuer not, but heare me mighty kings. That daughter there of Spaine, the Lady Blanch Is neere to England, looke vpon the yeeres Of Lewes the Dolphin, and that louely maid. If luſtie loue ſhould go in queſt of beautie, Where ſhould he finde it fairer, the in Blanch: If zealous loue ſhould go in ſearch of vertue, Where ſhould he finde i purer then in Blanch? If loue ambitious, ſought a match of birth, Whoſe veines bound richer blood then Lady Blanch? Such as ſhe is, in beautie, vertue, birth, Is the yong Dolphin euery way compleat, If not compleat of, ſay he is not ſhee, And ſhe againe wants nothing, to name want, If want it be not, that ſhe is not hee: He is the halfe-part o a bleſſed man, Left to be finiſhed by ſuch as ſhee, And ſhe a faire diuided excellence, Whoſe fulneſſe of perfection lyes in him. O two ſuch ſiluer currents when they ioyne Do glorifie the bankes that bound them in: And two ſuch ſhores, to two ſuch ſtreames made one, Two ſuch controlling bounds ſhall you be, kings, To theſe two Princes, if you marrie them: This Vnion ſhall do more then batterie can To our faſt cloſed gates: for at this match, With ſwifter ſpleene then powder can enforce The mouth of paſſage ſhall we ſling wide ope, And giue you entrance: but without this match, The ſea enraged is not halfe ſo deafe, Lyons more confident, Mountaines and rockes More free from motion, no not death himſelfe In mortall furie halfe ſo peremptorie, As we to keepe this Citie. Why anſwer not the double Maieſties, This friendly treatie of our threatned Towne. I am much bounden to your Maieſty. So well, that what you bid me vndertake, Though that my death were adiunct to my Act, By heauen I would doe it. And Ile keepe him ſo, That he ſhall not offend your Maieſty. My Lord. He ſhall not liue. Heate me theſe Irons hot, and looke thou ſtand Within the Arras: when I ſtrike my foot Vpon the boſome of the ground, ruſh forth And binde the boy, which you ſhall finde with me Faſt to the chaire: be heedfull: hence, and watch. Vncleanly ſcruples feare not you: looke too&#x27;t. Yong Lad come forth; I haue to ſay with you. Good morrow; little Prince. Indeed I haue beene merrier. If I talke to him, with his innocent prate He will awake my mercie, which lies dead: Therefore I will be ſodaine, and diſpatch. His words do take poſſeſſion of my boſome. Reade heere yong Arthur. How now fooliſh rheume? Turning diſpitious torture out of doore? I muſt be breefe, leaſt reſolution drop Out at mine eyes, in tender womaniſh teares. Can you not reade it? Is it not faire writ? Yong Boy, I muſt. And I will. I haue ſworne to do it: And with hot Irons muſt I burne them out. Come forth: Do as I bid you do. Giue me the Iron I ſay, and binde him heere. Go ſtand within: let me alone with him. Come (Boy) prepare your ſelfe. None, but to loſe your eyes. Is this your promiſe? Go too, hold your toong I can heate it, Boy. But with my breath I can reuiue it Boy. Well, ſee to liue: I will not touch thine eye, For all the Treaſure that thine Vnckle owes, Yet am I ſworne, and I did purpoſe, Boy, With this ſame very Iron, to burne them out. Peace: no more. Adieu, Your Vnckle muſt not know but you are dead. Ile fill theſe dogged Spies with falſe reports: And, pretty childe, ſleepe doubtleſſe, and ſecure, That Hubert for the wealth of all the world, Will not offend thee. Silence, no more; go cloſely in with mee, Much danger do I vndergo for thee. My Lord, they ſay fiue Moones were ſeene to night: Foure fixed, and the fift did whirle about The other foure, in wondrous motion. Old men, and Beldames, in the ſtreets Do propheſie vpon it dangerouſly: Yong Arthurs death is common in their mouths, And when they talke of him, they ſhake their heads, And whiſper one another in the eare. And he that ſpeakes, doth gripe the hearers wriſt, Whilſt he that heares, makes fearefull action With wrinkled browes, with nods, with rolling eyes. I ſaw a Smith ſtand with his hammer (thus) The whilſt his Iron did on the Anuile coole, With open mouth ſwallowing a Taylors newes, Who with his Sheeres, and Meaſure in his hand, Standing on ſlippers, which his nimble haſte Had falſely thruſt vpon contrary feete, Told of a many thouſand warlike French, That were embattailed, and rank&#x27;d in Kent. Another leane, vnwaſh&#x27;d Artificer, Cuts off his tale, and talkes of Arthurs death. Heere is your hand and Seale for what I did. My Lord. Arme you againſt your other enemies: Ile make a peace betweene your ſoule, and you. Yong Arthur is aliue: This hand of mine Is yet a maiden, and an innocent hand. Not painted with the Crimſon ſpots of blood, Within this boſome, neuer entred yet The dreadfull motion of a murderous thought, And you haue ſlander&#x27;d Nature in my forme, Which howſoeuer rude exteriorly, Is yet the couer of a fayrer minde, Then to be butcher of an innocent childe. Lords, I am hot with haſte, in ſeeking you, Arthur doth liue, the king hath ſent for you. Stand backe Lord Salsbury, ſtand backe I ſay. By heauen, I thinke my ſword&#x27;s as ſharpe as yours. I would not haue you (Lord) forget your ſelfe, Nor tempt the danger of my true defence; Leaſt I, by marking of your rage, forget your Worth, your Greatneſſe, and Nobility. Not for my life: But yet I dare defend My innocent life againſt an Emperor. Do not proue me ſo: Yet I am none. Whoſe tongue ſo ere ſpeakes falſe, Not truely ſpeakes: who ſpeakes not truly, Lies. Lord Bigot, I am none. &#x27;Tis not an houre ſince I left him well: I honour&#x27;d him, I lou&#x27;d him, and will weepe My date of life out, for his ſweete liues loſſe. Do but heare me ſir. Vpon my ſoule. If I in act, conſent, or ſinne of thought, Be guiltie of the ſtealing that ſweete breath Which was embounded in this beauteous clay, Let hell want paines enough to torture me: I left him well. Badly I feare; how fares your Maieſty? Whoſe there? Speake hoa, ſpeake quickely, or I ſhoote. Of the part of England. What&#x27;s that to thee? Why may not I demand of thine affaires, As well as thou of mine? Thou haſt a perfect thought: I will vpon all hazards well beleeue Thou art my friend, that know&#x27;ſt my tongue ſo well: Who art thou? Vnkinde remembrance: thou, &amp; endles night, Haue done me ſhame: Braue Soldier, pardon me, That any accent breaking from thy tongue, Should ſcape the true acquaintance of mine eare. Why heere walke I, in the black brow of night To finde you out. O my ſweet ſir, newes fitting to the night, Blacke, fearefull, comfortleſſe, and horrible. The King I feare is poyſon&#x27;d by a Monke, I left him almoſt ſpeechleſſe, and broke out To acquaint you with this euill, that you might The better arme you to the ſodaine time, Then if you had at leiſure knowne of this. A Monke I tell you, a reſolued villaine Whoſe Bowels ſodainly burſt out: The King Yet ſpeakes, and peraduenture may recouer. Why know you not? The Lords are all come backe, And brought Prince Henry in their companie, At whoſe requeſt the king hath pardon&#x27;d them, And they are all about his Maieſtie.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — King John</div><div class="body">The Plantagenets have a dynastic dispute: J@lih is de facto King of England, but Alptiillir, the young son of his dead elder brother, has a better claim in primogeniture; France takes Arthur’s side. John is asked to adjudicate in another case of . disputed inheritance: Robert Falé@nbridge claims that his elder brother BHiliip is a bastard, begotten in his father’s absence by the dead King Richard. John rules for Philip’s legitimacy irrespective of parentage, since he was conceived in wedlock; but Philip decides to be a king’s son rather than a knight’s heir, cedes his brother the family lands, and joins John’s court. John meets the Kinglofibrance outside the town of Angers, which claims loyalty to the English crown but is holding out against both claimants until the issue is decided. England and France decide to defer their differences until they have subjugated Angers, but the citizens save themselves by suggesting an Anglo- French marriage between DOUISNEHEMDapHin and John’s niece BI@HEHE; France expediently transfers its support from Arthur to John. After the wedding, the papal legate Pandulph excommunicates John for his interference in ecclesiastical affairs, and declares his assassination legitimate. The French revert to support for Arthur, leaving Blanche with a conflict of interests. Arthur is captured in battle and taken back to England ===== PAGE 337 ===== 1596 in MWbert’s custody; John instructs Hubert to arrange the boy’s death. Anticipating this outcome, Pandulph .encourages Louis to prepare a claim to the English throne through his new wife’s right of succession. Hubert makes arrangements to blind Arthur, but cannot bring himself to go through with it. John’s lords demand Arthur’s release, but Hubert untruthfully reports that he is dead as ordered. The lords infer John’s responsibility and plan rebellion. Setbacks build up: John’s mother, left behind to govern his French possessions, dies, and the Dauphin lands his invasion force in England. Faced with internal rebellion and an external threat, John tries to disclaim responsibility for Arthur’s murder, only to be.told by Hubert that the boy is alive after all. But not for long: Arthur falls to his death while trying to escape from prison, and the rebel lords find the body and accept the Dauphin’s overtures. John submits to papal authority, fulfilling a prophecy that he would lose his crown. Pandulph tries to intervene with the Dauphin, only to find that he has started something he cannot…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

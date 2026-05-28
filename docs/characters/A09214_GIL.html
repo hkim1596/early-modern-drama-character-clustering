@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIL in Pedantius · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_11.html">Cluster 11 — 11: ego, que, est</a> ›
+  <span>GIL</span>
+</nav>
+
+<h1>GIL</h1>
+<p class="lede">in <em>Pedantius</em> — Forsett, Edward</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>843</td></tr>
+<tr><th>Characters</th><td>5325</td></tr>
+<tr><th>BritDrama no.</th><td>697</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 11 (<em>ego, que, est, non, mihi, quid…</em>). Matches are highlighted.</p>
+<div class="excerpt">insectaris? <mark>Non</mark> sum fugitivus; Vos op pidani nos Academicos viperino mor detis morsu. <mark>Sed</mark> eccum percommodè puerulum debitoris mej. Vah, consilium validum, saepe <mark>ego</mark>, istuc veniens, talibus illusus sum dolis. Siste gradum puer: scio <mark>ego</mark>, quem quaeris, ubi <mark>est</mark>. Converte te istuc, quin istac inquam. In illis <mark>est</mark> aedibus. Nec tu</div>
+<div class="excerpt">fiat ternaria; Textus meus <mark>est</mark> difficillimus solutu: hic demum griphi sunt, &amp; Crocodolites: Meus liber devorat istos Academicos libros &amp; in nihilum redigit. Nàm <mark>ego</mark> nuper in Academia cùm artem exer cerem istam, potui vnico <mark>hoc</mark> meo au thores reliquos quoscunque illorum refutare, sedibusque suis deturbare. Ex omnibus debitoribus</div>
+<div class="excerpt">undè acceperis? Adhuc haud emptae sunt: nam pretium <mark>non</mark> <mark>est</mark> solutum. Hic <mark>est</mark>, vide. Hac in paginâ cubat: &amp; nimium diu recubavit. Vtinàm adesset, te castigaret; aut <mark>ego</mark> illum castigarem probè. Relinque tandèm ista puerilia: abi, investiga praeceptorem: <mark>ego</mark> interim intus eum domi vestrae praestolabor vnà cùm illo nuncio, <mark>qui</mark> nummos</div>
+<div class="excerpt">adferri potest amplius. Nôsti manum &amp; stylum hunc? Vides subscriptionem? Hasce merces nomini meo suppositas anno &amp; die prae scriptis agnosco Pedantius. Imo vere <mark>ego</mark> neminem metuo d dolo. Vendo quales alij solent. Doctissime Domine Pedantj, apud me Poetae <mark>non</mark> funt in pretio, <mark>sed</mark> pecuniae prae manibus solutae. Illarum autem mercium</div>
+<div class="excerpt">neminem metuo d dolo. Vendo quales alij solent. Doctissime Domine Pedantj, apud me Poetae <mark>non</mark> funt in pretio, <mark>sed</mark> pecuniae prae manibus solutae. Illarum autem mercium <mark>ego</mark> pretia scripsi pro fecto quam minutissima. Reliqui pan narij obmumurabant se per me depau perandos. Pannus ille pro togistuorum discipulorum certè profectocrat</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Adhuc plura. Item Panni nigri optimi vlnae septem, cum di: qua: Item, Holoserici trium pilorum vlnae tres, &amp; di. Item Setini ulnae quatuor. At at de Setino addenda est figurae bi nariae cauda, ut fiat ternaria; Textus meus est difficillimus solutu: hic demum griphi sunt, &amp; Crocodolites: Meus liber devorat istos Academicos libros &amp; in nihilum redigit. Nàm ego nuper in Academia cùm artem exer cerem istam, potui vnico hoc meo au thores reliquos quoscunque illorum refutare, sedibusque suis deturbare. Ex omnibus debitoribus no stris nulli sunt tàm Periuri, quàm Scholares isti: qui (freti fallacijs suis) non curant Argumenta nostra etiàm ab authoritate. Nos ex singulari nostro Amore, &amp; mero motu miseri cordiae permittimus, ut in hoc Registrum &amp; penetrale nostrum veniant, sicque au fer unt à nobis non solùm laneos pannos praestantissimos, sed etàm vestes bom bicinas &amp; sericas, sericum Damasce num, sericum rasum, sericum villosum, &amp; denique quid non? Namque ita lautè vestiti incedunt, ac si essent generosi Templarij. Sed non pretium est persolvendum, subducunt se callidè. Si pultemus cubiculi fores, respondent, se non esse intus, curant se abesse pe regrè, aut imperiose denegant. Quis tu es? Quid mihi tecum? Non sum, non possum, non libet esse domi. Tùm, nè à nobis conspiciantur, clàm per posticum &amp; angiportus quosque subrepunt quasi mures. Quòd si fortè inopinantes nobis in plateâ occurrerint, tanquàm si lupum vidissent, ne unum proloqui verbum possunt. Eorum unus nuper mihi ro ganti debitum, Quid opus, inquit, est tanta importunitate? Ampliùs deli berandum censeo. Quid suspiciosè me insectaris? Non sum fugitivus; Vos op pidani nos Academicos viperino mor detis morsu. Sed eccum percommodè puerulum debitoris mej. Vah, consilium validum, saepe ego, istuc veniens, talibus illusus sum dolis. Siste gradum puer: scio ego, quem quaeris, ubi est. Converte te istuc, quin istac inquam. In illis est aedibus. Nec tu nôsti, obsecro? Quàm astutè simulat simia! O puerum castigandum! Ob serva me dilgentiùs paulò. Nec dùm nôsti? Imò doctus sum. Non vides li brum hunc? Volumen magni pretij. Nec meministi caligas istas undè acceperis? Adhuc haud emptae sunt: nam pretium non est solutum. Hic est, vide. Hac in paginâ cubat: &amp; nimium diu recubavit. Vtinàm adesset, te castigaret; aut ego illum castigarem probè. Relinque tandèm ista puerilia: abi, investiga praeceptorem: ego interim intus eum domi vestrae praestolabor vnà cùm illo nuncio, qui nummos attulit. Video jàm alio redeundum esse tempore. Sed non multum hoc auferet. Litera scripta manet. Faciam ut hujus laboris mei fraudisque suae poeniteat eum. SAlutis impertio tibi pluri mum, venerabilis magister Pedanti. Quid? Ne respicere quidèm soles, qui te salutant? Potes ex codice meo conjicere, quid velim. Quoniàm extorquere vis, scias me saepiùs huc advenisse, tecum ut agerem de gravissimis rationibus: semperque lusa opera est: itaque nunc certè mirificè gaudeo, praesentem hîc te tandèm contueri. Imò aliud est quod tua 〈…〉 pera adferri potest amplius. Nôsti manum &amp; stylum hunc? Vides subscriptionem? Hasce merces nomini meo suppositas anno &amp; die prae scriptis agnosco Pedantius. Imo vere ego neminem metuo d dolo. Vendo quales alij solent. Doctissime Domine Pedantj, apud me Poetae non funt in pretio, sed pecuniae prae manibus solutae. Illarum autem mercium ego pretia scripsi pro fecto quam minutissima. Reliqui pan narij obmumurabant se per me depau perandos. Pannus ille pro togistuorum discipulorum certè profectocrat quasi donatus. Non laudare jàm volcham mer cem, sed pretium exiguum, ità ut veris simè dici possit, non digno pretio vendi tus, sed quasi semi-donatus. Ego pannum non conficio, sed ab alijs confectum vendo. Atqui ex serico illo Setino, quod in thoracem e meras, prorsus nihil lucrari statuo ▪ Londinj ad singulas ulnas in pecunijs numeratis ▪ constabat—Quid? ha. Erra re nolo. S. S. P? Ita, rectè meminj. S. S. S. nempe binos coronatos cùm dimidio. Ego tantundem hîc posui. non obulo plus. Vide, lege. Ego nolo aes Romanum, quod non est pecunia currens hodie, neque vnquam cogito capere Capitolium. Per Iovem ego nolo anseres tuos. Mitte haec, legenda discipulis tuis. Lege, quaeso, quod me &amp; te attinet, per curre paginam totam. Lege distinctè, si vis, singula. Imò etiam intelligere posse scio. Ignosce vero mihi de scriptione. Nos non sumus scholares. Satis iocatus es, iam non quaero ut lega , sed ut respondeas seriò. Solue quaestionem meam, solvendo de bitum libera nomen tuum. Quid re spondes? Nomen, quod ego appello, est Pedantius, non Simonides ▪ age. Ego nihil moror obscuritates tuas. Dic planissimè; numquid non per solvendum putas, quod debes? Oh! cares pecuniâ? At interìm ubi fides? At creditores mei satisfieri fibi aliter à me volunt. Accepisti à me merces optimas: redde nunc nummos. Taces autèm de reddendo. Quin igitur optimas optimo persolvas tan dèm pecunias. Alioquin non es optimus. At mihi jàm eundum est ad nundinas. Nos, qui uxores &amp; liberos ha bemus, non convenit dicta pro de bitis accipere, Verba non alunt fami liam. Ego ferre nequeo procrastina tiones istas. Merces mihi emendae prae senti pecuniâ, non sententijs. Omninò hoc tibi verè excidit, fas non est, neque erit. Video mihi de inceps lege agendum esse. Heus, edico tibi, nisi nummos paraveris in diem crastinum, in ius te traham ▪ vale.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Pedantius</div><div class="body">Crobolus and the schoolmaster Pedantius are rivals. for the love of Lydia. Crobolus asks his servant Pogglostus to bilkk money from Pedantius and his friend Dromodotus. After failing with a hard-luck story, Pogglostus robs them at sword-point. Crobolus wins Lydia’s love by entertaining her to dinner. He is slow to pay his landlady for the meal, but assures her he can easily trick the money out of Pedantius. Through the parasite Tyrophagus, he lets Pedantius know that a former pupil, Leonidas, has secured a position at court, and intends to use his influence to get a royal appointment for his old tutor. On the strength of this, Pedantius is persuaded to loan Leonidas money. Tyrophagus is bringing the cash back to Crobolus when he is robbed by Pogglostus, who doesn’t know that he and his master are in league. Pedantius tries to woo Lydia, but has less success, partly because he does it using academic logic and partly because she has already accepted Crobulus. In any event, whoever wins her will need to pay her avaricious master to manumit her. She feigns interest in him after hearing of his supposed successes at court, and he tries to raise the money by offering to sell his books to the audience. The tailor Gilbert pursues him for payment of his bills, but Pedantius only gives him a string of classical authorities and quotations; Gilbert threatens to sue him. Pedantius sends Lydia money and a ring, but the news comes back that she is dead. She has sent him back his ring, and, with her last breath, told him not to grieve for her, and to leave the country. Assured of her love for him, Pedantius complies and goes into exile. With him out of the way, Crobulus is free to marry Lydia, who is not really dead, using the money he has tricked out of the pedant. |</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_11.html">Cluster 11 — 11: ego, que, est</a> page.
+</div>
+</div></body></html>

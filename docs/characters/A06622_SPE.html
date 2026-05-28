@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SPE in Mother Bombie · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SPE</span>
+</nav>
+
+<h1>SPE</h1>
+<p class="lede">in <em>Mother Bombie</em> — Lyly, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1594</td></tr>
+<tr><th>Words</th><td>1302</td></tr>
+<tr><th>Characters</th><td>6701</td></tr>
+<tr><th>BritDrama no.</th><td>826</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">learne it. Where pickt your daughter that worke, out of broad-stitch? Learnedly and scholerlike. Listen &amp; you shall <mark>heare</mark> my sons learning. And as I remember there <mark>must</mark> be <mark>two</mark> wit nesses, God giue you ioy Candius, I was worth the bidding to dinner, though not worthy to be of the counsell. Tush, in loue is no lacke, but blush not</div>
+<div class="excerpt">boy, in stead of poaring on a booke, you shall holde the plough, Ile make repen tance reape what wantonnesse hath sowen, but we are both well serued, the sonnes <mark>must</mark> <mark>bee</mark> masters, the fathers gaffers, what wee get together with a rake, they cast abroade with a forke, and wee <mark>must</mark> wearie our legges to purchase our children armes.</div>
+<div class="excerpt">Halfpenie, scarse so high as a pint pot, wold reason the matter; but hee learnde his leere of my sonne, his young master, whom I haue brought vp at Oxford, and I thinke <mark>must</mark> learne heere in Kent at Ashford. Hee boldly rapt it out, Sine Cere &amp; Baccho friget Venus, without wine and sugar his veins wold waxe colde. If all <mark>bee</mark> gone Ile</div>
+<div class="excerpt">then to picke quarrels, I tell thee, I had rather thou shouldest rob my chest than imbesell my sonne. That shewed hee was no dumbe minister. But what sayde they, diddest thou <mark>heare</mark> anie wordes be tweene them? Yes, yes, God giue you ioy is a binder, Ile qui ly be resolud, Candius come forth. The micher hangs downe his head. Are</div>
+<div class="excerpt">princockes with Stellios daughter, whom I haue heard to be verie faire, and know shal be ve rie rich, she is his heire, he doats, he is stooping old, and shortly <mark>must</mark> die, yet by no meanes, either by blessing or cursing can I win my sonne to be a wo er, which I know proceeds not of bashfulnesse but stubbornnesse, for hee knowes</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Prisius, you bite and whine, wring me on the withers, and yet winch your selfe, it is you that goe about to match my girle with my boy, shee beeing more fit for seames than for marriage, and hee for a rod than a wife. And his bringing vp another gate marriage than such a minion. Nor your minxe had no better grandfather than a Tailer, who (as I haue heard) was poore and proud: nor a better father than your selfe, vnlesse your wife borrowed a better to make her daughter a Gentlewoman. Hold thy hands still thou hadst best, &amp; yet it is impossible now I reme ̄ ber, for thou hast the palsy Nay, if thou shake thy hands, I warrant thou canst not teach anie to cog. But neighbour, let not two olde fooles fall out for two yong wantons. Wel, then this Ile tel thee friendly, I haue al most these two yeres cast in my head, how I might match my princockes with Stellios daughter, whom I haue heard to be verie faire, and know shal be ve rie rich, she is his heire, he doats, he is stooping old, and shortly must die, yet by no meanes, either by blessing or cursing can I win my sonne to be a wo er, which I know proceeds not of bashfulnesse but stubbornnesse, for hee knowes his good though I saie it, he hath wit at wil: as for his personage, I care not who sees him, I can tell you he is able to make a Ladies mouth water if she winke not. Well then this is our best, seeing we knowe each others minde, to deuise to gouerne our owne children, for my boy, Ile keepe him to his bookes, &amp; studie shall make him leaue to loue, Ile breake him of his will or his bones with a cudgell. This happens pat, take heed you cough not Prisius. I know not in what booke hee read it, but I am sure he was a knaue to learne it. Where pickt your daughter that worke, out of broad-stitch? Learnedly and scholerlike. Listen &amp; you shall heare my sons learning. And as I remember there must be two wit nesses, God giue you ioy Candius, I was worth the bidding to dinner, though not worthy to be of the counsell. Tush, in loue is no lacke, but blush not Can dius, you neede not bee ashamed of your cunning, you haue made loue a booke case, and spent your time well at schoole, learning to loue by arte, and hate against nature, but I perceiue, the worser child the better louer. As for you sir boy, in stead of poaring on a booke, you shall holde the plough, Ile make repen tance reape what wantonnesse hath sowen, but we are both well serued, the sonnes must bee masters, the fathers gaffers, what wee get together with a rake, they cast abroade with a forke, and wee must wearie our legges to purchase our children armes. Well, seeing that booking is but idlenesse, Ile see whether threshing be anie occupation, thy minde shall stoope to my fortune, or mine shall break the lawes of nature. How like a micher he standes, as though he had trewanted from honestie, get thee in, and for the rest let me alone. In villaine. Let vs follow, and deale as rigorously with yours as I will with mine, and you shall see that hot loue wil wax soone colde, Ile tame the proud boy, and send him as far from his loue as hee is from his duetie. Well, be as bee may is no banning, I thinke I haue charmde my yong master, a hungry meale, a ragged coate, &amp; a drie cudgell, haue put him quite beside his loue and his logick to, besides his pigsnie is put vp, &amp; therefore now Ile let him take the aire, and follow Stellios daughter with all his learning, if he meane to be my heire, the boye hath wit sance measure, more than needs, cats meat &amp; dogs meate inough for the vantage. Well, without Halfepenie all my witte is not woorth a dodkin, that mite is miching in this groue, for as long as his name is Halfepenie, he will bee banquetting, for thether Halfepenie. I but now you see to what loosenes this age is growen ▪ our boies carouse sack like double beere, and saith that which doth an old man good, can do a yong man no harme: old men (say they) eat pap, why shoulde not children drinke sacke, their white heads haue cosned time out of mind our yo ̄ g yeres And I mine, to iudge the difference between a blacke boule and a filuer goblet. Who woulde thinke that my hoppe on my thumbe, Halfpenie, scarse so high as a pint pot, wold reason the matter; but hee learnde his leere of my sonne, his young master, whom I haue brought vp at Oxford, and I thinke must learne heere in Kent at Ashford. Hee boldly rapt it out, Sine Cere &amp; Baccho friget Venus, without wine and sugar his veins wold waxe colde. If all bee gone Ile not staie, Halfepenie I am sure hath done mee a pennie woorth of good, else Ile spend his bodie in buying a rod. I thinke it was neuer but luke warme. I am sorrie neighbour, for our purposes are dis appointed. For my part I wish them well. Nor I. Feare not, for I haue sworne that Canaius shall not haue Liuia. But let not vs fall out because our chil dren fall in. I and if you will let vs, that we may see how the young couple bride it, and so we may teach our owne. What a mischiefe make the twanglers here? we haue no trenchers to scrape, it makes my teeth on edge to heare such grating. Get you packing, or Ile make you weare double stockes, and yet you shall bee neuer the warmer. Hers no wedding. My sonne villaine, I had rather hee were fairely hanged. O ho the case is altered, go thether then and be haltered for me. Boy, this smoake is a token of some fire, I lyke not the lucke of it. Wherefore should these minstrelles dreame of a marryage? I will to Prisius, I cannot be quiet, and in good time I meet him, God morow neighbor. This is your olde tricke, to pick ones purse &amp; then to picke quarrels, I tell thee, I had rather thou shouldest rob my chest than imbesell my sonne. That shewed hee was no dumbe minister. But what sayde they, diddest thou heare anie wordes be tweene them? Yes, yes, God giue you ioy is a binder, Ile qui ly be resolud, Candius come forth. The micher hangs downe his head. Are you marryed yong master? But thou shalt repent, it was done so soone. Thou brasen face boy, thinkest thou by learning to persuade me to that which thou speakest. Where did I consent, when, what witnes? And you oatemeale groate, you were acquain ted with this plot. Thou shalt be punished as principal: here comes Memphio and Stellio, they belike were priuie, and all theyr heads were layde together to grieue our heartes. And thogh ours be disobedient, they be no fools. This is worse, come Half. tel truth &amp; scape the rod. Neighbor, these things cannot be recald, there fore as good consent, seeing in all our purposes also we mist the marke, for they two will match their children. Let her end her discourse. Candius inioy Liuia. Then at mine the last day, &amp; euen so spend this weeke in good cheere.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Mother Bombie</div><div class="body">Menmiphio and Stellig each has a fool for his only child, — a son and a daughter respectively, but both have managed to conceal the fact from the neighbours. Each plans to marry his offspring to the other’s without disclosing the heir’s mental debility, and each tasks his servant to make the arrangements. Meanwhile, @amidiliis and [ivid are in love with one another, but their parents disapprove, wanting them to marry wealth instead: Candius is made to woo Stellio’s daughter Sil@mla, and Livia is intended for Memphio’s son Al@GiiS] The four fathers’ boy servants conspire to frustrate these various . marital plans, and go off to drink at the tavern. Candius meets Silena as she sneaks out to hear her fortune, and offers to read her palm. He is momentarily struck by her beauty, but quickly discovers that she is an idiot, a legitimate impediment to marriage. Mother Bomibié tells Silena’s fortune in cryptic terms: she is not the child of her parents. The fortune teller is also consulted by the siblings M@eStiiS and Sérénaj] who have developed an incestuous passion for one another; Mother Bombie tells them that they shall be married and each will displace a fool. The boys arrange for Candius and Livia to swap apparel with the two idiots, and they are married in disguise, with their own fathers as witnesses. Accius and Silena court one another in disguise, but their marriage prospects take a turn for the worse after each father identifies the other’s child as a fool. DE@Rilio is arrested for failing to feed a horse he hired; the other boys enter a bond to pay off his creditor, but then get the hackneyman, sergeant, and scrivener drunk, and pay for the wine by pawning the sergeant’s mace. Early the next morning, three fiddlers, advised of the wedding, struggle to identify the right house to serenade. Prisils and Spérantus discover that Candius ===== PAGE 465 ===== 1589 and Livia are married. The four servants confess their part in the affair, and the four fathers are content: Prisius and Sperantus accept the fait accompli, and Memphio and Stellio are willing to marry the fools to one another after all. Wi€inid intervenes to prevent an incestuous marriage: eighteen years ago, she swapped them for her own children, counterfeiting their distinctive birthmarks; the true heirs of Memphio and Stellio are Maestius and Serena. Mother Bombie has Predicted everything accurately. Nobody is to be punished or left dissatisfied: Vicinia is pardoned, the hackneyman paid, and the…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

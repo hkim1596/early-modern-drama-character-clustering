@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FALL in Every Man Out of His Humor · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FALL</span>
+</nav>
+
+<h1>FALL</h1>
+<p class="lede">in <em>Every Man Out of His Humor</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>1632</td></tr>
+<tr><th>Characters</th><td>8323</td></tr>
+<tr><th>BritDrama no.</th><td>1216</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">worth) to kisse the lips of an Empresse. I brother: he <mark>has</mark> a Face like a Cherubin. Not I, in good faith: and hee <mark>has</mark> a Bodie like an An gell. VVhy but e&#x27;en now: <mark>did</mark> you not meet him? and a Tongue able to rauish any <mark>woman</mark> i&#x27;the earth. VVell, I will not altogither despaire: I haue heard of a Cittizens wife <mark>has</mark> been belou&#x27;d of</div>
+<div class="excerpt">strangely, As if he were as white as innocence. Alas, you&#x27;r simple, you: you cannot change, Looke pale at pleasure, and then red with VVonder: No, no, not you: I <mark>did</mark> but cast an amorous eye e&#x27;ennow Vpon a paire of Gloues that somwhat likt me, And straight he noted it, and gaue commaund All should be ta&#x27;ne <mark>away</mark>. S&#x27;body sirra,</div>
+<div class="excerpt">idle demaund was his new suit. O you are a gallant in print now Brother. I cannot but like it to the desert. Now beshrow my <mark>heart</mark> then. I care not. You jest? VVhen <mark>did</mark> you see him? Come, when will you pay me againe now? VVhy looke you so pale brother? VVhat would you doe withall? Indeed Sir, &#x27;tis a most excellent suit, and you</div>
+<div class="excerpt">backbites him. O monster of men! can the Earth beare such an enuious Caitiffe? Now out vpon thee Iudas; canst thou not be content to backbite thy friend, but thou <mark>must</mark> betray him? wilt thou seeke the vndoing of any man? and of such a man too? and will you Sir get your liuing by the counsell of Traitors? The house wilfal, the ground</div>
+<div class="excerpt">you stay, I. Brother, sweet brother, here&#x27;s foure Angels, I&#x27;le giue you toward your Sute; for the loue of Iesu, and as euer you came of Christen crea ture, make hast to the water side (you know where Master Fastidius vses to land) and giue him warning of my husbands intent; and tell him of that leane Rascals treacherie: O Iesu,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Here&#x27;s a sweet stinke indeed: VVhat, shall I euer be thus crost and plagu&#x27;d? And sicke of Husband? O my head doth ake As it would cleaue asunder with these sauors, All my Room&#x27;s alter&#x27;d, and but one poore VValke That I delighted in, and that is made So fulsome with perfumes, that I am fear&#x27;d (My braine doth sweat so) I haue caught the Plague. I, long since perhaps, But now that Sence is alterd: you would haue me (Like to a puddle or a standing poole) To haue no motion, nor no spirit within me. No, I am like a pure and sprightly Riuer, That moues for euer, and yet still the same; Or fire that burnes much wood, yet still one flame. VVhy those were growing flowers, And these within my walke are cut and strew&#x27;d. I, haue they so? In your grosse judgement: if you make no difference Betwixt the sent of growing flowers and cut ones, You haue a sence to tast Lampe-oyle, yfaith. And with such judgement haue you chang&#x27;d the chambers, Leauing no roome that I can joy to be in In all your house: and now my VValke and all You smoke me from, as if I were a Foxe, And long belike to driue me quite away: VVell walke you there, and I&#x27;le walke where I list. I doe: for feare. Ought that is there should like her. O this man How cunningly he can conceale himselfe, As though he lou&#x27;d? lou&#x27;d? nay honour&#x27;d and ador&#x27;d? Sweet heart? oh, better still: And asking, why? wherefore? and looking strangely, As if he were as white as innocence. Alas, you&#x27;r simple, you: you cannot change, Looke pale at pleasure, and then red with VVonder: No, no, not you: I did but cast an amorous eye e&#x27;ennow Vpon a paire of Gloues that somwhat likt me, And straight he noted it, and gaue commaund All should be ta&#x27;ne away. S&#x27;body sirra, but do not: Bring in no Gloues to spite me: if you doe— VVhy should I take you for him? O, now I see the cause of his idle demaund was his new suit. O you are a gallant in print now Brother. I cannot but like it to the desert. Now beshrow my heart then. I care not. You jest? VVhen did you see him? Come, when will you pay me againe now? VVhy looke you so pale brother? VVhat would you doe withall? Indeed Sir, &#x27;tis a most excellent suit, and you do weare it as extraordinarie. Ah, the sweet Grace of a Courtier! Out, out, vnworthy to speake where he breatheth. He sayes true. So Sir. Good Lord! how you are perfumed in your tearmes and all: pray you leaue vs. I, I, Let thy words euer sound in mine eares, and thy Graces disperse contentment through all my sences: O, how happie is that Ladie aboue other Ladies, that enjoyes so ab solute a Gentleman to her Seruant! A Countesse giue him her hand to kisse! a foolish Countesse; he e&#x27;s a man worthie (if a woman may speake of a mans worth) to kisse the lips of an Empresse. I brother: he has a Face like a Cherubin. Not I, in good faith: and hee has a Bodie like an An gell. VVhy but e&#x27;en now: did you not meet him? and a Tongue able to rauish any woman i&#x27;the earth. VVell, I will not altogither despaire: I haue heard of a Cittizens wife has been belou&#x27;d of a Courtier; and why not I? heigh ho: well, I will into my priuat Chamber, locke the dore to me, and thinke ouer all his good parts one after ano ther. VVhy are you so melancholy Brother? VVhy are you not merry then? there are but two of vs in all the world, and if we should not be comforts to one ano ther, God helpe vs. If you be melancholy for that Brother, I think I haue as much cause to be melancholy, as one; for I&#x27;le be sworne I liue as little in the fashion, as any woman in London. By the Bi ble of heauen (beast that I am to say it) I haue not one friend i&#x27;the world besides my husband. VVhen saw you Maister Fasti dius Briske, Brother? Nay good Brother, be not resolute. Oh sweet Fastidius Briske, O fine Courtier, thou a hee mak&#x27;st me sigh and say, How blessed is that woman that hath a Courtier to her husband? and how miserable a dame she is that hath neither husband nor friend in the Court: O sweet Fastidius, O fine Courtier. How comely hee bowes him in his courtesie? how full hee hits a woman betwixt the lips when hee kisses? how vpright hee sits at the Table? how daintily hee carues? how sweetly hee talkes, and tels newes of this Lord, and of that Ladie? how cleanely hee wipes his spoon at euery spoon full of any whit-meat hee eats, and what a near case of picke tooths hee carries about him still? Oh sweet Fastidius, O sine Courtier! Hey da, this is excellent, I&#x27;le lay my life this is my hus bands dotage, I thought so, nay neuer play peeke-boe with me, I know you do nothing but studie how to anger me sir. To Supper sir? now come vp to Supper I beseech you: as though there were no difference betweene Supper time when folkes should be merrie, and this time when they would be Melancholly? I would neuer take vpon me to take a wife, if I had no more Iudgement to please her. Here&#x27;s an vnthankfull spitefull wretch: the good Gen tleman vouchsaft to make him his companion (because my husband put him into a few Rags) and now see how the vn rude Rascall backbites him. O monster of men! can the Earth beare such an enuious Caitiffe? Now out vpon thee Iudas; canst thou not be content to backbite thy friend, but thou must betray him? wilt thou seeke the vndoing of any man? and of such a man too? and will you Sir get your liuing by the counsell of Traitors? The house wilfal, the ground wil open, and swallow vs: I&#x27;le not bide here for all the Gold an Siluer in Heauen. Help me brother: Gods body and you come here, I&#x27;le do my selfe a mischiefe. Tut, you shall ne&#x27;re ha&#x27; that vantage of me, to say you are vndone by mee: I&#x27;le not bid you stay, I. Brother, sweet brother, here&#x27;s foure Angels, I&#x27;le giue you toward your Sute; for the loue of Iesu, and as euer you came of Christen crea ture, make hast to the water side (you know where Master Fastidius vses to land) and giue him warning of my husbands intent; and tell him of that leane Rascals treacherie: O Iesu, how my flesh rises at him? nay, sweet brother make hast; you may say I would haue writ to him, but that the necessitie of the time would not suffer it: He cannot choose but take it ex traordinarily from me: and Commend me to him, good bro ther: say I sent you. Come, I mar&#x27;le what peece of nightworke you haue in hand no , that you call for your cloke and your shoes: what, is this your Pandor? Hang him rascall, I cannot abide him for his trecherie, with his wild quicke-set beard there. VVhether goe you now with him? Nay, and I be not worthy to know whether you go, stay till I take knowledge of your comming backe. So Sir, and what say you? Your intents? why, what may your intents be for Gods sake? Aye me, that he were. O God Sir, he shall not want for a bribe: pray you, will you commend me to him, and say I&#x27;le visit him presently. Good truth so you may; farewell good Sir ▪ Lord how a woman may be mistaken in a man? I would haue sworne vpon all the Testaments in the world he had not lou&#x27;d maister Briske. Bring me my keyes there maid: Alasse good Gentleman, if all I haue i&#x27; this earthly world will pleasure him, it shall bee at his seruice. Nay, you shall bee comforted in me more than this, if you please Sir. I sent you word by my Brother Sir, that my hus band laid to rest you this morning, I know not whether you re ceiu&#x27;d it, or no? O the Lord! O God Maister Briske, yes: and therefore bee presently discharg&#x27;d; for if he come with his Actions vpon you (Lord de liuer you) you are in for one halfe a score yeare; he kept a poor man in Ludgate once, twelue year for sixteene shillings. VVhere&#x27;s your keeper, for Gods loue call him, let him take a bribe, and dispatch you, Lord how my heart trembles! here are no spies? are there? O Christ Maister Fastidius, if you knew how I tooke vp my husband to day, when he said he would arrest you; and how I rail&#x27;d at him that persuaded him to&#x27;t, the Scholler there, (who on my conscience loues you now) &amp; what care I tooke to send you intelligence by my Brother; and how I gaue him foure So ueraignes for his paines; and now, how I came running out hether without man or boy with mee, so soone as I heard on&#x27;t; you&#x27;ld say, I were in a Passion indeed: your keeper for Gods sake. O Maister Briske (as &#x27;tis in Euphues) Hard is the choise, when one is compelled either by silence to die with gree e, or by speaking to liue with shame. O mee! Sweet Husband?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Every Man Out of His Humor</div><div class="body">Cordatus and Mitis are brought by Asper to watch a satirical play, in which he is to be an actor, playing malicious Macilente. They keep up a running commentary between, and sometimes during, the scenes. Each character in the play has a ‘humour’ or obsession to be purged. Sogliardo wants to be a gentleman: he takes instruction from Carlo Buffone and purchases himself a coat of arms; he is eventually used to humiliate the conceited court lady Saviolina by showing that she cannot tell true gentility from false. The farmer Sordido is hoarding grain, and resists a court order to sell it because he is gambling on the price going up after a bad harvest; when this does not happen, he tries to hang himself, and repents on hearing the comments of the rustics who cut him down. Puntarvolo plays chivalric wooing games of mock- adultery with his wife, and plans to travel to Constantinople with his wife and dog, venturing money on their safe return; but he loses the inclination when Macilente poisons the dog. Fungoso tries to imitate the courtier Brisk’s fashionable suit, but is continually frustrated because Brisk keeps changing his clothes. The uxorious Deliro seeks advice on how best to please his contrary wife, Fungoso’s sister. Shift, wanting to be known for a machismo he doesn’t really have, represents himself as a robber, but the threat of hanging forces him to admit the truth. Carlo Buffone has a humour of talking: at a tavern, he performs a comic dialogue between two cups, playing both parts himself, and Puntarvolo seals his mouth with wax. The affray brings the Constable, who is minded to arrest them all but is content tv take only Brisk. Fungoso, penniless from his clothing purchases, is left to pay the tavern bill, and has to be rescued by bis brother-in-law, who also calls in the mortgage on ===== PAGE 162 ===== Brisk’s lands; the courtier is left in prison for debts totalling £13,000, curing him of his humour. Macilente is purged of his malign humour by the sight of the Queen.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

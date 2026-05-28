@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ALC in Timon of Athens · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_01.html">Cluster 1 — 1: timon, timons, cleora</a> ›
+  <span>ALC</span>
+</nav>
+
+<h1>ALC</h1>
+<p class="lede">in <em>Timon of Athens</em> — Shakespeare, WilliamMiddleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>784</td></tr>
+<tr><th>Characters</th><td>4159</td></tr>
+<tr><th>BritDrama no.</th><td>1536</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 1 (<em>timon, timons, cleora, athens, honour, must…</em>). Matches are highlighted.</p>
+<div class="excerpt"><mark>Timon</mark>, and haue cauſe. Why me, <mark>Timon</mark> ? Haſt thou Gold yet, Ile take the Gold thou gi ueſt me, not all thy Counſell. Strike vp the Drum towardes <mark>Athens</mark>, farewell <mark>Timon</mark> : if I thriue well, Ile viſit thee againe. I neuer <mark>did</mark> thee harme. Call&#x27;ſt thou that harme? We but offend him, ſtrike. Sound to this Coward, and laſciuious Towne,</div>
+<div class="excerpt">of eaſe, And purſie Inſolence ſhall breake his winde With feare and horrid flight. Then there&#x27;s my Gloue, Defend and open your vncharged Ports, Thoſe Enemies of <mark>Timons</mark>, and mine owne Whom you your ſelues ſhall ſet out for reproofe, Fall and no more; and to attone your feares With my more <mark>Noble</mark> meaning, not a man Shall paſſe his</div>
+<div class="excerpt">ſpeake. What is thy name? Is man ſo hatefull to thee, That art thy ſelfe a Man? I know thee well: But in thy Fortunes am vnlearn&#x27;d, and ſtrange. How came the <mark>Noble</mark> <mark>Timon</mark> to this change? <mark>Noble</mark> <mark>Timon</mark>, what friendſhip may I do thee? What is it <mark>Timon</mark>? I haue heard in ſome ſort of thy Miſeries. I ſee them now, then was a bleſſed time.</div>
+<div class="excerpt">I ſee them now, then was a bleſſed time. Pardon him ſweet Timandra ▪ for his wits Are drown&#x27;d and loſt in his Calamities. I haue but little Gold of late, braue <mark>Timon</mark>, The want whereof, doth dayly make reuolt In my penurious Band. I haue heard and greeu&#x27;d How curſed <mark>Athens</mark>, mindeleſſe of thy worth, Forgetting thy great deeds,</div>
+<div class="excerpt"><mark>Athens</mark>, mindeleſſe of thy worth, Forgetting thy great deeds, when Neighbour ſtates But for thy Sword and Fortune trod vpon them. I am thy Friend, and pitty thee deere <mark>Timon</mark>. Why fare thee well: Heere is ſome Gold for thee. When I haue laid proud <mark>Athens</mark> on a heape. I <mark>Timon</mark>, and haue cauſe. Why me, <mark>Timon</mark> ? Haſt thou Gold yet, Ile take</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Sir, you haue ſau&#x27;d my longing, and I feed Moſt hungerly on your ſight. So they were bleeding new my Lord, there&#x27;s no meat like &#x27;em, I could wiſh my beſt friend at ſuch a Feaſt. I, defil&#x27;d Land, my Lord. Honor, health, and compaſſion to the Senate. I am an humble Sutor to your Vertues; For pitty is the vertue of the Law, And none but Tyrants vſe it cruelly. It pleaſes time and Fortune to lye heauie Vpon a Friend of mine, who in hot blood Hath ſtept into the Law: which is paſt depth To thoſe that (without heede) do plundge intoo&#x27;t. He is a Man (ſetting his Fate aſide) of comely Vertues, Nor did he ſoyle the fact with Cowardice, (And Honour in him, which buyes out his fault) But with a Noble Fury, and faire ſpirit, Seeing his Reputation touch&#x27;d to death, He did oppoſe his Foe: And with ſuch ſober and vnnoted paſſion He did behooue his anger ere &#x27;twas ſpent, As if he had but prou&#x27;d an Argument. Why ſay my Lords ha&#x27;s done faire ſeruice, And ſlaine in fight many of your enemies: How full of valour did he beare himſelfe In the laſt Conflict, and made plenteous wounds? Muſt it be ſo? It muſt not bee: My Lords, I do beſeech you know mee. Call me to your remembrances. I cannot thinke but your Age has forgot me, It could not elſe be, I ſhould proue ſo bace, To ſue and be deny&#x27;de ſuch common Grace. My wounds ake at you. Baniſh me? Baniſh your dotage, baniſh vſurie, That makes the Senate vgly. Now the Gods keepe you old enough, That you may liue Onely in bone, that none may looke on you. I&#x27;m worſe then mad: I haue kept backe their Foes While they haue told their Money, and let out Their Coine vpon large intereſt. I my ſelfe, Rich onely in large hurts. All thoſe, for this? Is this the Balſome, that the vſuring Senat Powres into Captaines wounds? Baniſhment. It comes not ill: I hate not to be baniſht, It is a cauſe worthy my Spleene and Furie, That I may ſtrike at Athens. Ile cheere vp My diſcontented Troopes, and lay for hearts; &#x27;Tis Honour with moſt Lands to be at ods, Souldiers ſhould brooke as little wrongs as Gods. What art thou there? ſpeake. What is thy name? Is man ſo hatefull to thee, That art thy ſelfe a Man? I know thee well: But in thy Fortunes am vnlearn&#x27;d, and ſtrange. How came the Noble Timon to this change? Noble Timon, what friendſhip may I do thee? What is it Timon? I haue heard in ſome ſort of thy Miſeries. I ſee them now, then was a bleſſed time. Pardon him ſweet Timandra ▪ for his wits Are drown&#x27;d and loſt in his Calamities. I haue but little Gold of late, braue Timon, The want whereof, doth dayly make reuolt In my penurious Band. I haue heard and greeu&#x27;d How curſed Athens, mindeleſſe of thy worth, Forgetting thy great deeds, when Neighbour ſtates But for thy Sword and Fortune trod vpon them. I am thy Friend, and pitty thee deere Timon. Why fare thee well: Heere is ſome Gold for thee. When I haue laid proud Athens on a heape. I Timon, and haue cauſe. Why me, Timon ? Haſt thou Gold yet, Ile take the Gold thou gi ueſt me, not all thy Counſell. Strike vp the Drum towardes Athens, farewell Timon : if I thriue well, Ile viſit thee againe. I neuer did thee harme. Call&#x27;ſt thou that harme? We but offend him, ſtrike. Sound to this Coward, and laſciuious Towne, Our terrible approach. Till now you haue gone on, and fill&#x27;d the time With all Licentious meaſure, making your willes The ſcope of Iuſtice. Till now, my ſelfe and ſuch As ſlept within the ſhadow of your power Haue wander&#x27;d with our trauerſt Armes, and breath&#x27;d Our ſufferance vainly: Now the time is fluſh, When crouching Marrow in the bearer ſtrong Cries (of it ſelfe) no more; Now breathleſſe wrong, Shall ſit and pant in your great Chaires of eaſe, And purſie Inſolence ſhall breake his winde With feare and horrid flight. Then there&#x27;s my Gloue, Defend and open your vncharged Ports, Thoſe Enemies of Timons, and mine owne Whom you your ſelues ſhall ſet out for reproofe, Fall and no more; and to attone your feares With my more Noble meaning, not a man Shall paſſe his quarter, or offend the ſtreame Of Regular Iuſtice in your Citties bounds, But ſhall be remedied to your publique Lawes At heauieſt anſwer. Deſcend, and keepe your words.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Timon of Athens</div><div class="body">; Timon gives freely of his riches to his acquaintances: every little gift will trigger disproportionate largesse by way of requital. He intervenes financially to secure Ventidius’ release from a debtors’ prison, and settles money on his servant Lucilius to enable him to marry the girl he loves, a wealthy man’s daughter. He entertains guests at a lavish feast at which a masque of Amazons is performed. But his creditors. are alarmed by his uncontrolled spending, and call in his debts, which amount to more than the value of his entire estate. He imagines that he can still call on the former recipients of his liberality, but they make their excuses and leave him in difficulties; he is failed even by Ventidius, now a rich man after his father’s death. Timon lays on a second feast, and invites his unreliable friends; they think normal service has been resumed, but are discomfited to find that the menu consists of water alone. Timon drives them off with abuse and leaves Athens in misanthropic fury. Alcibiades attempts to save a friend from execution for murder, but the Senate dismisses the appeal; when he persists, they banish him. In the forest, Timon digs for roots to eat, but finds only buried gold. He meets Alcibiades, marching against Athens with his soldiers, and gives him gold to ensure the city’s destruction; he also pays the army’s whores to spread venereal disease. He encourages a band of thieves to prey upon mankind, but his words persuade them to rethink their way of life. His faithful steward seeks him out and offers to share his own savings; Timon rewards him for his honesty but does not change his low opinion of the rest of humanity. News gets round that Timon still has gold, and hangers-on arrive, hoping this means his bankruptcy was only a bluff to test his friends; he drives them violently away. The Senate asks Timon to return to Athens as its tuler, to defend it against Alcibiades, but Timon, who is busy writing his own epitaph, wishes annihilation on them, and recommends suicide as their only means of escape. Alcibiades’ messenger to Timon finds only his tomb. Athens surrenders, and Timon’s epitaph is read.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_01.html">Cluster 1 — 1: timon, timons, cleora</a> page.
+</div>
+</div></body></html>

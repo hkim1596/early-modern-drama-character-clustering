@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IEFF in Holland&#x27;s Leaguer · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>IEFF</span>
+</nav>
+
+<h1>IEFF</h1>
+<p class="lede">in <em>Holland&#x27;s Leaguer</em> — Marmion, Shackerley</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1632</td></tr>
+<tr><th>Words</th><td>520</td></tr>
+<tr><th>Characters</th><td>2660</td></tr>
+<tr><th>BritDrama no.</th><td>2351</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">your Worſhip. You are not out of ſeruice. Then are my hopes at beſt, I haue no reaſon To care for him any longer; a word with you. What furniture do you meane? <mark>Did</mark> you ſend any ſuch? Your owne words. I muſt make the beſt benefit of my place: You know, tis not an age to <mark>bee</mark> honeſt in. Tis the only high-way vnto pouerty. I know</div>
+<div class="excerpt">Sir, I wait upon you. I thanke your worſhip, you haue euer beene my friend. True. Your worſhip may be welcome there at all times. That is an euident token of your worſhips wiſdome. Sir, you are of power to diſperſe us like</div>
+<div class="excerpt">there at all times. That is an euident token of your worſhips wiſdome. Sir, you are of power to diſperſe us like attomes. And reaſon good. Yes Sir, your providence <mark>Has</mark> ſhew&#x27;d it ſelfe ſufficiently that way. What&#x27;s that, Sir? Tis the onely gentile humor that is extant. Not I by any meanes, Sir? Where, at my houſe? And unlade there.</div>
+<div class="excerpt">thinkes you are much deiected with your fall, I finde an alteration in your face. You looke like an Almanacke of laſt yeeres date. Or like your liuery cloake, of <mark>two</mark> yeeres wearing. Worſe then the ſmoaky wall of a bawdy houſe. No fayth ſir, Al ſſe, tis not within the reach of man, To countermine your plots. You muſt haue none,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Sir, I wait upon you. I thanke your worſhip, you haue euer beene my friend. True. Your worſhip may be welcome there at all times. That is an euident token of your worſhips wiſdome. Sir, you are of power to diſperſe us like attomes. And reaſon good. Yes Sir, your providence Has ſhew&#x27;d it ſelfe ſufficiently that way. What&#x27;s that, Sir? Tis the onely gentile humor that is extant. Not I by any meanes, Sir? Where, at my houſe? And unlade there. I haue had ſuch favour at your worſhips hands, That ſhould good fortune come in humane ſhape To tempt your Miſtris, I&#x27;de not let her in. Spare roomes enough, Sir, why doe you aske? That&#x27;s the high way to pouerty. It lyes not in the reach of man to fathome it. Shall marry young ones a purpoſe for him. Beleeve it, not a breath of ayre comes neere her, But what ſteales in at the window. But ſtay, Sir, will ſhe not be too great a charge To keepe her to your ſelfe, what if you hir&#x27;d her By the moneth, as your Factors doe beyond Sea, And when ſhe is growne old and leakie, Sir, Mend her i&#x27;th docke, and fraught her ore for Holland. Who me? the divell ſhall be the Pilote firſt, Ere I come neere their quick-ſands, their baſe roads. They haue a dangerous Key to come into. As ſtrict as an Aldermans at dinner time: I, and the way to hell is growne ſo narrow, A man&#x27;s in danger to paſſe ore, for if VVe reele beſide the bridge, ſtraight we ſhall fall Into a Lake that will fouly dight us, Darker and deeper, then Styx or Cocitus. Thankes to your good Worſhip; Very wel, ſir. Lockt in a Cypreſſe cheſt, for feare of Moths. They are kept ſafe, and well ary&#x27;d for your Worſhip. You are not out of ſeruice. Then are my hopes at beſt, I haue no reaſon To care for him any longer; a word with you. What furniture do you meane? Did you ſend any ſuch? Your owne words. I muſt make the beſt benefit of my place: You know, tis not an age to bee honeſt in. Tis the only high-way vnto pouerty. I know not how, I do not fancy you Of late. No fayth, ſir. You haue a worſe commodity at my houſe. But you may ſaue the charges of a writ. Ile ſend her you without reprieue or bayle. I doe you that fauour. My thinkes you are much deiected with your fall, I finde an alteration in your face. You looke like an Almanacke of laſt yeeres date. Or like your liuery cloake, of two yeeres wearing. Worſe then the ſmoaky wall of a bawdy houſe. No fayth ſir, Al ſſe, tis not within the reach of man, To countermine your plots. You muſt haue none, without lawfull proceeding. And that I know, you dare not. What doe you meane? Sir I haue nothing there, but one crackt piece Belongs to this Gentleman, can doe no ſeruice. She is ſpoyld in the bore.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Holland&#x27;s Leaguer</div><div class="body">Six years ago, Faustina’s father sent her abroad to keep her away from her love, Fidelio, and made her swear not to marry for seven years. Now the old man is dead, she has returned to London, known only to Fidelio, but insists on keeping her oath for the last remaining year. Her brother Philautus is in love with himself, which distresses his friends and offends his wife, but gives his servant Ardelio the opportunity to steal from him by conveying away property into storage at an accomplice’s house. Fidelio plans to make him fall in love with Faustina; this will both cure him and test her fidelity. He explains it to Faustina as a plan to humiliate a lord who has cast aspersions on women. Philautus makes advances to Faustina on the assumption that all women are libidinous and enjoy being raped from time to time; but he is impressed by her militant chastity, and accedes to her demand that he prove his honour in battle. He later returns from the wars, cured of narcissism, and asks Faustina’s pardon for his earlier insolence. She identifies herself as his sister, and he gives his blessing to her marriage to Fidelio; so she agrees to abandon her oath before the seven years are out. On learning that Ardelio is a villain, Philautus dismisses him. He goes to collect the stolen goods, only to find that his partner in crime will not acknowledge that the items even exist. The ensuing argument is overheard, and the miscreants are both arrested, In the sub-plot, Agurtes intends to cheat the courtly name-dropper Trimalchio by introducing him to a young heiress - who is, in reality, his daughter and lifelong accomplice Millicent. When he visits Millicent, Trimalchio brings along Philautus’ brother-in-law ===== PAGE 537 ===== 1631 as Capritio, wiie: has’ been brought to towit: oleae: courtly manners.:Agurtés suggests to Trimalchio that: an Italian. (or Italianated) - Signor MisexE Kandy apritio’s tutor traveller, he may have&#x27;rivals for the heiress’s hand ii marriage. ~ AL PANDER at Holland’s} 1 daa Meanwhile Capritio woos Millicent’ 3 ‘Maids: ‘Margery. |ee Trimalchio declines to join. ‘Philautus: atthe. Anilitary — leaguer, preferring to visit: Holland&#x27;s: premises and arrests the: cliente: including T. sionals ; : They are ‘brought 4 and Capritio’s. tutor, ‘Miscellank before..a justice; who is really Agurtes. in @ second disguise; but freed when a letter arrives trom. hadlltéent ! asking.-for their reprieve. Miscellanio: is convinced that the letter was sent on his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

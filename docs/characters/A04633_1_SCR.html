@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SCR in Bartholomew Fair · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SCR</span>
+</nav>
+
+<h1>SCR</h1>
+<p class="lede">in <em>Bartholomew Fair</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>1329</td></tr>
+<tr><th>Characters</th><td>7259</td></tr>
+<tr><th>BritDrama no.</th><td>1757</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">the Author doth promise a strut ting Horse-courser, with a leere -Drunkard, <mark>two</mark> or three to attend him, in as good Equipage as you would wish. And then for Kinde-<mark>heart</mark>, the Tooth-drawer, a fine oyly Pig-<mark>woman</mark> with her Tapster, to bid you welcome, and a consort of Roarers for musique. A wise Iustice of Peace meditant, in stead</div>
+<div class="excerpt">Bartholmew day! Bartholmew vpon Bartholmew ! there&#x27;s the de uice! who would haue mark&#x27;d such a leap-frogge chance now? A very lesse then Ames-ace, on <mark>two</mark> Dice! well, <mark>goe</mark> thy wayes Iohn Little-wit, Proctor Iohn Little-wit: One o&#x27; the pretty wits o&#x27; Pauls, the Little wit of London (so thou art call&#x27;d) and some thing beside. When a</div>
+<div class="excerpt">Beauer, with a copper-band, like the Conney-skinne <mark>woman</mark> of Budge -row? Sweete VVin, let me kisse it! And. her fine high shooes, like the Spanish Lady ! Good VVin, <mark>goe</mark> a litle I would faine see thee pace, pretty VVin ! By this fine Cap, I could neuer leaue kissing on&#x27;t.</div>
+<div class="excerpt">ARTICLES of Agreement, indented, between the Spectators or Hearers, at the Hope on the Bankeside, in the County of Surrey on the one party; And the Author of Bartholmew Fayre in the said place, and County on the o ther party:</div>
+<div class="excerpt">the faith. And of Scotland the seauen and fortieth. INPRIMIS, It is couenanted and agreed, by and be tweene the parties abouesaid, and the said Spectators, and Hearers, aswell the curious and enuious, as the fauouring and iudicious, as also the grounded Iudgements and vn derstandings, doe for themselues seuerally Couenant, and</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">ARTICLES of Agreement, indented, between the Spectators or Hearers, at the Hope on the Bankeside, in the County of Surrey on the one party; And the Author of Bartholmew Fayre in the said place, and County on the o ther party: the one and thirtieth day of Octob. 1614. and in the twelfth yeere of the Raigne of our Soueragine Lord, IAMES by the grace of God King of England, France, &amp; Ire land, Defender of the faith. And of Scotland the seauen and fortieth. INPRIMIS, It is couenanted and agreed, by and be tweene the parties abouesaid, and the said Spectators, and Hearers, aswell the curious and enuious, as the fauouring and iudicious, as also the grounded Iudgements and vn derstandings, doe for themselues seuerally Couenant, and agree to remaine in the places, their money or friends haue put them in, with patience, for the space of two houres and an halfe, and somewhat more. In which time the Author promiseth to present them by vs, with a new suf ficient Play called BARTHOLMEW FAYRE, merry, and as full of noise, as sport: made to delight all, and to offend none. Prouided they haue either, the wit or the honesty to thinke well of themselues. It is further agreed that euery person here, haue his or their free-will of censure, to like or dislike at their owne charge, the Author hauing now departed with his right: It shall bee lawfull for any man to iudge his six pen&#x27;orth his twelue pen&#x27;orth, so to his eighteene pence, 2. shillings, halfe a crowne, to the value of his place: Prouided alwaies his place get not aboue his wit. And if he pay for halfe a dozen, hee may censure for all them too, so that he will vndertake that they shall bee silent. Hee shall put in for Censures here, as they doe for lots at the lottery : mary if he drop but sixe pence at the doore, and will censure a crownes worth, it is thought there is no conscience, or iustice in that. It is also agreed, that euery man heere, exercise his owne Iudgement, and not censure by Contagion, or vp on trust, from anothers voice, or face, that sits by him, be he neuer so first, in the Commission of Wit : As also, that hee bee fixt and settled in his censure, that what hee approues, or not approues to day, hee will doe the same to morrow, and if to morrow, the next day, and so the next weeke (if neede be:) and not to be brought about by any that sits on the Bench with him, though they indite, and arraigne Playes daily. Hee that will sweare, Ieronimo, or Andronicus are the best playes, yet, shall passe vnexcepted at, heere, as a man whose Iudgement shewes it is constant, and hath stood still, these fiue and twentie, or thirtie yeeres. Though it be an Ignorance, it is a vertuous and stay&#x27;d ignorance; and next to truth, a confirm&#x27;d errour does well; such a one the Author knowes where to finde him. It is further couenanted, concluded and agreed, that how great soeuer the expectation bee, no person here, is to expect more then hee knowes, or better ware then a Fayre will affoord: neyther to looke backe to the sword and buckler-age of Smithfield, but content himselfe with the present. In stead of a little Dauy ; to take toll o&#x27;the Bawds, the Author doth promise a strut ting Horse-courser, with a leere -Drunkard, two or three to attend him, in as good Equipage as you would wish. And then for Kinde-heart, the Tooth-drawer, a fine oyly Pig-woman with her Tapster, to bid you welcome, and a consort of Roarers for musique. A wise Iustice of Peace meditant, in stead of a Iugler, with an Ape. A ciuill Cutpurse searchant. A sweete Singer of new Bal lads allur nt : and as fresh an Hypocrite, as euer was broach&#x27;d rampant. If there bee neuer a Seruant-monster i&#x27;the Fayre ; who can helpe it? he sayes; nor a nest of Antiques ? Hee is loth to make Nature afraid in his Playes, like those that beget Tales, Tempests, and such like Drolleries, to mixe his head with other mens heeles; let the concupisence of Iigges and Dances, raigne as strong as it will amongst you: yet if the Puppets will please any body, they shall be entreated to come in. In consideration of which, it is finally agreed, by the fore said hearers, and spectators, that they neyther in themselues conceale, nor suffer by them to be concealed any State-decipherer, or politique Picklocke of the Scene, so solemn ly ridiculous, as to search out, who was meant by the Ginger-bread-woman, who by the Hobby-horse-man, who by the Costard-monger, nay, who by their Wares. Or that will pretend to affirme (on his owne inspired igno rance ) what Mirror of Magistrates is meant by the Iu stice, what great Lady by the Pigge-woman, what con ceal&#x27;d States-man, by the Seller of Mouse-trappes, and so of the rest. But that such person, or persons so found, be left discouered to the mercy of the Author, as a for feiture to the Stage, and your laughter, aforesaid. As al so, such as shall so desperately, or ambitiously, play the foole by his place aforesaid, to challenge the Au thor of scurrilitie, because the language some where sauours of Smithfield, the Booth, and the Pig-broath, or of prophanenesse, because a Mad-man cryes, God quit you, or blesse you. In witnesse whereof, as you haue preposterously put to your Seales already (which is your money) you will now adde the other part of suffrage, your hands, The Play shall presently begin. And though the Fayre be not kept in the same Regi on, that some here, perhaps, would haue it, yet thinke ▪ that therein the Author hath obseru&#x27;d a speciall Decorum, the place being as durty as Smithfield, and as stinking euery whit. Howsoeuer, hee prayes you to beleeue, his Ware is still the same, else you will make him iustly suspect that hee that is so loth to looke on a Baby, or an Hob by-horse, heere, would bee glad to take vp a Commodity of them, at any laugh ter, or losse, in ano ther place. A Pretty conceit, and worth the finding! I ha&#x27; such lucke to spinne out these fine things still, and like a Silke-worme, out of my selfe. Her&#x27;s Master Bartholomew Cokes, of Harrow o&#x27;th hill, i&#x27;th County of Middlesex, Esquire, takes forth his Licence, to marry Mistresse Grace Wel-borne of the said place and County: and when do&#x27;s hee take it foorth? to day! the foure and twentieth of August! Bartholmew day! Bartholmew vpon Bartholmew ! there&#x27;s the de uice! who would haue mark&#x27;d such a leap-frogge chance now? A very lesse then Ames-ace, on two Dice! well, goe thy wayes Iohn Little-wit, Proctor Iohn Little-wit: One o&#x27; the pretty wits o&#x27; Pauls, the Little wit of London (so thou art call&#x27;d) and some thing beside. When a quirk, or a quiblin do&#x27;s scape thee, and thou dost not watch, and apprehend it, and bring it afore the Constable of conceit: (there now, I speake quib too) let&#x27;hem carry thee out o&#x27; the Arch deacons Court, into his Kitchin, and make a Iack of thee, in stead of a Iohn. (There I am againe la!) Win, Good morrow, Win. I marry Win ! Now you looke finely indeed, Win ! this Cap do&#x27;s conuince! youl&#x27;d not ha worne it, VVin, nor ha&#x27; had it veluet, but a rough countrey Beauer, with a copper-band, like the Conney-skinne woman of Budge -row? Sweete VVin, let me kisse it! And. her fine high shooes, like the Spanish Lady ! Good VVin, goe a litle I would faine see thee pace, pretty VVin ! By this fine Cap, I could neuer leaue kissing on&#x27;t.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Bartholomew Fair</div><div class="body">Bartholomew Cokes has two objectives in life: to visit the fair which shares his name, and to marry Grace Wellborn, who, as a ward, faces a financial penalty should she refuse. He sends his servant Wasp to Littlewit the proctor to obtain a marriage licence, but then, impatiently, comes himself. He brings Grace with him, and she attracts the interest of Winwife, present with his friend Quarlous as a suitor to Littlewit’s mother-in-law, Dame Purecraft. Littlewit is more interested in Cokes’s talk of the fair, having secretly written one of the puppet plays to be performed there. The only snag is that the puritanical Dame Purecraft will disapprove of their visit, thinking fairs profane. Busy, an elder of Purecraft’s church, advises the family that fairs may lawfully be visited for good reason, and comes along with them to partake of the pork. After some unfortunate experiences involving mistaken identity, Justice Overdo no longer trusts informers and has decided to do his spying personally. He visits the fair in disguise to seek out ‘enormities’ perpetrated by the fairground folk. He is impressed by one young man, Edgeworth, and decides to rescue him from the clutches of the cheaters; but he does not know that Edgeworth is a cutpurse. While Overdo is busy telling him about the wickedness of tobacco, Edgeworth steals Cokes’s purse; Overdo gets the blame. When it happens a second time, Overdo is arrested and put in the stocks. There he encounters the madman Trouble-All, who persistently demands Overdo’s warrant for any action; it transpires that he was a court official driven out of his mind by Overdo’s own actions. The watchmen, concerned to get better authority, release Overdo from the stocks for the time being. Meanwhile, the Littlewits arrive at the fair, but Busy becomes over-excited in his condemnation, attacks the fairground booths, and is arrested; Dame Purecraft goes after him, leaving Littlewit and Win free to enjoy themselves. Edgeworth tricks Wasp into making affidavit so that, at Quarlous’s instigation, he can steal Cokes’s marriage licence. Wasp too is arrested and put in the stocks, but escapes by a ruse when Overdo and Busy are put in beside him. The women visitors to the fair are separated from the men. Littlewit leaves Win in the care of two fairground bawds while he goes off to check the arrangements for his puppet show. Cokes abandons Grace and Mistress Overdo to try and get back his stolen property. Desperate for the toilet, Mistress…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

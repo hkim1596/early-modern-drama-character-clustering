@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CR in Albumazar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>CR</span>
+</nav>
+
+<h1>CR</h1>
+<p class="lede">in <em>Albumazar</em> — Tomkis, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1615</td></tr>
+<tr><th>Words</th><td>1011</td></tr>
+<tr><th>Characters</th><td>5834</td></tr>
+<tr><th>BritDrama no.</th><td>1769</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Starres, And skill of Art t&#x27;apply&#x27;t. You that are married May iustly feare, least this Astrologer Cloath your wiues seruants in your shape, and vse you As Iupiter <mark>did</mark> Amphitrio : You that are rich, In your owne forme may loose your gold. Leaue your set speeches. Go to Antonio&#x27;s house, Effect your businesse. For vpon my credite</div>
+<div class="excerpt">my credite Th&#x27;art so well turn&#x27;d, they dare not but accept thee. You arrant Asse, haue not I knowne thee serue My Maister in his Farme this thirteene yeares? Sir <mark>heare</mark>&#x27;s your Farmer Trincalo, transform&#x27;d So iust, as he were melted, and new cast In the true mould of old Antonio. This tale th&#x27;Astrologer pen&#x27;d, and he hath cond it.</div>
+<div class="excerpt">cloathes excepted. Trincalo! Yes, and as ranke an Asse as e&#x27;re he was. Th&#x27;art still thy selfe. Lelio, this Farmer&#x27;s halfe a foole, halfe knaue. And as Pandolfo <mark>did</mark> with much intreatie Perswade him to transforme; so as much labour Will hardly bring the Coxcombe to himselfe, That nere was out on&#x27;t. Who art, if not hee? Notorious</div>
+<div class="excerpt">Pandolfo, And blesse him with good newes. Entred as owner in Antonio&#x27;s house- Is acknowledg&#x27;d by his daughter Flauia, And Lelio, for their father. And hath sent me in hast to bid you- Come with your sonne Eugenio. - That he may be a witnesse of your marriage. But sir, I see no signes of so large gladnesse As I expected, and this</div>
+<div class="excerpt">speake in priuate with yong Lelio ; Was instantly admitted: And thinke you who? &#x27;Twas your Astrologer Albumazar. When hee had spoke a while; Lelio and Antonio In hast command&#x27; mee fetch a Constable. I vp and downe throw slimie Ale-houses, Clowdie Tobacco-shops, and vapouring Tauernes: My mouth full of enquiry; At last found</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Trincalo! Trincalo! Trincalo. Farewell. Pre&#x27;thee. But where&#x27;s Pandolfo and Albumazar ? I feare the skill and cunning of Albumazar With his blacke Art, by whom Pandolfo seekes To compasse Flauia, spight of her brother Lelio, And his own sonne Eugenio that loues her deerely. I&#x27;le loose no time, but find them and reveale The plot and worke to crosse this accident. But Trincalo, art thou so rash and ventrous To be transform&#x27;d with hazard of thy life? Soone as Albumazar come&#x27;s, loded with newes Of th&#x27;transmutation of your seruant Trincalo, I&#x27;le entertaine him here: meane while steale you Closely into the roome, and quickly hide Some speciall peece of Plate: Then runne out amaz&#x27;d, Roaring, that all the Streete may know y&#x27;are rob&#x27;d. Next threaten-to attach him and accuse him Before a Iustice, and in th&#x27;end agree, If hee restore the Plate, you&#x27;le giue the Chaine, Otherwise not. Is he not wholy chang&#x27;d? what parts are wanting? good, good, theeues, What ha you lost? What, in good earnest? You gull mee sure. O wondrous powre of Starres, And skill of Art t&#x27;apply&#x27;t. You that are married May iustly feare, least this Astrologer Cloath your wiues seruants in your shape, and vse you As Iupiter did Amphitrio : You that are rich, In your owne forme may loose your gold. Leaue your set speeches. Go to Antonio&#x27;s house, Effect your businesse. For vpon my credite Th&#x27;art so well turn&#x27;d, they dare not but accept thee. You arrant Asse, haue not I knowne thee serue My Maister in his Farme this thirteene yeares? Sir heare&#x27;s your Farmer Trincalo, transform&#x27;d So iust, as he were melted, and new cast In the true mould of old Antonio. This tale th&#x27;Astrologer pen&#x27;d, and he hath cond it. Looke Trincalo Yonder&#x27;s your beauteous Mistresse Armellina, And daughter Flauia. Courage, I warrant thee. Sir, what amazement&#x27;s this? why wonder you? O strange! th&#x27;are both heere. No, feareit not: &#x27;tis plaine: Albumazar Hath cheated my old master of his plate. For here&#x27;s the Farmer, as like himselfe as euer; Onely his cloathes excepted. Trincalo! Yes, and as ranke an Asse as e&#x27;re he was. Th&#x27;art still thy selfe. Lelio, this Farmer&#x27;s halfe a foole, halfe knaue. And as Pandolfo did with much intreatie Perswade him to transforme; so as much labour Will hardly bring the Coxcombe to himselfe, That nere was out on&#x27;t. Who art, if not hee? Notorious clowne! TIs but lost labour to disswade his dulnesse, Beleeue me that&#x27;s your father. To deale with him with reason and intreaties, Is to perswade a mad-man: for his loue Makes him no lesse. All speeches opposite T&#x27;his fixt desire, and loue-corrupted iudgement, Seeme extreame fooleries. Will hee consent To giue his daughter to your sonne, and you Deny him Flauia ? Shall Eugenio Expect or land or loue from old Pandolfo, Being his open riuall? &#x27;tis impossible. He sought to cosen you; therefore resolue To pay him in&#x27;s owne money. Be but aduis&#x27;d By my poore counsaile, and one stroke shall cut The root of his designes, and with his arrowes Strike his owne plot so dead, that Albumazar With all his starres and instruments, shall neuer Giue it fresh motion. The ground of all this businesse, Is to catch Trincalo, and locke him fast Till I release him: next, that no man whisper Th&#x27;least word of your returne. Then will I home, And with a cheerefull looke tell my old master, That Trincalo — but stay, looke where he comes, Let&#x27;s in, and there at leasure I&#x27;le informe you From poynt to poynt. Lelio, detaine him here, Till I send Armellina downe to second you. Crosse him in nothing, call him Antonio, And good enough. NOw Cricca, mask thy countenance in ioy, Speak welcome language of good newes, and moue Thy Maister, whose desires are credulous, To beleeue what thou giu&#x27;st him. If thy designe Land at the Hauen &#x27;tis bound for; then Lelio, Eugenio, and their Mistresses, are oblig&#x27;d By oath, t&#x27;assure a state of forty pounds Vpon thee for thy life. Where shall I find him? What wee most seeke, still flies vs; what&#x27;s auoided, Followes, or meetes vs full. I am embost With trotting all the streetes to finde Pandolfo, And blesse him with good newes. Entred as owner in Antonio&#x27;s house- Is acknowledg&#x27;d by his daughter Flauia, And Lelio, for their father. And hath sent me in hast to bid you- Come with your sonne Eugenio. - That he may be a witnesse of your marriage. But sir, I see no signes of so large gladnesse As I expected, and this newes deseru&#x27;d. I flye sir. Offend not your good luck, y&#x27;are now more fortunate Then when you rose this morning: Bee merry, sir, Cheare vp your selfe, y&#x27;haue what you wisht, feare nothing. Lock&#x27;t in Antonio&#x27;s Closet. Antonio keepes the key: No creature enter&#x27;s but himselfe. Al&#x27;s safe And shall be so restor&#x27;d. And they that wrong&#x27;d you, most extremely sory, Ready to yeeld you any satisfaction. I&#x27;le tell you, sir. Being iust now at old Antonio&#x27;s house, One thunder&#x27;s at th&#x27;back dore, enters, and presses To speake in priuate with yong Lelio ; Was instantly admitted: And thinke you who? &#x27;Twas your Astrologer Albumazar. When hee had spoke a while; Lelio and Antonio In hast command&#x27; mee fetch a Constable. I vp and downe throw slimie Ale-houses, Clowdie Tobacco-shops, and vapouring Tauernes: My mouth full of enquiry; At last found one ▪ And following my directions, Went to a Tippling-house, where wee tooke drinking Three hansome fellowes with a great Chest; Attach&#x27;t them, And brought all to Antonio. Within this Chest Antonio found your Plate, Gold, Iewels, cloath of siluer, nothing perish&#x27;t, But all safe lock&#x27;t till you acknowledge it. And since Albumazar of his owne accord Freely confest, and safe restor&#x27;d your treasure: Since &#x27;tis a day of Iubile and marriage; Antonio would entreate you to release And pardon the Astrologer: Thanking your fortune That hath restor&#x27;d you to your wealth, and selfe. Both which were lost i&#x27;th&#x27;foolish loue of Flauia.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Albumazar</div><div class="body">The neighbours Pandolfo and Antonio, both widowers, have arranged to marry each other’s daughters; but before they can do so, Antonio is lost and presumed dead on an overseas voyage, and the plan goes into abeyance because his son Lelio disapproves of Pandolfo as a potential brother-in-law. Albumazar’s accomplice Furbo has gained access to Pandolfo’s household, posing as his daughter’s tutor, and has learned of his .- amorous aspirations, and also his credulity about. magic and astrology. Albumazar plans to trick him, and sets about demonstrating his occult power. Ronca shows Pandolfo some of the astrologer’s amazing inventions: a telescope and an ‘otacousticon’ (actually a pair of ass’s ears) which allow him to see and hear things at a distance. Albumazar then predicts Pandolfo’s marriage, and also a stabbing which his associates then enact in a brawl. Pandolfo asks the astrologer to raise Antonio’s ghost, but instead Albumazar undertakes to transform the tenant farmer Trincalo into Antonio’s likeness for one day, so that he can give Flavia in marriage to Pandolfo. Trincalo agrees because this will give him access to Antonio’s household, and therefore to the maid Armellina, whom he loves. Pandolfo is required to prepare a room for the metamorphosis, laid out with valuable possessions. When he begins to have second thoughts about paying Albumazar, his servant Cricca suggests that he should pretend to have been robbed of his valuables; but when they are indeed stolen, Albumazar pretends in turn that the transformed Trincalo has just locked them away for safe keeping. After undergoing the fake metamorphosis, Trincalo is told he may not look at himself in a mirror for fear of breaking the spell. Ronca and Harpax greet him as Antonio, and pretend to be his debtor and creditor respectively, but Trincalo pays Harpax less than he was ===== PAGE 445 ===== 1615 given by Ronca, who has to steal back the balance. To buy time to spirit away Pandolfo’s goods, the tricksters divert him with Bevilona the courtesan, who pretends to be a gentlewoman in love with Antonio, and hides him from her husband. The real Antonio returns unexpectedly, and is taken for the transformed Trincalo: he does not understand when Pandolfo asks after his missing property, and his son and daughter, forewarned of the planned trick, beat him out of his own house. He meets Trincalo, who is still posing as him, and a duel is proposed. Lelio and Cricca realize the truth when they see the two men…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

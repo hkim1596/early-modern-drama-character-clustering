@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HOR in Law Tricks · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>HOR</span>
+</nav>
+
+<h1>HOR</h1>
+<p class="lede">in <em>Law Tricks</em> — Day, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1608</td></tr>
+<tr><th>Words</th><td>1473</td></tr>
+<tr><th>Characters</th><td>8295</td></tr>
+<tr><th>BritDrama no.</th><td>1436</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">the world would count her light. For though mongſt women, moſte are beautious, They that pleaſe time are counted vertuous, And in this hope, ile to the Counteſſe <mark>goe</mark>, Shee&#x27;s counted light, Loue grant I finde her ſo. Exit. Madam. Madam. In paſſion Lady. Be not, be counſaild, do not let diſpaire, Like the ranke cancker bred by</div>
+<div class="excerpt">bluſhing Ʋ enus and young Cupid ſit, Feathering of golden ſhafts, the wounding heads, Made of thy mber treſſes fineſt threds. Yet faire, ile bid faire for you ere I <mark>goe</mark>, By heauen a doth not. This my diſcourſe intends, Were huſbands Saints, ſome wiues would haue cloſe friends. Husbands but for&#x27;t, true, woot? prethee woot thou?</div>
+<div class="excerpt">O my honor&#x27;d Lord, Our ſoules and our affections are made all of one faſhion now the ſlighteſt wrong that ſcars the reputation of my friend, ſtabs daggers to my <mark>heart</mark>. Yes. Your wife. Mongſt her luſtfull Mates, She ſhame&#x27;s not to giue out, that by your greatneſſe, knowledge, credit, and friends in higheſt place, You haue diuorc&#x27;d</div>
+<div class="excerpt">loue a good ſmooth face ▪ And fortie more. I would to night, vpon condition That I might burie her to morrow, God Boy. Hum, I cannot tell, The Counteſſe drunke and dide. Farwell. On Mules and ſhee Aſſes. Then keepe a leaſh of Wenches. Had ſhe uruiu&#x27;d Time— But now ſhee&#x27;s dtad. Had ſhe bene liuing, golden promiſes, The ſmoothe</div>
+<div class="excerpt">Counteſſe, ſoule ſhaddow, ſhadow ſpeak again ▪ Hudge wrongs indeede, but charitable ſoule, What ranſome ſhall I pay thee for thy life? Pardon forgiue me, ſhall I <mark>goe</mark>? But ſhall your hate purſue me, I or no? Adieu my greefe and ile go ſleepe. It was no Ghoaſt, ſubtile opinion, Working in mans decayed faculties, Cuts out and ſhapes</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">DIuine inuention, O how I could hug, And like an amorous Louer court thy beauty, That crownſt me King of pleaſures! were my braine Fordg&#x27;dout of vulgar metall without fier, And ſprightly motion, my big-ſwolne hopes, Had bene ſtill-borne, but when deiected minds, Out ſlept the golden pleaſure of the night: My ſerious meditations haue out-watch&#x27;d, The glorious tapers that attend the Moone: I turnd my thoughts into a thouſand ſhapes: Moulded the faſhion of ten thouſand plots, Lik&#x27;d and diſlik&#x27;d ſo many, that my brayne The mother of Inuention grew barrayne, Almoſt paſt bearing, ſtill my laboring thoughts Conceiu&#x27;d a yet more ſtrange and quaint Idea, Gaue it proportion, and I brought it forth: And that bleſt infant of Inuention Beyond all hope hath my contentment woon, And that&#x27;s Loues heauen I loue a face more faire Then Cinthe as hue that ſeems aboue compare, But hell, her husband with a iealous eye Vſhers her ſteps, oh wedded ſlauery! This tender roſe, whom artles marriage, Hath grafted on a nettle (teſty age) Haue I vngrafted, made himſelfe vntie The knot of wedlock: thanks ſweete induſtrie. And here a comes, that which moſt heaps my fame, His wit&#x27;s well ſpoken of. Ha&#x27;s a quick wit. I know&#x27;t my Lord. I know your honour&#x27;s wiſe. What was the cauſe? How Juſtice Slender glories in the plot, Which to deceiue him, my full braine begot? But to his wife, true vertue though diſgrac&#x27;d, Shee&#x27;s now halfe woo&#x27;d becauſe ſhee&#x27;s thought vn chaſt Her ſexes credit, or diſcredit thriues In th&#x27; outward ſhape and faſhion of their liues, and be a womans vertues nere ſo ſtrong. Her honour&#x27;s weighed vpon diſcourſes tongue. Be her ſame ſullied, were her thoughts as bright As Innocence, the world would count her light. For though mongſt women, moſte are beautious, They that pleaſe time are counted vertuous, And in this hope, ile to the Counteſſe goe, Shee&#x27;s counted light, Loue grant I finde her ſo. Exit. Madam. Madam. In paſſion Lady. Be not, be counſaild, do not let diſpaire, Like the ranke cancker bred by ſultrie aire. Eate this young Roſe of beautie in the bud: But in the Aprill Sunne of youthfull blood Let the ſweet bloſſome ripen, thriue and grow, To thoſe full ioyes which none but Louers know. You are, by loue you are, Not faire, you are: Leanders paramour: Compar&#x27;d with you was a ſwarth Blackamour Your haire is ſofter then the Colchean Fleece, Your well lim&#x27;d features, natures maiſter peece Your eyes too Dyamonds, ſet in purer molde Then rocks of currall, or the Indian gold. In thy ſmooth chin there is an Iuorie pit, Where bluſhing Ʋ enus and young Cupid ſit, Feathering of golden ſhafts, the wounding heads, Made of thy mber treſſes fineſt threds. Yet faire, ile bid faire for you ere I goe, By heauen a doth not. This my diſcourſe intends, Were huſbands Saints, ſome wiues would haue cloſe friends. Husbands but for&#x27;t, true, woot? prethee woot thou? Loue-tricks quickly, woo&#x27;t thou prethee. Credit? life a man, What talks of credit? art not knowne a ſtrumpet? Damnation, what a gloſſe, This gilded copper, Diamond of glaſſe, What ſtrang ſhew it makes? ile giue you a colot Your face was nere worſe painted, then ile paint Your Wain-fcot credit, you are a priuate bit, Kept for ſome great made Diues. Red hot ſcandall Suck the natiue coulour of your ſoules As it hath ſcorch&#x27;d thy credit, ſhriueld Baw&#x27;d, Spunge, Lemon-pill, and more irreliſhable Then ore-dride Stock-fiſh, fie. Sweare thou art my ſtrumpet. O my honor&#x27;d Lord, Our ſoules and our affections are made all of one faſhion now the ſlighteſt wrong that ſcars the reputation of my friend, ſtabs daggers to my heart. Yes. Your wife. Mongſt her luſtfull Mates, She ſhame&#x27;s not to giue out, that by your greatneſſe, knowledge, credit, and friends in higheſt place, You haue diuorc&#x27;d her without due deſert. I cannot counſell, but fore-god my Lord, My lodgings mightily annoy&#x27;d with rats, That eate my papers and deface my books How ſhould I rid them. Yes. That ſhe ſhall neuer ſwell on&#x27;t. A Limbe of Sathan. Deſtruction. Ratsbane doo&#x27;t? The Rate ſhall die. Saue you faire Ladies, madam, my buſineſſe leads me to you. Come, theſe words of courſe My fame, myne honor, and my deare reſpect: Are but like Ignes fatui to delude, Greene and vnſeaſon&#x27;d wits, pry thee be kinde, A guilded ſlip carryes as faire a ſhow, As perfect gold, guilt honor may do ſo Come, thy diſtinctions ſolde Let not thy Aprill bewty like a Roſe, Fade in the bud, and ripened pleaſures loſe, My ſword thy honor: thy eſtate my purſe, Shall man an d ſtrenghten, Your husband hath a ſweete heart: Tis ▪ dead already, euery idle tongue, Stabs it to death. Thou wrongſt thy ſelfe &amp; ſpurnſt thy proper good Am I not youthfull ſee my wanton blood Daunceth within my vaines, and bluſhing, Courts Thy generous bewty to more amorous ſports, You ſhall not chooſe. I loue the e deere. Dooſt thou? I was made of hope. and rich perfourmance waits vpon my words. To morrow, the houre eight. As life. Swell heart, hold boſom, yeeld not to relent, and yet her beautie, colourable traſh, Her vertues, vengeance Hypocriticall, I loue her, furie, poiſon, Hidraes gall, Impatience man me, blacke damnation Vſher my practice, poyſon play thy part, and doe my lateſt greetings to her heart. We all muſt downe, yet here the difference lyes. Many for ſins, ſhe for her vertue dyes. Faith after a ſort, I loue a good ſmooth face ▪ And fortie more. I would to night, vpon condition That I might burie her to morrow, God Boy. Hum, I cannot tell, The Counteſſe drunke and dide. Farwell. On Mules and ſhee Aſſes. Then keepe a leaſh of Wenches. Had ſhe uruiu&#x27;d Time— But now ſhee&#x27;s dtad. Had ſhe bene liuing, golden promiſes, The ſmoothe Atturneys to a Louers tongue Might haue in time ſolicited my ſuite, Guiftes might haue pleaded, mournefull Elegies, Told her my paſſions, had ſhe bene compoſde Of ſteele or flint, nay, made of womens hearts, The moſt obdurate mettle, Time and Art, But ſhe is dead, oh hell! and in her tombe. My hopes are buried. To all theſe bad miſ-fortunes ſhould the Corn vſe any trickes? Yet I regard not. Say a complaine? He contriu&#x27;d her death and cannot wrong me, I cannot reſt, my guilt keepes ope mine eyes. My paſſion rips my boſome, and my blood Is turn&#x27;d to poyſoned water, and ſo ſwels, That my vext ſoule, endures a thouſand hels. If I chance ſlumber, then I dreame of Serpents, Toades, altogether, and ſuch venomous euils, As hale me from my ſleepe like forked Deuils, Midnight, thou Aethiope, Empreſſe of black ſoules, Thou general Bawde to the whole word, I ſalute thee, Wiſhing thy poiſon dropt vpon my braine, For my ſo rude, ſo raſh, ſo heedeles murther, In the ambition &amp; the height of luſt, Not giuing my blood libertie to coole. To poiſon ſuch a beautie, O black Fate! Thus many killd, too ſoone repent too late. Soft, ſtay, this ſames the chilly monument, That huggs her bodie in his marble armes. Thou gentle ſoule of my deceaſed loue? O, wert but poſſible to inioy thy voice, Thy ſweet Harmonious voice, I ſhould be bleſt, But Eene to dally with thy ſilables, O tombe. Counteſſe, ſoule ſhaddow, ſhadow ſpeak again ▪ Hudge wrongs indeede, but charitable ſoule, What ranſome ſhall I pay thee for thy life? Pardon forgiue me, ſhall I goe? But ſhall your hate purſue me, I or no? Adieu my greefe and ile go ſleepe. It was no Ghoaſt, ſubtile opinion, Working in mans decayed faculties, Cuts out and ſhapes illuſiue fantaſies, And our weak apprehenſions like wax, Receiue the frome, and preſently conuey Vnto our dull immagination. And hereupon we ground a thouſand lyes, As that we ſee Deuils ratling their chaines, G aſtes of dead men, varietie of ſpirits, When our owne guiltie conſcience is the hell. and our black thoughts, the Cauerns where they dwel: Yet ſure this was her ſhadow, for I heare Her laſt words ſound ſtill dauncing in mine eare. Then gentle ſoule ▪ if thou beeſt yet vnthronde, Anſwere one queſtion and no more. May my hearts true repentance ſatiſfie, My wi ful ▪ murther, your replie. I lou&#x27;d her, wood her, my hot loue denide Changde into hate, I poiſon&#x27;d her, ſhe dyde. And you laide the plot Doe, the world ſhal proue My heart&#x27;s as bolde to die as twa&#x27;s to loue. Make roome deare Madam, law this leaue doth giue To die by thee with whome I could not liue, S&#x27;blood I gaue her poiſon. What ſhall I doe then?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Law Tricks</div><div class="body">Prince Polymetes arrives home with news that his sister Emilia has disappeared after an attack by the Turks on her temple; grieving at the news, Duke Ferneze goes to seek her, leaving Polymetes as his deputy. Meanwhile Emilia has escaped from the galleys by feigning lunacy, and now arrives in Genoa. She adopts an alias in order to test her brother, whom she has never met. His interest in her is not very brotherly: he loses his bookish tendencies and grows prodigal, spending public money on her. He arranges for her to lodge with his uncle, Count Lurdo, in order to facilitate access. Lurdo, who has just divorced his wife, the Countess, for alleged unchastity, tries to seduce Emilia with a view to getting his hands on the money Polymetes is spending on her. Meanwhile, Horatio fails in his efforts to seduce Lurdo’s ex-wife, the Countess, and takes her steadfastness in chastity badly. ===== PAGE 127 ===== 1604 He and Lurdo plot to get rid of her by poison, administered by Horatio. Ferneze returns in disguise with news of his own _death, and Polymetes makes plans to squander his inheritance. Then Ferneze returns in his own person, and Polymetes has to reassume his original studious persona. The Countess is buried, and the penitent Horatio visits her tomb; his page, who swapped the poison for a sleeping potion, is also there to take charge of her when she wakes, and scares Horatio by pretending to be her ghost. Polymetes pretends that his dissolute behaviour was just an act to test Lurdo, and tries to win his father’s favour by using magic to bring back Emilia; in fact it is a ruse with the cross-dressed Joculo, which. deceives Ferneze until the real Emilia exposes it by close questioning. Polymetes then conjures up the supposed ghost of the Countess, who accuses Horatio of her murder. The plot comes out and Horatio and Lurdo are sentenced to be buried alive, until it becomes clear that the Countess is alive and wants her husband back. Horatio is banished from the court and Joculo praised for turning tragedy into comedy.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

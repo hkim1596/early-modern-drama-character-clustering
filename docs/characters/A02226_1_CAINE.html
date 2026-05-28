@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAINE in Alaham · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_10.html">Cluster 10 — 10: death, realme, porrex</a> ›
+  <span>CAINE</span>
+</nav>
+
+<h1>CAINE</h1>
+<p class="lede">in <em>Alaham</em> — Greville, Fulke</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>1313</td></tr>
+<tr><th>Characters</th><td>7077</td></tr>
+<tr><th>BritDrama no.</th><td>1225</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 10 (<em>death, realme, porrex, noble, both, lordes…</em>). Matches are highlighted.</p>
+<div class="excerpt">mans ill thoughts his owne ill spirits become? I well can thinke that Mahomet aspires; For loue of greatnesse may with goodnesse goe: But cannot thinke that he our <mark>death</mark> conspires. Perchance he seekes to doe your brother Right, Which makes our owne desires to doe vs spite. Let care as fast then adde vnto her eyes. Hastie attempts</div>
+<div class="excerpt">Our secret loue already tempteth God, To warre him more with infidelity, Would hasten vengeance, and make sharpe his rod. We God and man will first trie with the <mark>death</mark> Of Mahomet: If that doe passe for good, Hope easily makes occasion vnderstood. By sword. By poyson then; wherof though doubts may grow, What one alone may doe,</div>
+<div class="excerpt">o&#x27;recome: I yeeld, by thee To hold my life, as sentence of my fall; Thy worths example, no life naturall. Yet grant me thus-much more; to keepe thee close, Till I thy <mark>death</mark> to Alaham impart; Conceit it selfe doth ease a broken heart. Behold my state! bound to my enemies; Of friends in doubt. To me euen good, and ill, The one despayre,</div>
+<div class="excerpt">Hard, backe from ill, the way to goodnesse is, By scorne, remorse, patience, and broken heart, Impossible to them that doe amisse. Then on: walke in this path of <mark>death</mark>, or shame; Alaham is false, or Mahomet, or I; Resolu&#x27;d I am, that one of vs shall die. Malice. Crafte. Pride. Corrupt rea son. Euill Spirit. Plac&#x27;d in a Throne?</div>
+<div class="excerpt">soone a great Estate: Mischiefe&#x27;s foule way to Soueraignity: This secret haste is sure: all is imbound. What shall I do? Hold on the course I meant? Why not? The <mark>death</mark> of Mahomet will still content. Thy will is done; and Mahomet is slaine. By fate I thinke: for Iustice fatall is, As Gods bequest to them that doe amisse. By these</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Princesse of me! I finde care in your face, Woe smothered vp; I came to know your will; Nothing which you command me can be ill. What is the cause that makes you thus accuse The world of faults, your selfe of inward feare? Doe not forsake your selfe: For they that doe, Offend, and teach the world to leaue them too. Mortall our God shall be; the truth shall lie; Darkenesse shall see her selfe; fame lose her voyce; Er&#x27;e I will leaue my loue, or my loue you: Afflictions wounds affection doe renew. You know I loue: speake plaine, and doe not feare, That reason other is than kindnesse there. O hell! and is thy seate in fleshly hearts? Be mans ill thoughts his owne ill spirits become? I well can thinke that Mahomet aspires; For loue of greatnesse may with goodnesse goe: But cannot thinke that he our death conspires. Perchance he seekes to doe your brother Right, Which makes our owne desires to doe vs spite. Let care as fast then adde vnto her eyes. Hastie attempts make chance precipitate. What shall I doe? My loue of him, and truth, doe make me loth To thinke them wrong&#x27;d: And shall I wrong them both? With shaking thoughts no hands can draw a right: True hearts, to doe vnnobly, haue no sp&#x27;rit. More easie motions gentle hearts receiue: His fault was great; yet you may haue redresse In State, and honor, without such excesse. If leaue, or left the fate of kindnesse be, By his example, what becomes of me? Great hearts thus giuen away, in prison are; Their strength, their bands; and good beleefe, their smart: Loue neuer seuers reason from the heart. Distract I am: my reason (like a cloud, Before a winters storme) rides here, and there: Like reedes, my thoughts are straight and crooked too; With diuers breaths, which diuers passions blow. Against the streame of truth must loue still goe? Resolv&#x27;d I am that Mahomet shall die. It is not I that liue in me, but you; Whose will hath fashion&#x27;d all my thoughts anew. Farre be it off, our hopes should be so vaine. Our secret loue already tempteth God, To warre him more with infidelity, Would hasten vengeance, and make sharpe his rod. We God and man will first trie with the death Of Mahomet: If that doe passe for good, Hope easily makes occasion vnderstood. By sword. By poyson then; wherof though doubts may grow, What one alone may doe, is hard to know. By these two hands, that will not faile their heart, It shall be wrought. If poyson misse, the sword shall compasse it: When chances often scape, at last they hit. What I haue vow&#x27;d, both God, and Nature hate; My heart misgiues; my soule doth prophecie, That euill thoughts procure an euill fate. But ah! my loue I gaue, and it gaue me. The choice is past: Thoughts now must thinke to doe Not what I freely am, but forc&#x27;d vnto. Mahomet; Caine. In care they liue that must for many care; And such the best, and greatest euer are. I liue but to obey the Princes will. As sweetest vapors couet to the skie: So faith, and dutie after Princes runne; Ill nature neuer canindure a Sunne. Harsh spirit hates them, that do not hate with it, Miscensures all the world to seeme seuere; Bindes honestie and truth to haue no wit; These ill-fac&#x27;d vertues not of nature be, But peeuishnesse, true honors enemie. Is fame to censure vs that liue aboue, And must sell iustice, if we purchase loue? What doe I, that the world can well reproue? Suffer I doe; for infamie is there, Where either malice, enuie is, or feare. Loue I confesse I doe; And what is it, But natures taxe, layd vpon good intent, For right, and honor vnto excellent? Let this beare witnesse: No false prophets know, The time, or manner of their ouerthrow. What vgly musicke inward discords make? Thoughts layd asleepe of long doe now appeare; Euen halfe my power coniures me for his sake. What&#x27;s this? Me hinkes I feele my shame grow deare. Hate of my selfe, and desolation breed, Where ioy, and pleasure I was wont to feed. What can I hope? My fruit of better wit Is but to know I sayl&#x27;d for lacke of it. Shame is in that I leaue, and that I doe: The fault is only mine; and onely I, A sacrifice vnto you all, will die. That is destroy my selfe; and I consent: For all any thoughts to thee were euill bent. &quot; Mischiefe o&#x27;reflowes my thoughts; &amp; like a sea, &quot; Deuoures the dewes, the raine, the snow, the springs, &quot; And all their sweetnesse to his saltnesse brings. How should I ground a faith, that faithlesse know My selfe to be? Or why should he mistrust, On whom the worst that can befall is iust? Mahomet! Thou hast o&#x27;recome: I yeeld, by thee To hold my life, as sentence of my fall; Thy worths example, no life naturall. Yet grant me thus-much more; to keepe thee close, Till I thy death to Alaham impart; Conceit it selfe doth ease a broken heart. Behold my state! bound to my enemies; Of friends in doubt. To me euen good, and ill, The one despayre, the other cowardize. Hala I loue: O word beyond the right, On which is built that false thought, Libertie, Which makes great hearts in greatest ills delight. I sought her loue through all the arts of lust; Where will, is faith; and honour, Tyrannie; Mischiefe, affections proofe; and shame, her trust. Hard, backe from ill, the way to goodnesse is, By scorne, remorse, patience, and broken heart, Impossible to them that doe amisse. Then on: walke in this path of death, or shame; Alaham is false, or Mahomet, or I; Resolu&#x27;d I am, that one of vs shall die. Malice. Crafte. Pride. Corrupt rea son. Euill Spirit. Plac&#x27;d in a Throne? Guarded? Ador&#x27;d? and Crownd? What meanes this change? These signes of Ma iestie? Goodnesse gets not so soone a great Estate: Mischiefe&#x27;s foule way to Soueraignity: This secret haste is sure: all is imbound. What shall I do? Hold on the course I meant? Why not? The death of Mahomet will still content. Thy will is done; and Mahomet is slaine. By fate I thinke: for Iustice fatall is, As Gods bequest to them that doe amisse. By these hands that owe seruice to the State, And by his blood haue made it fortunate. In falling downe, these only words he spake: &quot; Helpe people! helpe: My death your bondage brings: &quot; Behold! these wounds receiue I for your sake; &quot; Reward of them that friend you vnder Kings. &quot; Vile Caine! that (like the Axe) do&#x27;st goe about, &quot; To cut thy selfe an helue to weare thee out. Is thy desire growne wanton in her ioy? Or do&#x27;st thou seeme to say thy wishes nay, More kindly in the end with them to play? Vnto the world although I guilty be; I did thy will: let me be cleare to thee. The State of Kings is large; yet lacks in this, That easie each thing, but not lawfull is. Besides, you then a second brother were; Nor knew I, when this plot we did deuise, You should see clearer by your fathers eyes. &quot; Ah fearefull friendships with superior powers! &quot; Whose two parts, they themselues, and their Estates, &quot; Diuide, or ioyne like nets; and be the snare, &quot; Where loue, and feare to power entrapped are. Alaham! aduow thy deed. To constant wickednesse men honour beare, Where truth it selfe hath iniurie by feare. Stay Sir! I say that he still liuing is, And my confession of my selfe vntrue.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Alaham</div><div class="body">Before the start of the action, an oracle foretold that the kingdom’s security depended on the death of the King’s eldest son, Zophi; but the pashas, ruling during the King’s senility, merely banished him. Hala, wife of the younger son, Alaham, has had a series of affairs with pashas: first Muhammad, who was forced into exile as a result, then Cain. Seeking to secure his position, Alaham has recalled Muhammad, ===== PAGE 189 ===== 1600 but Muhammad has recalled Zophi in turn, cutting Alaham out of the succession. Hala seeks to make Cain king, and persuades him to murder Muhammad; but he changes his mind after Muhammad warns him of Alaham’s ambition: Cain will tell Alaham that Muhammad is dead, but in reality he will go into hiding. Meanwhile Alaham corrupts the guard, blinds his father and brother, and seizes power. When Cain tells him of Muhammad&#x27;s death, he is sent for execution — if not for murder then for lying about it, as he is told when he tries to save himself. Alaham’s sister Caelica helps Zophi and their father to take sanctuary in the temple. Alaham has the city searched, finds Caelica, and arrests her. Her cries bring the old King out of hiding, and he too is arrested. The King, Caelica, and Zophi are all burned to death; as they die, their souls call out for vengeance. Seeking to avenge Cain’s death, Hala sends Alaham a poisoned robe, and plans to kill their son before his face, so that the other child, Cain’s bastard, will inherit the kingdom; but she mistakenly kills the wrong infant. The robe kills Alaham; Hala intends to kill herself too.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_10.html">Cluster 10 — 10: death, realme, porrex</a> page.
+</div>
+</div></body></html>

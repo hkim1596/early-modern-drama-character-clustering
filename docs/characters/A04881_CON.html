@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CON in Ram Alley, or Merry Tricks · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>CON</span>
+</nav>
+
+<h1>CON</h1>
+<p class="lede">in <em>Ram Alley, or Merry Tricks</em> — Barry, Lording</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1611</td></tr>
+<tr><th>Words</th><td>1066</td></tr>
+<tr><th>Characters</th><td>5656</td></tr>
+<tr><th>BritDrama no.</th><td>1572</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">would haue y e widdow. by Ioue I neuer saw one <mark>goe</mark> about his busines More vntowardly: why sir, doe not you know That he which would be inwatd with the Mistris, <mark>Must</mark> make a way first through the waiting mayde? If youle know the widdowes affections Feele first the waiting Gentle-<mark>woman</mark>; do it Maister, Some halfe a dozen kisses</div>
+<div class="excerpt">youle know the widdowes affections Feele first the waiting Gentle-<mark>woman</mark>; do it Maister, Some halfe a dozen kisses were not lost Vppon this Gentle-<mark>woman</mark>, for you <mark>must</mark> know These wayting-maids are to their Mistresses Like Porches vnto doores, you passe the one Before you can haue entrance at the other: Or like your musterd to</div>
+<div class="excerpt">Porches vnto doores, you passe the one Before you can haue entrance at the other: Or like your musterd to your peece of brawne, If youle haue one tast well you <mark>must</mark> not scorne To <mark>bee</mark> dipping in the other, I tell you Maister Tis not a few mens tales which they preferre Vnto their Mistress, in compasse of a yeare- Be ruld by</div>
+<div class="excerpt">reads it. What loue he beares me now. I left her in health. I thanke you sir: now shall I see the Punke. he knocks They keepe this whore betwixt them. How&#x27;s that? I <mark>did</mark>. A said a woud, And I beleeued him, I tell you maister I haue done that for many of these gallants That no man in this towne would do but I. Why trust them on their</div>
+<div class="excerpt">motions what soeuer. By my troth I know not The mans in loue. Now will I fall a boord the wating maide, I And will shoote you betwixt wind and water. Foote how <mark>did</mark> she know that, dost here sweet hart Should not the page be doing with the maid, Whilst the maister is busie with the mistris, Please you pricke forwards, thou art</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I haue a letter for you. The inside sir will tell you: I shall see he reads it. What loue he beares me now. I left her in health. I thanke you sir: now shall I see the Punke. he knocks They keepe this whore betwixt them. How&#x27;s that? I did. A said a woud, And I beleeued him, I tell you maister I haue done that for many of these gallants That no man in this towne would do but I. Why trust them on their words But will you heare the newes which now supplies, The citty with discourse. This sir, they say some of our citty dames Were much desirous to see the Baboones Doe their newest trickes, went, saw them, came home, Went to bed, slept, next morning one of them, Being to shift a smocke, sends downe her maide, To warme her one, meane while she gins to thinke On the Babones tricks, and naked in her bed Begins to practise some, at last she stroue, To gett her right leg ouer her head; thus: And by her actiuity she got it Crosse he shoulder: but not withall her power, Could she reduce it, at last much strugling Tumbles quite from the bed vpon the flower, The maide by this return&#x27;d with the warme smocke, And seeing her mistris throwne on the ground Trust vp like a foote-ball, exclaimes, calles helpe, Runnes downe amazd, sweares that her mistris necke Is broke vp comes her husband and neighbours, And finding her thus trus&#x27;d, some flatly said She was bewitch, others she was possest, A third said for her pride, the Diuell had set Her face where her rumpe should stand, but at last Her valiant husband steppes me boldly to her, Helpes her; she a shamed; her husband amazed, The neighbours laughing as none forbeare, She tells them of the fatall accident. To which one answers, that if her husband Would leaue his trade, and carry his wife about To doe this tricke in publike, she&#x27;d get more gold Then all the Babones, Calues with two tayles, Or motions what soeuer. By my troth I know not The mans in loue. Now will I fall a boord the wating maide, I And will shoote you betwixt wind and water. Foote how did she know that, dost here sweet hart Should not the page be doing with the maid, Whilst the maister is busie with the mistris, Please you pricke forwards, thou art a wench Likely to goe the way of all flesh shortly At your seruice. How breetch me. Well I see now a ritch well-practis&#x27;d baud, May pursse more fees in a summers progresse, Then a well traded lawier in a whole terme, Pandarisme! why&#x27;t is growne a liberall science Or a new sect, and the good professors Will like the Brownist frequent grauell pits shortly, For they vse woods and obscure holes already. Not marry a widdow. Good Maister Dash shall I put you now a case. Then thus it is, Suppose I am a Page, he is my Maister, My Maister goes to bed and cannot tell What mone &#x27;s in his hose, I ere next day Haue filcht out some, what action lies for this. Then fecks-law, Dost thinke that he has conscience to steale, Has not a conscience likewise to deny. Then hange him vp ifayth. And thats the chambermaide. Maister come not you for loue, And you would haue y e widdow. by Ioue I neuer saw one goe about his busines More vntowardly: why sir, doe not you know That he which would be inwatd with the Mistris, Must make a way first through the waiting mayde? If youle know the widdowes affections Feele first the waiting Gentle-woman; do it Maister, Some halfe a dozen kisses were not lost Vppon this Gentle-woman, for you must know These wayting-maids are to their Mistresses Like Porches vnto doores, you passe the one Before you can haue entrance at the other: Or like your musterd to your peece of brawne, If youle haue one tast well you must not scorne To bee dipping in the other, I tell you Maister Tis not a few mens tales which they preferre Vnto their Mistress, in compasse of a yeare- Be ruld by me, vntrusse your selfe to her, Out with all your loue-sicke thoughts to her, Kisse her and giue her an angell to buy pinnes, And this shall sooner winne her Mistris loue, Then all your protestations, sithes and teares. Here they come; to her bouldly Maister Doe, but dally not, thats the widdowes phrase, With a hey passe with a repasse. Fee the waitingmaid Maister Wel sare the waiting maide. Indeed, But doost thinke the widdow wi&#x27;l haue my maister. I wil. Sure this Baboune is a great Puritane. So ho ho, Maister. Introth I thought y&#x27;ad beene more fast asleepe, Then a midwife or a Puritane Taylor, At a sonday euenings Lecture, but sir Why do you rise so soone? The weaker you, you are forbid a widdow, And &#x27;tis the first thing you will fall into. Me thinkes a young cleere skind country Gentlewoman, That neuer saw Babounes, Lyons, or Courtiers, Might prooue a handsome wife, or what do you say To a Citizens daughter, that neuer was in loue With a Player, that neuer learnt to daunce, That neuer dwelt neere any Inne a Court, Might not she in time prooue an honest wife? Faith take a maide, and leaue the widdow, Maister Of all meates I loue not a gaping Oyster, Now workes it with my wish: my hopes are full. Aye mee accurst: helpe, helpe, murther murther, Curst be the day and houre that gaue me breath, Murther, murther: if any Gentleman Can heare my plaints, come forth and assist me. Good sir leaue your struggling and acting, And helpe to saue the life of a distressed man, O helpe if you be Gentlemen! It shall not need, a stirs, giue him breath. Rather then so Ile helpe you to a wife: Ritch, well borne, and by some accounted fayre, And for the worth of her Virginity, I dare presume to pawne my honesty: VVhat say you to Constantia Somerfield? I do, nay more, If he but sweare to imbrace her constant loue, Ile fetch her to this place. Say am I welcome.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Ram Alley, or Merry Tricks</div><div class="body">The rich heiress Constantia Somerfield disguises herself as a page and enters the employ of her beloved, Boucher, intending to keep an eye on his fidelity. The rich widow Taffeta drops a handkerchief to get Boucher’s attention, and invites him into her house. Despite a prophecy that a widow will endanger his life, soul, lands, and reputation, Boucher is attracted to her. He has several rivals, including the old knight Sir Oliver Smallshank and Captain Puff, who claims marital rights in Taffeta and threatens to attack anyone who shows any sexual interest in her. Sir Oliver comes to woo Taffeta, but hides under her farthingale when Puff arrives. Puff assaults her, and Sir Oliver is forced out of his hiding place. Seeing the advantages of being a courtier’s wife, Taffeta agrees to marry him. Sir Oliver’s younger son, Will, is in debt, and his lands are mortgaged to Throat the lawyer. He pretends to have eloped with Constantia, but the woman he introduces to his family is actually his whore, Frances. He leaves her with Throat while he goes to arrange the wedding, asking Throat to confirm his cover story: that he has expectations of becoming a lord. Throat tells her the truth, that Will is a penniless fortune-hunter, and woos the lady for himself. When Will takes her, ostensibly to a nocturnal marriage ceremony, Throat has them attacked in the darkened streets. They are separated from Frances, whom Throat then marries himself. Will arranges to have himself arrested for debt when he comes looking for his putative fiancée; Throat is initially unwilling to help him, but, encouraged by Frances, agrees to pay the debt and return Will’s mortgage if he will sign a legal document renouncing all prior claims to Constantia Somerfield. Will agrees, and gets his lands back and some of his debts paid. Constantia’s mother, Lady Somerfield, comes to town, and is told that Will has abducted her daughter. Throat introduces himself as her son-in-law, and is arrested. Meanwhile Frances steals away with her new husband’s jewels. She is arrested at a tavern, and thinks it a ruse to get her away from Throat’s man; when the debt turns out to be real, she tries to sweet-talk the sergeant into releasing her. She is redeemed by her accomplice, Beard, only to be ‘rescued’ from him by Will&#x27;s elder brother, who still thinks her Constantia and intends to marry her himself. Will goes to see Taffeta, not realizing that Sir Oliver is hiding behind the hangings; he tries to dissuade her from…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

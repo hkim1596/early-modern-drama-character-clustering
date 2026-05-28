@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LEO in May Day · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LEO</span>
+</nav>
+
+<h1>LEO</h1>
+<p class="lede">in <em>May Day</em> — Chapman, George</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1611</td></tr>
+<tr><th>Words</th><td>722</td></tr>
+<tr><th>Characters</th><td>3841</td></tr>
+<tr><th>BritDrama no.</th><td>1439</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">truth of Madam Tem perance, and see if shee attend vs. THou shalt not stay sweet Temperance, tell vs the manner of our warre and wee&#x27;ll leaue thee presently. What <mark>did</mark> thy mistesse fight with him? <mark>Has</mark> she a good courage? &#x27;Tis no matter Temperance, hee&#x27;s knowne and thou art knowne. Farewell honest Temperance : how was it possible,</div>
+<div class="excerpt">Farewell honest Temperance : how was it possible, Lo douico should fit all these circumstances without the confederacy and trechery of this beldam? well Lodouico <mark>must</mark> satisfie this doubt when I see him. I would not meet him there, I shall offend him, but there I <mark>must</mark> needs be, and haue thee disguis&#x27;d like a <mark>woman</mark>. No remedy,</div>
+<div class="excerpt">I am glad you like him Mistris Temperance. That I <mark>must</mark> know of you Lady, my welfare de pends wholly vpon your good speede. He is yong, and can endure the cold well enough bare-headed. But what good newes Mistris Temperance,</div>
+<div class="excerpt">there troe? come let&#x27;s houer here abouts &#x27;twill not be long er&#x27;e we encounter. Exit. I eare me some other clyent of hers, whom she pr fe res before me, come, we <mark>must</mark> not linger here too long together, wee&#x27;ll enter on this backside, to the Emperours head, where we will stay a little, and then make the last triall of this bauds</div>
+<div class="excerpt">haue deuis&#x27;d it to gull his Lieutenant: for thou shalt dance with him, we will thrust him vpon thee, and then for his courting and gifts, which we will tell him he <mark>must</mark> win thee withall, I hope thou wilt haue wit enough to receiue the tone, and pay him againe with the to ther, come Lionell let me see how naturally thou canst play</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I am glad you like him Mistris Temperance. That I must know of you Lady, my welfare de pends wholly vpon your good speede. He is yong, and can endure the cold well enough bare-headed. But what good newes Mistris Temperance, will your Mistris be wonne to our kinde meeting? Very well, and is there any hope of speede? Are all my hopes come to this Mistris Temperance? And euen now shee had broke with a hundred and a hundred. Do&#x27;st thou make a question of that? Thats no matter to you Mistris Temperance, doe you procure our meeting, and let my fauour be at her hands as I can enforce it. Indeede then you haue very good opportunity. And could you put a friend in your place thinke you? Why what can come of it? only that by this meanes I may solicite her loue my selfe. What do&#x27;st thou take me for a beast, to force her that I would make my wife? Well, to put thee out of that feare, it shall be worth such a gowne to thee. I marry Sir, so I may be there long enough. Very well, and till then farewell. Boy to him indeede if he knew all. Exeunt. This is the backe gate, where Temperance should meete me at this howre. Why sits that fellow there troe? come let&#x27;s houer here abouts &#x27;twill not be long er&#x27;e we encounter. Exit. I eare me some other clyent of hers, whom she pr fe res before me, come, we must not linger here too long together, wee&#x27;ll enter on this backside, to the Emperours head, where we will stay a little, and then make the last triall of this bauds honesty. (Enter Quintiliano, Giouenelli, and Fannio in their doublet and hose.) A friend. God saue you Captaine Quintiliano. Pardon me good Captaine. I attend a friend of mine. My name is Leonoro sir, &amp; indeed I scarce know you. Thanke you good Captaine. Me thinks &#x27;tis sacke. For fault of a better sir. But where&#x27;s your Lieftenant Captaine? Ist possible? What, mutinous in your owne company? But what was the quarrell? Good Antient, forbeare in a Tauerne. Ile vndertake he shall Captaine: Good Antient let me entreate you. Thanke you good ancient. Good Ancient peace. Good discretion in deede. That were foule indeede. He is I warrant thee. I will not faile Captaine, farewell t&#x27;ee both: come Lionel, now let vs trie the truth of Madam Tem perance, and see if shee attend vs. THou shalt not stay sweet Temperance, tell vs the manner of our warre and wee&#x27;ll leaue thee presently. What did thy mistesse fight with him? Has she a good courage? &#x27;Tis no matter Temperance, hee&#x27;s knowne and thou art knowne. Farewell honest Temperance : how was it possible, Lo douico should fit all these circumstances without the confederacy and trechery of this beldam? well Lodouico must satisfie this doubt when I see him. I would not meet him there, I shall offend him, but there I must needs be, and haue thee disguis&#x27;d like a woman. No remedy, the Captain Quintilliano and I haue deuis&#x27;d it to gull his Lieutenant: for thou shalt dance with him, we will thrust him vpon thee, and then for his courting and gifts, which we will tell him he must win thee withall, I hope thou wilt haue wit enough to receiue the tone, and pay him againe with the to ther, come Lionell let me see how naturally thou canst play the woman. Exit. See how womanly my Boy lookes Quintiliano. No Lieftenant, take her and court her first, and then kisse her. Somewhat shall crosse him; Lodouico let me speake with you. You are the man sir, I can scarse say the Gentle man, for you haue done a wrong the credit of a Gentleman cannot answere. Aurelio, doe not wrong me, and your selfe, I vndertake your quarrell, this man hath dishonord your Kins woman Lucretia, whom (if I might) I intended to marry. VVho haue we here? Hearke how my boy pla es the knaue with her. It was more then I knew Sir, but this shall be a warning to me while I liue, how I iudge of the instrument by the case againe. &#x27;Twas but to cous n mee.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — May Day</div><div class="body">It is May morning. In accordance with the season, old Lorenzo is planning an amorous, adulterous adventure with Francischina, and approaches her kinsman Angelo to act as go-between. Francischina’s husband too is going out with his gull, Innocentio, who is to observe gentlemanly behaviour at an ordinary. Lodovico makes doubly sure of his absence by introducing him to an admirer, Giovanelli, and they go to a tavern together. He is implicated in a second plot which in turn requires Lorenzo to be away from his home: Lorenzo’s daughter Aemilia, whom he plans to marry against her will to Gasparo, loves Aurelio, and Lodovico has promised to bring him to her at the house’s rear terrace. Meanwhile, Leonoro conspires with Temperance to win the love of Lucretia, Aurelio’s cousin. Nothing goes entirely according to plan. Lorenzo comes to Francischina disguised as a chimney-sweep, so that he can enter the house without risk to her honour, but Lodovico lets his friends in on the secret and they tease him on the way; later Angelo pretends to be Quintiliano coming home early, and frightens Lorenzo into hiding. Aurelio’s assignation with Aemilia turns out to involve more than talking when Lodovico provides a rope ladder and he climbs up onto the terrace, which gives access to her bedroom. Lodovico waits below, muffled in his cloak, and Temperance mistakes him for Leonoro; she invites him in just as the real Leonoro arrives and is taken to Lucretia’s chamber. When he gets into bed with her, however, the liaison ends with fighting when he discovers ‘her’ to be a cross- dressed man. Meanwhile Quintiliano cozens Giovanelli of his money and then returns home drunk to find Lorenzo, still disguised, hiding in his coal-house. Lorenzo goes home in turn and discovers Aurelio and Aemilia together; Angelo helps Aurelio escape while Lorenzo is changing out of his disguise before fetching the Provost to administer justice, then substitutes Francischina in Aurelio’s clothes so that Lorenzo will infer that he misunderstood an innocent jest. Everyone goes to the May night show at Honorio’s house, which includes a masque. Leonoro and Quintiliano have the page Lionel cross-dress as a woman with a view to tricking Innocentio into chatting her up. Leonoro confronts Lodovico over his liaison with ‘Lucretia’, and he explains what happened. In fact ‘she’ is really Lucretio, whose father was a Sicilian exile and close friend of Aurelio’s family. ‘Lionel’ turns out to be Lucretio’s fiancée…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

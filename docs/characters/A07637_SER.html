@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SER in Hans Beer-Pot (See Me and See Me Not) · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SER</span>
+</nav>
+
+<h1>SER</h1>
+<p class="lede">in <em>Hans Beer-Pot (See Me and See Me Not)</em> — Belchier, Dabridgcourt</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1618</td></tr>
+<tr><th>Words</th><td>2219</td></tr>
+<tr><th>Characters</th><td>11693</td></tr>
+<tr><th>BritDrama no.</th><td>1849</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">ſtulti, quos gloria vexat inanis. What, though he made that verſe, Thoſe words were made before, he made them not; Twas well I hapt on his inuentions. Why ſo I <mark>did</mark>, that which ſir Philip made, Is now grown olde, and like my Fathers gowne, Spunne, weaude, and made, boue foureſcore yeares agoe; But this I made is new: as freſh</div>
+<div class="excerpt">was that? twixt whom, what was there don Yet ſtay a while, and Ile waite on you home, I muſt needs <mark>heare</mark> an end of this diſcourſe. Where was the Generall? what <mark>did</mark> he this while? Thats true ſir, pray drinke one cup to me, Deed I am drye. Well Younker well, I will with you diſpence, Ile yeeld the foot the chiefe preheminence.</div>
+<div class="excerpt">Hoſt, your wit would help me much For good conceites your wholeſome guts haue hatcht, When ſodde in ſacke, your braines beginne to flow. Ile warrant you ſir, we <mark>did</mark> not meane to fayle, To ſtay at home, and miſſe ſo good a feaſt, Ti&#x27;s Chriſtmas now, It comes but once a yeare; And when it comes, men ſay, it brings good cheare.</div>
+<div class="excerpt">Vntill he comes againe; for I muſt thinke My ſelfe of pro and con, whats to be done Againſt this luſty Younker; Oh hee&#x27;s heere. Good morrow brother Garland, why <mark>did</mark> you Send Paſquill for me poſting in ſuch haſte; What is my Siſter ſicke, or your young ſonne, Or ſome miſfortune happened, that I know Not of as yet, vnto your</div>
+<div class="excerpt">can. I can and will; not for nought; My learning coſt me ſomething; and my wit Workes quicke and nimbly, if ought be to be got, The Romane Conſuls after victories, <mark>Did</mark> crowne with Bayes triumphant Conquerours. Set but a prize, auferre gloriam Infuſeth ſpirit to a working braine, Why what you will. Garters? yea content. I want</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I am glad to ſee you in ſo pleaſant vaine; I hope we ſhall haue a merry day on&#x27;t. What? That prety Stripling, that mad Paſtie-cruſt, He rimeth beſt with lugge or Pewter-can, And oft doth quarrell with our honeſt Hoaſt For ſpiced Ale, that hiſſeth with a toſte: But let theſe matters paſſe, Ile tell you newes; Laſt night your brother and I fell flat out About an Argument we ſtifly helde Which ſeruice was beſt on horſebacke, or on foot: But what ſay you? He calde me aſſe, but ſince one predicament Containes vs both, I care not Ile not yeeld; You know hees learned, had I but ſo much, Ide make him fret, and ſtampe, and ſcratch his head; Doe you but ſecond me, ile vexe him yet. Sirra, make haſte, runne; My Captaine calde him, when I went to ſleepe. Ah poti maia ſitis, how faſt he Runnes for the liquours ſake; now thinkes he, To ſtuffe his guts with Huffcappe Engliſh Beere; But heare me Sir, lets walke in the Church-yard Vntill he comes againe; for I muſt thinke My ſelfe of pro and con, whats to be done Againſt this luſty Younker; Oh hee&#x27;s heere. Good morrow brother Garland, why did you Send Paſquill for me poſting in ſuch haſte; What is my Siſter ſicke, or your young ſonne, Or ſome miſfortune happened, that I know Not of as yet, vnto your houſe or goods, Or ſhippes at Sea: Speake, I am in ſuſpence. What? doe you foole me, flout me to my face; Is that for my good will? why then farewell. Yea for a Brewers horſe, not for his man: Oh my rumbling guts doe ake to thinke ont; A Canne a draught, I neuer ſawe&#x27;t but once, And then I thought that man had burſt his guts; His eye-balls ſtarted, as the ſtrings were crackt; And though ſometimes I loue to drinke my pot, Strong drinke ſhould neuer more goe down with me, Before i&#x27;de ſwill ſo much at ſuch huge draughts; One ciuill glaſſe or two, that warms my bloud, It is enough, me thinkes. Why? theres none but Calues Refuſe good meat, or offered curteſies, No ſir, not I, but by chance ſpeake of them, As by the way you light vpon their tongues. Now we are two to one, I care not. Sauf voſtre grace, vous estes bien venuz. Perform your words, and then I ſweare, I wil. Sweare firſt, ile not beleeue you elſe. Why, heare you then; Admiranda canunt, ſed non credenda Poetae. You namde no language, bid me ſpeake two wordes, And you would doo&#x27;t, ile be iudgde by all Here preſent, if the wager be not wonne. Ile get a ſtaffe, the colours they are mine. I thanke your greatneſſe in conceit, I doe enioy them, and I reſt content. I thanke you M. Garland, your good word, Is euer preſt to doe an honeſt man good, For my preferment thinke you would disburſe A ſcore of pounds; or ſo, wert come to that, Rather then I ſhould fayle. I thanke God and friends, tis done; I haue bethought me, you ſhall ſee ere long A Metamorphoſis of me reformde. Call you it transformde; Transformde, reformde; or call it how you will: I doe remember what I learn&#x27;t at Schoole In Ouid : Oh theſe verſes made me whipte; In noua fert animus, mutatas dicere formas Corpora Dij caeptis, nam vos mutaſtis &amp; illas, Aſpirate meis. A match tis done, ile fit you preſently; M. Garland will you ſee it performde? Why then, I haue it by this time: ſince your mouth is cleane; My noble Younker, wipe your noſe with this; Sic faciunt ſtulti, quos gloria vexat inanis. What, though he made that verſe, Thoſe words were made before, he made them not; Twas well I hapt on his inuentions. Why ſo I did, that which ſir Philip made, Is now grown olde, and like my Fathers gowne, Spunne, weaude, and made, boue foureſcore yeares agoe; But this I made is new: as freſh as May Or flowres in Iune, or egges, but this day ſprung, A plaine caſe Younker: ſir the gloues are mine Vpon your honeſt word: foreſtoe you dat, A marchants word, no price ſet downe, ile haue Them richly made, with golde and ſilken fringe. Italian, Spaniſh, Engliſh, Dutch, or French; Sharke what you will, you ſhall not ſharke me out Of my ſtagges leather gloues with Charlatan: Your Glouer knowes my hand M. Garland, To morrow morning earely, Charlatan Goes for his gloues, looke to the payment ſir, Your honeſt words at ſtake; tis good I know, You&#x27;l keepe it ſure, a marchant breake his word, His credits gone, no not for twice ſo much. I will and if I can. I can and will; not for nought; My learning coſt me ſomething; and my wit Workes quicke and nimbly, if ought be to be got, The Romane Conſuls after victories, Did crowne with Bayes triumphant Conquerours. Set but a prize, auferre gloriam Infuſeth ſpirit to a working braine, Why what you will. Garters? yea content. I want a payre; What gloues and garters too, I roſe on the right ſide to day I am ſure. Ere you can go to Flutterkins mine Hoaſt, And come againe, or elſe ile leeſe two faunes, Or Beere, or Claret wine, or Spaniſh wine. No of Engliſh Beere. Agreed, begin. Yes. Ieſuis. Soft, you are too haſty for a pariſh Prieſt, I am ſure of your good word; fiue and ſixe Are loſt, are they nothing: tell rightly, tell on, And do your worſt: ſome honeſt French man lend Me but one hanſome word or two. I. Gods me, halfe out, but two words yet, Voſtre. There,s one word more, humble, nay treſhumble Seruiteur, life of my life, tis out: Be it what it will, ſtand on thine euen feet; Then gloues and garters both are quickly wonne. Then know I who muſt winne. Younker, tis well; and your gloues too; Both gloues and garters, they are fayrely wonne; Scratch not your head, its but a Iacobin At moſt; Come let vs in to Flutterkins, A cuppe and toſte will doe me now no hurt. You ſhall not flinch, if that your cap be wool, You ſhall along; What, would you leaue vs ſo; Turnde Micher, that were not tollerable. I will, then let vs hence; I thanke great Ioue that bleſt me ſo this day; How others ſpeed, I beare the prize away. You are too haſty, ſpare me yet a while, And then ile fit you. Thinke you I cannot, am I ſuch a foole? Why then giue eare, take heed, &amp; marke me well, You often watch to take me at the worſt; But Ile barre that, Ile haue no cunning tricke. Fert animus ; my mind prouokes me: Dij Coeptis aſpirate meis : Yee gods Bleſſe my proceedings: dicere, to ſpeake Of: Corpora mutatas : Bodies changde, In noua formas : to new ſhapes: nam vos Mutaſtis &amp; illas : for you tranſformde Thoſe bodyes ſtrangely; yea and altered ſore Their ſhapes to that they neuer had before. Why, iſt not right? And now ſir, for our other argument, Ile not giue of, before I am ſatiſfied. It ſhall be pledgde. But what ſay you vnto that Perſian Prince That beat the Turke with thirty thouſand horſe, Selim the firſt, the bloudieſt Ottoman Of all his race; who brought into the field Two hundred thouſand ſtrong of horſe and foot. Yea, toot and ſpare not, it will be your owne, Good drink breeds blood, &amp; bloud makes able men Well Younker, haue I catcht you. I am glad Of any thing, wherewith to ſtop your mouth. They ſcoure the Countrey, bring rich booties in, While we lye ſtaruing here, they liue at eaſe, Eate, drinke and ſleepe. But where they are alone, all abſolute: What they can doe, againſt your ſelfe you proude. Was not the Seigneur proude, ons victory, Reioycing much at his Hungarian ſpoyles. Why how now Hans ? what Planet ſtrucke? quite mute, Or Bagge-pype-like, not ſpeake before thou art full, Not one wiſe word; why, where is all thy mirth. Yet am I ſtill for horſe a Kingly fight. Oh finely mounted, what a pleaſure tis A troupe of braue Launcers, a ſtately ſhew, Why? what was that? twixt whom, what was there don Yet ſtay a while, and Ile waite on you home, I muſt needs heare an end of this diſcourſe. Where was the Generall? what did he this while? Thats true ſir, pray drinke one cup to me, Deed I am drye. Well Younker well, I will with you diſpence, Ile yeeld the foot the chiefe preheminence. Wilt pleaſe you ſir to drinke? Sir, heeres a Chayre, Pleaſe you to ſit and take Tobaccho with vs. A little ſir, one ciuill cuppe or two. I thank you both, for you haue made me fine; Theſe gloues and gartars they were quickly won: Each day ſo ſet on worke, I ſhould be rich. Bleſt be my Grandame brought me vp at Schoole Where I learn&#x27;t wit, more then you thought I had. I am too bigge. Were I an Anabaptiſt, you might doo&#x27;t, And witnes for me that I were baptizde; But that I had i&#x27;th town where I was borne, Ere eight dayes olde, I doe remember&#x27;t yet. As well I ſweare, As the firſt ſmocke that ere my Father vveare. See, ſee how you are deceiu&#x27;d, you thought I lyde, There&#x27;s no ſuch matter, altered is the caſe, As ſurely as I liue, and walking in this place. As often as you will, you know the price; And for my skill I paſſe not, am not nice. O here he is, his guts they are ſo ſtuft, With his fat liquor he can ſcarcely runne. Hee&#x27;s there by this? I ſaw him at the Ports, that Gentleman Is ats two men; takes boate, ſits downe at eaſe, And takes Tobacco, while they row him on, He keepes a bottle iuſt betwixt his legges, Drinkes when he liſt, and ſo he ſets it downe. Thanks good mine Hoſt, your wit would help me much For good conceites your wholeſome guts haue hatcht, When ſodde in ſacke, your braines beginne to flow. Ile warrant you ſir, we did not meane to fayle, To ſtay at home, and miſſe ſo good a feaſt, Ti&#x27;s Chriſtmas now, It comes but once a yeare; And when it comes, men ſay, it brings good cheare. Here&#x27;s Flutterkin takes leyſure, comes behind; Good man he ſweates, his guts keepe him ſo warme. But feare of fainting by the high way ſide, He hath prouided to preſerue his health; Brande-Wine a creuſe, which he drinks out himſelfe. Are you ſo nigh, I thought you had been loſt: By your leaue ſir; Ile welcome here mine Hoaſt. So may I draw, and draw my ſelfe quite out: And ſtriuing to get more, looſe that I haue. Times are not now as they were erſt, when you Did haunt the fields, and ledde a Souldiers life: Men had reſpect, and then were lookt vpon For their deſerts; but now tis nothing ſo. Reward goes backeward, honour on his head, And due deſerts are ſleight regarded now: He that wants gold, ſeekes place, may ſtand aloofe; Stand faſt he that would riſe, or elſe he falles; That now is ſould, which then was but free guift; Promotions fall not, but are bought before; He that mounts now, he doth not as of olde; Riſe by his vertues, but helpt vp with gold. Then was a time that ſouldiers were eſteemd, And if they liude they had preferment ſure, And thoſe that dyde were well prouided for; Then did men riſe from meaneſt parentage By their deſerts, to places of account, As ſome you nam&#x27;de, not borne to any thing; Did rayſe their fortunes to a great eſtate, And gaue no bribes, did not one penny pay, To any cogging Claw-backe Sycophant, And for deſerts had freely what they had; For happy was that man, though neere ſo great, That could doe honour to a man of warre, As thoſe that ſeru&#x27;d in France amongſt thoſe broils, And ciuill diſcordes yet can teſtifie, When that rich kingdome pitteouſly torne All ſtainde with gore, halfe mar&#x27;d with fire &amp; ſword VVhat there was got, how much account was had Of them: when backe they made their home return: VVhen happy Bourbon got thoſe lillyes three; Began their peace: did end that miſery. Why thats a comfort, farre beyond compare ▪ This happy life cannot be paragonde, My owne conceit hath rapt me from my ſelfe, Me thinks I am ſuch one, my ſtate is ſuch, And how I ſit by mine owne fire ſide With my ſweet wife, the life of my deare life, And tell my children, what I erſt haue ſeene To encourage them, to tread their Fathers ſteps; To make them bold to baniſh ſeruile feare. Tis heauen on earth; the minds and hearts content, A Kingdomes riches: can a man haue more? Then Gods ſweet peace: the loue of Common-wealth; His mindes deſires and bodies perfect health.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Hans Beer-Pot (See Me and See Me Not)</div><div class="body">Hans is sent to town to sell corn for his master, Cornelius; his mistress, Hanneke, gives him money to give to her younger son, a student, anda shilling on top for beer-money. Cornelius suspects that Hans is cheating him, and follows him to town. There he finds his son and son-in-law drinking with Hans at a tavern; they have been losing bets with Sergeant Goodfellow about his linguistic ability, and discussing the relative merits of infantry and cavalry (with extensive reference to Turkish history). Hans sneaks away, thinking he has not been spotted; but in fact he has. The town characters go to the country as Cornelius’ guests at Christmas dinner. There they discuss the decline in public respect for soldiers, making extensive reference to the great military men of the Elizabethan era, including some with whom Cornelius served in his younger days.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

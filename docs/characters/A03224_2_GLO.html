@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GLO in 2 Edward the Fourth · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>GLO</span>
+</nav>
+
+<h1>GLO</h1>
+<p class="lede">in <em>2 Edward the Fourth</em> — Heywood, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>1072</td></tr>
+<tr><th>Characters</th><td>5683</td></tr>
+<tr><th>BritDrama no.</th><td>1196</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">malicious tongue speakes treas … n still. Relieu&#x27;st thou Shoares wife in contempt of vs? And thou shalt pay it in the selfe same place, Where thou this man our Officer, didst out face, And scorndst vs saying if we stoode by, Thou wouldst relieue her. Heres Mathew Floud. Is thy name Floud? Floud and Aire? the elements conspire, In ayre</div>
+<div class="excerpt">if we stoode by, Thou wouldst relieue her. Heres Mathew Floud. Is thy name Floud? Floud and Aire? the elements conspire, In ayre and water to confound our power: Didst thou relieue that hateful wretch Shoares wife? What canst thou say Floud why thou shouldst not die? What libeller? another Collingborne? That wrote: The Cat,</div>
+<div class="excerpt">repeat it Floud? We do commaund thee. How saist thou Floud, doth Rufford 〈◊〉 this? Catesbie teare off the buttons from his breast. What findst thou there? Traitor, <mark>did</mark> I signe that commission? Pardon? to counterfeit my hand and seale? Haue I bestowed such loue, such countenance? Such trust on thee, and such authoritie, To haue</div>
+<div class="excerpt">Corne the food of all the land, And Lead, which after might annoy the land, And Hides, whose leather must relieue the land, To strangers enemies vnto the land: Didst thou so néerely connterfet my hand? Away with him Louell and Catesbie, go, 〈◊〉 the Sheriffes of London presently, To see h … m drawne, and hango, and quartered,</div>
+<div class="excerpt">st thou no fauour? then I tell thee Floud, Thou art a traitor … reaking our edict, By succouring that traitrous quean Shoares wife. And thou shalt die. If 〈◊〉 ? didst thou not giue her thy purse? And d … st thou not maintaine the deed? Louell &amp; Catesbie, this is Shoare indéed, Thou mightste. Except thou take her home againe</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Amen good brother Clarence: And send them all to heauen shortly I beseech him. I promise you hee is, and verie much, But Doctor Shaw, who prophested that G. should be so sadly ominious to vs? A great learned man he was, and as I haue heard, Hath prophested of very many things, I promise you it troubles me, I hope in me his propheste is true. I am sure it does, for looke you brother Clarence, We know not how his Highnes will applie it, We are but two, your selfe my Lord and I, Should the young Princes faile, which God defend. God blesse you al, and take you to him if it be his will. Now brother, this prophesse of G. troubling the King, He may as well applie it vnto Glocester, My Dukedomes name, if he be fealfous, As vnto George your … ame, good brother Clarence, God helpe, God helpe: … faith it troubles me, You would not thinke how: aside. that any of you liue. Who you, I, I durst answer for you, That I shall cut you off ere it be long. But reuerend Doctor, you can onely tell, Being his Highnes Confessor, how he takes it. Shaw, you know my minde, a villaine like my selfe. Ah brother Clarence, when you are suspected, Well, well, it is a wicked world the while: But shall I tell you brother in plaine tearmes, I feare, your selfe and I haue enemies, About the King, God pardon them, The world was neuer worser to be trusted: Ah brother George, where is that loue that was? Ah it is banisht brother from the world: Ah Conscience, Conscience, and true brotherhood, Tis gone, tis gone, brother I am your friend, I am your louing brother, your owne selfe, And loue you as my soule, vse me in what you please, And you shall see Ile doe a brothers part, Send you to heauen I hope, ere it be long, I am a true stampt villaine as euer liude. Do so good brother. My teares will searcely let me take my leaue, I loue you so: Farewell sweet George. So, is he gone: now Shaw tis in thy power, To binde me to thee euerlastingly, And there is not one step that I shall rise, But I will draw thee with me vnto greatnesse, Thou shalt sit in my bosome as my soule, Incense the king, now being as thou art, So neere about him, and his Confessor, That this G. onely is George Duke of Clarence, Doctor thou needst not my instruction, Thou hast a searching braine, a nimble spirit, Able to master any mans affections. Effect it Shaw, and bring it to passe … ce, Ile make thee the greatest Shaw that euer was. Farewell gentle Doctor. Let me awake my sléeping wits a while, … a, the marke thou aimst at Richard is a crowne, And many stand betwixt thee and the same, What of all that? Doctor play thou thy part, Ile climbe vp by degrees, through many a heart. On then a Gods name. Catesbie, is this the man? Come neere. Thy name I heare is Tirill, is it not? Welcome, it should appeare that thou hast bin In better state then now it séemes thou art. Be rulde by me, &amp; then thou shalt rise againe, And prooue more happie then thou euer wast, There is but onely two degrees by which It shall be néedfull for thee to ascend, And that is faith and taciturnitie. But canst thou too bee secret? Thy countenance hath like a siluer key, Opend the closet of my heart, read there, If scholler like thou canst expound those lines, Thou art the man ordainde to serue my turne. Inough, come follow me, For thy direction, and for gold to fée, Such as must ayde thee in their Tragedie. Now tell vs Rufford which of these it is, That in the heat of his vpheaued spléene, Contemnes our crowne, disdaines our dignitie, And armes himselfe against authoritie. Which is that Aire? I thought it was some hot distempred blood, That fierd his gyddie braine with businesse: Is thy name Aire? This paper saies so. Ha? Dost thou wish confusion vnto vs? This paper is the Organe of our power, And shall pronounce thy condemnation, We make it speake thy treasons to thy face, And thy malicious tongue speakes treas … n still. Relieu&#x27;st thou Shoares wife in contempt of vs? And thou shalt pay it in the selfe same place, Where thou this man our Officer, didst out face, And scorndst vs saying if we stoode by, Thou wouldst relieue her. Heres Mathew Floud. Is thy name Floud? Floud and Aire? the elements conspire, In ayre and water to confound our power: Didst thou relieue that hateful wretch Shoares wife? What canst thou say Floud why thou shouldst not die? What libeller? another Collingborne? That wrote: The Cat, the Rat, and Louell our Dog, Do rule all England vnder a Hog. Canst thou repeat it Floud? We do commaund thee. How saist thou Floud, doth Rufford 〈◊〉 this? Catesbie teare off the buttons from his breast. What findst thou there? Traitor, did I signe that commission? Pardon? to counterfeit my hand and seale? Haue I bestowed such loue, such countenance? Such trust on thee, and such authoritie, To haue my hand and signet counterfet? To carrie Corne the food of all the land, And Lead, which after might annoy the land, And Hides, whose leather must relieue the land, To strangers enemies vnto the land: Didst thou so néerely connterfet my hand? Away with him Louell and Catesbie, go, 〈◊〉 the Sheriffes of London presently, To see h … m drawne, and hango, and quartered, Let them not drinke before they see him dead. Hast you againe. Cra … st thou no fauour? then I tell thee Floud, Thou art a traitor … reaking our edict, By succouring that traitrous quean Shoares wife. And thou shalt die. If 〈◊〉 ? didst thou not giue her thy purse? And d … st thou not maintaine the deed? Louell &amp; Catesbie, this is Shoare indéed, Thou mightste. Except thou take her home againe to thée, Thou art a stranger, and it shall not be, For if thou do, expect what doth belong. Then neuer féede her whom thou canst not loue.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 2 Edward the Fourth</div><div class="body">Kingm@libaward invades France; but the Dukewof BuFgunaY and the GenstablelehiRrance fail to supply the military aid they promised. Several English soldiers are shot by the Constable’s men in a failed attempt to assassinate Edward; the Constable pleads an accident, and Edward extorts money and provisions from him. The English herald sent to Kaniguleuis is offered peace terms, which Edward modifies: Louis must submit to his suzerainty, and pay both the expenses of the invasion and an annual tribute thereafter. Louis accepts the offer and a treaty is agreed. Burgundy and the Constable try to double-cross both Edward and one another: each writes independently to both Edward and Louis, offering Louis Edward’s murder and Edward assistance against Louis, Edward feigns deafness, forcing the envoys to speak loud enough for the hidden Louis to hear; then confronts the envoys with their masters’ treachery. He returns to England, leaving troops in France to help Louis rout the traitors. JaneyShGre visits the London prisons, distributing alms to the prisoners. Brakenbiiry solicits her help to procure a pardon for his kinsman Strangwidge, whose actions against French shipping were committed in ignorance of the recent treaty which made them piratical. Also condemned is his passenger, known as Flé6d but actually MatthewiShore. The Queen first confronts, then forgives Jane for her adultery with Edward. The King pardons Strangwidge and his crew, and Jane pays their prison fees herself. Brakenbury employs ‘Flood’ at the Tower. Edward has fallen ill and is anxious about a prophecy that ‘G’ will dispose of his sons and usurp the throne. His brother @IMPEHEE is imprisoned and drowned in the Tower. Edward dies and RigharayefiGioucester becomes Lord Protector. Jane is expelled from court, and goes to stay with MiUSt&amp;éssiBlaguie! Richard lodges the young King and his brother in the Tower and has them murdered. ‘Flood’ is wounded in an altercation with the murderers and seeks succour at Mistress Blague’s inn, where he is tended by Jane. The ghost of Friar Anselm tells DE§SHAW that everyone involved in the death of the princes will come to a bad end; Richard himself will reign only three years. Richard issues a proclamation banning anyone from giving Jane food or shelter, and Mistress Blague turns her out; but not scon enough to evade being arrested. Jane does penance. Several grateful Londoners give her food, but are arrested. Ali is hanged and Jockie whipped, but ‘Flood’…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

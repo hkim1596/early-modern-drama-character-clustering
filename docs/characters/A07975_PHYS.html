@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PHYS in 514 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PHYS</span>
+</nav>
+
+<h1>PHYS</h1>
+<p class="lede">in <em>514</em> — [173]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>2059</td></tr>
+<tr><th>Characters</th><td>11607</td></tr>
+<tr><th>BritDrama no.</th><td>514</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Perfidious villaines, was this trechery Your duties act? What fury prompted yee To such inhuman violence? Will no hand Of art or heaven supply me with a balme! Then I <mark>must</mark> die, and bury all my glories E&#x27;re they are fully gaz&#x27;d at. Why <mark>did</mark> nature Produce me for her darling; and not arme My passive body with a proofe &#x27;gainst thunder?</div>
+<div class="excerpt">Your names? And what&#x27;s all this? What&#x27;s yours? What art skill&#x27;d in? And what&#x27;s your name? And what can you doe? Come, this agrees not with a servants duty. You <mark>must</mark> subscribe to order. Phlegme shall be My substitute to moderate these jarrings. And if hereafter any one transgresse But in the least dissention that disturbs The</div>
+<div class="excerpt">vouchsaf&#x27;t to call me Lord of your selfe and pleasures. Who&#x27;s that can laugh at mis y? That wound is deeper Then all the est Calling to mind my ills, That left a chast wi e for the loose embraces O n ualitie, a paynted whore, 〈…〉 with beasts. D ath hold thy ashye hand, Till 〈◊〉 concil&#x27;d to my Bellanima, Then st i e and spare</div>
+<div class="excerpt">What is she? That is reward To vrt ue, and to vice it&#x27;s punishment. The thought of it hath horrour in&#x27;t. I fell From height of goodnesse in forsaking thee, And <mark>must</mark> be punisht. Why is it delayd? Inflict it straight; protraction makes it greater. Distract me not with comforts. If justice hath no other instrument. I <mark>must</mark> and</div>
+<div class="excerpt">tir&#x27;d; and whilst they take in breath, Contrive some yet unhear&#x27;d of. Fortitude Shall teach me to beare all, (their end being justice) With more delight, then when I <mark>did</mark> enjoy Pleasures with Sensualitie. I will encounter With a whole hoast of deaths, though each were arm&#x27;d In all th&#x27;artillery that ever conquer&#x27;d Mortality; meete</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">What am I? My imperfect sence is yet Vnapprehensive, and the intellect My mother hath inspir&#x27;d, doth not instruct me To know my selfe. Receive my thanks great power. I yet am maz&#x27;d, And wander in a labyrinth of thoughts, That throng confusedly together, striving Who should first issue, &#x27;till their multitude Choakes up the passage. Oh ye powers that made me To be a King, and to have soveraignty Annext unto my difference, send me quickly The glorious guide that may remove this darkn sse. Ha! what are these? By whom? Our parents, the foure Elements. Your names? And what&#x27;s all this? What&#x27;s yours? What art skill&#x27;d in? And what&#x27;s your name? And what can you doe? Come, this agrees not with a servants duty. You must subscribe to order. Phlegme shall be My substitute to moderate these jarrings. And if hereafter any one transgresse But in the least dissention that disturbs The quiet of my state, he shall correct it; Nor spare himselfe. For in a government Th&#x27; offence is greatest in the instrument That hath the power to punish; and in lawes The authors trespasse makes the foulest cause. Recorders. What admiration workes upon my sense! I hea e and see such objects as would make Creation doubtfull whether she were perfect Without these parts. Into what strange delights I&#x27;m hurried on the sudden? ha! After y sacrifice of vowes and thankes Let me imbrace with reverence, Oh my life ▪ And better soule: joy hath possession taken Of all my faculties, and gives a welcome To these delights. Come my kind servants, let your active limbs Move to delight us, whilst the spheares agree To guide your measures with their harmony. I am disturb&#x27;d within; a new desire Whet&#x27;s appetite of pleasure in some change, Such as may touch the sence without a scruple Of wedlocks breach. Hence with these lawes of consci ence That would set limits to what&#x27;s infinite. Two kisses more will cloy me ▪ nought can relish But variation. I applaude thy counsaile, And am prepar&#x27;d to act it. Whisper that still; each accent&#x27;s musicall. The mee e conceit of it makes me immortall. Henc ; 〈◊〉 converse is hatefull. Ile not tye Desire to such imbraces. Ile enjoy A mistresse 〈◊〉 and sportive; that can vary All shapes of dallyance, and present delight Each minute in a severall fashion. Guide me, Ile follow. I&#x27;m bravely sitted; these are fitting ornaments. Come my best prompter, with indeavours wings Let&#x27;s cut the ayre, and straine our motion, &#x27;Till we attaine this bowre of Sensuality. And let the repetition of her praise Sweeten my painefull longings. My desire Fee&#x27;ls many throes of travaile; &#x27;till deliver&#x27;d Of it&#x27;s sweet issue. What&#x27;s the best? The ayre me thinkes begins upon a sudden To be perfum&#x27;d, as if Arabian windes Scatter&#x27;d their spices loosely on the ace Of some rich ea th, fruitfull with aromates. Musick breathes forth the soule of harmony. Musick. How egerly my senses catch these objects! But what are these? What their names, And offices? Pray sir your name? And what&#x27;s yours? Now yours? Me thinkes I am transform&#x27;d into a happinesse Cannot be figur ▪ d. It before enjoying The expectation can beget such blisse, What will possession? I am enflam&#x27;d. My appetite begins To burne with hot desires; and if protraction Delay their satisfying, they&#x27;l consume Themselves and me. Elysium sure is here, and that eternity I lately dream&#x27;t of. You in throne me Lady In happinesse, above the difference Of that may b th can boast. You make me perfect: And every touch of this delicious hand, Ch k , lip immortallize me. You are the onely object Mine eyes would gaze at. Your words are onely musick. This kisse is more then Nectar. But this touch is softer. You avish me with jo es beyond expression. Th&#x27; art barren of those pleasures I here enjoy. He heare no more: nor can I be so credulous Having possession, to expect such fables. Here I am fixt. How on a sudden my delights are clowded? As when a surfeit makes the pleasant dish That caus&#x27;d it more dist stefull then th&#x27;offence Of any bitter potion. My dull&#x27;d senses Relish no objects. Colours doe not take My filmed eyes. Mine eares are deafe to sounds, Though by a Ch rus of those lovely maides Which ove begot on faire Mu m sy Sung to Apollo&#x27;s harpe. Sicknesse begins To make this 〈…〉 m n ion. Feavers burne it, And shake the weak foundation: then a cold Chills it agen, as if a thousand Winters Contracted into one scatter&#x27;d their snow With Northerne blasts, and froze the very centre. Palseys dis-joynt the fabrick: loosen all The house-supporters, and at length they fall. Helpe me good servants. Hold I command yee: How dare yee insult Vpon my weaknesse thus? Oh I am wounded. Perfidious villaines, was this trechery Your duties act? What fury prompted yee To such inhuman violence? Will no hand Of art or heaven supply me with a balme! Then I must die, and bury all my glories E&#x27;re they are fully gaz&#x27;d at. Why did nature Produce me for her darling; and not arme My passive body with a proofe &#x27;gainst thunder? Oh thou in whose embraces I have slept And dream&#x27;t of heaven, when my waking sense Possest delights in thee, I seem&#x27;d to ride Commanding pleasure as if she had been My captive, and her spoyles enrich&#x27;t the triumph; Helpe now to save me: or with wonted kisses Make me to lose the sense of this great paine My bleeding wounds inflict. Let me expire Within thy bosome, and I shall forget That death hath any horrour. Not know me Lady! how am I transform&#x27;d! The sand of many minutes hath not fall&#x27;n From times gray glasse, since you vouchsaf&#x27;t to call me Lord of your selfe and pleasures. Who&#x27;s that can laugh at mis y? That wound is deeper Then all the est Calling to mind my ills, That left a chast wi e for the loose embraces O n ualitie, a paynted whore, 〈…〉 with beasts. D ath hold thy ashye hand, Till 〈◊〉 concil&#x27;d to my Bellanima, Then st i e and spare not. That&#x27;s my good Genius. The horrours of a thousand nights made black With pitchye tempests, and the Moones defect, When hee&#x27;s affrighted with the howlings of C otonean Wolves, and groanes of dying Mandrakes Gather&#x27;d for charm ▪ the S hritch owles fatall dirge ▪ And Ghosts disturb&#x27;d by fury s from their p ace. Are all within me. Can Bellanima Forgive the injuries that I have done her? Shee&#x27;s milder then thou Love, or pitties self. Let me be banish&#x27;t ever to converse With Monsters in a desart ▪ &#x27;tis a punishment Too little. Let me be confin&#x27;d to dwell On the North pole, where a continuall Winter May bleake me to a statue; or inhabit The Acherusian fenns, whose noysome ayre May choake my nostrells with their poysonous fumes, Yet linger death unto a thousand ages. Shee cannot Heale my affliction; mercyes selfe denyes A time and meanes, and onely black despayre Whispers th&#x27;approach of death. Might I yet live to practice my resolve Of reformation, sooner should the day Leave to distinguish night; the Sunne should choake His breathlesse horses in the western mayne, And rise no more, the gray morn ushering in His light approach, then my relapse from thee, And goodnesse cause new miseryes. Direct me, Yet heavenly ministers; informe my knowledge In the strict course that may preserve me happy, Whilst yet my sighes suck in th&#x27;unwilling ayre, That swells my wasted lunges. Though not in life, In death Ile be Bellanima&#x27;s. I feele quick sence return, and every Organe Is active to performe its proper office: I am not hurt. What miracle hath Heaven Wrought on me? Let me digest my joyes; I onely now Begin to live: the former was not perfect. My heart&#x27;s too narrow to conteine the joyes This reconciliation fills it with. Chayne me agen to misery, and make me Wretched beyond despayre when next I fall. Let this my resolution be enroll&#x27;d Amongst eternall acts not to be cancell&#x27;d. Then man is happy, and his blisse is full When hee&#x27;s directed by his better soule. Exeunt. I shall not need your diligence. Your trecherie (although forgiven) hath made me Watchfull upon ye. I have gotten now A carefull guide to manage my affayres. Retire. I do embrace thy fellowship Prudence, thou vertue of the mind, by which We do consult of all that&#x27;s good or evill Conducing to felicity. Direct My thoughts and actions by the rule of reason. Teach me contempt of all inferiour vanities. Pride in a marble portall guilded ore; Assyrian carpets ▪ chayres of ivory; The luxurie of a stupendious house; Garments perfum&#x27;d; gemmes valew&#x27;d not for use But needlesse ornament; a sumptuous table, And all the baytes of sense. A vulgar eye Sees not the danger which beneath them lye. Temperance, to thee I owe my after life; Thou that command&#x27;st o&#x27;re pleasures, hating some, When thou dispens&#x27;st with others; still directing All to a sound meane: under thy low roofe Ile eate and sleepe, whilst grave Philosophy Instructs my soule in Iustice. What is she? That is reward To vrt ue, and to vice it&#x27;s punishment. The thought of it hath horrour in&#x27;t. I fell From height of goodnesse in forsaking thee, And must be punisht. Why is it delayd? Inflict it straight; protraction makes it greater. Distract me not with comforts. If justice hath no other instrument. I must and will be just unto my selfe. When I have felt a torment that doth equall Th&#x27; offence for which I suffer it, &#x27;twill confirme me, Bellanima is satisfi&#x27;d. Can Fortitude Be without Iustice? Iustice without Fortitude Is perfect in it self. When I am just, Valour is usefull. Dis wade me not Bellanima, I cannot Think the dimensions of thy goodnesse such, That it may be extended to remit So great an ill without it&#x27;s satisfaction. Then will I challenge thy forgivenesse due When I have suffer&#x27;d punishment; I dare not Owe all unto thy gentlenesse. &#x27;Tis taught m here; iustice instructs me in&#x27;t. Y t when I feele the lashes of their snakes Hells judges doe employ: when vultures gnaw My growing liver, and the restlesse wheele Hu ryes my rackt limbes, (for these torments are Lesse then my fault deserves,) Ile laugh at all, And with a scorn provoke the executioners &#x27;Till they are tir&#x27;d; and whilst they take in breath, Contrive some yet unhear&#x27;d of. Fortitude Shall teach me to beare all, (their end being justice) With more delight, then when I did enjoy Pleasures with Sensualitie. I will encounter With a whole hoast of deaths, though each were arm&#x27;d In all th&#x27;artillery that ever conquer&#x27;d Mortality; meete thunder if but warn&#x27;d That it is comming, and be fixt unmov&#x27;d T&#x27;embrace the subtile fire, though one step Might guard me in a grove of Magick Bayes Wall&#x27;d with Hien s skinnes. The apprehension Of horrour shall not fright me, though presented In the most hideous shape conceit can paynt. What apparition&#x27;s this? or are ye Furies Sent to torment me? Speake, and satisfie My growing feares, which like an earthquake, when Pent ayre dilates it self with violence Doe shake my trembling heart. &#x27;Tis not deny&#x27;d, no needs it other witnesse; I beare it in my Conscience. Yet reverend judge, Sorrow for ills past doth restore frayle man To his first innocence. What mine hath beene, My earth bed wet with nightly teares can witnesse, And sighes, have made the trembling ayre retire, Vnwilling to be lodg&#x27;d in a sad brest Already fill&#x27;d with zeale. If a perseverance Sprung from a constant resolution, And joynd unto this sorrow may prevayle To th&#x27; expiation of my former guilt, I hope forgivenesse. As fates decrees Enroll&#x27;d in steele. Nor will I be secure In any confidence of mine own strength: For such security is oft the mother Of negligence, and that th&#x27;occasion Of unremedied ru e. From instructions Found here, we will consult our after-safetyes. And in all courses of my following life, I will be guyded by my heavenly wife.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

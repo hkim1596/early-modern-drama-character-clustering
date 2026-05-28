@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TIM in A Match at Midnight · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>TIM</span>
+</nav>
+
+<h1>TIM</h1>
+<p class="lede">in <em>A Match at Midnight</em> — R., W.</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>1662</td></tr>
+<tr><th>Characters</th><td>8653</td></tr>
+<tr><th>BritDrama no.</th><td>2027</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">lends a sleeve of that, had a Noble on&#x27;t last night, and neuer paid me my Bill money. Who&#x27;s this, goodman fyle the black-smith, I thought&#x27;had beene our old collier: <mark>did</mark> you <mark>goe</mark> to bed vvith that durty face goodman fyle? What have you bumming out there goodman fyle? Why how vvill you doe to vvorke then goodman fyle? Hum, yee <mark>did</mark></div>
+<div class="excerpt">out there goodman fyle? Why how vvill you doe to vvorke then goodman fyle? Hum, yee <mark>did</mark> not buy this spare vice of a leane Courtier, <mark>did</mark> yee? Nay, nay, Sim, vve <mark>must</mark> doo&#x27;t sometimes. And vvhat wood serue your turne goodman fyle? What upon a spare vice to lend a Noble? That is no noble vice I assure ye. Looke ye being a neighbour,</div>
+<div class="excerpt">, I know my time, pray what&#x27;s her name? Niggers I haue read of her in the Mirr r of Kaighthood. Nay brother. Let me <mark>goe</mark> downe and wash my face first. That word <mark>has</mark> &#x27;ne conque d me. Indeed but you shall not Sir, I went out early, and forgot to wash e&#x27;m. What is&#x27;t brother foure or sixe? I wi doe no curtesie at this time Sir,</div>
+<div class="excerpt">ha&#x27; beene taken for him, and now I thinke on&#x27;t, A cup of this is better then our foure shilling Beere at home. Is it the law, that if a man drinks to no body, hee <mark>must</mark> drinke againe. Why, then I will drinke to no body once more, because I will drinke againe. Mee thinks this glasse was better then the to&#x27;ther Gentlemen. Doe yee</div>
+<div class="excerpt">no noble vice I assure ye. Looke ye being a neighbour, and borne one for another. There is five shillings uppon&#x27;t, which at the fortnights end goodman Fyle you <mark>must</mark> make five shillings sixe pence. Nay and it were not to doe you a curtesie— And then I had forgot three pence for my Bill, so there is foure pence, and nine pence,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Morrow Sim, my father stirring Sim? Hum, I am sorry the old man should lye by the hower, but oh, these wicked Elder Brothers, that sweare refuse them, and drinke nothing but wicked Sacke, when wee sweare nothing but niggers noggers, make a meale of a bloate Herring, water it with foure shillings Beere, and then sweare wee have dined as well as my Lord Maior. Yee should have put her money by her selfe, for feare of wronging of the whole heape. All these petty pavvnes sirrah, my Father committs to to my managing, to instruct me in this craft, that when he dyes, the common-wealth may wanta good member. Why, vvhy? What the Widdow Nagge. Niggers noggers, I thought hee had bene sicke and had not bene up Sim. While I tye my Band, prethee stroke up my fore-toppe a little, Niggers, and I had but dreamed of this an houre before I wak&#x27;t, I wood have put on my Sunday cloathes, &#x27;mailes my shoo s are as pale as the checke of a stewd Pander, a clout, a clout Sim. Whats that lyes by the bookes? Prithee lends a sleeve of that, had a Noble on&#x27;t last night, and neuer paid me my Bill money. Who&#x27;s this, goodman fyle the black-smith, I thought&#x27;had beene our old collier: did you goe to bed vvith that durty face goodman fyle? What have you bumming out there goodman fyle? Why how vvill you doe to vvorke then goodman fyle? Hum, yee did not buy this spare vice of a leane Courtier, did yee? Nay, nay, Sim, vve must doo&#x27;t sometimes. And vvhat wood serue your turne goodman fyle? What upon a spare vice to lend a Noble? That is no noble vice I assure ye. Looke ye being a neighbour, and borne one for another. There is five shillings uppon&#x27;t, which at the fortnights end goodman Fyle you must make five shillings sixe pence. Nay and it were not to doe you a curtesie— And then I had forgot three pence for my Bill, so there is foure pence, and nine pence, which you are to tender backe, five shillings sixe pence, goodman Fyle at the end of the fortnight. Sim, because the man&#x27;s an honest man, I pray lay up his Vice, as safe as it were your owne. Pray forsooth—what&#x27;s a cl cke. I wonnot kisse indeed. I wonnot kisse truely. Wood my girdle may breake if I doe. Niggers noggers I wonnot. Your boy forsooth Father. Better then yourselfe forsooth father. Tvvo and tvventy yeeres, three moneths&#x27;, three dayes, and three quarters of an houre, forsooth Father. Caput. Caput blockhead. Aura. Occules. Occulies, occulies. O monster Father, looke if hee bee not drunke, the very sight of him makes me long for a cup of sixe. Why I am none of your Father, brother, I am Tim, doe ye know Tim. Youle be at the fountaine after dinner? Here&#x27;s a noble now, and Ile bring you tother as I come by to the Taverne, but Ile make you sweare, I shall drinke no thing but small Betre. Ah, prithee Sim bid the maid eate my breakefast her selfe. But are a Chandlers ones worth so much Father? Masse that&#x27;s true. No forsooth. To the Divell father? Sniggers, what does the Divell and a Saint both in a signe? To the devill as fast I can Sir, the world shall know who&#x27;s sonne I am. Exit. Nay I love to be as good as my say, see brother, looke, there&#x27;s the rest or your money upon the Ring, I can not spend a penny, for I have ne&#x27;re a penny left, vvhat are these, vvhat are these? He vvill not make a Capon of me, vvill ee. Of the Poultry, or of Woodstreete. I&#x27;le take my leaue brother, I am in g 〈…〉 ha . Fough this Tobacco. Sh lookes ust vpon e. No, no, no pray: Sweeter then Ginger. Pish I tell you, I doe no , I know my time, pray what&#x27;s her name? Niggers I haue read of her in the Mirr r of Kaighthood. Nay brother. Let me goe downe and wash my face first. That word has &#x27;ne conque d me. Indeed but you shall not Sir, I went out early, and forgot to wash e&#x27;m. What is&#x27;t brother foure or sixe? I wi doe no curtesie at this time Sir, yet for one cup I care not, because it comes from b yond the Seas. I thinke &#x27;tis Out-landish win . Now truly the Gentleman drinkes as like one Ma ster Widgen a kinsman of mine. I ha&#x27; heard of that Widgin, I ha&#x27; beene taken for him, and now I thinke on&#x27;t, A cup of this is better then our foure shilling Beere at home. Is it the law, that if a man drinks to no body, hee must drinke againe. Why, then I will drinke to no body once more, because I will drinke againe. Mee thinks this glasse was better then the to&#x27;ther Gentlemen. Doe yee thinke so? Why then I pray giue me tother cup that I may drinke to some body. Mistris Lindabrides. Pox on ye for a Coxcombe. Here Boyes, giue vs some more wine. There&#x27;s hundred Markes Gallants. &#x27;Tis your owne. And doe but let mee beare on Office amongst yee. I know as great a matter has beene done for as small a summe. Pray let mee follow the fashion. Round. And this goe not round. Some wine there Tapster. Is there ne&#x27;re a Tapster i&#x27;th house? Corporall Codsheads health sir. This is a cruell Antient. Well, here&#x27;s your Corporall, and you lookes out can be quiet. Is he gone that cal&#x27;d us butter-flies? Thats well, he cannot in conscience but doe us the curtesie and kill him for us, come gallants, what shall wee doe? Ile never goe home to go to bed with my guts full of 〈◊〉 shillings beere, when I may replenish them with Sacke,—Hay, now am I as lusty, me thinkes wee two have blew eards, is there nere a wench to be had? Drawer bring us up impossibilities, an honest Whore, and a conscionable reckoning. Tempting handsome Sir, shee is not married is she Gentlemen? Tempting handsome Sir, I have knowne a wo man of handsome tempting fortunes, throw her selfe away upon a handsome tempting Sir. Oh, and a man were so, worthy tempting Sir. And when will you give it me againe? There &#x27;tis, send thee good lucke with&#x27;t, and goe drunke to bed. I wonnot speake I tell you, till you hold up your finger, or fall a vvhistling. He talks all sacke, and he wil drinke no small Beere: Oh, is it so, I have heard there be more changes in a womans heart in an houre, then can be rung up on sixe bells, seven dayes, well go thy wayes, little do&#x27;st thou think how thou shalt be betrayed, within this foure and twenty houres, thou shalt be mine owne Wife, flesh and blood, by Father and Mother, ô tempting hansome Sir. Ha, ha, ha, Grandmother, Ile tell thee the best jest. Sirrah, whilest thou wert sent for into the next roome, up came our second course, amongst others in a dish of blackebirds, there lay one, that I swore vvas a Wood cocke, you were at Table Captaine. Pish, vve&#x27;le have as many more to morrow night, but still I swore twas a Woodcocke: she swore &#x27; vvas a backe-Bird, ovv vvho shall vve be tryed by, but Serieant Sliceman, Captaine Carveguts Cozen here, a trifling vva ger, a matter of the reckoning was layd, the Serieant svvore tvvas a backe-Bird, I presently payd the reckoning, and she clapt of the brest presently, and svvore &#x27;tvvas a Wood cocke, as if any other wood passe after the reckoning vvas paid. Made sure before such a mad crew of vvitnesses, sirrah, Granham, al&#x27;s agreed, Sue&#x27;s—. How, prithee Granham looke to Dab, doe you two but hold them in a talke, whilst I steale downe and pay the reckoning. That&#x27;s it I would have man, weele make them all drunke, they&#x27;le never leave us else, and still as it comes to a crowne, Ile steale downe and pay it in spite of their teeth, remember therefore that yee make them all drunke, but be sure you keepe me sober to pay the reckonings. Yes indeed Father, I am going to the busines, and Gentlemen all, I am come whether you will or no, to muite ye all to my marriage, to this Gentlewoman, who though a good face need no Maske; shee&#x27;s maskt to make a man thinke she has a scurvy face, when I know 〈◊〉 has a good face, this is S cke to them and out of their Element. Hum, upon such a match of mine, talke of a hun dred Marke, this is to drinke ignoble onre shillings beere, a hundred Marke, why your Lawyer there can cleere such a trifle in a Tearme, and his Clients ne&#x27;re the better. What is shee, heere&#x27;s my Brother knowes hat shee is well enough, come hither Dab, and bee knowne unto you, her name is Lindabrades, descended from the Em perour Tribatio of Greece, and halfe Neece, some sixe and fiftie descents to most unvanquisht Claridiana. I tell thee pratling Constable, &#x27;tis a lye, Linda brades a Drunkard? Where, why in Greece. Truely father, I have payd some sixeteene recko nings, since I saw you, I was never sober since you sent mee to the Devill yesterday, and for the rest of your money, I sent it to one Captaine Carvegut, he swore to me his Father was my Lord Maiors Cooke, and that by Easter next, you should have the principall, and egges for the use indeed sir. I truely Father, and he were any thing like him, I would svveare &#x27;tvvere he.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Match at Midnight</div><div class="body">Old Bloodhound is training his younger son Tim in the family pawnbroking business, since Alexander, the elder son, is a drunken wastrel. He intends to marry his daughter Mary to the informer Earlack, even though she prefers Ensign Young, while he himself will marry the young widow Wag. The widow has other suitors, including her servant Jarvis, but wants to get rid of them. She arranges a midnight assignation with Old Bloodhound, intending not to turn up. Jarvis arranges a substitute, and tells Bloodhound that his mistress has come incognito and must be addressed as Mistress Coot; in fact it really is a Mistress Coot, an old bawd, whom Bloodhound takes home that night in preparation for a wedding the next morning. Meanwhile, Mary plans to elope with Young that &#x27; night, retrieving his mortgage from her father’s papers. 1622 The widow&#x27;s Welsh suitor, Randall, hears about Mary and, though he has never met her, decides he prefers her to Wag. The servant Sim fixes Randall up with an assignation that night, but he ends up encountering Wag&#x27;s maid, who is returning from a late errand and who also happens to be named Mary. Tim visits the tavern to give Alexander some pawn- money, and becomes enamoured of Sue Shortheels, thinking her a lady of noble descent. In fact, she is a prostitute. Alexander gets into the widow’s bedroom and hides under her bed, then forces her to agree to marry him by threatening to undress just as neighbours appear to be arriving. The various wedding plans unravel in the morning. Earlack has sneaked the opportunity to sleep with the widow — who is really Coot the bawd and a somewhat less desirable prospect in bed once seen in daylight. Meanwhile, Tim has married Sue, not knowing her true profession until it is too late, and Mary has married Young, to the dismay of Randall, who finds that he has accidentally married a servant. Only Alexander seems on course for the wedding he wants, until the widow points out that Jarvis has a prior claim: when he tried to seduce her months ago, she demanded that he should prove himself by living in her household as her servant. Now, however, she intends to honour her dead husband by never remarrying. Jarvis reveals his true identity: he is Wag himself, the widow’s husband, still alive, and satisfied that his ruse has proven his wife’s fidelity.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

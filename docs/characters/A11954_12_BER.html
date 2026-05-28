@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BER in All&#x27;s Well That Ends Well · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BER</span>
+</nav>
+
+<h1>BER</h1>
+<p class="lede">in <em>All&#x27;s Well That Ends Well</em> — Shakespeare, WilliamMiddleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1631</td></tr>
+<tr><th>Characters</th><td>8443</td></tr>
+<tr><th>BritDrama no.</th><td>1461</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">view, To you that know them not. This to my mother, &#x27;Twill be <mark>two</mark> daies ere I ſhall ſee you, ſo I leaue you to your wiſedome. Come, come, no more of that. Let that <mark>goe</mark>: my haſt is verie great. Farwell: Hie home. Well, what would you ſay? What would you haue? I pray you ſtay not, but in haſt to horſe. Go thou toward home, where</div>
+<div class="excerpt">what would you ſay? What would you haue? I pray you ſtay not, but in haſt to horſe. Go thou toward home, where I wil neuer come, Whilſt I can ſhake my ſword, or <mark>heare</mark> the drumme: <mark>Away</mark>, and for our flight. Sir it is A charge too heauy for my ſtrength, but yet Wee&#x27;l ſtriue to beare it for your worthy ſake, To th&#x27; extreme edge of</div>
+<div class="excerpt">ſtucke my choice vpon her, ere my <mark>heart</mark> Durſt make too bold a herauld of my tongue: Where the impreſſion of mine eye enfixing, Contempt his ſcornfull Perſpectiue <mark>did</mark> lend me, Which warpt the line, of euerie other fauour, Scorn&#x27;d a faire colour, or expreſt it ſtolne, Extended or contracted all proportions To a moſt hideous obiect.</div>
+<div class="excerpt">the fault: I ſpoke with hir but once, And found her wondrous cold, but I ſent to her By this ſame Coxcombe that we haue i&#x27; th winde Tokens and Letters, which ſhe <mark>did</mark> reſend, And this is all I haue done: She&#x27;s a faire creature, Will you go ſee her? They told me that your name was Fontybell. Titled Goddeſſe, And worth it with</div>
+<div class="excerpt">proportions To a moſt hideous obiect. Thence it came, That ſhe whom all men prais&#x27;d, and whom my ſelfe, Since I haue loſt, haue lou&#x27;d; was in mine eye The duſt that <mark>did</mark> offend it. Hers it was not. My gracious Soueraigne, How ere it pleaſes you to take it ſo, The ring was neuer hers. You are deceiu&#x27;d my Lord, ſhe neuer ſaw it: In</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">My thankes and dutie are your Maieſties. His good remembrance ſir Lies richer in your thoughts, then on his tombe: So in approofe liues not his Epitaph, As in your royall ſpeech. Some ſix moneths ſince my Lord. Thanke your Maieſty. My wife my Leige? I ſhal beſeech your highnes In ſuch a buſines, giue me leaue to vſe The helpe of mine owne eies. Yes my good Lord, but neuer hope to know why I ſhould marrie her. But followes it my Lord, to bring me downe Muſt anſwer for your raiſing? I knowe her well: Shee had her breeding at my fathers charge: A poore Phyſitians daughter my wife? Diſdaine Rather corrupt me euer. I cannot loue her, nor will ſtriue to doo&#x27;t. Pardon my gracious Lord: for I ſubmit My fancie to your eies, when I conſider What great creation, and what dole of honour Flies where you bid it: I finde that ſhe which late Was in my Nobler thoughts, moſt baſe: is now The praiſed of the King, who ſo ennobled, Is as &#x27;twere borne ſo. I take her hand. Yes my Lord and of verie valiant approofe. And by other warranted teſtimonie. I do aſſure you my Lord he is very great in know ledge, and accordinglie valiant. Is ſhee gone to the king? Will ſhee away to night? I haue writ my letters, casketted my treaſure, Giuen order for our horſes, and to night, When I ſhould take poſſeſſion of the Bride, And ere I doe begin. Is there any vnkindnes betweene my Lord and you Monſieur? It may bee you haue miſtaken him my Lord. I thinke ſo. Yes, I do know him well, and common ſpeech Giues him a worthy paſſe. Heere comes my clog. I ſhall obey his will. You muſt not meruaile Helen at my courſe, Which holds not colour with the time, nor does The miniſtration, and required office On my particular. Prepar&#x27;d I was not For ſuch a buſineſſe, therefore am I found So much vnſetled: This driues me to intreate you, That preſently you take your way for home, And rather muſe then aske why I intreate you, For my reſpects are better then they ſeeme, And my appointments haue in them a neede Greater then ſhewes it ſelfe at the firſt view, To you that know them not. This to my mother, &#x27;Twill be two daies ere I ſhall ſee you, ſo I leaue you to your wiſedome. Come, come, no more of that. Let that goe: my haſt is verie great. Farwell: Hie home. Well, what would you ſay? What would you haue? I pray you ſtay not, but in haſt to horſe. Go thou toward home, where I wil neuer come, Whilſt I can ſhake my ſword, or heare the drumme: Away, and for our flight. Sir it is A charge too heauy for my ſtrength, but yet Wee&#x27;l ſtriue to beare it for your worthy ſake, To th&#x27; extreme edge of hazard. This very day Great Mars I put my ſelfe into thy file, Make me but like my thoughts, and I ſhall proue A louer of thy drumme, hater of loue. Do you thinke I am ſo farre Deceiued in him. I would I knew in what particular action to try him. How now Monſieur? This drumme ſticks ſore ly in your diſpoſition. Well, wee cannot greatly condemne our ſuc ceſſe: ſome diſhonor wee had in the loſſe of that drum, but it is not to be recouered. It might, but it is not now. Why if you haue a ſtomacke, too&#x27;t Monſieur: if you thinke your myſterie in ſtratagem, can bring this inſtrument of honour againe into his natiue quarter, be magnanimious in the enterprize and go on, I wil grace the attempt for a worthy exploit: if you ſpeede well in it, the Duke ſhall both ſpeake of it, and extend to you what further becomes his greatneſſe, euen to the vtmoſt ſyllable of your worthineſſe. But you muſt not now ſlumber in it. May I bee bold to acquaint his grace you are gone about it. I know th&#x27; art valiant, And to the poſsibility of thy ſouldierſhip, Will ſubſcribe for thee: Farewell. Why do you thinke he will make no deede at all of this that ſo ſeriouſlie hee dooes addreſſe himſelfe vnto? Your brother he ſhall go along with me. Now wil I lead you to the houſe, and ſhew you The Laſſe I ſpoke of. That&#x27;s all the fault: I ſpoke with hir but once, And found her wondrous cold, but I ſent to her By this ſame Coxcombe that we haue i&#x27; th winde Tokens and Letters, which ſhe did reſend, And this is all I haue done: She&#x27;s a faire creature, Will you go ſee her? They told me that your name was Fontybell. Titled Goddeſſe, And worth it with addition: but faire ſoule, In your fine frame hath loue no qualitie? If the quicke fire of youth light not your minde, You are no Maiden but a monument When you are dead you ſhould be ſuch a one As you are now: for you are cold and ſterne, And now you ſhould be as your mother was When your ſweet ſelf ▪ was got. So ſhould you be. No more a&#x27; that: I prethee do not ſtriue againſt my vowes: I was compell&#x27;d to her, but I loue thee By loues owne ſweet conſtraint, and will for euer Do thee all rights of ſeruice. How haue I ſworne. Change it, change it: Be not ſo holy cruell: Loue is holie, And my integritie ne&#x27;re knew the crafts That you do charge men with: Stand no more off, But giue thy ſelfe vnto my ſicke deſires, Who then recouers. Say thou art mine, and euer My loue as it beginnes, ſhall ſo perſeuer. Ile lend it thee my deere; but haue no power To giue it from me. It is an honour longing to our houſe, Bequeathed downe from manie Anceſtors, Which were the greateſt obloquie i&#x27; th world, In me to looſe. Heere, take my Ring, My houſe, mine honor, yea my life be thine, And Ile be bid by thee. A heauen on earth I haue won by wooing thee. They cannot be too ſweete for the Kings tart neſſe, heere&#x27;s his Lordſhip now. How now my Lord, i&#x27;ſt not after midnight? I haue to night diſpatch&#x27;d ſixteene buſineſſes, a moneths length a peece, by an abſtract of ſucceſſe: I haue congied with the Duke, done my adieu with his neereſt; buried a wife, mourn&#x27;d for her ▪ writ to my La die mother, I am returning, entertain&#x27;d my Conuoy, &amp; betweene theſe maine parcels of diſpatch, affected ma ny nicer needs: the laſt was the greateſt, but that I haue not ended yet. I meane the buſineſſe is not ended, as fearing to heare of it hereafter: but ſhall we haue this dialogue betweene the Foole and the Soldiour. Come, bring forth this counterfet module, ha s deceiu&#x27;d mee, like a double-meaning Propheſier. No matter, his heeles haue deſeru&#x27;d it, in vſur ping his ſpurres ſo long. How does he carry himſelfe? Nothing of me, ha&#x27;s a? A plague vpon him, muffeld; he can ſay nothing of me: huſh, huſh. What a paſt-ſauing ſlaue is this? But I con him no thankes for&#x27;t in the nature he deliuers it. What ſhall be done to him? Nay, by your leaue hold your hands, though I know his braines are forfeite to the next tile that fals. Our Interpreter do&#x27;s it well. Damnable both-ſides rogue. He ſhall be whipt through the Armie with this rime in&#x27;s forehead. I could endure any thing before but a Cat, and now he&#x27;s a Cat to me. For this deſcription of thine honeſtie? A pox vpon him for me, he&#x27;s more and more a Cat. A pox on him, he&#x27;s a Cat ſtill. My high repented blames Deere Soueraigne pardon to me. Admiringly my Liege, at firſt I ſtucke my choice vpon her, ere my heart Durſt make too bold a herauld of my tongue: Where the impreſſion of mine eye enfixing, Contempt his ſcornfull Perſpectiue did lend me, Which warpt the line, of euerie other fauour, Scorn&#x27;d a faire colour, or expreſt it ſtolne, Extended or contracted all proportions To a moſt hideous obiect. Thence it came, That ſhe whom all men prais&#x27;d, and whom my ſelfe, Since I haue loſt, haue lou&#x27;d; was in mine eye The duſt that did offend it. Hers it was not. My gracious Soueraigne, How ere it pleaſes you to take it ſo, The ring was neuer hers. You are deceiu&#x27;d my Lord, ſhe neuer ſaw it: In Florence was it from a caſement throwne mee, Wrap&#x27;d in a paper, which contain&#x27;d the name Of her that threw it: Noble ſhe was, and thought I ſtood ingag&#x27;d ▪ but when I had ſubſcrib&#x27;d To mine owne fortune, and inform&#x27;d her fully, I could not anſwer in that courſe of Honour As ſhe had made the ouerture, ſhe ceaſt In heauie ſatisfaction, and would neuer Receiue the Ring againe. She neuer ſaw it. If you ſhall proue This Ring was euer hers, you ſhall as eaſie Proue that I husbanded her bed in Florence, Where yet ſhe neuer was. My Lord, I neither can nor will denie, But that I know them, do they charge me further? She&#x27;s none of mine my Lord. My Lord, this is a fond and deſperate creature, Whom ſometime I haue laugh&#x27;d with: Let your highnes Lay a more noble thought vpon mine honour, Then for to thinke that I would ſinke it heere. She&#x27;s impudent my Lord, And was a common gameſter to the Campe.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — All&#x27;s Well That Ends Well</div><div class="body">When Béftrami’s father dies, he becomes a royal ward, and is summoned to court. H@léfhi loves him and is sad to see him go, but knows she can never have him because of the disparity in their rank. Phe@uDowager (@GuntEesS learns of her love and permits her to go to court and use her father’s medical knowledge, passed on to her on his deathbed, to cure the King of the fistula which afflicts him. ‘The Kimig has been advised to remain neutral in the war between Florence and Siena, but allows his lords to join on either side; Bertram, however, is deemed too young and required to stay at court. Helen wagers her life on the efficacy of her cure, and asks as her reward to be allowed her own choice of husband. She successfully heals the fistula and selects Bertram. He protests vehemently, but the King browbeats him into marriage. Rather than consummate the union, however, he runs away to the war and sends Helen word that he will only acknowledge her as his wife if she gets the ring from his finger and presents him with a child which he has lawfully begotten on her. She takes herself off, leaving word that she is going on a pilgrimage. Bertram acquits himself well in battle, but his companion Paroles allows the company’s drum to be captured by the Sienese. Passing through Florence, Helen encounters a widow whose daughter, Diama, is being solicited by Bertram for sex. She arranges for the widow to agree, on condition that Bertram gives up his ring; Helen then takes Diana’s place in bed, has sex with her husband, and exchanges rings with him. Meanwhile Paroles insists on trying to recover the lost drum, intending to return with no drum and a heroic story of insurmountable obstacles. He is ambushed by Florentine soldiers posing as the enemy, blindfolded, and put in fear of his life; under interrogation, he betrays the Florentine army’s military secrets and makes some uncomplimentary remarks about Bertram, only to find when the blindfold is removed that his captors are Florentines and that Bertram is present. With the war coming to an end, Bertram returns to France. Since Helen is presumed dead, he makes preparations to marry again, and sends his proposed fiancée his ring. The King identifies it as the ring he himself gave to Helen. Diana arrives, claiming the right to marry him after their supposed night together in Florence, and produces his own ring as proof. Bertram attempts to lie his way out of the situation, but is repeatedly caught out. Diana introduces Helen,…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

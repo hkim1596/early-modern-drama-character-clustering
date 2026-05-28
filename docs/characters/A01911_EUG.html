@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EUG in Sir Giles Goosecap · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>EUG</span>
+</nav>
+
+<h1>EUG</h1>
+<p class="lede">in <em>Sir Giles Goosecap</em> — Chapman, George</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1606</td></tr>
+<tr><th>Words</th><td>1664</td></tr>
+<tr><th>Characters</th><td>8413</td></tr>
+<tr><th>BritDrama no.</th><td>1340</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">your <mark>heart</mark> to stay so long from me. Beshrew my hearte my Lorde, if you <mark>goe</mark> theis three houres. Come, Come, pray tell me vnckle, how does my cosen Momford? But when <mark>did</mark> you see my Cosen? VVhat meanes hee by this tro yee, your Lo: is verie dancitiue me thinkes. But I pray tell me my Lord could you tell me of a thing would make me</div>
+<div class="excerpt">greate matters. But I pray tell me first, whats that would make me daunce yfaith? Nay good Vnckle say whats the thing you could tel me of. VVhy, how now Vnckle <mark>did</mark> you neuer see mee before! This is excellent. VVell my Lorde, since you will not tell me your secret, ile keepe another from you; with whose discoue rie, you may</div>
+<div class="excerpt">Sir Cuttberd. VVell forth my Lord. Thats pretious ware indeed. Forth good Lord Tales. VVel, come in my Lords, and take a bad dinner with me now, and wee will all <mark>goe</mark> with you at night to a better supper with the Lord, and Ladie Furnifall. Hees a goodly greate knight indeed; and a little needle in his hand will become him prettelie.</div>
+<div class="excerpt">life, tis not thus I hope. By my life but tis none of my deed then. VVh, ythis is plaine dishonoured deceit. Does all your truest kindnes end in lawe? VVhy, thus <mark>did</mark> false Accontius snare Cydippe. VVel there you haue my hand, but ile besworne I neuer <mark>did</mark> thing so against my will. No, no my Lord, you will haue Clarence there.</div>
+<div class="excerpt">shall but wrong and trouble him. His Contemplations greet him with most welcome. Your Logicall wit my Lorde is able to make a ny thing good. Come on faire Ladies I <mark>must</mark> make you both Familiar witnesses of the most strange part And full of impudence that ere I plaide. I that haue bene so more then maiden-nice To my deare Lord and</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Ile take order with the Porter for it Ladie, good night gentlemen. I warrant you Ladie I shall neuer be troubled with dreaming of my Fre ̄ ch Suter. But say deere Vnckle how could you finde in your heart to stay so long from me. Beshrew my hearte my Lorde, if you goe theis three houres. Come, Come, pray tell me vnckle, how does my cosen Momford? But when did you see my Cosen? VVhat meanes hee by this tro yee, your Lo: is verie dancitiue me thinkes. But I pray tell me my Lord could you tell me of a thing would make me dance say you? Lord blesse vs, heres such a stir with your farewels. Gods pretious, two or three dayes? why this Lord is in a marualous strange humor. Sit downe sweet Vnckle, yfaith I haue to talke with you about greate matters. But I pray tell me first, whats that would make me daunce yfaith? Nay good Vnckle say whats the thing you could tel me of. VVhy, how now Vnckle did you neuer see mee before! This is excellent. VVell my Lorde, since you will not tell me your secret, ile keepe another from you; with whose discoue rie, you may much pleasure mee, and whose conceale ment may hurt my es … ate. And if you bee no … inder then to see mee so indangered; ile bee very patient of it I assure you. Ay me poore Dame, O you amase me Vnckle, Is this the wondrous fortune you presage? VVhat man may miserable women trust? O vnckle you haue wounded your selfe in charg ing me that I should shun Iudgement as a monster, if it woulde not weepe; I place the poore felicitie of this worlde in a woorthie friende, and to see him so vnwor thely reuolted, I shedd not the teares of my Brayne, but the teares of my soule. And if euer nature made teares theffects of any worthie cause, I am su … e I now shedde them worthelie. How am I doubl&#x27;d? when my honour, and good name, two essentiall parts of mee; woulde bee lesse, and lost? In the iudgment of the world. Which yet will not maintaine him a weeke: Such kinde of noblenesse giues no cotes of honour nor can scarse gette a cote for necessitie VVhy seekes he me then? Good Vnckle be content for now shall I ne uer dreame of contentment. Verus honos … at at mendax infamia terret. not I Ladie, I hope our suiters are no fit meat for our Pages. VVhat&#x27;s the matter Hippolita? Hee may well be said to be of the family of Loue, he does so flowe in the loues of poore ouerthrowne La dies. Come on lets see. Shut it now and ile tell yee. Y&#x27;aue the worst hand that euer I saw knight haue ▪ when tis open, one can find nothing in it, and when tis shutt one can get nothing out ont. A good Cornish principle belieue it Sir Cuttberd. VVell forth my Lord. Thats pretious ware indeed. Forth good Lord Tales. VVel, come in my Lords, and take a bad dinner with me now, and wee will all goe with you at night to a better supper with the Lord, and Ladie Furnifall. Hees a goodly greate knight indeed; and a little needle in his hand will become him prettelie. But not … c … erso, from the Spanish needle to the Spanish pike. He saies wel to you Hippolita. VVhat winde blowes you hether troe? Nay then neuer trust me. O yare a sweete vnckle. Now was there euer Lord so prodigall, of his owne honor&#x27;d blood, and d … nity? Gods my life you go … like a cuning spokes man, man, answere vnckle? what doe ye thinke me desperate of a husband I will not write that&#x27;s certaine. O yare in a mightie danger noe doubt on&#x27;t. I will not write yfaith. If you write no otherwise then I dictate, it will scarce prou … a kinde answere I be leeue. He loues extreamely that suffers not in loue. Nay if I answere anie thing. You answere? shall I set my hand to your an swere? By my faith, but you shal answere as I wood haue you then. Since you needes will haue my Answere, Ile Answere 〈◊〉 to the first, and last part of his letter. I cannot but suffer you to loue, if you do loue. Beshrowe my lipps then my Lord. Nay good my Lord hold your hand, for ile bee sworne, ile not set my hand … oo&#x27;t. Euen this my Lorde, your Loue being mentall, needes no bodely Requitall. VVhat but in hart? You may write vnckle, but if you get my hand to it, My ha … d shall alwaies signe the way to felicitie. And so God prosper your Iourney. Read what you haue writ my Lord. Well if it want sence in the Composition, let my secretarie be blam&#x27;d for&#x27;t, theirs my hand. VVhy now, more then before I pray? Remember that requitall was of your own put ning it, but it shal be after my fashion I warrant ye. Gods me life, tis not thus I hope. By my life but tis none of my deed then. VVh, ythis is plaine dishonoured deceit. Does all your truest kindnes end in lawe? VVhy, thus did false Accontius snare Cydippe. VVel there you haue my hand, but ile besworne I neuer did thing so against my will. No, no my Lord, you will haue Clarence there. Is this the man that without passion loues I will on that condition. Not heare it Sir Giles. See what a pretie worke he weares in his boote ▪ hose. Bought am for nothing. You speake for your kinsman the best, that euer I heard my Lord. Glowe-wormes sir Giles will they make it burne? What shood he Court me with all else my Lord? VVith all my heart my Lorde, if I shall bee so much in debted to him. Alas we shall but wrong and trouble him. His Contemplations greet him with most welcome. Your Logicall wit my Lorde is able to make a ny thing good. Come on faire Ladies I must make you both Familiar witnesses of the most strange part And full of impudence that ere I plaide. I that haue bene so more then maiden-nice To my deare Lord and vnkle not to yeeld By his importunate suite to his friends loue In looke, or almost thought; will of my selfe Farre past his expectation or his hope In action, and in person greete his friend, And comfort the poore gentlemans sick state. No but I feare me it will stretch to more Marrie Madam? what shood I marrie him? Gods pretious Ladie, knowe ye what you say, Respect you what I am, and what he is, VVhat the whole world wood say, &amp; what great Lords I haue refused and might as yet embrace, And speake you like a friend, to wish me him? Tis well said Ladies, thus we differ then, I to the truth-wise, you to worldly men: And now sweet dames obserue an excellent iest (At least in my poore iesting.) Th&#x27; Etl my vnckle Will misse me straite, and I know his close drift Is to make me, and his friend Clarence meete By some deuice or other he hath plotted. Now when he seekes vs round about his house And cannot find vs, for we may be sure He will not seeke me in his sicke … iends chamber, (I haue at al times made his loue so strange,) He straight will thinke, I went away displeas&#x27;d, Or hartelie careles of his hartiest sute. And then I know there is no greife on earth Will touch his hart so much, which I will suffer To quite his late good pleasure wrought on me, For ile be sworne in motion and progresse Of his friends suite, I neuer in my life VVrastled so much with passion or was mou&#x27;d To take his firme loue in such … elouse part. Bould in a good cau … e, then lets greet his friend, VVhere is this sickly gentleman at his booke? Now in good troth I wood theis bookes were burnd That rapp men from their … app before their time, How does my vnckles friend, no other name I need giue him, to whome I giue my selfe, VVhy, Clarence is your iudgement bent to show A common louers passion? let the world, That liue … without a hart, and is but showe, stand on her emtie, and impoisoned forme, I knowe thy kindenesse, and haue seene thy hart, Clest in my vnckles free, and friendly lippes And I am onely now to speake and act, The rit&#x27;es due to thy loue: oh I cood weepe ▪ A bitter showe of teares for thy sick state, I cood giue passion all her blackest rites. And make a thousand vowes to thy deserts, But these are common, knowledge is the bond, The seale and crowne of our vnited mindes ▪ And that is ra … e, and constant, and for that, To my late written hand I giue thee this, See heauen, the soule thou gau&#x27;st is in this hand. This is the knot of our eternitie, VVhich fortune, death, nor hell, shal euer loose. Come vnckle shall we goe to supper now? A las what ailes my vnckle, Ladies see. Come, come, you haue abus&#x27;de me now I know And now you plaister me with flatteries. O vnckle thinke you so, I hope I made My choyce with too much Iudgment to take shame Of any forme I shall performe it with. Nay 〈◊〉 then I plead This goes with my choyce, Some more wise then some, For onely vertues choise is truest wisedome.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Sir Giles Goosecap</div><div class="body">The widow Eugenia lives in chastity with two virgins, Hippolyta and Penelope. They entertain three foolish would-be suitors to supper: Sir Giles Goosecap, Sir Cuthbert Rudesby, and Captain Foulweather. A page tells the guests that the ladies plan an early morning visit to Barnet the next day, and encourages them to rendezvous there; in fact, it is to be a wild-goose chase. The pages later meet the suitors on their way back, and tell them that the ladies decided not to go after all, asa test of tolerance. Clarence is also in love with Eugenia, and confides this to his best friend, her uncle, Lord Momford. Disturbed to hear of the supper with the knights, Momford visits his niece and tries to press Clarence’s suit. Relatives of Goosecap and Rudesby likewise sing their in-laws’ praises, albeit rather unconvincingly. Momford brings a love-letter from Clarence and tries to get Eugenia to reply; he agrees to take dictation from her, but writes down her refusal with additional phrases which turn it into an acceptance, then signs her name on her behalf. Momford invites the ladies to supper. Eugenia is persuaded to come only on the assurance that Clarence is too ill to be present. The other suitors are also invited. Momford takes his guests on a tour of the house, during which they overhear Clarence discussing Eugenia with his doctor - an ‘accident’ which was planned by Momford all along. Eugenia suspects that he also intends to arrange a more direct encounter with Clarence, so she hides in the one place they will not expect to find her: Clarence’s bedroom. But Clarence is there, and they agree to marry. Momford is delighted that she has accepted his friend without knowing that the young man is also his heir.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

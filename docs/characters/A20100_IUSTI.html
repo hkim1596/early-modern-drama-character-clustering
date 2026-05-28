@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IUSTI in Westward Ho · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>IUSTI</span>
+</nav>
+
+<h1>IUSTI</h1>
+<p class="lede">in <em>Westward Ho</em> — Dekker, ThomasWebster, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>759</td></tr>
+<tr><th>Characters</th><td>3947</td></tr>
+<tr><th>BritDrama no.</th><td>1450</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Whats he? complexion to? you are a bawd. Doe you <mark>heare</mark>, if you haue any businesse to dispatch with that deafe goodnesse there, pray you take leaue: opportunity, that which most of you long for (though you neuer <mark>bee</mark></div>
+<div class="excerpt">second tyde betweene Graues ende, and Billingsga e. Any thing: I haue sold my House, and the wares int? I am going for Stoad next tide, what will you do now wife? <mark>Goe</mark>, no longer will I make my care thy prison. So, farewell the acquaintance of all the mad Deuils that haunt Iealiousie, why should a man <mark>bee</mark> such an asse to play</div>
+<div class="excerpt">to liue disguised heere in the Citty; they say for one Cuckolde to knowe that his friend is in the like head-ake, and to giue him counsell, is as if there were <mark>two</mark> partners, the one to <mark>bee</mark> arrested, the other to baile him: my estate is made oue to. My friends, that doe verily beleeue, I meane to leaue England. Haue amongst</div>
+<div class="excerpt">so long as your mirth <mark>bee</mark> voyde of all Squirrility, tis not vnfit for your calling: I trust ere few daies <mark>bee</mark> at an end to haue her fal to her ioyning: for she <mark>has</mark> her letters ad vnguem: her A. her great B. and her great C. very right D. and E. dilicate: hir double F. of a good length, but that it straddels a little to wyde:</div>
+<div class="excerpt">Sempsters keepe open shop, and sell learning by retaile, may keepe their beds, and lie at their pleasure: But we that edi fie in priuate, and traffick by whole sale, <mark>must</mark> be vp with the lark, because like Country Atturnies, wee are to shuffle vp many mat ters in a for-enoone. Certes maister Honisuckle, I would sing Laus Deo, so I</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Whats he? complexion to? you are a bawd. Doe you heare, if you haue any businesse to dispatch with that deafe goodnesse there, pray you take leaue: opportunity, that which most of you long for (though you neuer bee with Child) opportunity? Ile find some idle businesse in the mean time, I wil, I will in truth, you shall not neede feare me, or you may speake French, most of your kinds can vnderstand French: god buy you. Being certaine thou art false: sleepe, sleepe my braine, for doubt was onely that, which fed my paine. Motion, why like the motion in law, that staies for a day of hearing, yours for a night of hearing. Come lets not haue Apri l in your eyes I pray you, it shewes a wanton month followes your weeping? Loue a woman for her tea es? Let a man loue Oist rs for their water, for women though they shoulde weepe cour enough to serue a Dyer, or a Brewer, yet they may bee as stale as Wenches, that trauaile euery second tyde betweene Graues ende, and Billingsga e. Any thing: I haue sold my House, and the wares int? I am going for Stoad next tide, what will you do now wife? Goe, no longer will I make my care thy prison. So, farewell the acquaintance of all the mad Deuils that haunt Iealiousie, why should a man bee such an asse to play the antick for his wiues appetite? Immagine that I, or any other great man haue on a veluet Night-cap, and put case that this night-cap be to little for my eares or forehead, can any man tell mee where my Night-cap wringes me, except I besuch an asse to proclaime it; Well, I do play the foole with my misfortune very hand som ly. I am glad that I am certaine of my wiues dishonesty; for a se cret strumpet, is like mines prepard to ruine goodly buildings. Farewel my care, I haue told my wife I am going for Stoad; thats not my course, for I resolue to take some shape vpon me, and to liue disguised heere in the Citty; they say for one Cuckolde to knowe that his friend is in the like head-ake, and to giue him counsell, is as if there were two partners, the one to bee arrested, the other to baile him: my estate is made oue to. My friends, that doe verily beleeue, I meane to leaue England. Haue amongst you Citty dames? You that are indeede the fittest, and most proper persons for a Comedy, nor let the world lay any imputation vp on my disguise, for Court, Citty, and Countrey, are meerely as maskes one to the other, enuied of some, laught at of others, and so to my comicall businesse. Salue tu quo que Iubeo te saluere plurimum. The more is the pitty, if any dawes do come into the tem ple, as I feare they do. Sir, your vulgar and foure-peny-pen-men, that like your London Sempsters keepe open shop, and sell learning by retaile, may keepe their beds, and lie at their pleasure: But we that edi fie in priuate, and traffick by whole sale, must be vp with the lark, because like Country Atturnies, wee are to shuffle vp many mat ters in a for-enoone. Certes maister Honisuckle, I would sing Laus Deo, so I may but please al those that come vnder my fingers: for it is my duty and function, Perdy, to be feruent in my vocation. She leanes somewhat too hard vppon herpen yet sir, but practise and animaduersion will breake her from that. Its but my paines to mend the neb agen. Sir so long as your mirth bee voyde of all Squirrility, tis not vnfit for your calling: I trust ere few daies bee at an end to haue her fal to her ioyning: for she has her letters ad vnguem: her A. her great B. and her great C. very right D. and E. dilicate: hir double F. of a good length, but that it straddels a little to wyde: at the G. very cunning. But her: double LL is wel: her O. of a reasonable Size: at her p. and q. neither Marchantes Daughter, Aldermans Wife, young countrey Gentlewoman, nor Courtiers Mistris, can match her. A small fault: most of my schollers do so: looke you sir, do not you thinke your wife will mend: marke her dashes, &amp; her strokes, and her breakings, and her bendings?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Westward Ho</div><div class="body">Through the bawd Birdlime, an earl is trying to corrupt Mistress Justiniano, but despite her husband’s jealous suspicions she has so far resisted his advances and remained chaste. He pretends bankruptcy, and tells her he is going abroad; but in fact he remains in London disguised as a writing teacher, Parenthesis. Meanwhile his wife, feeling the force of her poverty, is tempted by the Earl The wives of three citizens, Tenterhook, Wafer, and Honeysuckle, have a tavern assignation (arranged by ‘Parenthesis’) with Sir Gosling Glow-worm and friends; there they plan a journey westward by boat for a sexual night out in Brentford, with the wives’ absence explained by a ruse. ‘Parenthesis’ agrees to report that they have gone to visit Wafer’s sick child, and does so disguised as a collier. Mistress Tenterhook arranges for her kinsman Monopoly to be arrested for an unpaid debt to her husband, then bribes the arresting officer to free him so that he can join the party going to Brentford. ‘While their wives are away, the three citizens all try fo visit the same prostitute; Birdlime tries to juggle 1604 them, but they discover each other’s identities. Justiniano reveals himself and tells them where their wives really are, then takes his wife’s place, cross- dressed, at her assignation with the Earl. Discovering the substitution, the Earl thinks he has been visited by a succubus. Justiniano pretends he has poisoned his wife and shows the dead body; this is only a ruse, but the Earl is duly struck with conscience. At Brentford, the wives resist the gallants’ plans to seduce them, and Sir Gosling Glow-worm induces the local fiddlers to disturb the neighbourhood with bawdy songs. When the husbands arrive expecting to catch their wives in the act of adultery, they find them chaste. Monopoly’s debt is discharged through Justiniano’s intervention, and Sir Gosling attacked by outraged locals. The party returns home to London.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

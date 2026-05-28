@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DA in Supposes · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_06.html">Cluster 6 — 6: damon, erostrato, pithias</a> ›
+  <span>DA</span>
+</nav>
+
+<h1>DA</h1>
+<p class="lede">in <em>Supposes</em> — Gascoigne, GeorgeAriosto, Ludovico</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1573</td></tr>
+<tr><th>Words</th><td>1917</td></tr>
+<tr><th>Characters</th><td>9906</td></tr>
+<tr><th>BritDrama no.</th><td>419</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 6 (<em>damon, erostrato, pithias, pasiphilo, dionisius, suche…</em>). Matches are highlighted.</p>
+<div class="excerpt">firste, <mark>Erostrato</mark> the seconde, and so from one to another throughout the citie. Alas, what dower, what mariage shall I nowe prepare for my daughter? O poore dolorous <mark>Damon</mark>, more miserable than miserie it selfe, would god it were true that Polinesta, tolde me ere while: that he who hathe deflowred hir, is of no seruile estate, as hitherto</div>
+<div class="excerpt">this Pasi philo that commeth out of my neighbours house? what the deuill ayleth him to leape and laughe so like a foole in the high way? O God, that I might finde <mark>Damon</mark> at home. What the deuill would he with me? What will he tell me, in the name of God? What newes <mark>Pasiphilo</mark>, that thou arte so merie? And that I haue nede of <mark>Pasiphilo</mark>.</div>
+<div class="excerpt">with me? What will he tell me, in the name of God? What newes <mark>Pasiphilo</mark>, that thou arte so merie? And that I haue nede of <mark>Pasiphilo</mark>. How knowest thou? What, in Erostratos house? Well, then I perceiue it is eue ̄ as Polinesta told me. Yea: But I thought it but a tale. Cleander? what to doe? Nay I will first goe heare the storie of</div>
+<div class="excerpt">here, as though I haue nothing else to doe: I am matched with an vnrulye mate in the kitchin, I will goe loke to him another while. An honest gentlema ̄ , father t <mark>Erostrato</mark> my maister. Here within. I thinke you may if you be not blinde. Mary that I will willingly doe. Shall I suffer a knaue to abuse my maisters father thus? hence villaine,</div>
+<div class="excerpt">willingly doe. Shall I suffer a knaue to abuse my maisters father thus? hence villaine, hence, or I will sheath this good faw chio ̄ in your pau ̄ ch: if my maister <mark>Erostrato</mark> find you prating here on this fashio ̄ to his father, I wold not be in your coate for mo cunnie skinnes than I gat these twelue monethes: come you in againe sir,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Ah beast. Is it euen so? is the winde in that doore? If I wer vnlode ̄ I would tel you whether I be a horned beast or no. Go in and bid Neuola and his fellowes come hither that I may tell them what they shall go about, and go you into my studie, there vppon the shelfe you shall find a roule of writings which Iohn of the Deane made to my father, when he solde him the Grange ferme, endorced with both their names: bring it hither to me. Go, I will prepare other maner of writings for you tha ̄ you are aware of. O fooles that trust any ma ̄ but them selues now adayes, oh spiteful fortune, thou doest me wro ̄ g I thinke, that from the depth of Hell pitte thou hast sente me this seruant to be the subuersion of me and all mine, come hither sirs and heare what I shall say vnto you: go in to my studie, where you shall find Dulippo, step to him all at once, take him and with a corde that I haue laide on the table for the nonce, bind him hande and foote, carie him into the dungeo ̄ vnder the steares, make fast the dore and bring me the kay, it hangeth by vppon a pin ou the wal, dispatche and do this geare as priuily as you can, and thou Neuola come hither to me againe with spéede. Alas how shall I be reuenged of this extreme des pite? if I punishe my seruant according to his diuelishe de serts, I shall heape further cares vpon mine owne head, for to suche detestable offences no punishment can séeme sufficient, but onely death: &amp; in such cases it is not lawfull for a man to be his owne caruer, the lawes are ord yned, and officers appoynted to minister iustice for the redresse of wrongs: and if to the potestates I complayne me, I shal publishe mine owne reproche to the worlde: yea, what should it preuayle me to vse all the punishments that can be deuised? the thing once done can not be vndone. My daughter is defloured, and vtterly dishonested, howe can I then wype that blot off my browe? and on whome shall I séeke reuenge? Alas, alas, I my selfe haue bene the cause of all these cares, and haue deserued to beare the punishment of all these mishappes. Alas, I should not haue committed my dearest darling in custodie to so carelesse a creature as this olde Nourse: for we sée by common proofe, that these olde women be either péeuishe, or to pitifull: either easily enclined to euill, or quickly corrupted with bribes and re wards. O wife, my good wife (that nowe lyest colde in the graue) now may I well bewayle the wante of thée, and mourning nowe may I bemone that I misse thée: if thou hadst liued, such was thy gouernement of the least things, that thou wouldest prudently haue prouided for the preser uation of this pearle: a costly iewell may I well accompte hir, that hath béen my chéefe comforte in youth, and is nowe become the coro ue of mine age. O Polynesta, full euill hast thou requ ed the clemencie of thy carefull father, and yet to excuse thée giltlesse before God, and to condemne thée giltie before the worlde, I can count none other but my wretched selfe the caytife and causer of all my cares: for of all the due ties that are requisite in humane lyfe, onely obedience is by the parents to be required of the childe, where on y e other side the pare ̄ ts are bound, first to beget them, then to bring the ̄ foorth, after to nourish them, to preserue them from bo dily perils in the cradle, from daunger of soule by godly e ducation, to matche them in comfort enclined to vertue, to banish them all ydle and wanton companie, to allow them sufficiente for their sustentation, to cut of excesse the open gate of sinne, seldome or neuer to smile on them vnlesse it be to their encouragement in vertue, and finally, to prouide them mariages in time co ̄ uenient, lest neglected of vs, they learne to sette either to much or to litle by themselues: fiue yeares are past since I might haue maried hir, when by con tinuall excuses I haue prolonged it to my owne perdition: Alas, I shoulde haue considered, she is a collop of my owne flesh, what should I thinke to make hir a princesse? Alas a las, a poore kingdome haue I now caught to endue hir with: it is too true, that of all sorowes this is the head source and chiefe fountaine of all furies: the goods of the worlde are in certaine, the gaines to be reioyced at, and the losse not great ly to be lamented, only the children cast away, cutteth the parents throate with the knife of inward care, which knife will kill me surely, I make none other accoumpte. SIr, we haue done as you badde vs, and here is the key. Well, go then Neuola and séeke master Casteling the iayler, he dwelleth by S. Antonies gate, desire him to lend me a paire of the fetters he vseth for his prisoners, and come againe quickly. Heare you, if he aske what I would do with them, say you ca ̄ not tell, and tell neither him nor any other, what is become of Dulippo. I warante you sir. Fye vpon the Deuill, it is a thing al most vnpossible for a man nowe a daies to handle money but the metall will sticke on his fingers: I maruelled alway at this fellowe of mine Dulippo, that of the wages he re ceiued, he could mainteine himselfe so brauely apparelled, but now I perceiue the cause, he had the disbursing and re ceite of al my masters affaires, the keys of the granair, Du lippo here, Dulippo there, in fauoure with my master, in fauoure with his daughter, what woulde you more, he was Magister fac totum, he was as fine as the Crusadoe, and we silly wretches as course as canuas: well, behold what it is come to in the end, Pasi. subitò &amp; improui so venit. he had bin better to haue done lesse. He is not within. If you thinke to lodge here, you are deceiued I tell you, for here are guestes enowe already. Here is Philogano my maisters father, lately come out of Sicilia. It is a small matter for me to open the dore, but here is no lodging for you, I tell you plaine, the house is full. I tolde you: here is Philogano my maisters father come from Cathanea. He came thrée houres since, or more, he alighted at the Aungell, and left his horses there: afterwarde my mai ster brought him hither. Nay, I thinke you haue good sporte to make me tary here, as though I haue nothing else to doe: I am matched with an vnrulye mate in the kitchin, I will goe loke to him another while. An honest gentlema ̄ , father t Erostrato my maister. Here within. I thinke you may if you be not blinde. Mary that I will willingly doe. Shall I suffer a knaue to abuse my maisters father thus? hence villaine, hence, or I will sheath this good faw chio ̄ in your pau ̄ ch: if my maister Erostrato find you prating here on this fashio ̄ to his father, I wold not be in your coate for mo cunnie skinnes than I gat these twelue monethes: come you in againe sir, and let this Curre barke here till hée burst. LItio, how likest thou this géere? Doth this dogge barke here still? and will you suffer him master thus to reuile you? I will rap the olde cackabed on the costerd. Thou liest olde drabbe, but I woulde aduise you tell me the truth, or I wil make those olde bones rattle in your skinne. Why? where should he talke with thée? What did you here? And what cause coulde Pasiphilo haue to talke of it, vnlesse thou began the matter first? Alas, alas, what shall I doe then? in at dores olde whore, I wil plucke that tong of thine out by the rootes one day. Alas it gréeueth me more that Pasiphilo knoweth it, than all the rest: he that will haue a thing kept secrete, let him tell it to Pasiphilo, the people shall knowe it, and as many as haue eares and no mo: by this time he hath tolde it in a hundreth places. Cleander was the firste, Erostrato the seconde, and so from one to another throughout the citie. Alas, what dower, what mariage shall I nowe prepare for my daughter? O poore dolorous Damon, more miserable than miserie it selfe, would god it were true that Polinesta, tolde me ere while: that he who hathe deflowred hir, is of no seruile estate, as hitherto he hath bene supposed in my seruice: but that he is a gentleman borne of a good paren tage in Sicilia. Alas, small riches should content me, if he be but of an honest familie, but I feare that he hathe deuised these toyes to allure my daughters loue. Well I wil goe ex amine hir againe, my mind giueth me that I shall perceiue by hir tale whether it be true or not. But is not this Pasi philo that commeth out of my neighbours house? what the deuill ayleth him to leape and laughe so like a foole in the high way? O God, that I might finde Damon at home. What the deuill would he with me? What will he tell me, in the name of God? What newes Pasiphilo, that thou arte so merie? And that I haue nede of Pasiphilo. How knowest thou? What, in Erostratos house? Well, then I perceiue it is eue ̄ as Polinesta told me. Yea: But I thought it but a tale. Cleander? what to doe? Nay I will first goe heare the storie of this Dulipo, be it Dulipo or Erostrato that I heare within, before I speake with Philogano. Worthy gentleman, you frendship, your alliaunce, and the nobilitie of your birthe are suche, as I haue muche more cause to desire them of you, than you to request of me that which is already graunted: therefore I gladly, and wil lingly receiue the same, and thinke my selfe moste happie now of all my life past, that I haue gotte ̄ so toward a sonne in lawe to my selfe, and so worthye a father in lawe to my daughter, yea and muche the greater is my contentation, since this worthie gentleman maister Cleander, doth holde himselfe satisfied. And now behold your sonne. Pasiphilo hathe saide well, will it please you to goe in sir? Away with them now. Marie I will tell thée Neuola, to make a righte ende of our supposes, lay one of those boltes in the fire, and make thée a suppositorie as long as mine arme, God saue the sam ple. Nobles and gentlemen, if you suppose that our suppo ses haue giuen you sufficient cause of delighte, shewe some token, wherby we may suppose you are content.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Supposes</div><div class="body">Polynesta loves Dulippo, whose suit has been promoted by her nurse, and who is supposed a poor servant. In fact he is not Dulippo at all but Erostrato, who two years ago gained access to Polynesta by swapping identities with his servant and entering her father Damon’s household. Meanwhile Cleander seeks her hand, and the supposed Erostrato (the true Dulippo) becomes his rival for trust with him. Cleander appears to offer the best dowry, but Damon gives ‘Erostrato’ a fortnight’s grace pending his father Philogano’s arrival to underwrite his counter-offer. ‘Erostrato’ duly arranges to produce a false Philogano, recruiting a Sienese gentleman for the role by persuading him that a diplomatic incident has made Ferrara an unsafe place for a Sienese visitor. Overhearing an argument between two women servants, Damon discovers that ‘Dulippo’ and Polynesta have been sleeping together. ‘Dulippo’ is apprehended and imprisoned in the dungeon of his master’s house, and therefore unable to warn his servant of the arrival of the true Philogano: he misses his son and has come to take him back to Sicily. By chance, Philogano meets the true Dulippo, who refuses to acknowledge him. After the locals confirm that they know the young man as Erostrato, Philogano suspects that he has murdered his master and stolen his identity, and seeks legal assistance from Cleander. However, Dulippo turns out to be Cleander’s son, whom he lost as a child when evacuating Otranto during the Turkish conquest; he was later captured by Sicilians and sold to Philogano. The exchange of identities is revealed, allaying Damon’s worries about his daughter’s reputation. Cleander withdraws his suit: he no longer needs to marry and beget an heir now that his lost son has been restored to him. The true Erostrato is confirmed as Polynesta’s future husband.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_06.html">Cluster 6 — 6: damon, erostrato, pithias</a> page.
+</div>
+</div></body></html>

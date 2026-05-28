@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AUTOL in Holland&#x27;s Leaguer · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>AUTOL</span>
+</nav>
+
+<h1>AUTOL</h1>
+<p class="lede">in <em>Holland&#x27;s Leaguer</em> — Marmion, Shackerley</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1632</td></tr>
+<tr><th>Words</th><td>965</td></tr>
+<tr><th>Characters</th><td>5023</td></tr>
+<tr><th>BritDrama no.</th><td>2351</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">up for you, in honour of your wits, More then Herculean pillers, to advance Your Fame to a non ultra, that who euer Shall read your hiſtory, may not attempt To <mark>goe</mark> beyond it. Faith you need not doubt them, To manage the buſineſſe. Sir, for the Gentlewoman that is with her, Not ſo much in the nature of a ſervant, As her Companion;</div>
+<div class="excerpt">true modeſty, &#x27;Tis ſeldome knowne, riches and vertue meet In ſuch a mixture. &#x27;Tis good counſell. Farewell Sir. What is ſhee? Hang me, ſo well, I thinke you may <mark>goe</mark> on, In a right line, ſhe is worthy of a better. Few of your moderne faces are ſo good. Thou haſt a noble wit, and ſpirit, wench, That neuer was ordaind for any</div>
+<div class="excerpt">As her Companion; for &#x27;tis the faſhion Amongſt your great ones, to haue thoſe wait on them As good as themſelues: ſhe is the ſole daughter To a great Knight, and <mark>has</mark> an ample dowry. Apply your ſelfe to her, though it be nothing Elſe but to practiſe Courtſhip, and to keepe you From ſleepe and idleneſſe. You ſhall not doe Amiſſe</div>
+<div class="excerpt">a boy, And would you tyre him like a Senator, And put a declamation in his mouth? Twere a meere madneſſe in you: here they come; See what a Maieſty ſhe beares, <mark>goe</mark> meet her. You ſee your friend there, M r Trimalchio Is like to ſpeed, and fairely on his way To much happineſſe. I would not willingly That any ſhould miſcarrie</div>
+<div class="excerpt">is the horſe, ſayes one, M r , Capritioes. What he, ſayes another? a Noble Gentleman. &#x27;Twill draw the eyes of a whole Shire upon you, Beſides the Citizens that <mark>goe</mark> downe to bett. And then &#x27;twill furniſh you With fitting diſcourſe for any mans table. A horſe and a dogge, no better a ſubiect To exerciſe your tongue in, many</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">What ſhould I doe? I haue no thriuing way to lye and flatter, Nor haue I ſuch dexterity of wit As you haue (bleſt be heaven) to convert Blacke into white. Nor can I promiſe The death of any by the Starres, I haue No rich mans funerall to folemnize, That left a guilt ring for my Legacie, And his old Velvet jerkin to ſurvive him. I have no ſecret boyles within my breaſt. For which I am fear&#x27;d, no ſ it in Law to follow, No accuſation &#x27;gainſt a great man, No houſe to let to farme, o tender wife To proſtitute, or skill to corrupt others, And ſleepe amidſt their wanton Dialogues. Would you haue me Act the plagiary, and ſeeke preferment, To be the drunken ba d of ſome blacke ſtewes? And thinke my deſtin e well ſatisfied, When my ſhame feeds me, and at length expect A Legacie, bequeath&#x27;d me from ſome Bawd, In lieu of my old ſervice, or according To the proportion of my Hernia. How ſhall that be done? For that I&#x27;ll make no ſcruple. What&#x27;s hee? Is he not the Sonne To the rich Vſurer, that died ſo lately? When ſhall I ſee him? What ſhall I turne a Roarer? I take, S guiour Trimalchio. I doe not uſe to ſell my liberty, But that I ſee your face promiſe true bounty. I were not fit elſe, to be ſtil&#x27;d traveller. Yes, very lately. Holland&#x27;s beleaguer&#x27;d. And wil hold out as long as Buſſe or B lloign. They haue their Mote and Draw-bridge, I haue giuen them Beſides, a draft of a fortification, Will hold them play this twelvemonth, for they keepe Their paſſage open, and want no ſupplies, For whoſoeuer comes, they pay them ſoundly: The French have made many onflats upon them, And ſtill beene foyld. Croſſing the Line&#x27;s a Bath to it, I had like Beene ſcorcht to death with the intemperature Of the Climate, &#x27;tis the onely Zona torrida, In the whole microcoſme of man or woman, If you ſhall once come neere the height of it, &#x27;Twill melt you like Lightning. If you pleaſe. A woman. But for the patterne of true modeſty, &#x27;Tis ſeldome knowne, riches and vertue meet In ſuch a mixture. &#x27;Tis good counſell. Farewell Sir. What is ſhee? Hang me, ſo well, I thinke you may goe on, In a right line, ſhe is worthy of a better. Few of your moderne faces are ſo good. Thou haſt a noble wit, and ſpirit, wench, That neuer was ordaind for any skinkard T&#x27;ingender with, or mechanick Citizen, Vnleſſe it were to Cuckold him, thou ſhalt Be ſtilli&#x27;th front of any faſhion, And haue thy ſeuerall Gownes and Tires, take place, It is thy owne, from all the City wires, And Summer birds in Towne, that once a yeare Come up to moulter, and then go down to&#x27;ch Country To jeere their neighbours, as they haue beene ſera&#x27;d You ſhall haue trophies, wenches, Set up for you, in honour of your wits, More then Herculean pillers, to advance Your Fame to a non ultra, that who euer Shall read your hiſtory, may not attempt To goe beyond it. Faith you need not doubt them, To manage the buſineſſe. Sir, for the Gentlewoman that is with her, Not ſo much in the nature of a ſervant, As her Companion; for &#x27;tis the faſhion Amongſt your great ones, to haue thoſe wait on them As good as themſelues: ſhe is the ſole daughter To a great Knight, and has an ample dowry. Apply your ſelfe to her, though it be nothing Elſe but to practiſe Courtſhip, and to keepe you From ſleepe and idleneſſe. You ſhall not doe Amiſſe then: what? you may get her good will: And then obiect it to your friends; you can Advance your ſelfe without their counſell. What to a woman? &#x27;twere a ſoleciſme In nature, for you know Cupid&#x27;s a boy, And would you tyre him like a Senator, And put a declamation in his mouth? Twere a meere madneſſe in you: here they come; See what a Maieſty ſhe beares, goe meet her. You ſee your friend there, M r Trimalchio Is like to ſpeed, and fairely on his way To much happineſſe. I would not willingly That any ſhould miſcarrie in a plot That I have a hand in: you muſt be ſodaine I told you, it you meane to be a favourite To fortune, and your Miſtris, and be bold. I then the yee were broke; now ſhe makes towards you, Tis the beſt time, let no occaſion ſlip, A man Of meanes, ſweet Lady, that I can aſſure you. You are welcome by this meanes, doe you mark that? Be not Capritious. What will you ſay, if I ſhew you a way To get a generall credit? I can, and will; I&#x27;ll haue you out of hand, The maſter of a good horſe, and a good dogge, And be knowne by them. Will it? Why when you once haue match&#x27;d your horſe, or dogge. The adverſe party being a man of note, &#x27;Twill raiſe an inquiſition after you. Whoſe is the horſe, ſayes one, M r , Capritioes. What he, ſayes another? a Noble Gentleman. &#x27;Twill draw the eyes of a whole Shire upon you, Beſides the Citizens that goe downe to bett. And then &#x27;twill furniſh you With fitting diſcourſe for any mans table. A horſe and a dogge, no better a ſubiect To exerciſe your tongue in, many Ladies Talke in that dialogue; beſides, there being A kind of neare relation in the nature Of you and thoſe beaſts. the good qualities That are in them, may be thought to be yours. Then let the Lady diſpoſe of her ſelfe.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Holland&#x27;s Leaguer</div><div class="body">Six years ago, Faustina’s father sent her abroad to keep her away from her love, Fidelio, and made her swear not to marry for seven years. Now the old man is dead, she has returned to London, known only to Fidelio, but insists on keeping her oath for the last remaining year. Her brother Philautus is in love with himself, which distresses his friends and offends his wife, but gives his servant Ardelio the opportunity to steal from him by conveying away property into storage at an accomplice’s house. Fidelio plans to make him fall in love with Faustina; this will both cure him and test her fidelity. He explains it to Faustina as a plan to humiliate a lord who has cast aspersions on women. Philautus makes advances to Faustina on the assumption that all women are libidinous and enjoy being raped from time to time; but he is impressed by her militant chastity, and accedes to her demand that he prove his honour in battle. He later returns from the wars, cured of narcissism, and asks Faustina’s pardon for his earlier insolence. She identifies herself as his sister, and he gives his blessing to her marriage to Fidelio; so she agrees to abandon her oath before the seven years are out. On learning that Ardelio is a villain, Philautus dismisses him. He goes to collect the stolen goods, only to find that his partner in crime will not acknowledge that the items even exist. The ensuing argument is overheard, and the miscreants are both arrested, In the sub-plot, Agurtes intends to cheat the courtly name-dropper Trimalchio by introducing him to a young heiress - who is, in reality, his daughter and lifelong accomplice Millicent. When he visits Millicent, Trimalchio brings along Philautus’ brother-in-law ===== PAGE 537 ===== 1631 as Capritio, wiie: has’ been brought to towit: oleae: courtly manners.:Agurtés suggests to Trimalchio that: an Italian. (or Italianated) - Signor MisexE Kandy apritio’s tutor traveller, he may have&#x27;rivals for the heiress’s hand ii marriage. ~ AL PANDER at Holland’s} 1 daa Meanwhile Capritio woos Millicent’ 3 ‘Maids: ‘Margery. |ee Trimalchio declines to join. ‘Philautus: atthe. Anilitary — leaguer, preferring to visit: Holland&#x27;s: premises and arrests the: cliente: including T. sionals ; : They are ‘brought 4 and Capritio’s. tutor, ‘Miscellank before..a justice; who is really Agurtes. in @ second disguise; but freed when a letter arrives trom. hadlltéent ! asking.-for their reprieve. Miscellanio: is convinced that the letter was sent on his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

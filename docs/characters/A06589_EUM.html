@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EUM in Endymion, the Man in the Moon · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> ›
+  <span>EUM</span>
+</nav>
+
+<h1>EUM</h1>
+<p class="lede">in <em>Endymion, the Man in the Moon</em> — Lyly, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1591</td></tr>
+<tr><th>Words</th><td>1552</td></tr>
+<tr><th>Characters</th><td>8571</td></tr>
+<tr><th>BritDrama no.</th><td>794</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 12 (<em>amyntas, phillis, did, must, endimion, death…</em>). Matches are highlighted.</p>
+<div class="excerpt">knoweth, as a coate to her forme, which continueth not in one bignesse whilst she is measuring. Cease of <mark>Endimion</mark> to feede so much vpon fancies. That melancholy blood <mark>must</mark> be purged, which draweth you to a dotage no lesse miserable then monstrous. But they haue vanities, which beeing refor med, you may be restored. Stay there <mark>Endimion</mark>,</div>
+<div class="excerpt"><mark>must</mark> be purged, which draweth you to a dotage no lesse miserable then monstrous. But they haue vanities, which beeing refor med, you may be restored. Stay there <mark>Endimion</mark>, thou that committest I dolatry, wilt straight blaspheme, if thou be suffered. Sleepe woulde doe thee more good then speech: the Moone heareth thee not, or if shee</div>
+<div class="excerpt">I hope you be not sotted vpon the man in the Moone. Is <mark>Endimion</mark> mad, or doe I mistake? doe you loue the Moone <mark>Endimion</mark>? There was neuer any so peeuish to imagin the Moone eyther capable of affection, or shape of a Mi stris:</div>
+<div class="excerpt">vvhat vertue can there be in water? Haue you knowne this by experience, or is it placed heere of purpose to delude men? Ah Eumenides. Came there women also? What <mark>did</mark> they see? Be faithfull Louers so skant? Shee of all women the most froward, and I of all creatures the most fond. I but if all vertuous Ladies should yeelde to</div>
+<div class="excerpt">comfort of my life, howe am I rauished with a ioy matchlesse, sauing onelie the enioy ing of my mistrisse. It is Semele, Cynthia: the possessing of whose loue, <mark>must</mark> onelie prolong my life. Humble thanks Madame, now onely doe I be gin to liue. Thine own thoughts sweet Semele, witnesse a gainst thy wordes, for what hast thou</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I hope you be not sotted vpon the man in the Moone. Is Endimion mad, or doe I mistake? doe you loue the Moone Endimion? There was neuer any so peeuish to imagin the Moone eyther capable of affection, or shape of a Mi stris: for as impossible it is to make loue fit to her humor which no man knoweth, as a coate to her forme, which continueth not in one bignesse whilst she is measuring. Cease of Endimion to feede so much vpon fancies. That melancholy blood must be purged, which draweth you to a dotage no lesse miserable then monstrous. But they haue vanities, which beeing refor med, you may be restored. Stay there Endimion, thou that committest I dolatry, wilt straight blaspheme, if thou be suffered. Sleepe woulde doe thee more good then speech: the Moone heareth thee not, or if shee doe, regardeth thee not. Without doubt Endimion is bewitched, other wise in a man of such rare vertues, there could not har bor a minde of such extreame madnes. I wil follow him, least in this fancie of the Moone, he depriue himselfe of the sight of the Sunne. Too true Madame, and as much to be pittied as wondered at. It is an olde saying Madame, that a waking dog doth a farre off barke at a sleeping Lyon. Contrarie to your nature Semele, which hath beene alwaies accounted light. Pardon I humbly aske; but such is my vnspot ted faith to Endimion, that whatsoeuer seemeth a needle to pricke his finger, is a dagger to wound my heart. I haue seene him to my griefe, and sought re cure with despaire, for that I cannot imagine who should restore, him that is the wounder to all men: your high nes, on whose handes the compasse of the earth is at co ̄ maund, (though not in possession) may shewe your selfe both worthy your sex, your nature, and your fauour, if you redeeme that honorable Endimion, whose ripe yeres foretell rare vertues, and whose vnmellowed conceits promise rype counsell. On bowed knee I giue thanks, and with wings on my legs, I flye for remedie. Your Maiesties wordes haue beene alwaies deedes, and your deedes vertues. That mee thinketh is vnpossible, why vvhat vertue can there be in water? Haue you knowne this by experience, or is it placed heere of purpose to delude men? Ah Eumenides. Came there women also? What did they see? Be faithfull Louers so skant? Shee of all women the most froward, and I of all creatures the most fond. I but if all vertuous Ladies should yeelde to all that be louing, or all amiable gentlewomen entertaine all that be amorous, theyr vertues would bee accounted vi ces, and their beauties deformities, for that loue can bee but betweene two, and that not proceeding of him that is most faithfull, but most fortunate. Ah, I fainte, I dye. Ah sweete Semele let me a lone, and dissolue by weeping into water. Father, I plainelie see the bottome, and there in white marble engrauen these wordes, Aske one for all, and but one thing at all. Ah Father thou art not a faithfull louer, and therefore canst not beholde it. Aske? so I will: and what shall I doo but aske, and whome should I aske but Semele, the possessing of whose person, is a pleasure that cannot come within the compasse of comparison, whose golden lockes seeme most curious, when they seeme most carelesse, whose sweete lookes seeme most alluring, when they are most chaste: and whose wordes the more vertuous they are, the more amorous they bee accounted. I pray thee for tune when I shall first meete with fayre Semele, dash my delight with some light disgrace, least imbracing sweet nesse beyond measure, I take a surfit without recure: let her practise her accustomed coynesse, that I may dyet my seife vpon my desires: otherwise the fulnesse of my ioyes will diminish the sweetnesse, and I shall perrish by them before I possesse them. Why doe I trifle the time in words? The least minute beeing spent in the getting of Semele, is more worth then the whole worlde: therefore let mee aske. What nowe Eumenides? Whether art thou drawn? Hast thou forgotten both friendship and duetie? Care of Endimi on, and the commaundement of Cynthia? Shall hee dye in a leaden sleepe, because thou sleepest in a golden dreame? I, let him sleepe euer, so I slumber but one mi nute with Semele. Loue knoweth neither friendshippe nor kindred. Shall I not hazard the losse of a friend, for the obtay ning of her for whome I woulde often loose my selfe? Fonde Eumenides, shall the intycing beautie of a most disdainfull Ladie, bee of more force then the rare fide litie of a tryed friend? The loue of men to women is a thing common, and of course: the friendshippe of man to man infinite, and immortall. Tush, Semele dooth possesse my loue. I but Endimion hath deser ued it. I will helpe Endimion. I founde Endimion vn spotted in his trueth. I but I shall finde Semele constant in her loue. I will haue Semele. What shall I doe? Father thy gray haires are Embassadours of experience. Which shall I aske? Father I allowe your reasons, and will therefore conquer mine own. Vertue shall subdue affections, wis dome lust, friendship beautie. Mistresses are in euery place, and as common as Hares in Atho, Bees in Hybla, foules in the ayre: but friends to be founde, are like the Phaenix in Arabia, but one, or the Philadelphi in Arays, neuer aboue two. I will haue Endimion, sacred Fountaine, in whose bowels are hidden diuine secrets, I haue encreased your waters with the teares of vnspotted thoughts and therefore let mee receiue the reward you promise: Endimion, the truest friende to mee, and faith fullest louer to Cynthia, is in such a dead sleepe, that no thing can wake or mooue him. There commeth ouer mine eyes either a darke mist, or vppon the fountaine a deepe thicknesse: for I can perceiue nothing. But howe am I deluded? or what difficult (nay impossible) thing is this? Good father and howe? Yes. Yes. Yes. Yes. How fortunate am I, if Cynthia be she that may doo it. I will hasten thither, that I may intreat on my knees for succour, and imbrace in mine armes my friend. May I nowe knowe the cause? Let vs goe. Good Madame vouchsafe but to trye, els shall I thinke my selfe most vnhappie, that I asked not my sweete Mistris. Pardon mee good Madame, for if Endimion awake hee shall: my selfe haue sworne, neuer to re ueale it. Madame hee beginneth to stirre. Ah, I see his eyes almost open. Endimion, Endimion, art thou deafe or dumbe? or hath this long sleepe taken away thy memorie? Ah my sweet Eudimion, seest thou not Eumenides? thy faith ful friende, thy faythfull Eumenides, who for thy saftie hath beene carelesse of his owne content. Speake Endi mion, Endimion, Endimion. Hast thou forgotten thy selfe Endimion? then do I not maruell thou remembrest not thy friend. I tell thee thou art Endimion, and I Eumenides: beholde also Cyn thia, by whose fauour thou art awaked, and by whose vertue thou shalt continue thy naturall course. One night? thou hast heere slept fortie yeeres, by what Enchauntresse as yet it is not knowne: and be hold the twig to which thou laiedst thy head, is now be come a tree, callest thou not Eumenides to remembrance? Thou art that Endimion and I Eumenides, wilt thou not yet call me to remembrance? After long debating with her selfe, mercie o uercame anger, and there appeared in her heauenly face such a diuine Maiestie, mingled with a sweete mildenes, that I was rauished with the sight aboue measure, and wished that I might haue enioied the sight without end, and so she departed with the other Ladyes, of which the one retained still an vnmoueable crueltie, the other a constant pittie. Yes Floscula, let Eumenides be somewhat glad der, and doe not that wrong to the setled friendship of a man, as to compare it with the light affection of a wo man. Ah my deere friend Endimion suffer mee to dye, with gazing at thee. Because if shee doe, shee loseth her tongue. I neuer yet spake worde since your sleepe. No Endimion, thine hath made it stronger, and nowe are my sparkes growne to flames, and my fancies almost to frenzies: but let vs followe, and within wee will debate all this matter at large. Endimion, the comfort of my life, howe am I rauished with a ioy matchlesse, sauing onelie the enioy ing of my mistrisse. It is Semele, Cynthia: the possessing of whose loue, must onelie prolong my life. Humble thanks Madame, now onely doe I be gin to liue. Thine own thoughts sweet Semele, witnesse a gainst thy wordes, for what hast thou founde in my life but loue? and as yet, what haue I founde in my loue but bitternesse? Madame pardon Semele, and let my tongue ransome hers. Why she caused you to be pincht with Fairies.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Endymion, the Man in the Moon</div><div class="body">Endymion is obsessed with his love for GyHEHI, the moon, and neglects Méllisj who is infatuated with him. She plots to force him to love her, but the enchantress Dipsas is unable to induce love magically. She can, however, make Endymion sleep away his youth, and, with Bag@a’s assistance, casts a spell to that effect. Meanwhile the comic braggart Sir GpHaS falls in love with Dipsas and sleeps too. When Tellus is rude about Endymion, Cynthia banishes her to weave in a desert castle. There she uses her feminine attractiveness to induce her keeper, GGESITES, to move Endymion from where he sleeps, but he is unable to lift the sleeping body. He is pinched asleep by fairies, who magically spot his face and hands. S@mielé is sentenced to a year’s silence as punishment for her spiteful speaking. Cynthia sends courtiers around the world in search of a remedy for Endymion, but the wise men who come are unable to help. However, Eiimenideés finds a magic fountain which will supply any wished-for remedy ifa true lover weeps into it and sees the bottom. Eumenides passes the fidelity test and has to choose whether to satisfy his unrequited love for Semele or wake up Endymion. He chooses Endymion, and is shown in a cryptic prophecy that the sleeper will wake when Cynthia kisses him. It works: Endymion awakes, now an old man, and tells his dreams. Sir Tophas also awakes, seemingly more youthful. Neither gets the girl: Cynthia is chaste and unattainable, while Dipsas turns out to be married to G@fon, the keeper of the magic fountain, who has returned to court with Eumenides. The truth about Endymion’s long sleep emerges after Bagoa reveals the spell; in reprisal, Dipsas turns her into a tree. Tellus is questioned and admits her part in the affair. Cynthia restores Endymion’s youth and learns of his love for her, and of Eumenides’ for Semele. Semele’s initial silence is taken to indicate consent, but when she speaks, Cynthia sentences her to lose her tongue. Eumenides’ offer of his own tongue instead convinces Semele of his sincerity, and she accepts him. Corsites and Tellus are also paired off, and Dipsas, initially sentenced to banishment among the wild beasts, is remitted to the custody of her husband. At the request of Sir Tophas, Cynthia also releases Bagoa from the tree.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IERK in 542 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>IERK</span>
+</nav>
+
+<h1>IERK</h1>
+<p class="lede">in <em>542</em> — [173]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>1382</td></tr>
+<tr><th>Characters</th><td>7774</td></tr>
+<tr><th>BritDrama no.</th><td>542</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Which have as well beene tryals of your vertues As acts of wantonnesse, I here desist. Henceforth my tongue shall never uttor sound Offensive to your modestie. I <mark>did</mark> it Sir, In gratitude for your hospitality. Please you to take my counsell. Be divore&#x27;t. You need no proofes, since shees her owne accuser. I&#x27;le then procure a dispensation</div>
+<div class="excerpt">onely acumens of wit. Take heed thy iudgement be not brought in que stion. Why diseas&#x27;d wits are— How, a man Cousin! I would not have you so forward Cousin. You <mark>must</mark> be sure to deale with sound ware. His Character in his owne language is I and no; yet he speaks well in paper. He is a wit, but somewhat a dull one. There are hidden</div>
+<div class="excerpt">His Character in his owne language is I and no; yet he speaks well in paper. He is a wit, but somewhat a dull one. There are hidden pollicies in the world. Thou hast a bookish humour; I a wenching one; and why may not his dulnes dreame of some rich match! Mris. Tongal&#x27;s the onely match-maker in the Towne. Art thou in love?</div>
+<div class="excerpt">credit an impossibility. Thou in love! why &#x27;tis more improbable then the projection of draining Marsh-land with a wind-mill. But prethee what is shee? Sure thou hast not boldnes enough to speake to her. Thou wouldst blush, and fall into some patheticall booke discourse, or tell her the story of Hero and Leander, to make her</div>
+<div class="excerpt">rabble) be not so suspitious Of our more carefull carriage, that are gentlemen. Why friend? because wanton familiaritie Make&#x27;s us lesse serious when we are alone, <mark>Must</mark> it necessitate we cannot speake In a high cause! Cousin, you <mark>must</mark> be carefull Of your behaviour: you are before a Iustice. Some busie ones have arrogated much;</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Friend Art-love, the good fortune of a petticote light upon thee, in the name of Venery what mak&#x27;st thou here? art&#x27; in quest of a smock-bedfellow. He hath gotten leave of his Vncle to liue here in my tuition. Hee thrive&#x27;s well in his conceit, a right Ier ker; he begins to love a wench already. Try Cos. and satisfie your selfe. Nothing comes from thee but documents. I sweare I should love thee much better if thou hadst lesse vertue. I prethee leave thy Stoicisme, and become an Epi cure with me. My little Cos. here shall prove with unde nyable arguments that drinking and wenching are the one ly vertues in a gentleman of the last edition: to be excel lent at them is a master-piece of education. Besides, they are the onely acumens of wit. Take heed thy iudgement be not brought in que stion. Why diseas&#x27;d wits are— How, a man Cousin! I would not have you so forward Cousin. You must be sure to deale with sound ware. His Character in his owne language is I and no; yet he speaks well in paper. He is a wit, but somewhat a dull one. There are hidden pollicies in the world. Thou hast a bookish humour; I a wenching one; and why may not his dulnes dreame of some rich match! Mris. Tongal&#x27;s the onely match-maker in the Towne. Art thou in love? I can assoone credit an impossibility. Thou in love! why &#x27;tis more improbable then the projection of draining Marsh-land with a wind-mill. But prethee what is shee? Sure thou hast not boldnes enough to speake to her. Thou wouldst blush, and fall into some patheticall booke discourse, or tell her the story of Hero and Leander, to make her tendernesse whine. Tis not the way. Get accesse to her; and after one mannerly salute, double and treble thy kisses; tumble her a little, and if opportunity serve, offer the rest: Magick hath not a Philter like it. Yes, questionlesse. Now I see thou art mad: but prethee strive to conceale it; the place is publique. Out of fooles Paradise: thou art in it. But pray you Gentleuman protract not his satisfaction with these circumstantiall delayes. Whilst Mris. Dorothy and he are busie, you and I will tast the sweet-meats in your Ladies Closet. No, no, she loves thee her selfe. Take her. Me thinks shee&#x27;s very beautifull; what pinken-eyes; what a sharpe chin! Why her features transcend Mopsa&#x27;s in the Arcadia. Farewell loving Gentleuman. She hath preven ted me. Sure friend she came but to mocke thee. &#x27;Twas little lesse then downeright impudence. Come, come; I was ordained to doe thee good. Thou knowst I had a Mistris, whose friends disliking my wildnesse, marryed her to the Father of the Gentlewoman whom thou lov&#x27;st (hornes be his punishment for it.) She loves me still; and I doe not despaire of making him Cuc kold. Wee&#x27;l arme our selves with a quart or two, and then I&#x27;le bring thee to her. More passions yet! It thou the marke wouldst hit, Let Sacke inspire thee: &#x27;tis the Soule of Wit. Madame, I am bold to commend this Gentleman, who will deserve your acquaintance. There are medicines to cure it Madame. &#x27;Tis but courtesie and manners. And can there be greater disparity? Would it not seeme a Prodigie in nature, To have greene Summer with her rose-crown&#x27;d head Kisse the white isicles from Winters beard? Extinguish her bright fires in his cold bosome? Madame, I know your sportive Youth desires A more proportion&#x27;d mixture. Come, let&#x27;s trie. Fire put to fire increaseth active Flames; Contraries dull each other with confusion: Such are the frozen kisses of your Husband, Vnto your warme delights— Let his jealousie conster it into truth. Madame, however I appeare in my wildnesse, I shall continue to your Ladiship in my first desires. So with this tribute of my devotion. Before you are capable of it. Not so Coz. all folly may be in Youth: But many times &#x27;tis mixt with grave discretion, That tempers it to use; and make&#x27;s it judgement Equall if not exceeding that which Palseys Hath almost shaken into a disease. But why would you be in love Coz. Then you would write Satyres Coz? Mr. Dasher, this freenesse hath doubled the favor; vizit us of your owne accord! You have a vertue Sir, I could wish communi cated. To cozzen Cousin. The Theorie, but not the Practicke. I converse much in Tavernes; and the use should onely be a thrifty prevention. Indeed Mr. Dasher our Wine&#x27;s naught. I onely gave him matter for a complement. I am studdying a conceited health. No Puritan will pledge that. Ar&#x27;t come friend, and Mr. Worthy? What accident brought you two together? If he bite. Here&#x27;s that shall blunt his fangs. Though I appeare In outward carriage apt to make distrust Condemne me vicious; yet my Soule retaines (Besides a generous disposition Deriv&#x27;d from noble blood) some scrupulous sparkes Of better conscience. Call it not selfe-flattery In that I am mine owne defenses instrument. Report sufficiently may informe your knowledge, (Nor is it error) that my interest In her you now call Mother Was beyond all dispute: our equall loves Mov&#x27;d in one circle; and our thoughts were fixt ▪ Nor can I varie; shee&#x27;s the object still Of my desires. I confesse I use Wanton sollicites; and should scarse resist My wishes satisfaction she consenting. But those delights would end in such a loathing, That I should never more have mercifull thought There can be any goodnesse left in Woman. Dos&#x27;t distast you Sir, That I defend my selfe? I doe abhor the thought of injurie. Nor shall my spirit fall in the just plea Of mine owne right. Hee&#x27;s not a Crane Coz. Your forwardnesse is dangerous. &#x27;Tis as you take it Coz. Then here&#x27;s a health to her that best deserves The attribute of Faire: whose white and red Prove what&#x27;s lifes mixture. From whose forms exactnes Rules of Proportion might be better drawne Then from Arts Principles. To her whose Youth Warmes Winters icie bosome with her Spring; Yet will not wrong your Father. As it goes round, Each give his Mistris some comm nding Character. Nay, Coz; 〈…〉 . Mr. Dasher, your Wine s highly commended. But Mr. Dasher, you have an eminent House, ex traordinary Wine and entertainment; but no Signe at first to distinguish it. Had there not beene a third. Sir, we are Gentlemen; and by that priviledge Though we submit to politique Government In publique things may be our owne law-makers In morall life. If we offend the law The law may punish us; which onely strives To take away excesse, not the necessity Or use of what&#x27;s indifferent, and is made Or good or bad by &#x27;ts use. We doe not drinke To a distemper, and from thence derive Th&#x27; originall of mischiefes: nor is pleasure Our law but temperance. Creation made Every thing good, if we abuse it not. Then good Sir, (though you find enormitles Amongst the rabble) be not so suspitious Of our more carefull carriage, that are gentlemen. Why friend? because wanton familiaritie Make&#x27;s us lesse serious when we are alone, Must it necessitate we cannot speake In a high cause! Cousin, you must be carefull Of your behaviour: you are before a Iustice. Some busie ones have arrogated much; But being told their owne have ever since Given Gentlemen a due respect. We know your table&#x27;s plentifully furnisht. The reckoning M. Dasher As the end proves it. And since your constancie Hath held out &#x27;gainst my leud temptations, Which have as well beene tryals of your vertues As acts of wantonnesse, I here desist. Henceforth my tongue shall never uttor sound Offensive to your modestie. I did it Sir, In gratitude for your hospitality. Please you to take my counsell. Be divore&#x27;t. You need no proofes, since shees her owne accuser. I&#x27;le then procure a dispensation And wee&#x27;l be marr ed. Here my solicites cease. But I desire I may em ine the servant of your vertues, And weare your favours livery, whose example H h won on my resolves to reconcile My lder soule. A right Sack Justice.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 542</div><div class="body">The Queen is greeted on her arrival by the Genius of the House. The house is transformed into the semblance of a ship, and a mock sea-fight ensues.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

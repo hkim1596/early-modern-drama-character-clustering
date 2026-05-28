@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DUK in The Two Gentlemen of Verona · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>DUK</span>
+</nav>
+
+<h1>DUK</h1>
+<p class="lede">in <em>The Two Gentlemen of Verona</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>797</td></tr>
+<tr><th>Characters</th><td>4186</td></tr>
+<tr><th>BritDrama no.</th><td>970</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">agone I haue forgot to court, Beſides the faſhion of the time is chang&#x27;d) How, and which way I may beſtow my ſelfe To be regarded in her ſun-bright eye. But ſhe <mark>did</mark> ſcorne a preſent that I ſent her, But ſhe I meane, is promis&#x27;d by her friends Vnto a youthfull Gentleman of worth, And kept ſeuerely from reſort of men, That no</div>
+<div class="excerpt">blood Aduiſe me, where I may haue ſuch a Ladder. This very night; for Loue is like a childe That longs for euery thing that he can come by. But harke thee: I will <mark>goe</mark> to her alone, How ſhall I beſt conuey the Ladder thither? A cloake as long as thine will ſerue the turne? Then let me ſee thy cloake, Ile get me one of ſuch another</div>
+<div class="excerpt">to breake the ſeale for once. My thoughts do harbour with my Siluia nightly, And ſlaues they are to me, that ſend them flying. Oh, could their Maſter come, and <mark>goe</mark> as lightly, Himſelfe would lodge where (ſenceles) they are lying. My Herald Thoughts, in thy pure boſome reſt-them, While I (their King) that thither them importune</div>
+<div class="excerpt">thou art Merops ſonne) Wilt thou aſpire to guide the heauenly Car? And with thy daring folly burne the world? Wilt thou reach ſtars, becauſe they ſhine on thee? <mark>Goe</mark> baſe Intruder, ouer-weening Slaue, Beſtow thy fawning ſmiles on equall mates, And thinke my patience, (more then thy deſert) Is priuiledge for thy departure hence.</div>
+<div class="excerpt">expedition Will giue thee time to leaue our royall Court, By heauen, my wrath ſhall farre exceed the loue I euer bore my daughter, or thy ſelfe. Be gone, I will not <mark>heare</mark> thy vaine excuſe, But as thou lou&#x27;ſt thy life, make ſpeed from hence.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Now, daughter Siluia, you are hard beſet. Sir Valentine, your father is in good health, What ſay you to a Letter from your friends Of much good newes? Know ye Don Antonio, your Countriman? Hath he not a Sonne? You know him well? Beſhrew me ſir, but if he make this good He is as worthy for an Empreſſe loue, As meet to be an Emperors Councellor: Well, Sir: this Gentleman is come to me With Commendation from great Potentates, And heere he meanes to ſpend his time a while, I thinke &#x27;tis no vn-welcome newes to you. Welcome him then according to his worth: Siluia, I ſpeake to you, and you Sir Thurio, For Ʋ alentine, I need not cite him to it, I will ſend him hither to you preſently. Sir Valentine, whether away ſo faſt? Be they of much import? Nay then no matter: ſtay with me a while, I am to breake with thee of ſome affaires That touch me neere: wherein thou muſt be ſecret. &#x27;Tis not vnknown to thee, that I haue ſought To match my friend Sir Thurio, to my daughter. No, truſt me, She is peeuiſh, ſullen, froward, Prowd, diſobedient, ſtubborne, lacking duty, Neither regarding that ſhe is my childe, Nor fearing me, as if I were her father: And may I ſay to thee, this pride of hers (Vpon aduice) hath drawne my loue from her, And where I thought the remnant of mine age Should haue beene cheriſh&#x27;d by her child-like dutie, I now am full reſolu&#x27;d to take a wife, And tur her out, to who will take her in: Then let her beauty be her wedding dowre: For me, and my poſſeſſions ſhe eſteemes not. There is a Lady in Verona heere Whom I affect: but ſhe is nice, and coy, And naught eſteemes my aged eloquence. Now therefore would I haue thee to my Tutor (For long agone I haue forgot to court, Beſides the faſhion of the time is chang&#x27;d) How, and which way I may beſtow my ſelfe To be regarded in her ſun-bright eye. But ſhe did ſcorne a preſent that I ſent her, But ſhe I meane, is promis&#x27;d by her friends Vnto a youthfull Gentleman of worth, And kept ſeuerely from reſort of men, That no man hath acceſſe by day to her. I, but the doores be lockt, and keyes kept ſafe, That no man hath recourſe to her by night. Her chamber is aloft, far from the ground, And built ſo ſheluing, that one cannot climbe it Without apparant hazard of his life. Now as thou art a Gentleman of blood Aduiſe me, where I may haue ſuch a Ladder. This very night; for Loue is like a childe That longs for euery thing that he can come by. But harke thee: I will goe to her alone, How ſhall I beſt conuey the Ladder thither? A cloake as long as thine will ſerue the turne? Then let me ſee thy cloake, Ile get me one of ſuch another length. How ſhall I faſhion me to weare a cloake? I pray thee let me feele thy cloake vpon me. What Letter is this ſame? what&#x27;s here? to Siluia ? And heere an Engine fit for my proceeding, Ile be ſo bold to breake the ſeale for once. My thoughts do harbour with my Siluia nightly, And ſlaues they are to me, that ſend them flying. Oh, could their Maſter come, and goe as lightly, Himſelfe would lodge where (ſenceles) they are lying. My Herald Thoughts, in thy pure boſome reſt-them, While I (their King) that thither them importune Doe curſe the grace, that with ſuch grace hath bleſt them, Becauſe my ſelfe doe want my ſeruants fortune. I curſe my ſelfe, for they are ſent by me, That they ſhould harbour where their Lord ſhould be. What&#x27;s here? Siluia, this night I will enfranchiſe thee. &#x27;Tis ſo: and heere&#x27;s the Ladder for the purpoſe. Why Phaeton (for thou art Merops ſonne) Wilt thou aſpire to guide the heauenly Car? And with thy daring folly burne the world? Wilt thou reach ſtars, becauſe they ſhine on thee? Goe baſe Intruder, ouer-weening Slaue, Beſtow thy fawning ſmiles on equall mates, And thinke my patience, (more then thy deſert) Is priuiledge for thy departure hence. Thanke me for this, more then for all the fauors Which (all too much) I haue beſtowed on thee. But if thou linger in my Territories Longer then ſwifteſt expedition Will giue thee time to leaue our royall Court, By heauen, my wrath ſhall farre exceed the loue I euer bore my daughter, or thy ſelfe. Be gone, I will not heare thy vaine excuſe, But as thou lou&#x27;ſt thy life, make ſpeed from hence.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Two Gentlemen of Verona</div><div class="body">Walefifihe leaves Verona to broaden his horizons. Protelis stays at home and woos Jiilia) but no sooner is his suit successful than his father decides to send him after Valentine to court. He and Julia exchange rings. In Milan, Proteus finds that Valentine has fallen in love with Sil¥ia and plans to elope with her, using a rope ladder to reach the tower in which her father locks her up at night. Proteus falls for Silvia himself and, knowing that her father prefers Valentine’s rival Hiro, betrays his friend’s confidence to the Duke, who duly banishes Valentine. This only succeeds in ‘alienating Silvia from Thurio and her father, so Proteus is asked to woo her on Thurio’s behalf. Valentine is ambushed by banished Saws, who make him their chief. Leaving her property in the care of her waiting- woman Hwee’, Julia follows Proteus to Milan disguised as a page-boy; there she learns of Proteus’ interest in Silvia, and witnesses one of his wooing attempts. Proteus sends Silvia a gift of a dog, but Bane loses it and offers her his own dog, which behaves badly and relieves itself under the table; Lance takes the blame for the latter offence. Proteus employs the disguised Julia as a go-between, sending her ring as a gift to Silvia, who will not accept it. With Bglami6ii’s help, Silvia absconds to join Valentine; the Duke rides after her with Thurio; Proteus follows in search of Silvia, and the disguised Julia follows him. All except Eglamour are captured by the outlaws. When Silvia rejects Proteus’ advances, he threatens to rape her. Valentine sees him for what he is, but is won over by his repentance, and offers to give up Silvia. Julia faints and mixes up the two rings in her possession; thus her identity is revealed. Threatened by Valentine, Thurio gives up his suit to Silvia; the Duke accepts Valentine as a son-in-law and agrees to recall the outlaws from banishment.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PEL in 420 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PEL</span>
+</nav>
+
+<h1>PEL</h1>
+<p class="lede">in <em>420</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1629</td></tr>
+<tr><th>Words</th><td>509</td></tr>
+<tr><th>Characters</th><td>2819</td></tr>
+<tr><th>BritDrama no.</th><td>420</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Prethee <mark>heare</mark> me: In stead of a fine guarded Page, We haue got him A Boy, trickt vp in neat and handsome Fashion; Perswaded him, that tis indeed a Wench; And he <mark>has</mark> entertain&#x27;d him, he does follow him, Carries his sword and buckler, waits on his trencher, Filles him his Wine, Tobacco, whets his knife, Lackeyes his letters,</div>
+<div class="excerpt">them, And he begins the fashion; he is laught at Most complementally. Thou&#x27;t burst to see him. I haue read Pamphlets dedicated to me: Dost call him Agelastus ? why <mark>did</mark> he laugh? Thou hast a Patent to abuse thy friends: Looke, looke, he comes, obserue him seriously. Noble accomplisht Cuculus. That&#x27;s well, hee&#x27;s an honest blade,</div>
+<div class="excerpt">be blunt. Ile be at charge of a banket on thee for a sight of her. My nurse was a <mark>woman</mark>-surgeon. Corax, the Princes chiefe Physicion; What businesse speeds his haste— Are all things well, Sir? Let&#x27;em alone. I will not slacke my part. Prethee hold thy tongue, the Lords are in the presence. O the Prince: stand and keepe silence.</div>
+<div class="excerpt">blustring Boreas tosseth vp the deepe, And thumps a thunder bounce? Indeed, is&#x27;t true, I pray? I this language? Alas, Sir, we that study words and formes Of complement, <mark>must</mark> fashion all discourse, According to the nature of the subiect. But I am silent, now appeares a Sunne, Whose shadow I adore. Your creature, and your Seruant. Rhetias,</div>
+<div class="excerpt">life; Courting his Page by Hel. con. I will hang &#x27;em all, and burne my wife: was I not an Emperour; my hand was kist, and Ladies lay downe be fore me. In triumph <mark>did</mark> I ride with my Nobles about me, till the mad-dog bit mee, I fell, and I fell, and I fell. It shall be treason by Statute for any man to name wa ter, or wash his</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">From Trauailes (noble Sir.) As I am modest, I protest &#x27;tis strange: But is it possible? To bestride The frothy fomes of Neptunes surging waues, When blustring Boreas tosseth vp the deepe, And thumps a thunder bounce? Indeed, is&#x27;t true, I pray? I this language? Alas, Sir, we that study words and formes Of complement, must fashion all discourse, According to the nature of the subiect. But I am silent, now appeares a Sunne, Whose shadow I adore. Your creature, and your Seruant. Rhetias, I sought thee out to tell thee newes, New, excellent new newes. Cucolus, Sirra, That Gull, that young old Gull, is comming this way. Prethee heare me: In stead of a fine guarded Page, We haue got him A Boy, trickt vp in neat and handsome Fashion; Perswaded him, that tis indeed a Wench; And he has entertain&#x27;d him, he does follow him, Carries his sword and buckler, waits on his trencher, Filles him his Wine, Tobacco, whets his knife, Lackeyes his letters, does what seruice else He would imploy his man in: being askt, Why he is so irregular in Courtship? His answer is, that since great Ladies vse Gentlemen Vshers to goe bare before them, He knowes no reason, but he may reduce The Courtiers to haue women waite on them, And he begins the fashion; he is laught at Most complementally. Thou&#x27;t burst to see him. I haue read Pamphlets dedicated to me: Dost call him Agelastus ? why did he laugh? Thou hast a Patent to abuse thy friends: Looke, looke, he comes, obserue him seriously. Noble accomplisht Cuculus. That&#x27;s well, hee&#x27;s an honest blade, though he be blunt. Ile be at charge of a banket on thee for a sight of her. My nurse was a woman-surgeon. Corax, the Princes chiefe Physicion; What businesse speeds his haste— Are all things well, Sir? Let&#x27;em alone. I will not slacke my part. Prethee hold thy tongue, the Lords are in the presence. O the Prince: stand and keepe silence. May it please your Grace, I thinke you doe containe within your selfe The great Elixer, soule and quintessence Of all diuine perfections: are the glory Of mankind, and the onely strict example For earthly Monarchies to square out their liues by: Times miracle, Fames pride, in Knowledge, Wit, Sweetnesse, Discourse, Armes, Arts— In amorous contemplation on my life; Courting his Page by Hel. con. I will hang &#x27;em all, and burne my wife: was I not an Emperour; my hand was kist, and Ladies lay downe be fore me. In triumph did I ride with my Nobles about me, till the mad-dog bit mee, I fell, and I fell, and I fell. It shall be treason by Statute for any man to name wa ter, or wash his hands throughout all my Dominions; breake all the looking-glasses, I will not see my hornes; my wife Cuckolds me, she is a whore, a whore, a whore, a whore. Thou&#x27;st straight to execution. Good Sir. Some certaine blowes haue past, and&#x27;t like your Highnesse.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 420</div><div class="body">A group of mounted knights arrive at a wedding, and one of their number explains their presence. They worship Diana for as long as they remain unmarried, but also sacrifice to Hymenaeus, god of marriage. When they were last doing so, the god spoke, telling them one of Diana’s nymphs had got married to an earl favoured by Minerva. Diana is particularly pleased to know that the couple have agreed to wait a year before consummating the marriage. The two goddesses have asked Hymenaeus to arrange for the marriage- feast to be honoured, so he sends the knights with gifts: Minerva sends the groom a garland, Diana sends the bride a veil, and Hymenaeus sends them respectively a picture of a dove and a coronet. The knights present their shields and dance with ladies from the audience.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

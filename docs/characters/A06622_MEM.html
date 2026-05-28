@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MEM in Mother Bombie · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MEM</span>
+</nav>
+
+<h1>MEM</h1>
+<p class="lede">in <em>Mother Bombie</em> — Lyly, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1594</td></tr>
+<tr><th>Words</th><td>978</td></tr>
+<tr><th>Characters</th><td>5066</td></tr>
+<tr><th>BritDrama no.</th><td>826</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">heard of an Aethio pian, that thinking of a faire picture, brought forth a faire ladie, and yet no bastard. Come Dromio, it is my grief to haue such a sonne that <mark>must</mark> inherit my lands. Vile boy, thy yong master? Ile haue thy aduice, and if it fadge, thou shalt eate, thou shalt sweate, play till thou sleep, and sleepe till thy</div>
+<div class="excerpt">thou sleep, and sleepe till thy bones ake. Then this it is, thou knowest I haue but one sonne, and he is a foole. Thou canst not know it till I tell it. Then boy hast thou a quicke wit, and I a slow tongue, but what ist? Thou dreamst Dromio, there is no such matter, thou knowest I haue kept him close, so that my neighbors thinke</div>
+<div class="excerpt">is like to marrie his daughter to a foole, but a bargen is a bargen. Our boies wil be sure then neuer to lie, for they are euer swilling of wine ▪ but Stellio I <mark>must</mark> straine cur sie with you, I haue busines ▪ I cannot stay. Good silly Stel. we <mark>must</mark> buckle shortly, What is she? In good time it fodges. My sonne would scarce haue</div>
+<div class="excerpt">this attire? But alas I see that my sonne hath met wyth Silena himselfe, and bewraid his folly. Accius how lykest thou Silena. Come Accius, let vs go in. But why diddest thou tell mee it was Prisius sonne? Alas theyr ioyntes are not yet tied, they are not yet come to yeeres and discretion. Come in Accius. What crouding knaues</div>
+<div class="excerpt">theyr cheating partes, I suspected no lesse at the Tauerne, where foure foure knaues met together. Well out with it. I will, Accius come forth. Come Accius thou <mark>must</mark> be marryed to Sile nena. How art thou minded? Come you shall presently be contracted. You Vicinia, wherefore? True. What monstrous tale is this? Holde thy peace.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Why villain dost thou think me a foole? It may be, for I haue heard of an Aethio pian, that thinking of a faire picture, brought forth a faire ladie, and yet no bastard. Come Dromio, it is my grief to haue such a sonne that must inherit my lands. Vile boy, thy yong master? Ile haue thy aduice, and if it fadge, thou shalt eate, thou shalt sweate, play till thou sleep, and sleepe till thy bones ake. Then this it is, thou knowest I haue but one sonne, and he is a foole. Thou canst not know it till I tell it. Then boy hast thou a quicke wit, and I a slow tongue, but what ist? Thou dreamst Dromio, there is no such matter, thou knowest I haue kept him close, so that my neighbors thinke him to be wise, and her to be temperate, because they neuer heard them speake. Thou knowest that Stellio hath a good farme and a faire daughter, yea so faire, that she is mewed vp, and onely looketh out at the windows, least she should by some roisting courtier be stollen away. Now if I could compasse a match between my sonne and Stellios daughter by conference of vs parents, and without theirs, I should be blessed ▪ he coosned, and thou for euer set at libertie. Thus much for my sonne. Nowe for my wife, I would haue this kept from her, else shal I not be able to keepe my house from smoake, for let it come to one of her eares, &amp; then wo to both mine: I would haue her goe to my house into the Coun trie whilest we conclude this, and this once done, I care not if her tong neuer haue done: these if thou canst effect, thou shalt make thy master happie. But take heed, that neither the father nor the maide speak to my sonne, for then his folly will marre all. Wilt thou rid me for a foole? Then for the dowrie, let it bee at least two hundreth ducats, and after his death the farme. Then let vs in, that I may furnish thee with some better counsell, and my sonne with better ap parell. Whats that? Whats the meaning? I praie thee no more, but about it. I maruell I heare no newes of Dromio, ei ther he slackes the matter, or betrayes his master, I dare not motion anie thing to Stellio till I knowe what my boy hath don; Ile hunt him out; if the loi tersacke be gone springing into a tauerne, Ile fetch him reeling out. How luckily we met on a sodaine in a ta uerne, that drunke not together almost these thir tie yeeres. Accius come in and that quickly ▪ what walking without leaue? This is pat, if the rest proceed Stellio is like to marrie his daughter to a foole, but a bargen is a bargen. Our boies wil be sure then neuer to lie, for they are euer swilling of wine ▪ but Stellio I must straine cur sie with you, I haue busines ▪ I cannot stay. Good silly Stel. we must buckle shortly, What is she? In good time it fodges. My sonne would scarce haue askt such a foo lish question. My heart throbs, I looke him in the face, and yonder I espi Stellio. My sonne and I ashamd, Dromio shall die. How came you hether? How chance in this attire? But alas I see that my sonne hath met wyth Silena himselfe, and bewraid his folly. Accius how lykest thou Silena. Come Accius, let vs go in. But why diddest thou tell mee it was Prisius sonne? Alas theyr ioyntes are not yet tied, they are not yet come to yeeres and discretion. Come in Accius. What crouding knaues haue we there, case vp your fiddles, or the cunstable shall cage you vppe. What bride talke you of? Hath Sperantus that churle nothing to doe but mocke his neighbours, Ile bee euen with him, and get you gone, or I sweare by the roodes bodie Ile laye you by the heeles. Dromio shake off a whole kennel of officers, to punish these iarring rogues, Ile teach them to stretch theyr dried sheepes guts at my doore, and to mock one that stands to be maior. If they had stayed, the stockes shoulde haue staied them. But sirra, what shall we now doo? Tis true, for it beeing bruted that eache of vs haue a foole, who will tender marriage to anie of them that is wise, besides fooles are fortunate, fooles are faire, fooles are honest. But what sayest thou to thy dames chasing? I would her tongue were in thy belly. Why? I if Stellios daughter had beene wise, and by my meanes cosned of a foole. Come Stellio, the assurance may be made to morrow, aud our children assured to day. Nay in the apparel of your children you haue discouerd the folly of ours, which shames vs ouermuch Neighbours, let vs not vary, our boyes haue playd theyr cheating partes, I suspected no lesse at the Tauerne, where foure foure knaues met together. Well out with it. I will, Accius come forth. Come Accius thou must be marryed to Sile nena. How art thou minded? Come you shall presently be contracted. You Vicinia, wherefore? True. What monstrous tale is this? Holde thy peace. Is this possible, how shall we beleeue it? In deed she is cunning and wise, neuer doing harme, but still practising good, seeing these things fall out thus, are you content Stellio the match goe for ward. Vicinia thy fact is pardoned, though the law would see it punisht, wee be content to keepe Silena in the house with the new married couple. To morrow at mine.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Mother Bombie</div><div class="body">Menmiphio and Stellig each has a fool for his only child, — a son and a daughter respectively, but both have managed to conceal the fact from the neighbours. Each plans to marry his offspring to the other’s without disclosing the heir’s mental debility, and each tasks his servant to make the arrangements. Meanwhile, @amidiliis and [ivid are in love with one another, but their parents disapprove, wanting them to marry wealth instead: Candius is made to woo Stellio’s daughter Sil@mla, and Livia is intended for Memphio’s son Al@GiiS] The four fathers’ boy servants conspire to frustrate these various . marital plans, and go off to drink at the tavern. Candius meets Silena as she sneaks out to hear her fortune, and offers to read her palm. He is momentarily struck by her beauty, but quickly discovers that she is an idiot, a legitimate impediment to marriage. Mother Bomibié tells Silena’s fortune in cryptic terms: she is not the child of her parents. The fortune teller is also consulted by the siblings M@eStiiS and Sérénaj] who have developed an incestuous passion for one another; Mother Bombie tells them that they shall be married and each will displace a fool. The boys arrange for Candius and Livia to swap apparel with the two idiots, and they are married in disguise, with their own fathers as witnesses. Accius and Silena court one another in disguise, but their marriage prospects take a turn for the worse after each father identifies the other’s child as a fool. DE@Rilio is arrested for failing to feed a horse he hired; the other boys enter a bond to pay off his creditor, but then get the hackneyman, sergeant, and scrivener drunk, and pay for the wine by pawning the sergeant’s mace. Early the next morning, three fiddlers, advised of the wedding, struggle to identify the right house to serenade. Prisils and Spérantus discover that Candius ===== PAGE 465 ===== 1589 and Livia are married. The four servants confess their part in the affair, and the four fathers are content: Prisius and Sperantus accept the fait accompli, and Memphio and Stellio are willing to marry the fools to one another after all. Wi€inid intervenes to prevent an incestuous marriage: eighteen years ago, she swapped them for her own children, counterfeiting their distinctive birthmarks; the true heirs of Memphio and Stellio are Maestius and Serena. Mother Bombie has Predicted everything accurately. Nobody is to be punished or left dissatisfied: Vicinia is pardoned, the hackneyman paid, and the…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

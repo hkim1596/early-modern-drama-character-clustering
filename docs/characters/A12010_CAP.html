@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAP in Romeo and Juliet · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>CAP</span>
+</nav>
+
+<h1>CAP</h1>
+<p class="lede">in <em>Romeo and Juliet</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1597</td></tr>
+<tr><th>Words</th><td>1073</td></tr>
+<tr><th>Characters</th><td>5535</td></tr>
+<tr><th>BritDrama no.</th><td>987</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">see, And like her most, whose merite most shalbe. Such amongst view of many myne beeing one, May stand in number though in reckoning none. Where are you sirra, <mark>goe</mark> trudge about Through faire Ver na streets, and seeke them out: Whose names are written here and to them say, My house and welcome at their pleasure stay. Tis not</div>
+<div class="excerpt">head. Come, come, make h st call vp your daughter, The Countie will be heere with musicke straight. Gods me hees come, Nurse call vp my daughter. Come, come, make hast, wheres my daughter? Stay, let me see, all pale and an. Accursed time, vnfortunate olde man. Ready to <mark>goe</mark>, but neuer to returne. O Sonne the night before thy wedding</div>
+<div class="excerpt">Pentecost as quicklie as it will, Some fiue and twentie yeares, and then we maskt. Will you tell me that it cannot be so, His sonne was but a Ward three yeares agoe, Good youths I faith. Oh youth&#x27;s a iolly thing. Thinges haue fallen out Sir so vnluckily, That we haue had no time to moue my daughter. Looke yee Sir, she lou&#x27;d</div>
+<div class="excerpt">youth&#x27;s a iolly thing. Thinges haue fallen out Sir so vnluckily, That we haue had no time to moue my daughter. Looke yee Sir, she lou&#x27;d her kinsman dearely, And so <mark>did</mark> I. Well, we were borne to dye, Wife wher&#x27;s your daughter, is she in her chamber? I thinke she meanes not to come downe to night. Sir Pa is? Ile make a desperate</div>
+<div class="excerpt">Dye i the streetes: for by my Soule Ile neuer more acknowledge thee, Nor what I haue shall euer doe thee good, Thinke ont, looke toot, I doe not vse to iest. Make hast, make hast, for it is almost day, The Curfe we bell hath rung, t&#x27;is foure a clocke, Looke to your bakt me tes good Angelica. I warrant thee Nurse I haue ere now</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">But too soone marde are these so early maried: But wooe her gentle Paris, get her heart, My word to her consent is but a part. This night I hold an old accustom&#x27;d Feast, Whereto I haue inuited many a guest, Such as I loue: yet you among the store, One more most welcome makes the number more. At my poore house you shall behold this night, Earth treadding stars, that make darke heauen light: Such comfort as doo lusty youngmen eele, When well apparaild Aprill on the heele Of lumping winter treads, euen such delights Amongst fresh female buds shall you this night Inherit at my house, heare all, all see, And like her most, whose merite most shalbe. Such amongst view of many myne beeing one, May stand in number though in reckoning none. Where are you sirra, goe trudge about Through faire Ver na streets, and seeke them out: Whose names are written here and to them say, My house and welcome at their pleasure stay. Tis not so much, tis not so much. Tis since the mariage of Lucenti , Come Pentecost as quicklie as it will, Some fiue and twentie yeares, and then we maskt. Will you tell me that it cannot be so, His sonne was but a Ward three yeares agoe, Good youths I faith. Oh youth&#x27;s a iolly thing. Thinges haue fallen out Sir so vnluckily, That we haue had no time to moue my daughter. Looke yee Sir, she lou&#x27;d her kinsman dearely, And so did I. Well, we were borne to dye, Wife wher&#x27;s your daughter, is she in her chamber? I thinke she meanes not to come downe to night. Sir Pa is? Ile make a desperate tender of my child. I thinke she will be rulde in all respectes by mee: But sof what day is this? Oh then Wensday is too soone, On Thursday let i be: you shall be maried. Wee&#x27;le make no great a doe, a frend or two, or so: For looke ye Sir, Tybalt being slaine so lately, It will be thought we held him care leslye: If we should reuell much, therefore we will haue Some halfe a dozen frends and make no more adoe. But what say you to Thursday. Wife goe you to your daughter, ere you goe to bed. Acquaint her with the County Paris loue, Fare well my Lord till Thursday next. Wife gette you to your daughter. Light to my Chamber. Afore me it is so very very late, That we may call it earely by and by. I tell thee what, eyther resolue on thursday next To goe with Paris to Saint Peters Church: Or henceforth neuer looke me in the face. Speake not, reply not, for my singers ytch. Why wife, we thought that we were scarcely blest That God had sent vs but this onely chyld: But now I see this one is one too much, And that we haue a crosse in hauing her. And why my Lady wisedome? hold your tung, Good prudence smatter with your gossips, goe. Oh godde godden. Vtter your grauity ouer a gossips boule, For heere we need it not. Gods blessed mother wife it mads me; Day, night, early, late, at home, abroad, Alone, in company, waking or sleeping, Still my care hath beene to see her matcht. And hauing now found out a Gentleman, Of Princely parentage, youthfull, and nobly trainde. Stuft as they say with honorable parts. Proportioned as ones heart coulde wish a man: And then to haue a wretched whyning foole, A puling mammet in her fortunes tender, To say I cannot loue, I am too young, I pray you pardon mee? But if you cannot wedde Ile pardon you. Graze where you will, you shall not house with me. Looke to it, thinke ont, I doe not vse to iest. I tell yee what, Thursday is neere, Lay hand on heart, aduise, bethinke your selfe, If you be mine, Ile giue you to my frend: If not, hang, drowne, starue, beg, Dye i the streetes: for by my Soule Ile neuer more acknowledge thee, Nor what I haue shall euer doe thee good, Thinke ont, looke toot, I doe not vse to iest. Make hast, make hast, for it is almost day, The Curfe we bell hath rung, t&#x27;is foure a clocke, Looke to your bakt me tes good Angelica. I warrant thee Nurse I haue ere now wat ht all night, and haue taken no harme at all. A Ielous hood, a Ielous hood: How now sirra? What haue you th re? Goe, goe choose dryer ▪ Will will tell thee where thou shalt ▪ fetch them. Well goe thy way, thou shalt be logger head. Come, come, make h st call vp your daughter, The Countie will be heere with musicke straight. Gods me hees come, Nurse call vp my daughter. Come, come, make hast, wheres my daughter? Stay, let me see, all pale and an. Accursed time, vnfortunate olde man. Ready to goe, but neuer to returne. O Sonne the night before thy wedding day, Hath Death laine with thy bride, flower as she is, Deflowerd by him, see, where she lyes, Death is my Soone in Law, to him I giue all that I haue, O heere she lies that was our hope, our ioy, And being dead, dead sorrow nips vs all. Cruel, vniust, impartiall destinies, Why to this day haue you preseru&#x27;d my life? To see my hope, my stay, my ioy, my life, Depriude of sence, of life, of all by death, Cruell, vniust, impartiall destinies. O sad fac&#x27;d sorrow map of misery, Why this sad time haue I desird to see. This day, this vniust, this impartiall day Wherein I hop&#x27;d to see my comfort full, To be depriude by suddaine destinie. Let it be so, come wof ll forrow mates, Let vs together taste this bitter a e. Come loo e about, what weapons haue we heer ▪ See frends where Iuliet two daies buried ▪ New bleeding wounded, search and see who&#x27;s neare. Attach and bring them o vs presently. A great suspition, keep him safe ▪ Come brother Mountague giue me thy hand, There is my daughters dowry: for now no more Can I bestowe on her, thats all I haue. As rich shall Romeo by his Lady lie, Poore Sacrifices to our Enmitie.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Romeo and Juliet</div><div class="body">After a street fight breaks out between servants of the rival Veronese households of Capulet and Montague, the Prince decrees death for any further breach of the peace in the matter. Romeo, the Montague son, is hopelessly in love with a Capulet lady, Rosaline, and discovers by chance that she is to be present at Old Capulet’s feast that night. He and his friends gatecrash _ the party disguised as masquers; Tybalt notices Romeo and wants to throw him out, but Old Capulet discourages this. Also present is Capulet’s daughter, Juliet, who is intended for marriage to Count Paris. Romeo meets her and they fall in love before knowing one another&#x27;s identity as members of the two enemy houses. Afterwards, Romeo climbs into the Capulet 1595 orchard, overhears Juliet’s private acknowledgement of her love, declares himself, and makes arrangements for a follow-up contact. Seeing an opportunity to end the feud, Friar Laurence agrees to marry the lovers. Juliet rendezvouses with Romeo at the Friar’s cell under cover of going to confession, and they become husband and wife. After sending Romeo a challenge, Tybalt attempts to fight him in the street; when Romeo refuses, Mercutio steps in and is killed, whereupon the enraged Romeo avenges his friend by killing Tybalt. The Prince banishes him for the murder. Friar Laurence and the Nurse arrange for the lovers to have a night together before Romeo leaves the city. Thinking Juliet is distressed by Tybalt’s death, her father arranges to hasten her marriage to Paris, and threatens to disown her when she refuses to comply. The Nurse advises her to accept the situation and marry Paris, but Friar Laurence gives her a sleeping potion to take the night before the wedding: it will make her appear dead, and meanwhile he will send to Romeo to fetch her from the family tomb after her funeral. When she returns home apparently ready to submit to the marriage, her father brings the date forward. Juliet takes the potion and is found, apparently dead, on the morning of the planned wedding. The Friar’s letter miscarries, so Romeo hears only of Juliet’s death; he buys poison from a needy apothecary and returns to Verona. Hearing that his arrangements have gone awry, the Friar plans to rescue Juliet from the tomb and keep her hidden until Romeo can fetch her; but Romeo gets there first. He encounters and kills Paris as he tries to break into the tomb, and takes the poison beside Juliet’s body. Meanwhile Paris’s page summons the watch. The Friar…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

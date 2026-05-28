@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TAY in The Devil Is an Ass · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>TAY</span>
+</nav>
+
+<h1>TAY</h1>
+<p class="lede">in <em>The Devil Is an Ass</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>944</td></tr>
+<tr><th>Characters</th><td>5041</td></tr>
+<tr><th>BritDrama no.</th><td>1810</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Thou hast beene a stranger! I ha&#x27; not seene thee, this weeke. EVer your seruant, Madame. Where hast&#x27;hou beene? I <mark>did</mark> so long to see thee. And so it is. I sweare I <mark>must</mark> to morrow, Beginne my visits (would they were ouer) at Court. It tortures me, to thinke on&#x27;hem. Who told thee? O, thy husband! Yes faith, there&#x27;s life in&#x27;t, now:</div>
+<div class="excerpt">Why, there was S r . Iohn Monie-man could iump A Businesse quickely. Doe they like it then? I <mark>must</mark> send &#x27;hem thankes And some remembrances. Lost, to day, we cannot <mark>heare</mark> of him. No in good faith. They say he lay not At home, to night. And here <mark>has</mark> fall&#x27;n a Businesse</div>
+<div class="excerpt">giue vs some o&#x27;your Spanish Fucuses ! So I <mark>heare</mark>, they haue VVater of Gourdes, of Radish, the white Beanes, Flowers of Glasse, of Thistles, Rose-marine. Raw Honey, Mustard-seed, and Bread dough-bak&#x27;d, The crums o&#x27;bread, Goats-milke, and whites of Egges, Campheere, and Lilly-roots, the fat of Swannes, Marrow of Veale, white Pidgeons,</div>
+<div class="excerpt">gone, O, mee! the very Infanta of the Giants ! Sir. She do&#x27;s vs honour. Your vse of it is law. Please you, sweete, Madame, To take a seate. Your loue, Madame, I <mark>must</mark> not owne it else. Great? In troth, Madame, They are my friends, that thinke &#x27;hem any thing: f I can doe my sexe (by &#x27;hem) any seruice, I&#x27;haue my ends, Madame. How</div>
+<div class="excerpt">call him De-uile. Out on him! &#x27;Tis labour lost, Madame ? Good S r . Poule, see him, And punish the impostors. I thought one a true Lady, I should be sworne. So <mark>did</mark> you, Eyther-si ? And the other a ciuill Gentleman. I now see it: I was prouiding of a banquet for &#x27;hem. After I had done instructing o&#x27;the fellow De uile, the Gentlemans</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Why, there was S r . Iohn Monie-man could iump A Businesse quickely. Doe they like it then? I must send &#x27;hem thankes And some remembrances. Lost, to day, we cannot heare of him. No in good faith. They say he lay not At home, to night. And here has fall&#x27;n a Businesse Betweene your Cousin, and Master Manly, has Vnquieted vs all. Troth, it but appeares Ill o&#x27;your Kinsmans part. You may haue heard, That Manly is a sutor to me, I doubt not: And it seemes, he trusted Your Cousin to let fall some faire reports Of him vnto mee. So farre From it, as hee came in, and tooke him rayling Against him. Inough, I doe assure you: and with that scorne Of him, and the iniury, as I doe wonder How Euerill bore it! But that guilt vndoe&#x27;s Many mens valors You sha&#x27;not goe, i&#x27;faith. I&#x27;ll ha&#x27; you stay, and see this Spanish miracle, Of our English Ladie. Now, I protest: and I will haue all piec&#x27;d, And friends againe. You are too much affected with it. Sir, His kinsman here is sorry. Come, he will change! Yo&#x27;are sharp, Sir. This act may make him honest! Eyther-side! Welcome, deare Either-side ! how hast thou done, good wench? She spies the Lady Ey ther-side. Thou hast beene a stranger! I ha&#x27; not seene thee, this weeke. EVer your seruant, Madame. Where hast&#x27;hou beene? I did so long to see thee. And so it is. I sweare I must to morrow, Beginne my visits (would they were ouer) at Court. It tortures me, to thinke on&#x27;hem. Who told thee? O, thy husband! Yes faith, there&#x27;s life in&#x27;t, now: It is referr&#x27;d. If wee once see it vnder the seales, wench, then, Haue with &#x27;hem for the great Carroch, sixe horses, And the two Coach-men, with my Ambler, bare, And my three women: wee will liue, i&#x27;faith, The examples o&#x27;the towne, and gouerne it. I&#x27;le lead the fashion still. O, but then, I&#x27;ll euery day Bring vp some new deuice. Thou and I, Either-side, Will first be in it, I will giue it thee; And they shall follow vs. Thou shalt, I sweare, Weare euery moneth a new gowne, out of it. Pray thee call mee Taile-bush As I thee, Either-side ; I not loue this, Madame. Thanke thee, good Eyther-side. Which? I neuer heard on&#x27;t. Doe you heare? Ha&#x27;you a Businesse about Tooth-picks? How is&#x27;t! Good faith, it sounds a very pretty Bus&#x27;nesse ! Is she? Good, waite vpon her in. My Ambler Was neuer so ill absent. Either-side, How doe I looke to day? Am I not drest, She lookes in her glasse Spruntly? Pox o&#x27; Madame, Will you not leaue that? So? Sounds not that better? What vile Fucus is this, Thou hast got on? Pearle? Oyster-shells: As I breath, Either-side, I know&#x27;t. Here comes (They say) a wonder, sirrah, has beene in Spaine ! Will teach vs all! shee&#x27;s sent to mee, from Court. To gratulate with mee! Pr&#x27;y thee, let&#x27;s obserue her, What faults she has, that wee may laugh at &#x27;hem, When she is gone, O, mee! the very Infanta of the Giants ! Sir. She do&#x27;s vs honour. Your vse of it is law. Please you, sweete, Madame, To take a seate. Your loue, Madame, I must not owne it else. Great? In troth, Madame, They are my friends, that thinke &#x27;hem any thing: f I can doe my sexe (by &#x27;hem) any seruice, I&#x27;haue my ends, Madame. How ▪ sweet Madame. But their reasons, Madame ? I would faine heare. Some old Lady That keepes a Poet, has deuis&#x27;d these scandales. But, Madame, these are very feeble reasons! But I durst eate, I assure you. Sweet Madam be so liberall, To giue vs some o&#x27;your Spanish Fucuses ! So I heare, they haue VVater of Gourdes, of Radish, the white Beanes, Flowers of Glasse, of Thistles, Rose-marine. Raw Honey, Mustard-seed, and Bread dough-bak&#x27;d, The crums o&#x27;bread, Goats-milke, and whites of Egges, Campheere, and Lilly-roots, the fat of Swannes, Marrow of Veale, white Pidgeons, and pine- kernells, The seedes of Nettles, perse&#x27;line, and hares gall. Limons, thin-skind— I, what are their ingredients, gentle Madame ? O, I, that same, good Madame, I haue heard of: How is it done? Deare Madame, will you let vs be familiar? But for the manner of Spaine ! Sweet, Madame, let vs Be bold, now we are in: Are all the Ladies, There, i&#x27;the fashion? And doe they weare Cioppino&#x27;s all? &#x27;Tis more French, And Courtly ours. And before our husbands? Fortune forbid, wench: So faire a necke should haue so foule a neck-lace, Good Madame, whom do they vse in messages? Yes, Madame, and yet venter As far for th&#x27;other, in her Fame— Or afore gallants. If they be braue, or Lords, A woman is ingag&#x27;d. Nor no course fellow. Diuell? Call him De uile, sweet Madame. De-uile&#x27;s a prettier name! Can he manage? As euer I saw! Good Madame, call him De-uile. Out on him! &#x27;Tis labour lost, Madame ? Good S r . Poule, see him, And punish the impostors. I thought one a true Lady, I should be sworne. So did you, Eyther-si ? And the other a ciuill Gentleman. I now see it: I was prouiding of a banquet for &#x27;hem. After I had done instructing o&#x27;the fellow De uile, the Gentlemans man How? O, me! what&#x27;s that there, rises in his belly! Lasse poore Gentleman! How he is tortur&#x27;d! O, how he is vexed! What do&#x27;s he now, S r . Sir Poule inter rets Fig m a lers game. See, he spits fire.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Devil Is an Ass</div><div class="body">. _ Pug the junior devil is keen to visit earth. Satan svarns him that his ideas of effective devilment are half a century out of date, but grants him leave to spend the day in London, made flesh and subject to all the frailties and limitations of the human body. A ready-made body is available, in the shape of a recently hanged cutpurse, but Pug will have to make his own arrangements for clothes. Another proviso is that he must serve the first man he meets. Unfortunately for Pug, he turns out to be a twit: Fabian Fitzdottrel. Fitzdottrel longs to see the devil, and agrees to accept Pug as an unpaid servant because he gives his mame as Devil. The same obsession makes Fitzdottrel eager to see a new play, The Devil is an Ass, but he needs some finery to show off as he sits on the stage. Wittipol is eager to sleep with Fitzdottrel’s wife, and offers him a suitable cloak in exchange for fifteen minutes’ uninterrupted conversation with the lady. He uses the time to proposition her, and engages her interest even though she has been forbidden to reply. Fitzdottrel is introduced to Merecraft, a purveyor of imaginative financial schemes, who offers to make him rich and a duke through land reclamation in the eastern fens. Fitzdottrel agrees to meet with him, leaving Pug to ensure that nobody attempts to visit his wife. Pug instead brings her a follow-up message from Wittipol, then makes advances to her on his own account, but is caught by Fitzdottrel and gets a beating. Wittipol’s friend Manly has a room which abuts Mistress Fitzdottrel’s gallery, which he uses to have a second meeting with her. This is much more intimate than the first, despite being conducted through the windows of adjacent buildings. Pug gets back into favour by tipping off Fitzdottrel, who puts a stop to the assignation and threatens to take up another woman to share his expectations and be his Duchess. Merecraft suggests that what Fitzdottrel’s wife needs is to be taught proper manners, and recommends a widow who knows the ways of the Spanish court, who might be persuaded to undertake the task if sent an expensive ring as a gift, and who is entirely fictitious. His accomplice Engine proposes hiring an actor to impersonate her, but Merecraft worries that his business methods might be leaked to a playwright and end up on stage; in the event, Engine finds a gentleman to take on the role instead, who happens to be Wittipol. Fitzdottrel cannot get his wife to part with a ring of her own, so…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

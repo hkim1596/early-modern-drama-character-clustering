@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FLO in The Fleer · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FLO</span>
+</nav>
+
+<h1>FLO</h1>
+<p class="lede">in <em>The Fleer</em> — Sharpham, Edward</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>1476</td></tr>
+<tr><th>Characters</th><td>7744</td></tr>
+<tr><th>BritDrama no.</th><td>1495</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">honorable, my desire mariage: thus desiring your resolued answere, I rest. Vpon my life some friend <mark>did</mark> pen it for the foole. O would hee were! but whosoere he <mark>bee</mark>, a <mark>must</mark> <mark>bee</mark> made a match to giue fire to the hell blacke pouder of our reuenge, yet your loue: the wise Knight and he, are <mark>two</mark> in one, there are no such friendes as they.</div>
+<div class="excerpt">habite of my sexe, I am inforc&#x27;d by loues almightie power, to reueale the se cretes of my <mark>heart</mark>. Your Letters haue so much pre uailed with mee, that in a worde I <mark>must</mark> confesse I loue you. No we your tongue goes like a well tuned Instru ment, and makes my <mark>heart</mark> within my bosome daunce with ioy to <mark>heare</mark> such large requitall of</div>
+<div class="excerpt">be these? were they but roasted Larkes for my sake, I would crush em bones and all. Why are wee whores? Why we are Curtizans. He <mark>has</mark> giuen you a difference now. <mark>Did</mark> they say so? He hold my life this slaue the Seruingman, that was with me this morning, <mark>has</mark> brag&#x27;d of my kindenes to him. Well, ile nere haue Seruingman touch anie</div>
+<div class="excerpt">Disdain&#x27;d. Adyes. But if youle consent I haue a proiect laid, that in re quitall both of them shall die. Are we in priuate? Pray Sister what moouing lines of loue <mark>has</mark> your Knight toucht your affection with? Faith a woes with lines that might perswade ano ther thought, not mee, which ile lend your eyes, vpon the like receiued</div>
+<div class="excerpt">your trade. Worth? let me see, shee hath three yellow pere wigs of her own: she hath a Fan with a short siluer handle about the length of a Barbors siringe; she <mark>has</mark> a Looking-glasse too, but that <mark>has</mark> plaid the prodigall Cittizen with her, tis broken, and much other goods of the same na ture. Health to our best esteemed friends,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">With draw, leaue vs, we would be priuate: Sister what thinke you of this trade of ours? Tis base to abuse great place, or basenes to de ceiue great trust. Yes if great birth abusde not vs: if Piso had not prou&#x27;d the theife and rob&#x27;d vs of our right, t&#x27; had bin worse then theft in vs to rob our selues of honor: youle say wee are forbid to liue by sinne, and yet wee are commaunded seeke to liue: the letter law expresse forbids to kill, and yet the sence permits it rather then be kild: &amp; since of two extremities the least is to be chosen, you knowe wee haue no other meanes to liue, but had wee, yet wee are faire by nature, scorning Art, and was not beauty made to bee enioyed? doe wee not exclaime on those who haue aboundant store of Coine, and yet for want suffer the nee die perish at their doore? so might all doe on vs, hauing so much beautie, if we should suffer men for loue of vs to die; shall wee in whome beautie keepes her court bee curbd and tide to one mans beneuolence? no, no, not I: rather then in vertue to liue poore, in sinne Ile dye. We accept it, haue red it, you are beholding to the knight, and he hath spared no paines to make your worthy partes well knowne to vs: draw neere vs, hence foorth we accept you as our owne, and so wee bid you welcome: are you a Gentleman? You are the more welcome, and our bounty shall deserue your industrie. Giue me a bowe, Ile hit the Sunne. No more canst thou hit true felicitie. But looke who&#x27;s here? As your Midwife, or Barber Surgeon Madam; Faith wel Madam, were not your Citizens, such hea uie head fellowes: Me thinks they haue a strange fashion heere, they take money with their wiues, and giue money to their wenches. But how dost like the Court Fleir? I, but thats a costly dish, and will aske rich saw cing. Whats the newes now at Court Fleir? I prethe Fleir, howe goes the report of vs two a broad? No not a whit. But what say they of vs? But I prethe tell vs, what doe they say of vs? I tell thee no. I thinke tha&#x27;rt madde, I prethee tell vs what they say. I tell thee thou shalt not. Faith that was not much amisse said they no worse? No a&#x27;my word. What pagan rogues be these? were they but roasted Larkes for my sake, I would crush em bones and all. Why are wee whores? Why we are Curtizans. He has giuen you a difference now. Did they say so? He hold my life this slaue the Seruingman, that was with me this morning, has brag&#x27;d of my kindenes to him. Well, ile nere haue Seruingman touch anie linnin of mine agen. I, at my Laundresses, or else not: but what a rascal&#x27;s this? by this light, ile neuer suffer seruingman come neere me agen. Wee doubt it not. I prithee Fleire informe vs how the tide of opinion runs on vs, least we be drown&#x27;d in the slaunderous imagi nations of the world. But does not the Gentlemen iest at him? I offered you vnaskt. Partlie they haue, and partlie not, for I would haue you know, my function seldom sels affection: what though I haue euill liu&#x27;d? repentant teares can wash away my sin, which ile poore foorth like droppes of winter raine, and now hencefoorth, euer Ile this life abhor, and to the earth my knees ile dayly bow, to get mercy from heauen, loue from you. Gentlemen you all both haue, and euer shall bee welcome. My Lord, what you lend me, with much interest shall be repaide. Fare you well; refusd. Disdain&#x27;d. Adyes. But if youle consent I haue a proiect laid, that in re quitall both of them shall die. Are we in priuate? Pray Sister what moouing lines of loue has your Knight toucht your affection with? Faith a woes with lines that might perswade ano ther thought, not mee, which ile lend your eyes, vpon the like receiued curtesie from you. What haue we heere? Lady I know the noblenes of your disposition defends you from the least Sparke of basenesse, wherefore I inuocate euerie particu lar vertue of yours to be mediators to your best iudgement for my better estimation in your loue, my affection is zealous, my intent honorable, my desire mariage: thus desiring your resolued answere, I rest. Euer at your disposure: lacke Haue-little Knight. Lady I know the noblenes of your disposition defends you from the least Sparke of basenesse, wherefore I inuocate euerie particu lar vertue of yours to be mediators to your best iudgement for my better estimation in your loue, my affection is zealous, my intent honorable, my desire mariage: thus desiring your resolued answere, I rest. Vpon my life some friend did pen it for the foole. O would hee were! but whosoere he bee, a must bee made a match to giue fire to the hell blacke pouder of our reuenge, yet your loue: the wise Knight and he, are two in one, there are no such friendes as they. Then shall be thus: these two being earnest suters for our loues, weele graunt vpon condition, that suddenly they murther Sparke and Ruffell, but first to take the Sacra ment if euer it be knowne, os knowne &#x27;twill be, to keep our names vnspotted in the action; this being done, O none will breake a Sacrament to heape vp periury on other sinnes, when death &amp; hel stands gaping for their soules. If they doe, tis knowne, we lou&#x27;d Sparke, and Ruffel, and men will thinke they kild a&#x27;m for our loues, since they liu&#x27;d in our fauour these in disgrace. Why then tis your profession, you neede not be a sham&#x27;d of your trade. Worth? let me see, shee hath three yellow pere wigs of her own: she hath a Fan with a short siluer handle about the length of a Barbors siringe; she has a Looking-glasse too, but that has plaid the prodigall Cittizen with her, tis broken, and much other goods of the same na ture. Health to our best esteemed friends, Maister Spark and Maister Ruffell. Gentlemen, we haue some small discourse which a little requires secrecie, therefore if it please ye to walke in, and make vse of our better roomes, wee will not long be absent from you. Worthy Lord, doe not thinke immodestie in mee though contrarie to the bashfull habite of my sexe, I am inforc&#x27;d by loues almightie power, to reueale the se cretes of my heart. Your Letters haue so much pre uailed with mee, that in a worde I must confesse I loue you. No we your tongue goes like a well tuned Instru ment, and makes my heart within my bosome daunce with ioy to heare such large requitall of my loue: but duist you to maintaine this your affection, although it were with some daunger of your life? Alas, if you knew all, t&#x27;is your owne good, not mine: and yet I lie, t&#x27;is my good too, since my life depends vpon your safetie. O let me embrace so deare a spirit in so deare a bo some: and since you haue bound your selfe by promise, I will be plaine, there are two that hate you two, because wee loue you, and often haue perswaded vs by giftes and large protestations to haue vs loue them if they kil&#x27;d you. Nay t&#x27;is too true; for while you liu&#x27;d, they said there was no hope for them to looke for any loue from vs: nowe wee poore sillie women, fearing least they without consent of vs, should doe that which their ha tred doth intend, wee thinke it fitte preuention first be vsed, by giuing them to drinke of what themselues haue brude. Sparke. O no ▪ Ile reueale it then, vnlesse you first do swear and take a Sacrament, what euer hap to keepe our names vntoucht. No, so you may misse them, and they kill you. Make them drinke their last. You two shall make a banquet, and in a cuppe of Wine a health shall passe. Come then, I would haue you goe about the prepa ration of the feast. He was sent to Doctor Ferrio, and we neuer saw him since. This is his hand indeede. You powers deuine, I know doe plainely see, Heauens starrie eyes sees all our villanie: And God in Iustice murther will reueale, But were I now, my life for to beginne, Ide be an honest wife to you, wherefore forgiue me deerest Lord.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Fleer</div><div class="body">Before the start of the action, Piso deposed Antifront, whose daughters thereupon fled from Florence. Antifront now travels in search of his missing children. He arrives in London under the alias Fleer, and meets some gentlemen. One of them, Spark, gets him a job with two of his countrywomen, a pair of Florentine courtesans working in London. Antifront is dismayed to discover that they are his missing daughters. Two sisters, Susan and Nan, are interested in Spark and his friend Ruffle, who are among the courtesans’ many clients. They dress up as boys and try to get the gentlemen to employ them as pages; Spark and Ruffle refuse, and the ‘pages’ end up working for two other clients, Sir John Havelittle and Piso junior, the son of the Florentine usurper. ‘Fleer’ wants to engineer a marriage for his daughters, selecting Havelittle and Piso as the eligible bachelors. The daughters prefer Spark and Ruffle, but are refused; taking offence, they ask Piso and Havelittle to kill the gentlemen, and suggest poison as the safest method. The plot is overheard by ‘Fleer’ and the ‘pages’. ‘Fleer’ gets himself another job looking after an apothecary’s shop, and sells Piso and Havelittle a poison which is really a sleeping potion. Spark and Ruffle dine with Piso and Havelittle and apparently die. The hosts are at once arrested on suspicion of poisoning and are committed for trial. Fleer is sent on an errand to the senior judge, who is unable to attend through illness, and sends word back for the other two judges to proceed without him. Given a ring to authenticate the message, Fleer instead uses it to get himself deputized as the third judge. He produces a letter which establishes that the guilt extends to the daughters as well as the poisoners, and all four are sentenced to death. News arrives that Piso’s father has died, making him the new Duke of Florence; but-he tells the Florentines to recall the deposed Antifront instead, and offers to make amends for his father’s treason by marrying Antifront’s elder daughter. Antifront reveals his identity and says Piso can do just 1606 that; his younger daughter will marry Havelittle. He produces the murder victims, still alive, and bestows them on Nan and Susan.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

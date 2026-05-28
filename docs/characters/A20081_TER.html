@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TER in Satiromastix, or The Untrussing of the Humorous Poet · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>TER</span>
+</nav>
+
+<h1>TER</h1>
+<p class="lede">in <em>Satiromastix, or The Untrussing of the Humorous Poet</em> — Dekker, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1602</td></tr>
+<tr><th>Words</th><td>1409</td></tr>
+<tr><th>Characters</th><td>7344</td></tr>
+<tr><th>BritDrama no.</th><td>1304</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">lowder, that thy siluer voice, May reach my Soueraignes eares. My confirmed Leige What meanes my Lord? My Lord, her beauty is the poorest part, Chieflie her vertues <mark>did</mark> endowe my <mark>heart</mark>. My Lord. She is too course an obiect for the Court. For shee&#x27;s not yet mine owne. My Lord I dare, but— This night. My Loord I dare. I dare. I dare</div>
+<div class="excerpt">call our spirits To a true reckoning; first to Arme our wittes With compleat steele of Iudgement, and our tongs, With sound attillery of Phrases: then Our Bodies <mark>must</mark> <mark>bee</mark> motions; moouing first What we speake: afterwards, our very knees <mark>Must</mark> humbly seeme to talke, and sute out speech; For a true furnisht Cortyer hath such force,</div>
+<div class="excerpt">O stop that speedy messenger of death; O let him not run downe that narrow path, Which leades vnto thy <mark>heart</mark>; nor carry newes To thy remoouing soule, that thou <mark>must</mark> dye. I had a constant wife, Ile tell the King; Vntill the King—what dost thou smile? art thou A Father? All ready. She&#x27;s going to forbid the Banes agen. She&#x27;ll</div>
+<div class="excerpt">knees <mark>Must</mark> humbly seeme to talke, and sute out speech; For a true furnisht Cortyer hath such force, Though his tonge faints, his very legs discourse. You shall. You <mark>must</mark> and shall, I made a deede of gift, And gaue my oath vnto the King, I swore By thy true constancy. What shall I cancell faith, and breake my oath? Thy constancie</div>
+<div class="excerpt">Come, my sicke-minded Bride, Ile teach thee how, To relish health a little: Taste this thought, That when mine eyes seru&#x27;d loues commission, Vpon thy beauties I <mark>did</mark> seise on them. To a Kings vse; cure all thy g iefe with this, That his great seale was grauen vpon this ring, And that was but Steward to a King. O Night, that</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Gallants I shal intreate you to prepare, For Maskes and Reuels to defeate the night, Our Soueraigne will in person grace our marriage. Father he will. Deare Blunt at our returne from Church, take paines to step to Horace, for our nuptiall songs; now Father when you please. Father the King&#x27;s at hand. Musicke talke lowder, that thy siluer voice, May reach my Soueraignes eares. My confirmed Leige What meanes my Lord? My Lord, her beauty is the poorest part, Chieflie her vertues did endowe my heart. My Lord. She is too course an obiect for the Court. For shee&#x27;s not yet mine owne. My Lord I dare, but— This night. My Loord I dare. I dare. I dare and will by that ioynt holy oath, VVhich she and I swore to the booke of heauen. This very day when the surueying Sunne, Riz like a witnes to her faith and mine, By all the loyalty that subiects owe To Maiesty, by that, by this, by both, I sweare to make a double guarded oath, This night vntainted by the touch of man, She shall a Virgin come. To Court. I know I tooke a woman to my wife, And I know women to be earthly Moones, That neuer shine till night, I know they change Their Orbes (their husbands) and in sickish hearts, 〈1 page duplicate〉 〈1 page duplicate〉 Steale to their sweete Endimions, to be cur&#x27;d With better Phisicke, sweeter dyet drinkes, Then home can minister: all this I know Yet know not all, but giue me leaue O King, To boast of mine, and saie that I know none; I haue a woman but not such a one. My Lord, My oath&#x27;s my honour, my honour is my life, My oath is constant, so I hope my wife. My Leige Lord, we all attend, The time and place. Father, and you my Bride; that name to day, Wife, comes not till to morrow: but omitting This enterchanging of Languages; let vs thinke Vpon the King and night and call our spirits To a true reckoning; first to Arme our wittes With compleat steele of Iudgement, and our tongs, With sound attillery of Phrases: then Our Bodies must bee motions; moouing first What we speake: afterwards, our very knees Must humbly seeme to talke, and sute out speech; For a true furnisht Cortyer hath such force, Though his tonge faints, his very legs discourse. You shall. You must and shall, I made a deede of gift, And gaue my oath vnto the King, I swore By thy true constancy. What shall I cancell faith, and breake my oath? Thy constancie no euill can pursue. As how? Constrain&#x27;d? that word weighs heauy, yet my oath Weighes downe that word; the kinges thoughts are at oddes, They are not euen ballanst in his brest; The King may play the man with me; nay more, Kings may vsurpe; my wife&#x27;s a woman; yet Tis more then I know yet, that know not her, If she should prooue mankinde, twere rare, fye, fye, See how I loose my selfe, amongst my thoughts, Thinking to finde my selfe; my oath, my oath, Come, my sicke-minded Bride, Ile teach thee how, To relish health a little: Taste this thought, That when mine eyes seru&#x27;d loues commission, Vpon thy beauties I did seise on them. To a Kings vse; cure all thy g iefe with this, That his great seale was grauen vpon this ring, And that was but Steward to a King. O Night, that Dyes the Firmament in blacke, And like a cloth of cloudes dost stretch thy limbes; Vpon the windy Tenters of the Ayre: O thou that hang&#x27;st vpon the backe of Day, Like a long mourning gowne: thou that art made Without an eye, because thou shouldst not see A Louers Reuels: nor participate The Bride-groomes heauen; ô heauen, to me a hell: I haue a hell in heauen, a blessed cursse; All other Bride-groomes long for Night, and taxe The Day of lazie slouth; call Time a Cripple, And say the houres limpe after him: but I Wish Night for euer banisht from the skie, Or that the Day would neuer sleepe: or Time, Were in a swound; and all his little Houres, Could neuer lift him vp with their poore powers. But backward runnes the course of my delight; The day hath turn&#x27;d his backe, and it is night: This nigh will make vs odde; day made vs eeuen, All else are damb&#x27;d in hel, but I in heauen. Then am I damb&#x27;d in hell, and not in heauen. Had I not sworne. The King Sat heauy on my resoluion, Till (out of breath) it panted out an oath. Yes yes, true chastity is tongu&#x27;d so weake, Tis ouer-come ere it know how to speake. Dye? What speakes that cup? Oh: That very name of poison, poisons me; Thou Winter of a man ▪ thou walking graue, Whose life is like a dying Taper: how Canst thou define a Louers labouring thoughts? Wha Sent hast thou but death? what taste but earth? The breath that purles from thee, is like the Steame Of a new-open&#x27;d vault: I know thy drift, Because thou art trauelling to the land of Graues, Thou couetst company, and hether bringst, A health of poison to pledge death: a poison For this sweete spring; this lement is mine, This is the Ayre I breath; corrupt it not; This heauen is mine, I bought it with my soule, Of him that selles a heauen, to buy a soule. She dye ▪ that sentence poisons her: O life! What slaue would pledge a King in his owne wife? Holde, holde, thou shalt not dye, my Bride, my wife, O stop that speedy messenger of death; O let him not run downe that narrow path, Which leades vnto thy heart; nor carry newes To thy remoouing soule, that thou must dye. I had a constant wife, Ile tell the King; Vntill the King—what dost thou smile? art thou A Father? All ready. She&#x27;s going to forbid the Banes agen. She&#x27;ll dye a maide: and see, she keeps her oath. She that was faire, Whom I cal&#x27;d faire and Caeles ine. All cease, The subiect that we treate of now is Peace, If you demaund how: I can tell: if why, Aske the King that; he was the cause, not I. Let it suffice, she&#x27;s dead, she kept her vow, Aske the King why, and then Ile tell you how: Nay giue your Reuels life, tho she be gone, To Court with all your preparation; Leade on, and leade her on; if any aske The mistery, say death presents a maske, Ring peales of Musicke, you are Louers belles, The losse of one heauen, brings a thousand hels. All pleasures guard my King, I heere present, My oath vpon the knee of duety: knees Are made for Kings, they are the subiects Fees. My gracious Lord, That part is hers, she actes it; onely I Present the Prologue, she the misterie. Dead. Now King I enter, now the Sceane is mine, My tongue is tipt with poison; know who speakes, And looke into my thoughts; I blush not King, To call thee Tyrant: death hath set my face, And made my bloud bolde; heare me spirits of men, And place your eares vpon your hearts; the day (The fellow to this night) saw her and me, Shake hands together: for the booke of heauen, Made vs eternall friends: thus, Man and Wife, This man of men (the King) what are not kings? Was my chiefe guest, my royall guest, his Grace Grac&#x27;d all the Table, and did well become The vpper end, where sate my Bride: in briefe, He tainted her chaste eares; she yet vnknowne, His breath was treason, tho his words were none. Treason to her and me, he dar&#x27;d me then, (Vnder the couert of a flattering smile,) To bring her where she is, not as she is, Aliue for lust, not dead for (Chastity: The resolution of my soule, out-dar&#x27;d,) I swore and taxt my faith with a sad oath; Which I maintaine; heere take her ▪ she was mine, When she was liuing, but now dead, she&#x27;s thine. O delude we not. Thou art too true to liue agen, too faire To be my Caelestine, too constant farre To be a woman.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Satiromastix, or The Untrussing of the Humorous Poet</div><div class="body">Celestine and Sir Walter Terrill are married. At the wedding dinner, the King becomes enamoured of Celestine and induces the bridegroom to swear to give up his first night of sex with her: he must deliver her to court that evening, still a virgin. Her father, Sir Quintilian, devises a scheme to save both her honour and Sir Walter’s: he gives her a cup of poison, and she drinks it. She keeps her marriage vows, and Sir Walter delivers her body to the King as part of a masque. The King is abashed to discover that she is a chaste, faithful wife. Then she wakes up: it was only a sleeping draught, and Sir Quintilian has proved both the bride’s constancy and the bridegroom’s love. In the sub-plot, Sir Quintilian and two other knights all become interested in marrying the widow Mistress Miniver, and each independently bribes Tucca to advance his suit. Miniver seems most interested in the bald Sir Adam, so Sir Vaughan engages Horace to write a satire against baldness. He invites the ladies, including Miniver, to a banquet of plums, and there Horace recites his poem on the glories of hair. The poem has the desired effect on Miniver; but Sir Adam hires Horace’s rival, Crispinus, to write a defence of baldness. It all comes to naught, however, for Tucca ends up marrying Miniver himself. In the third plot, Horace’s bitter epigrams against Tucca get into circulation among the gallants. Tucca swears vengeance, and stabs Horace, but with an edgeless sword; Horace’s response is shown to derive from fear rather than physical pain. Horace is accused of giving up a useful trade, bricklaying, and of unlawfully arraigning his rivals on the stage. He is brought to court dressed as a satyr, and the King appoints Crispinus to judge him. Crowned with a nettle wreath, Horace is exposed as an impostor (the real Horace was a better poet), and is made to forswear his inclination to arrogance and personal satire.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

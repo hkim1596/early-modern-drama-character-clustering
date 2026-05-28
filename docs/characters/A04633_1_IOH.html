@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IOH in Bartholomew Fair · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>IOH</span>
+</nav>
+
+<h1>IOH</h1>
+<p class="lede">in <em>Bartholomew Fair</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>1765</td></tr>
+<tr><th>Characters</th><td>9266</td></tr>
+<tr><th>BritDrama no.</th><td>1757</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">such names, Sir; he was Witnesse, for Win, here, (they will not be call&#x27;d God-fathers) and nam&#x27;d her VVinne-the-fight, you thought her name had beene VVinnifred, <mark>did</mark> you not? Hee would ha&#x27; thought himselfe a starke Reprobate, if it had. Heere, I ha&#x27; it for you, in my hand, Master Humphrey. We&#x27;ll talke of that anon, Master Humphrey.</div>
+<div class="excerpt">; as I told you before, Win, and may perhaps, be our Father, Win, they&#x27;ll do you no harme, Win, they are both our worshipfull good friends. Master Quarlous! you <mark>must</mark> know M r . Quarlous, Win ; you <mark>must</mark> not quarrell with Master Quarlous, VVin. Yes, doe good Win. A Foole-Iohn she calls me, doe you marke that, Gentlemen? pretty</div>
+<div class="excerpt">to the Fayre too, you, and I, Win. I haue an affaire i&#x27;the Fayre, 〈◊〉 , a Puppet-play of mine owne making, say nothing, that I writ for he motion man, which you <mark>must</mark> see, Win. Tut, we&#x27;ll haue a deuice, a dainty one; (Now, Wit, helpe at a pinch, good Wit come, come, good Wit, and&#x27;t be thy will.) I haue it, Win, I haue it &#x27;ifaith,</div>
+<div class="excerpt">-pigge: and in the Fayre. I, but in state of necessity: Place should giue place, M r ▪ Busy, (I haue a conceit left, yet.) Yes Sir, and as soone as you can: for it <mark>must</mark> be Sir; you see the danger my little wife is in, Sir. Nay, I knew that afore, and told her on&#x27;t, but courage, Win, we&#x27;ll be humble enough; we&#x27;ll seeke out the homeliest</div>
+<div class="excerpt">little one will be like me, that cries for Pigge so, i&#x27;the mothers belly. This&#x27;s sine, verily, here be the best pigs: and shee doe&#x27;s roast &#x27;hem as well as euer she <mark>did</mark>; the Pigs head sayes. Good mother, how shall we finde a pigge, if we doe not looke about for&#x27;t? will it run off o&#x27;the spit, into our mouths thinke you? as in Lubberland</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">He cannot abide my Vocation, he sayes. Euery line (he sayes) that a Proctor writes, when it comes to be read in the Bishops Court, is a long blacke hayre, kemb&#x27;d out of the tayle of Anti-Christ. Some three dayes since. O Sir, ha&#x27; you tane soyle, here? it&#x27;s well, a man may reach you, after 3. houres running, yet! what an vnmercifull companion art thou, to quit thy lodging, at such vngentle manly houres? None but a scatterd couey of Fidiers, or one of these Rag-rakers in dung-hills, or some Marrow-bone man at most, would haue beene vp, when thou wert gone abroad, by all description. I pray thee what aylest thou, thou canst not sleepe? hast thou Thornes i&#x27;thy eye-lids, or Thistles i&#x27;thy bed. Doe you remember Master Quarlous, what wee discourst on, last night? No? not concerning Win, looke you: there shee is, and drest as I told you she should be: harke you Sir, had you forgot? Why Sir? O Win, fie, what do you meane, Win ! Be womanly, Win ; make an outcry to your mother, Win ? Master Quarlous is an ho nest Gentleman, and our worshipfull good friend, Win : and he is Master Winwifes friends, too: And Master Win-wife comes a Suitor to your mother Win ; as I told you before, Win, and may perhaps, be our Father, Win, they&#x27;ll do you no harme, Win, they are both our worshipfull good friends. Master Quarlous! you must know M r . Quarlous, Win ; you must not quarrell with Master Quarlous, VVin. Yes, doe good Win. A Foole-Iohn she calls me, doe you marke that, Gentlemen? pretty littlewit of veluet! a foole- Iohn ! Sir! good VVin, goe in, and if Master Bartholmew Cokes - his man come for the Licence: (the little old fellow) let him speake with me; what say you, Gentlemen? Rabbi Busy, Sir, he is more then an Elder, he is a Prophet, Sir. Hee was a Baker, Sir, but hee do&#x27;s dreame now, and see visions, hee has giuen ouer his Trade. Yes, Sir, Zeale-of-the-land Busye. O, they haue all such names, Sir; he was Witnesse, for Win, here, (they will not be call&#x27;d God-fathers) and nam&#x27;d her VVinne-the-fight, you thought her name had beene VVinnifred, did you not? Hee would ha&#x27; thought himselfe a starke Reprobate, if it had. Heere, I ha&#x27; it for you, in my hand, Master Humphrey. We&#x27;ll talke of that anon, Master Humphrey. Sweet VVin, bid Salomon send mee the little blacke boxe within, in my study. Why, you know the price, M r Numps. Good i&#x27;faith! no, I warrant you, Salomon is wiser then so, Sir. Master Quarlous, doe not mistake him: he is his Masters both-hands, I assure you. Sir, if you haue a minde to mocke him, mocke him softly, and looke to&#x27;ther way: for if hee apprehend you flout him, once, he will flie at you presently. A terrible testie old fellow, and his name is Waspe too. Nay, good M r Waspe. O! be ciuill Master Numpes. Here is the boxe, now. They doe apprehend, Sir. Will&#x27;t please you drinke, Master VVaspe? No, but you were in hast e&#x27;en now, M r Numpes. She&#x27;s my match indeede, and as little wit as I, Good! You say true, Master Numpes: there&#x27;s such a one indeed. That was mine afore, Gentlemen: this morning. I had that i&#x27;faith, vpon his Licence, beleeue me, there he comes, after me. No? why Sir? Thinke you so, Gentlemen? I&#x27;ll take heed on&#x27;t, hereafter. Win, you see, &#x27;tis in fashion, to goe to the Fayre, Win: we u t to the Fayre too, you, and I, Win. I haue an affaire i&#x27;the Fayre, 〈◊〉 , a Puppet-play of mine owne making, say nothing, that I writ for he motion man, which you must see, Win. Tut, we&#x27;ll haue a deuice, a dainty one; (Now, Wit, helpe at a pinch, good Wit come, come, good Wit, and&#x27;t be thy will.) I haue it, Win, I haue it &#x27;ifaith, and &#x27;tis a fine one. Win, long to eate of a Pigge, sweet Win, i&#x27;the Fayre ; doe you see? i&#x27;the heart o&#x27;the Fayre ; not at Pye-Corner. Your mother will doe any thing, Win, to satisfie your longing, you know, pray thee long, presently, and be sicke o&#x27;the sudden, good Win. I&#x27;ll goe in and tell her, cut thy lace i&#x27;the meane time, and play the Hypocrite, sweet Win. You say true, you haue bin bred i&#x27;the family, and brought vp to&#x27;t. Our mother is a most elect Hypocrite, and has maintain&#x27;d us all this seuen yeere with it, like Gentle-folkes. Not I, o&#x27; my sincerity, mother: she long&#x27;d aboue three houres, ere she would let me know it; who was it Win? Good mother, I pray you; that she may eate some Pigge, and her belly full, too; and doe not you cast away your owne child, and perhaps one of mine, with your tale of the Tempter: how doe you, Win? Are you not sicke? Presently, mother, as soone as he has cleans&#x27;d his beard. I found him, fast by the teeth, i&#x27;the cold Turkey-pye, i&#x27;the cupbord, with a great white loafe on his left hand, and a glasse of Malmesey on his right. Here hee is, now, purified, Mother. I Sir, a Bartholmew -pigge: and in the Fayre. I, but in state of necessity: Place should giue place, M r ▪ Busy, (I haue a conceit left, yet.) Yes Sir, and as soone as you can: for it must be Sir; you see the danger my little wife is in, Sir. Nay, I knew that afore, and told her on&#x27;t, but courage, Win, we&#x27;ll be humble enough; we&#x27;ll seeke out the homeliest Booth i&#x27;the Fayre, that&#x27;s certaine, rather then faile, wee&#x27;ll eate it o&#x27; the ground. I, and Salomon too, Win, (the more the merrier) Win, we&#x27;ll leaue Rabby Busy in a Booth. Salomon, my cloake. Good, i&#x27;faith, I will eate heartily too, because I will be no Iew, I could neuer away with that stiffenecked generation: and truely, I hope my little one will be like me, that cries for Pigge so, i&#x27;the mothers belly. This&#x27;s sine, verily, here be the best pigs: and shee doe&#x27;s roast &#x27;hem as well as euer she did; the Pigs head sayes. Good mother, how shall we finde a pigge, if we doe not looke about for&#x27;t? will it run off o&#x27;the spit, into our mouths thinke you? as in Lubberland ? and cry, we, we? Come, Win, as good winny here, as goe farther, and see nothing. Win, haue patience, Win, I&#x27;le tell you more anon. While they are paying the reckoning, Win, I&#x27;ll tell you a thing Win, wee shall neuer see any sights i&#x27;the Fayre, Win, except you long still, Win, good Win, sweet Win, long to see some Hob by-horses, and some Drummes, and Rattles, and Dogs, and fine deuices, Win. The Bull with the fiue legs, Win ; and the great Hog: now you ha&#x27; begun with Pigge, you may long for any thing, Win, and so for my Motion, Win. O yes! Win: you may long to see, as well as to taste, Win: how did the Pothecarie&#x27;s wife, Win, that long&#x27;d to see the Anatomy, Win? or the Lady, Win, that desir&#x27;d to spit i&#x27;the great Lawyers mouth, after an eloquent pleading? I assure you they long&#x27;d, VVin, good Win, goe in, and long. Looke Win. doe, looke a Gods name, and saue your longing. Here be fine sights. Il&#x27;d giue a shilling, you could i&#x27;faith, friend. A match i&#x27;faith, but do it quickly, then. Pray you forbeare, I am put in trust with &#x27;hem. Was not this shilling well ventur&#x27;d, Win ? for our liber ty? Now we may goe play, and see ouer the Fayre, where we list our selues; my mother is gone after him, and let her ee&#x27;n go, and loose vs. For what, Win ? I pray thee bee not asham&#x27;d, VVin. Come, i&#x27;faith thou shall not be asham&#x27;d, is it any thing about the Hobby-horse-man? an&#x27;t be, speake freely. ô! Is that all, Win ? wee&#x27;ll goe backe to Captaine Ior dan ; to the pig-womans, Win. hee&#x27;ll helpe vs, or she with a dripping pan, or an old kettle, or something. The poore greasie soule loues you, Win, and after we&#x27;ll visit the Fayre all ouer, Win, and, see my Puppet play, Win, you know it&#x27;s a fine matter, Win. I, they are honest Gentlmen Win, Captaine Iordan, and Captaine Whit, they&#x27;ll vse you very ciuilly, Win, God b&#x27;w&#x27;you, Win. By your leaue, friend. Who, I? I perceiue thou know&#x27;st not mee: call the Ma ster o&#x27;the Motion. Peace, speake not too lowd, I would not haue any notice taken, that I am the Author, till wee see how it passes. Master Cokes ! you are exceeding well met: what, in your doublet, and hose, without a cloake, or a hat? O, Sir, you shall command it, what, will a crowne serue you? Your man was i&#x27;the Stocks, ee&#x27;n now, Sir. Yes faith. Pretty youthes, Sir, all children both old and yong, heer&#x27;s the Master of &#x27;hem— Master Lanterne, that giues light to the businesse, I, and eate &#x27;hem all, too, an&#x27; they were in cake-bread. Good ifaith! you are euen with me, Sir. It pleases him to make a matter of it, Sir. But there is no such matter I assure you: I haue onely made it a little easie, and moderne for the times, Sir, that&#x27;s all; As, for the Hellespont I ima gine our Thames here; and then Leander, I make a Diers sonne, a bout Puddle-wharfe: and Hero a wench o&#x27;the Banke-side, who go ing ouer one morning, to old fish-street; Leander spies her land at Trigsstayers, and falls in loue with her: Now do I introduce Cu pid, hauing Metamorphos&#x27;d himselfe into a Drawer, and hee strikes Hero in loue with a pint of Sherry, and other pretty passages there are, o&#x27;the friendship, that will delight you, Sir, and please you of iudgement. No, no, no. O Gentlemen! did you not see a wife of mine? I ha&#x27; lost my little wife, as I shall be trusted: my little pretty Win, I left her at the great woman&#x27;s house in trust yonder, the Pig-womans, with Captaine Iordan, and Captaine Whit, very good men, and I cannot heare of her. Poore foole, I feare shee&#x27;s stepp&#x27;d aside. Mo ther, did you not see Win ? O my wife, my wife, my wife!</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Bartholomew Fair</div><div class="body">Bartholomew Cokes has two objectives in life: to visit the fair which shares his name, and to marry Grace Wellborn, who, as a ward, faces a financial penalty should she refuse. He sends his servant Wasp to Littlewit the proctor to obtain a marriage licence, but then, impatiently, comes himself. He brings Grace with him, and she attracts the interest of Winwife, present with his friend Quarlous as a suitor to Littlewit’s mother-in-law, Dame Purecraft. Littlewit is more interested in Cokes’s talk of the fair, having secretly written one of the puppet plays to be performed there. The only snag is that the puritanical Dame Purecraft will disapprove of their visit, thinking fairs profane. Busy, an elder of Purecraft’s church, advises the family that fairs may lawfully be visited for good reason, and comes along with them to partake of the pork. After some unfortunate experiences involving mistaken identity, Justice Overdo no longer trusts informers and has decided to do his spying personally. He visits the fair in disguise to seek out ‘enormities’ perpetrated by the fairground folk. He is impressed by one young man, Edgeworth, and decides to rescue him from the clutches of the cheaters; but he does not know that Edgeworth is a cutpurse. While Overdo is busy telling him about the wickedness of tobacco, Edgeworth steals Cokes’s purse; Overdo gets the blame. When it happens a second time, Overdo is arrested and put in the stocks. There he encounters the madman Trouble-All, who persistently demands Overdo’s warrant for any action; it transpires that he was a court official driven out of his mind by Overdo’s own actions. The watchmen, concerned to get better authority, release Overdo from the stocks for the time being. Meanwhile, the Littlewits arrive at the fair, but Busy becomes over-excited in his condemnation, attacks the fairground booths, and is arrested; Dame Purecraft goes after him, leaving Littlewit and Win free to enjoy themselves. Edgeworth tricks Wasp into making affidavit so that, at Quarlous’s instigation, he can steal Cokes’s marriage licence. Wasp too is arrested and put in the stocks, but escapes by a ruse when Overdo and Busy are put in beside him. The women visitors to the fair are separated from the men. Littlewit leaves Win in the care of two fairground bawds while he goes off to check the arrangements for his puppet show. Cokes abandons Grace and Mistress Overdo to try and get back his stolen property. Desperate for the toilet, Mistress…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

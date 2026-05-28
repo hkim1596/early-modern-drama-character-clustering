@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DIANA in Gallathea · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> ›
+  <span>DIANA</span>
+</nav>
+
+<h1>DIANA</h1>
+<p class="lede">in <em>Gallathea</em> — Lyly, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1592</td></tr>
+<tr><th>Words</th><td>1265</td></tr>
+<tr><th>Characters</th><td>6880</td></tr>
+<tr><th>BritDrama no.</th><td>754</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 12 (<em>amyntas, phillis, did, must, endimion, death…</em>). Matches are highlighted.</p>
+<div class="excerpt">Howe now sir, are you caught, are you Cu pid? And thou shalt see <mark>Cupid</mark> that I will shewe my selfe to be Diana, that is, Conquerer of thy loose &amp; vntamed appetites. <mark>Did</mark> thy mother <mark>Venus</mark> vnder the colour of a Nimphe, sende thee hether to wounde my Nimphes? Doth she adde craft to her malice, and mis trusting her deitie, practise</div>
+<div class="excerpt">shall also goe. What newes haue we heere Ladies, are all in loue? are Dianaes Nimphes become <mark>Venus</mark> wan tons? is it a shame to be chast, because you be amiable? or <mark>must</mark> you needes be amorous, because you are faire? O <mark>Venus</mark>, if thys be thy spight, I will require it wyth more then hate, well shalt thou know what it is to drib thine</div>
+<div class="excerpt">which I suspect hath beene the weauer of these woes, I saw her slumbring by the brooke side, go search her &amp; bring her, if you find vpon her shoulder a burne, it is <mark>Cupid</mark>: if any print on her backe like a leafe, it is Medea: if any picture on her left breast like a birde, it is Calipso; who euer it be, bring her hether, and spee</div>
+<div class="excerpt">Nimphes? Cruell and vnkind <mark>Venus</mark>, that spighteth onely chastitie, thou shalt see that Dianaes power shal reuenge thy pollicie, and tame thys pride. As for thee <mark>Cupid</mark>, I will breake thy bowe, and burne thine arrowes, binde thy handes, clyp thy wings, and fetter thy feete. Thou that fattest others with hopes, shalt be fedde thy</div>
+<div class="excerpt">spoyle. Yes, chastitie is not within the leuell of his bowe. Heere take your sonne. And I am gladde I am ridde of him. Nowe things falling out as they doe, you <mark>must</mark> leaue these fond fond affections, nature will haue it so, necessitie <mark>must</mark>. Suppose all this <mark>Venus</mark>, what then? Is it possible? Not I. What are these that so malepartlie</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">God speede faire boy. Why, are you no boy? But I see an vnhappie boy. Prettie lad, doe your sheepe feede in the For rest, or are you straied from you flocke, or on purpose come ye to marre Dianaes pastime? VVhat art thou neither Ladde nor sheepe hearde? I wil. Follow me without delaie, or excuse, &amp; if you can doe nothing, yet shall you hallow the Deare. You sir boy shall also goe. What newes haue we heere Ladies, are all in loue? are Dianaes Nimphes become Venus wan tons? is it a shame to be chast, because you be amiable? or must you needes be amorous, because you are faire? O Venus, if thys be thy spight, I will require it wyth more then hate, well shalt thou know what it is to drib thine arrowes vp and downe Dianaes leies. There is an vnknowne Nimph that straggleth vp and downe these woods, which I suspect hath beene the weauer of these woes, I saw her slumbring by the brooke side, go search her &amp; bring her, if you find vpon her shoulder a burne, it is Cupid: if any print on her backe like a leafe, it is Medea: if any picture on her left breast like a birde, it is Calipso; who euer it be, bring her hether, and spee dilie bring her hether. Goe you Larissa and helpe her. Nowe Ladies, dooth not that make your cheekes blushe, that makes mine eares glowe? or can you remember that without sobs, which Diana can not thinke on without sighes? What greater dishonour could happen to Diana, or to her Nimphes shame, then that there can be any time so idle, that shold make their heads so addle? Your chast harts my Nimphes, should resemble the Onix, which is hotest when it is whitest, and your thoughts, the more they are assaul ted with desires, the lesse they should be affected. You should thinke loue like Homers Moly, a white leafe &amp; a blacke roote, a faire shewe, and a bitter taste. Of all Trees the Cedar is greatest, and hath the smallest seedes: of all affections, loue hath the greatest name, &amp; the least vertue. Shall it be said, and shall Venus say it? nay shall it be seene, and shall wantons see it? that Di ana the goddesse of chastity, whose thoughts are al waies answerable to her vowes, whose eyes neuer glan ced on desire, and whose hart abateth the poynt of Cu pids arrowes, shall haue her virgins to become vnchast in desires, immoderate in affection, vntemperate in loue, in foolish loue, in base loue. Eagles cast their euill feathers in the Sunne, but you cast your best desires v pon a shadowe. The birdes Ibes lose their sweetnesse when they lose theyr sights, and virgins all theyr ver tues with theyr vnchast thoughts, vnchast, Diana cal leth that, that hath eyther any showe or suspicion of lightnesse. O my deere Nimphes, if you knewe howe louing thoughts staine louely faces, you woulde bee as careful to haue the one as vnspotted as the other beau tiful. Cast before your eyes the loues of Venus truls, their fortunes, theyr fancies, their ends. What are they els but Silenus pictures, without, Lambes &amp; Doues, with in, Apes, and Owles, who like Ixion imbrace clowdes for Iuno, the shadowes of vertue in steede of the sub stance. The Eagles fethers consume the fethers of all o thers, and loues desire corrupteth all other vertues. I blush Ladies that you hauing beene heretofore patient of labours, should nowe become prentises to idlenesse, and vse the penne for Sonets, not the needle for Sam plers. And howe is your loue placed, vppon pelting boyes, perhaps base of birth, without doubt weake of discretion. I but they are fayre. O Ladies doe your eyes begin to loue collours, whose harts was wont to loath them? is Dianaes Chase become Venus Courte? and are your holy vowes turnd to hollow thoughts? Foolish gyrles, how willing you are to follow that which you should flie, but heere commeth Telusa. Howe now sir, are you caught, are you Cu pid? And thou shalt see Cupid that I will shewe my selfe to be Diana, that is, Conquerer of thy loose &amp; vntamed appetites. Did thy mother Venus vnder the colour of a Nimphe, sende thee hether to wounde my Nimphes? Doth she adde craft to her malice, and mis trusting her deitie, practise deceite: is there no place but my Groues, no persons but my Nimphes? Cruell and vnkind Venus, that spighteth onely chastitie, thou shalt see that Dianaes power shal reuenge thy pollicie, and tame thys pride. As for thee Cupid, I will breake thy bowe, and burne thine arrowes, binde thy handes, clyp thy wings, and fetter thy feete. Thou that fattest others with hopes, shalt be fedde thy selfe with wishes, &amp; thou that bindest others with golden thoughts, shalt be bound thy selfe with golden fetters. Venus rods are made of Roses, Dianaes of Bryers. Let Venus that great Goddesse, raunsome Cupid that little God. These La dies heere whom thou hast infected with foolish loue, shall both tread on thee and triumph ouer thee. Thine owne arrow shall be shot into thine owne bosome, and thou shalt be inamored, not on Psiches, but on Circes. I will teach thee what it is to displease Diana, distresse her Nimphes, or disturbe her Game. Are you prating? I will bridle thy tongue &amp; thy power, and in spight of mine owne thoughts, I will sette thee a taske euery day, which if thou finish not, thou shalt feele the smart. Thou shalt be vsed as Dianaes slaue, not Venus sonne. All the worlde shall see that I will vse thee like a captiue, and shew my selfe a Conquerer. Come haue him in, that wee may deuise apt punishments for his proude presumptions. O Neptune, hast thou forgotten thy selfe, or wilt thou cleane for-sake mee? Hath Diana therfore brought danger to her Nimphes, because they be chast? shal vertue suffer both paine and shame which alwaies deserueth praise and honor? I say there is nothing more vaine, then to dispute with Venus, whose vntamed affections haue bred more brawles in heauen, then is fitte to repeate in earth, or possible to recount in number, I haue Cupid, and will keepe him, not to dandle in my lappe, whom I abhor in my hart, but to laugh him to scorne, that hath made in my virgins harts such deepe scarres. It is knowne Venus, that your tongue is as vnrulie as your thoughts, and your thoughts as vn staied as your eyes, Diana cannot chatter, Venus can not chuse. I account not the choyse harde, for had I twentie Cupids, I woulde deliuer them all to saue one Virgine, knowing loue to be a thing of all the vainest, virginitie to be a vertue of all the noblest. I yeeld, La rissa, bring out Cupid: and now shall it be saide, that Cupid saued those he thought to spoyle. Yes, chastitie is not within the leuell of his bowe. Heere take your sonne. And I am gladde I am ridde of him. Nowe things falling out as they doe, you must leaue these fond fond affections, nature will haue it so, necessitie must. Suppose all this Venus, what then? Is it possible? Not I. What are these that so malepartlie thrust themselues into our companies? Let them alone, they be but peeuish.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Gallathea</div><div class="body">Every five years, Lincolnshire’s fairest and chastest virgin is sacrificed to N&amp;@ptumé; this ancient custom keeps the land safe from the monster Agat. The fathers of Galatea and PHyllidd independently attempt to preserve their respective daughters from selection for sacrifice by disguising her as a boy and sending her to hide in the woods. They meet: each takes the other for the boy she seems, and falls in love with ‘him’. Meanwhile, to make mischief among Diana’s nymphs, @upid cross-dresses too and gives them all amorous thoughts about the two disguised girls; but Galatea and Phyllida reject them all, each preferring the other. Cupid is captured, and set fiddly tasks by way of punishment. The day of the sacrifice arrives. M@be, the most suitable remaining virgin, is offered in sacrifice, but Neptune has seen through Galatea and Phyjllida’s disguises and will not take her; Hebe is relieved to-have survived and disappointed not to be the fairest virgin. WenGsS arrives to release her son, and appeals for Neptune’s help. He offers to discontinue the custom of sacrifice if Dia@iia will release Cupid, and, knowing it will save the lives of future virgins, Diana agrees. Galatea and Phyllida each discover the other&#x27;s true gender, but Venus agrees to change one of them into a boy, but they are not to know which of them it is until they are married. In the sub-plot, three brothers are shipwrecked on the Lincolnshire coast, and seek their fortune by some other means than the sea. Raifé successively serves an alchemist and an astronomer, but ends up no richer than before; RGB too has little success, but Diek claims prosperity. The goddesses engage them to sing at the wedding of Galatea and Phyllida.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> page.
+</div>
+</div></body></html>

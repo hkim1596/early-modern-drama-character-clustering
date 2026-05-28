@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SPA in 532 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SPA</span>
+</nav>
+
+<h1>SPA</h1>
+<p class="lede">in <em>532</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>1481</td></tr>
+<tr><th>Characters</th><td>7978</td></tr>
+<tr><th>BritDrama no.</th><td>532</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">that y&#x27;are bouncing couple well met, and &#x27;twere pitty to part yee, though you hung to gether in a smoakie chimney. Thank your Brideship—your Bawdship. VVith all my <mark>heart</mark>, I&#x27;me sure I am not the heaviest In the company. Strike up for the honour of the Bride and Bridegroome. Sure you are not without a stick of Licorice in your pocket</div>
+<div class="excerpt">I believe stout lungs of your owne, you swim about so roundly without rubs; &#x27;tis a tickling sight to be young still. That eare-wig scatters the troope now, Ile <mark>goe</mark> neer to fit&#x27;em. Oh &#x27;twas ever a wanton monkey—a&#x27; will wriggle into a starting hole so cleanely—and it had bin on my wed ding day,—I know what I know. Nothing, nothing,</div>
+<div class="excerpt">lies I dare sweare abominably. She meanes your hornes, there&#x27;s a bob for you. Marke that Secc0. There a rub&#x27;d your forehead, &#x27;twas a tough blow. Now now he&#x27;s in, I <mark>must</mark> not leave him so. That very word halters the eare-wig. Lash him soundly, let the little Ape shew trickes. Well playd Dog, well playd Beare, sa, sa, sa; to&#x27;t to&#x27;t.</div>
+<div class="excerpt">upper and their lower lips, you&#x27;d so smouch and belaver their chopps. Newes? well remember&#x27;d, that&#x27;s part of your trade too (prethee doe not rub so roughly) and how goes the tattle oth&#x27; towne? what novelties stirring, ha? Ile never beleeve it, &#x27;tis impossible. O rare, a man might venture ten or twenty to one safely then, and nere</div>
+<div class="excerpt">Coward? I may live to be re veng&#x27;d on both of yee. All&#x27;s whole yet I hope? The feare put me into a sweat; I cannot helpe it; I am glad I have my throat mine owne, and <mark>must</mark> laugh for Company, or be laught at.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">O yes, if any man, woman, or beast, have found, stolne, or taken up a fine, very fine male Barber, of the age of above or under eighteene more or lesse. Umh—pay the cryer, I have bin almost Iost my selfe in seeking you, heere&#x27;s a letter from— Soft and faire, and you be so briefe, I&#x27;le returne it whence it came, or looke out a new owner, O yes. Give me one, and take t&#x27;other, &#x27;tis from tho party, Golden newes believe it. Fairest faire, quoth a, so is an old rotten Codled mungrell, parcell Bawde, parcell midwife, all the markes are quite out of her mouth, not the stumpe of a tooth left in her head, to mumble the curd of a Posset—Seignior &#x27;tis as I told yee, all&#x27;s right, To a very haire Seignior mio. Th&#x27;art a prickeard foyst, a citterne headed gew, gaw, a knacke, a snipper-snapper, twit mee with the decre ments of my pendants, though I am made a gelding, and like a tame Buck have lost my Dowsets, more a monster then a Cuckold with his hornes seene, yet I scorne to be jeer&#x27;d by any checker, aproved Barbarian of yee all, make me a man, I defie thee. Indeed? Th&#x27;art worse, a drie shaver, a copper ba sand-suds-monger. Eyes in thy belly, the reverend Madam shall know how I have beene used, I will blow my nose in thy casting bottle, breake the teeth of thy combes, poyson thy camphire Balls, slice out thy towels with thine owne razor, betallow thy tweezes, and urine in thy bason, make me a man? Or cast old ones. Good, we are piec&#x27;d againe, reputation, Seignior, is precious. Old sores would not be rub&#x27;d. The Lady guardianesse, the mother of the Fancies, is resolved to draw with yee, in the wholesome of matrimo ny, suddenly. You will to bed no doubt. Doe miracles and get Babies. In feather and old furres. On Pap and Bulbeese. Eighteene and threescore with advantage, The pure christall puddle of pleasures. A pox on them that envy yee. Fumble one with an other, on the gambos of imagi nation betweene their legs, eate they doe, and sleepe, game, laugh, and lye downe, as beauties ought to doe, there&#x27;s all. Why, there&#x27;s another quarrell, man, once more in spight of my nose. Yes, crimpe, &#x27;tis a gallant life to bee an old Lords pimpe whiskin, but beware of the porters lodge, for carrying tales out of the schoole. Not so terrible as a crosse tree that never growes, to a wag-halter-Page. Very, very well, if I dye in thy debt for this crack rope) let me be buried in a cole-sacke, I&#x27;le fit yee, (apes face) looke for&#x27;t. Marke the end on&#x27;t, and laugh at last. Well said old Touch hole. &#x27;Twould wind-break a moyle, or a ring&#x27;d mare, to vie burthens with her. Nothing forsooth, but that y&#x27;are bouncing couple well met, and &#x27;twere pitty to part yee, though you hung to gether in a smoakie chimney. Thank your Brideship—your Bawdship. VVith all my heart, I&#x27;me sure I am not the heaviest In the company. Strike up for the honour of the Bride and Bridegroome. Sure you are not without a stick of Licorice in your pocket forsooth; you have I believe stout lungs of your owne, you swim about so roundly without rubs; &#x27;tis a tickling sight to be young still. That eare-wig scatters the troope now, Ile goe neer to fit&#x27;em. Oh &#x27;twas ever a wanton monkey—a&#x27; will wriggle into a starting hole so cleanely—and it had bin on my wed ding day,—I know what I know. Nothing, nothing, I prate sometimes beside the pur pose, whoreson lecherous weezill? VVhy? there&#x27;s the businesse, Buts on ones fore head, are but scurvie Buts. Yes, I know my postures-oh monstruous Buts. Who brought him in? that would be knowne? A plaine case, Roguery, Brokage and Roguery, or call me Bulchin. Fancies, quoth a? rather Frenzies. We shall all rore shortly: turne madcaps, lie open to what comes first I may stand to&#x27;t. That boy Page, is a naughty boy Page; let me feele your forehead, ha, oh, hum,—yes—there,—there againe; I&#x27;m sorry for ye, a hand-saw cannot cure ye, mon strous and apparent. What what what what, nothing but Velvet tips you are of the first head yet: have a good hart man, a Cuc kold though a be a Beast, weares invisible hornes; else we might know a City Bull from a Countrey Calfe,—vil lanous Boy still. Why? hee&#x27;s not come to the honour of a Beard yet, he needs no shaving. Nay she may doe well enoughs for one. Grosse and ridiculous,—look ye, point blanck I dare not sweare that this same Mountbancking new come foyst, is at least a procurer in the businesse; if not a pretender himselfe: but I thinke what I thinke. A likely matter, &#x27;las I&#x27;m Metamorphosed I, be pa tient you&#x27;l marre all else. Leave your wild fegaries, and learne to be a tame Antick, or Ile observe no longer. Hold her there Boy. Out stallion, as I am a man and no man, the Baboon lies I dare sweare abominably. She meanes your hornes, there&#x27;s a bob for you. Marke that Secc0. There a rub&#x27;d your forehead, &#x27;twas a tough blow. Now now he&#x27;s in, I must not leave him so. That very word halters the eare-wig. Lash him soundly, let the little Ape shew trickes. Well playd Dog, well playd Beare, sa, sa, sa; to&#x27;t to&#x27;t. Scould Coxcombe, baggage, Cuckold. Crabed Age and Youth Cannot jumpe together: One is like good lucke, T&#x27;other like foule weather. Humh how&#x27;s that? how&#x27;s that? is he there with a Wanion? Then doe I begin to dwindle,—O oh, the fit, the fit; the fits upon me now, now now now. Who I speake, alas I cannot speake I. Why? you know I an ignorant unable trifle in such businesse; an Oafe, a simple Alcatote; an Innocent. I do not know. Nothing. Never. Truely Secco for the antient good Woman; I dare sweare point-blanck; and the Boy surely, I ever said was to any mans thinking, a very Chrisome in the thing you wot, that&#x27;s my opinion clearely. Faithfully in truth forsooth. Youngling, a word youngling: have not you scap&#x27;d the lash hansomly? thanke me for&#x27;t Ist possible, give me thy little fist, we are friends; have a care henceforth, remember this whilst you live. And still the Vrehin would, but could not doe: Pretty knave, and so forth: Come, truce on all hands. Here and ready; what a mouthing thou keep&#x27;st, I have but scour&#x27;d my hands, and curried my head to save time, honest Secco, neat Secco, precious barbarian, now thou lookst like a worshipfull Tooth-drawer, would I might see thee on horsebacke, in the pompe once. So, to worke with a grace now, I cannot but high ly be in love with the fashion of Gentry, which is never compleat, till the snip snap of dexterity, hath mow&#x27;d off the excrements of slovenry. I a whelpe of the wits? no, no, I cannot barke impudently, and ignorantly enough;—oh, and a man of this Art had now and then Soveraigntie over faire Ladies, you would tickle their upper and their lower lips, you&#x27;d so smouch and belaver their chopps. Newes? well remember&#x27;d, that&#x27;s part of your trade too (prethee doe not rub so roughly) and how goes the tattle oth&#x27; towne? what novelties stirring, ha? Ile never beleeve it, &#x27;tis impossible. O rare, a man might venture ten or twenty to one safely then, and nere be in danger o&#x27; the cheate;—this water me thinks is none of the sweetest; Camphire and soape of Venice say ye. Dog-muske, poxe o&#x27;the dog-muske, what dost meane to bleach my nose, thou giv&#x27;st such twitches to&#x27;t? set me at liberty as soone as thou canst, gentle Secco Pish, no matter for that; dispatch, I entreat thee. What&#x27;s that so cold at my throat; and scrubs so hard? I talke baudily to thy wife? hang baudry; good now mind thy busines, lest thy hand slip. I protest and vow friend Secco, I know no leaps, I. Confound thee, thy leaps and thy cuts, I am no Eunuch, you finicall asse, I am no Eunuch; but at all points as well provided, as any he in Italy, and that thy Wife could have told thee: this your conspiracie, to thrust my head into a brazen tub of Kitchin-see, hud winke mine eyes in mud-soape, and then offer to cut my throat in the darke like a Coward? I may live to be re veng&#x27;d on both of yee. All&#x27;s whole yet I hope? The feare put me into a sweat; I cannot helpe it; I am glad I have my throat mine owne, and must laugh for Company, or be laught at.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 532</div><div class="body">Three female courtiers tempt the King into a hedonistic lifestyle and away from sermons and the advice of his grave counsellors. They lull him to sleep and then transform him into a pig. While the court makes merry, two old men arrive and change him back to human form. The ladies and other courtiers vanish and he is sent for judgement; his plea is unsuccessful and he is carried away by evil spirits.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AGRI in Antony and Cleopatra · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> ›
+  <span>AGRI</span>
+</nav>
+
+<h1>AGRI</h1>
+<p class="lede">in <em>Antony and Cleopatra</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>247</td></tr>
+<tr><th>Characters</th><td>1402</td></tr>
+<tr><th>BritDrama no.</th><td>1517</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 29 (<em>brutus, did, rome, antonius, anthony, cleopatra…</em>). Matches are highlighted.</p>
+<div class="excerpt">Fortune worthy Souldier, and farewell. Why Enobarbus : When <mark>Anthony</mark> found Iulius Caeſar dead, He cried almoſt to roaring: And he wept, When at Phillippi he found <mark>Brutus</mark> ſlaine. Who queazie with his inſolence already, Will their good thoughts call from him Who does he accuſe? Sir, this ſhould be anſwer&#x27;d.</div>
+<div class="excerpt">Giue me leaue Caeſar. Thou haſt a Siſter by the Mothers ſide, admir&#x27;d Octauia. Great Mark <mark>Anthony</mark> is now a widdower. To hold you in perpetuall amitie, To make you Brothers, and to knit your hearts With an vn-ſlipping knot, take <mark>Anthony</mark>, Octauia to his wife:</div>
+<div class="excerpt">She made great Caeſar lay his Sword to bed, He ploughed her, and ſhe cropt. What are the Brothers parted? &#x27;Tis a Noble Lepidus. Nay but how deerely he adores Mark <mark>Anthony</mark>. Oh <mark>Anthony</mark>, oh thou Arabian Bird! Both he loues. Good Fortune worthy Souldier, and farewell. Why Enobarbus : When <mark>Anthony</mark> found Iulius Caeſar dead, He cried almoſt</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Giue me leaue Caeſar. Thou haſt a Siſter by the Mothers ſide, admir&#x27;d Octauia. Great Mark Anthony is now a widdower. To hold you in perpetuall amitie, To make you Brothers, and to knit your hearts With an vn-ſlipping knot, take Anthony, Octauia to his wife: whoſe beauty claimes No worſe a husband then the beſt of men: whoſe Vertue, and whoſe generall graces, ſpeake That which none elſe can vtter. By this marriage, All little Ielouſies which now ſeeme great, And all great feares, which now import their dangers, Would then be nothing. Truth&#x27;s would be tales, Where now halfe tales be truth&#x27;s: her loue to both, Would each to other, and all loues to both Draw after her. Pardon what I haue ſpoke, For &#x27;tis a ſtudied not a preſent thought, By duty ruminated. Good Enobarbus. There ſhe appear&#x27;d indeed: or my reporter de uis&#x27;d well for her. Rare Egiptian. Royall Wench: She made great Caeſar lay his Sword to bed, He ploughed her, and ſhe cropt. What are the Brothers parted? &#x27;Tis a Noble Lepidus. Nay but how deerely he adores Mark Anthony. Oh Anthony, oh thou Arabian Bird! Both he loues. Good Fortune worthy Souldier, and farewell. Why Enobarbus : When Anthony found Iulius Caeſar dead, He cried almoſt to roaring: And he wept, When at Phillippi he found Brutus ſlaine. Who queazie with his inſolence already, Will their good thoughts call from him Who does he accuſe? Sir, this ſhould be anſwer&#x27;d.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Antony and Cleopatra</div><div class="body">Antony dallies with Cleopatra in Egypt while the Roman world collapses into faction. His wife and brother make war on Caesar, and Pompey takes advantage of his absence to foment a sea war with the state and avenge his murdered father. At first Antony ignores Caesar’s messages, but his wife’s death draws him back to Rome, where he and Caesar are reconciled; to seal the league, Antony marries Caesar’s sister, Octavia. A soothsayer, who has told the fortunes of members of Cleopatra’s court, warns him that, although he is a better man than Caesar, Caesar will always prove the more successful of the two. Antony, Caesar, and Lepidus meet Pompey with an army, but war is averted. Lepidus gets egregiously drunk at the feast on Pompey’s galley to celebrate the treaty. Pompey refuses his ally Menas’ dishonourable proposal to kill the triumvirate and make him master of the world. Antony’s lieutenant Ventidius defeats the Parthians in battle, but is cautious about taking too much of the credit for himself. Meanwhile, news of Antony’s marriage reaches Cleopatra; she does not take it well. Antony leaves Rome with his new wife, but absence breeds suspicion between him and Caesar. Caesar breaks the truce with Pompey and deposes Lepidus on a pretext. Antony, in turn, sends Octavia home and returns to Egypt, where he creates Cleopatra queen of several dominions. War between east and west follows. Antony perversely chooses to fight by sea, and Cleopatra insists on being present at the battle. They are routed when Cleopatra flees and Antony follows her. Antony’s followers begin to defect to Caesar, but Enobarbus remains loyal. Caesar attempts to divide the lovers by offering Cleopatra security if she will banish or kill Antony. Antony has the messenger whipped for over-familiarity with Cleopatra, and determines to fight to the bitter end. Enobarbus decides finally to go over to Caesar, but leaves behind his treasure; Antony sends it after him, and the guilt-stricken Enobarbus dies. Antony defeats Caesar in a land battle, but loses the next day at sea. Spurned by Antony, Cleopatra takes refuge in her monument and sends him false news of her death. He stabs himself and is pulled up, dying, to join Cleopatra in the monument. Caesar hopes to display Cleopatra in his triumph at Rome, but she frustrates him by smuggling an asp past her guard and committing suicide.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> page.
+</div>
+</div></body></html>

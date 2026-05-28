@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GORB in 39 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_10.html">Cluster 10 — 10: death, realme, porrex</a> ›
+  <span>GORB</span>
+</nav>
+
+<h1>GORB</h1>
+<p class="lede">in <em>39</em> — [15, 16]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1570</td></tr>
+<tr><th>Words</th><td>1085</td></tr>
+<tr><th>Characters</th><td>5936</td></tr>
+<tr><th>BritDrama no.</th><td>39</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 10 (<em>death, realme, porrex, noble, both, lordes…</em>). Matches are highlighted.</p>
+<div class="excerpt">tender yeres, Guidyng so great estate with great renowme: <mark>Nowe</mark> more importeth mee, than erst, to vse Your fayth and wisedome, whereby yet I reigne: That when by <mark>death</mark> my life and rule shall cease, The kingdome yet may with vnbroken course, Haue certayne <mark>prince</mark>, by whose vndoubted right, Your wealth and peace may stand in quiet</div>
+<div class="excerpt">here in courte. Their age <mark>nowe</mark> asketh other place and trade, And myne also doth aske an other chaunge: Theirs to more trauaile, myne to greater case. Whan fatall <mark>death</mark> shall ende my mortall life, My purpose is to leaue vnto them twaine The <mark>realme</mark> diuided into two sondry partes: The one Ferrex myne elder sonne shall haue, The other</div>
+<div class="excerpt">sonnes. And happie I, till <mark>nowe</mark> alas I see And feele my most vnhappye wretchednesse. Beholde my <mark>lordes</mark>, read ye this letter here. Loe it conteins the ruine of our <mark>realme</mark>, If timelie speede prouide not hastie helpe. Yet (O ye Goddes) if euer wofull kyng Might moue ye kings of kinges, wreke it on me And on my sonnes, not on this giltlesse</div>
+<div class="excerpt">My lords, whose graue aduise &amp; faithful aide, Haue long vpheld my honour and my <mark>realme</mark>, And brought me to this age from tender yeres, Guidyng so great estate with great renowme: <mark>Nowe</mark> more importeth mee, than erst, to vse Your fayth and wisedome, whereby</div>
+<div class="excerpt">heate, The secret grudge and malice will remayne, The fire not quenched, but kept in close restraint, Fedde still within, breakes forth with double flame. Their <mark>death</mark> and myne <mark>must</mark> peaze the angrie Gods O heauens send down the flames of your re uenge, Destroy I say with flash of wrekefull fier The traitour sonne, and then the</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">My lords, whose graue aduise &amp; faithful aide, Haue long vpheld my honour and my realme, And brought me to this age from tender yeres, Guidyng so great estate with great renowme: Nowe more importeth mee, than erst, to vse Your fayth and wisedome, whereby yet I reigne: That when by death my life and rule shall cease, The kingdome yet may with vnbroken course, Haue certayne prince, by whose vndoubted right, Your wealth and peace may stand in quiet stay, And eke that they whome nature hath preparde, In time to take my place in princely seate, While in their fathers tyme their pliant youth Yeldes to the frame of skilfull gouernance, Maye so be taught and trayned in noble artes, As what their fathers which haue reigned before Haue with great fame deriued downe to them, With honour they may leaue vnto their seede: And not be thought for their vnworthy life, And for their lawlesse swaruynge out of kinde, Worthy to lose what lawe and kind them gaue: But that they may preserue the common peace, The cause that first began and still mainteines The lyne all course of kinges inheritance. For me, for myne, for you, and for the state, Where of both I and you haue charge and care, Thus do I meane to vse your wonted fayth To me and myne, and to your natiue lande. My lordes be playne without all wrie respect Or poysonous craft to speake in pleasyng wise, Lest as the blame of yll succedyng thinges Shall light on you, so light the harmes also. My lordes, I thanke you all. This is the case. Ye know, the Gods, who haue the soueraigne care For kings, for kingdomes, and for common weales, Gaue me two sonnes in my more lusty age. Who nowe in my decayeng yeres are growen Well towardes typer state of minde and strength, To take in hande some greater princely charge. As yet they lyue and spende hopefull daies, With me and with their mother here in courte. Their age nowe asketh other place and trade, And myne also doth aske an other chaunge: Theirs to more trauaile, myne to greater case. Whan fatall death shall ende my mortall life, My purpose is to leaue vnto them twaine The realme diuided into two sondry partes: The one Ferrex myne elder sonne shall haue, The other shall the yonger Porrex rule. That both my purpose may more firmely stande, And eke that they may better rule their charge, I meane forthwith to place them in the same: That in my life they may both learne to rule, And I may ioy to see their ruling well. This is in summe, what I woulde haue ye wey: First whether ye allowe my whole deuise, And thinke it good for me, for them, for you, And for our countrey, mother of vs all: And if ye lyke it, and allowe it well, Then for their guydinge and their gouernaunce, Shew forth such meanes of circumstance, As ye thinke meete to be both knowne and kept. Loe, this is all, now tell me your aduise. O cruel fates, O mindful wrath of Goddes, Whose vengeance neither Simois stayned streames Flowing with bloud of Troian princes slaine, Nor Phrygian fieldes made ranck with corpses dead Of Asian kynges and lordes, can yet appease, Ne slaughter of vnhappie Pryams race, Nor Ilions fall made leuell with the soile. Can yet suffice: but still continued rage Pursues our lynes, and from the farthest seas Doth chase the issues of destroyed Troye. &quot; Oh no man happie, till his ende be seene. If any flowing wealth and seemyng ioye In present yeres might make a happy wight, Happie was Hecuba the wofullest wretch That euer lyued to make a myrrour of, And happie Pryam with his noble sonnes. And happie I, till nowe alas I see And feele my most vnhappye wretchednesse. Beholde my lordes, read ye this letter here. Loe it conteins the ruine of our realme, If timelie speede prouide not hastie helpe. Yet (O ye Goddes) if euer wofull kyng Might moue ye kings of kinges, wreke it on me And on my sonnes, not on this giltlesse realme. Send down your wasting flames fro ̄ wrathful skies, To reue me and my sonnes the hatefull breath. Read, read my lordes: this is the matter why I called ye nowe to haue your good aduyse. MY soneraigne lord, what I am loth to write, But lothest am to see, that I am forced By letters nowe to make you vnderstande. My lord Ferrex your eldest sonne misledde By traitorous fraude of yong vntempred wittes, Assembleth force agaynst your yonger sonne, Ne can my counsell yet withdrawe the heate And furyous panges of hys enflamed head. Disdaine (sayth he) of his disheritance Armes him to wreke the great pretended wrong, With ciuyll sword vpon his brothers life. If present helpe do not restraine this rage, This flame will wast your sonnes, your land, &amp; you. The Goddes sende ioyfull newes. Philander, welcome: but how doth my sonne? O heauens, yet more? not ende of woes to me? Are they in armes? would he not sende to me? Is this the honour of a fathers name? In vaine we trauaile to asswage their mindes, As if their hartes, whome neither brothers loue, Nor fathers awe, nor kingdomes cares, can moue, Our counsels could withdraw from raging heat. Ioue slay them both, and end the cursed line. For though perhappes feare of such mightie force As I my lordes, ioyned with your noble aides, Maye yet raise, shall represse their present heate, The secret grudge and malice will remayne, The fire not quenched, but kept in close restraint, Fedde still within, breakes forth with double flame. Their death and myne must peaze the angrie Gods O heauens send down the flames of your re uenge, Destroy I say with flash of wrekefull fier The traitour sonne, and then the wretched sire. But let vs go, that yet perhappes I may Die with reuenge, and peaze the hatefull gods. We maruell much wherto this lingring stay Falles out so long: Porrex vnto our court By order of our letters is returned ▪ And Eubulus receaued from vs by hest At his arriuall here to geue him charge Before our presence straight to make repaire, And yet we haue no worde whereof he stayes. Madame (alas) what meanes your woful tale?</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_10.html">Cluster 10 — 10: death, realme, porrex</a> page.
+</div>
+</div></body></html>

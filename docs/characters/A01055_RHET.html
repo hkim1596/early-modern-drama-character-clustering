@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RHET in 420 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>RHET</span>
+</nav>
+
+<h1>RHET</h1>
+<p class="lede">in <em>420</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1629</td></tr>
+<tr><th>Words</th><td>1775</td></tr>
+<tr><th>Characters</th><td>9772</td></tr>
+<tr><th>BritDrama no.</th><td>420</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">on&#x27;t. Phew, you may wheele about, man, wee know y&#x27;are proud of your slouenry and practice, tis your ver tue; the Princes melancholy fit I presume holds still. You <mark>must</mark> not <mark>goe</mark> yet. Mountebanck, Empricks, Quacksaluers, Mi neralists, Wizards, Alchimists, cast-Apothecaries, old Wiues and Barbers, are all suppositors to the right</div>
+<div class="excerpt">if we will not hug Prosperity in others, and contemne Affliction in our selues. This Rule is certaine, &quot; He that pursues his safety from the Schoole &quot; Of State, <mark>must</mark> learne to be mad man, or foole. Ambition, wealth, ease, I renounce the diuell That damns yee here on earth, or I will be— Mine owne mirth, or mine owne tormentor,—So,</div>
+<div class="excerpt">diseased flesh. Come on. Ha, ha, ha; this is flattery, grosse flattery. Are thy bottles full? Like so many Swine in a trough. He shall fret or laugh. The melody <mark>must</mark> agree well, and yeeld sport, When such as these are, Knaues and Fooles consort. Of Woodcocke without braines in&#x27;t; Barbers shall weare thee on their Citternes,</div>
+<div class="excerpt">the eares, then stroake a Lyon, the greatest danger is the last. All this may be. I haue seene a man so curious in feeling of the edge of a keene knife, that he <mark>has</mark> cut his fingers. My flesh is not of proofe against the metall I am to handle; the one is tenderer then the other. I will remember you of an old Tale that somthing</div>
+<div class="excerpt">had notice of it, and with much ioy returned home, and as report voyced it, at A thens enioyed her happinesse: she was long an exile: For now Noble Sir, if you <mark>did</mark> loue the Lady Eroclea, why may not such safety and fate direct her, as directed the other? tis not impossible. My duty and my obedience are my suretie, But I haue</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I will not court the madnesse of the times, Nor fawne vpon the Riots that embalme Our wanton Gentry, to preserue the dust Of their affected vanities in coffins Of memorable hame ▪ when Common-wealths Totter and reele from that nobilitie And ancient vertue, which renownes the great, Who steere the Helme of gouernment, while Mush rooms Grow vp, &amp; make new lawes to licence folly: Why should not I, a May-game, scorne the weight Of my sunke fortunes? snarle at the vices Which rot the Land, and without feare or wit Be mine owne Anticke? Tis a sport to liue When life is irkesome, if we will not hug Prosperity in others, and contemne Affliction in our selues. This Rule is certaine, &quot; He that pursues his safety from the Schoole &quot; Of State, must learne to be mad man, or foole. Ambition, wealth, ease, I renounce the diuell That damns yee here on earth, or I will be— Mine owne mirth, or mine owne tormentor,—So, Here comes intelligence, a Buz o&#x27;the Court. And thou art his forerunner? Agelastus, so surnamed for his grauity, Was a very wise fellow, kept his countenance All dayes of his life as demurely, as a Iudge that Pronounceth sentence of death, on a poore Roague, For stealing as much bacon, as would serue at a meale With a Calues head. Yet he smil&#x27;d once, And neuer but once: Thou art no Scholler? To see an Asse eate Thistles. Puppy, go study to be a singular Coxcomb. Cuculus is an Ordinary Ape, but thou art an Ape of an Ape. Giue me thy fist, Innocent. Cuculus, there is within a mile or two, a Sow-pig Hath suckt a Brach, and now hunts the Deere, the Hare, Nay, most vnnaturally the wilde Bore, Aswell as any Hound in Cyprus. Euery thing takes after the dam that gaue it suck: Where hadst thou thy milke? And who gaue thee pap, Mouse? La now, a Shittle-cock-maker, all thy braines are stucke with corke and feather. Cuculus, this lear ned Courtier takes after the nurse too, a she-surgeon, which is in effect a meere matter of colours. Goe, learne to paint and dawbe complements, tis the next step to run into a new suit; my Lady Periwinckle here neuer suckt; suck thy Master, and bring forth Moone calues, Fop, doe; This is good Philosophy, Sirs, make vse on&#x27;t. Phew, you may wheele about, man, wee know y&#x27;are proud of your slouenry and practice, tis your ver tue; the Princes melancholy fit I presume holds still. You must not goe yet. Mountebanck, Empricks, Quacksaluers, Mi neralists, Wizards, Alchimists, cast-Apothecaries, old Wiues and Barbers, are all suppositors to the right Worshipfull Doctor, as I take it. Some of yee are the head of your Art, &amp; the hornes too, but they come by nature; thou liuest single for no other end, but that thou fearest to be a Cuckold. Haue at thee agen. Thou art in thy Religion an Atheist, in thy condition a Curre, in thy dyet an Epicure, in thy lust a Goate, in thy sleepe a Hogge; thou tak&#x27;st vpon thee the habit of a graue Phisition, but art indeed an impostrous Emperike. Physicions are the bodies Coblers, rather the Botchers of mens bodies; as the one patches our tatterd clothes, so the other solders our diseased flesh. Come on. Ha, ha, ha; this is flattery, grosse flattery. Are thy bottles full? Like so many Swine in a trough. He shall fret or laugh. The melody must agree well, and yeeld sport, When such as these are, Knaues and Fooles consort. Of Woodcocke without braines in&#x27;t; Barbers shall weare thee on their Citternes, and Hucksters set thee out in Ginger-bread. Mum, Butterflye. I doe not thinke at all. My pitty you are— But not my reprehension. Yes, for I pitty such to whom I owe seruice, who exchange their happinesse for a misery. Princes who forget their soueraignty, and yeeld to affected passion, are weary of command. You had a Father, Sir. Nothing. I onely dar&#x27;d to name him; that&#x27;s all. O Sir, I had rather hold a Wolfe by the eares, then stroake a Lyon, the greatest danger is the last. All this may be. I haue seene a man so curious in feeling of the edge of a keene knife, that he has cut his fingers. My flesh is not of proofe against the metall I am to handle; the one is tenderer then the other. I will remember you of an old Tale that somthing concernes you. Meleander, the great (but vnfortunate Statesman, was by your Father treated with for a Match betweene you and his eldest daughter, the Lady Eroclea. You were both neere of an age. I presume you remem ber a Contract, and cannot forget Her. To Court was Eroclea brought, was courted by your Father, not for Prince Palador, as it followed, but to be made a prey to some lesse noble designe.—With your fauour I haue forgot the rest. You charme me. In briefe, a Rape, by some bad Agents, was attempted; by the Lord Meleander her father rescude, she conuay&#x27;d away Meleander accus&#x27;d of treason, his Land seized, he himselfe distracted and confined to the Castle where he yet liues. What had ensude was doubtfull. But your Father shortly after dyed. She neuer since was heard of. Sir, I feare I should anger yee. There was, as I said, an old Tale: I haue now a new one, which may per haps season the first with a more delightfull rellish. My Lord Meleander falling, on whose fauour my fortunes relyde, I furnisht my selfe for trauaile, and bent my course to Athens, where a pretty accident after a while came to my knowledge. A young Lady contracted to a noble Gentle man, as the Lady we last mentioned, and your Highnes were, being hindred by their iarring Parents, stole from her home, and was conueyed like a Ship-boy in a Mer chant, from the Countrey where she liu&#x27;d, into Corinth first, and afterwards to Athens; where in much solitari nesse she liu&#x27;d like a Youth almost two yeeres, courted by all for acquaintance, but friend to none by familiari tie. A handsome young man, till within these three moneths, or lesse, her sweet hearty Father dying some yeere before, or more, shee had notice of it, and with much ioy returned home, and as report voyced it, at A thens enioyed her happinesse: she was long an exile: For now Noble Sir, if you did loue the Lady Eroclea, why may not such safety and fate direct her, as directed the other? tis not impossible. My duty and my obedience are my suretie, But I haue been too bold. What s your meaning? A picture in a Tablet. I doe—yes—let me obserue it— Tis hers, the Ladies. Erocleas. I am your Creature. I haue a fist for thee too (Strippling) th&#x27;art started vp prettily since I saw thee. Hast learned any wit abroad? Canst tell newes, and sweare lyes with a grace like a true Traueller? What new Owzle&#x27;s this? All three—Ile goe too. Hark in thine eare, Gallant: Ile keep the old mad man in chat, whilest thou gabblest to the girle: my thumb&#x27;s vpon my lips, not a word. Troope on—Loue, Loue, what a wonder thou art? How a eyes the company: sure my passion will betray my weakenesse—O my Master, my Noble Master, doe not forget me, I am still the humblest, and the most faithfull in heart of those that serue you. There&#x27;s wormewood in that laughter, tis the vsher to a violent extremity. This is sence yet in this distraction. Ile follow him. My Lord Amethus, vse your time Respectiuely. Few words to purpose soon&#x27;st preuaile: Study no long Orations; be plaine and short, Ile follow him. Bow, Bow, wow, wow; the Moone&#x27;s eclipsed, Ile to the Church-yard and sup: Since I turn&#x27;d Wolfe, I bark and howle, and digge vp graues, I will neuer haue the Sunne shine againe, tis midnight, deepe darke mid night, get a prey, and fall too, I haue catcht thee now. Arre. Ile soope thee vp. Thar&#x27;t an excellent fellow. Diabolo. O this lousie close-stoole Empricks, that will vndertake all Cures, yet know not the causes of any disease. Dog-leaches. By the foure Elements I honor thee, coo&#x27;d finde in my heart to turne knaue, and bee thy flatterer. He chafes hugely, fumes like a stew-pot; Is he not monstrously ouergone in frenzy? Corax, to prayse thy Art, were to assure The misbeleeuing world, that the Sunne shines, When tis in th&#x27;full Meridian of his beauty. No cloud of blacke detraction can eclipse The light of thy rare knowledge; henceforth casting All poore disguises off, that play in rudenesse, Call me your seruant: onely for the present, I wish a happy blessing to your Labours; Heauen crowne your vndertakings; and beleeue me, Ere many houres can passe, at our next meeting, The bonds my duty owes, shall be full cancelled. I haue been diligent (Sir) to pry into euery cor ner for discouery, but cannot meet with him: There is some tricke I am confident. I haue apprehended a faire Wench, in an odde Priuate lodging in the Citie, as like the Youth In face, as can by possibility be discern&#x27;d. If it be not Parthenophill in long coates, Tis a spirit in his likenesse; answer I can get none from her; you shall see her. Ile send him t&#x27;ee. The Prince and Princesse are at hand, giue ouer your amorous Dialogues. Most honor&#x27;d Lady, hence forth forbeare your sadnesse: are you ready to practise your instructions? My knowledge made me sure of my report, Sir. Sir, I am here. Sir true, you haue; and this most learned Scho ler Apply&#x27;d t&#x27;ee. O you were in dangerous plight Before he tooke ye hand. The more your glory in the miraculous cure. I hope it will, Sir. The good-man rellisheth his comforts strangely, The sight doth turne me child. Now they fall too&#x27;t, I lookt for this. Sir, with your Noble sauour, Kissing your hand first, that point I can answer. Your graue Brother Perceiu&#x27;d with what a hopelesse loue his sonne, Lord Menaphon, too eagerly pursu&#x27;d Thamasta, Cousin to our present Prince; And to remoue the violence of affection, Sent him to Athens, where for twelue moneths space Your daughter, my young Lady and her Cousin Enioy&#x27;d each others griefes, till by his Father The Lord Sophronos we were all call&#x27;d home. Here&#x27;s the Glasse, Sir. The Prince my Lord in person.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 420</div><div class="body">A group of mounted knights arrive at a wedding, and one of their number explains their presence. They worship Diana for as long as they remain unmarried, but also sacrifice to Hymenaeus, god of marriage. When they were last doing so, the god spoke, telling them one of Diana’s nymphs had got married to an earl favoured by Minerva. Diana is particularly pleased to know that the couple have agreed to wait a year before consummating the marriage. The two goddesses have asked Hymenaeus to arrange for the marriage- feast to be honoured, so he sends the knights with gifts: Minerva sends the groom a garland, Diana sends the bride a veil, and Hymenaeus sends them respectively a picture of a dove and a coronet. The knights present their shields and dance with ladies from the audience.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

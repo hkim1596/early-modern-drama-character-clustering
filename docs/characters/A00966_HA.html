@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HA in The Night Walker, or The Little Thief · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>HA</span>
+</nav>
+
+<h1>HA</h1>
+<p class="lede">in <em>The Night Walker, or The Little Thief</em> — Fletcher, JohnShirley, James</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1640</td></tr>
+<tr><th>Words</th><td>1304</td></tr>
+<tr><th>Characters</th><td>6843</td></tr>
+<tr><th>BritDrama no.</th><td>1772</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">termes, I had a title nearer, Since love unites more than the tie of blood; No matter for the empty voyce of mother; Your nature still is left, which in her absence <mark>Must</mark> love Maria, and not see her ashes And memory polluted. By me, I am the vile profaner. I <mark>did</mark> alive, But since she died, I ha beene a villaine to her. Doe not mocke</div>
+<div class="excerpt">against her, A deede able to fright her from her sleepe, And through her marble, oft to be reveng&#x27;d; A wickednesse, that if I should be filent, You as a witnesse <mark>must</mark> accuse me for&#x27;t. Yes, you knew I lov&#x27;d Maria once; or grant, you <mark>did</mark> but thinke so, By what I ha profest, or she <mark>has</mark> told you, Was&#x27;t not a fault unpardonable in</div>
+<div class="excerpt">fortune dwell w&#x27;ee, With me my owne affections; farwell maide, Faire gentle maide. I cannot <mark>goe</mark>, theres somewhat calls me backe. How hard she holds me? Just as Maria <mark>did</mark>, weepes the same drops, Now as I have a living soule, her sigh too; What shall I thinke, is not your name Maria, If it be not, delude me with so much charity To</div>
+<div class="excerpt">full one; th&#x27;art mistaken. Th&#x27;art a dessembling boy, Some one <mark>has</mark> sent thee to mocke me, though my anger Stoope not to punish thy greene yeares, unripe For malice; <mark>did</mark> I know what person sent thee To tempt my sorrow thus, I should revenge it. Who is your Mistresse? Thou art wilde. Canst thou bring comfort from so sad a creature?</div>
+<div class="excerpt">miserable story can at best, But swell my Volume, large enough already. How&#x27;s that? Part of this truth I know, but prethee boy Proceede to that thou cam&#x27;st for; thou didst promise Something, thy language cannot hitherto Encourage me to hope for. Could the condition of my fate so equall, Lessen her sufferings? A strange message boy.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">The worse for you. Madame, I am come to take my last leave. Of all my home affections, and my friends, For the interest you had once in Maria, I would acquaint you when I leave the kingdome. Be not offended maid. Where had you this face? I wonot hurt you, all the lineaments That built Maria up; all those springing beauties Dwell on this thing, change but her tongue, I know her: Let me see your hand. Trust me, the selfesame white, And softnesse, prethee speake our English Dialect. By the love, That everlasting love I bare Maria Madam, farewell, and all good fortune dwell w&#x27;ee, With me my owne affections; farwell maide, Faire gentle maide. I cannot goe, theres somewhat calls me backe. How hard she holds me? Just as Maria did, weepes the same drops, Now as I have a living soule, her sigh too; What shall I thinke, is not your name Maria, If it be not, delude me with so much charity To say it is. Good Madam, thinke not ill I am thus sawcie. I am most pleas&#x27;d. Would I could in your language beg a kisse. Let me suffer death, If in my apprehension, two twinnd cherries Be more a kin, than her lips to Marias; And if this harsh illusion would but leave her, She were the same; good Madam, shall I have Your consent now. To give this Virgin to me. You have beene alwayes kind to me, will you Denie me your faire Chosen. He is no friend that wishes my departure, I doe not trouble you. Her shadow is enough, Ile dwell with that, Persue your owne wayes, shall we live together? All I am worth, And all my hopes, this strange voyce would forsake her, For then she shud be — prethee stay a little, Harke in thine eare, dissemble not, but tell me, And save my life; I know you are Maria: Speake but as I doe ten words to confirme me; You have an English soule, doe not disguise it From me with these strange accents — She pinch&#x27;d hard Againe, and figh&#x27;d. She&#x27;s gone too. A dreame? I thinke so; But &#x27;twas a pleasing one, now Ile obey, And forget all these wonders, lead the way. The worlds a Labyrinth, where unguided men Walke up and downe to finde their wearinesse; No sooner have we measur&#x27;d with much toile One crooked path, with hope to gaine our freedome, But it betrayes us to a new affliction; What a strange mockerie will man become Shortly to all the creatures? Oh Mariah! If thou beest dead, why does thy shadow fright mee I Sure tis because I live; were I but certaine To meete thee in one grave, and that our dust Might have the priviledge to mixe in silence, How quickly should my soule shake off this burden! What does that concerne Thee Boy, tis a name cannot advantage thee, And I am weary on&#x27;t. Thou Wert well inform&#x27;d, it seemes; well, whats your businesse I Is Maria Alive agen? thats somewhat, and yet not Enough to make my expectation rise, to Past halfe a blessing, since we cannot meete To make it up a full one; th&#x27;art mistaken. Th&#x27;art a dessembling boy, Some one has sent thee to mocke me, though my anger Stoope not to punish thy greene yeares, unripe For malice; did I know what person sent thee To tempt my sorrow thus, I should revenge it. Who is your Mistresse? Thou art wilde. Canst thou bring comfort from so sad a creature? Her miserable story can at best, But swell my Volume, large enough already. How&#x27;s that? Part of this truth I know, but prethee boy Proceede to that thou cam&#x27;st for; thou didst promise Something, thy language cannot hitherto Encourage me to hope for. Could the condition of my fate so equall, Lessen her sufferings? A strange message boy. Have you done boy. Ile heare no more, Goe foolish boy, and tell thy fonder Mistresse She has no second faith to give away; And mine; was given to Maria, though her death, Allow me freedome, see the Picture of her, I would give ten thousand Empires for the substance; Yet for Marias sake, whose divine Figure That rude frame carries, I will love this counterfeit Above all the world, and had thy Mistresse all The grace and blossome of her sexe; now she Is gone, that was a walking Spring of beauty, I would not looke upon her. Pretty Boy. And Ile take thee At thy word boy, thou hast a moving language, That pretty innocent, Coppie of Maria Is all I love, I know not how to speake, Winne her to thinke well of me, and I will Reward thee to thy wishes. Thou wert sent to blesse me. Be happy. Madam, I come to aske your gentle pardon. Yes, if you be the mother of Maria. Alas, Madam, If your relation did consist but in Those naked termes, I had a title nearer, Since love unites more than the tie of blood; No matter for the empty voyce of mother; Your nature still is left, which in her absence Must love Maria, and not see her ashes And memory polluted. By me, I am the vile profaner. I did alive, But since she died, I ha beene a villaine to her. Doe not mocke me, I charge you by the Virgin you have wept for; For I have done an impious act against her, A deede able to fright her from her sleepe, And through her marble, oft to be reveng&#x27;d; A wickednesse, that if I should be filent, You as a witnesse must accuse me for&#x27;t. Yes, you knew I lov&#x27;d Maria once; or grant, you did but thinke so, By what I ha profest, or she has told you, Was&#x27;t not a fault unpardonable in me, When I should drop my teares upon her grave. Yes, and proose sufficient. That I forgetfull of my fame and vowes To faire Maria, ere the worme could pierce Her tender shroud, had chang&#x27;d her for an other; Did you not blush to see me turne a Rebell? So soone to court a shadow, a strange thing, Without a name? Did you not curse my levitie, Or thinke upon her death with the lesse sorrow That she had scap&#x27;d a punishment more killing, Oh how I shame to thinke on&#x27;t. No more, you are too charitable, but I know my guilt, and will from henceforth never Change words with that strange maide, whose innocent face Like your Marias wonne so late upon me, My passions are corrected, and I can Looke on her now, and woman kinde, without Love in a thought; &#x27;tis thus, I came to tell you. If after this acknowledgement, youl&#x27;e be So kinde to shew me in what filent grave You have dispos&#x27;d your daughter, I will aske Forgivenesse of all her dust, and never leave, Till with the loud confession of my shame I wake her ghost, and that pronounce my pardon: Will you deny this favour? then farewell, Ile never see you more: ha! I disturbe no body, speake but halfe a word And I am satisfied, but what needs that? Ile sweare tis she. Peace then, And let me pray, she holds up her hands with me. Love ever honor&#x27;d, And ever young, thou Soveraigne of all hearts, Of all our sorrowes, the sweet ease, Does she still cozen me? My soules so bigge, I cannot pray; tis she, I will goe neerer. Contracted? this distroies his after marriage. Give me roome, And fresh aire to confider, gentlemen, My hopes are too high. On joyfully, the cure of all our griefe, Is owing to this pretty little Theese.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Night Walker, or The Little Thief</div><div class="body">The usurer Justice Algripe has seized the wastrel Lurcher’s lands to settle a mortgage; he was also amorously interested in Lurcher’s sister, who has since disappeared. The destitute Lurcher is left to steal for a living; invited to join him, his friend Wildbrain prefers womanizing, on the grounds that it will not end on the gallows. Lurcher is approached by a boy, Snap, and, after ascertaining his skills at deception, takes him into his service. Algripe marries Wildbrain’s cousin Maria, who consented out of filial obedience rather than love: she loves Hartlove. Her mother’s household opposes the match, suspecting that old Algripe is impotent, and Wildbrain arranges for Hartlove to meet her on her way to bed and cuckold Algripe on his wedding night. She refuses his advances and faints when they are found together; she is taken for dead and prepared for burial. Her mother throws Wildbrain out for his part in the incident. Lurcher burgles the house that night, frightening the servants by pretending to be a ghost; but what he supposes to be a chest of jewels is actually Maria’s coffin. Upon discovering what their swag really is, he and his accomplices attempt to bury her in secret, but have a chance encounter with Algripe in the churchyard. Snap frightens him away by impersonating Maria’s ghost, but the thieves are scared off themselves when Maria wakes up in her coffin. Wildbrain meets Hartlove in the dark; Hartlove bears him a grudge and fights him. Maria hears the commotion and pretends to be her own ghost, enjoining them not to fight. Wildbrain is already wounded, and takes refuge in the next house he finds, which belongs to Lurcher’s mistress and partner in crime. They fall for one another and he shows off her gifts to Lurcher, who recognizes them as stolen 1615 property — his own booty. Maria’s mother accuses Algripe of stealing the body; when he refuses to repay the marriage portion, she begins litigation. Lurcher cons his way into Algripe’s house posing as a bookseller, ties him up, and steals his valuables and papers, including his own mortgage. Maria returns to her mother’s household posing as her nurse’s Welsh niece. Struck by the resemblance to dead Maria, Hartlove falls in love with her. Lurcher impersonates a constable and takes Algripe to a church where, he says, the villains who robbed him are hiding out; he then drugs Algripe and stows him in the vault. When the usurer wakes up, he is visited by ‘Furies’ who want to carry him to hell, and…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

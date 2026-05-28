@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PEG in Cupid&#x27;s Whirligig · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PEG</span>
+</nav>
+
+<h1>PEG</h1>
+<p class="lede">in <em>Cupid&#x27;s Whirligig</em> — Sharpham, Edward</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>781</td></tr>
+<tr><th>Characters</th><td>4018</td></tr>
+<tr><th>BritDrama no.</th><td>1527</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">your band Fie, they are greasie. What&#x27;s your breech made all of one stuffe Maister Nuecome? Because me thinkes the soile change&#x27;s here behinde Now by the soule of chastitie I sweare, a is a proper man. See, see how a lookes, doe you not perceiue his <mark>heart</mark> beate hither? Saue ye Knight. Why I thinke a meanes you are but a light</div>
+<div class="excerpt">thy Father, considering the forman of your Shop, mee thought was a good hansome fellow. Well Nan w ll, thou art happy, thou wer&#x27;t borne vnder a good Planet, thou hast store of sutes, but prethee looke, is there none <mark>heare</mark>&#x27;s our counsaile? I thinke an ill starre raigned when I was borne, I cannot haue as much as suiter, this</div>
+<div class="excerpt">times to the Moone, and fost three Saint Annes eues, so that I might <mark>bee</mark> sure to haue him to my husband. Not waking yea &amp; a 〈◊〉 too, for heere I vow euen by the chastest thoughts that ere was nur &#x27;d within Dia naes brest and by those purple drops chaste Lucres spilt, and by the vnstainde coulloar of a maidens blush, that I will</div>
+<div class="excerpt">Dia naes brest and by those purple drops chaste Lucres spilt, and by the vnstainde coulloar of a maidens blush, that I will prooue as true vnto his bed, as ere <mark>did</mark> she that <mark>did</mark> V lisses wed. No, I would not haue a Knight if I might, for there are so many, as they are forgotten what they be. I, but that&#x27;s but their faults,</div>
+<div class="excerpt"><mark>bee</mark> ill, For I in Surgerie-haue little skill. Prethee tell me too, how am I drest? And that&#x27;s pittie; for I can tell you, I am of my selfe a rare bit. Come, thou hast such a deale of wit. That I will, but why then doest thou obscure thy Brauerie? this thy Petticoate is a great deale richer the thy Gowne. But for all this Idle</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Good madam be patient. I vnderstand so much by your name good Maister Nuecome. Yet I haue knowne them steale out of them ere now. I, such a one as the good theefe was. I haue heard moste of your Country men are verry actiue men. Is it possible? They say to, moste of your Countriemen are ve rie valiant I, but they say, they cannot presse a man to the warres though, in all your countrie. By your leaue Maister Nuecome, mee thinkes you haue a pr tie lace on your band Fie, they are greasie. What&#x27;s your breech made all of one stuffe Maister Nuecome? Because me thinkes the soile change&#x27;s here behinde Now by the soule of chastitie I sweare, a is a proper man. See, see how a lookes, doe you not perceiue his heart beate hither? Saue ye Knight. Why I thinke a meanes you are but a light huswife, but come let&#x27;s leaue him. I moste feare tis like lightning before thunder, I pray haue a careyehold fast. I will an&#x27;t be a good thing? My maiden-dead! faith . Nay, I cannot tell, you were best trie. But I pray thee tell me one thing now, The reason why thou art come runne away from thy Father, considering the forman of your Shop, mee thought was a good hansome fellow. Well Nan w ll, thou art happy, thou wer&#x27;t borne vnder a good Planet, thou hast store of sutes, but prethee looke, is there none heare&#x27;s our counsaile? I thinke an ill starre raigned when I was borne, I cannot haue as much as suiter, this Maister Nuecome that you for sooth so much scorne: I could finde in my heart to pray ine times to the Moone, and fost three Saint Annes eues, so that I might bee sure to haue him to my husband. Not waking yea &amp; a 〈◊〉 too, for heere I vow euen by the chastest thoughts that ere was nur &#x27;d within Dia naes brest and by those purple drops chaste Lucres spilt, and by the vnstainde coulloar of a maidens blush, that I will prooue as true vnto his bed, as ere did she that did V lisses wed. No, I would not haue a Knight if I might, for there are so many, as they are forgotten what they be. I, but that&#x27;s but their faults, yet you knowe their calling is honourable though. O that&#x27;s because thou art not hungrie. And he followes you like infection. And hates me as much, for if I come but neare him, hee sweares I am like a Kybe, alwaies at his heeles. To me? Looke you Madam, your husband now makes loue to me. Thou need&#x27;st not loue, speake what thou wilt, if gently thou doe speake, thy words to mee are much more Musicall then is a Syrens voyce. Orpheus himselfe could neuer straine his high stretch&#x27;d strings to such Melodious sounds, as when thy voyce doth pierce the are. Despis&#x27;de, and left alone, filde brim full of griefe, and no way to vnloade mee of my cares. But through these running eyes, in streames of teares. I pray you seeke some-where else, if you bee ill, For I in Surgerie-haue little skill. Prethee tell me too, how am I drest? And that&#x27;s pittie; for I can tell you, I am of my selfe a rare bit. Come, thou hast such a deale of wit. That I will, but why then doest thou obscure thy Brauerie? this thy Petticoate is a great deale richer the thy Gowne. But for all this Idle talke, I would we had appoin ted our marriage to morrowe morning. Phoe, but tis not the fashion. I, tis but dishonorable to marrie thus in hugger mug ger, men will say we are with childe, and are asham&#x27;d to shew our faces. Yesterday, why doost aske? For what I pray thee? alas woman, those that are past childe bearing, vse to long for that too. No, I thinke so too, but onely a desire thou hast to trie the difference of men, and therfore I thinke thou wert best next to marrie an olde man with a white head, because thou maiest sleep quiet &amp; not be troubl d a nights. A Priestes wife I warant ye, because thou wouldest fare costly, and liue lasily. True, and then when thy husband is a broad in traf ficke for commodities, in other countries, why thou maist deale at home for ready money No, why? Nay then marrie a Souldier, for questionlesse most of them will vse their wiues wel, for they loue their punkes ex ceedingly.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

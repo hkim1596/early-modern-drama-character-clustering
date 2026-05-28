@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FORES in The Cruel Brother · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FORES</span>
+</nav>
+
+<h1>FORES</h1>
+<p class="lede">in <em>The Cruel Brother</em> — Davenant, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1630</td></tr>
+<tr><th>Words</th><td>348</td></tr>
+<tr><th>Characters</th><td>1975</td></tr>
+<tr><th>BritDrama no.</th><td>2202</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">tell, why thou (my Girle) ſhould&#x27;ſt ioy In my aduancement thus. Honour, and place Bring ſullen thoughts with them: buſineſſe of ſuch A ragged qualitie, as takes <mark>away</mark> The amorous garbe: thoſe ſoft wanton touches, Wherewith the youthfull flatterer betrayes The weaker ſide to action: whoſe effects More weakeneſſe brings. I ſhall</div>
+<div class="excerpt">Amongſt the ſeuerall Creatures of a Prince, Such inſtruments as theſe moſt profit reape. Imployments noble doe requite themſelues, And honour payes, the great of <mark>heart</mark>: who looſe But Time in ſeruice which is the Bodies wealth. Your friend ſtays. If you pleaſe t&#x27;appeare with him From thence, at my ſummons: I ſhall diſcouer more.</div>
+<div class="excerpt">friend ſtays. If you pleaſe t&#x27;appeare with him From thence, at my ſummons: I ſhall diſcouer more. Why ſhe that Goſsips with the Deuils Damme, The ſubtill Bawde, your <mark>Woman</mark>. O Siſter! Corſa kneeles. I haue heard all.—Nay doe not worke diſtinction thus. Kneele not to me; you are my Patrons wife. But yet where obligation is indeer&#x27;d;</div>
+<div class="excerpt">cheape, and dangerous To his owne eſtate. Come, ſtretch downe your Arme: and permit this Scarfe To faſtne it to th&#x27; Chaire. Then vaile your Eies. We muſt not truſt a <mark>Woman</mark>&#x27;s vallour ſo— Diſmiſſe your Seruants, and you ſhall know all.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I cannot tell, why thou (my Girle) ſhould&#x27;ſt ioy In my aduancement thus. Honour, and place Bring ſullen thoughts with them: buſineſſe of ſuch A ragged qualitie, as takes away The amorous garbe: thoſe ſoft wanton touches, Wherewith the youthfull flatterer betrayes The weaker ſide to action: whoſe effects More weakeneſſe brings. I ſhall no leaſure haue To comfort thee with ſmiles: when t&#x27;is aſsign&#x27;d That I muſt venture for a Boy: t&#x27;will be In haſte. My buſineſſe will not ſuffer me To ſtay, and make a prologue to the acte, To kiſſe, or ſimper inuitation. Nay t&#x27;is often ſeene. Amongſt the ſeuerall Creatures of a Prince, Such inſtruments as theſe moſt profit reape. Imployments noble doe requite themſelues, And honour payes, the great of heart: who looſe But Time in ſeruice which is the Bodies wealth. Your friend ſtays. If you pleaſe t&#x27;appeare with him From thence, at my ſummons: I ſhall diſcouer more. Why ſhe that Goſsips with the Deuils Damme, The ſubtill Bawde, your Woman. O Siſter! Corſa kneeles. I haue heard all.—Nay doe not worke diſtinction thus. Kneele not to me; you are my Patrons wife. But yet where obligation is indeer&#x27;d; There Iniurie condemns it ſelfe. Can you Surui e a wrong ſo eminent: a wrong Committed&#x27; gainſt your Husband, and my Patron? Ceremonious forme, doth oft, ſo long Delay our iourney; till it prooue too late To reach our home. T&#x27;is a long way to Heauen. We muſt make haſt. Nay, if your courage faile Before it comes vnto the teſt: I ſhall Prepare to be vnkind. Grimme, black fancy Could you indure to ſee your Lord; defil&#x27;d, Polluted as you are? That kinde Patron To all our family; whoſe conſtant loue Is warranted by Time; that beſt can iudge Of conſtancy. Who tooke you to his bed; Vpon conditions cheape, and dangerous To his owne eſtate. Come, ſtretch downe your Arme: and permit this Scarfe To faſtne it to th&#x27; Chaire. Then vaile your Eies. We muſt not truſt a Woman&#x27;s vallour ſo— Diſmiſſe your Seruants, and you ſhall know all.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Cruel Brother</div><div class="body">As a favour to Lucio, to whom he is devoted, the Duke appoints the low-born Foreste his secretary, the first port of call for ali suitors seeking monopolies and preferment. Lucio also wants to marry Foreste’s sister, 1627 Corsa, arguing that she is ennobled by her virtue, though not her ancestry. He goes through with the marriage secretly, without the Duke’s permission; but the Duke is impressed by Corsa when they are introduced, and has her brought to court so that the marriage can be properly celebrated with masques and revels. Foreste humiliates the satirist Castruccio, but his elevation to the secretaryship prevents Castruccio from challenging him to a duel. The poet initially takes a literary revenge, but, when the Duke asks about his satires, he is too cowardly to admit that Foreste is the target. The rustic Lothario comes to court, dressing foppishly in the hope of becoming a ducal favourite. Castruccio persuades him that his lack of success is Foreste’s fault. Lothario accosts Foreste offensively and finds himself imprisoned in a tiny cell. The Duke’s real intention in bringing Corsa to court is to seduce her. He engages Foreste’s wife as an unwitting go-between, then sends Lucio away overnight on a diplomatic mission. With Castruccio’s assistance, he visits Corsa, and rapes her. Foreste learns of the rape and slits the dishonoured Corsa’s wrist; she bleeds to death. On his return, Lucio takes a more lenient view than Foreste — he places more weight on the compulsion than the sexual penetration — but both agree to take revenge on the Duke, and visit him in bed. In the end, they decide to spare him, but he has already arranged assassins to dispose of them: the job was given to Castruccio, who subcontracted it to Lothario. Lothario kills the Duke by mistake; Castruccio and his accomplice kill him, then finish the job by killing Foreste and Lucio. The conspirators are kept alive to answer questions, and then suffer a death of exemplary horribleness.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

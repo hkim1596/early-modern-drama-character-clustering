@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BRO in The Staple of News · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BRO</span>
+</nav>
+
+<h1>BRO</h1>
+<p class="lede">in <em>The Staple of News</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>688</td></tr>
+<tr><th>Characters</th><td>3731</td></tr>
+<tr><th>BritDrama no.</th><td>2174</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Peny-boy leaps To vrge on your behalfe, or little Waxe. That ayre of hope, <mark>has</mark> blasted many an ayrie Of Castrills like your selfe: Good Master Pyed-mantle, You <mark>did</mark> it. Nothing that I heard, Sir. I know not, some green Plouer. I&#x27;le find him out. You may ieere, You ha&#x27; the wits, young Gentlemen. But your hope Of Helicon, will</div>
+<div class="excerpt">I shal Madame. And doe your Graces trusts with diligence. WHat luck&#x27;s this? I am come an inch too late, Doe you <mark>heare</mark> Sir? Is your worship o&#x27;the family Vnto the Lady Pecunia ? I serue her Grace, Sir, Aurelia Clara Pecunia, the Infanta. A Herald at Armes ? Good Master Pyed-mantle.</div>
+<div class="excerpt">Shee snoar&#x27;d i&#x27;the Chaire, and Statute (if you mark&#x27;d her) Fell fast a sleepe, and Mistresse Band, shee nodded, But not with any consent to what you read. They <mark>must</mark> haue somwhat else to chinke, then rymes. If you could make an Epitaph on your Land, (Imagine it on departure) such a Poem Would wake &#x27;hem ▪ and bring Waxe to her</div>
+<div class="excerpt">not: the Gentlewomen, They thought you would ha&#x27;my Lady soiourne, with you, And you desire but now and then, a visit? &#x27;Tis inough. I apprehend you. And it shall <mark>goe</mark> hard, But I&#x27;ll so worke, as some body shall worke her! I ha&#x27;brought A Gentleman to speake with you? He&#x27;s the Master Of the great Office. The Staple of Newes, A</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I shal Madame. And doe your Graces trusts with diligence. WHat luck&#x27;s this? I am come an inch too late, Doe you heare Sir? Is your worship o&#x27;the family Vnto the Lady Pecunia ? I serue her Grace, Sir, Aurelia Clara Pecunia, the Infanta. A Herald at Armes ? Good Master Pyed-mantle. From all the Spanish Mines in the West-Indi&#x27;es, I hope: for she comes that way by her mother, But, by her Grand-mother, she&#x27;s Dutches of Mines. No further? Before S r , long before, you haue done nothing else, Your Mines were before Adam, search your Office, Rowle fiue and twenty, you will finde it so, I see you are but a Nouice, Master Pyed-mantle. If you had not told mee so. Why, if you haue acquaintance with Mistresse Statute, Or Mistresse Band, my Ladies Gentlewomen, They can induce you. One is a Iudges Daughter, But somewhat stately; th&#x27;other Mistresse Band, Her father&#x27;s but a Scriuener, but shee can Almost as much with my Lady, as the other, Especially, if Rose Waxe the Chambermaid Be willing. Doe you not know her, Sir, neither? She&#x27;s a good plyant wench, And easie to be wrought, Sir, but the Nurse Old mother Mortgage, if you haue a Tenement, Or such a morsell? though shee haue no teeth, Shee loues a sweet meat, any thing that melts In her warme gummes, she could command it for you On such a trifle, a toy. Sir, you may see, How for your loue, and this so pure complexion, (A perfect Sanguine ) I ha&#x27; ventur&#x27;d thus, The straining of a ward, opening a doore Into the secrets of our family: My name is Broker, I am Secretary, And Vsher, to her Grace. Good M r . Pyed-mantle. Truely, I thinke I could: but if I would, I hardly should, without, or Mistresse Band, Or Mistresse Statute, please to appeare in it. Or the good Nurse I told you of, Mistresse Mortgage ▪ We know our places here, wee mingle not One in anothers sphere, but all moue orderly, In our owne orbes; yet wee are all Concentricks. Doe, And study the right meanes, get Mistresse Band Broker makes a mouth at him. He ieeres him againe. Old Peny-boy leaps To vrge on your behalfe, or little Waxe. That ayre of hope, has blasted many an ayrie Of Castrills like your selfe: Good Master Pyed-mantle, You did it. Nothing that I heard, Sir. I know not, some green Plouer. I&#x27;le find him out. You may ieere, You ha&#x27; the wits, young Gentlemen. But your hope Of Helicon, will neuer carry it, heere, With our fat family; we ha&#x27; the dullest, Most unboar&#x27;d Eares for verse amongst our females. I grieu&#x27;d you read so long, Sir, old Nurse Mortgage, Shee snoar&#x27;d i&#x27;the Chaire, and Statute (if you mark&#x27;d her) Fell fast a sleepe, and Mistresse Band, shee nodded, But not with any consent to what you read. They must haue somwhat else to chinke, then rymes. If you could make an Epitaph on your Land, (Imagine it on departure) such a Poem Would wake &#x27;hem ▪ and bring Waxe to her true temper. &#x27;Tis but earth, Fit to make brickes and tyles of. &#x27;Twere worth keeping. Let clownes and hyndes affect it, that loue ploughes, And carts, and harrowes, and are busie still, In vexing the dull element. So it supple, Sir, The nerues. I shall obey, Sir, And run a thred, like an houre-glasse. Broker. No, her Vsher, Sir. No barren chin, Sir, I am no Eunuch, though a Gentleman-Vsher. I warrant you. Doe not belieue him! gentle Master Picklocke, They vnderstood you not: the Gentlewomen, They thought you would ha&#x27;my Lady soiourne, with you, And you desire but now and then, a visit? &#x27;Tis inough. I apprehend you. And it shall goe hard, But I&#x27;ll so worke, as some body shall worke her! I ha&#x27;brought A Gentleman to speake with you? He&#x27;s the Master Of the great Office. The Staple of Newes, A mighty thing, they talke Six thousand a yeere. Sir, in Apollo, they are scarce set. Here is the Gentleman.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Staple of News</div><div class="body">Young. Pennyboy has recently heard of his father’s death; he retains Canter, the beggar who told him of his bereavement, as his constant companion. Now, a week later, he comes of age, and can-spend his inheritance as -‘he ‘pleases. He buys himself fashionable. clothes at .extravagant prices, and agrees to pay the £50 that will ~ procure Tom, his barber, a place at a newly opened news _-agency, the Staple. His lawyer, Picklock, shows him a codicil to his father’s will requiring him to pay court to . Pecunia, his uncle Richer’s ward, so he joins her many -Suitors, likes her, and takes her out. First they visit the ‘Staple ef News, where Pennyboy pays lavishly for . unlikely stories of European affairs, while Cymbal, the - proprietor, unsuccessfully tries to persuade Pecunia to come and live with him. Pennyboy entertains Pecunia to-dinner at a tavern, after which he and his worthless friends énjoy one another&#x27;s songs and jeering games. .Pecunia.agrees to live with Pennyboy, resenting the restraints and mean accommodation she has endured at shis. miser uncle’s house. Pennyboy plans to use his ‘wealth to. establish a canting school where people may . learn-the techniques of meaningless verbosity. ‘.. Canter reveals himself to be Pennyboy’s father, Francis. He reported his own death, entrusting his estate to Picklock’s safe keeping, in order to test how his:son would treat Pecunia, and is unimpressed by the - resultant riot and prodigality. He takes Pecunia into “his:own custody, leaving his son only the ragged cloak - of his. beggar’s disguise. . The Staple of News explodes, putting Tom out of his - mew job. Picklock claims that he was given the Pennyboy estate absolutely, rather than in trust; but he also tries to make more money playing father and son off against one another, and admits too much to the son. Young Pennyboy produces Tom as a witness to what was said, and gets the crucial document back by a ruse. Richer Pennyboy goes mad at the loss of Pecunia and blames his dogs for driving her away. He is mocked by Young Pennyboy’s unworthy friends, but Francis gets rid of them. Richer gives his blessing to Young Pennyboy’s marriage to Pecunia.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LUR in Law Tricks · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LUR</span>
+</nav>
+
+<h1>LUR</h1>
+<p class="lede">in <em>Law Tricks</em> — Day, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1608</td></tr>
+<tr><th>Words</th><td>1560</td></tr>
+<tr><th>Characters</th><td>8375</td></tr>
+<tr><th>BritDrama no.</th><td>1436</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">s one dunce, a kinde of plodding Poet, S 〈…〉 care&#x27;s twas not in the firſt creation, Becauſe he findes no ballad argument, To proue old Adam a Tobacconiſte, They <mark>did</mark> not: take me with you, what&#x27;s the They were al plaine folks, &amp; <mark>did</mark> not know the lawes. But he that vſeth it ſhall die a begger. That&#x27;s a good wench. Still good</div>
+<div class="excerpt">footed in reſpect of me. I haue, and it holds currant, Then tender me poſſeſſion. Of thy chaſt loue. I had one. Thy loue ſhall quickly wed her to her graue, I nere <mark>did</mark> loue her. I faith. Till death. Square to my humour fit. And ſo was I. The fitter for my turne, I was a man Borne to no hopes, but a few ſhreds of witt A Grammer</div>
+<div class="excerpt">broake age ſet them at debate: Incenſt them vnto Law, which to maintaine, I lent them money vpon Lands and Plate, After the rate of ſeauen-ſcore in the hundred. Then <mark>did</mark> I learne to countefeit mens hands, Noble-mens armes, interline Euidences, Make falſe conueyances, yet with a trick, Cloſe and cock-ſure, I cony-catch&#x27;d the world.</div>
+<div class="excerpt">me aloft: I followed caſes of the law abroad, and ſhe wae merrie with her friends at home. Twentie times. Neuer nothing leſſe. And a Wittall too. And knew&#x27;t. I <mark>did</mark>. It went attirde in golde, a golden Creſt, Is a braue faſhion, and accounted beſt. What newes? Which way? My ſences were entranc&#x27;d. Oh my ſweet Phoenix, out of</div>
+<div class="excerpt">faſhion, and accounted beſt. What newes? Which way? My ſences were entranc&#x27;d. Oh my ſweet Phoenix, out of thy aſhes. Oh fit honnyed me, And then their numneſſe, didſt thou neuer reade Of any Lawyer came to be Duke? Why ſuch a one would I be. Yes, and an Vſurper too. Vliſſes, Tully, Lawyers, but no Dukes. Fore-mee tistrue, but</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">And a ſpeakes Latin too, Truely and ſo few Lawyers vſe to doe. All theſe are triuiall: Prince, be a Lawyer: Wrong not the Law. Fore-god tis true, right properties of the Law But vnder fauour, and with due reſpect Of that vnualued perle, and the profeſſors, Your ſelfe and ſuch lacke-Latin Aduocates Infect the heart, and doe their beſt to change The true intent of ſanctimonious law. Turne Church yards Champions, and make the ground growne rancke w th Grandſires fleſh, Beare corne to feed the Sonne. Better and better, now my hopes are fit, The Duke thus gone, what tongue ſo bold dares ſay I wrong&#x27;d my wife? Thou art my ſelf, we both haue but one bo ſome One tongue, one ſoule, two bodies &amp; one heart. Tis true, but let that paſſe, Wee two are one. And I know thee For no ſmall foole, twa&#x27;s ſimple pollicie, And not without ſome counſel of the lawe, That not withſtanding my wiues neere allyance Vnto the Duke, I purchac&#x27;d a diuorce. I tell thee, the moſte wrong Was this, my Auarice thought ſhe liu&#x27;d too long. I know one man hath coffind vp ſixe wiues Since ſhe was mine, and by the pooreſt, purſt A brace of thouſand pounds: ſtill good in Law, Men muſt be rich, by thrift our treaſures riſe, Giue me the man&#x27;s knaue rich, take you poore wiſe, But cloſe, cocke ſure ile feed me fat with ſport, Gull all, f ole all, why? I haue Law-tricks for&#x27;t. Exit How prodigall? Thou telſt me wonders, he that but laſt day, Was neuer ſeene to walke without a booke, Writ againſt pleaſure, and make bitter ieſts Of honeſt recreation, turn&#x27;d diſſolute, I ſee no reaſon for&#x27;t, the law and I, (I tell you plainely Adam) thinke you lye. Punke! how the foole that doth not know it ſlaunders a leafe, nick-names a ſtranger herb. Nor good thrift neither, Yet there s one dunce, a kinde of plodding Poet, S 〈…〉 care&#x27;s twas not in the firſt creation, Becauſe he findes no ballad argument, To proue old Adam a Tobacconiſte, They did not: take me with you, what&#x27;s the They were al plaine folks, &amp; did not know the lawes. But he that vſeth it ſhall die a begger. That&#x27;s a good wench. Still good in law, and an vpright conceit. That ieſt comes neere to me, Tis our-growne now, a wants authoritie. They are bawdie mates, Touch Lawyers too, indeed abuſe all ſtates, And talke of Lawyers fees. That kiſſe my Lord deſerues an Epigram ▪ An vnbidden gueſt Should bring a ſtoole along. Nor Lawyers neither. Your honours ſudden Metamorphoſis, Tolde by your truſtie Seruant, and confirmd By publique rumor. Shee&#x27;s faire, nor do I diſcommend your choiſe I wiſh her your&#x27;s, a priuate friend or ſo, I know mad Ierks, and know that Lawe allowes, Princes their priuate pleaſures, and my ſelfe Will doe my beſt to gaine your honours loue, I will not abſolutely ſay there are, But there may be, if ſo your honour pleaſe, Sellers and Vaults, which from your priuate Garden May vnder ground lead to your bed-chamber. Whither, I will not name my ſelfe, but ſome cloſe friend, May vnſuſpected bring your beautious Lady. Tis ſo indeede. And a priuate doore, A ſecret vault, and twentie odde tricks more. And Arbors with ſweete violet Beds, That haue bin preſt to death with maiden-heads, Where you may ſport and breath, and take a rouſe Mum, I cannot ſtay, There&#x27;s a clowd riſing, driues my Sun away. Madam, tis ſhe that was. And the world ſees Coloſſus on my browes, Hercules Pillers, here &#x27;s non vltra writ. Hath not the Lawe diuorc&#x27;d and made a bar twixt our affections? wert not thou content to take a pention? Good wit, Law-trickes and firme, you may complaine. CVrrant in Law, &amp; how encountred you. Wiu. Ile tell you my good Lord (I thank my bringing vp, I can talke, I vſe not to haue my tongue to ſeeke when it ſhould pleaſure anye man, eſpecially my good Lord) I tolde her what a credit it was to haue a man of great credit, &amp; that which is more, a skilfull Lawyer that can ſtand out in her caſe at a dead life, and one that if need were, could make a crazy action ſound, I put her in minde what it was to haue ſuch a one to her ſweet heart. Good, But ſhe doth loue me. I ſound her meaning, firſt ile gull my Ne phew. Still good in Law, ile fetch him ore of all, Get all, purſſe all, and be poſſeſt of all, And then conclude the match, marrie at leaſt, When can you tell? Ile vſe her as a hand To picke the Princes coffers, and for reward To priſon, marrie her, for tricks can doo&#x27;t, (actions. The worlds ſquint-eyd, and dares not prie into our Here lyes her walke (my Lute Win) ſhe ſhall ſee, Youthe&#x27;s leaden footed in reſpect of me. I haue, and it holds currant, Then tender me poſſeſſion. Of thy chaſt loue. I had one. Thy loue ſhall quickly wed her to her graue, I nere did loue her. I faith. Till death. Square to my humour fit. And ſo was I. The fitter for my turne, I was a man Borne to no hopes, but a few ſhreds of witt A Grammer Scholler, then a Scriuenor. Dealing for priuate vſe twixt man and man, and by cloſe broake age ſet them at debate: Incenſt them vnto Law, which to maintaine, I lent them money vpon Lands and Plate, After the rate of ſeauen-ſcore in the hundred. Then did I learne to countefeit mens hands, Noble-mens armes, interline Euidences, Make falſe conueyances, yet with a trick, Cloſe and cock-ſure, I cony-catch&#x27;d the world. Hauing ſcrap&#x27;d prettie wealth, I fell in League With my firſt wife, and (though I ſay&#x27;t my ſelfe) She had good dooings, her backe commings in And priuate goings out, rais&#x27;d me aloft: I followed caſes of the law abroad, and ſhe wae merrie with her friends at home. Twentie times. Neuer nothing leſſe. And a Wittall too. And knew&#x27;t. I did. It went attirde in golde, a golden Creſt, Is a braue faſhion, and accounted beſt. What newes? Which way? My ſences were entranc&#x27;d. Oh my ſweet Phoenix, out of thy aſhes. Oh fit honnyed me, And then their numneſſe, didſt thou neuer reade Of any Lawyer came to be Duke? Why ſuch a one would I be. Yes, and an Vſurper too. Vliſſes, Tully, Lawyers, but no Dukes. Fore-mee tistrue, but now I doe remember nought to that purpoſe: His name? Leaue vs to confer. A truſtie friends, the ſoules high Treaſurer. In dumps Horatio? what, my ſecond ſelfe clowded with paſſion? Their names? My wife? the manner? We muſt demurie of this, ile haue a tricke By way of Habeas Corpus to remoue This talking Goſſip, come Hotatio, Some proiect, how? what courſe for her remoue: Eaſily, poiſon them, And well remembred, this ſhe Rat my wife, That eates and teares the leaues of my repute, Shall taſte like ſpeeding Phiſicke in thine eare, Canſt temper poiſon? And kill a Rat. Mum for that, This ſhe Rat is a Deuill. Enuy. Mallice. Ere my diſgrace get age, rare tricks and I will foole the world, woo&#x27;t, doo&#x27;t? Neither the Law nor I, Know any reaſon why Horatio. But mum, Law-tricks as cloſely as I can, Mine eare ſhall drinke his meditation. Might haue found vs out, Good, firme in Law, I am a foole to doubt, His conſtant ſecrecie. The deepeſt wit could not haue bettered, Our ſmooth conueyance, but vpright and ſtreight, Vnknowne, vnſeene, ile worke vpon conceit. My conceited braine, Hath an odde crotchet call&#x27;d me backe againe. Ha? a talkes of trickes, Of count and tricks, for trickes and count are twinns. I am right and ſtreight. Suppoſe he tell the Duke he gaue the poiſon. Fie, I feare him not, He doth but father, what my braine begot. Yes the verie ſame, I doe remember when ſhe went to nurſe, What a curſt vixen twa ▪ s, but now ſhee&#x27;s growne. A parlous Girle, her wits a meere Snaphaunce, Goe&#x27;s with a fire locke, ſhe ſtrikes fire from ſtones, Shee knowes the Law too, a meere murthering peece, Fight lowe, locke cloſe, ſhee ſpeakes meere ▪ lightning Neece. Ha, writ of errors? Law-trickes, words of Art Demurrs and quillets. My neece, and I will make it good. We ſhall haue change of weather. Nay, ile but ſee your breſt, mine eyes deſire, No lower obiect. I cannot now returne, non eſt inuenta, Brother embrace your childe, your ſecond heire, I found firme witnes in her boſome bare. No more a that, neece y&#x27;are a wag. No, I will demurre. He gaue the poiſon. Our puniſhment defer, Birlady ſo is not mine, ide giue my goods, For a good habous Corpus, to remoue me Into another Countrie. And wronged Counteſſe though I hated thee, I come to take my lateſt ſleepe with thee. My much wronged wife? Vnblemiſh&#x27;t. Thou did ſtiudeede, and ile requite thee well. As of the law, good as it may be vſd, But to my wife. Nocte die que .</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Law Tricks</div><div class="body">Prince Polymetes arrives home with news that his sister Emilia has disappeared after an attack by the Turks on her temple; grieving at the news, Duke Ferneze goes to seek her, leaving Polymetes as his deputy. Meanwhile Emilia has escaped from the galleys by feigning lunacy, and now arrives in Genoa. She adopts an alias in order to test her brother, whom she has never met. His interest in her is not very brotherly: he loses his bookish tendencies and grows prodigal, spending public money on her. He arranges for her to lodge with his uncle, Count Lurdo, in order to facilitate access. Lurdo, who has just divorced his wife, the Countess, for alleged unchastity, tries to seduce Emilia with a view to getting his hands on the money Polymetes is spending on her. Meanwhile, Horatio fails in his efforts to seduce Lurdo’s ex-wife, the Countess, and takes her steadfastness in chastity badly. ===== PAGE 127 ===== 1604 He and Lurdo plot to get rid of her by poison, administered by Horatio. Ferneze returns in disguise with news of his own _death, and Polymetes makes plans to squander his inheritance. Then Ferneze returns in his own person, and Polymetes has to reassume his original studious persona. The Countess is buried, and the penitent Horatio visits her tomb; his page, who swapped the poison for a sleeping potion, is also there to take charge of her when she wakes, and scares Horatio by pretending to be her ghost. Polymetes pretends that his dissolute behaviour was just an act to test Lurdo, and tries to win his father’s favour by using magic to bring back Emilia; in fact it is a ruse with the cross-dressed Joculo, which. deceives Ferneze until the real Emilia exposes it by close questioning. Polymetes then conjures up the supposed ghost of the Countess, who accuses Horatio of her murder. The plot comes out and Horatio and Lurdo are sentenced to be buried alive, until it becomes clear that the Countess is alive and wants her husband back. Horatio is banished from the court and Joculo praised for turning tragedy into comedy.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -22,9 +22,18 @@ python code/03_embed.py                       # GPU-recommended: gte-Qwen2-1.5B-
 python code/04_cluster.py                     # UMAP-5D → HDBSCAN → UMAP-2D, three presets
 python code/05_label_clusters.py              # per-cluster top words (c-TF-IDF)
 python code/06_visualize.py                   # interactive HTML per preset
+python code/07_generate_site.py               # static evidence site: cluster pages + per-character pages
 ```
 
 Outputs land in `docs/` (HTML, served by GitHub Pages) and `data/` (CSVs and `.npy` files).
+
+After stage 07, `docs/` contains:
+
+  - `index.html` — landing
+  - `interactive_clusters__*.html` — the interactive maps (Plotly)
+  - `cluster_evidence.html` — master list of all clusters
+  - `cluster_NN.html` — one page per cluster, with algorithmic important excerpts
+  - `characters/<character_id>.html` — one page per character with full speech + metadata
 
 ## Reproducing the data files
 

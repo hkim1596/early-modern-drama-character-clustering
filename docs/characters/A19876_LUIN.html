@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LUIN in The Cruel Brother · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LUIN</span>
+</nav>
+
+<h1>LUIN</h1>
+<p class="lede">in <em>The Cruel Brother</em> — Davenant, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1630</td></tr>
+<tr><th>Words</th><td>757</td></tr>
+<tr><th>Characters</th><td>3988</td></tr>
+<tr><th>BritDrama no.</th><td>2202</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">What thinke you of the beſt man in Sienna? Yes, diſguis&#x27;d too: he either came, (or elſe Pretended ſo) to meete your husband there. After ſome talke, (in which he <mark>did</mark> expreſſe His loue to all our family) he gaue An ample praiſe of you: and ſayd he ſaw Already ſo much worth in your faire breaſt As will adde a knot to your Lords</div>
+<div class="excerpt">expreſſe His loue to all our family) he gaue An ample praiſe of you: and ſayd he ſaw Already ſo much worth in your faire breaſt As will adde a knot to your Lords <mark>Heart</mark>, And his owne: nay and make his conſtant loue A patterne for euery royall Maſter. Then he gaue me this ſame Iewell; to you He recommended the receipt of this. Your&#x27;s</div>
+<div class="excerpt">of the twaine, Th&#x27;are ſuch as I ſuſpected at the firſt, Such as made me to refuſe theſe Iewels. He ſwore I was a Traytor, if I thought. He meant amiſſe Or if I <mark>did</mark> deny To beare this ſame to you, I <mark>did</mark> but ill Require his kind requeſt vnto my husband. Then in the cloſe he vſd ſuch Art, ſuch ſubtill phraſe, To free his thoughts</div>
+<div class="excerpt">Offence? O royall Villaine! My ioynts and ſinnews diſsipated are, And ſcatter&#x27;d in a trembling feare. But marke More ſorrowes yet. My Husband lookeing in My Cabinet, <mark>did</mark> ſpy that Iewell there, Which the Duke laſt gaue me. It was to him A new, and vnknowne ſtarre: and Commet like, Imployd his thoughts with ſuch Aſtrologie As made</div>
+<div class="excerpt">ſtay, now, now, I will reueale all. T&#x27;is true, your Sſter&#x27;s rauiſh&#x27;d by the Duke. Which fatall truth, this morning I receau&#x27;d From her owne mouth, But if I ere <mark>did</mark> breake My Mariage vowes, or thinke vnlawfully; Then may I looſe my intereſt in Heauen. My duty, and my loue remaine ſtill yours, And this conſtancy deſerues ſome</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">It is not fit I apprehend you now, But I wiſh that you would know; My duty Is ſo well preſeru&#x27;d from all corruption: Which either youth: or fowle example might Produce: that it in plores for fferance, To certefie the world how ſtrong it is. It was my tongues laſt imployment. I would not be vnmannerly, but if She be at leaſure, tell her, I am heere. I humbly thanke your honor, I am well, Pray diſmiſſe your woman: I would impart A priuacy. O Madam Time is now growne old, and runnes But ſlowly, I thought each Hower, a yeere, Vntill I ſaw your Ladyſhip. Yes, I thanke heauen. But pray come hither. Who doe you ſuppoſe was with me laſt night, When my husband was at Court? Why giue a gueſſe. Nay t&#x27;was a Man too. What thinke you of the beſt man in Sienna? Yes, diſguis&#x27;d too: he either came, (or elſe Pretended ſo) to meete your husband there. After ſome talke, (in which he did expreſſe His loue to all our family) he gaue An ample praiſe of you: and ſayd he ſaw Already ſo much worth in your faire breaſt As will adde a knot to your Lords Heart, And his owne: nay and make his conſtant loue A patterne for euery royall Maſter. Then he gaue me this ſame Iewell; to you He recommended the receipt of this. Your&#x27;s is the better of the twaine, Th&#x27;are ſuch as I ſuſpected at the firſt, Such as made me to refuſe theſe Iewels. He ſwore I was a Traytor, if I thought. He meant amiſſe Or if I did deny To beare this ſame to you, I did but ill Require his kind requeſt vnto my husband. Then in the cloſe he vſd ſuch Art, ſuch ſubtill phraſe, To free his thoughts from the ſtrict iealouſie Of mine; as reconcil&#x27;d me to obey his will. You know beſides how harſh it is to chide With Maieſtie, or ſlight Princes fauors. I had thought t&#x27;haue ſhewne my husband mine too But ſince t&#x27;is capable of curious Queſtioning, I meane to ſtay awhile. And mine is not ecclipſed much by yours. I&#x27;le waite vpon your Ladyſhip. Alack, what prodegie is this! Ay me! What in that name can priuiledge Offence? O royall Villaine! My ioynts and ſinnews diſsipated are, And ſcatter&#x27;d in a trembling feare. But marke More ſorrowes yet. My Husband lookeing in My Cabinet, did ſpy that Iewell there, Which the Duke laſt gaue me. It was to him A new, and vnknowne ſtarre: and Commet like, Imployd his thoughts with ſuch Aſtrologie As made an Optick of his iealouſie; Through which, he would diſcerne the cauſe, th&#x27; effect Of its being there. I told him all the truth: And Truth&#x27;s oftner prayſed, then rewarded Heere on Earth: for he diſmiſs&#x27;d me ſtreight With fatall lookes. Farewell! the noblest Lady o&#x27;th&#x27; World. My Lord! Alas my noble Lord! what doe ye meane? O ſay not ſo. Let Thunder ſtrike me dead, If I&#x27;ere knew the &#x27; Duke; with knowledge more Diſhoneſt, then what harbours in the Eies; Only by ſight. My deere Lord? be not cruell in your Faith; What I haue ſayd is truth. Stay, ſtay, O my Husband, my deereſt Lord? Will you permit ſuch cruelty againſt Your owne Wife. She, that hath ſo often ſlept Within your Boſome. O ſpeake? doe you want The naturall touch ſtay, ſtay, I will confes&#x27;t. Sorrow was euer ſlow of v terance, And I doe tremble ſtill. I knew the time, My duty hath bin held in more regard Then now it is. All former intereſt Is quit forgot. O ſtay, now, now, I will reueale all. T&#x27;is true, your Sſter&#x27;s rauiſh&#x27;d by the Duke. Which fatall truth, this morning I receau&#x27;d From her owne mouth, But if I ere did breake My Mariage vowes, or thinke vnlawfully; Then may I looſe my intereſt in Heauen. My duty, and my loue remaine ſtill yours, And this conſtancy deſerues ſome kindneſſe. Therefore, if t&#x27;is decreed that I muſt dye: Let me dye a modeſt death. Expoſe not Your poore vvife, vnto the cruelty Of Rauiſhers. I doe obay ye cheerefully. My Lord. O my deuining Soule ▪ Sure my Siſter Is not ſafe. And &#x27;tis my duty Sir, to be moſt prompt In the obſeruance. I am wak&#x27;d out of a ſtrange amazement. Murder, murder. Helpe! oh helpe? Here, here, O my Lord, my Lord. O my Lord? my Husband He&#x27;s dead, he&#x27;s dead.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Cruel Brother</div><div class="body">As a favour to Lucio, to whom he is devoted, the Duke appoints the low-born Foreste his secretary, the first port of call for ali suitors seeking monopolies and preferment. Lucio also wants to marry Foreste’s sister, 1627 Corsa, arguing that she is ennobled by her virtue, though not her ancestry. He goes through with the marriage secretly, without the Duke’s permission; but the Duke is impressed by Corsa when they are introduced, and has her brought to court so that the marriage can be properly celebrated with masques and revels. Foreste humiliates the satirist Castruccio, but his elevation to the secretaryship prevents Castruccio from challenging him to a duel. The poet initially takes a literary revenge, but, when the Duke asks about his satires, he is too cowardly to admit that Foreste is the target. The rustic Lothario comes to court, dressing foppishly in the hope of becoming a ducal favourite. Castruccio persuades him that his lack of success is Foreste’s fault. Lothario accosts Foreste offensively and finds himself imprisoned in a tiny cell. The Duke’s real intention in bringing Corsa to court is to seduce her. He engages Foreste’s wife as an unwitting go-between, then sends Lucio away overnight on a diplomatic mission. With Castruccio’s assistance, he visits Corsa, and rapes her. Foreste learns of the rape and slits the dishonoured Corsa’s wrist; she bleeds to death. On his return, Lucio takes a more lenient view than Foreste — he places more weight on the compulsion than the sexual penetration — but both agree to take revenge on the Duke, and visit him in bed. In the end, they decide to spare him, but he has already arranged assassins to dispose of them: the job was given to Castruccio, who subcontracted it to Lothario. Lothario kills the Duke by mistake; Castruccio and his accomplice kill him, then finish the job by killing Foreste and Lucio. The conspirators are kept alive to answer questions, and then suffer a death of exemplary horribleness.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

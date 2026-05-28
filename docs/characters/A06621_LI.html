@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LI in Midas · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LI</span>
+</nav>
+
+<h1>LI</h1>
+<p class="lede">in <em>Midas</em> — Lyly, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1592</td></tr>
+<tr><th>Words</th><td>1079</td></tr>
+<tr><th>Characters</th><td>5536</td></tr>
+<tr><th>BritDrama no.</th><td>835</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">though she be ne uer so low on the grounde. Hearken thou after that, shee hath the nose of a sowe. No, she can smel a knaue a mile off. She hath a bettle brow. Thou hast a beetle head, I say the brow of a <mark>bee</mark> tle, a little flie, whose brow is as black as veluet. Tush, the lips are no part of the head, only made for a double leafe</div>
+<div class="excerpt">but when they belong both to one thing, then. Then they agree like the fiddle and the stick. I but thou knowest nother properties. Are you so peart? Sir boy you <mark>must</mark> not be saucie. Lock vp your lips or I wil lop them off. But sir rha, for thy better instructions I wil vnfold euery wrin kle of my mistres disposition. But for</div>
+<div class="excerpt">shall haue but a brasen Court, but what became of the beard, Petulus? What doest thou pay for the pawning? What for the herbage? Yes Petulus, if it be a beard it <mark>must</mark> be at herbadge, for a beard is a badge of haire; and a badge of haire, hairbadge. Deus bone, is that worde come into the Barbers bason. In good time. Good Motto</div>
+<div class="excerpt">prudent, why tis pa stie crust, eat enough and it will make you wise, an olde prouerb. I, and some lubber lying besides a spring, &amp; seeing a partridge come by, said he <mark>did</mark> spring the partridge. But canst thou blowe it? I and then to geeue vs an inuentorie of all his goods, only to redeeme the beard, but we will be euen with him; and</div>
+<div class="excerpt">fall, I sweare they shal not be lopped, till Motto by my kna uerie be so bauld, that I may write verses on his scalpe. In witnesse whereof I eate this haire: now <mark>must</mark> thou Petulus kisse thy beard, for that was the book thou swa rest by. What els? Ile not share in that. And from me they shall be remoueables. Tongs thou wouldst</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">That is when those two genders are at iarre, but when they belong both to one thing, then. Then they agree like the fiddle and the stick. I but thou knowest nother properties. Are you so peart? Sir boy you must not be saucie. Lock vp your lips or I wil lop them off. But sir rha, for thy better instructions I wil vnfold euery wrin kle of my mistres disposition. But for this time I wil only handle the head and purtenance. Why, wil not that be a long houres work to de scribe, that is almost a whole daies work to dresse? First, she hath a head as round as a tennis ball. Why? Video, pro Intelligo. Then hath she an haukes eye. To what end? Wouldst thou be hanged? Well, she hath the tongue of a Parrat? Tush, it is not for the blacknesse, but for the bab ling, for euerie houre she wil crie walk knaue, walke. So maist thou be hanged, not by the lippes, but by the neck. Then sir hath she a calues tooth. It is not for the bignes, but the sweetnes: all her teeth are as sweet as the sweet tooth of a calfe. She hath the eares of a Want. I say the eares of a Want, a Mole, thou dost want wit to vnderstand me. She wil heare though she be ne uer so low on the grounde. Hearken thou after that, shee hath the nose of a sowe. No, she can smel a knaue a mile off. She hath a bettle brow. Thou hast a beetle head, I say the brow of a bee tle, a little flie, whose brow is as black as veluet. Tush, the lips are no part of the head, only made for a double leafe dore for the mouth. That is only the threshold to the dore. The purtenances, it is impossible to reckon them vp, much lesse to tell the nature of them. Hoods, front lets, wires, caules, curling-irons, perriwigs, bodkins, fil lets, hairlaces, ribbons, roles, knotstrings, glasses, combs, caps, hats, coifes, kerchers, clothes, earerings, borders, crippins, shadowes, spots, and so many other trifles, as both I want the words of arte to name them, time to vt ter them, and witte to remember them: these be but a fewe notes. What is that? But soft here comes Pipenetta, what newes? Indeed if thou shouldest rigge vp and downe in our iackets, thou wouldst be thought a very tomboy. I thinke so, for we take nothing in our hands but weapons, it is for thee to vse needles and pinnes, a sam pler, not a buckler. Nay stay sweet Pipenetta, we are but disposed to be merrie. Why, doth she weare any but her owne? Thou art deceiued wench, angels are gold. But is it true? How happie shal we be if hee woulde but stroke our heads, that we might haue golden haires. But let vs all in, least he lose the vertue of the gift before wee taste the benefit. Come let vs goe, least we drinke of a drie cuppe for our long tarrying. AHmy girle, is not this a golden world? Gold is but the earths garbadge, a weed bred by the sunne, the very rubbish of barren ground. Why thou foole, what hen should lay that egge? Nay I beleeue a Bull. Tis true girle, els how could Titan haue troaden Daphne? Let vs heare. Proceed Doctor egge. Wel, suppose gold wil crack. On. Foorth. Pipenetta this is true, for it is called egge, as a thing that doth egge on, so doth gold. Spoken like a Physicion. Gamester-like concluded. O! the ouen of his wit was not throwly heated. He hath made a spoke, wilt thou eat an egge? but soft, here come our masters, let vs shrinke aside. I cannot chuse sir, I am alwaies so neer my selfe. I thinke Motto hath poysoned thy gummes. I knew a dog run mad with it. Indeed (Petulus) a good beginning for thee, for thou canst eat pappe now, because thou canst bite no thing els. But I haue not mind on those matters. If the king lose his golden wish, wee shall haue but a brasen Court, but what became of the beard, Petulus? What doest thou pay for the pawning? What for the herbage? Yes Petulus, if it be a beard it must be at herbadge, for a beard is a badge of haire; and a badge of haire, hairbadge. Deus bone, is that worde come into the Barbers bason. In good time. Good Motto geue some ease, for at thy comming in, I ouer-heard of a cure thou hadst done. Let him goe home with thee, ease him, and thou shalt haue thy beard. IS not hunting a tedious occupation? Doest thou not vnderstand their language? To it Petulus. Whats that: He hath laid the plot to be prudent, why tis pa stie crust, eat enough and it will make you wise, an olde prouerb. I, and some lubber lying besides a spring, &amp; seeing a partridge come by, said he did spring the partridge. But canst thou blowe it? I and then to geeue vs an inuentorie of all his goods, only to redeeme the beard, but we will be euen with him; and Ile be forsworne but Ile be reuenged. And I protest by these haires on my head, which are but casualties, for alas who knowes not how soone they are lost, Autumne shaues like a razor: if these locks be rooted against winde and weather, spring and fall, I sweare they shal not be lopped, till Motto by my kna uerie be so bauld, that I may write verses on his scalpe. In witnesse whereof I eate this haire: now must thou Petulus kisse thy beard, for that was the book thou swa rest by. What els? Ile not share in that. And from me they shall be remoueables. Tongs thou wouldst say. They are moueables Ile warrant. The beasts head, for Motto is stuft in the head, and these are among vnmoueable goods. Thats due debt. Ile be a Duke, I finde honor to bud in my head, and mee thinkes euerie ioynt of mine armes, from the shoulder to the little finger, saies send for the Herauld. Mine armes are all armarie, gules, sables, azure, or, vert, pur, post, pare, &amp;c. Mercurie me, because I can lie.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Midas</div><div class="body">Offered anything he wishes by way of reward for entertaining Baéehus) KingiMidas seeks advice. Two of his lords suggest that he request love and empire respectively; the third proposes gold, which can buy both, so Midas asks that everything he touches should turn to gold. The gift proves to be an inconvenience, turning Midas’s food and even his beard to gold. (A BaBE steals the golden beard from the FSyalibarber, but the barber gets his own back by giving him toothache.) Regretting his folly and his imperialistic designs on other nations, Midas seeks a remedy from the oracle, and washes off the golden touch in a nearby river. On the way home, Midas goes hunting in the woods, gets lost, and encounters Ajpoll6 and Pan ‘The two gods are in dispute over which is the best musician; Midas is asked to judge, and, perversely, chooses Pan. Apollo gives him ass’s ears in reprisal, and he becomes reclusive while rumours spread; even the reeds whisper about his ears. Meanwhile his empire begins to disintegrate and he is unable to achieve his overriding objective, the conquest of Lesbos. Finally he seeks a remedy from the oracle of Apollo, and also proclaims that any further talk about his ass’s ears will cost the speaker his own. The pages inveigle Motto the barber into flouting the edict, and thereby force him to return the golden beard. Midas makes his obeisance at Apollo’s oracle, and is ordered to give up his imperial ambitions; in particular, his ears will only get longer if he continues to covet Lesbos. He agrees, and promises to make annual sacrifices at the oracle. The ass’s ears fall off, and the play ends with praise for Apollo.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

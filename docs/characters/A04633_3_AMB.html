@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AMB in The Devil Is an Ass · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>AMB</span>
+</nav>
+
+<h1>AMB</h1>
+<p class="lede">in <em>The Devil Is an Ass</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>786</td></tr>
+<tr><th>Characters</th><td>4038</td></tr>
+<tr><th>BritDrama no.</th><td>1810</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">by conference with me, that I liu&#x27;d Too chast for my complexion (and indeed Too honest for my place, Sir) <mark>did</mark> aduise me If I <mark>did</mark> loue my selfe (as that I do, I <mark>must</mark> confesse) To gi&#x27; my body a little euacuation— No, S r . I durst not (For feare it might arriue at some body&#x27;s eare, It should not) trust my selfe to a common house;</div>
+<div class="excerpt">Do you <mark>heare</mark>, S r ? He answers quite from the purpose. What is your name, I pray you Sir. I aske not o&#x27; the time, but of your name, Sir, Hold, Sir? What holds? I <mark>must</mark> both hold, and talke to you About these clothes. No, I am cossend By you! robb&#x27;d. Pox o&#x27;your gleeke, And three pence. Giue me an answere. Your master! Who is your</div>
+<div class="excerpt">Good fellow Pit-fall, Tel M r . Mere-craft, I intreat a word with him. Pitfall goes out. This most vnlucky accident will <mark>goe</mark> neare To be the losse o&#x27; my place; I am in doubt! Sir, I would beseech your worship stand betweene Me, and my Ladies displeasure,</div>
+<div class="excerpt">with a nut-shell, gathering all The leaues are falne this Autumne, drawing farts Out of dead bodies, making ropes of sand, Catching the windes together in a net, Mustring of ants, and numbring atomes; all That hell, and you thought exquisite torments, rather Then stay me here, a thought more: I would sooner Keepe fleas within</div>
+<div class="excerpt">roule but wi&#x27; your eyes, And foame at th&#x27;mouth. A little castle-soape Will do&#x27;t, to rub your lips: And then a nutshell, With toe, and touch-wood in it to spit fire, <mark>Did</mark> you ner&#x27;e read, Sir, little Darrels tricks, With the boy o&#x27; Burton, and the 7. in Lancashire, Sommers at Nottingham ? All these do teach it. And wee&#x27;ll giue out,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Good fellow Pit-fall, Tel M r . Mere-craft, I intreat a word with him. Pitfall goes out. This most vnlucky accident will goe neare To be the losse o&#x27; my place; I am in doubt! Sir, I would beseech your worship stand betweene Me, and my Ladies displeasure, for my absence. I would tell you Sir But how it happened. Sir you&#x27;ll laugh at me! But (so is Truth ) a very friend of mine, Finding by conference with me, that I liu&#x27;d Too chast for my complexion (and indeed Too honest for my place, Sir) did aduise me If I did loue my selfe (as that I do, I must confesse) To gi&#x27; my body a little euacuation— No, S r . I durst not (For feare it might arriue at some body&#x27;s eare, It should not) trust my selfe to a common house; Ambler tels this with ex traordinary speed. But got the Gentlewoman to goe with me, And carry her bedding to a Conduit-head, Hard by the place toward Tyborne, which they call My L. Majors Banqueting-house. Now Sir, This morning Was Execution ; and I ner&#x27;e dream&#x27;t on&#x27;t, Till I heard the noise o&#x27; the people, and the horses; And neither I ▪ nor the poore Gentlewoman Durst stirre, till all was done and past: so that I&#x27; the Interim, we fell a sleepe againe. He stags But, when I wak&#x27;d, to put on my cloathes, a sute, I made new for the action, it was gone, And all my money, with my purse, my seales, My hard-wax, and my table-bookes, my studies, And a fine new deuise, I had to carry My pen, and inke, my ciuet, and my tooth-picks, All vnder one. But, that which greiu&#x27;d me, was The Gentlewomans shoes (with a paire of roses, And garters, I had giuen her for the businesse) So as that made vs stay, till it was darke. For I was faine to lend her mine, and walke In a rug, by her, barefoote, to Saint Giles&#x27;es. To satisfie my Lady. I ha&#x27; told the true Disaster. An honest gentleman, but he&#x27;s neuer at leisure To be himselfe: He ha&#x27;s such tides of businesse. O, Call me home againe, deare Chiefe, and put me To yoaking foxes, milking of Hee-goates, Pounding of water in a morter, lauing The sea dry with a nut-shell, gathering all The leaues are falne this Autumne, drawing farts Out of dead bodies, making ropes of sand, Catching the windes together in a net, Mustring of ants, and numbring atomes; all That hell, and you thought exquisite torments, rather Then stay me here, a thought more: I would sooner Keepe fleas within a circle, and be accomptant A thousand yeere, which of&#x27;hem and how far Out leap&#x27;d the other, then endure a minute Such as I haue within. There is no hell To a Lady of fashion. All your tortures there Ambler comes in, &amp; suruayes him Are pastimes to it. &#x27;T would be a refreshing For me, to be i&#x27;the sire againe, from hence. This is my suite, and those the shoes and roses! Do you heare, S r ? He answers quite from the purpose. What is your name, I pray you Sir. I aske not o&#x27; the time, but of your name, Sir, Hold, Sir? What holds? I must both hold, and talke to you About these clothes. No, I am cossend By you! robb&#x27;d. Pox o&#x27;your gleeke, And three pence. Giue me an answere. Your master! Who is your Master. What should be then? I thinke, you are he. Do&#x27;s he mocke me trow, from pur pose? Or do ot I speake to him, what I meane? Good Sir your name. For Scep ticks. He hopes to make on o&#x27; these Scipticks o&#x27; me (I thinke I name &#x27;hem right) and do&#x27;s not fly me. I wonder at that! &#x27;tis a strange confidence! I&#x27;ll prooue another way, to draw his answer. It is the easiest thing Sir, to be done. As plaine, as fizzling: roule but wi&#x27; your eyes, And foame at th&#x27;mouth. A little castle-soape Will do&#x27;t, to rub your lips: And then a nutshell, With toe, and touch-wood in it to spit fire, Did you ner&#x27;e read, Sir, little Darrels tricks, With the boy o&#x27; Burton, and the 7. in Lancashire, Sommers at Nottingham ? All these do teach it. And wee&#x27;ll giue out, Sir, that your wife ha&#x27;s bewitch&#x27;d you: They repaire their old plot Sir, these clothes I&#x27;ll sweare, are mine: and the shooes the gentlewomans I told you of: and ha&#x27; him afore a Iustice, I will. O, can you speake to purpose now? Those are mine, S r .</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Devil Is an Ass</div><div class="body">. _ Pug the junior devil is keen to visit earth. Satan svarns him that his ideas of effective devilment are half a century out of date, but grants him leave to spend the day in London, made flesh and subject to all the frailties and limitations of the human body. A ready-made body is available, in the shape of a recently hanged cutpurse, but Pug will have to make his own arrangements for clothes. Another proviso is that he must serve the first man he meets. Unfortunately for Pug, he turns out to be a twit: Fabian Fitzdottrel. Fitzdottrel longs to see the devil, and agrees to accept Pug as an unpaid servant because he gives his mame as Devil. The same obsession makes Fitzdottrel eager to see a new play, The Devil is an Ass, but he needs some finery to show off as he sits on the stage. Wittipol is eager to sleep with Fitzdottrel’s wife, and offers him a suitable cloak in exchange for fifteen minutes’ uninterrupted conversation with the lady. He uses the time to proposition her, and engages her interest even though she has been forbidden to reply. Fitzdottrel is introduced to Merecraft, a purveyor of imaginative financial schemes, who offers to make him rich and a duke through land reclamation in the eastern fens. Fitzdottrel agrees to meet with him, leaving Pug to ensure that nobody attempts to visit his wife. Pug instead brings her a follow-up message from Wittipol, then makes advances to her on his own account, but is caught by Fitzdottrel and gets a beating. Wittipol’s friend Manly has a room which abuts Mistress Fitzdottrel’s gallery, which he uses to have a second meeting with her. This is much more intimate than the first, despite being conducted through the windows of adjacent buildings. Pug gets back into favour by tipping off Fitzdottrel, who puts a stop to the assignation and threatens to take up another woman to share his expectations and be his Duchess. Merecraft suggests that what Fitzdottrel’s wife needs is to be taught proper manners, and recommends a widow who knows the ways of the Spanish court, who might be persuaded to undertake the task if sent an expensive ring as a gift, and who is entirely fictitious. His accomplice Engine proposes hiring an actor to impersonate her, but Merecraft worries that his business methods might be leaked to a playwright and end up on stage; in the event, Engine finds a gentleman to take on the role instead, who happens to be Wittipol. Fitzdottrel cannot get his wife to part with a ring of her own, so…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EXE in Henry the Fifth · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>EXE</span>
+</nav>
+
+<h1>EXE</h1>
+<p class="lede">in <em>Henry the Fifth</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>952</td></tr>
+<tr><th>Characters</th><td>5280</td></tr>
+<tr><th>BritDrama no.</th><td>1183</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">found: Betweene his yonger dayes and these he musters now, Now he wayes time euen to the latest graine, Which you shall finde in your owne losses If he stay in <mark>France</mark>. There is fiue to one, and yet they all are fresh, The <mark>Duke</mark> of Yorke commends him to your <mark>Grace</mark>. In which aray, braue souldier doth he lye, Larding the plaines,</div>
+<div class="excerpt">men. This note doth tell me often thousand French, that in the field lyes slaine. Of Nobles bearing banners in the field, Charles de le Brute, hie Constable of <mark>France</mark>. Iaques of Chattillian, Admirall of <mark>France</mark>. The Maister of the crosbows, Iohn <mark>Duke</mark> Alo ̄ son. Lord Ranbieres, hie Maister of <mark>France</mark>. The braue sir Gwigzard, Dolphin.</div>
+<div class="excerpt">losse, on one part and an other. Take it God, for it is onely thine. Tis wonderfull. Only he hath not subscribed this, Wh&#x27;re your maiestie demaunds, That the king of <mark>France</mark> hauing any occasion To write for matter of graun , Shall name your highnesse, in this forme: And with this addition in French. Nostre tresher filz, <mark>Henry</mark> Roy D&#x27;anglaterre,</div>
+<div class="excerpt">gift of heauen, Of lawe of nature, and of nations, longs To him and to his heires, namely the crowne And all wide stretched titles that belongs Vnto the Crowne of <mark>France</mark>, that you may know Tis no sinister, nor no awkeward claime, Pickt from the worm holes of old vanisht dayes, Nor from the dust of old obliuion rackte, He sends you</div>
+<div class="excerpt">king. Vnles your fathers highnesse Sweeten the bitter mocke you sent his Maiestie, Heele call you to so loud an answere for it, That caues and wombely vaultes of <mark>France</mark> Shall chide your trespasse, and return your mock, In second accent of his ordenance. Heele make your Paris Louer shake for it, Were it the mistresse Court of mightie</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">It followes then, the cat must stay at home, Yet that is but a curst necessitie, Since we haue trappes to catch the petty theeues: Whilste that the armed hand doth fight abroad The aduised head controlles at home: For gouernment though high or lowe, being put into parts, Congrueth with a mutuall consent like musicke. Tennis balles my Liege. This was a merry message. They shalbe apprehended by and by. O the Lord of Massham. I arrest thee of high treason, By the name of Richard, Earle of Camhridge. I arest thee of high treason, By the name of Henry, Lord of Masham, I arest thee of high treason, By the name of Thomas Gray, knight of Northumberland. From him, and thus he greets your Maiestie: He wils you in the name of God Almightie, That you deuest your selfe and lay apart That borrowed tytle, which by gift of heauen, Of lawe of nature, and of nations, longs To him and to his heires, namely the crowne And all wide stretched titles that belongs Vnto the Crowne of France, that you may know Tis no sinister, nor no awkeward claime, Pickt from the worm holes of old vanisht dayes, Nor from the dust of old obliuion rackte, He sends you these most memorable lynes, In euery branch truly demonstrated: Willing you ouerlooke this pedigree, And when you finde him euenly deriued From his most famed and famous ancestors, Edward the third, he bids you then resigne Your crowne and kingdome, indirectly held From him, the natiue and true challenger. Bloody co ̄ straint, for if you hide the crown Euen in your hearts, there will he rake for it: Therefore in fierce tempest is he comming, In thunder, and in earthquake, like a Ioue, That if requiring faile, he will compell it: And on your heads turnes he the widowes teares, The Orphanes cries, the dead mens bones, The pining maydens grones. For husbands, fathers, and distressed louers, Which shall be swallowed in this controuersie. This is his claime, his threatning, and my message ▪ Vnles the Dolphin be in presence here, To whom expresly we bring greeting too. Scorn &amp; defiance, slight regard, contempt, And any thing that may not misbecome The mightie sender, doth he prise you at: Thus saith my king. Vnles your fathers highnesse Sweeten the bitter mocke you sent his Maiestie, Heele call you to so loud an answere for it, That caues and wombely vaultes of France Shall chide your trespasse, and return your mock, In second accent of his ordenance. Heele make your Paris Louer shake for it, Were it the mistresse Court of mightie Europe, And be assured, youle finde a difference As we his subiects haue in wonder found: Betweene his yonger dayes and these he musters now, Now he wayes time euen to the latest graine, Which you shall finde in your owne losses If he stay in France. There is fiue to one, and yet they all are fresh, The Duke of Yorke commends him to your Grace. In which aray, braue souldier doth he lye, Larding the plaines, and by his bloody side, Yoake fellow to his honour dying wounds, The noble Earle of Suffolke also lyes. Suffolke first dyde, and Yorke all hasted ore, Comes to him where in blood he lay steept, And takes him by the beard, kisses the gashes That bloodily did yane vpon his face, And cryde aloud, tary deare cousin Suffolke: My soule shall thine keep company in heauen: Tary deare soule awhile, then flie to rest: And in this glorious and well foughten field, We kept together in our chiualdry. Vpon these words I came and cheerd them vp, He tooke me by the hand, said deare my Lord ▪ Commend my seruice to my soueraigne. So did he turne, and ouer Suffolkes necke He threw his wounded arme, and so espoused to death, With blood he sealed. An argument Of neuer ending loue. The pretie and sweet maner of it, Forst those waters from me, which I would haue slopt, But I not so much of man in me, But all my mother came into my eyes, And gaue me vp to teares. Charles Duke of Orleance, Nephew to the King, Iohn Duke of Burbon, and Lord Bowchquall. Of other Lords and Barrons, Knights and Squiers, Full fifteene hundred, besides common men. This note doth tell me often thousand French, that in the field lyes slaine. Of Nobles bearing banners in the field, Charles de le Brute, hie Constable of France. Iaques of Chattillian, Admirall of France. The Maister of the crosbows, Iohn Duke Alo ̄ son. Lord Ranbieres, hie Maister of France. The braue sir Gwigzard, Dolphin. Of Nobelle Charillas, Gran Prie, and Rosse, Fawconbridge and Foy. Gerard and Verton. Vandemant and Lestra. Here was a royall fellowship of death Where is the number of our English dead? Edward the Duke of Yorke, the Earle of Suffolke ▪ Sir Richard Ketly, Dauy Gam Esquier: And of all other, but fiue and twentie. O God thy arme was here, And vnto thee alone, ascribe we praise. When without strategem, And in euen shock of battle, was euer heard So great, and litle losse, on one part and an other. Take it God, for it is onely thine. Tis wonderfull. Only he hath not subscribed this, Wh&#x27;re your maiestie demaunds, That the king of France hauing any occasion To write for matter of graun , Shall name your highnesse, in this forme: And with this addition in French. Nostre tresher filz, Henry Roy D&#x27;anglaterre, E heare de France. And thus in Latin: Preclarissimus filius noster Henricus Rex Anglie, Et heres Francie.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Henry the Fifth</div><div class="body">Faced with the prospect of parliamentary legislation to sequester church lands, fieTMqBishop—lofi@anterbury encourages RiiigiMenryiy to consider his claim to the French throne: he demonstrates that the Salic law debarring succession through the female line does not apply to France, and promises the church’s financial support for a war. [ie@Dalipliin hears of Henry’s ambitions and sends him a mocking gift of tennis balls; annoyed by the suggestion that he should go away and play, Henry gathers his troops. The French bribe three noblemen to assassinate him before he leaves England, but he discovers the plot and has the traitors put to death. The French prepare for battle, but the Dauphin scornfully underestimates Henry. BX@ff sent as ambassador to the French King, demands surrender and delivers to the Dauphin Henry’s personal contempt. The French offer a few dukedoms and a marriage alliance if Henry will withdraw. He considers this inadequate, and attacks Harfleur. The Dauphin and his troops fail to arrive in time to relieve the town, so its GOWEEIOF surrenders to Henry. Exeter is left in command while Henry takes his disease-ridden troops back to winter in Calais, but the French force a battle en route at Agincourt. The night before, the French anticipate victory over the bedraggled English. Henry tours his army and listens to their worries about the battle. He quarrels with one of his soldiers, WilliamiS| and they agree to settle their differences after their battle: they will know one another by the gloves they exchange. The French offer Henry the chance to surrender, but he refuses and battle ensues. The English do well, but when the French regroup for a new assault, Henry orders his troops to kill their prisoners. The French attack the baggage-train and kill the boys who are guarding it. The English are victorious, with remarkably few casualties. Henry persuades Bluellen to wear Williams’s glove, claiming it is a battle trophy which will be challenged only by a traitor; the two soldiers are about to fight when the King intervenes and reveals the truth. Henry later agrees a peace with France, is adopted as heir to the French throne, and marries Princess Catherine. In a subsidiary action, Henry’s former lowlife associates do less well. Rejected by the King, Balstafil dies, broken-hearted. PiSt6l, Nii] and Bardolph join the expedition to France, accompanied by Falstaff&#x27;s boy. Bardolph and Nim are hanged for theft, and the boy killed in the French attack…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

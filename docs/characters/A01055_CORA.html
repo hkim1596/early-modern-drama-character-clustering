@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CORA in 420 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>CORA</span>
+</nav>
+
+<h1>CORA</h1>
+<p class="lede">in <em>420</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1629</td></tr>
+<tr><th>Words</th><td>1487</td></tr>
+<tr><th>Characters</th><td>8245</td></tr>
+<tr><th>BritDrama no.</th><td>420</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">a deuise before the Prince, Wee&#x27;le trie how that can moue him. Yes, and your feminine Page too. Come all vnto my chamber, the proiect is cast, The time onely we <mark>must</mark> attend. Most sincerely. A Booke! is this the early exercise I <mark>did</mark> prescribe? in stead of following health, Which all me ̄ couet, you pursue your disease. Where&#x27;s</div>
+<div class="excerpt">my grauity: Doe what thou darest, I stand thee ▪ Haue at thee; thou affect&#x27;st railing onely for thy health, thy miseries are so thicke and so lasting; that thou hast not one poore denier to bestow on opening a veine. Wherefore to auoide a Plurisie, thou&#x27;t be sure to prate thy selfe once a month into a whipping, and bleed in</div>
+<div class="excerpt">griefe, and anguish of the soule That torture him: he carries Hell on earth Within his bosome, &#x27;twas a Princes tyranny Caus&#x27;d his distraction, and a Princes sweetnes <mark>Must</mark> qualifie that tempest of his minde. Farwell—a shrewd-braine Whorson, there&#x27;s pith In his vntoward plainenesse.— Now, the newes! We will roare with him, Trollio,</div>
+<div class="excerpt">farewell to a creature long Absented from me, tis a daughter (Sir) Snatcht from me in her youth, a handsome girle, Shee comes to aske a blessing. Shee makes more haste In her quicke prayers then her trembling steppes, Which many griefes haue weakened. What new Crochet next? There is so much sence in this wilde distraction, That</div>
+<div class="excerpt">all comparison into a silence. She had a Sister too: but as for her, If I were giuen to talke, I coo&#x27;d describe A pretty piece of goodnesse: let that passe— We <mark>must</mark> be wise somtimes: What would you with her? Haue you prepar&#x27;d his Cup? True Nectar is diuine. O, by your leaue, Sir. I <mark>must</mark> be bold to raise yee, else your Phisicke</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">So doe thy knauery and desperate beggery. Ile stay in spight of thy teeth. There lyes my grauity: Doe what thou darest, I stand thee ▪ Haue at thee; thou affect&#x27;st railing onely for thy health, thy miseries are so thicke and so lasting; that thou hast not one poore denier to bestow on opening a veine. Wherefore to auoide a Plurisie, thou&#x27;t be sure to prate thy selfe once a month into a whipping, and bleed in the breech in stead of the arme. Come. The best worth in thee, is the corruption of thy minde, for that onely intitles thee to the dignity of a lowse: a thing bred out of the filth and superfluity of ill humours: Thou byt&#x27;st any where; and any man who defends not himselfe with the cleane linnen of se cure honesty; him thou darest not come neere. Thou art Fortunes Ideot, Vertues Bankrupt, Times Dunghil, Manhoods Scandall, and thine owne scourge. Thou wouldst hang thy selfe, so wretchedly miserable thou art; but that no man will trust thee with as much mo ney as will buy a halter: and all thy stocke to be sold, is not worth halfe as much as may procure it. I haue imployment for thee, and for yee all, Tut, these are but good morrowes betweene vs. Ile shape yee all for a deuise before the Prince, Wee&#x27;le trie how that can moue him. Yes, and your feminine Page too. Come all vnto my chamber, the proiect is cast, The time onely we must attend. Most sincerely. A Booke! is this the early exercise I did prescribe? in stead of following health, Which all me ̄ couet, you pursue your disease. Where&#x27;s your great Horse, your Hounds, your set at Tennis, Your Balloone ball, the practice of your dancing, Your casting of the sledge, or learning how To tosse a Pike; all chang&#x27;d into a Sonnet? Pray Sir grant me free liberty to leaue The Court, it do&#x27;s infect me with the sloth Of sleepe and surfet: In the Vniuersity I haue imployments, which to my profession Adde profit and report: Here I am lost, And in your wilfull dulnesse held a man Of neither Art nor honesty: you may Command my head; pray take it, doe; &#x27;twere better For me to lose it, then to lose my wits, And liue in Bedlam: you will force me too&#x27;t, I am almost mad already. And yet They talke but odly of you. Yes, scuruily, And thinke worse (Prince.) So, now he is nettled. I thinke you would be by the world, reputed A man in euery point compleat, but are In manners and effect indeed a childe, A boy, a very boy. Away Cuculus ; follow the Lords. No quarrels, good&#x27;ee Whiske. Lay by your Trumperies, and fall to your practice. Instructions are ready for you all. Pelias is your Leader, follow him. Get credit now or neuer. Vanish, Doodles, vanish. The same, get&#x27;ee gone, and make no bawling. To waste my time thus Droane-like in the Court, And lose so many houres, as my studies Haue horded vp, is to be like a man That creepes both on his hands and knees, to climbe A mountaines top, where when he is ascended, One carelesse slip downe, tumbles him againe Into the bottome whence a first began. I need no Princes fauour: Princes need My art. Then Corax, be no more a Gull, The best of&#x27;em cannot foole thee, nay, they shall not. Y&#x27;ar your selfe a Scholer, And quicke of apprehension: Melancholy Is not as you conceiue. Indisposition Of body, but the mindes disease. So Extasie, Fantastick Dotage, Madnesse, Phrenzey, Rupture, Of meere imagination differ partly Vid. De mocrit. Iu nior. From Melancholy, which is briefly this, A meere commotion of the minde, o&#x27;re-charg&#x27;d With feare and sorrow; first begot i&#x27;th&#x27; braine, The Seate of Reason, and from thence deriu&#x27;d As suddenly into the Heart, the Seate Of our Affection. Infinite, it were More easie to coniecture euery houre We haue to liue, then reckon vp the kinds, Or causes of this anguish of the minde. My Lord, you are too quick; thus much I dare Promise, and doe, ere many minutes passe, I will discouer whence his sadnesse is, Or vndergoe the censure of my ignorance. May I be sure? Tis soone perform&#x27;d, That I may be discharg&#x27;d from my attendance At Court, and neuer more be sent for after: Or if I be, may Rats gnaw all my bookes, If I get home once, and come here againe, Though my necke stretch a halter for&#x27;t, I care not. Ile acquaint yee With what is to be done, and you shall fashion it. Sir, it is called the Maske of Melancholy. Madnesse rather In seuerall changes: Melancholy is The Roote aswell of euery Apish Phrensey, Laughter and mirth, as dulnesse. Pray my Lord Hold and obserue the plot, tis there exprest In kind, what shall be now exprest in action. No interpretation, take your places quickly. Nay, nay, leaue ceremony: sound to the entrance. This kind is called, Lycanthropia, Sir, When men conceiue themselues Wolues. And men possest so, shun all sight of water: Sometimes, if mixt with iealousie, it renders them. Incurable, and oftentimes brings death. Delirium this is call&#x27;d, which is meere dotage, Sprung from Ambition first, and singularity, Selfe loue, and blind opinion of true merit. You find this noted there, Phrenitis. Pride is the ground on&#x27;t; It raignes most in women. Which is a windy flattuous humour stuffing The head, and thence deriu&#x27;d to th&#x27;animall parts To be too ouer-curious, losse of goods, Or friends, excesse of feare, or sorrowes cause it. Good your Honours, Pray your Worships, Deare your Beauties, This is the Wanton Melancholy ; women With child possest with this strange sury often, Haue danc&#x27;d three dayes together without ceasing. One kind of Melancholy Is onely left vntouch&#x27;d; twas not in Art To personate the shadow of that Fancy. Tis nam&#x27;d Loue-Melancholy. As for instance, Admit this stranger here (Young man, stand forth) Intangled by the beauty of this Lady, The great Thamasta, cherisht in his heart The waight of hopes and feares: it were impossible, To lymne his passions in such liuely colours, As his owne proper sufferance coo&#x27;d expresse. Loue is the Tyrant of the heart, it darkens Reason, confounds discretion, deafe to counsell: It runnes a headlong course to desperate madnesse. O were your Highnes but toucht home, and throughly, With this (what shall I call it) Diuell— My Lords— Panthers may hide their heads, not change the skin: And loue pent ne&#x27;re so close yet will be seene. Sirra, tis pitty th&#x27;ast not been a Scholer; Th&#x27;art honest, blunt, and rude enough. O Conscience! But for thy Lord now, I haue put him too&#x27;t. Rhetias, tis not a madnesse, but his sorrow&#x27;s Close griping griefe, and anguish of the soule That torture him: he carries Hell on earth Within his bosome, &#x27;twas a Princes tyranny Caus&#x27;d his distraction, and a Princes sweetnes Must qualifie that tempest of his minde. Farwell—a shrewd-braine Whorson, there&#x27;s pith In his vntoward plainenesse.— Now, the newes! We will roare with him, Trollio, if he roare. No matter for the Murrion, here&#x27;s my Cap: Thus I will pull it downe; and thus out-stare him. Fix the knot right vnder the left eare. Yet doe not be too sudden, grant me leaue, To giue a farewell to a creature long Absented from me, tis a daughter (Sir) Snatcht from me in her youth, a handsome girle, Shee comes to aske a blessing. Shee makes more haste In her quicke prayers then her trembling steppes, Which many griefes haue weakened. What new Crochet next? There is so much sence in this wilde distraction, That I am almost out of my wits too, To see and heare him: some few houres more Spent here, would turne me Apish, if not frantick. In all the volumes thou hast turn&#x27;d, thou Man Of knowledge, hast thou met with any rarity, Worthy thy contemplation like to this? The modell of the Heauens, the Earth, the Waters, The harmony, and sweet consent of times, Are not of such an excellence, in forme Of their Creation, as the infinite wonder That dwelles within the compasse of this face: And yet I tell thee, Scholer, vnder this Well-ord&#x27;red signe, is lodg&#x27;d such an obedience, As will hereafter in another age, Strike all comparison into a silence. She had a Sister too: but as for her, If I were giuen to talke, I coo&#x27;d describe A pretty piece of goodnesse: let that passe— We must be wise somtimes: What would you with her? Haue you prepar&#x27;d his Cup? True Nectar is diuine. O, by your leaue, Sir. I must be bold to raise yee, else your Phisicke Will turne to further sicknes. What hope now of your Cure?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 420</div><div class="body">A group of mounted knights arrive at a wedding, and one of their number explains their presence. They worship Diana for as long as they remain unmarried, but also sacrifice to Hymenaeus, god of marriage. When they were last doing so, the god spoke, telling them one of Diana’s nymphs had got married to an earl favoured by Minerva. Diana is particularly pleased to know that the couple have agreed to wait a year before consummating the marriage. The two goddesses have asked Hymenaeus to arrange for the marriage- feast to be honoured, so he sends the knights with gifts: Minerva sends the groom a garland, Diana sends the bride a veil, and Hymenaeus sends them respectively a picture of a dove and a coronet. The knights present their shields and dance with ladies from the audience.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

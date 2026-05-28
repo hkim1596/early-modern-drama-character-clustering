@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIR GEN in 542 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SIR GEN</span>
+</nav>
+
+<h1>SIR GEN</h1>
+<p class="lede">in <em>542</em> — [173]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>819</td></tr>
+<tr><th>Characters</th><td>4501</td></tr>
+<tr><th>BritDrama no.</th><td>542</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">that way. I am yet a man, and my declining age Hath not so weakened judgement in me, That passion should betray my jealous thoughts. Nor can I but suspect, and <mark>must</mark> be satisfied. Her <mark>woman</mark> is the instrument. Mris. Susan. Aske me no idle questions, but doe it. Thou mayst <mark>bee</mark> a Lady thy selfe, if it lie in my power to raise thee.</div>
+<div class="excerpt">▪ but I can conquer passion. My act sh l instantly have confirmation; And be a president where such inequality Of yeares are joyn&#x27;d. I <mark>heare</mark> strange words Which <mark>must</mark> be scann&#x27;d and construed. The World reputes me A man of full discretion; and mine age Is not so rotten yet, to betwice childe. Hence yee vaine jealousies, that</div>
+<div class="excerpt">deserve To fill the seats of Magistracie, and be A speaking law) should spend themselves in places And acts of sin and shame; wherein severitie Of law and government <mark>must</mark> not be partiall. Therefore I pray no more of these disorders. You have said to satisfaction And more then I expected. Harke you sonne. Pretty sweet Gentleman. Is&#x27;t</div>
+<div class="excerpt">find some emptie dishes. This was very good Sacke, neighbour. Pray send me home a dozen Bottles. And keepe good orders. You are very cou t ou, neighbour. Will you <mark>goe</mark> along with me Gentlemen! You shall now make tryall of my profest love. I have brought you some guests Wife. Send your entertainment be worth their labour. I feare</div>
+<div class="excerpt">A man of full discretion; and mine age Is not so rotten yet, to betwice childe. Hence yee vaine jealousies, that in love diseas&#x27;d Are peccant humours: therefore <mark>must</mark> be purg&#x27;d. Come to my bosome patterne of true goodnesse. Nere more those bug-beares to the minds blest quiet Shall fright thee thence. Good Sir forgive The rashnesse</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Ha! what&#x27;s here! Courtship on all hands? Mr. Ierker, you are welcome, I hope; having fail&#x27;d in his old, hee hath not a new suit; that as I made her a Ladie, shee should bestow an hornourable Crest up on mee. Son, schoole your Sister. Come with me Wife. Ha! my sonne here, and Mr Ierker! I came i&#x27;th&#x27; person of authoritie, Invited by your noise. But that put off, Out of my love borne to the generall good, I doe advise you to be temperate: That the faire hopes conceiv&#x27;d of growing vertues Might not be lost. &#x27;Tis pitty that your wits, Which (joyn&#x27;d with some experience) might deserve To fill the seats of Magistracie, and be A speaking law) should spend themselves in places And acts of sin and shame; wherein severitie Of law and government must not be partiall. Therefore I pray no more of these disorders. You have said to satisfaction And more then I expected. Harke you sonne. Pretty sweet Gentleman. Is&#x27;t possible That one so young, should have so gray a wit; &#x27;Tis wanting many times in graver beards. Please you Mr. Ierker, to bring these Gentlemen to my house to supper. You&#x27;l find some emptie dishes. This was very good Sacke, neighbour. Pray send me home a dozen Bottles. And keepe good orders. You are very cou t ou, neighbour. Will you goe along with me Gentlemen! You shall now make tryall of my profest love. I have brought you some guests Wife. Send your entertainment be worth their labour. I feare you are too free that way. I am yet a man, and my declining age Hath not so weakened judgement in me, That passion should betray my jealous thoughts. Nor can I but suspect, and must be satisfied. Her woman is the instrument. Mris. Susan. Aske me no idle questions, but doe it. Thou mayst bee a Lady thy selfe, if it lie in my power to raise thee. That&#x27;s my feare. Wife, forgoe these fond thoughts, and with care apply your selfe to entertain these gentlemen. I&#x27;le to my closet. &#x27;Tis assented to. Nay more, I&#x27;le give you all her portion backe: Nor shall the least disquiet in my thoughts Make me remember it. Think not (young man) mine age So weake ▪ but I can conquer passion. My act sh l instantly have confirmation; And be a president where such inequality Of yeares are joyn&#x27;d. I heare strange words Which must be scann&#x27;d and construed. The World reputes me A man of full discretion; and mine age Is not so rotten yet, to betwice childe. Hence yee vaine jealousies, that in love diseas&#x27;d Are peccant humours: therefore must be purg&#x27;d. Come to my bosome patterne of true goodnesse. Nere more those bug-beares to the minds blest quiet Shall fright thee thence. Good Sir forgive The rashnesse of my passion. I&#x27;le no more Be jealous of your visits; but desire The love I beare your person may beusefull To all g od ends. Whence growe&#x27;s this exultation? Doe you love him? If he be found deserving In the dependances on bloud and fortune I shall consent, and then may mutuall love Render you happy. Supper not ready yet my servants are musi call; please you Gentlemen to dance a little. &#x27;Tis a health full exercise; bid them prepare their instruments. Come, come, settle to it. I love to see a nimble activenesse In noble youth; it argues active minds In well shap&#x27;t bodies, and begets a joy Dancing within me. I shall respect him Mris. Tongall. Mr. Con stable I doe conceive an abuse done to my person, in that you here traduce two strangers, pretending appointment, when none will accuse them; nor can I suddainly disco ver the errour. No swearing Constable; I have determin&#x27;d to conferre a power upon the accused, to judge both it and you; and the most offendors shall suffer what shall be due. No more of this modestie: I&#x27;le have it so; and exercise your wit. I have knowne a Countrey fellow full of knavish clinches. He hits you home Wife. You begin now to overdoe. You are bitter now: &#x27;tis time to resigne. When Wit makes not abuse it&#x27;s exercise, The users of it then are truely wise: But &#x27;tis a foolish Vanitie, not Wit, When Conscience bounds are broke to practise it. Y&#x27; Ave seene a Play, wherein was no disguise; No Wedding; no impro able devise: But all an easie matter, and contein&#x27;d Within the time of action. &#x27;Tis arraign&#x27;d; And doubtfull stands before your judgements barre, Expecting what your severall censures are. Some that pretend commission to the Stage, As th&#x27;only Cato&#x27;s of this Critick Age; Condemning all not done by imitation, Because this new Play hath a new foundation Wee feare will cry it downe: our hope is then That your faire hands will raise it up agen.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 542</div><div class="body">The Queen is greeted on her arrival by the Genius of the House. The house is transformed into the semblance of a ship, and a mock sea-fight ensues.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MER in Romeo and Juliet · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MER</span>
+</nav>
+
+<h1>MER</h1>
+<p class="lede">in <em>Romeo and Juliet</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1597</td></tr>
+<tr><th>Words</th><td>1475</td></tr>
+<tr><th>Characters</th><td>7450</td></tr>
+<tr><th>BritDrama no.</th><td>987</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Which is as thinne a substance as the aire, A d more inconstant than the winde, Which wooes euen now the 〈◊〉 bowels of the north, And being angred puffes <mark>away</mark> in haste, T rning his ace to the dew-dropping south ▪ Doest hou <mark>heare</mark> he is wise, Vpon my life he hath stolne him home to bed. Call, nay Ile coniure too. Romeo, madman,</div>
+<div class="excerpt">art as hot a Iacke being mooude, and as soone mooude to be moodie, and as soone moodie to be mooud. Nay, and there were <mark>two</mark> such, wee should haue none shortly. Didst not thou fall out with a man for crack ing of nuts, hauing no other reason, but because thou hadst hasill eyes? what eye but such an eye would haue pickt out</div>
+<div class="excerpt">Bleeue me Rome I <mark>must</mark> haue you daunce. Giue me a case to put my visage in, A visor for a visor, what ca e I What curious eye doth coate deformitie. 〈…〉 the mouse ▪ the Cunstables old</div>
+<div class="excerpt">the Cunstables old word, If thou 〈…〉 draw thee from the mire 〈…〉 wherein thou stick t. Leaue this talke, we burne 〈◊〉 light here. Why Romeo may one aske? And so <mark>did</mark> . 〈◊〉 : Why what was yours ▪ That dreamers 〈◊〉 lie. Ah the ee Queen Mab ath bin with you ▪ True I talke of dreames, Which are the Chi dren of an idle braine, Begot</div>
+<div class="excerpt">fairely yesternigh . Oh thats as much to say as such a case as yours wil constraine a man to bow in the hams. Right. Well said, follow m nowe that iest till thou hast worne out thy Pumpe, that when the single sole of it is wor the iest may remaine after the wearing olie singuler. Nay if thy wits runne the wildgoose chase, I</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Bleeue me Rome I must haue you daunce. Giue me a case to put my visage in, A visor for a visor, what ca e I What curious eye doth coate deformitie. 〈…〉 the mouse ▪ the Cunstables old word, If thou 〈…〉 draw thee from the mire 〈…〉 wherein thou stick t. Leaue this talke, we burne 〈◊〉 light here. Why Romeo may one aske? And so did . 〈◊〉 : Why what was yours ▪ That dreamers 〈◊〉 lie. Ah the ee Queen Mab ath bin with you ▪ True I talke of dreames, Which are the Chi dren of an idle braine, Begot of nothing but vaine fantasie, Which is as thinne a substance as the aire, A d more inconstant than the winde, Which wooes euen now the 〈◊〉 bowels of the north, And being angred puffes away in haste, T rning his ace to the dew-dropping south ▪ Doest hou heare he is wise, Vpon my life he hath stolne him home to bed. Call, nay Ile coniure too. Romeo, madman, humors, passion, liner, appeare thou in likenes of a sigh: speak but one rime &amp; I am satisfied, cry but ay me. Pronounce but Loue and Doue, speake to my gossip Venus one faire word, one nickname for her purblinde sonne and heire young Abraham: Cupid hee that shot so trim when young King Cophetua loued the begger wench. Hee heares me not. I coniure thee by Rosalindes bright eye, high forehead, and scarlet lip, her prettie foote, straight leg, and quiuering thigh, and the demaines that there adiacent lie, that in thy likenesse thou appeare to vs. Tut this cannot anger him, marrie if one shuld raise a spirit in his Mistris circle of some strange fashion, making it there to stand till she had laid it, and co iurde it downe, that were some spite. My inuocation is faire and honest, and in his Mistris name I coniure onely but to raise vp him. If loue be blind, loue will not hit the marke, Now will he sit vnder a Medler tree, And wish his Mistris were that kinde of fruite, As maides call Medlers when they laugh alone. Ah Romeo that she were, ah that she were. An open Et caetera, thou a poprin Peare. Romeo God night, il&#x27;e to my trundle bed: This ield bed is too cold for mee. Come lets away, for tis but vaine, To seeke him here that meanes not to be found. Why whats become of Romeo? came he not home to night? Ah that same pale hard hearted wench, that Ro salin Torments him so, that he will sure run mad. Tybalt the Kinsman of olde Capolet Hath sent a Letter to his Fathers House: Some Challenge on my life. I, anie man that can write may answere a letter. Who, Romeo? why he is alreadie dead: stabd with a white wenches blacke eye, shot thorough the eare with a loue song ▪ the verie pinne of his heart cleft with the blinde bow-boyes but-shaft. And is he a man to encounter Tybalt? More than the prince of cattes I can tell you. Oh he is the couragious captaine of complements, Catso, he fightes as you sing pricke-song, keepes time dystance and proportion, rests me his minum rest one two and the thirde in your bosome, the very butcher of a silken button, a Duel list a Duellist, a gentleman of the very first house of the first and second cause, ah the immortall Passado, the Punto re u rso, the Hay. Without his Roe, like a dryed Hering. O flesh flesh how art thou fishified. Sirra now is he for the numbers that Petrarch flowdin: Laura to his Lady was but a kitchi drudg, yet she had a better loue to berime her: ido a dow dy Cleopatra a Gypsie, Hero and Hellen hildings and harle tries: Thi ie agray eye or so, but not to the purpose. Signior Romeo bon iour, there is a French curtesie to your French s op: yee gaue vs the counterfeit fairely yesternigh . Oh thats as much to say as such a case as yours wil constraine a man to bow in the hams. Right. Well said, follow m nowe that iest till thou hast worne out thy Pumpe, that when the single sole of it is wor the iest may remaine after the wearing olie singuler. Nay if thy wits runne the wildgoose chase, I haue done: for I am sure thou hast more of the goose in one of thy wits than I haue in al my fiue: Was I with you there for the goose? Why thy wit is a bitter sweeting, a most sharp sauce Oh heere is a witte of Cheuerell that stretcheth from an ynch narrow to an ell broad. Why is not this better now than groning for loue? why now art thou sociable, now art thou thy selfe, nowe art thou what thou art, as wel by arte as nature. This driueling loue is like a great naturall, that runs vp and downe to hide his bable in a hole. A saile, a saile, a saile. Pree thee doo good Peter, to hide her face: for her fanne is the fairer of the two. God ye good den faire Gentlewomen. Tis no lesse I assure you, for the baudie hand of the diall is euen now vpon the pricke of noone. Yea, is the worst well? mas well noted, wise ly, wisely. So ho. A baud, a baud, a baud. No hare sir, vnlesse it be a hare in a lenten pye, that is somewhat stale and hoare ere it be eaten. And an olde hare hore, and an olde hare hore is verie good meate in Lent: But a hare thats hoare is too much for a score, if it hore ere it be spent. You! come to your fathers to supper? Farewell ancient Ladie, farewell sweete Ladie. Thou art like one of those, that when hee comes into the confines of a tauerne, claps me his rapier on the boord, and sayes, God send me no need of thee: and by the operation of the next cup of wine, he drawes it on the drawer, when indeed there s no need. Go too, thou art as hot a Iacke being mooude, and as soone mooude to be moodie, and as soone moodie to be mooud. Nay, and there were two such, wee should haue none shortly. Didst not thou fall out with a man for crack ing of nuts, hauing no other reason, but because thou hadst hasill eyes? what eye but such an eye would haue pickt out such a quarrell? With another for coughing, because hee wakd thy dogge that laye a sleepe in the Sunne? With a Taylor for wearing his new dublet before Easter: and with another for tying his new shoes with olde ribands. And yet thou wilt forbid me of quarrelling. By my heele I care not. But one word with one of vs? You had best couple it with somewhat, and make it a word and a blow. Could you not take occasion? Consort Zwounes consort? the slaue wil make fid lers of vs. If you doe sirra, look for nothing but discord: For heeres my fiddle-sticke. But Ile be hanged if he weare your lyuery: M ry go before into the field, and he may be your follower, so in that sence your worship may call him man. O dishonorable vile submission. Allastockado caries it away. You Ratcatcher, come backe, come backe. Nothing King of Cates, but borrow one of your nine liues, therefore come drawe your rapier out of your sca ard, least mine be about your eares ere you be aware. Is he gone, hath hee nothing? A poxe on your houses. Noe not so deepe as a Well, not so wide as a barne doore, but it will serue I warrant. What meant you to come betweene vs? I was hurt vnder your arme. Apoxe of your houses, I am fairely drest. Sirra goe fetch me a Surgeon. I am pepperd for this world, I am sped yfaith, he hath made wormes meate of me, &amp; ye aske for me to mor row you shall finde me a graue-man. A poxe of your houses, I shall be fairely mounted vpon foure mens shoulders: For your house of the Mountegues and the Capolets: and then some peasantly rogue, some Sexton, some base slaue shall write my Epitapth, that Tybalt came and broke the Princes Lawes, and Mercutio was slaine for the first and second cause. Wher&#x27;s the Surgeon? Now heele keepe a mumbling in my guts on the other side, come Benuolio, lend me thy hand: a poxe of your houses.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Romeo and Juliet</div><div class="body">After a street fight breaks out between servants of the rival Veronese households of Capulet and Montague, the Prince decrees death for any further breach of the peace in the matter. Romeo, the Montague son, is hopelessly in love with a Capulet lady, Rosaline, and discovers by chance that she is to be present at Old Capulet’s feast that night. He and his friends gatecrash _ the party disguised as masquers; Tybalt notices Romeo and wants to throw him out, but Old Capulet discourages this. Also present is Capulet’s daughter, Juliet, who is intended for marriage to Count Paris. Romeo meets her and they fall in love before knowing one another&#x27;s identity as members of the two enemy houses. Afterwards, Romeo climbs into the Capulet 1595 orchard, overhears Juliet’s private acknowledgement of her love, declares himself, and makes arrangements for a follow-up contact. Seeing an opportunity to end the feud, Friar Laurence agrees to marry the lovers. Juliet rendezvouses with Romeo at the Friar’s cell under cover of going to confession, and they become husband and wife. After sending Romeo a challenge, Tybalt attempts to fight him in the street; when Romeo refuses, Mercutio steps in and is killed, whereupon the enraged Romeo avenges his friend by killing Tybalt. The Prince banishes him for the murder. Friar Laurence and the Nurse arrange for the lovers to have a night together before Romeo leaves the city. Thinking Juliet is distressed by Tybalt’s death, her father arranges to hasten her marriage to Paris, and threatens to disown her when she refuses to comply. The Nurse advises her to accept the situation and marry Paris, but Friar Laurence gives her a sleeping potion to take the night before the wedding: it will make her appear dead, and meanwhile he will send to Romeo to fetch her from the family tomb after her funeral. When she returns home apparently ready to submit to the marriage, her father brings the date forward. Juliet takes the potion and is found, apparently dead, on the morning of the planned wedding. The Friar’s letter miscarries, so Romeo hears only of Juliet’s death; he buys poison from a needy apothecary and returns to Verona. Hearing that his arrangements have gone awry, the Friar plans to rescue Juliet from the tomb and keep her hidden until Romeo can fetch her; but Romeo gets there first. He encounters and kills Paris as he tries to break into the tomb, and takes the poison beside Juliet’s body. Meanwhile Paris’s page summons the watch. The Friar…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

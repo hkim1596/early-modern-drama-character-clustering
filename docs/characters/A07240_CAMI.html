@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAMI in The Maid of Honor · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>CAMI</span>
+</nav>
+
+<h1>CAMI</h1>
+<p class="lede">in <em>The Maid of Honor</em> — Massinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1632</td></tr>
+<tr><th>Words</th><td>926</td></tr>
+<tr><th>Characters</th><td>4869</td></tr>
+<tr><th>BritDrama no.</th><td>2291</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">chast Penelope. And to increase The wonder, <mark>did</mark> not modestie forbid it I should aske that from him, he sues to e for; And yet my reason like a tyran, tells e I <mark>must</mark> nor give, nor take it. A parting kisse S r .? What Nation envious of the happinesse Which Sicilie enjoyes in your sweet presence, Can buy you from her? or what</div>
+<div class="excerpt">seek me (though my frailtie should consent) In a base path. O take heed S r . When, what is vow&#x27;d to heaven, is dispens&#x27;d with, To serve our ends on earth, a curse <mark>must</mark> follow, And not a blessing. Not to be revok&#x27;d. Not so Sir, However in his life, he had dependance Vpon my Father, He is a gentleman As well borne as your selfe.</div>
+<div class="excerpt">so much for your person. Rich you are, Divelish rich, as &#x27;tis reported, and sur have The aides of Satans little fiends to get it, And what is got upon his backe, <mark>must</mark> be Spent you know where, the proverb&#x27;s sta&#x27;e, one word more And I have done. he dead? You see, though with some feare, I dare enquire it. Is there ought More terrible</div>
+<div class="excerpt">but advance noe further, You are Sir as I layd to do me service, To undertake a taske, in which your faith, udgement, discretion, in a word, your all That&#x27;s good, <mark>must</mark> be ingag&#x27;d, nor <mark>must</mark> you studie In he execution, but what may make For the ends I aime at. You <mark>must</mark> therefore to Si na for mee, and pay to Gonzaga This ransome</div>
+<div class="excerpt">Si na for mee, and pay to Gonzaga This ransome for his liberty, you shall Have bills of exchange along with you. Let him sweare A solemne contract to me, for you <mark>must</mark> be My principall witnesse, if he should. But why Do I entertaine these jealousies? you will do this? What&#x27;s the matter? Why? what of him? I beleeve you, But how</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I meane not to ride you, Was there ever such One knocks. A piece of motlie heard of! who&#x27;s that? you may spare The Catalogue of my dangers. Exit Clarin . Enough good Signior, If I te more of such sweete meats, I shall surfet. Who is&#x27;t? Enter Clarinda. Camiola if ever, now be constant This is indeed a sutor, whose sweet presence, Cou tship and loving language would have stagger&#x27;d The chast Penelope. And to increase The wonder, did not modestie forbid it I should aske that from him, he sues to e for; And yet my reason like a tyran, tells e I must nor give, nor take it. A parting kisse S r .? What Nation envious of the happinesse Which Sicilie enjoyes in your sweet presence, Can buy you from her? or what Climate yeeld Pleasures transcending those which you injoy here, Being both belou&#x27;d and honor&#x27;d. The North-star And guider of all hearts, and to summe up Your full accompt of happinesse, in a word, The brother of the King. You tax me without cause. Truth beare witnesse for me, That in the Iudgement of my Soule, you are A man so absolute, and circular In all those wish&#x27;d-for rarities, that may take A Virgin captive, that though at this instant All sceptr&#x27;d Monarches of our Westerne world Were rivalls with you, and Camiola worthy Of such a competition, you alone Should weare the ghirlond. The Consciousnesse of mine owne wants. Alas S r . We are not parallells, but like lines divided Can nere meete in one Centre, your Birth Sir (Without addition) were an ample Dowrie For one of fairer Fortunes, and this shape, Were you ignoble, far above all value; To this, so cleare a mind, so furnish&#x27;d with Harmonious faculties, moulded from heaven, That though you were Thersites in your features Of no descent, and Irus in your fortunes, Vlisses like you would force all eyes, and eares To love, but seene, and when heard, wonder at Your matchlesse story. But all these bound up Together in one Volume, give me leave With admiration to looke upon &#x27;em, But not presume in my owne flattering hopes, I may or can injoy &#x27;em. Sir excuse me One aerie with proportion, nere discloses The eagle and the wren tissue, and freese In the same garment monstrous: But suppose That what&#x27;s in you excessive, were diminish&#x27;d And my desert supply&#x27;d, the strongest bar, Religion stops our Entrance, you are Sir A Knight of Malta, by your order bound To a single life, you cannot marrie me, And I assure my selfe you are too noble To seek me (though my frailtie should consent) In a base path. O take heed S r . When, what is vow&#x27;d to heaven, is dispens&#x27;d with, To serve our ends on earth, a curse must follow, And not a blessing. Not to be revok&#x27;d. Not so Sir, However in his life, he had dependance Vpon my Father, He is a gentleman As well borne as your selfe. Put on your hat. What are you? and what would you with me? Why fine man? what are you? You are mov&#x27;d Sir. Then as you are a courtier; A gr c&#x27;d one too, I feare you have beene too forward, And so much for your person. Rich you are, Divelish rich, as &#x27;tis reported, and sur have The aides of Satans little fiends to get it, And what is got upon his backe, must be Spent you know where, the proverb&#x27;s sta&#x27;e, one word more And I have done. he dead? You see, though with some feare, I dare enquire it. Is there ought More terrible then death? You abuse me, The royall King cannot in love to vertue, (Though all springs of affection were dri&#x27;d up) But pay his ran ome. Possible! pray you stand off, I I doe not mutter treason to my selfe My heart will breake; yet I will not curse him, He is my king. The newes you have delivered, Makes me wearie of your company, wee&#x27;ll salu e When we meete next. I&#x27;ll bring you to the dore. Nay pray yo no more complements. To doubt Your ready desire to serve me, or prepare you With the repetition of former merits, Would in my diffidence wrong you. But I will And without circumstance, in the trust that I Impose upon you, free you from suspition. I know you do not. You are Adorni by the love you owe me. Take me with you, Love borne of duty, but advance noe further, You are Sir as I layd to do me service, To undertake a taske, in which your faith, udgement, discretion, in a word, your all That&#x27;s good, must be ingag&#x27;d, nor must you studie In he execution, but what may make For the ends I aime at. You must therefore to Si na for mee, and pay to Gonzaga This ransome for his liberty, you shall Have bills of exchange along with you. Let him sweare A solemne contract to me, for you must be My principall witnesse, if he should. But why Do I entertaine these jealousies? you will do this? What&#x27;s the matter? Why? what of him? I beleeve you, But how are you sure the king is so inclin&#x27;d? Did not you dreame this? And as ere you hope Like me to be made happy, I conjure you To reassume your order; and in fighting Bravely against the enemies of our faith Redeeme your morgag&#x27;d honor.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Maid of Honor</div><div class="body">Before the start of the action, Aurelia, Duchess of Siena, refused a marriage proposal by Ferdinand, Duke of Urbino. In reprisal, Ferdinand attacked Siena, conquered it, but then found himself trapped inside the city by the regrouped Sienese troops. To raise the siege, he invokes a defensive treaty with Sicily, but King Roberto refuses to honour it because Ferdinand was the aggressor and has brought his troubles on himself. However, he allows his bastard half-brother Bertoldo to go to war with a volunteer army. The court favourite Fulgentio takes advantage of Bertoldu: absence to woo his fiancée, Camiola. But she misses Bertoldo and refuses Fulgentio; his mpaste 1s to produce Roberto’s ring and make it a reval order that she accept him. She wishes Bertoldo were present to defend her honour: another suitor. Adurni. steps in. fights a duel, and wounds Fulgentio, which gets him into trouble with the King. Far trom raising the siege. Bertolde is routed by Gonzaga, Aurelia’s general. Both men are kKrughts «1 Malta, and Gonzaga is affronted to find Bertalds: unmindtul of chivalry as to be leading an ara searnst a lady’s interests. Roberta seuds Astutio te ransens: the Sicilian prisoners of war, but Bertoldo from the payment of his ransam by any private cen © aiid, expressly crcbeudhe + a &#x27; torbnds ihe arrangement and ignores the order and sends Adurnt Go pay the ratsern Bertoldy is released. abligation to marry Camtola: bat Aurelia asks 1) him, falls in love with huni. arranges a dispersaticn redoubling his ctstrae tee ered toe release him from his vow to marry © cate to Sicily with him to arrange Chere ortreniss wetunal intervenes, apparently to stop the weddtap. but tars: out that she has taken helv orders aed ab safer nunnery.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

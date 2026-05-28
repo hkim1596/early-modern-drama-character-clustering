@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KING in 2 Henry the Fourth · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_04.html">Cluster 4 — 4: iohn, falstaffe, ford</a> ›
+  <span>KING</span>
+</nav>
+
+<h1>KING</h1>
+<p class="lede">in <em>2 Henry the Fourth</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>1587</td></tr>
+<tr><th>Characters</th><td>8588</td></tr>
+<tr><th>BritDrama no.</th><td>1083</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 4 (<em>iohn, falstaffe, ford, misteris, page, shallow…</em>). Matches are highlighted.</p>
+<div class="excerpt">die, but in Ierusalem, Which vainely I supposde the Holy Land: But beare me to that chamber, there ile lie, Enter <mark>Shallow</mark>, In that Ierusalem shall Harry die. 〈◊〉 <mark>Falstaffe</mark>, and <mark>Bardolfe</mark> My Lord chiefe iustice, speake to that vaine man. I know thee not old man, fall to thy praiers, How ill white heires becomes a foole and iester, I</div>
+<div class="excerpt">That strength of speech is vtterly denied me: How I came by the crowne, O God forgiue, And grant it may with thee in true peace liue. Looke, looke, here comes my <mark>Iohn</mark> of Lancaster. Thou bringst me happinesse and peace sonne <mark>Iohn</mark>, But health (alacke) with youthfull wings is flowne From this bare witherd tru ke: vpon thy sight,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Now lords, if God doth giue successefull end, To this debate that bleedeth at our doores. We will our youth leade on to higher fields, And draw no swords but what are sanctified: Our nauie is addrest, our power collected, Our substitutes in absence wel inuested, And euery thing lies leuell to our wish, Only we want a little personal strength: And pawse vs til these rebels now afoote, Come vnderneath the yoke of gouernment. Humphrey my sonne of Gloster, where is the prince your brother? And how accompanied? Is not his brother Thomas of Clarence with him? Why art thou not at Winsore with him Thomas? And how accompanied? Most subiect is the fattest soyle to weeds, And he the noble image of my youth, Is ouerspread with them, therefore my griefe Stretches it selfe beyond the howre of death: The bloud weepes from my heart when I do shape, In formes imaginary, th&#x27;unguyded daies, And rotten times that you shall looke vpon, When I am sleeping with my auncestors: For when his head-strong riot hath no curbe, VVhen rage and hot bloud are his counsellors, VVhen meanes and lauish manners meete together, Oh with what wings shal his affections she, Towards fronting peril and opposde decay? Tis seldome when the bee doth leaue her comb, In the dead carion: who s here ▪ Westmerland? O Westmerland, thou art a summer bird, VVhich euer in the haunch of winter sings The lifting up of day: looke heres more newes. enter Harco . I pray you take me vp and beare me hence, Into some other chamber. Let there be no noyse made, my gentle friends, Vnlesse some dull and fauourable hand Will whisper musique to my weary spirite. Set me the crowne vpon my pillow here. Warwicke, Gloucester, Clarence. Why did you leaue me here alone, my lords? The prince of Wales, where is he? let me see him: he is not here. Where is the Crowne? who took it from my pillow? The Prince hath tane it hence go seeke him out: Is he so hastie, that he doth suppose my sleepe my death? Finde him, my lord of Warwicke, chide him hither. This part of his conioynes with my disease, And helps to end me: see, sonnes, what things you are, How quickly nature falls into reuolt, When gold becomes her obiect? For this, the foolish ouer-carefull fathers Haue broke their sleepe with thoughts, Their braines with care, their bones with industry: For this they haue ingrossed and pilld vp, The cankred heapes of strange atcheeued gold: For this they haue beene thoughtfull to inuest Their sonnes with arts and martiall exercises, When like the bee toling from euery flower, Our thigh, packt with waxe our mouthes with hony, We bring it to the hiue: and like the bees, Are murdred for our paines, this bitter taste Yeelds his engrossements to the ending father, Now where is he that will not stay so long, Till his friend sicknesse hands determind me. Enter Warwick . But wherefore did he take away the crowne? E ewhere he comes, come hither to me Harry, Depart the chamber, leaue vs here alone. exeunt. Thy wish was father (Harry,) to that thought I stay too long by thee, I weary thee, Dost thou so hunger for mine emptie chaire, That thou wilt needes inuest thee with my honors ▪ Before thy howre be ripe! O foolish youth, Thou seekst the greatnesse that will ouerwhelme thee, Stay but a little, for my clowd of dignity Is held from falling with so weake a wind, That it will quickly drop: my day is dim, Thou hast stolne that, which after some few houres. VVere thine, without offence, and at my death ▪ Thou hast seald vp my expectation, Thy life did manifest thou lou&#x27;dst me not, And thou wilt haue me die, assurde of it, Thou hidst a thousand daggers in thy thoughts, VVhom thou hast whetted on thy stony heart, To stab at halfe an hower of my life. VVhat, canst thou not forbeare me halfe an hower? Then get thee gone, and digge my graue thy selfe, And bid the mery bells ring to thine eare, That thou art crowned, not that I am dead: Let all the teares that should bedew my hearse Be drops of Balme to sanctifie thy head, Only compouud me with forgotten dust. Giue that which gaue thee life, vnto the wormes, Plucke downe my officers, breake my decrees, For now a time is come to mocke at Forme: Harry the fift is crownd, vp vanitie, Downe royall state, all you sage counsailers, hence, And to the English Court assemble now From euery region, apes of idlenesse: Now neighbour confines, purge you of your scumme Haue you a ruffin that will sweare, drinke, daunce, Reuell the night rob, murder, and commit The oldest sinnes, the newest kind of waies? Be happy, he will trouble you no more. England shal double gild his trebble gilt, England shall giue him office honour, might: For the fift Harry, from curbd licence, plucks The mussel of restraint, and the wild dogge Shal flesh his tooth on euery innocent. O my poore kingdome! sicke with ciuill blowes: VVhen that my care could not withhold thy riots, VVhat wilt thou do when riot is thy care? O thou wilt be a wildernesse againe, Peopled with woolues, thy old inhabitants. God put in thy mind to take it hence, That thou mightst win the more thy fathers loue, Pleading so wisely in excuse of it: Come hither Harry, sit thou by my bed, And heare (I thinke) the very latest counsaile That euer I shal breathe. God knowes (my sonne) By what by-paths, and indirect crookt waies, I met this crowne, and I my selfe know well, How troublesome it sate vpon my head: To thee it shall descend with better quiet, Better opinion, better confirmation, For al the soyle of the atchieuement goes, With me into the earth, it seemd in me, But as an honor snatcht with boistrous hand, And I had many liuing to vpbraide My gaine of it, by their assistances, Which daily grew to quarrell and to bloudshed, Wounding supposed peace: all these bold feares Thou seest with perill I haue answerd: For all my raigne hath beene but as a Scene, Acting that argument: and now my death Changes the mood, for what in me was purchast, Fals vpon thee in a more fairer sort. So thou the garland wearst successiuely, Yet though thou standst more sure then I could do, Thou art not firme enough, since griefes are greene, And all thy friends which thou must make thy friends, Haue but their stings and teeth newly tane out: By whose fell working I was first aduaunst, And by whose power I well might lodge a feare To be againe displacde: which to auoyde, I cut them off, and had a purpose, now To leade out manie to the Holy Land, Lest rest, and lying stil, might make them looke, Too neare vnto my state: therefore, my Harry, Be it thy course to busie giddie mindes With forraine quarrells, that action hence borne out, May waste the memory of the former dayes. More would I, but my lungs are wasted so, That strength of speech is vtterly denied me: How I came by the crowne, O God forgiue, And grant it may with thee in true peace liue. Looke, looke, here comes my Iohn of Lancaster. Thou bringst me happinesse and peace sonne Iohn, But health (alacke) with youthfull wings is flowne From this bare witherd tru ke: vpon thy sight, My worldly busines makes a period: Where is my lord of Warwicke? Doth any name perticular belong Vnto the lodging where I first did swound? Laud be to God, euen there my life must end. It hath bin prophecide to me many yeares, I should not die, but in Ierusalem, Which vainely I supposde the Holy Land: But beare me to that chamber, there ile lie, Enter Shallow, In that Ierusalem shall Harry die. 〈◊〉 Falstaffe, and Bardolfe My Lord chiefe iustice, speake to that vaine man. I know thee not old man, fall to thy praiers, How ill white heires becomes a foole and iester, I haue long dreampt of such a kind of man, So surfet-sweld, so old, and so prophane: But being awakt, I do despise my dreame, Make lesse thy body (hence) and more thy grace, Leaue gourmandizing know the graue doth gape For thee, thrice wider then for other men, Reply not to me with a foole-borne iest, Presume not that I am the thing I was, For God doth know, so shall the world perceiue, That I haue turnd away my former selfe, So will I those that kept me company: When thou dost heare I am as I haue bin, Approch me, and thou shalt be as thou wast, The tutor and th feeder of my riots: Till then I banish thee on paine of death, As I haue done the rest of my misleaders, Not to come neare our person by ten mile: For competence of life, I wil allow you, That lacke of meanes enforce you not to euills, And as we heare you do reforme your selues, We will according to your strengths and qualities, Giue you aduauncement. Be it your charge, my lord, To see performd the tenure of my word: set on.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 2 Henry the Fourth</div><div class="body">After the battle of Shrewsbury, there are contradictory rumours abroad as to the outcome: some say that the King and his son have vanquished Lord Hotspur of Lancaster, whereas in fact they won. Now Lord John of Lancaster is travelling north with a power, including Sir John Falstaff, to crush the regrouping remnants of the Percy rebellion. Mistress Quickly tries to have Falstaff arrested for debt, while threatens to prevent him setting out for London, but he talks his way out of it. Back from a military expedition in Wales, Prince Henry and Poins disguise themselves as drawers and eavesdrop on Falstaff’s conversation: he says uncomplimentary things about them, but Falstaff excuses himself inventively when confronted. Northumberland’s family persuade him to flee to Scotland rather than join the other northern rebels. Falstaff musters troops in Gloucestershire, but the best men bribe their way out, leaving him with the least suitable soldiers. Prince John sees the rebels and agrees to redress their grievances if they disband their army; but when they do so, he has them arrested for treason. Falstaff arrives in the north late, but meets the rebel Sir John Colville, who promptly surrenders without a fight, having heard Falstaff’s reputation. Prince John returns to court, but Falstaff goes via Gloucestershire to visit Justice Shallow. The sickly King prepares for death, and worries about the kingdom’s future in the hands of his eldest son. News arrives of the defeat of all the rebels. Prince Henry finds his father asleep with the crown beside him, and, thinking him dead, tries it on. The King wakes to find his crown gone. Brought back, the Prince excuses himself, and the King gives deathbed advice: he should pursue an aggressive foreign policy to distract from internal dissent. He dies in the Jerusalem chamber, fulfilling a prophecy that he will die in Jerusalem. Henry V is not the King everyone expected the Prince to be. He confirms in office the Lord Chief Justice, who had imprisoned him for his misdemeanours. Pistol brings to Gloucestershire news of his accession, and Falstaff anticipates power for himself and his associates. He is disappointed: when he accosts the King at his coronation, Henry refuses to acknowledge him, and banishes him — though with a pension to ensure that poverty does not lead him back into crime. Falstaff is convinced that this is only a public show of rejection, which will later be countermanded in private; but in fact he and his crew…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_04.html">Cluster 4 — 4: iohn, falstaffe, ford</a> page.
+</div>
+</div></body></html>

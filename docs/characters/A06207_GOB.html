@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GOB in A King and No King · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>GOB</span>
+</nav>
+
+<h1>GOB</h1>
+<p class="lede">in <em>A King and No King</em> — Beaumont, FrancisFletcher, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1619</td></tr>
+<tr><th>Words</th><td>1910</td></tr>
+<tr><th>Characters</th><td>9788</td></tr>
+<tr><th>BritDrama no.</th><td>1636</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Realme; and contrarie To his owne expectation, left this Queene Truly with childe indeed of the faire Princeſſe Panthaea: Then ſhee could haue torne her heire, And <mark>did</mark> alone to me yet durſt not ſpeake In publi e; for ſhee knew ſhee ſhould be found A Traytor, and her talke would haue beene thought Madneſſe or any thing rather then</div>
+<div class="excerpt">for ſhee knew ſhee ſhould be found A Traytor, and her talke would haue beene thought Madneſſe or any thing rather then truth: This was the onely cauſe why ſhee <mark>did</mark> ſeeke To poyſon you, and I to keepe you ſafe: And this the reaſon why I ſought to kindle Some ſparke of loue in you to faire Panthaea, That ſhee might get part</div>
+<div class="excerpt">ſhoot at you, and haue I this for pay? What doe you meane? This is true. This I grant, I thinke I was the cauſe. Sir I haue a lie As I loue God and honeſtie, I <mark>did</mark>: It was my meaning. VVhy Sir to die? VVhy wouldſt thou liue, was euer yet offendor So impudent, that had a thought of mercy After confeſſion of a crime like this?</div>
+<div class="excerpt">Queene hearing of, Mou&#x27;d me to let her haue you, and ſuch reaſons Shee ſhewed me as ſhee knew would tie My ſecreſie: ſhee ſware you ſhould be King; And o be ſhort, <mark>did</mark> deliue you Vnto her, and pretended you we e dead; And in mine owne houſe kept a Funerall, And had an emprie coffin put in earth: That night the Queene fain&#x27;d haſtilie</div>
+<div class="excerpt">of her owne. VVhich ſhee had charm&#x27;d, ſhee made the world belieue Shee was deliuer&#x27;d of you: you grew vp As the Kings ſonne ▪ till you were ſixe yeere olde; Then <mark>did</mark> the King die, and <mark>did</mark> leaue to me Protection of the Realme; and contrarie To his owne expectation, left this Queene Truly with childe indeed of the faire Princeſſe</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">MY Lord Bacurius, you muſt haue regard Vnto the Queene, ſhee is your priſoner, Tis at your perill if ſhee make eſcape. So doe I my Lord. I ſorrow for her that ſo little grace Doth gouerne her, that ſhee ſhould ſtretch her arme Againſt her King, ſo little womanhood And naturall goodneſſe, as to thinke the death Of her owne Sonne. There is a Ladie takes not after you, Her Father is within her, that good man Whoſe teares paid downe his ſinnes, marke how ſhee weeps, How well it does become her; and if you Can find no diſpoſition in your ſelfe To ſorrow, yet by gracefulneſſe in her Find out the way, and by your reaſon weepe: All this ſhee does for you, and more ſhee needes, When for your ſelfe you will not loſe a teare, Thinke how this want of griefe diſcredits you, And you will weepe, becauſe you cannot weepe: I know it is not: Why, is not all that&#x27;s paſt beyond your helpe? Nay, ſhould you publiſh it Before the world, thinke you twill be belieu&#x27;d? Nay, ſhould I ioine with you, Should we not both be torne? and yet both die Vncredited? Why then Take you ſuch violent courſes? as for me, I doe but right in ſauing of the King From all your plots. I bad you reſt with patience, and a time VVould come for me To reconcile all to your owne content: But by this way you take away my power, And what was done vnknowne, was not by me, But you, your vrging, being done, I muſt preſerue mine owne; but time may bring All this to light, and happily for all. Yes, tis moſt certaine. The King is well, and will be here to morrow. Bacurius, I muſt eaſe you of your charge: Madam, the wonted mercie of the King That ouertakes your faults, has met with this, And ſtrucke it out; he has forgiuen you freelie, Your owne will is your Law, be where you pleaſe ▪ You will be readie To waite vpon his Maieſtie to morrow? Good Captaine Beſſus, tell vs the diſcourſe Betweene Tigranes and our King, and how We got the victorie. Captaine, without the manner of your hurt be much materiall to this buſineſſe, weele heare it ſome other time. Madam, what writes his Maieſty to you? And to mee He writes, what teares of ioy he ſhed to heare How you were growne in euery vertuous way, And yeilds all thankes to me, for that deare care Which I was bound to haue in training you: There is no Princes liuing that enioyes A Brother of that worth. Yet I wonder much at this, hee writes he brings a long with him a husband for you, that ſame Captiue Prince; And if he loue you as he makes a ſhew, He will allow you freedome in your choiſe. Truſt me, were I a Ladie I could not like That man were bargain&#x27;d with before I chuſe him. I thinke there is no Ladie can affect Another Prince, your Brother ſtanding by; He does eclipſe mens vertues ſo with this. Why ſo you ſhall: my buſineſſes are great, I will attend you when it is his pleaſure To ſee you Madam. You will be ready Madam: Not very ill, Something vnkindly ſhee doth take it Sir, To haue her Husband choſen to her hands. O ſhee is farre from any ſtubbornneſſe, You much miſtake her, and no doubt will like VVhere you wil haue her; but when you behold her, You will be loath to part with ſuch a Iewell. Sir, I know ſhee is: But it were pitty to make poore our Land With ſuch a beauty, to inrich another. I thinke ſhee will Sir. Heauen bring my purpoſe luckily to paſſe, You know tis iuſt: Sir, ſheele not neede conſtraint, Shee loues you ſo. Shee loues you more then people loue their health That liue by labour; more then I could loue A man that died for me, if he could liue againe. O no, when you were in Armenia, I durſt not let her know when you were hurt: For at the firſt on euery little ſcratch, Shee kept her chamber, wept, and would not eate, Till you were well; and many times the newes vvas ſo long comming, that before we heard, Shee was as neare her death, as you your health. Sir, I haue. vvhy does not your Maieſtie ſpeake? To the Princeſſe. Sir, you ſhould ſpeake to her. Sir. Who Sir? Your Siſter Sir? Some one that has a wit, anſwere; where is ſhee? Where? There, where? No Sir. Thats ſhee. Sir it is ſhee: Is it? Doe not miſtake, And vex your ſelfe for nothing; for her death Is a long life of 〈◊〉 I hope: Tis ſhee, And if my ſpeech deſerue not faith, lay death Vpon me, and my lateſt words ſhall force A credit from you. That Lady Sir. Feare not Madam, The King will alter, tis ſome ſudden change, And you ſhall ſee it end ſome other way. You will not let your ſiſter Depart thus diſcontented from you Sir? Nay, tis well the King is pleaſ&#x27;d with it. HAue you written Madam? And with a kindneſſe, and ſu h winning words As may prouoke him at one inſtant fee e His double fault, your wrong, and his owne raſhneſſe. Good Ladie, be not fearefull; if he ſhould not Gi e vou your preſent end in this beleeue it You ſha l feele (if your vertue can induce you To labour out this tem eſt, which I know Is but a poore proofe gainſt your patience ▪ ) All thoſe contents your ſpirit will arriue at Newer and ſweeter to you; your royall brother (VVhen he ſhall once collect himſelfe, and ſee How farre e 〈◊〉 beene aſunder from himſelfe, What a meere ſtranger to his golden temper) M ſt from thoſe rootes of vertue, (neuer dying Though ſomewhat ſtopt with humour) ſhoote againe Into a thouſand glories bearing his fa re branches Hie as our hopes can looke at ſtraight as Iuſtice, Loden with ri e contents: he loues you dearely, I know it, and I hope I neede not further Winne you to vnderſtand it. You ſhall not feele a vorſe ſtroke then your griefe, I am ſorr tis ſo ſharpe: I kiſſe your hand, and this night will deliuer this true ſtorie with this hand to your bro ther. My ſeruice, and this letter to your grace. She is Sir till your pleaſure doe enlarge her, Which on my knees I beg; O tis not fit That all the ſweetneſſe of the world in one; The youth, and vertue, that would haue wilde Tygers And wilder people, that haue knowne no manners Should liue thus Cloyſterd vp, For your loues ſake (If there be any in that Noble heart) To her a wretched Ladie, and forlorne, Or for her loue to you, (which is as much As Nature, and obedience euer gaue) Haue pittie on her beauties. I doe beſeech your Grace beleeue it not, For let me periſh if it be not falſe: Good Sir reade her letter. Then good Sir for her ſatisfaction Send for her, and with reaſon make her know VVhy ſhe muſt liue thus from you. Sir her&#x27;s the Princeſſe. There is the King, now it is ripe. VVhy Sir doe you curſe me thus? How Sir? Haue I preſeru&#x27;d you from a childe, From all the arrowes, malice or ambition Could ſhoot at you, and haue I this for pay? What doe you meane? This is true. This I grant, I thinke I was the cauſe. Sir I haue a lie As I loue God and honeſtie, I did: It was my meaning. VVhy Sir to die? VVhy wouldſt thou liue, was euer yet offendor So impudent, that had a thought of mercy After confeſſion of a crime like this? Get out I cannot, where thou hurlſt me in, But I can take reuenge, that&#x27;s all the ſweetneſſe Left for me. Now is the time, heare me but ſpeake. Sir, you ſhall know your ſinnes before you doe vm If you kill me. Know you kill your Father. You kill your Father. I will tell you that ſhall heighten you againe, I am thy Father, I charge thee heare me. You doe not know why you curſe thus. VVhy but you are no Baftard. Pray be more patient, I may bring comfort to you. Firſt know our laſt King your ſuppoſed Father VVas olde and feeble when he marryed her, And almoſt all the Land as ſhee paſt hope Of iſſue from him. Forbeare theſe ſtarts, Or I will leaue you wedded to deſpaire, As you are now: if you can find a temper, My breath ſhall be a pleaſant weſterne wind, That cooles, and blaſtes not. Our King I ſay was old, and this our Queene Deſired to bring an heire; but yet her husband Shee thought was paſt it, and to be diſhoneſt I thinke ſhee would not; if ſhee would haue beene, The truth is, ſhee was watcht ſo narrowlie, And had ſo ſlender opportunitie, Shee hardly could haue beene: But yet her cunning Found out this way; ſhee fain&#x27;d her ſelfe with child, And poſtes were ſent in haſte throughout the Land, And God was humbly thankt in euery Church, That ſo had bleſt the Queen, and prayers were made For her ſafe going, and deliuerie: Shee fain&#x27;d now to grow bigger, and perceiu&#x27;d This hope of iſſue made her feard, and brought A farre more large reſpect from euerie man, And ſaw her power increaſe, and was reſolu&#x27;d, Since ſhee belieu&#x27;d ſhee could not haue&#x27;t indeede; At leaſt ſhee would be thought to haue a child. Now when the time was full, Shee ſhould be brought abed; I had a ſonne Borne, which was you: This the Queene hearing of, Mou&#x27;d me to let her haue you, and ſuch reaſons Shee ſhewed me as ſhee knew would tie My ſecreſie: ſhee ſware you ſhould be King; And o be ſhort, did deliue you Vnto her, and pretended you we e dead; And in mine owne houſe kept a Funerall, And had an emprie coffin put in earth: That night the Queene fain&#x27;d haſtilie to labour, And by a paire of women of her owne. VVhich ſhee had charm&#x27;d, ſhee made the world belieue Shee was deliuer&#x27;d of you: you grew vp As the Kings ſonne ▪ till you were ſixe yeere olde; Then did the King die, and did leaue to me Protection of the Realme; and contrarie To his owne expectation, left this Queene Truly with childe indeed of the faire Princeſſe Panthaea: Then ſhee could haue torne her heire, And did alone to me yet durſt not ſpeake In publi e; for ſhee knew ſhee ſhould be found A Traytor, and her talke would haue beene thought Madneſſe or any thing rather then truth: This was the onely cauſe why ſhee did ſeeke To poyſon you, and I to keepe you ſafe: And this the reaſon why I ſought to kindle Some ſparke of loue in you to faire Panthaea, That ſhee might get part of her right agen. This is all. No. Beleeue me tis no fury, All that he ſayes is truth.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A King and No King</div><div class="body">Arbaces has been away from his kingdom for many years fighting a war with Armenia, which he has just won. He has received reports from his Lord Protector, Gobrias, about the virtue and accomplishments of his younger sister Panthea, whom he has not seen since she was nine years old. He offers her hand in marriage to Tigranes, the vanquished Armenian King, but Tigranes demurs. Arbaces takes him back to Iberia to see her for himself. Tigranes’ objection lies in the fact that he already has a girlfriend, Spaconia, and he bribes the cowardly Bessus to bring her along and place her in Panthea’s household. Once there, she begs Panthea not to marry Tigranes, and Panthea agrees. Arane, Arbaces’ mother, has been trying to assassinate him since he came to the throne. Another attempt is foiled, but he pardons her when he returns in triumph. She clearly has an ulterior motive which is known to Gobrias, but both are discreet about its precise nature. Arbaces’ first meeting with Panthea as an adult proves unsettling: he falls in love with her. So does Tigranes. Identifying a rival, Arbaces imprisons him. Torn between desire and conscience, he also imprisons Panthea. Panthea gives Spaconia a token authorizing her to visit Tigranes in prison. He rejects her, but Arbaces finds them together and assumes that she is a go-between. Gobrias importunes him to release Panthea, who persuades him that his suspicions are unfounded: she loves him, and would act upon that love if to do so were not incestuous. The Armenians send Spaconia’s father as an ambassador to negotiate for Tigranes’ release. He believes his daughter has eloped with Bessus, but his denunciations of her bring Tigranes to his senses: he will make Spaconia his Queen. When Arbaces decides to kill Gobrias for corrupting him to incest, the truth comes out. Arbaces is not of royal blood. The old King married Arane when he was old and impotent, and, fearful about the succession, Gobrias and Arane conspired to produce an heir: Gobrias gave Arane his new-born son, and she faked his birth. Later, it proved that the King was not so impotent after all, and he died leaving Arane pregnant with Panthea, but by the time this was known, the young Arbaces had already succeeded to the throne. Since then, Gobrias and Arane have both been trying to put matters to rights, Arane with her murder plots and Gobrias by encouraging Arbaces to marry his putative sister and so establish the legitimacy of his teign. Arbaces publicly announces…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

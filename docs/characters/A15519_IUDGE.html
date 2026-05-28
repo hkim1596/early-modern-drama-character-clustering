@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IUDGE in The Three Ladies of London · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_05.html">Cluster 5 — 5: conscience, lucre, lucar</a> ›
+  <span>IUDGE</span>
+</nav>
+
+<h1>IUDGE</h1>
+<p class="lede">in <em>The Three Ladies of London</em> — Wilson, Robert</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1592</td></tr>
+<tr><th>Words</th><td>793</td></tr>
+<tr><th>Characters</th><td>4509</td></tr>
+<tr><th>BritDrama no.</th><td>700</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 5 (<em>conscience, lucre, lucar, usurie, fraud, dissimulation…</em>). Matches are highlighted.</p>
+<div class="excerpt">your custodie. Nor where is that wretch <mark>Dissimulation</mark>? Fraude: where is he become? What is become of <mark>Usurie</mark>? Tell me, when you heard of Simony? Fetch <mark>Lucar</mark> and <mark>Conscience</mark> to the Barre. Stand forth: Diligence deuide them a sunder. Impudent, canst thou denie deedes so manifestly knowne. Thy hatefull heart declares thy wicked life,</div>
+<div class="excerpt">thou denie deedes so manifestly knowne. Thy hatefull heart declares thy wicked life, In the abundance of thy abhomination all euils are rife: But what saiest thou <mark>Conscience</mark> to thy accusation that art accused to haue beene hawde vnto <mark>Lucar</mark>, and spotted with all abhomination. What letter is that in thy bosome <mark>Conscience</mark>? Diligence reach</div>
+<div class="excerpt">accusation that art accused to haue beene hawde vnto <mark>Lucar</mark>, and spotted with all abhomination. What letter is that in thy bosome <mark>Conscience</mark>? Diligence reach it hither. <mark>Conscience</mark> speake on, let me heart what thou canst say, For I know in singlenes thou wilt a truth bewray. <mark>Conscience</mark> where hadst thou this letter? How now mallepart stand</div>
+<div class="excerpt">singlenes thou wilt a truth bewray. <mark>Conscience</mark> where hadst thou this letter? How now mallepart stand you still in defence or no? This letter declares thy guiltie <mark>Conscience</mark>, how saiest thou is it not for Tell me, why standest hou in a maze? speake quicklie: Hadst thou thy tongue so liberall, and now stand to studie? It is happie that</div>
+<div class="excerpt">saiest thou is it not for Tell me, why standest hou in a maze? speake quicklie: Hadst thou thy tongue so liberall, and now stand to studie? It is happie that by <mark>Conscience</mark> thy abhomination is knowne, Wherefore I pronounce iudgement against thee on this wise: Thou shalt passe to the place of darkenesse, where thou shalt heare feare</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Sir Gerontus, because you are the palinti e, you first your mind shall say, Declare the cause you did arrest this merchant yesterday. Sir Gerontus you knowe, if any man forsake his faith, King, country, and become a Mahomet. All debts are paide, tis the law of our Realme, and you may not gaine say it. Semo: Mercadorus is this true that Gerontus doth tell? Then it is but a folly to make many words. Senior Mercado rus draw neere. Lay your hand on this booke, and say after me. Say I Mercadorus doo vtterly renounce before all the world, my duety to my Prince, my honour to my parents, and my good will to my country. But eneor mercadorus, I trow ye wil be a Turke for all this. Why then it is as sir Gerontus said, you did more for the gree dines of the mony. Then for any zeale or good will you bare to Turky. One may iudge and speake truth, as appeares by this, Iewes seeke to excell in Christianitie, &amp; Christians in Iewishnes. Seruiseable Diligence, bring hither such prisoners as are in your custodie. Nor where is that wretch Dissimulation? Fraude: where is he become? What is become of Usurie? Tell me, when you heard of Simony? Fetch Lucar and Conscience to the Barre. Stand forth: Diligence deuide them a sunder. Impudent, canst thou denie deedes so manifestly knowne. Thy hatefull heart declares thy wicked life, In the abundance of thy abhomination all euils are rife: But what saiest thou Conscience to thy accusation that art accused to haue beene hawde vnto Lucar, and spotted with all abhomination. What letter is that in thy bosome Conscience? Diligence reach it hither. Conscience speake on, let me heart what thou canst say, For I know in singlenes thou wilt a truth bewray. Conscience where hadst thou this letter? How now mallepart stand you still in defence or no? This letter declares thy guiltie Conscience, how saiest thou is it not for Tell me, why standest hou in a maze? speake quicklie: Hadst thou thy tongue so liberall, and now stand to studie? It is happie that by Conscience thy abhomination is knowne, Wherefore I pronounce iudgement against thee on this wise: Thou shalt passe to the place of darkenesse, where thou shalt heare feare full cries. Weeping, wailing, gnashing of teeth, and torment without end, Burning in the lake of fire and brunstone because thou canst not amend: Wherefore Diligence conuey her hence, throw her downe to the lowest hell, Where the infernall sprites and damned ghosts do dwell. And bring forth Loue. Declare that cause Conscience at large, how thou con est so spotted, Whereby many by thee hath beene greatly infected: For vnder the colour of Conscience thou deceiuedst manie, Causing them to difile the temple of God, which is mans bodie: A cleane conscience is a sacrifice: Gods owne resting place, Why wast thou then corrupted so, and spotted on thy face? O Conscience, shall cankered quam corrupt thy heart? Or shall want in this world cause thee to feele euerlasting sma t O Conscience what a small time thou hast on earth to liue, why doest thou not then, to God all honor giue? Considering the time is euerlasting that thou shalt liue in blisse, If by thy life thou rise from death, to iudgement mercie, and forgiuenes. Stand aside Conscience, bring Loue to the barre. What saiest thou to thy deformitie, who was the cause? Did Lucar choke thee so, that thou gauest thy selfe ouer to lust? And did prodigall expences cause thee in Dissimulation to trust? Thou wast pure Loue, and art thou become a monster, Bolstring thy selfe vpon the lasciuiousnes of Lucar? Loue answere for thy selfe, speake in thy defence. Then iudgement I pronounce on thee, because thou followed Lucar, Whereby thou hast solde thy soule to feele like torment with her, Which torments comprehended are in the worme of Conscience, who raging still, shall nere haue end, a plague for thine offence, Care shall be thy comfort, and sorrow shall thy life sustaine, thou shalt be dying, yet neuer dead, but pining still in endlesse paine. Diligence conuey her to Lucar, let that be her reward, Because vnto her cankered coyne she gaue her whole regard. But as for Conscience, carrie her to prison, there to remaine vntill the day of generall session: Thus we make an end, Knowing that the best of vs all may amend: UUhich God graunt to his good will and pleasure, That we be not corrupted with the vnsatiate desire of vanishing earthly treasure: For Couetousnesse is the cause of wresting mans Conscience, Therefore restraine thy lust, and thou shalt shun the offence.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Three Ladies of London</div><div class="body">Lady Love and Lady Conscience are concerned that Lady Lucre now rules in London, but Fame assures them that she and her adherents will meet their due punishment in the end. Four knaves and Simplicity, a penurious miller, go to London in the hope of employment by one of the ladies. Conscience rejects their applications, but Love agrees to take on Simplicity; the knaves find positions in Lucre’s household. Out of work because foreigners have taken all the jobs, Artifex also seeks a place with Lucre. Simplicity procures a testimonial from Conscience for his cousin Sincerity, who seeks a benefice; but he is unable to get anything from Simony because he has no bribe to offer. Dissimulation fobs him off with the parsonage of St Nihil — nothing - and an invitation to dine with Nemo — nobody — is likewise worthless (though Simplicity has _ difficulty understanding this). Simony employs Sir Peter Pleaseman, who can be either Protestant or Catholic as it suits his circumstances, as Lucre’s chaplain. Conscience is forced to sell her cottage to Lucre, but hopes to stay on as a sitting tenant. Usury threatens eviction; there is a proposal to pack the house with foreigners who will require less living space than English tenants. Eventually he relents and quadruples the rent instead. Love and Conscience are reduced to sending Usury their clothes in lieu of payment, but Dissimulation gives Simplicity money to redeem one of the gowns. He intended it to be Love’s, since he cares nothing for Conscience, but Simplicity returns Conscience’s clothes and delivers Love’s to Usury. Lucre enters an agreement with the Italian merchant Mercadore, whereby he will export essential materials and foodstuffs from England, and import foreign trinkets for gentlewomen. Mercadore goes to Turkey to procure knick-knacks, and encounters the Jew Gerontus. Two years ago, he borrowed a lot of money from Gerontus and avoided paying it back by skipping the country. Gerontus is happy to help in the supply of 1581 worthless tat to England, but eventually loses patience with Mercadore’s promises to pay his debt, and has him arrested. Mercadore proposes converting to Islam, which will legally void all his past obligations. Fearing that he might be blamed for a Christian’s apostasy, Gerontus cancels the debt, whereupon Mercadore’s Muslim convictions evaporate. Usury murders Hospitality and goes into hiding with a rich man, who protects him; his pardon is eventually procured by a courtier. Conscience and…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_05.html">Cluster 5 — 5: conscience, lucre, lucar</a> page.
+</div>
+</div></body></html>

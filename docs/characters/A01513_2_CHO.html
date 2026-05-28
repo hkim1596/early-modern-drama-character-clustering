@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CHO in Jocasta · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> ›
+  <span>CHO</span>
+</nav>
+
+<h1>CHO</h1>
+<p class="lede">in <em>Jocasta</em> — Gascoigne, GeorgeKinwelmershe, FrancisYelverton, ChristopherEuripidesDolce, Lodovico</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1573</td></tr>
+<tr><th>Words</th><td>974</td></tr>
+<tr><th>Characters</th><td>5279</td></tr>
+<tr><th>BritDrama no.</th><td>438</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 18 (<em>death, thebes, did, myne, eke, wyth…</em>). Matches are highlighted.</p>
+<div class="excerpt">honour <mark>both</mark>, The Queene that <mark>did</mark> so tend rly bring vp And nourishe you, eche one like to hir owne, Now hath she left you all (O cruell hap) With hir too cruell <mark>death</mark> in dying dreade, Pyning with pensi enesse without all helpe. O weary life, why bydst thou in my breast, And I contented be that th se mine eyes Should sée hir dye</div>
+<div class="excerpt">euill, Ne hencefoorth hope for euer to reioyce. Oh wretched ende of our vnhappie Lordes. O hard mishap we doe not onely heare The wearie newes of their vn imely <mark>death</mark>, But <mark>eke</mark> we must with wayling eyes beholde Their bodies deade, for loke where they be brought. MOst bitter plaint, O ladyes, vs behoues, Behoueth <mark>eke</mark> not onely</div>
+<div class="excerpt">And thou Oedipus hearken to my wordes, And know thus muche, that for thy daughters dower, Antigo with Hemone shall wedde. Thy sonne our king not long before his <mark>death</mark> Assigned hath the kingdome should descende To me, that am his mothers brother borne, And so the same might to my sonne succéede. Now I that am the lorde and king</div>
+<div class="excerpt">all helpe. O weary life, why bydst thou in my breast, And I contented be that th se mine eyes Should sée hir dye that gaue to me this life, And I not venge hir <mark>death</mark> by losse of life? Who can me giue a fountaine made of mone, That I may weepe as muche as is my will, To sowsse this sorow vp in swelling teares? What stony hart</div>
+<div class="excerpt">for hate I beare to thée, But for the weale of this afflicted realme. O foule accursed fate, that hast me bredde To beare the burthen of the miserie Of this colde <mark>death</mark>, which we accompt for life: Before my birth my father vnderstoode I should him slea, and scarcely was I borne, When he me made a pray for sauage bea tes. But what?</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">&quot;There is no loue may be comparde to that ▪ &quot;The tender mother beares vnto hir chylde: &quot;For euen so muche the more it dothe encrease, &quot;As their griefe growes, or contentations cease. &quot;Who once hath past the bounds of honstie &quot;In ernest déedes, may passe it well in words. O mightie Gods of goodnesse, neuer graunt Unto these euills, but set desired peace Betwéene the hearts of these two friendly foes. God shield. O mightie God, the gouernour of Thebes, Pitie with speede the payne Iocasta bydes, And eke our néedes, O mightie Bacchus helpe, Bende willing care vnto our iust complaynt: Leaue them not comfortlesse that trust in thée, We haue nor golde nor siluer thée to giue, Ne sacrifice to those thine aulters due, In steede wherof we confecrate our hearts To serue thy will, and hestes for to obey. SInce I haue ridde mine enmie out of sight, The best shall be, for Creon now to sende, My mothers brother, that with him I may Reason, consulte, conferre, and counsell bothe, What shall be best to vse in our defence, Before we venter forth into the fielde. But of this trauayle, loe, he me acquites That comes in haste towards these royall towres. My Lorde, your sister is gone forth long since, Into the campe, and with hir Antigone Hir daughter deare. She vnderstoode, that for this realme foorthwith Hir sonnes were gréed in combate for to ioyne. O cruell newes, most cruell that can come, O newes that might these stony walles prouoke For tender ruthe to burst in bitter teares, And so they would, had they the sense of man. Bewayle ladies, alas good ladies waile This harde mischaunce, this cruell common euill, Ne hencefoorth hope for euer to reioyce. Oh wretched ende of our vnhappie Lordes. O hard mishap we doe not onely heare The wearie newes of their vn imely death, But eke we must with wayling eyes beholde Their bodies deade, for loke where they be brought. MOst bitter plaint, O ladyes, vs behoues, Behoueth eke not onely bitter plainte, But that our heares dysheuylde from our heades About our shoulders hang, and that our brests With bouncing blowes be all be battered, Our gastly faces with our nayles defaced: Behold, your Queene twixt both hir sonnes lyes slayne, The Queene whom you di loue and honour both, The Queene that did so tend rly bring vp And nourishe you, eche one like to hir owne, Now hath she left you all (O cruell hap) With hir too cruell death in dying dreade, Pyning with pensi enesse without all helpe. O weary life, why bydst thou in my breast, And I contented be that th se mine eyes Should sée hir dye that gaue to me this life, And I not venge hir death by losse of life? Who can me giue a fountaine made of mone, That I may weepe as muche as is my will, To sowsse this sorow vp in swelling teares? What stony hart could leaue for to lament? Alas deare dame, let not thy raging griefe Heape one mishap vpon anothers head. This drearie day is cause of many euils, Poore Oedipus, vnto thy progenie. The Gods yet graunt it may become the cause Of better happe to this afflicted realme. GOod Ladies leaue your bootelesse vayne complaynt Leaue to lament, c t of your wofull cryes, High time it is as now for to prouide The funerals for the renowned king: And thou Oedipus hearken to my wordes, And know thus muche, that for thy daughters dower, Antigo with Hemone shall wedde. Thy sonne our king not long before his death Assigned hath the kingdome should descende To me, that am his mothers brother borne, And so the same might to my sonne succéede. Now I that am the lorde and king of Thebes, Will not permit that thou abide therein: Ne maruell yet of this my heady will, Ne blame thou me, for why, the heauens aboue, Which onely rule the rolling life of man, Haue so ordeynde, and that my words be true, Tyresias he that knoweth things to come, By trustie tokens hath foretolde the towne, That while thou didst within the wal es remayne, It should be plagued still with penurie: Wherfore departe, and thinke not that I speake These wofull wordes for hate I beare to thée, But for the weale of this afflicted realme. O foule accursed fate, that hast me bredde To beare the burthen of the miserie Of this colde death, which we accompt for life: Before my birth my father vnderstoode I should him slea, and scarcely was I borne, When he me made a pray for sauage bea tes. But what? I slew him yet, then caught the crowne, And last of all defilde my mothers bedde, By whom I haue this wicked ofspring got: And to this heinous crime and filthy facte The heauens haue from highe enforced me, Agaynst whose doome no counsell can preuayle. Thus hath I now my life, and last of all, Lo by the newes of this so cruell death Of bothe my sonnes and deare beloued wife, Mine angrie constellacion me rommaundes Withouten eyes so wander in mine age, When these my wéery, weake, and crooked 〈◊〉 Haue greatest néede to craue their quiet rest. O cruell reon, wilt thou slea me so, For cruelly thou doste but murther me, Out of my kingdome now to chase me thus: Yet can I not with humble minde beseeche Thy curtesie, ne fall before thy féete. Let fortune take from me these worldly giftes, She can not conquere this couragious heart, That neuer yet could well be ouercome, To force me yeelde for feare to villanie: Do what thou canst I will be Oedipus.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Jocasta</div><div class="body">Oedipus unknowingly murdered his father and married his mother Jocasta; on learning the truth, he blinded himself. His sons imprisoned him and agreed to alternate annually as kings of Thebes: Polynices went into exile while Eteocles took the first turn on the throne; but Eteocles refused to give it up at the end of his year in office, and Polynices has besieged Thebes in association with the King of Argos. Jocasta intervenes as their mother, and persuades Polynices to enter Thebes and meet Eteocles under truce. Eteocles will not hand over power, but offers to accept his brother back as a private citizen. Jocasta is unable to reconcile her sons, and Polynices’ forces prepare for battle. Eteocles names Creon as his successor, and asks him to marry Antigone to his son Haemon. Creon consults Tiresias, and learns that Thebes is doomed to destruction in divine revenge for Jocasta’s incest; only the death of his other son, Menoeceus, can save the city. Keen to die for his country, Menoeceus refuses to go into exile as his father wishes, reports the prophecy to Eteocles, and kills himself. Meanwhile, the battle is indecisive, and Eteocles and Polynices agree to settle their dispute in single combat. Jocasta and Antigone are too late to stop them killing each other: arriving to find them both dying, Jocasta stabs herself with Polynices’ dagger. The besieging army is massacred by the Thebans. Antigone brings the three bodies back to Thebes and tells her father what has happened. Creon declares himself King of Thebes and gives order for the funerals of Jocasta and Eteocles, but demands that Polynices, as an enemy of the city, should remain unburied. Antigone protests, pleads, and refuses to marry Haemon, threatening to kill him and then herself should Creon try to force her. Creon banishes both her and Oedipus. She helps her blind father to touch the dead bodies, and he asks her to see that Polynices is buried.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> page.
+</div>
+</div></body></html>

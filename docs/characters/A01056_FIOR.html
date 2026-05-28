@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FIOR in 478 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FIOR</span>
+</nav>
+
+<h1>FIOR</h1>
+<p class="lede">in <em>478</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>1618</td></tr>
+<tr><th>Characters</th><td>8774</td></tr>
+<tr><th>BritDrama no.</th><td>478</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">ominous signe; Pray heauen it turne to good.—Your highnes leaue.— A subiect fit To be the stall of laughter. Sir, I thinke, in princes Courts, no age nor greatnes But <mark>must</mark> admit the foole; in me &#x27;twere folly To scorne what greater states than I haue bin. A foole; I thanke your Highnesse; many a womans wit Haue thought themselues much</div>
+<div class="excerpt">Or I will win my choyce, or curse my fate. A mate! No, Madam; you are growne too hard for me: My Lord Fernando is a fitter match. You need not, Madam. Madam, I <mark>must</mark> … ntreat excuse; I feele The temper of my body not in case To iudge the strife. Let &#x27;em haue time enough, and as thou canst, Be neare to <mark>heare</mark> their Courtship,</div>
+<div class="excerpt">vndertake my selfe To do&#x27;t some <mark>two</mark> dayes hence, for need to night, But that you are in Court. &#x27;Tis, and sudden too, And not without some mysterie. Maurucio, you <mark>did</mark> once proffer true loue To me, but since you are more thriftier sped, For old affections sake here take this gold, Spend it for my sake. My Lord Fernando. Doe you</div>
+<div class="excerpt">warme, Pursue the ca … er of her trespasses. Here&#x27;s royall vengeance: this becomes the state Of his disgrace, and my vnbounded fate.— Strange miracle! Roseilli I <mark>must</mark> honour thee: thy truth, Like a transparent mirror, represents My reason with my errors. Noble Lord, That better dost deserue a better fate, Forgiue me; if my <mark>heart</mark></div>
+<div class="excerpt">on this interruption. To Court! indeed You haue some cause to speake; he vndertooke Most Champion-like to win the prize at tilt, In honour of your picture.—Marry <mark>did</mark> he: There&#x27;s not a Groome o&#x27;th Querry, could haue matcht The jolly riding man; pray get him backe, I doe not need his seruice, Madam, I. Honour? puh, Honour is talk&#x27;d</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Ferentes. You are one loues Courtship, He had some change of words; &#x27;twere no lost labour To stuste your Table-bookes, the man speakes wisely. My Lord and brother. Should forme, my Lord, Preuaile aboue affection? no, it cannot. You haue your selfe here a right noble Dutchesse, (Vertuous at least) and should your grace now pay (Which heauen forbid) the debt you owe to Nature, I dare presume, shee&#x27;d not so soone forget A Prince that thus aduanc&#x27;d her.—Madam, could you? Exceeding good; the man will vndertake: Obserue it, Da&#x27;uolos. Now take thy time, or neuer, Da&#x27;uolos; Preuaile, and I will raise thee high in grace.— My Lord Fernando, what, so hard at study? You are a kind companion to your selfe, That loue to be alone so. So, so, Sir, (leaue vs Iulia) your owne proofe By trauell and prompt obseruation, Instruct you how to place the vse of speech; But since you are at leisure, pray let&#x27;s sit; Wee&#x27;ll passe the time a little in discourse: What haue you seene abroad? At home! as how? What sight? What miracle? Fie, fie, your wit hath too much edge. &#x27;Tis for your Princes sake then, not for mine. Pray tell it. Now good my Lord, no more of him. Sir, enough; &#x27;tis true, He well deseru&#x27;d your labour; on his death-bed This Ring hee gaue mee, bade mee neuer part With this, but to the man I lou&#x27;d as dearely As I lou&#x27;d him; yet since you know which way To blaze his worth so rightly, in returne To your deserts, weare this for him and me. &#x27;Tis yours. True, I said so. Why man, that Testament is disanull&#x27;d, And … ncell&#x27;d quite by vs that liue: looke here, My bloud is not yet freez&#x27;d; for better instance Be iudge your selfe, experience is no danger: … old are my sighs; but feele, my lips are warme. To new kisse The oath to thee, which whiles he liu&#x27;d was his: Hast thou yet power to loue? To meet Sweetnesse of language in discourse as sweet. What was&#x27;t you said? Preuented? mischiefe on this interruption. To Court! indeed You haue some cause to speake; he vndertooke Most Champion-like to win the prize at tilt, In honour of your picture.—Marry did he: There&#x27;s not a Groome o&#x27;th Querry, could haue matcht The jolly riding man; pray get him backe, I doe not need his seruice, Madam, I. Honour? puh, Honour is talk&#x27;d of more than knowne by some. How? is&#x27;t euen so? I shall quit this wrong. On the sudden I fall a bleeding, &#x27;tis an ominous signe; Pray heauen it turne to good.—Your highnes leaue.— A subiect fit To be the stall of laughter. Sir, I thinke, in princes Courts, no age nor greatnes But must admit the foole; in me &#x27;twere folly To scorne what greater states than I haue bin. A foole; I thanke your Highnesse; many a womans wit Haue thought themselues much better, was much worse. No more, thou hast, in this discouery, Exceeded all my fauours, D&#x27;auolos. Is&#x27;t mistris Madam Dutchesse? braue reuenge. Or change him, or confound him, prompt dissembler! Is here the bond of his Religious vow? And that, now when the Duke is rid abroad, My Gentleman will stay behind, is sicke—or so. What meanes the jolly youth? A foole? you might as well ha giuen your selfe: Whence is he? By him? well, I accept him; thanke you for&#x27;t: And in requitall, take that Tooth picker. &#x27;Tis yours. Make vse on&#x27;t as you list; here D&#x27;auolos, Take in the Foole. Wilt goe with me, chicke? Come D&#x27;auolos, obserue to night; &#x27;tis late: Or I will win my choyce, or curse my fate. A mate! No, Madam; you are growne too hard for me: My Lord Fernando is a fitter match. You need not, Madam. Madam, I must … ntreat excuse; I feele The temper of my body not in case To iudge the strife. Let &#x27;em haue time enough, and as thou canst, Be neare to heare their Courtship, D&#x27;auolos. Speake D&#x27;auolos, how thriues intelligence? Is&#x27;t true? To stirre vp Tragedies as blacke as braue; And sending the Lecher panting to his grane.— If she intreat, &#x27;tis ten to one the man Is won before hand. I shall fit yee, I haue a naturall. Apparant impudence. Well put off, Secretary. &#x27;Tis a peeuish play, Your Knaue will heaue the Queene out, or your King; Besides, &#x27;tis all on fortune. ARt thou Caraffa? is there in thy veynes One drop of blood that issued from the loynes Of Pauy&#x27;s ancient Dukes? or dost thou sit On great Lorenzo&#x27;s seat, our glorious father, And canst not blush to be so farre beneath The spirit of Heroicke ancestors? Canst thou ingrosse a slauish shame? which men, Far far below the Region of thy state, Not more abhorre, then study to reuenge. Thou an I … alian? I could burst with rage, To thinke I haue a brother so befool&#x27;d, In 〈◊〉 patience to a harlots lust. What is she, but the sallow-coloured brat Of some vnlanded banckrupt? taught to catch The casie fancies of young prodigall bloods, In springes of her stewe-instructed Art? Here&#x27;s your most Vertuous Dutchesse, your rare peece. Be a Prince? Th&#x27;hadst better, Duke, thou hadst bin borne a peasant. Now boyes will sing thy scandall in the streets, Tune Ballads to thy infamy, get mony By making Pageants of thee, and inuent Some strangely-shap&#x27;d man-beast, that may for hornes Resemble thee, and call it Pauy&#x27;s Duke. Why now I heare you speake in maiesty. Or what? you will be mad? be rather wise: Thinke on Ferentes first, and thinke by whom The harmlesse youth was slaughter&#x27;d: had he liu&#x27;d, He would haue told you tales: Fernando fear&#x27;d it; And to preuent him, vnder shew, forsooth, Of rare deuice, most trimly cut him off. Haue you yet eyes, Duke? For looking on a sight shall split your soule … You shall not care, 〈◊〉 vndertake my selfe To do&#x27;t some two dayes hence, for need to night, But that you are in Court. &#x27;Tis, and sudden too, And not without some mysterie. Maurucio, you did once proffer true loue To me, but since you are more thriftier sped, For old affections sake here take this gold, Spend it for my sake. My Lord Fernando. Doe you note my brothers odde distractions? You were wont to bosome in his Counsailes; I am sure you know the ground on&#x27;t. Is&#x27;t possible? what would you say, my Lord, If he, out of some melancholly spleene, Edg&#x27;d on by some thank picking Parasite, Should now proue iealous? I mistrust it shrewdly. Yes; for but obserue, A Prince, whose eye is chooser to his heart, Is seldome steddy in the lists of loue, Vnlesse the party he affects doe match His ranke in equall portion, or in friends: I neuer yet, out of report, or else By warranted description, haue obseru&#x27;d The nature of phantasticke Iealousie, If not in him; yet on my conscience now, He has no cause. I neuer thought her lesse, yet trust me, Sir, No merit can be greater than your praise, Whereat I strangely wonder; how a man Vow&#x27;d, as you told me, to a single life, Should so much Deifie the Saints, from whom You haue disclaym&#x27;d deuotion. You are too wise, Fernando: to be plaine. You are in loue; nay shrinke not, man, you are: Biancha is your ayme; why doe you blush? She is, I know she is. Yes, yours; I hope I talke no newes: Fernando, know Thou runst to thy confusion, if in time Thou dost not wisely shun that Circe&#x27;s charme. Vnkindest man! I haue too long conceal&#x27;d My hidden flames, when still in silent signes I Courted thee for loue; without respect To youth or state, and yet thou art vnkind. Fernando, leaue that Sorceresse, if not For loue of me, for pitty of thy selfe. What gone! well, goe thy wayes; I see the mor … I humble my firme loue, the more he shuns Both it and me: so plaine! then &#x27;tis too late To hope; change peeuish passion to contempt: What euer rages in my blood I feele, Foole he shall know I was not borne to kneele, NOW fly reuenge, and wound the lower earth, That I, en-sphear&#x27;d aboue, may crosse the race Of Loue despis&#x27;d, and triumph o&#x27;re their graues, Who scorne the low-bent thraldome of my heart. Treason to wedlocke, this would make you sweat. Ignoble strumpet. Here&#x27;s fast and loo … e; Which for a Ducat, now the game&#x27;s on foot. Take this, take all. Dost thou halt? faint Coward, dost thou wish. To blemish all thy glorious Ancestors? Is this thy Courage? Then, whiles thy rage is warme, Pursue the ca … er of her trespasses. Here&#x27;s royall vengeance: this becomes the state Of his disgrace, and my vnbounded fate.— Strange miracle! Roseilli I must honour thee: thy truth, Like a transparent mirror, represents My reason with my errors. Noble Lord, That better dost deserue a better fate, Forgiue me; if my heart can entertaine Another thought of loue, it shall be thine. Fellow, learne to new liue the way to thrift For thee in grace, is a repentant shrift. Saue my brother, saue him. Since &#x27;tis thus, My Lord Roseilli, in the true requita … l Of your continued loue, I here possesse You of the Dukedome; and with it, of me, In presence of this holy Abbot. Oh me! is this your loue? I embrace it: Happy too late, since lust hath made me foule, Henceforth I&#x27;le dresse my Bride-bed in my soule.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 478</div><div class="body">Eteocles and Polynices are elected co-kings of Thebes, ruling in alternate years. At the end of the first year, Eteocles refuses to stand down and banishes Polynices. Six champions join Polynices to besiege Thebes, but, after heavy losses, Polynices offers to settle the case by single combat. He and Eteocles kill one another, and Creon takes the crown. Tiresias prophesies that the walls of Thebes will stand only as long as the last of the seven champions remains alive. After Adrastus’ death, the Argive troops sack the city. 1569</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

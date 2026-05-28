@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KI in The Reign of King Edward the Third · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>KI</span>
+</nav>
+
+<h1>KI</h1>
+<p class="lede">in <em>The Reign of King Edward the Third</em> — AnonymousShakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1596</td></tr>
+<tr><th>Words</th><td>1726</td></tr>
+<tr><th>Characters</th><td>9459</td></tr>
+<tr><th>BritDrama no.</th><td>952</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">go, and ſee they be relieud, Command that victuals be appoynted them, And giue to euery one fiue Crownes a peece: The Lion ſcornes to touch the yeelding pray, And Edwards ſword muſt freſh it ſelfe in ſuch, As wilfull ſtubbornnes hath made peruerſe. Lord Perſie welcome: whats the newes in <mark>England</mark>: Thanks Perſie for thy newes with</div>
+<div class="excerpt">iudgement to his ſteps, Till two much loued glory dazies them? How now. Whoſe liues my Lady? Thy oppoſition is beyond our Law, Thy beauty makes them guilty of their <mark>death</mark>, And giues in euidence that they ſhall dye, Vpon which verdict I their Iudge condemne them. VVhat ſaies my faire loue, is ſhe reſolute? Now wants there nought but</div>
+<div class="excerpt">forwarde peeres, This honor you haue done me animates, And chears my greene yet ſcarſe appearing ſtrength, With comfortable good perſaging ſignes, No otherwiſe then <mark>did</mark> ould Iacobes wordes, When as he breathed his bleſſings on his ſonnes, Theſe hallowed giftes of yours when I prophane, Or vſe them not to glory of my God, To patronage</div>
+<div class="excerpt">on his ſonnes, Theſe hallowed giftes of yours when I prophane, Or vſe them not to glory of my God, To patronage the fatherles and poore, Or for the benefite of Englands peace, Be numbe my ioynts, waxe feeble both mine armes, Wither my hart that like a ſaples tree, I may remayne the map of infamy. Then will he win a world of honor</div>
+<div class="excerpt">Plantagenet. I well thou haſt deſerud a knight-hood Ned, And therefore with thy ſword, yet reaking warme, With blood of thoſe that fought to be thy bane, Ariſe Prince <mark>Edward</mark>, truſty knight at armes, This day thou haſt confounded me with ioy, And proude thy ſelfe fit heire vnto a king: What Pictures this. Poore ſilly men, much wrongd,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Ignoble Dauid haſt thou none to greeue, But ſilly Ladies with thy threatning armes: But I will make you ſhrinke your ſnailie hornes, Firſt therefore Audley this ſhalbe thy charge, Go leuie footemen for our warres in Fraunce; And Ned take muſter of our men at armes, In euery ſhire elect a ſeuerall band, Let them be Souldiers of a luſtie ſpirite, Such as dread nothing but diſhonors blot, Be warie therefore ſince we do comence, A famous Warre, and with ſo mighty a nation: Derby be thou Embaſſador for vs, Vnto our Father in Law the Earle of Henalt: Make him acquainted with our enterpriſe, And likewiſe will him with our owne allies, That are in Flaundsrs, to ſolicite to, The Emperour of Almaigne in our name: Myſelfe whilſt you are ioyntly thus employd, Will with theſe forces that I haue at hand, March, and once more repulſe the trayterous Scot: But Sirs be reſolute, we ſhal haue warres On euery ſide, and Ned, thou muſt begin, Now to forget thy ſtudy and thy bookes, And yre thy ſhoulders to an Armors weight. This fellow is well read in poetrie, And hath a luſtie and perſwaſiue ſpirite: I will acquaint him with my paſſion, Which he ſhall ſhadow with a vaile of lawne, Through which the Queene of beauties Queene ſhall ſee, Herſelfe the ground of my infirmitie. Haſt thou pen, inke and paper ready Lodowike, Then in the ſommer arber ſit by me, Make it our counſel houſe or cabynet: Since greene our thoughts, greene be the conuenticle, Where we will caſe vs by disburdning them: Now Lodwike inuocate ſome golden Muſe, To bring thee hither an inchanted pen, That may for ſighes, ſet downe true ſighes indeed: Talking of griefe, to make thee ready grone, And when thou writeſt of teares, encouch the word, Before and after with ſuch ſweete laments, That it may rayſe drops in a Torterseye, And make a flynt heart Sythian pytifull, For ſo much moouing hath a Poets pen: Then if thou be a Poet moue thou ſo, And be enriched by thy ſoueraigne loue: For if the touch of ſweet concordant ſtrings, Could force attendance in the eares of hel: How much more ſhall the ſtraines of poets wit, Beguild and rauiſh ſoft and humane myndes. That deſtilles office muſt thou do for me, Or breake thy oth or cancell all the bonde , Of loue and duetie twixt thy ſelf and mee, And therefore Warwike if thou art thy ſelfe, The Lord and maſter of thy word and othe, Go to thy daughter and in my behalfe, Comaund her, woo her, win her 〈◊〉 wares, To be my miſtres and my ſecret loue, I will not ſtand to heare thee make reply, Thy oth breake hers or let thy ſouereigne dye. Thus from the harts aboundant ſpeakes the tongue, Counteſſe for Emperour, and indeed why not? She is as imperator ouer me, and I to her Am as a kneeling vaſſaile that obſerues, The pleaſure, or diſpleaſure of her eye What ſaies the more then Cleopatras match, To Caeſar now? What drum is this that thunders forth this march, To ſtart the tender Cupid in my boſome, Poore ſhipskin how it braules with him that beateth it: Go breake the thundring parchment bottome out, And I will teach it to conduct ſweete lynes, Vnto the boſome of a heauenly Nymph, For I will vſe it as my writing paper, And ſo reduce him from a ſcoulding drum, To be the herald and deare counſai e bearer, Betwixt a goddeſſe, and a mighty king: Go bid the diummer learne to touch the Lute, Or hang him in the braces of his drum, For now we thinke it an vnciuill thing, To trouble heauen wrth ſuch harſh reſounds, Away. Exit. The quarrell that I haue requires no armes, But theſe of myne, and theſe ſhall meete my foe, In a deepe march of penytrable grones, My eyes ſhall be my arrowes, and my ſighes Shall ſerue me as the vantage of the winde, To wherle away my ſweeteſt artyilerie: Ah but alas ſhe winnes the ſunne of me, For that is ſhe her ſelfe, and thence it comes, That Poets tearme, the wanton warriour blinde: But loue hath eyes as iudgement to his ſteps, Till two much loued glory dazies them? How now. Whoſe liues my Lady? Thy oppoſition is beyond our Law, Thy beauty makes them guilty of their death, And giues in euidence that they ſhall dye, Vpon which verdict I their Iudge condemne them. VVhat ſaies my faire loue, is ſhe reſolute? Now wants there nought but knighthood, which deferd Wee leaue till thou haſt won it in the fielde, My gratious father and yee forwarde peeres, This honor you haue done me animates, And chears my greene yet ſcarſe appearing ſtrength, With comfortable good perſaging ſignes, No otherwiſe then did ould Iacobes wordes, When as he breathed his bleſſings on his ſonnes, Theſe hallowed giftes of yours when I prophane, Or vſe them not to glory of my God, To patronage the fatherles and poore, Or for the benefite of Englands peace, Be numbe my ioynts, waxe feeble both mine armes, Wither my hart that like a ſaples tree, I may remayne the map of infamy. Then will he win a world of honor to, If he by vallour can redeeme him thence, If not, what remedy, we haue more ſonnes, Then one to comfort our declyning age. Why then his Ephitaph, is laſting prayſe. Welcome Plantagenet. I well thou haſt deſerud a knight-hood Ned, And therefore with thy ſword, yet reaking warme, With blood of thoſe that fought to be thy bane, Ariſe Prince Edward, truſty knight at armes, This day thou haſt confounded me with ioy, And proude thy ſelfe fit heire vnto a king: What Pictures this. Poore ſilly men, much wrongd, and more diſtreſt, Go Derby go, and ſee they be relieud, Command that victuals be appoynted them, And giue to euery one fiue Crownes a peece: The Lion ſcornes to touch the yeelding pray, And Edwards ſword muſt freſh it ſelfe in ſuch, As wilfull ſtubbornnes hath made peruerſe. Lord Perſie welcome: whats the newes in England: Thanks Perſie for thy newes with all my hart, What was he tooke him priſoner in the field. Well then wele haue a Purſiuaunt diſpatch, To ſummon Copland hither out of hand, And with him he ſhall bring his priſoner king. She ſhall be welcome, and to wait her comming, Ile pitch my tent neere to the ſandy ſhore. The Burgeſſes of Callis mighty king, Haue by a counſell willingly decreed, To yeeld the towne and Caſtle to your hands, Vpon condition it will pleaſe your grace, To graunt them benefite of life and goods. Thou and thy word lie both in my command, What canſt thou promiſe that I cannot breake? Which of theſe twaine is greater infamie, To diſobey thy father or thy ſelfe? Thy word nor no mans may exceed his power, Nor that ſame man doth neuer breake his worde, That keepes it to the vtmoſt of his power. The breach of faith dwels in the ſoules conſent, Which if thy ſelfe without conſent doo breake, Thou art not charged with the breach of faith, Go hang him, for thy liſence lies in mee, and my conſtraint ſtands the excuſe for thee. Make vp once more with me the twentith part Of thoſe that liue, are men in ow to quaile, The feeble handfull on the aduerſe part. Gontemptuous villaines, call ye now for truce? Mine eares are ſtopt againſt your booteleſſe cryes, Sound drums allarum, draw threatning ſwords? My promiſe, wel I do confeſſe as much; But I require the cheefeſt Citizens, And men of moſt account that ſhould ſubmit, You peraduenture are but ſeruile groomes, Or ſome fellonious robbers on the Sea, Whome apprehended law would execute, Albeit ſeuerity lay dead in vs, No no ye cannot ouerreach vs thus, If it be ſo, then let our couenant ſtand, We take poſſeſſion of the towne in peace, But for your ſelues looke you for no remorſe, But as imperiall iuſtice hath decreed, Your bodies ſhalbe dragd about theſe wals, And after feele the ſtroake of quartering ſteele, This is your dome, go ſouldiets ſee it done. Although experience teach vs, this is true, That peacefull quietnes brings moſt delight, When moſt of all abuſes are controld, Yet inſomuch, it ſhalbe knowne that we, Aſwell can maſter our affections, As conquer other by the dynt of ſword, Phillip preuaile, we yeeld to thy requeſt, Theſe men ſhall liue to boaſt of clemencie, And tyrannie ſtrike terror to thy ſelfe. Go get you hence, returne vnto the towne, And if this kindnes hath deſerud your loue, Learne then to reuerence Edw. as your king. Ex. Now might we heare of our affaires abroad, We would till glomy Winter were ore ſpent, Diſpoſe our men in garriſon a while, But who comes heere? Is this the proud preſumtious Eſquire of the North, That would not yeeld his priſoner to my Queen, What moude thee then to be ſo obſtinate, To contradict our royall Queenes deſire? We thanke thee for thy ſeruice valient Earle Challenge our fauour for we owe it thee: What haue our men the ouerthrow at Poitiers, Oris our ſonne beſet with too much odds? Content thee Phillip, tis not teares will ſerue, To call him backe, if he be taken hence, Comfort thy ſelfe as I do gentle Queene, With hope of ſharpe vnheard of dyre reuenge, He bids me to prouide his funerall. And ſo I will, but all the Peeres in Fraunce, Shall mourners be, and weepe out bloody teares, Vntill their emptie vaines be drie and ſere The pillers of his hearſe ſhall be his bones, The mould that couers him, their Citie aſhes, His knell the groning cryes of dying men, And in the ſtead of tapers on his tombe, an hundred fiftie towers ſhall burning blaze, While we bewaile our valiant ſonnes deceaſe. Away with mourning Phillip, wipe thine eies Sound Trumpets, welcome in Plantaginet. As things long loſt when they are found again, So doth my ſonne reioyce his fathers heart, For whom euen now my ſoule was much perplext</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Reign of King Edward the Third</div><div class="body">KingledwWardlll of England hears of his claim to the French throne by his mother’s right, and plans an invasion. The French have induced the Scots to invade England, and they have laid siege to the Countess of 1593 Salisbury’s castle. King Edward goes north to deal with them, and they flee at his approach, but the Countess persuades him to stay rather than pursue them. He falls in love with her, but neither his wooing nor her father’s unwilling advocacy can overcome her fidelity to her husband. She breaks his obsession by first demanding the deaths of his queen and her husband, then threatening to stab herself. With his troops mustered, Edward sets off for France. The French gather their allies about them, but their navy fails to prevent the English from landing. Edward’s army lays waste the country, and the inhabitants flee. PRGSIBAWArd is formally armed, and his father refuses to commit troops to help him out of danger at the battle of Crécy; the honour of his victory is thereby the greater. MHeEArNonSalisbiity releases his prisoner Willli@rs to seek safe conduct for him to Calais, on condition that he returns a prisoner if unsuccessful. His insistence on keeping his oath to return persuades the reluctant Dalipiin to issue a passport. Emboldened by an ambiguous prophecy, the French give battle to Prince Edward. Salisbury is captured, but produces his passport; Kimggohih is reluctantly compelled to honour it. The terms of the prophecy are fulfilled: the French army is frightened by ravens and, out of ammunition, the Prince’s army fights with the stones of the earth. The French are routed and King John taken prisoner. King Edward besieges Calais: after expelling its poor men to save food, the town surrenders; but Edward’s terms are that six leading burgesses must give themselves up within two days to suffer what fate he pleases. He is about to attack when they do so; and QHeeHEPHTippa persuades Edward to spare their lives. THEIKINGOHSESts is taken prisoner, and his captor brings him to France to surrender him to King Edward in person. Prince Edward also brings his father the gift of a captive king; King John is taken prisoner to England.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

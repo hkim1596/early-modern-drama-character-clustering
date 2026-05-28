@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CON in The Three Ladies of London · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_05.html">Cluster 5 — 5: conscience, lucre, lucar</a> ›
+  <span>CON</span>
+</nav>
+
+<h1>CON</h1>
+<p class="lede">in <em>The Three Ladies of London</em> — Wilson, Robert</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1592</td></tr>
+<tr><th>Words</th><td>1714</td></tr>
+<tr><th>Characters</th><td>8983</td></tr>
+<tr><th>BritDrama no.</th><td>700</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 5 (<em>conscience, lucre, lucar, usurie, fraud, dissimulation…</em>). Matches are highlighted.</p>
+<div class="excerpt">our states for to defend. What <mark>Fraud</mark>, <mark>Dissimulation</mark>, <mark>Usurie</mark>, and Symonie, How dare you for shame presume so boldly, As once to shew your selues before Loue and <mark>Conscience</mark>, Not yeelding your lewd liues first to repentance? Thinke you not that God will plague your wicked practises, If you intend not to amend your liues so farre amisse?</div>
+<div class="excerpt">Indeed I feare the worst, for euerie man doth sew and comes from countreys strange and farre, of her to haue view. Although they ought to seeke true Loue and <mark>Conscience</mark> cleare: but Loue and <mark>Conscience</mark> few doo like, that eane on Lucars chaire. Men ought be rulde by vs, we ought in them beare sway: so should each neighbor liue by</div>
+<div class="excerpt">we ought in them beare sway: so should each neighbor liue by other in good estate alway. You say the truth, yet God I trust will not admit it so, that Loue and <mark>Conscience</mark> by Lucars lust shall catch an ouerthrow. God grant that <mark>Conscience</mark> keep within the bounds of right, and that vile <mark>Lucar</mark> doo not daunt her heart with deadly spight.</div>
+<div class="excerpt">it not for Hospitalitie, we knew not whither to goe. Great is the miserie that we poore ladyes abide, And much more is the crueltie of <mark>Lucar</mark> and Usury beside. O <mark>Conscience</mark>, thou art not accounted of, O Loue, thou art little set by, For almost euery one, true loue, and pure <mark>conscience</mark> doth denie: So hath <mark>Lucar</mark> crept into the bosome</div>
+<div class="excerpt">Hospitalitie that good member, reframe it therefore. For Gods sake spare him, for cuntry sake spare him, for pitie sake spare him; for Loue sake spare him, for <mark>Conscience</mark> sake forbeare him. But yet <mark>Usurie</mark>, consider the lamentable crie of the poore, For lacke of Hospitalitie, fatherlesse children are turned out of doore. Consider</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Indeed I feare the worst, for euerie man doth sew and comes from countreys strange and farre, of her to haue view. Although they ought to seeke true Loue and Conscience cleare: but Loue and Conscience few doo like, that eane on Lucars chaire. Men ought be rulde by vs, we ought in them beare sway: so should each neighbor liue by other in good estate alway. You say the truth, yet God I trust will not admit it so, that Loue and Conscience by Lucars lust shall catch an ouerthrow. God grant that Conscience keep within the bounds of right, and that vile Lucar doo not daunt her heart with deadly spight. Passe on good Fame, your steps doo frame, on you we will attend, and pray to God that holds the rod, our states for to defend. What Fraud, Dissimulation, Usurie, and Symonie, How dare you for shame presume so boldly, As once to shew your selues before Loue and Conscience, Not yeelding your lewd liues first to repentance? Thinke you not that God will plague your wicked practises, If you intend not to amend your liues so farre amisse? Thinke you not God knowes your thoughts words and works, And what secret mischiefs in your hearts there lurks? then how dare you offend his heauenly maiestie, With your dissembling deceit, your flatterie, and your Usurie? Why, what art thou? oh I know thou art simplicitie. No, I may haue no fooles to dwell with me. With right good will, for their sights likes not me. What ist? I doubt not but tis some wise thing if it be for you, Be these your letters? what would you haue me doe, and how shall I call ye? And from whence came ye? God be blessed Sinceritie, for the good comfort I haue of thee, I would it lay in vs to pleasure such beleeue me. We will do what we can: But vltra posse non e t esse, you know, It is Lucar that hath brought vs poore soules so low. For we haue sould our house, we are brought so poore, And feare by her shortly to be shut out of doore. Yet to subscribe our name we will with all our hart, Perchaunce for our sake some thing she will impart: Come hither Simplicitie, let me write on thy backe. I aue done sir, I was setting my hand to a letter to Lucar for our freend Sinceritie. But I would lady Loue were heere too. I pray you hartily, and it shall suffise that turne well inow: Good Simplicitie, once more thy body do bow. Here take thy letters Sinceritie, &amp; prosperous be they to thee. Thankes my good f iend Hospitalitie. But tell me sir, haue you inuited to dinner any straungers? There is no body at all be ye sure, I know certainely well. You say truth, take possession when you please, good leaue haue 〈◊〉 Doubt you not, there is neither man, woman, nor child, that will or shall hinder you. Who is more bold than Usurie to venter? He maketh the matter dangerous where is no need at all, But he thinks it no pe illous to seeke euery mans fall: Both he and Lucar hath so pincht vs, we know not what to doe, Were it not for Hospitalitie, we knew not whither to goe. Great is the miserie that we poore ladyes abide, And much more is the crueltie of Lucar and Usury beside. O Conscience, thou art not accounted of, O Loue, thou art little set by, For almost euery one, true loue, and pure conscience doth denie: So hath Lucar crept into the bosome of man, woman and child, That euery one doth practise his deare friend to beguile. But God graunt Hospitalitie be not by them ouer prest, In whom all our stay and chiefest comfort doth rest ▪ But Usurie hates Hospitalitie and cannot him abide, Because he for the poore and comfortlesse doth prouide. Here he comes, that hath vndone many an honest man, And daily seeks to destroy, deface, and bring to ruine if he can. Now sir, haue you tooke possession as your deare lady wild you I pray you hartily let vs stay there, and we will be content to giue you tenne pound a yeare, which is the olde rent. Well, sith we are driuen to this hard and bitter drift, We accept it, and are contended to make bare and hard shift. We must haue patience perforce, seeing there is no remedie. What lamentable crie was that I heard one make? why, what wilt thou do with him Usurie? O doest thou not remember that thou shalt dearly answer for Hospitalitie that good member, reframe it therefore. For Gods sake spare him, for cuntry sake spare him, for pitie sake spare him; for Loue sake spare him, for Conscience sake forbeare him. But yet Usurie, consider the lamentable crie of the poore, For lacke of Hospitalitie, fatherlesse children are turned out of doore. Consider againe the complaint of the sicke, blind and lame, That will crie vnto the Lord for vengeance on thy head in his name. Is the feare of God so farre from thee that thou hast no feeling at all? O repent Usurie, leaue Hospitalitie, and for mercie at the Lords hande call. Alas I would helpe thee, but I haue not the power. O helpe, helpe helpe some good bodie. Out alas thy fellow Usurie hath killed Hospitalitie. what Lucar, thou lookst like a whore full of deadly hate. Alas Lucar, I am sorie for thee that thou canst no honestie keep: But such as thou art, such are thy attenders on thee, As appeares by thy seruant Usurie, that hath killed that good member Hospitalitie. Well well Lucar, udeo &amp; tace , I see and say nothing: But I feare the plague of God on thy head it will bring. Well Lucar well, you know pride will haue a fall: What auaileth it thee to win the world, and loo e thy soule withall Yet better it is to liue with little, and keepe a conscience cleare. Which is to God a sacrifice, and accounted of most deare. What remedie Simplicitie? I cannot do withall: But what shall we go do? or whereto shall we fall? Yf I go lie in an Inne, it will greeue me to see, The deceit of the Ostler, the powling of the Tapster, as in most houses 〈◊〉 lodging they be, If in a brewers house, at the uer plentie of water, and scarcenes of mal I should greeue, wherby to enrich themselues, all other with vnsauory thinne drinke they deceiue. If in a eannets house, with his great deceit in tanning, If in a Weauers house, with his great coosening in weauing. If in a Bakers house, with light bread, and very euill working. If in a Chaundlers with deceitfull weights, false measures, selling for a halfepeny that is scant worth a farthing. And if in an A lehouse, with the great resort of poore vnthrifts, that with swearing at the Cardes consume their liues, Hauing greater delight to spend a shilling that way, than a groat at home to sustaine their needie children and wiues. For which I iudge it best forme to get some solitary place, where I may with patience this my heauie crosse imbrace, And learne to sell broome, whereby to get my liuing, Using that as a quiet meane to keepe my selfe from begging ▪ wherefore Simplicitie if thou wilt do the like, ettle thy selfe 〈◊〉 it, and with true labour thy liuing do seeke. What Usurie, it is great pittie thou art vnhanged yet. Beleue me Usurie it greeues me thou wast not hanged long ago For if thou hadst beene hanged before thou slewest Hospitalitie, Thou hadst not made me and thousands more to feele the like pouertie. Alas Lucar, wilt thou continue a harlot all dayes of thy life? Alas Lucar, me thinkes it is no paine to thee that thou still platest the whore. Then giue me a shilling, and with a good will haue them you shall. I thinke you lead the world in a string, for euery body followes you, And sith euery one doth it, why may not I do it too: For that I see your free heart ▪ and great liberalitie, I maruell not that all people are so willing to follow ye. My good ladie Lucar, I will fulfill your mind in euery kind of thing. So that you shall be welcome at all houres, whosoeuer you bring. And all the dogs in the towne shall not barke at your doings I trow, For your full pretence and intent I do throughly know, Euen so well as if you had opened the very secrets of your hart, For which I doubt not but to rest in your fauour by my desart. But here comes your man Usurie. I haue told the crownes, and here are iust so many as you to me did say. Ile make speed, and where I haue with broomes ofttimes been roming. I meane henceforth not to be seene, but sitte to watch your comming. What should I say, nay what would I say in this our naughtie liuing. My good Lord I haue no way to excuse my selfe, She hath corrupted me by flattery, and her accursed elfe: What neede further triall, sith I Conscience am a thousand witnesses, I cannot choose but condemne vs all in liuing amisse Such terror doth affright me, that liuing, I wish to die: I am afraid there is no sparke left for me of Gods mercie. It was put into my bosome by Lucar: Willing me to keepe secret our lasciuious liuing, I cannot but condemne vs all in this thing. When Hospitalitie had his throate cut vp Usurie, He oppressed me with crueltie, and brought me to beggerie: Turning me out of house and home, and in the end, my gowne to pait my rent, to him I did send; So driuen to that extremitie, I haue fallen to that you see, Yet after iudgement I hope of Gods mercie.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Three Ladies of London</div><div class="body">Lady Love and Lady Conscience are concerned that Lady Lucre now rules in London, but Fame assures them that she and her adherents will meet their due punishment in the end. Four knaves and Simplicity, a penurious miller, go to London in the hope of employment by one of the ladies. Conscience rejects their applications, but Love agrees to take on Simplicity; the knaves find positions in Lucre’s household. Out of work because foreigners have taken all the jobs, Artifex also seeks a place with Lucre. Simplicity procures a testimonial from Conscience for his cousin Sincerity, who seeks a benefice; but he is unable to get anything from Simony because he has no bribe to offer. Dissimulation fobs him off with the parsonage of St Nihil — nothing - and an invitation to dine with Nemo — nobody — is likewise worthless (though Simplicity has _ difficulty understanding this). Simony employs Sir Peter Pleaseman, who can be either Protestant or Catholic as it suits his circumstances, as Lucre’s chaplain. Conscience is forced to sell her cottage to Lucre, but hopes to stay on as a sitting tenant. Usury threatens eviction; there is a proposal to pack the house with foreigners who will require less living space than English tenants. Eventually he relents and quadruples the rent instead. Love and Conscience are reduced to sending Usury their clothes in lieu of payment, but Dissimulation gives Simplicity money to redeem one of the gowns. He intended it to be Love’s, since he cares nothing for Conscience, but Simplicity returns Conscience’s clothes and delivers Love’s to Usury. Lucre enters an agreement with the Italian merchant Mercadore, whereby he will export essential materials and foodstuffs from England, and import foreign trinkets for gentlewomen. Mercadore goes to Turkey to procure knick-knacks, and encounters the Jew Gerontus. Two years ago, he borrowed a lot of money from Gerontus and avoided paying it back by skipping the country. Gerontus is happy to help in the supply of 1581 worthless tat to England, but eventually loses patience with Mercadore’s promises to pay his debt, and has him arrested. Mercadore proposes converting to Islam, which will legally void all his past obligations. Fearing that he might be blamed for a Christian’s apostasy, Gerontus cancels the debt, whereupon Mercadore’s Muslim convictions evaporate. Usury murders Hospitality and goes into hiding with a rich man, who protects him; his pardon is eventually procured by a courtier. Conscience and…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_05.html">Cluster 5 — 5: conscience, lucre, lucar</a> page.
+</div>
+</div></body></html>

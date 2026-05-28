@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IA in 2 Edward the Fourth · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>IA</span>
+</nav>
+
+<h1>IA</h1>
+<p class="lede">in <em>2 Edward the Fourth</em> — Heywood, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>1440</td></tr>
+<tr><th>Characters</th><td>7333</td></tr>
+<tr><th>BritDrama no.</th><td>1196</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">againe, It is not good to be so bold of foot, Vpon the sudden till you haue more strength. How mean … you sir? I vnderstand you not? Lament my case, for what? for Edwards <mark>death</mark>? I know that I haue lost a gracious friend, But that is not to be remedied now. I know he loues me not and for that cause, I haue withdrawne me wholly from</div>
+<div class="excerpt">giue me when I beg, I haue ere now relieued him and his, Though he and his denie reliefe to me: Had I béene enuious then, as Richard now, I had not staru&#x27;d, nor Edwards sons bin murdred, Nor Richard liu&#x27;de to put you now to <mark>death</mark>. Lord, is my sinne so horrible and grieuous, That I should now become a murderer? I haue sau&#x27;de the</div>
+<div class="excerpt">conscience bids me doe. O God desend, good friends pray for the king, More bitter are the newes which he doth bring, Then those were swéet I brought to you but late: If <mark>Edward</mark> die, confounded is my state, Ile hast vnto him and will spend my bloud, To saue his life or do him any good. I my Lord Louell, they are too true indeed, Royall</div>
+<div class="excerpt">confounded is my state, Ile hast vnto him and will spend my bloud, To saue his life or do him any good. I my Lord Louell, they are too true indeed, Royall King <mark>Edward</mark> now hath breath&#x27;d his last, The Quéene turnd out, and euerie friend put by, None now admitted, but whom Richard please. First let me die ere I do put my trust,</div>
+<div class="excerpt">sends reliefe, And will not yet wée peris … in our griefe, Come let vs step into some secret place. Ah M. Aire the time hath béene ere now, When I haue kn … eld to <mark>Edward</mark> on my knees, And begd for him, that now doth make me beg. I haue giuen him, when he hath begd of me, Though he forbids to giue me when I beg, I haue ere now relieued</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">To take the aire here in Saint Georges field, Sir Robert Brackenburie, and to visit some Poore patients that cannot visit me … . And all the rest, oh were the king returnde, There might be hope, but ere his comming home, They may be tride, condemnd, and iudgde, and dead. Ile rack my credit, and wil lanch my crownes, To saue their liues, if they haue done no murther. Pray for me friends and I will pray for you, God send you better hap then I expect, Go to my lodging you, and if I perish, Take what is there in lieu of your true seruice. Euen what you wil (great Quéen) here do I lie, Humble and prostrate at your Highnesse feet, Inflict on me what may reuenge your wrong, Was neuer lambe abode more patiently, Then I will doe. Call all your griefes to mind, And do euen what you will, or how likes you, I will not stirre, I wil not shrike or crie, Be it torture poison, any punishment, Was neuer Done, or Turtle more submisse, Then I wil be vnto your chastisement. Most high and mightie Quéene, may I beléeue There can be found such mercie in a woman, And in a Quéene, more then in a wife, So déeply wrongd as I haue wronged you? In this bright christall myrror of your mercie, I sée the greatnesse of my sinne the more, And makes my fault more odious in mine eyes, Your princely pitie now doth wound me more, Then all your threatnings euer did before. No Captain Stranguidge, let the king command Your liues and seruice, who hath giuen you life, These and such offices conscience bids me doe. O God desend, good friends pray for the king, More bitter are the newes which he doth bring, Then those were swéet I brought to you but late: If Edward die, confounded is my state, Ile hast vnto him and will spend my bloud, To saue his life or do him any good. I my Lord Louell, they are too true indeed, Royall King Edward now hath breath&#x27;d his last, The Quéene turnd out, and euerie friend put by, None now admitted, but whom Richard please. First let me die ere I do put my trust, In any fliering Spaniel of you all. Go Iockie, take downe all my hangings, And quickly see my trunks be conuayde forth, To mistris Blages, an Inne in Lombardstreete, The Flower de Luce, good Iockie make some speed, She, she must be my refuge in this néed. Sée it done quickly Iockie. Blame him not mistris Blage, the best of them In such a case as this, may bée to séeke. Now fellowes raise hi … body from the chair … And gently let him walke a turne or two. Sir take my counsell and sit downe againe, It is not good to be so bold of foot, Vpon the sudden till you haue more strength. How mean … you sir? I vnderstand you not? Lament my case, for what? for Edwards death? I know that I haue lost a gracious friend, But that is not to be remedied now. I know he loues me not and for that cause, I haue withdrawne me wholly from the court. The proclamation? no, what proclamation? Gods wil be done, I know my sinne is great, And he that is omnipotent and iust, Cannot but must reward me heauily. Let it not grieue, I must haue heard of it, And now as good, as at another time. Farewell to all that still shall be my song, Let men impose vpon me nere such wrong, And this extremitie shall seeme the lesse, In that I haue a friend to leane vnto, Sweet mistris Blage, there were vpon the earth, No comfort left for miserable Iane, But that I do presume vpon your loue, I know though tyrant Richard had set downe, A greater penaltie then is proclaimd, Which cannot wel be thought, yet in your house, I should haue succour and reliefe beside. When was it euer éen Iane Shoare was false Eyther vnto her countrey, or her king? And therefore tis not well good mistris Blage, That you vpbraid me with a traitors name. Time was that you did tell me otherwise, And studied how to set a glosse on that Which now you say is vgly and deformde. We will not mistris Blage dispute of that, But now in charitie and womanhood, Let me find fauour if it be but this, That in some barne or stable I may shrowde. Till otherwise I be prouided for. Oh you did promise I should neuer want, And that your house was mine, &amp; swore the same, To keepe your oath be then compassionate. Oh that my graue had the ̄ bin made my house, When either first I went vnto the Court, Or from the court returnd vnto this place. My roabe of shame? Oh that so soule a name Should be applied vnto so faire a garment, Which is no more to bée condemnde of shame, Then snow of putrefaction is deserude, To couer an infectious heape of dung, My roabe of shame, but not my shame put off, For that sits branded on my forehead still, And therefore in derision was I wrapt, In this white Sheete: and in derision bore This burning taper, to expresse my folly, That hauing light of reason to direct mee, Delighted yet in by-waies of darke error. Master Lieutenant, in my hart I thank ye, For this kind comfort to a wretched soule: Welcome … wéet prayer-booke, food of my life, The soueraigne balme for my sicke conscience: Thou shalt be my soules pleasure and delight, To wipe my sinnes out of Ichouacs sight. B. Do so good mistris Shoare, now I must leaue ye, Because some other businesse cals me hence, And God I pray regard your penitence. Farewell sir Robert, and for this good to mée, The God of heauen bee mindfull still of thee. Yes mistris Blage, I fréely pardon you, You haue done me no wrong, come sit by mee: Twas so in wealth, w … y not in pouertie? Why woman, Ric hard that hath banisht me, And séekes my ruine (c … uselesse though it bee) Do I in heart pray for, and will do still, Come thou &amp; share wit h me what God hath sent, A stranger gaue it mee, and part thereof I do as fréely now bestow on you. Good sir your name, that pities poore Ia. Shoare That in my praiers I may remember you. Gods blessing be your guide where ere you go, Thus mistris Blage you sée … idst our woe, For all the world can doe, God sends reliefe, And will not yet wée peris … in our griefe, Come let vs step into some secret place. Ah M. Aire the time hath béene ere now, When I haue kn … eld to Edward on my knees, And begd for him, that now doth make me beg. I haue giuen him, when he hath begd of me, Though he forbids to giue me when I beg, I haue ere now relieued him and his, Though he and his denie reliefe to me: Had I béene enuious then, as Richard now, I had not staru&#x27;d, nor Edwards sons bin murdred, Nor Richard liu&#x27;de to put you now to death. Lord, is my sinne so horrible and grieuous, That I should now become a murderer? I haue sau&#x27;de the life of many a man condemnd, But neuer was the death of man before. That any man thus for my sake should die, Afflicts me more then all my miserie. Farewel, farewel, thou for thy almes dost die. And I must end here starude in miserie, In life my friend, in death ile not forsake thee, Thou goest to heauen, I hope to ouertake thee. Whats he that begs the buriall of my friend, And hath so oftentimes relieued mee? Ah gentle sir, to comfort my sad woe, Let mee that good kind man of mercie know. My Husband? then breake and liue no more. Then God reward thée, for we now must part, I féele cold death doth seize vpon my heart. Oh dying marriage, o … , swéet married death Thou graue which only shouldst part faithfull friends, Bringst vs togither, and dast i … yne our h … nds, Oh … ing death, euen in this d … ing life, Yet ere I go, once Mathew kisse thy wife.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 2 Edward the Fourth</div><div class="body">Kingm@libaward invades France; but the Dukewof BuFgunaY and the GenstablelehiRrance fail to supply the military aid they promised. Several English soldiers are shot by the Constable’s men in a failed attempt to assassinate Edward; the Constable pleads an accident, and Edward extorts money and provisions from him. The English herald sent to Kaniguleuis is offered peace terms, which Edward modifies: Louis must submit to his suzerainty, and pay both the expenses of the invasion and an annual tribute thereafter. Louis accepts the offer and a treaty is agreed. Burgundy and the Constable try to double-cross both Edward and one another: each writes independently to both Edward and Louis, offering Louis Edward’s murder and Edward assistance against Louis, Edward feigns deafness, forcing the envoys to speak loud enough for the hidden Louis to hear; then confronts the envoys with their masters’ treachery. He returns to England, leaving troops in France to help Louis rout the traitors. JaneyShGre visits the London prisons, distributing alms to the prisoners. Brakenbiiry solicits her help to procure a pardon for his kinsman Strangwidge, whose actions against French shipping were committed in ignorance of the recent treaty which made them piratical. Also condemned is his passenger, known as Flé6d but actually MatthewiShore. The Queen first confronts, then forgives Jane for her adultery with Edward. The King pardons Strangwidge and his crew, and Jane pays their prison fees herself. Brakenbury employs ‘Flood’ at the Tower. Edward has fallen ill and is anxious about a prophecy that ‘G’ will dispose of his sons and usurp the throne. His brother @IMPEHEE is imprisoned and drowned in the Tower. Edward dies and RigharayefiGioucester becomes Lord Protector. Jane is expelled from court, and goes to stay with MiUSt&amp;éssiBlaguie! Richard lodges the young King and his brother in the Tower and has them murdered. ‘Flood’ is wounded in an altercation with the murderers and seeks succour at Mistress Blague’s inn, where he is tended by Jane. The ghost of Friar Anselm tells DE§SHAW that everyone involved in the death of the princes will come to a bad end; Richard himself will reign only three years. Richard issues a proclamation banning anyone from giving Jane food or shelter, and Mistress Blague turns her out; but not scon enough to evade being arrested. Jane does penance. Several grateful Londoners give her food, but are arrested. Ali is hanged and Jockie whipped, but ‘Flood’…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

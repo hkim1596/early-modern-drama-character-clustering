@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LIV in 532 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LIV</span>
+</nav>
+
+<h1>LIV</h1>
+<p class="lede">in <em>532</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>1369</td></tr>
+<tr><th>Characters</th><td>7819</td></tr>
+<tr><th>BritDrama no.</th><td>532</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">ignorance of your faire presence; This may be bold intrusion. This Lady, With both these Gentlemen, in happie houre May be partakers of the long liv&#x27;d amity, Our soules <mark>must</mark> liuke in. Siena sometimes <mark>Has</mark> beene inform&#x27;d how gladly there <mark>did</mark> passe A treatie of chast loves with Castamela; From this good <mark>heart</mark>, it was in me an error Wilfull</div>
+<div class="excerpt">Y&#x27;are well read In misteries of state, at best &#x27;Tis but a goodly pandarisme. I <mark>must</mark> resolve To turne my sister whore, speake a homeword, For my old Batchelor— Lord, so, i&#x27;st not so? A trifle in respect of present meanes, Here&#x27;s all— May it prove</div>
+<div class="excerpt">when mists and vapours Divide it from our sight, and threaten pestilence. Yes, and&#x27;t like your noblenes; He truely does so say; your breach of friendship With me, <mark>must</mark> borrow courage from your Vncle, Whiles your sword talkes an answer; theres no remedy, I will have satisfaction, though thy life Come short of such demand. Not?</div>
+<div class="excerpt">&#x27;Tis strange, is&#x27;t possible. You finde Sir, I have prov&#x27;d a ready servant, And brought th&#x27;expected guests, amidst these feastings, These costly entertainments; you <mark>must</mark> pardon My incivility that here sequesters Your eares from choise of musique, or discourse To a lesse pleasant parley; night drawes on, And quickly will grow old;</div>
+<div class="excerpt">it were unmanly For any Gentleman, who loves his honour, To put it on the rack; here is small comfort Of such a satisfaction as was promis&#x27;d, Though certainly it <mark>must</mark> be had; pray tell me What can appeare about me to be us&#x27;d thus? My soule is free from injuries. Not wrong&#x27;d mee? (Blest Heaven!) this is the bandie of a patience</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Y&#x27;are well read In misteries of state, at best &#x27;Tis but a goodly pandarisme. I must resolve To turne my sister whore, speake a homeword, For my old Batchelor— Lord, so, i&#x27;st not so? A trifle in respect of present meanes, Here&#x27;s all— May it prove so. Sister, looke yee, How by a new creation off my Taylors, I&#x27;ve shooke off old mortality, the rags Of home spun Gentry (prethee sister marke it) Are cast by, and I now appeare in fashion Vnto men, and receiv&#x27;d, observe me sister, The consequence concernes you. First Romanello, This for your satisfaction: if you waste More houres in courtship to this maid, my sister, Weighing her competency with your owne, You goe about to build without foundation; So that care will prove void. Next Castamela, To thee (my owne lov&#x27;d Sister) let me say I have not beene so bountifull, in shewing To Fame, the treasure, which this age hath open&#x27;d, As thy true value merits. My jealousie of thy fresh blooming yeeres, Prompted a feare of husbanding too charily Thy growth to such perfection, as no flattery Of are can perish now. I&#x27;le no longer Chamber thy freedome, we have beene already Thrifty enough in our lowe fortunes, henceforth Command thy liberty, with that thy pleasures. A day, a weeke, a month Sported amongst such beauties, is a gaine On time, th&#x27;are young, wife, noble, faire, and chast. I waite you to your coach, Some two houres hence. I shall returne againe. VVho, I, I jealous? no, no, heere&#x27;s no cause In this place &#x27;tis a nunnerie, a retirement For meditation, all the difference extant But puzzles, onely barre beliefe, not grounds it, Rich services in place! soft and faire lodgings, Varieties of recreations, exercise Of musique in all changes? neate attendance? Princely, nay royall furniture of garments? Saciety of gardens, orchards, water workes, Pictures so ravishing, that ranging eyes, Might dwell upon a dotage of conceit, Without a single wish for livelier substance? The great world in a little world of Fancie, Is here abstracted: noe temptation profer&#x27;d But such as fooles and mad folkes can invite to? And yet— My presence then is usher to her ruine, And losse of her, the fruit of my preferment. By our firme truth of friendship, I subscribe To just conditions. Good, good— Troylo, Oh that I had a lusty Faith to credit it, Though none of all this wonder should be possible. Newes admirable, &#x27;tis, &#x27;tis so—pish I know it, Yet &#x27;a has a kind heart of his owne to girles, Young, handsome Girles; yes, yes, so a&#x27; may, Tis granted—a&#x27; wod now and then be pidling, And play the wanton, like a flie that dallies About a candles flame: then scorch his wings, Drop downe, and creepe away, ha? Send him joy on&#x27;t. Well, I have liv&#x27;d in ignorance: the ancients, Who chatted of the golden age, fain&#x27;d trisles. Had they dream&#x27;t this, they would have truth&#x27;d it heaven. I meane an earthly heaven, lesse it is not. The Yellowes. But why are you his instrument, his Nephew? Tis ominous in nature. Knowing how things stand too. A caution happily studied. Yes and properly, Since all his recreations are in Fancy. I&#x27;me infinitely taken—sister? marry Would I had sisters in a plenty, Troylo, So to bestow them all, and turne them Fancies. Fancies? Why &#x27;tis a pretty name methinks. Silence. All happinesse, all joy. Fie Castamela sie, My Lord upon my life. Suddenly I shall returne, &#x27;now for a round tempta tion. Health and his hearts desire to Romanello; My welcome I bring with me; noblest Lady, Excuse an ignorance of your faire presence; This may be bold intrusion. This Lady, With both these Gentlemen, in happie houre May be partakers of the long liv&#x27;d amity, Our soules must liuke in. Siena sometimes Has beene inform&#x27;d how gladly there did passe A treatie of chast loves with Castamela; From this good heart, it was in me an error Wilfull and causelesse, &#x27;tis confest, that hinder&#x27;d Such honourable prosecution, Even and equall; better thoughts consider, How much I wrong&#x27;d the gentle course which led yee To vowes of true affection; us of friendship. Then without plea, For countenancing what has beene injurious On my part, I am come to tender really My Sister a lou&#x27;d Wife t&#x27;yee; freely take her Right honest man, and as yee live together, May your encrease of yeares prove but one spring, One lasting flourishing youth; she is your owne, My hands shall perfect what&#x27;s requir&#x27;d to ceremony. Enjoyne an oath at large. You&#x27;d be courted, Courtship&#x27;s the childe of coynesse Romanello; And for the Rules &#x27;tis possible to name them. Full,—answer was late mate to this already, My Sister&#x27;s onely thine. Heere is scorne in Riddles, So would the hee you talke to, Romanello, Without a noise that&#x27;s singular. Castamela Is refus&#x27;d then. Intelligence flies swiftly. So my Sister Can be no wife for Romanello? Far bee&#x27;t from me to presse a blame, great Lady; I kisse your noble hands, and to these Gentlemen Present a civill parting; Romanello, By the next foot-Post thou wilt heare some newes Of alteration; if I send, come to me. My thanks may quit the favor. I come, my Lord, a Suiter. Pray discharge my office, My mastership; &#x27;twere better live a yeoman And live with men, then over-eye your houses, Whiles I my selfe am ridden like a jade. Without passion, My Lord, d&#x27;yee thinke your Nephew here, your Troylo Parts in your spirit as freely as your blood; &#x27;Tis no rude question. Pretty Gentleman, How modestly you move your doubts? how tamely? Aske Romanello, he hath without leave Surveigh&#x27;d your Bowres of FANCIES, hath discovered The mystery of those pure Nuns; those chast ones, Vntouch&#x27;d forsooth; the holy Academie: Hath found a Mothers daughter there of mine too, And one who cald my Father Father, talkes out, Ruffles in mirth on&#x27;t; baffel&#x27;d to my face The glory of her greatnesse by it. Death to my sufferance, canst thou heare this misery, And answer&#x27;t with a truely? &#x27;twas thy wickednes False as thine owne heart tempted my credulity, That, her to ruine; she was once an innocent, As free from spot, as the blew face of heaven Without a cloud in&#x27;t; she is now as fully&#x27;d As is that Canopie, when mists and vapours Divide it from our sight, and threaten pestilence. Yes, and&#x27;t like your noblenes; He truely does so say; your breach of friendship With me, must borrow courage from your Vncle, Whiles your sword talkes an answer; theres no remedy, I will have satisfaction, though thy life Come short of such demand. Not? the time is short, Before our sleeping houre: you vow. So I intend to, On confidence of which, what left the Marquessa In charge for me? Ile do&#x27;t. Easie busines, And then.— Yet your servant. &#x27;Tis strange, is&#x27;t possible. You finde Sir, I have prov&#x27;d a ready servant, And brought th&#x27;expected guests, amidst these feastings, These costly entertainments; you must pardon My incivility that here sequesters Your eares from choise of musique, or discourse To a lesse pleasant parley; night drawes on, And quickly will grow old; it were unmanly For any Gentleman, who loves his honour, To put it on the rack; here is small comfort Of such a satisfaction as was promis&#x27;d, Though certainly it must be had; pray tell me What can appeare about me to be us&#x27;d thus? My soule is free from injuries. Not wrong&#x27;d mee? (Blest Heaven!) this is the bandie of a patience Beyond all sufferance. Fine whirles in tame imagination; on sir, It is scarce mannerly at such a season, Such a solemnitie (the place and prefence Consider&#x27;d) with delights, to mixe combustions. Turne Capuchine, Hee, whiles I stand a Cypher and fill up Only an uselesse summe to be laid out In an unthristy leudnesse, that must buy Both name and riot; Oh my sickle destinie! Patience keepe within me, Leap not yet rudely into scorne of anger. Hearke ye Troylo. Much more worthy A better Brother, he a better Friend Then my dull braines could fashion. Most noble Lord, I am struck silent.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 532</div><div class="body">Three female courtiers tempt the King into a hedonistic lifestyle and away from sermons and the advice of his grave counsellors. They lull him to sleep and then transform him into a pig. While the court makes merry, two old men arrive and change him back to human form. The ladies and other courtiers vanish and he is sent for judgement; his plea is unsuccessful and he is carried away by evil spirits.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

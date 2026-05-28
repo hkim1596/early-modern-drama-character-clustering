@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CASK in Julius Caesar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> ›
+  <span>CASK</span>
+</nav>
+
+<h1>CASK</h1>
+<p class="lede">in <em>Julius Caesar</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>901</td></tr>
+<tr><th>Characters</th><td>4768</td></tr>
+<tr><th>BritDrama no.</th><td>1198</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 29 (<em>brutus, did, rome, antonius, anthony, cleopatra…</em>). Matches are highlighted.</p>
+<div class="excerpt">knottie Oakes, and I haue ſeene Th&#x27; ambitious Ocean ſwell, and rage and foame, To be exalted with the threatning Clouds: But neuer till to Night, neuer till now, <mark>Did</mark> I goe through a Tempeſt-dropping-fire. Eyther there is a Ciuill ſtrife in Heauen, Or elſe the <mark>World</mark>, too ſawcie with the Gods, Incenſes them to ſend deſtruction.</div>
+<div class="excerpt">Heauen, Or elſe the <mark>World</mark>, too ſawcie with the Gods, Incenſes them to ſend deſtruction. A common ſlaue, you know him well by ſight, Held vp his left Hand, which <mark>did</mark> flame and burne Like twentie Torches ioyn&#x27;d; and yet his Hand, Not ſenſible of fire, remain&#x27;d vnſcorch&#x27;d. Beſides, I ha&#x27;not ſince put vp my Sword, Againſt the Capitoll</div>
+<div class="excerpt">preſents his fire, and the high Eaſt Stands as the Capitoll, directly heere. Let vs not leaue him out. Indeed, he is not fit. Speake hands for me. Go to the Pulpit <mark>Brutus</mark>. Why he that cuts off twenty yeares of life, Cuts off ſo many yeares of fearing <mark>death</mark>.</div>
+<div class="excerpt">downe in the Market-place, and foam&#x27;d at mouth, and was ſpeechleſſe. I know not what you meane by that, but I am ſure Caeſar fell downe. If the tag-ragge people <mark>did</mark> not clap him, and hiſſe him, according as he pleas&#x27;d, and diſ pleas&#x27;d them, as they vſe to doe the Players in the Thea tre, I am no true man. Marry, before he fell</div>
+<div class="excerpt">heape, a hundred gaſtly Women, Transformed with their feare, who ſwore, they ſaw Men, all in fire, walke vp and downe the ſtreetes. And yeſterday, the Bird of Night <mark>did</mark> ſit. Euen at Noone-day, vpon the Market place, Howting, and ſhreeking. When theſe Prodigies Doe ſo conioyntly meet, let not men ſay, Theſe are their Reaſons, they</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Peace ho, Caeſar ſpeakes. Bid euery noyſe be ſtill: peace yet againe. You pul&#x27;d me by the cloake, would you ſpeake with me? Why you were with him, were you not? Why there was a Crowne offer&#x27;d him; &amp; being offer&#x27;d him, he put it by with the backe of his hand thus, and then the people fell a ſhouting. Why for that too. Why for that too. I marry was&#x27;t, and hee put it by thrice, euerie time gentler then other; and at euery putting by, mine honeſt Neighbors ſhowted. Why Antony. He fell downe in the Market-place, and foam&#x27;d at mouth, and was ſpeechleſſe. I know not what you meane by that, but I am ſure Caeſar fell downe. If the tag-ragge people did not clap him, and hiſſe him, according as he pleas&#x27;d, and diſ pleas&#x27;d them, as they vſe to doe the Players in the Thea tre, I am no true man. Marry, before he fell downe, when he perceiu&#x27;d the common Heard was glad he refus&#x27;d the Crowne, he pluckt me ope his Doublet, and offer&#x27;d them his Throat to cut: and I had beene a man of any Occupation, if I would not haue taken him at a word, I would I might goe to Hell among the Rogues, and ſo hee fell. When he came to himſelfe againe, hee ſaid, If hee had done, or ſaid any thing amiſſe, he deſir&#x27;d their Worſhips to thinke it was his infirmitie. Three or foure Wenches where I ſtood, cryed, Alaſſe good Soule, and forgaue him with all their hearts: But there&#x27;s no heed to be taken of them; if Caeſar had ſtab&#x27;d their Mothers, they would haue done no leſſe. I. I, he ſpoke Greeke. Nay, and I tell you that, Ile ne&#x27;re looke you i&#x27; th&#x27; face againe. But thoſe that vnderſtood him, ſmil&#x27;d at one another, and ſhooke their heads: but for mine owne part, it was Greeke to me. I could tell you more newes too: Murrellus and Flauius, for pulling Scarffes off Caeſars Images, are put to ſilence. Fare you well. There was more Foolerie yet, if I could remem ber it. No, I am promis&#x27;d forth. I, if I be aliue, and your minde hold, and your Dinner worth the eating. Doe ſo: farewell both. Are not you mou&#x27;d, when all the ſway of Earth Shakes, like a thing vnfirme? O Cicero, I haue ſeene Tempeſts, when the ſcolding Winds Haue riu&#x27;d the knottie Oakes, and I haue ſeene Th&#x27; ambitious Ocean ſwell, and rage and foame, To be exalted with the threatning Clouds: But neuer till to Night, neuer till now, Did I goe through a Tempeſt-dropping-fire. Eyther there is a Ciuill ſtrife in Heauen, Or elſe the World, too ſawcie with the Gods, Incenſes them to ſend deſtruction. A common ſlaue, you know him well by ſight, Held vp his left Hand, which did flame and burne Like twentie Torches ioyn&#x27;d; and yet his Hand, Not ſenſible of fire, remain&#x27;d vnſcorch&#x27;d. Beſides, I ha&#x27;not ſince put vp my Sword, Againſt the Capitoll I met a Lyon, Who glaz&#x27;d vpon me, and went ſurly by, Without annoying me. And there were drawne Vpon a heape, a hundred gaſtly Women, Transformed with their feare, who ſwore, they ſaw Men, all in fire, walke vp and downe the ſtreetes. And yeſterday, the Bird of Night did ſit. Euen at Noone-day, vpon the Market place, Howting, and ſhreeking. When theſe Prodigies Doe ſo conioyntly meet, let not men ſay, Theſe are their Reaſons, they are Naturall: For I beleeue, they are portentous things Vnto the Clymate, that they point vpon. He doth: for he did bid Antonio Send word to you, he would be there to morrow. Farewell Cicero. A Romane ▪ Your Eare is good. Caſſius, what Night is this? Who euer knew the Heauens menace ſo? But wherefore did you ſo much tempt the Hea uens? It is the part of men, to feare and tremble, When the moſt mightie Gods, by tokens ſend Such dreadfull Heraulds, to aſtoniſh vs. &#x27;Tis Caeſar that you meane: It is not, Caſſius ? Indeed, they ſay, the Senators to morrow Meane to eſtabliſh Caeſar as a King: And he ſhall weare his Crowne by Sea, and Land, In euery place, ſaue here in Italy. So can I: So euery Bond-man in his owne hand beares The power to cancell his Captiuitie. You ſpeake to Caska, and to ſuch a man, That is no flearing Tell-tale. Hold, my Hand: Be factious for redreſſe of all theſe Griefes, And I will ſet this foot of mine as farre, As who goes fartheſt. O, he ſits high in all the Peoples hearts: And that which would appeare Offence in vs, His Countenance, like richeſt Alchymie, Will change to Vertue, and to Worthineſſe. No. You ſhall confeſſe, that you are both deceiu&#x27;d: Heere, as I point my Sword, the Sunne ariſes, Which is a great way growing on the South, Weighing the youthfull Seaſon of the yeare. Some two moneths hence, vp higher toward the North He firſt preſents his fire, and the high Eaſt Stands as the Capitoll, directly heere. Let vs not leaue him out. Indeed, he is not fit. Speake hands for me. Go to the Pulpit Brutus. Why he that cuts off twenty yeares of life, Cuts off ſo many yeares of fearing death.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> page.
+</div>
+</div></body></html>

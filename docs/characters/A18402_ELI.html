@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ELI in 146 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ELI</span>
+</nav>
+
+<h1>ELI</h1>
+<p class="lede">in <em>146</em> — [84]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1598</td></tr>
+<tr><th>Words</th><td>1283</td></tr>
+<tr><th>Characters</th><td>6373</td></tr>
+<tr><th>BritDrama no.</th><td>146</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">haue shall <mark>bee</mark> to deare for thee. This hand my Lord if I may haue my choyce It is … nough my Lord and I am youres. Since I wel know my fortune is to haue you Now <mark>must</mark> I leaue the … leasant maiden chase, In hunting sauage beasts with Is … s nimphes, And take me to a life which I God knowes, Do know no more then how to scale the</div>
+<div class="excerpt">countesse now, I should haue one to <mark>goe</mark> before me bare, And say stand by there to the best of them, And one to come behinde and beare my trayne, Because my handes <mark>must</mark> not be put vnto it. My husbaud is a Lord and past a Lord, VVhy hees a what you calt. I thinke I <mark>must</mark> not name it. because it comes so neare a thing that I knowe,</div>
+<div class="excerpt">doe, the Gods doe know. and what then sir. I thinke the man be wearie of his life, Know you the Count my husband. Faith that you … re as sure as I my selfe, So you <mark>did</mark> talke of gold and Diamonds, VVell Ile not bid you sir but if you come, At your owne perill for Ile wash my handes. But do you <mark>heare</mark> sir pray you do not thinke that</div>
+<div class="excerpt">then Maddam yet doe I not mean … , To lose my Ladies, titles at your handes, I may for courtesie and to be termd, A gentle Ladie call you sisters still, But you <mark>must</mark> say and please your Ladishippe, Tis thus and so, and as your honor 〈◊〉 , Yet shall my husband call me wife lik … youres, For why made god the husband and the wife,</div>
+<div class="excerpt">hath the fingers of Diana, And Berenices euer burning haire, An other hath the bright Andr … mica, VVith both her siluer wristes bound to a rocke, And Perseus that <mark>did</mark> lose her and saue her life, All set in number and in perfect forme, Euen like the Asterismes fixt in heauen, And euen as you may see in Moone shine nightes, The</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Tell vs M … nippus, Druso, and P … lydor, VVhy all our parentes gaue you three such charge, To waite on vs and ouer see vs still, VVhat do they feare, thinke you that we would do. VVhy what is wanton talke. Pray you good seruantes will you do vs the seruice, To leaue vs alone a while. Thats my good seruant we will straight returne. But are we by our selues. Not I God knowes I neuer camewhere they grew yet, Since we are alone lets talke a little merrily, Mee thinkes I long to know what wanton talke and dalliance is How with the very woord. VVhy let her chuse, let vs two name it, Nay doe you Martia. Do then I warrant thee. God saue graue Irus. Indeede wee heare your skill can beautifie, Beautie it selfe, and teach dames how to decke, Their heades and bodies fittest to their formes, To their complexions and their countenances. How thinke you we are tyred to tempte mens lookes, Beeing thus Nimphlike is it not too strange, VVhy turnst thou from vs Irus tell my fortune. Thankes for this new … s good Irus but disclose, The meanes to this, if it be possible. Ile doe as thou adu … sest gentle Irus, And prouing this Ile loue thee 〈◊〉 I liue. Nought gr … ues me Irus but that we are maides. Kept short of all thinges and haue nought to giue thee, But take our loues and in the wished proofe, Of these high f … rtunes thou foretellest vs. Nothing we haue shall bee to deare for thee. This hand my Lord if I may haue my choyce It is … nough my Lord and I am youres. Since I wel know my fortune is to haue you Now must I leaue the … leasant maiden chase, In hunting sauage beasts with Is … s nimphes, And take me to a life which I God knowes, Do know no more then how to scale the heauens. Soft Mistris Burgomaister, pray you stay, your hart is greater then your parson farre or your state eyther, doe we not know ye trow, what woman you are but a Burgomaisters wife, And he no wiser then his neighbours ney … her, Giue me the place acording to my calling. Noe by my fayth I am a countesse now, I should haue one to goe before me bare, And say stand by there to the best of them, And one to come behinde and beare my trayne, Because my handes must not be put vnto it. My husbaud is a Lord and past a Lord, VVhy hees a what you calt. I thinke I must not name it. because it comes so neare a thing that I knowe, VVhy therefore he is an vnknowne man. You say husband, I may saie 〈◊〉 Lord. Indeede I loue my Lord to call mee 〈◊〉 , Better then Maddam yet doe I not mean … , To lose my Ladies, titles at your handes, I may for courtesie and to be termd, A gentle Ladie call you sisters still, But you must say and please your Ladishippe, Tis thus and so, and as your honor 〈◊〉 , Yet shall my husband call me wife lik … youres, For why made god the husband and the wife, But that those tearmes should please vs more then others New fashion tearmes I like not for a man, To call his wife cony, forsooth, and Lambe, And Porke, and Mutton, he as well may say, Twentie are making for me head tyres and gownes, Head tyres enchast in order like the starres, VVhich perfit great and fine cut pretious stones, One hath bright Ariadnes Crowne in it, Euen in the figure it presentes in heauen, Another hath the fingers of Diana, And Berenices euer burning haire, An other hath the bright Andr … mica, VVith both her siluer wristes bound to a rocke, And Perseus that did lose her and saue her life, All set in number and in perfect forme, Euen like the Asterismes fixt in heauen, And euen as you may see in Moone shine nightes, The Moone and Starres reflecting on their streames So from my head shall you see starres take beames, Come vp to supper it will become the house wonder full well I know not what to say, My husband makes as if each other nyght he had occasion, To ride from home at home serues not his turne, To mygood turne it, cupid I beseech you, How dare you Leon thus solicit mee, VVhere if the Count my husband should come now, And see you courting you were sure to die. How can … owne ensue an … ct of shame, Now what a gods name would this vayne man haue, Do you not shame to tempt a woman thus, I know not what to saye nor what to doe, He would haue me doe that I feare I should not, Some thing it is he seekes that he thinkes good, And me thinkes he should be more wise then I, I am a foolish girle though I be married And know not what to doe, the Gods doe know. and what then sir. I thinke the man be wearie of his life, Know you the Count my husband. Faith that you … re as sure as I my selfe, So you did talke of gold and Diamonds, VVell Ile not bid you sir but if you come, At your owne perill for Ile wash my handes. But do you heare sir pray you do not thinke that I gran ted you. VVhat fall I pray you. Be not so angry woman you are deceiued The dame is madde, Ile stay no longer with her. VVhy so Menippus. How out of his moueables. Now of mine honor I will be reuenged fetch me the Burgomaister Menippus Ile haue them both whipt about the towne. VVhat shall mine honor doe then. My tongue shall haue hell and no mercie in it Excellent musicke exellent m … sicke. I and it were a good deede to be a little nier too, you make a Count asse of me indeede, as if I were too little for you, but bignesse is my fault vnlesse I were a little better vsd at your handes. I but I cannot be too perfit and the … fore Ile spoyle her perfections that helpes to spoyle mine I warrant her. I defie you and all the world that can say blacke is mine eye. He lyed like an old knaue as he was and that he shall knowe the next time these lippes open in fayth, oh wicked periurd man would a d … sclose my secretes I fayth what wo man would trust any man a liue with her honestie. Pittie dread soueraigne. I the poore countesse and the widdow left, Of late Count Hermes hauing all my goodes, seazd to our late kings vse for murder done, Of young prince Dorules humbly pray your grace, I may haue somewhat to mainetayne my state, And this poore bu … then which I goe withall. The haplesse Infant of a haplesse father. Myne was a husband to my hartes content. But that he vsd the priuiledge of men. To take some other loue besides his wife VVhich men think by their custome they may do, Although their wiues be strictly bound to them. VVith this poore widow here the worlde supposeth. He told vs we should soone lose our first loues, Making our second choise mongst greatest kinges.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 146</div><div class="body">Jehovah sends John the Baptist to proclaim the coming of Christ in accordance with ancient prophecy. Having baptised Christ, John turns his attention to King Herod. The Pharisees, who feel threatened by John’s preaching, instigate an inquiry; but Herod is satisfied that he is not an evil man, and consents to see him. However, the Pharisees have an ally in Herod’s wife, Herodias: John has spoken against their happy but illicit marriage, and she fears being sent back to her despised first husband. Using her sexual allure, she persuades Herod to imprison John, but Herod will not put him to death. From his prison cell, John sends his disciples to find out whether Jesus is the promised saviour; they report back that he is. Herodias visits him, but cannot persuade him to recant. Herod celebrates his birthday with a feast. Tryphera’s dancing pleases him so much that he swears to give her whatever she desires. Herodias puts her up to asking for John’s severed head on a charger. Herod obliges; nobody tries to dissuade him. Jehovah declares that good will come of John’s death. Both Herodias and Herod feel guilty; Herod gives John’s body to his disciples for burial.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

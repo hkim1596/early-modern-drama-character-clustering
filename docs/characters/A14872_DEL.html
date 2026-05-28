@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DEL in The Duchess of Malfi · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>DEL</span>
+</nav>
+
+<h1>DEL</h1>
+<p class="lede">in <em>The Duchess of Malfi</em> — Webster, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1276</td></tr>
+<tr><th>Characters</th><td>6943</td></tr>
+<tr><th>BritDrama no.</th><td>1726</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">fearefully Shewes his ambition now, (vnfortunate Fortune) &quot;They passe through whirle-pooles, and deepe woes doe shun, Who the euent weigh, ere the action&#x27;s done. Exit. I <mark>did</mark> Sir, and how faires your noble Duchesse? Me thinkes &#x27;twas yester-day: Let me but wincke, And not behold your face, which to mine eye Is somewhat leaner, verily</div>
+<div class="excerpt">people. And your grauer heades, (Which would he pollitique) what censure they? The Lord Ferdinand Is going to bed. No employment (my Lord) A marginall note in the muster-booke, that he is A voluntary Lord. He ha&#x27;s worne gun-powder, in&#x27;s hollow tooth, for the tooth-ache. He hath read all the late seruice, As the City Chronicle</div>
+<div class="excerpt">voluntary Lord. He ha&#x27;s worne gun-powder, in&#x27;s hollow tooth, for the tooth-ache. He hath read all the late seruice, As the City Chronicle relates it, And keepe <mark>two</mark> Pewterers going, onely to expresse Battailes in modell. By the Almanacke, I thinke To choose good dayes, and shun the Criticall ▪ That&#x27;s his mistris skarfe. I thinke</div>
+<div class="excerpt">onely to expresse Battailes in modell. By the Almanacke, I thinke To choose good dayes, and shun the Criticall ▪ That&#x27;s his mistris skarfe. I thinke he would run <mark>away</mark> from a battaile To saue it from taking prisoner. I saw a Duch-man breake his pate once For calling him pot-gun, he made his head Haue a boare in&#x27;t, like a musket.</div>
+<div class="excerpt">Hector were not troubled with the tooth-ach, He hath studdied himselfe halfe bleare-ei&#x27;d, to know the True semitry of Caesars nose by a shooing-horne, and this He <mark>did</mark> to gaine the name of a speculatiue man. Like a deadly Cannon, That lightens ere it smoakes. In such a deformed silence, witches whisper their charmes. I misdoubt</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Geometry? I knew this fellow (seauen yeares) in the Gallies, For a notorious murther, and &#x27;twas thought The Cardinall suborn&#x27;d it: he was releas&#x27;d By the French Generall (Gaston de Foux) When he recouer&#x27;d Naples. The Presence &#x27;gins to fill, you promis&#x27;d me To make me the partaker of the natures Of some of your great Courtiers. Now (Sir) your promise: what&#x27;s that Cardinall? I meane his Temper? they say he&#x27;s a braue fellow, Will play his fiue thousand crownes, at Tennis, Daunce, Court Ladies, and one that hath fought single Combats. You haue giuen too much of him: what&#x27;s his brother? Twins? Then the Law to him Is like a fowle blacke cob-web, to a Spider, He makes it his dwelling, and a prison To entangle those shall feede him. Fye Antonia, You play the wire-drawer with her commendations. And so long since married? You amaze me. Lights there, lights. Haue you prepar&#x27;d Those Ladies to attend her? and procur&#x27;d That politique safe conueyance for the Mid-wife Your Dutchesse plotted. Make vse then of this forc&#x27;d occasion: Giue out that Bosola hath poyson&#x27;d her, With these Apricocks: that will giue some colour ▪ For her keeping close. For that you may pretend She&#x27;ll vse some prepar&#x27;d Antidote of her owne, Least the Physitians should repoyson her. How fares it with the Dutchesse? Speake to her all happy comfort. Doe not doubt me, Beleeue it, &#x27;Tis but the shadow of your feare, no more: How superstitiously we mind our euils? The throwing downe salt, or crossing of a Hare; Bleeding at nose, the stumbling of a horse: Or singing of a Criket, are of powre To daunt whole man in vs: Sir, fare you well: I wish you all the ioyes of a bless&#x27;d Father; And (for my faith) lay this vnto your brest, Old friends (like old swords) still are trusted best. I was bold to come and see you. Do you lie here? Very well: I haue brought you no comendations from your husband ▪ For I know none by him. I neuer knew man, and beast, of a horse, and a knight, So weary of each other, if he had had a good backe, He would haue vndertooke to haue borne his horse, His breech was so pittifully sore. Lady, I know not whether You want mony, but I haue brought you some. No, from mine owne allowance. Looke on&#x27;t, &#x27;tis gold, hath it not a fine colour? Try the sound on&#x27;t. With good speed, I would wish you (At such time, as you are non-resident With your husband) my mistris. Very fine, Is this her wit, or honesty that speakes thus? I heard one say the Duke was highly mou&#x27;d With a letter sent from Malfy: I doe feare Antonio is betray&#x27;d: how fearefully Shewes his ambition now, (vnfortunate Fortune) &quot;They passe through whirle-pooles, and deepe woes doe shun, Who the euent weigh, ere the action&#x27;s done. Exit. I did Sir, and how faires your noble Duchesse? Me thinkes &#x27;twas yester-day: Let me but wincke, And not behold your face, which to mine eye Is somewhat leaner, verily I should dreame It were within this halfe houre. &#x27;Pray Sir tell me, Hath not this newes arriu&#x27;d yet to he eare; Of the Lord Cardinall ? Pray why? What say the common people. And your grauer heades, (Which would he pollitique) what censure they? The Lord Ferdinand Is going to bed. No employment (my Lord) A marginall note in the muster-booke, that he is A voluntary Lord. He ha&#x27;s worne gun-powder, in&#x27;s hollow tooth, for the tooth-ache. He hath read all the late seruice, As the City Chronicle relates it, And keepe two Pewterers going, onely to expresse Battailes in modell. By the Almanacke, I thinke To choose good dayes, and shun the Criticall ▪ That&#x27;s his mistris skarfe. I thinke he would run away from a battaile To saue it from taking prisoner. I saw a Duch-man breake his pate once For calling him pot-gun, he made his head Haue a boare in&#x27;t, like a musket. I knew him in Padua, a fantasticall scholler, Like such, who studdy to know how many knots was in Hercules club, of what colour A hilles beard was, Or whether Hector were not troubled with the tooth-ach, He hath studdied himselfe halfe bleare-ei&#x27;d, to know the True semitry of Caesars nose by a shooing-horne, and this He did to gaine the name of a speculatiue man. Like a deadly Cannon, That lightens ere it smoakes. In such a deformed silence, witches whisper their charmes. I misdoubt it For though they haue sent their letters of safe conduct For your repaire to Millaine, they appeare But Nets, to entrap you: The Marquis of Pescara, Vnder whom you hold certaine land in Cheit, Much &#x27;gainst his noble nature, hath bin mou&#x27;d To ceize those lands, and some of his dependants Are at this instant, making it their suit To be inuested in your Reuenewes. I cannot thinke, they meane well to your life, That doe depriue you of your meanes of life, Your liuing. Here comes the Marquis: I will make my selfe Petitioner for some part of your land, To know whether it is flying. Sir, I haue a suit to you. An easie one: There is the Cittadell of St. Bennet, With some demeasnes, of late in the possession Of Antonio Bologna, please you bestow them on me? No sir? Sir: I am Litle bound to you: Because you denide this suit, to me, and gau&#x27;t To such a creature. You instruct e well: What course doe you meane to take, Antonio ? I&#x27;ll second you in all danger: and (how ere) My life keepes rancke with yours Yond&#x27;s the Cardinall&#x27;s window: This fortification Grew from the ruines of an auncient Abbey: And to yond fide o&#x27;th&#x27; riuer, lies a wall (Peec of a Cloyster) which in my opinion Giues the best Eccho, that you euer heard; So hollow, and so dismall, and withall So plaine in the destinction of our words, That many haue supposde it is a Spirit That answeres. Now the Eccho hath caught you: I told you &#x27;twas a pretty one: You may make it A Huntes-man, or a Faulconer, a Musitian, Or a Thing of Sorrow. Come: let&#x27;s vs walke farther from&#x27;t: I Would not haue you go toth&#x27; Cardinalls to night: Doe not. Wisdome doth not more moderate, wasting Sorrow Then time: take time for&#x27;t: be mindfull of thy safety. Harke: the dead stones seeme to haue pitty on you And giue you good counsell. Your fancy; meerely. Your owne vertue saue you: I&#x27;ll fetch your eldest sonne; and second you: It may be that the sight of his owne blood Spred in so sweet a figure, may beget The more compassion. How euer, fare you well: Though in our miseries, Fortune haue a part, Yet, in our noble suffrings, she hath none, Contempt of paine, that we may call our owne. Exe. I heard so, and Was arm&#x27;d for&#x27;t ere I came: Let vs make noble vse Of this great ruine; and ioyne all our force To establish this yong hopefull Gentleman In&#x27;s mothers right. These wretched eminent things Leaue no more fame behind &#x27;em, then should one Fall in a frost, and leaue his print in snow, As soone as the sun shines, it euer melts, Both forme, and matter: I haue euer thought Nature doth nothing so great, for great men, As when she&#x27;s pleas&#x27;d, to make them Lords of truth: &quot;Integrity of life, is fames best friend, Which noblely (beyond Death) shall crowne the end. Exeunt.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Duchess of Malfi</div><div class="body">There are two new arrivals at the Duchess of Malfi’s court. One is Antonio, her steward, who has returned from an extended visit to France. The other is Bosola, an ex-convict who committed a murder for the Cardinal, and who is now placed at court by the Duchess’s brother Ferdinand, with instructions to supply information. Ferdinand and the Cardinal leave the court, enjoining their sister not to marry again, but she defies them and secretly woos and marries Antonio. She clandestinely gives birth to a son, which Bosola discovers after Antonio accidentally drops the baby’s horoscope. The news is duly reported to the infuriated Ferdinand. The Duchess has two more children. Ferdinand visits Malfi, planning to marry her to Count Malateste. He visits her private chamber and catches her talking to Antonio, whose identity remains unknown because he has hidden as part of a practical joke. She banishes Antonio as a pretext to get him out of court, and follows him on a feigned pilgrimage to the state of Ancona. Bosola wins her confidence by speaking well of Antonio, unlike the other court flatterers; she entrusts him with the secret of their marriage, which he duly reports to his paymaster. The Cardinal is commissioned to fight in the war, and ceremonially puts off his ecclesiastical office. By papal decree, the Duchess and Antonio are banished ===== PAGE 347 ===== 1613 from Ancona and the Duchy of Malfi is seized by the Holy See; Antonio flees to Milan with his eldest son, and Bosola arrests the Duchess. Acting on Ferdinand’s orders, he imprisons and torments her, shows her the dead bodies of Antonio and her son (which turn out to be waxworks), and finally supervises her and her younger children’s murder. Ferdinand disowms him, then goes mad with lycanthropic delusions. The Cardinal schemes to have Antonio’s lands confiscated, poisons his mistress, and inadvertently reveals to Bosola his part in the Duchess’s death. Seeking revenge, Bosola mistakenly kills Antonio in the dark. In his madness, Ferdinand kills the Cardinal and Bosola, who kills him in turn. Delio decides to advance the rights of Antonio’s surviving son.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

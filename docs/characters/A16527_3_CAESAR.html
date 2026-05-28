@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAESAR in Julius Caesar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> ›
+  <span>CAESAR</span>
+</nav>
+
+<h1>CAESAR</h1>
+<p class="lede">in <em>Julius Caesar</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>1048</td></tr>
+<tr><th>Characters</th><td>6176</td></tr>
+<tr><th>BritDrama no.</th><td>1553</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 29 (<em>brutus, did, rome, antonius, anthony, cleopatra…</em>). Matches are highlighted.</p>
+<div class="excerpt">Th&#x27;outragious Gaules that in moſt monſtrous ſwarmes, Went waſting Aſia, thundring downe all things; And marching ouer the Macedonians armes, <mark>Did</mark> inſolently make and vnmake kings. Thoſe Gaules that hauing the worlds conq&#x27;rors foild, As if the <mark>world</mark> <mark>might</mark> not haue matcht them then, Would ſacrilegiouſly haue</div>
+<div class="excerpt">obtaind; Yet th&#x27;eaſie rate but vilifies the worth, No glorie without labour can be gain&#x27;d. From dangers paſt my comfort now proceedes, Since all difficulties I <mark>did</mark> ore come: And in few wordes to comprehend my deedes, <mark>Rome</mark> conquerd all the <mark>world</mark>, and Caeſar <mark>Rome</mark>. Th&#x27;inhabitants of heauen that know all harts, They know my thoughts</div>
+<div class="excerpt">Then as to ſubiects hauing giuen decrees, I left the Gaules their raſh attempts to rue: And wounding Neptunes boſome with wing&#x27;d trees, The <mark>world</mark> diuided Britaines <mark>did</mark> ſubdue. The Germans from their birth inurde to warre, Whoſe martiall minds ſtill haughty thoughts haue bred, Whilſt neither men nor walls my courſe could barre,</div>
+<div class="excerpt">haue, At th&#x27; Heleſpont that fortune feard to trie, And like a daſtard <mark>did</mark> his Gallies leaue, In all (ſaue corage) though more ſtrong than I? Shall I ſuſpect that <mark>Brutus</mark> ſeekes my blood, Whoſe ſafetie ſtill I tendred with ſuch care, Who when the heauens from mortalls me ſeclude, Is only worthy to be Caeſars heire? That which I heard,</div>
+<div class="excerpt">their reſtleſſe thoughts records, Whilſt they their cares depth in their boſoms drowne, Their ſilence feares me more than th&#x27;others words. Thus Caſsius now and <mark>Brutus</mark> ſeeme to hold Some great thing in their mind, whoſe fire whiles ſmoks What <mark>Brutus</mark> would, he vehemently would, Thinke what they like, I like not their pale lookes.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Th&#x27;outragious Gaules that in moſt monſtrous ſwarmes, Went waſting Aſia, thundring downe all things; And marching ouer the Macedonians armes, Did inſolently make and vnmake kings. Thoſe Gaules that hauing the worlds conq&#x27;rors foild, As if the world might not haue matcht them then, Would ſacrilegiouſly haue Delphos ſpoild: And warrd againſt the gods, contemning men, Yea thoſe whoſe aunceſtors our cittie burn&#x27;d. The people that the Romans onely fear&#x27;d: By me Romes nurſling matcht and orematchtmurn&#x27;d, So what they firſt eclipſd againe they clear&#x27;d. Then as to ſubiects hauing giuen decrees, I left the Gaules their raſh attempts to rue: And wounding Neptunes boſome with wing&#x27;d trees, The world diuided Britaines did ſubdue. The Germans from their birth inurde to warre, Whoſe martiall minds ſtill haughty thoughts haue bred, Whilſt neither men nor walls my courſe could barre, Mask&#x27;d with my banners ſaw their Rhene runne red, And th&#x27;orientall realmes amidſt of late, My comming and orecomming was but one: With little paine ſo Pompey was calld great, That warrd with thoſe whoſe glorious daies were gone: But what though thouſands ſetones praiſes forth, For fields which ſhadowes and not ſwords obtaind; Yet th&#x27;eaſie rate but vilifies the worth, No glorie without labour can be gain&#x27;d. From dangers paſt my comfort now proceedes, Since all difficulties I did ore come: And in few wordes to comprehend my deedes, Rome conquerd all the world, and Caeſar Rome. Th&#x27;inhabitants of heauen that know all harts, They know my thoughts as pure as are their ſtarres: And that conſtrainde I came from forraigne parts, To ſeeme vnciuill in the ciuill warres. I mooude that warre which all the world bemones, Being vrgde by force to free my ſelfe from feares: Still when my hand gaue wounds, my heart gaue grones, No Romans blood was ſhed, but I ſhed teares. But how could any cleuated ſpright, That had for honor hazarded his blood; Yet yeeld by froward foes outragious ſpight, To be defrauded of th&#x27;expected good. When as a multitude of battels wonne, Had made Romes Empire, and my glory great; And that the Gaules (oft vanquiſhde) had begunne T&#x27;embrace the yoke that they diſdainde of late. Then pompous Pompey, my prowd ſonne in law, And Cato, that ſtill croſſde what I deſignde, From fauouring me the people did withdraw, And vnto me a ſucceſſour aſſignde. Not that he ſhould ſucceed in dangerous broyles, But euen through enuie, as thay had ordain&#x27;d, That he might ſo triumph of all my toyles, And rob the glory that I dearely gain&#x27;d. Could one with ſuch indignities comport, That values honor deerer then the light? No, (whilſt my ſoule reſts ſoueraigne of this fort) None ſhall haue power to rob me of my right. And yet by Ioue, that all the world commands, T&#x27;vſe any violence I did miſlike: And offred oft t&#x27;abandon all my bandes, If that my enemies would haue done the like. But the tumultuous multitude that ſtill As waues with windes are carried with conceits, With nought but my diſgrace would bound their will, And I committed all vnto the fates. Yet when at Rubicon I ſtood perplex&#x27;d, And weigh&#x27;d the horrour of my high attempt, My ſoule was with a thouſand fancies vex&#x27;d, Which reſolution buried in contempt. What, doe debattelld Pompeys followers ſtriue To recollect their ruines from the duſt? Dare they that only by my tollerance liue, More to their ſtrength than to my fauour truſt? Or doſt thou feare his ſonnes deiected ſtate, That ſteales infamous flying through thoſe floods, Which his great father, Admiral of late, Did plant with ſhips til all their waues ſeemd woods? Then makes his brothers death his courage more, Since by them ſtraited in a bloodie ſtrife, I, that in all the battels giuen before, Did fight for victorie, then fought for life. Or whilſt to march toward Parthia I prepare, Doth a ſuſpition thus afflict thy ſprite, For Craſſus fortune feard that periſht there, Th&#x27;opprobrious prey of the Barbarians ſpight? To thoſe ſame bands that Caſsius thence brought back, A place amongſt my legions Ile allow, Whoſe foes ſhall find whilſt they auenge th&#x27;olde wracke Though the ſame ſheep, another ſhepheard now. Do not imagine matters to bemone, For whilſt there ſtands a world, can Caeſar fall? Though thouſand thouſands were coniurd in one, I, and my fortune might confound them all. No corpulent ſanguinians make me feare, That with more paine their beards than th&#x27;enimies ſtrike And doe themſelues like th&#x27;epicurians beare, To Bacchus, Mars, and Venus borne alike. Their hearts do alwayes in their mouthes remaine, As ſtreams, whoſe murmuring ſhews the courſe not deep Then ſtill they loue to ſport, though groſſe and plaine, And neuer dreame of ought but when they ſleep. But thoſe high ſprites that hold their bodies downe, Whoſe viſage leane their reſtleſſe thoughts records, Whilſt they their cares depth in their boſoms drowne, Their ſilence feares me more than th&#x27;others words. Thus Caſsius now and Brutus ſeeme to hold Some great thing in their mind, whoſe fire whiles ſmoks What Brutus would, he vehemently would, Thinke what they like, I like not their pale lookes. Yet with their worth this cannot well agree, In whom of vertue th&#x27;image ſeeme to ſhine, Can thoſe that haue receiu&#x27;d their liues from me, Prooue ſo ingrate againe as to take mine? Dare Caſsius me purſue new hopes to haue, At th&#x27; Heleſpont that fortune feard to trie, And like a daſtard did his Gallies leaue, In all (ſaue corage) though more ſtrong than I? Shall I ſuſpect that Brutus ſeekes my blood, Whoſe ſafetie ſtill I tendred with ſuch care, Who when the heauens from mortalls me ſeclude, Is only worthy to be Caeſars heire? That which I heard, with thy report accords, Whilſt thou all ſeemd diſſolu&#x27;d in griefe at once, A heauy murmuring made with mangled words, Was interrupted oft by tragicke grones. The memory, but not the iudgement makes Th&#x27;impreſſion thus of paſſions in the braine, For what the ſoule moſt ſuffers when it wakes, With it aſleepe it doth turmoyld remaine. From ſuperſtitious feares this care proceedes, Which ſtil would watch o&#x27;re that which thou doſt loue, And in thy minde melancholy thus breedes, Which doth thoſe ſtrange imaginations moue.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Julius Caesar</div><div class="body">Juno remains angry that a Trojan adjudged Venus the most beautiful goddess. Through the centuries, she has sought to avenge herself by harrying the Trojans’ 1607 descendants, the Romans, most recently by fomenting a civil war. But the victor of that war was Caesar, who traces his descent from Venus; he has conquered much of the world and established his ascendancy in Rome, but Juno now intends to work his overthrow. Caesar explains to Antonius that he wants to be a king not for personal ambition but to comply with a Sibylline prophecy which makes monarchy a precondition for a Roman victory in the east. Antonius warns him that there are Romans who desire his death. Cicero laments the loss of Rome’s liberty, and Decius Brutus agrees that, though Caesar’s past actions have been honourable, he should have demobilized his armies now that there is no further external threat. Brutus and Cassius agree that they will not participate in any ceremony aimed at making Caesar a king. Brutus is Caesar’s friend, but reasons that he must assassinate the tyrant for the public good. His wife Portia wrings the secret of the conspiracy out of him. Brutus and Cassius recruit conspirators, both patriots and men who have a personal grudge against Caesar. However, they exclude Cicero and agree not to kill Antonius. Caesar’s wife Calpurnia tries to persuade him not to go to the Senate on the Ides of March — an astrologer has foretold his death, and she herself has had bad dreams - but Decius Brutus induces him to change his mind. The conspirators assassinate Caesar. Antonius makes a show of friendship with them, but is obviously planning reprisals. A messenger brings Caesar’s wife Calpurnia a full account of the circumstances of the murder.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> page.
+</div>
+</div></body></html>

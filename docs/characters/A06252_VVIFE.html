@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VVIFE in The Knight of the Burning Pestle · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>VVIFE</span>
+</nav>
+
+<h1>VVIFE</h1>
+<p class="lede">in <em>The Knight of the Burning Pestle</em> — Beaumont, Francis</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1613</td></tr>
+<tr><th>Words</th><td>1080</td></tr>
+<tr><th>Characters</th><td>5739</td></tr>
+<tr><th>BritDrama no.</th><td>1562</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">might haue bene better occupied, I wis, then ha taught him these fegaries, hee&#x27;s e&#x27;ne in the high-way to the gallows, God blesse him. Come hither Maister Humfrey, <mark>has</mark> hee hurt you? now beshrew his fingers for&#x27;t, here sweet <mark>heart</mark>, here&#x27;s some greene ginger for thee, now beshrew my <mark>heart</mark> but a <mark>has</mark> pep per-nel in&#x27;s head, as big</div>
+<div class="excerpt">pate Raph, soundly. Runne Raph, runne Raph, runne for thy life boy, Iasper comes, Iasper comes. Sure the diuell, God blesse vs, is in this Springald, why George, didst euer see such a fire-drake, I am afraid my boie&#x27;s miscaried, if he be, though hee were Maister Mery-thoughts sonne a thousand times, if there <mark>bee</mark> any Law in England</div>
+<div class="excerpt">tell him. George, what wilt thou laye with mee now, that Maister Humphery <mark>has</mark> not Mistresse Luce yet, speake George, what wilt thou laie with me? Nay George, you <mark>must</mark> consider Mistresse Lucies feete are tender, and, besides, &#x27;tis darke, and I promise you tuely, I doe not see how hee should get out of Wa im forrest with her yet.</div>
+<div class="excerpt">youth comes home let him rub all the soles of his feete, and the heeles, and his ancles, with a mouse skinne, or if none of your people can catch a mouse, when hee goes to bed, let him rowle his feete in the warme embers, aud I warrant you hee shall be well, and you may make him put his fingers betweene his toes &amp; smell to them,</div>
+<div class="excerpt">it is to ouerthrow a gyant: but looke George, heere comes mistresse Merri-thought and her sonne Michael; now you are welcome mistresse Merri- thought, now Rafe <mark>has</mark> done you may go on. Now good husband let him come out and die. Nay by my faith George, I haue more manners then so, I&#x27;le speake to these Gentlemen first: I thanke</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I by my faith are they Rafe, let &#x27;em say what they will, they are indeed, our Knights neglect their possessions well enough, but they do not the rest. I&#x27;le besworne will they Rafe, they haue cal&#x27;d mee so an hundred times about a scuruy pipe of Tobacco. They go finely by my troth. I do not like that this vnthrifty youth should em becill away the money; the poore Gentlewoman his mother will haue a heauy heart for it God knowes. But let him go, I&#x27;le tell Raph a tale in&#x27;s eare shall fetch him againe with a Wanion I warrant him, if hee bee aboue ground, and besides George, heere are a number of sufficient Gentlemen can witnesse, and my selfe, and your selfe, and the Musitians, if we be cal&#x27;d in question, but here comes Raph, George, thou shalt here him speake, an he were an Emperall. This yong Iasper will proue me another Things, a my conscience and he may be suffered; George, dost not see George how a swaggers, and flies at the very heads a fokes as he were a Drago ̄ ; well if I do not do his lesson for wronging the poore Gentleman, I am no true woman, his friends that brought him vp might haue bene better occupied, I wis, then ha taught him these fegaries, hee&#x27;s e&#x27;ne in the high-way to the gallows, God blesse him. Come hither Maister Humfrey, has hee hurt you? now beshrew his fingers for&#x27;t, here sweet heart, here&#x27;s some greene ginger for thee, now beshrew my heart but a has pep per-nel in&#x27;s head, as big as a pullets egge, alas sweete lamb, how thy Tempels beate; take the peace on him sweete heart, take the peace on him. I, and beate him well, he&#x27;s an vnhappy boy. I Raph hee beate him vnmercifully, Raph, and thou spar&#x27;st him Raph I would thou wert hang&#x27;d. Breake&#x27;s pate Raph, breake&#x27;s pate Raph, soundly. Runne Raph, runne Raph, runne for thy life boy, Iasper comes, Iasper comes. Sure the diuell, God blesse vs, is in this Springald, why George, didst euer see such a fire-drake, I am afraid my boie&#x27;s miscaried, if he be, though hee were Maister Mery-thoughts sonne a thousand times, if there bee any Law in England I&#x27;le make some of them smart for&#x27;t. That same Dwarfe&#x27;s a pretty boy, but the Squire&#x27;s a grout-nole. George I would haue something done, and I can not tell what it is. I thought he would tell him. George, what wilt thou laye with mee now, that Maister Humphery has not Mistresse Luce yet, speake George, what wilt thou laie with me? Nay George, you must consider Mistresse Lucies feete are tender, and, besides, &#x27;tis darke, and I promise you tuely, I doe not see how hee should get out of Wa im forrest with her yet. I will not lay against Raph hunny, because I haue not spoken with him, but looke George, peace, heere comes the merry old Gentleman againe. Marke this George, tis worth noting: Godfrry my Tailor, you know, neuer sings, and hee had foureteene yards to make this Gowne, and I&#x27;le be sworne Mistresse Pen nistone the Drapers wife had one made with twelue. Faith and those chilblanes are a foule trouble, Mi stresse Merie-thought when your youth comes home let him rub all the soles of his feete, and the heeles, and his ancles, with a mouse skinne, or if none of your people can catch a mouse, when hee goes to bed, let him rowle his feete in the warme embers, aud I warrant you hee shall be well, and you may make him put his fingers betweene his toes &amp; smell to them, it&#x27;s very soueraigne for his head if he be costiue. George, dost thinke Raph will confound the Gyant? Faith and that Ducth-man was a goodly man, if all things were answerable to his bignesse, and yet they say there was a Scotsh-man higher then hee, and that they two and a Knight met, and saw one another for nothing, but of all the sights that euer were in London, since I was married, mee thinkes the little child that was so faire growne about the members was the prettiest, that, and the Hermophrodite. Niniuie, O that was the story of Ione and the Wall, was it not George? Looke George, heere comes Mistresse Merry-thought againe, and I would haue Raph come and fight with the Giant, I tell you true, I long to see&#x27;t. Mastresse Merry-thought if it please you to refraine your passio ̄ a little, til Raph haue dispatch the Giant out of the way we shalthink our selues much bound to you, I thank you good Mistresse Merry-thought. I thanke you little youth, feth the child hath a sweete breath George, but I thinke it bee troubled with the wormes, Carduus Benedictus and Mares milke were the onely thing in the world for&#x27;t, O Raph&#x27;s here George, God send thee good lucke Raph. There boy, kill, kill, kill, kill, kill, Raph. Alas poore Knight, relieue him Raph, releiue poore Knights whilst you liue. Hearke George, what a woefull cry there is, I thinke some woman lies in there. I George, I see it well inough. Gentlemen I thanke you all heartily for gracing my man Rafe, and I promise you you shall see him oftner. I George, but it is well as it is, I warrant you the Gentlemen do consider what it is to ouerthrow a gyant: but looke George, heere comes mistresse Merri-thought and her sonne Michael; now you are welcome mistresse Merri- thought, now Rafe has done you may go on. Now good husband let him come out and die. Nay by my faith George, I haue more manners then so, I&#x27;le speake to these Gentlemen first: I thanke you all Gentlemen, for your patience and countenane to Raph, a poore fatherlesse child, and if I might see you at my house, it should go hard, but I would haue a pottle of wine and a pipe of Tobacco for you, for truely I hope you do like the youth, but I would bee glad to know the truth: I referre it to your owne discretions, whether you will applaud him or no, for I will winke, and whilst you shall do what you will, I thanke you with all my heart, God giue you good night; come George.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Knight of the Burning Pestle</div><div class="body">At the theatre, a citizen and his wife object to the satirical subject matter of the play, The London Merchant: they insist on a more romantic offering starring their apprentice, Rafe, as a heroic grocer. The boy actors do their best to provide this within the play they have rehearsed. In the play, Luce prefers her father Venturewell’s apprentice Jasper to his chosen son-in-law, Humphrey; so Venturewell discharges Jasper, and he goes home to a family impoverished by the irresponsible merriment of his father, Old Merrythought. His mother, who 1607 favours his younger brother Michael, insists that he be paid his inheritance and sent out into the world. Several of the characters go to Waltham Forest. Luce elopes with Humphrey, intending to meet Jasper there. Rafe the grocer, a voluminous reader of chivalric romance, becomes the Knight of the Burning Pestle and leaves in search of heroic deeds. He scares Mistress Merrythought, who leaves behind her jewels. These are found and taken away by Jasper, who then meets the eloping couple, beats Humphrey, and takes Luce. In the audience, the citizen and his wife take Jasper to be the villain and Humphrey the hero; they demand that Rafe return to fight Jasper, but Jasper beats him. Notified by Humphrey, Venturewell confronts Jasper’s father, but is offended by his refusal to take the matter seriously. Jasper tests Luce’s love by threatening her with violence. She accepts her fate, but Humphrey and her father seize her before he can admit he was only pretending. Rafe stays at the Bell inn, but cannot understand that he must pay for its hospitality. (The citizen settles the bill for him.) The host sends him to fight the giant Barbaroso, better known as Nick the barber, who has imprisoned many knights and ladies — actually clients and venereal disease patients. Rafe defeats the ‘giant’ and releases the ‘knights’. The citizens then have a scene inserted in which he meets a foreign king’s daughter, but refuses her offer oflove. Later interpolated scenes show Rafe as the city’s May Lord, and mustering troops at Mile End. Venturewell incarcerates Luce in her room, but Jasper gains access by pretending to be dead: Venturewell accedes to a request that his body should be brought to Luce, and then has the coffin sent on to Old Merrythought, unaware that Luce has taken Jasper’s place inside. Left behind in Luce’s room, Jasper appears to Venturewell in ghostly guise and instructs him to repent, compensate Old Merrythought for his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

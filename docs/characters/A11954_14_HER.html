@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HER in The Winter&#x27;s Tale · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>HER</span>
+</nav>
+
+<h1>HER</h1>
+<p class="lede">in <em>The Winter&#x27;s Tale</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1577</td></tr>
+<tr><th>Characters</th><td>8272</td></tr>
+<tr><th>BritDrama no.</th><td>1631</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">concluſion, leaſt you ſay Your Queene and I are Deuils: yet <mark>goe</mark> on, Th&#x27; offences we haue made you doe, wee&#x27;le anſwere, If you firſt ſinn&#x27;d with vs: and that with vs You <mark>did</mark> continue fault; and that you ſlipt not With any, but with vs. Hee&#x27;le ſtay (my Lord.) Neuer? What? haue I twice ſaid well? when was&#x27;t before? I prethee tell me:</div>
+<div class="excerpt">The by-gone-day proclaym&#x27;d, ſay this to him, He&#x27;s beat from his beſt ward. To tell, he longs to ſee his Sonne, were ſtrong: But let him ſay ſo then, and let him <mark>goe</mark>; But let him ſweare ſo, and he ſhall not ſtay, Wee&#x27;l thwack him hence with Diſtaffes. Yet of your Royall preſence, Ile aduenture The borrow of a Weeke. When at</div>
+<div class="excerpt">will? Verely? You put me off with limber Vowes: but I, Though you would ſeek t&#x27; vnſphere the Stars with Oaths, Should yet ſay, Sir, no going: Verely You ſhall not <mark>goe</mark>; a Ladyes Verely &#x27;is As potent as a Lords. Will you <mark>goe</mark> yet? Force me to keepe you as a Priſoner, Not like a Gueſt: ſo you ſhall pay your Fees When you depart,</div>
+<div class="excerpt">this grieue you, When you ſhall come to clearer knowledge, that You thus haue publiſh&#x27;d me? Gentle my Lord. You ſcarce can right me throughly, then, to ſay You <mark>did</mark> miſtake. There&#x27;s ſome ill Planet raignes: I muſt be patient, till the Heauens looke With an aſpect more fauorable. Good my Lords, I am not prone to weeping (as</div>
+<div class="excerpt">I doe referre me to the Oracle: Apollo be my Iudge. The Emperor of Ruſſia was my Father. Oh that he were aliue, and here beholding His Daughters Tryall: that he <mark>did</mark> but ſee The flatneſſe of my miſerie; yet with eyes Of Pitty, not Reuenge. Prayſed. You Gods looke downe, And from your ſacred Viols poure your graces Vpon my daughters</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I had thought (Sir) to haue held my peace, vntill You had drawne Oathes from him, not to ſtay: you (Sir) Charge him too coldly. Tell him, you are ſure All in Bohemia&#x27;s well: this ſatisfaction, The by-gone-day proclaym&#x27;d, ſay this to him, He&#x27;s beat from his beſt ward. To tell, he longs to ſee his Sonne, were ſtrong: But let him ſay ſo then, and let him goe; But let him ſweare ſo, and he ſhall not ſtay, Wee&#x27;l thwack him hence with Diſtaffes. Yet of your Royall preſence, Ile aduenture The borrow of a Weeke. When at Bohemia You take my Lord, Ile giue him my Commiſſion, To let him there a Moneth, behind the Geſt Prefix&#x27;d for&#x27;s parting: yet (good-deed) Leontes, I loue thee not a Iarre o&#x27; th&#x27; Clock, behind What Lady ſhe her Lord. You&#x27;le ſtay? Nay, but you will? Verely? You put me off with limber Vowes: but I, Though you would ſeek t&#x27; vnſphere the Stars with Oaths, Should yet ſay, Sir, no going: Verely You ſhall not goe; a Ladyes Verely &#x27;is As potent as a Lords. Will you goe yet? Force me to keepe you as a Priſoner, Not like a Gueſt: ſo you ſhall pay your Fees When you depart, and ſaue your Thanks. How ſay you? My Priſoner? or my Gueſt? by your dread Verely, One of them you ſhall be. Not your Gaoler then, But your kind Hoſteſſe. Come, Ile queſtion you Of my Lords Tricks, and yours, when you were Boyes: You were pretty Lordings then? Was not my Lord The verver Wag o&#x27; th&#x27; two? By this we gather You haue tript ſince. Grace to boot: Of this make no concluſion, leaſt you ſay Your Queene and I are Deuils: yet goe on, Th&#x27; offences we haue made you doe, wee&#x27;le anſwere, If you firſt ſinn&#x27;d with vs: and that with vs You did continue fault; and that you ſlipt not With any, but with vs. Hee&#x27;le ſtay (my Lord.) Neuer? What? haue I twice ſaid well? when was&#x27;t before? I prethee tell me: cram&#x27;s with prayſe, and make&#x27;s As fat as tame things: One good deed, dying tongueleſſe, Slaughters a thouſand ▪ wayting vpon that. Our prayſes are our Wages. You may ride&#x27;s With one ſoft Kiſſe a thouſand Furlongs, ere With Spur we heat an Acre. But to th&#x27; Goale: My laſt good deed, was to entreat his ſtay. What was my firſt? it ha&#x27;s an elder Siſter, Or I miſtake you: O, would her Name were Grace. But once before I ſpoke to th&#x27; purpoſe? when? Nay, let me haue&#x27;t: I long. &#x27;Tis Grace indeed. Why lo-you now; I haue ſpoke to th&#x27; purpoſe twice: The one, for euer earn&#x27;d a Royall Husband; Th&#x27; other, for ſome while a Friend. He ſomething ſeemes vnſetled. You look as if you held a Brow of much diſtraction: Are you mou&#x27;d (my Lord?) If you would ſeeke vs, We are yours i&#x27; th&#x27; Garden: ſhall&#x27;s attend you there? Take the Boy to you: he ſo troubles me, &#x27;Tis paſt enduring. What wiſdome ſtirs amongſt you? Come Sir, now I am for you againe: &#x27;Pray you ſit by vs, And tell&#x27;s a Tale. As merry as you will. Let&#x27;s haue that (good Sir.) Come-on, ſit downe, come-on, and doe your beſt, To fright me with your Sprights: you&#x27;re powrefull at it. Nay, come ſit downe: then on. Come on then, and giu&#x27;t me in mine care. What is this? Sport? But Il&#x27;d ſay he had not; And Ile be ſworne you would beleeue my ſaying, How e&#x27;re you leaue to th&#x27; Nay-ward. Should a Villaine ſay ſo, (The moſt repleniſh&#x27;d Villaine in the World) He were as much more Villaine: you (my Lord) Doe but miſtake. No (by my life) Priuy to none of this: how will this grieue you, When you ſhall come to clearer knowledge, that You thus haue publiſh&#x27;d me? Gentle my Lord. You ſcarce can right me throughly, then, to ſay You did miſtake. There&#x27;s ſome ill Planet raignes: I muſt be patient, till the Heauens looke With an aſpect more fauorable. Good my Lords, I am not prone to weeping (as our Sex Commonly are) the want of which vaine dew Perchance ſhall dry your pitties: but I haue That honorable Griefe lodg&#x27;d here, which burnes Worſe then Teares drowne: beſeech you all (my Lords) With thoughts ſo qualified, as your Charities Shall beſt inſtruct you, meaſure me; and ſo The Kings will be perform&#x27;d. Who is&#x27;t that goes with me? beſeech your Highnes My Women may be with me, for you ſee My plight requires it. Doe not weepe (good Fooles) There is no cauſe: When you ſhall know your Miſtris Ha&#x27;s deſeru&#x27;d Priſon, then abound in Teares, As I come out; this Action I now goe on, Is for my better grace. Adieu (my Lord) I neuer wiſh&#x27;d to ſee you ſorry, now I truſt I ſhall: my Women come, you haue leaue. Since what I am to ſay, muſt be but that Which contradicts my Accuſation, and The teſtimonie on my part, no other But what comes from my ſelfe, it ſhall ſcarce boot me To ſay, Not guiltie ▪ mine Integritie Being counted Falſehood, ſhall (as I expreſſe it) Be ſo receiu&#x27;d. But thus, if Powres Diuine Behold our humane Actions (as they doe) I doubt not then, but Innocence ſhall make Falſe Accuſation bluſh, and Tyrannie Tremble at Patience. You (my Lord) beſt know (Whom leaſt will ſeeme to doe ſo) my paſt life Hath beene as continent, as chaſte, as true, As I am now vnhappy; which is more Then Hiſtorie can patterne, though deuis&#x27;d, And play&#x27;d, to take Spectators. For behold me, A Fellow of the Royall Bed, which owe A Moitie of the Throne: a great Kings Daughter, The Mother to a hopefull Prince, here ſtanding To prate and talke for Life, and Honor, fore Who pleaſe to come, and heare. For Life, I prize it As I weigh Griefe (which I would ſpare:) For Honor, &#x27;Tis a deriuatiue from me to mine, And onely that I ſtand for. I appeale To your owne Conſcience (Sir) before Polixenes Came to your Court, how I was in your grace, How merited to be ſo: Since he came, With what encounter ſo vncurrant, I Haue ſtrayn&#x27;d t&#x27; appeare thus; if one iot beyond The bound of Honor, or in act, or will That way enclining, hardned be the hearts Of all that heare me, and my neer&#x27;ſt of Kin Cry fie vpon my Graue. That&#x27;s true enough, Though &#x27;tis a ſaying (Sir) not due to me. More then Miſtreſſe of, Which comes to me in name of Fault, I muſt not At all acknowledge. For Polixenes (With whom I am accus&#x27;d) I doe confeſſe I lou&#x27;d him, as in Honor he requir&#x27;d: With ſuch a kind of Loue, as might become A Lady like me; with a Loue, euen ſuch, So, and no other, as your ſelfe commanded: Which, not to haue done, I thinke had been in me Both Diſobedience, and Ingratitude To you, and toward your Friend, whoſe Loue had ſpoke, Euen ſince it could ſpeake, from an Infant, freely, That it was yours. Now for Conſpiracie, I know not how it taſtes, though it be diſh&#x27;d For me to try how: All I know of it, Is, that Camillo was an honeſt man; And why he left your Court, the Gods themſelues (Wotting no more then I) are ignorant. Sir, You ſpeake a Language that I vnderſtand not: My Life ſtands in the leuell of your Dreames, Which Ile lay downe. Sir, ſpare your Threats: The Bugge which you would fright me with, I ſeeke: To me can Life be no commoditie; The crowne and comfort of my Life (your Fauor) I doe giue loſt, for I doe feele it gone, But know not how it went. My ſecond Ioy, And firſt Fruits of my body, from his preſence I am bar&#x27;d, like one infectious. My third comfort (Star&#x27;d moſt vnluckily) is from my breaſt (The innocent milke in it moſt innocent mouth) Hal&#x27;d out to murther. My ſelfe on euery Poſt Proclaym&#x27;d a Strumpet: With immodeſt hatred The Child-bed priuiledge deny&#x27;d, which longs To Women of all faſhion. Laſtly, horried Here, to this place, i&#x27; th&#x27; open ayre, before I haue got ſtrength of limit. Now (my Liege) Tell me what bleſſings I haue here aliue, That I ſhould feare to die? Therefore proceed: But yet heare this: miſtake me not: no Life, (I prize it not a ſtraw) but for mine Honor, Which I would free: if I ſhall be condemn&#x27;d Vpon ſurmizes (all proofes ſleeping elſe, But what your Iealouſies awake) I tell you &#x27;Tis Rigor, and not Law Your Honors all, I doe referre me to the Oracle: Apollo be my Iudge. The Emperor of Ruſſia was my Father. Oh that he were aliue, and here beholding His Daughters Tryall: that he did but ſee The flatneſſe of my miſerie; yet with eyes Of Pitty, not Reuenge. Prayſed. You Gods looke downe, And from your ſacred Viols poure your graces Vpon my daughters head: Tell me (mine owne) Where haſt thou bin preſeru&#x27;d? Where liu&#x27;d? How found Thy Fathers Court? For thou ſhalt heare that I Knowing by Paulina, that the Oracle Gaue hope thou waſt in being, haue preſeru&#x27;d My ſelfe, to ſee the yſſue.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Winter&#x27;s Tale</div><div class="body">Polixenes of Bohemia is coming to the end of a nine- month stay at the Sicilian court of Leontes, his childhood playmate. Leontes cannot persuade him to extend his stay, but the pregnant queen, Hermione, has more success. Leontes conceives a suspicion that Polixenes and Hermione have committed adultery, and that her unborn child is a bastard. He commands Camillo to poison Polixenes, but instead Camillo warns the intended victim and escapes with him to Bohemia. Leontes arrests Hermione and sends to the oracle of Apollo for confirmation of her adultery. She gives birth to a daughter in prison, and Paulina hopes to bring Leontes to his senses by showing him the baby; instead, he orders her husband, Antigonus, to take it out of his dominions and abandon it. Hermione is tried for adultery and treason. The oracle, when read, exonerates her and foretells that, unless the lost be found, Leontes will have no heir. Leontes refuses to believe it, whereupon his son Mamillius, who fell sick when his mother was arrested, dies. Hermione collapses in court and is later reported dead. Antigonus abandons the baby on the coast of Bohemia, and is eaten by a bear. The child, Perdita, is found and adopted by an old shepherd. Sixteen years pass. The penitent Leontes, still mourning Hermione, attempts to recall Camillo to Sicily, but Polixenes will not let him go. Worried by rumours that Prince Florizel is courting a shepherd’s daughter, Polixenes attends the sheep-shearing feast in disguise. When it becomes clear that Florizel intends to marry Perdita without consulting his father, Polixenes intervenes and threatens awful reprisals. Camillo helps Florizel and Perdita to abscond to Sicily, knowing that Polixenes will follow them, enabling him to return home at last. Leontes welcomes the newcomers, who include not only the Bohemian royal family but also the old shepherd, who produces the objects found with baby Perdita; these establish her identity as Leontes’ long-lost daughter. The two kings are reconciled, and Polixenes withdraws his objection to his son’s marriage. The court visits a newly sculpted statue of Hermione in Paulina’s chapel. It turns out to be Hermione herself, still alive and awaiting the return of her daughter.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FRAN in 214 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FRAN</span>
+</nav>
+
+<h1>FRAN</h1>
+<p class="lede">in <em>214</em> — [94]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1605</td></tr>
+<tr><th>Words</th><td>1135</td></tr>
+<tr><th>Characters</th><td>5639</td></tr>
+<tr><th>BritDrama no.</th><td>214</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">monies, he ſhould liue and lie vid me, He went whilſt Ick (me hope vidout ſins) out of mine Muſh loue to Frevile betraie him. Dere, peace, reſt dere, ſo ſoftlie, all <mark>goe</mark> in: De net is laie, now ſal Ick be reuenge. If dat me knew a dog dat Frevile loue, Me would puiſſon him, for know de deepeſt hell As a reuenging Womans, naught</div>
+<div class="excerpt">de Ambroſia of Delight. And Ick pre de tel me, for me loues to <mark>heare</mark> of manhood Verie muſh, Iſait: Ick prede (vat vas me a ſaieng) Oh, Ick prede tell a me: How <mark>did</mark> you kill a metre Frevile? Vat <mark>did</mark> you vid him van he was ſticken? Metre Frevile liue: ha, ha, liue at meſtre Shatewes: Muſh at metre Shatews. Frevile is dead. Malhereux</div>
+<div class="excerpt">true loue to diſſemble, I am one ly yours. My vow, not vntill hee be dead, VVhich that I may be ſure not to infringe, Dis token of his death, ſall ſatisfie, He <mark>has</mark> a ring, as deare as the ayre to him, His new loues gift: tat got and brought to me. I ſhall aſſured your pofeſſed reſt. O done ſafely, a quarrell ſuddain pickt,</div>
+<div class="excerpt">〈◊〉 his owne lips confeſſe it, a 〈…〉 may apprehend him and reuenge your and mine loues 〈◊〉 He was ſo ſir, let you 〈…〉 it do not 〈…〉 dy, de yong man dat be flame <mark>did</mark> 〈◊〉 you 〈…〉 me ten touſant touſant times more deerely. For looke you Ladie as your ing he gaue 〈…〉 〈◊〉 ieſts at your ſcornd kin 〈◊〉 O but to be abuſde, ſcornde,</div>
+<div class="excerpt">touſant touſant times more deerely. For looke you Ladie as your ing he gaue 〈…〉 〈◊〉 ieſts at your ſcornd kin 〈◊〉 O but to be abuſde, ſcornde, ſcoft at, O ten touſand <mark>did</mark> by ſuch a one, and vnto ſuch a one. Ick ſall, or let me pay for his, mine bloud. Mine ſhambre is hard by, Ick ſall bring you to it preſant ment. You bin verie velcom</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">O mine aderliuer loue, vat ſall me do to requi dis your muſt affection. A mine art, Sir you bin very velcome. Vill not you ſtay in mine boſome to night loue ▪ He ſhall haue a bedde too, if dat it pleaſe him. Reſt to mine deare loue, reſt, and no long abſence. Sall Ick not beleeue you long. Exit Fraciſchina. O mine ſeete, deerſt, kindeſt, mine louing, O mine tow ſand, ten towſand, delicated, petty ſeet art Cantat Gallice. a mine a deere leeueſt affection. By mine trot, he been very ſad, vat ayle you ſir. De diet is very goot for de rheume. Pre de now, tis but a toy, a very trifle. I fait, me muſt needes haue it (dis is Beatrice ring, oh could I get it,) ſeet pree de now, as euer you haue embraced me with a hearty arme, a warme thought, or a pleaſing touch, as e uer you will profeſſe to loue me, as euer you do wiſh me life, giue me dis ring, dis litle ring. Pray yee proue a man of faſhion, and neglect the neg lected. O min poore forſaken hart. Mine vowed, go, go, go, I can no more of loue, no, no, no, you bin all vnconſtant, O vnfaithfull men, tyrantes, betray ers, de very enioying vs, looſeth us, and when you onely ha made vs hatefull, you onely hate vs: O mine forſaken hart. Now fai , I iudge it all incredible, vntill this houre I ſaw you pritty fayre eyed yout, would you enioy me? I, no there is no ſuch vehemence in your affectes, VVould I were any thing, ſo he were not. Vill I? how hard tis for true loue to diſſemble, I am one ly yours. My vow, not vntill hee be dead, VVhich that I may be ſure not to infringe, Dis token of his death, ſall ſatisfie, He has a ring, as deare as the ayre to him, His new loues gift: tat got and brought to me. I ſhall aſſured your pofeſſed reſt. O done ſafely, a quarrell ſuddain pickt, with an aduantage ſtrike, then bribe, a little coyne, Al&#x27;s ſafe, deare ſoule, but Ile not ſet you on, Not yet my vow. Pan you poultron. By me fait dis bin verie fine languge, Ick ſall buſh ye now, ha, be garzon vare had you dat place? Vat ſall me do now, Gods ſacramant: tell him two ho wers hence he ſall be moſt affectionatlie velcome, tell him (vat ſal me do) tel him Ick am bin in my bate, and Ick fall perfume my ſeetes, mak a mine bodie ſo delicate for his arme Two houres hence. Now Ick ſall reuange, hay, begar me ſal tartar de whole generation, mine braine vorke it, Frevile, is dead, Malhareux ſall hang, And mine riuall Beatrice, Ick ſall make run madde. Verie vel, giue mons to ſome fellow to ſquire me, Ick ſal go abroad. No po , me a eome to aſſure you da on meſt Mal heureus hath killed him. If dat it pleaſe you to go 〈…〉 bring you ere you&#x27;l all hear Ma ſhe eus 〈◊〉 his owne lips confeſſe it, a 〈…〉 may apprehend him and reuenge your and mine loues 〈◊〉 He was ſo ſir, let you 〈…〉 it do not 〈…〉 dy, de yong man dat be flame did 〈◊〉 you 〈…〉 me ten touſant touſant times more deerely. For looke you Ladie as your ing he gaue 〈…〉 〈◊〉 ieſts at your ſcornd kin 〈◊〉 O but to be abuſde, ſcornde, ſcoft at, O ten touſand did by ſuch a one, and vnto ſuch a one. Ick ſall, or let me pay for his, mine bloud. Mine ſhambre is hard by, Ick ſall bring you to it preſant ment. You bin verie velcom to mine ſhambra. O Myn-here. Ick ſall tell you, metre Malhereux Came all bretleſſe running a my ſhambra His ſword all bloudie: he tel a me he had kil Frevile, And pred a me to conceale him: Ick flatter him, bid bring monies, he ſhould liue and lie vid me, He went whilſt Ick (me hope vidout ſins) out of mine Muſh loue to Frevile betraie him. Dere, peace, reſt dere, ſo ſoftlie, all goe in: De net is laie, now ſal Ick be reuenge. If dat me knew a dog dat Frevile loue, Me would puiſſon him, for know de deepeſt hell As a reuenging Womans, naught ſo fell. Bid him come vp, I prede. O min here man, a dere liuer Loue, Mine ten touſant times velcom Loue, Ha, by mine trat, you bin de iuſt, vat ſall me ſaie: Vat ſeet honie name ſall I call you? No, no, not yet mine ſeeteſt ſoft-lipped loue: You ſall not gulp downe all delights at once: Be min trat, dis all-fles-Louers, dis rauenous Wenches Dat ſallow all downe hole, vill haue all at one bit, Fie, fie, fie, be min fait dey do eate Comfets vid ſpoones. No, no, Ile make you chew your pleaſure vit loue, &quot;De more degrees and ſteps, de more delight, &quot;De more endeered is de pleaſure hight. Go little vag, pleaſure ſhould haue a Cranes long necke, to reliſh de Ambroſia of Delight. And Ick pre de tel me, for me loues to heare of manhood Verie muſh, Iſait: Ick prede (vat vas me a ſaieng) Oh, Ick prede tell a me: How did you kill a metre Frevile? Vat did you vid him van he was ſticken? Metre Frevile liue: ha, ha, liue at meſtre Shatewes: Muſh at metre Shatews. Frevile is dead. Malhereux ſall hang, And ſwete diuel, dat Beatrice would but run mad, dat ſhe would but run mad, den me would dance and ſing, Metre Don Dubon, me pre ye now go to Meſtres Beatrice, tel her Frevile is ſure ded, and dat he Curſſe hir ſelfe eſpeciallie, for dat he was Sticked in hir quarrell, ſwering in his laſt gaſpe, Dat if it had bin in mine quarrels, Twould neuer haue greeued him. Prede do, and ſaie anie ting dat vil vex her. Vil you, vil you mak a her run mad? here take Dis ring, ſea me ſcorne to wear anie ting dat washers, Or his: I prede torment her, Ick cannot loue her, She honeſt and vertuous forſooth. Vat. Vil you mak a her mad? ſeet by min trat, Be pretta ſeruan, Buſh, Ick ſall go to bet now. De man doſe raue, tinck a got, tinck a got, and bid d leſh, de world, and the dible farewell. Vat iſt you ſea, ha? Vnproſperous Diuell, vat ſall me do now. Ick vil not ſpeake, torture, torture your fill, For me am worſe then hangd, me ha loſt my will. Exit.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

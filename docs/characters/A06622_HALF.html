@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HALF in Mother Bombie · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>HALF</span>
+</nav>
+
+<h1>HALF</h1>
+<p class="lede">in <em>Mother Bombie</em> — Lyly, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1594</td></tr>
+<tr><th>Words</th><td>1119</td></tr>
+<tr><th>Characters</th><td>5779</td></tr>
+<tr><th>BritDrama no.</th><td>826</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">I hope you shall neuer slip string, but hang steddie. Thou lyest, thou hast not a farthing to laie thy hands on, I am none of thine: but let mee <mark>bee</mark> wagging, my head is full of hammers, &amp; they haue so maletted my wit, that I am almost</div>
+<div class="excerpt">thought you <mark>two</mark> were asses, and that the least asse was the more asse. Yea, my yong master taught me to proue it by learning, and so I can out of Ouid by a verse. You <mark>must</mark> first for fashion sake confes your selues to be asses. Then stand you here and you there. Then this is the verse as I point it, Cum ma la per longas inualuêre moras.</div>
+<div class="excerpt">iuuentus, there&#x27;s matter in this noddle. But looke where Prisius boy comes, as fit as a pud ding for a dogs mouth. I am the bodkin, looke well to your eares, I <mark>must</mark> boare them. Let vs consult at the Tauerne, where after to the health of Memphio, drinke we to the life of Stellio, I carouse to Prisius, &amp; brinch you mas Spe rantus,</div>
+<div class="excerpt">Nay, I hope to see thee so strong, to shake three trees at once. In deede Inter pocula philosophundum, it is good to plea among pots. Why, sayest thou that thou hast left a print deeper in thy hand alreadie than a halfpenie canne leaue, vnles it should sing worse than an hot yron. By thee our Noses swell, With sparkling Carbuncle.</div>
+<div class="excerpt">alreadie than a halfpenie canne leaue, vnles it should sing worse than an hot yron. By thee our Noses swell, With sparkling Carbuncle. Now Hoggishly ith&#x27; mire, Now <mark>must</mark> euerie one by wit make an ex cuse, and euerie excuse <mark>must</mark> be coosnage. Sharpe? Ile warrant twill serue for as good sauce to knauerie as As thy knauerie meat for</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I hope you shall neuer slip string, but hang steddie. Thou lyest, thou hast not a farthing to laie thy hands on, I am none of thine: but let mee bee wagging, my head is full of hammers, &amp; they haue so maletted my wit, that I am almost a malcon tent. My master hath a fine scholer to his sonne, Prisius a fayre lasse to his daughter. They two loue one another deadly. The feathers haue put them vp, vtterly disli king the match, and haue appointed the one shall haue Memphios sonne, the other Stellios daughter, this workes lyke waxe, but how it will fadge in the end, the hen that sits next the cocke cannot tell. But they are not fooles that bee short, if I thought thou meantst so, Senties qui vir sim, Thou shouldst haue a crow to pull. At mine owne conceit and quicke censure. Sodainly me thought you two were asses, and that the least asse was the more asse. Yea, my yong master taught me to proue it by learning, and so I can out of Ouid by a verse. You must first for fashion sake confes your selues to be asses. Then stand you here and you there. Then this is the verse as I point it, Cum ma la per longas inualuêre moras. So you see the least asse is the more asse. Let me alone, Non enim mea pigra iuuentus, there&#x27;s matter in this noddle. But looke where Prisius boy comes, as fit as a pud ding for a dogs mouth. I am the bodkin, looke well to your eares, I must boare them. Let vs consult at the Tauerne, where after to the health of Memphio, drinke we to the life of Stellio, I carouse to Prisius, &amp; brinch you mas Spe rantus, we shall cast vs our accounts and discharge our stomackes, like men that can disgest any thing. Nay, I hope to see thee so strong, to shake three trees at once. In deede Inter pocula philosophundum, it is good to plea among pots. Why, sayest thou that thou hast left a print deeper in thy hand alreadie than a halfpenie canne leaue, vnles it should sing worse than an hot yron. By thee our Noses swell, With sparkling Carbuncle. Now Hoggishly ith&#x27; mire, Now must euerie one by wit make an ex cuse, and euerie excuse must be coosnage. Sharpe? Ile warrant twill serue for as good sauce to knauerie as As thy knauerie meat for his wit. When shall we meete. Away, away, if our masters take vs here the matter is mard. How? like wine, for my bodie being the rund let, and my mouth the vent, it wrought two daies ouer, till I had thought the hoopes of my head woulde haue flowen asunder. I care not, Omnem solum forti patria, I can liue in christendome as well as in Kent. He loues thee well that would runne after. Thou meanest, a browne nut is good to crack. In faith soure heart, hee that takes his pleasure on thee is verie pleasurable. Well then let fayre wordes coole that cholar, which foule speeches hath kindled, and because we are all in this case, and hope all to haue good fortune, sing a roundelay, and weele helpe, such as thou wast woont when thou beatest hempe. Well brought about. I for my part am resolute, in vtran que paratus, re die to die or to runne away. And I. Crosse your selues, looke how she lookes. Nay then let me come in with a dreame, short but sweet, that my mouth waters euer since I wakt: Me thought there sate vpon a shelfe three damaske prunes in veluet caps and prest satten gownes like indges, and that there were a whole handfull of curants to be araig ned of a riot, because they clu ̄ ged together in such clu sters, twelue raisons of the sunne were impannelled in a Iewry, and as a leafe of whole mase which was bailief was carrying the quest to consult, me thought ther came an angrie cooke, and gelded the Iewry of theyr stones, and swept both iudges, iurers, rebels and bailiefe into a porredge pot, whereat I being melancholy, fetcht a deepe sigh, that wakt my selfe and my bed fellow. Then aske my bed-felow, you know him, who dreamt that night that the king of diamonds was sicke. Wert thou once put to it? I Risio would faine see thee beg. What shall become of Accius and Silena? It was too good to be true, for we should laugh heartily, and without laughing my spleene would split, but whist here comes the man, Enter Accius. and yonder the maide, let vs stand aside. There was an auncient prouerbe knockt in the head. Excellently applyed. A braue fight is lyke to bee betweene a cocke with a long combe, and a hen with a long leg. And his combe longer than his wit. I marie sir. Whether will they, here be right coblers cuts. Because when their bodies were at worke a bout household stuffe, their mindes were busied about commonwealth matters. Ile warrant if this bee the creame, the milke is verie flat, let vs ioyne issue with them. Theres a glieke for you, let me haue my girde, on thy conscience tell me what tis a clocke? I am paid stroke dead in the neast, I am sure this soft youth who is not halfe so wise as you are faire, nor you altogether so faire as he is foolish, will not be so captious. A hard question, for it is oddes but one begate them both, hee that cut out the vpper leather, cut out the inner, &amp; so with one awl stitcht two soles together. Tis Prisius daughter. O how fitly this comes of! I, tis an hard matter to haue a wit of the olde rent, euerie one rackes his commons so high. I and Silena to, if you tie them fast to your tongues. Asse for you all foure, Why was it a beare thou ridst on? No, it was for tyring. Ile enter into a statute Marchant to see it aun swered. But if thou wilt haue bondes, thou shalt haue a bushell full. I yeeld. And there was with them a priest. And the priest spake many kinde wordes. Nay I thinke not so. Now begins the game. Accessarie as it were. As good honfesse heere beeing trust, as at home with my hose about my heeles. Doe your worst, our knaueries will renenge it vpon your childrens children. If you mace vs, weele pepper you.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Mother Bombie</div><div class="body">Menmiphio and Stellig each has a fool for his only child, — a son and a daughter respectively, but both have managed to conceal the fact from the neighbours. Each plans to marry his offspring to the other’s without disclosing the heir’s mental debility, and each tasks his servant to make the arrangements. Meanwhile, @amidiliis and [ivid are in love with one another, but their parents disapprove, wanting them to marry wealth instead: Candius is made to woo Stellio’s daughter Sil@mla, and Livia is intended for Memphio’s son Al@GiiS] The four fathers’ boy servants conspire to frustrate these various . marital plans, and go off to drink at the tavern. Candius meets Silena as she sneaks out to hear her fortune, and offers to read her palm. He is momentarily struck by her beauty, but quickly discovers that she is an idiot, a legitimate impediment to marriage. Mother Bomibié tells Silena’s fortune in cryptic terms: she is not the child of her parents. The fortune teller is also consulted by the siblings M@eStiiS and Sérénaj] who have developed an incestuous passion for one another; Mother Bombie tells them that they shall be married and each will displace a fool. The boys arrange for Candius and Livia to swap apparel with the two idiots, and they are married in disguise, with their own fathers as witnesses. Accius and Silena court one another in disguise, but their marriage prospects take a turn for the worse after each father identifies the other’s child as a fool. DE@Rilio is arrested for failing to feed a horse he hired; the other boys enter a bond to pay off his creditor, but then get the hackneyman, sergeant, and scrivener drunk, and pay for the wine by pawning the sergeant’s mace. Early the next morning, three fiddlers, advised of the wedding, struggle to identify the right house to serenade. Prisils and Spérantus discover that Candius ===== PAGE 465 ===== 1589 and Livia are married. The four servants confess their part in the affair, and the four fathers are content: Prisius and Sperantus accept the fait accompli, and Memphio and Stellio are willing to marry the fools to one another after all. Wi€inid intervenes to prevent an incestuous marriage: eighteen years ago, she swapped them for her own children, counterfeiting their distinctive birthmarks; the true heirs of Memphio and Stellio are Maestius and Serena. Mother Bombie has Predicted everything accurately. Nobody is to be punished or left dissatisfied: Vicinia is pardoned, the hackneyman paid, and the…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

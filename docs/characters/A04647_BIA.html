@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BIA in Every Man in His Humor · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BIA</span>
+</nav>
+
+<h1>BIA</h1>
+<p class="lede">in <em>Every Man in His Humor</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1601</td></tr>
+<tr><th>Words</th><td>530</td></tr>
+<tr><th>Characters</th><td>2703</td></tr>
+<tr><th>BritDrama no.</th><td>1143</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">do. Alasse brother, what would you haue me to doe? I cannot helpe it; you see, my brother Pr spero he brings them in here, they are his friends. God&#x27;s my life; <mark>did</mark> you euer <mark>heare</mark> the like? what a strange man is this? could I keepe out all them thinke you? I should put my selfe against halfe a dozen men? should I? Good faith</div>
+<div class="excerpt">Musse. Oh Iesu! Good Lord how it burnes? Musse keepe you warme, good truth it is this new disease, there&#x27;s a number are trou bled withall: for Gods sake sweete <mark>heart</mark>, come in out of the ayre. I pray thee good sweet <mark>heart</mark> come in; the ayre will do you harme in troth. Pray God it do. Alasse brother, what would you haue me to doe?</div>
+<div class="excerpt">this? could I keepe out all them thinke you? I should put my selfe against halfe a dozen men? should I? Good faith you&#x27;ld mad the patient&#x27;st body in the world, to <mark>heare</mark> you talke so, without any sense or reason. Do you let them go so lightly sister. I but if your seruant should <mark>heare</mark> you, he vvould take it heauely. So are Asses.</div>
+<div class="excerpt">sense or reason. Do you let them go so lightly sister. I but if your seruant should <mark>heare</mark> you, he vvould take it heauely. So are Asses. I, neuer spare any body <mark>heare</mark>: but say, vvhat trickes? Oh 〈◊〉 Piso, Math murder. Indeede he seemd to be a gentleman of an exceeding fayre disposition, and of very excellent good 〈◊〉 . I but</div>
+<div class="excerpt">owne thoughts make you sicke. Hees euer calling for Cob, I vvonder how hee im ployes Cob soe. Neuer sayd you truer then that brother? Pizo fetch your cloke, and <mark>goe</mark> vvith me, ile after him presently: I vvould to Christ I could take there I fayth. Knocke Pizo pray thee. Why vvoman, grieues it you to ope your door ? Belike you</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Sister Hesperida, I pray you fetch downe the Rose wa ter aboue in the closet: Sweete hart will you come in to break fast. I pray thee (good Musse) we stay for you. VVhat ayle you sweete hart, are you not well, speake good Musse. Oh Iesu! Good Lord how it burnes? Musse keepe you warme, good truth it is this new disease, there&#x27;s a number are trou bled withall: for Gods sake sweete heart, come in out of the ayre. I pray thee good sweet heart come in; the ayre will do you harme in troth. Pray God it do. Alasse brother, what would you haue me to doe? I cannot helpe it; you see, my brother Pr spero he brings them in here, they are his friends. God&#x27;s my life; did you euer heare the like? what a strange man is this? could I keepe out all them thinke you? I should put my selfe against halfe a dozen men? should I? Good faith you&#x27;ld mad the patient&#x27;st body in the world, to heare you talke so, without any sense or reason. Do you let them go so lightly sister. I but if your seruant should heare you, he vvould take it heauely. So are Asses. I, neuer spare any body heare: but say, vvhat trickes? Oh 〈◊〉 Piso, Math murder. Indeede he seemd to be a gentleman of an exceeding fayre disposition, and of very excellent good 〈◊〉 . I but vvhat harme might haue come of it? If you be sicke, your owne thoughts make you sicke. Hees euer calling for Cob, I vvonder how hee im ployes Cob soe. Neuer sayd you truer then that brother? Pizo fetch your cloke, and goe vvith me, ile after him presently: I vvould to Christ I could take there I fayth. Knocke Pizo pray thee. Why vvoman, grieues it you to ope your door ? Belike you get something to keepe it shut. So strange you make it? is not Thorello my tryed hus band here. No dame: he hoth it not or neede but pleasure. Oh sir, haue I fore-stald your honest market? Found your close walkes? you stand amazd now, do you? I fayth (I am glad) I haue smokt you yet at las ; Whats your iewell trow? In: come lets see her; Fetch foorth your huswife, dame; if she be fayrer In any honest iudgement then my selfe, Ile be content vvith it: but she is chaunge, She feedes you fat; she soothes your appetite, And you are well: your vvife an honest vvoman, Is meate twise sod to you sir; A you trecher. Out I defie thee I, desembling wretch: Not I, I see none. And please you sir, ile tell you: my brother Pr sper tolde me that Cobs house vvas a suspected place. And that my husband vsed thether dayly; True sir, but you know vvhat growes by such haunts oftentimes. Brother had he no haunt thether in good fayth? Nay then sweet hart: nay I pray the be not angry, good faith ile neuer suspect thee ny more, nay kisse me sweet musse. Whats that sweete hart. Dissemble? A match.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Every Man in His Humor</div><div class="body">Prospero invites DOrenzo—jinior to visit him in Florence and see two gulls, Mathes and Bobadilla; Lorenzo decides to bring along his cousin St@pHAHG as a third. His father has intercepted the letter and, concerned to wean him away from poetry and towards more profitable studies, follows him to the city. The servant Misco follows EGFEHZOISEHIOF and insinuates himself into his master’s service under a new identity, disguised as a soldier. MGFENG is concerned that Prospero has become dissolute, and that the bad company which visits him will corrupt his sister M@Sperida and cuckold him; consequently he is anxious about leaving his house to do business. Matheo, who has been threatened with a cudgelling by GiliaiG, visits Bobadilla at his lodgings and they practice fighting. Later, Bobadilla assaults @6B for speaking against tobacco, and Cob procures a warrant from the city magistrate, DGGtGPIGIEMERL, to prevent ===== PAGE 52 ===== him fighting. Matheo woos Hesperida, using plagiarized verses. Giuliano provokes a fight with Matheo, but Bobadilla cannot participate because he is bound over by Cob’s warrant (and also because he is a coward); Giuliano later gives him a beating, which again he cannot resist. Thorello and his wife are lured away on false errands while Lorenzo Junior marries Hesperida. A series of ‘mistaken identities and tricks by Musco leads all the major characters to Doctor Clement’s house, either as litigants or prisoners. Lorenzo Junior pronounces on the current state of poetry. Matheo’s verses are destroyed, and he is sentenced to do public penance; Bobadilla is imprisoned. Doctor Clement requires the others to abandon their humours and dine with him, awarding Musco the place of honour. B-Text</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

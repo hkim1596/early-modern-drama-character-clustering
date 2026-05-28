@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BEA in The Wedding · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BEA</span>
+</nav>
+
+<h1>BEA</h1>
+<p class="lede">in <em>The Wedding</em> — Shirley, James</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1629</td></tr>
+<tr><th>Words</th><td>1639</td></tr>
+<tr><th>Characters</th><td>8894</td></tr>
+<tr><th>BritDrama no.</th><td>2184</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">priuacy. Nature <mark>has</mark> plac&#x27;d the trees to imitate A Roman Amphitheater. Draw, imagine all These trees were Cypresse, the companions of Our funerall, for one or both <mark>must</mark> go To a darke habitation, me-thinkes We <mark>two</mark>, are like to some vnguided men, That hauing wandred all the day in a Wild vnknowne path, at night walke downe into A</div>
+<div class="excerpt">sinnes forgiuen, vndo thee Oh Gratiana, thou art. — A thing I would not name, it sound so fearfully, &#x27;Twould make a Diuell blush, to be saluted By that, which thou <mark>must</mark> answere to. That feare betrayes thy guilt, tell me Gratiana What didst thou see in me to make thee thinke I was not worthy of thee, at thy best And richest value,</div>
+<div class="excerpt">shall all come forth And waite like mourners on thee. No, By heauen I haue not, I haue too much knowledge To suspect thee sinnefull, but in the assurance Of it, I <mark>must</mark> disclayme thy <mark>heart</mark> for euer: Gratiana my opinion of thy whitenesse Hath made my soule, as blacke as thine already; Weepe till thou wash <mark>away</mark> thy staine, and then,</div>
+<div class="excerpt">a Wild vnknowne path, at night walke downe into A hollow grot, a caue which neuer Starre Durst looke into, made in contempt of light By nature, which the Moone <mark>did</mark> neuer yet Be-friend with an melancholy beame: Oh Cosen thou hastled me, where I neue Shall see day mo e. That name Awakes my resolution, consume not Thy breath</div>
+<div class="excerpt">Exempt all eares, but Gratianaes, till A short time ripen it for your knowledge. I haue not time to dwell on circumstance, I come to take my last leaue, you and I <mark>Must</mark> neuer meete agen. This day, I had design&#x27;d for marriage, but I <mark>must</mark> Pronounce wee are eternally diuorc&#x27;d: Oh Gratiana, thou hast made a wound Beyond the cure of</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">You were my happy prospect from the window, Coose you are a most welcome guest. Pray follow. How? Good Captayne, Excuse my absence to our friends within, I haue affayres concernes me with my kinsman, Which done, we both returne to wayte on &#x27;em. Now proceed. More we are friends. What needs this circumstance? Wee were not wont to talke at such a distance, You appeare wild. Confest? I am no Gostly father. If thou hast any discontentments prethee take other time For their discourse, I am in expectation of Marriage, I would not interrupt my ioyes. Ha ! what is it? Ime your seruant. Exeunt. Thou hast a hell about thee, and thy language Speakes thee a Diuell, that to blast her innocence Dost belch these vapours: to say thou lyest, Were to admit, thou hast but made in this A humane errour, when thy sinne hath aym&#x27;d The fall of goodnesse. Gratiana false? The snow shall turne a Salamander first And dwell in fire; the ayre retreate, and leaue An emptinesse in nature, angels be Corrupt, and brib&#x27;d by mortals sell their charity Her innocence is such, that wert thou Marwood For this offence condemn&#x27;d to lodge in flames, It would for euer cure thy burning feauer, If with thy sorrow thou procure her shed One teare vpon thee, now, thou art lost for euer, And arm&#x27;d thus, though with thousand furies guarded, I reach thy heart. Drawes: What horror! Be more particular: You torture me, be briefe. Stay, I am too hasty for the knowledge Of something thou prepar&#x27;st for my destruction, May I not thinke what tis, and kill my selfe? Or at least by degrees, with apprehending Some strange thing done, infect my fancy with Opinion first, and so dispose my selfe To death? I cannot, when I thinke of Gratiana I enterrayne a heauen: the worst, Ile heare it. Whom? Ha? th&#x27;ast kept thy word thou ca st so poison all My comfort ▪ Was euer woman good, and Gratiana Vitious? lost to honour? at the instant When I expected all my Haruest ripe. The golden Summer tempting me to reape The well growne eares, comes an impetuous storme Destroyes an ages hope in a short minute, And lets me liue, the copy of mans frailty: Surely, some one of all the female sexe, Engrost the vertues, and fled hence to Heauen, Left woman-kind dissemblers. Enioyd Gratiana sinnefully, tis a sound Able to kill with horror; it infects The very aire, I see it like a mist Dwell round about, that I could vncreate My selfe, or be forgotten, no remembrance That euer I lou&#x27;d woman: I haue no Genius left to instruct me—it growes late: Within— Waite o&#x27;my kinsman to his Chamber, I shall desire your rest, pray giue me leaue To thinke a little— And why may not a kinsman be a Vilaine? Perhaps he loues Gratiana, and enuying My happinesse, doth now traduce her chastity To find this out, time will allow but narrow Limits: His last words bad me be a man. A man? yes I haue my soule, t&#x27;does not become A manly resolution to be tame thus, And giue vp the opinion of his mistresse For one mans accusat on; —ha: ith&#x27;morning? Proper. Y s Marwood I will be a man: His 〈◊〉 d, shall eyther make past the sence Of this affliction. or mine en orce A tru h f on him, if thou be st wrongd Gratiana Ile ye th Mar yr, bu if false, in this I gayne to ye, not hue a sacrifice. Exit. This place of all the Park affords most priuacy. Nature has plac&#x27;d the trees to imitate A Roman Amphitheater. Draw, imagine all These trees were Cypresse, the companions of Our funerall, for one or both must go To a darke habitation, me-thinkes We two, are like to some vnguided men, That hauing wandred all the day in a Wild vnknowne path, at night walke downe into A hollow grot, a caue which neuer Starre Durst looke into, made in contempt of light By nature, which the Moone did neuer yet Be-friend with an melancholy beame: Oh Cosen thou hastled me, where I neue Shall see day mo e. That name Awakes my resolution, consume not Thy breath oo idly, th&#x27;ast but a small time For th&#x27;use om&#x27;t, eyther employ it in the vnsaying Thy wrong to Gratiana, or thou hastens Thy last minute. Thou hast repeated, but the same in Substance touching Gratiana. Why should we fight, our letting blood wo&#x27;no Cure her, and make her honour white agen: We are friends, epen thy sinne, and marry her. Why canst tho adde to it another crime, By a refusing to repayre the ruines Of that chast temple, thou hadst violated? Her Virgin tapers are by thee extinct, No odour of her chastity, which once Gaue a perfume to Heauen, and and did refresh Her innocent soule, they that haue spoyld virginity, Do halfe restore the treasures they tooke thence By sacred marriage. Gratiana. Thou lyest, and with a guilt vpon thy soule, Able to sinke thee to damnation, drawes againe. Ile send thee hence; a whore? what woman Was euer bad enough to deserue that name? Salute some natiue fury, or a wretch Condemn&#x27;d already to hells tortures by it, Not Gratiana ; th&#x27;ast awakned iustice, And giuen it eyes to see thy treachery, The depth of thy malicious heart, that word, hath Dis-inchanted me. How haue I fin&#x27;d in my credulity &#x27;Gainst vertue, all this while? what charme bound vp My vnderstanding part, I should admit A possibility, for her to carry So blacke a soule; though all her sexe beside Had fallen from their creation? thou hast Not life enough to forfeit, what an aduantage To fame and goodnesse had beene lost. Oh Gratiana. I haue a trouble at my heart: pardon The trespasse o&#x27; your patience Gentle-men, He publish the occasion of my absence, So first, you giue me leaue, to vnlade it here; But with your fauour, I desire I may Exempt all eares, but Gratianaes, till A short time ripen it for your knowledge. I haue not time to dwell on circumstance, I come to take my last leaue, you and I Must neuer meete agen. This day, I had design&#x27;d for marriage, but I must Pronounce wee are eternally diuorc&#x27;d: Oh Gratiana, thou hast made a wound Beyond the cure of Surgery, why did nature Empty her treasure in thy face, and leaue thee A blacke prodiglous soule? Call vpon darknesse, to obscure thee rather, That neuer more thou maist be seene by mortall, Get thee some dwelling in a mist, or in A wild forsaken earth, a Wildernesse, Where thou maist hide thy selfe, and dye forgotten. Be iust, and tell thy conscience, th&#x27;ast abus&#x27;d it False woman, why dost thou increase thy horror? By the obscuring a mis-deed, which wo&#x27;d Were all thy other sinnes forgiuen, vndo thee Oh Gratiana, thou art. — A thing I would not name, it sound so fearfully, &#x27;Twould make a Diuell blush, to be saluted By that, which thou must answere to. That feare betrayes thy guilt, tell me Gratiana What didst thou see in me to make thee thinke I was not worthy of thee, at thy best And richest value, when thou were as white In soule, as beauty? for sure, once thou wer so: Hadst thou so cheape opinion of my birth, My breeding, or my fortunes, that none else Could serue for propertie of your lust, but I? A common father to thy sinne-got issue, A patron of thy ifled, vnchast wombe? Oh tho wert cruell, to reward so ill The heart that truely honor&#x27;d thee: thy name Which sweetn&#x27;d once the breath of him that spake it, And musically charm&#x27;d the gentle eare; Shall sound here-after like a Screech-owles note, And fright the hea er; Virgins shall lament That thou hast sham&#x27;d their chast society, And oft as Himen lights his tapers vp, At the remembrance of thy name, shed teares, And blush for thy dishonour: from this minute, Thy friends shall count thee desperately si ke, And whensoere thou goest abroad, that day The maides and matrons, thinking thou art dead, And going to the graue, shall all come forth And waite like mourners on thee. No, By heauen I haue not, I haue too much knowledge To suspect thee sinnefull, but in the assurance Of it, I must disclayme thy heart for euer: Gratiana my opinion of thy whitenesse Hath made my soule, as blacke as thine already; Weepe till thou wash away thy staine, and then, I h&#x27;other world, we two, may meete agen. Exit. I&#x27;the Parke. Ha, farwell. I will not heare an accent, I shall loose My memory, be charmed into beliefe That she is honest with her voyce, I dare not Trust my frailty with her. Pray keepe em. I would forget that name, speake it no more. For her-selfe. My afflictions Are not yet numbred in my fate, nor I Held ripe for Death. Thou didst promise To informe me of Gratiana. I am all wonder. Milisent bring in Cardona. Where am I lost: this story is more killing Then all my iealousies: Oh Cardona Goe safe from hence, but when thou com&#x27;st at home, Locke thy selfe vp and languish, till thou dye Thou shalt meete Marwood, in a gloomy shade, Giue backe this salary, Exit Cardona. Oh my ioy rauisht soule, but where&#x27;s the youth Brought mee this blessing? vanisht Gratiana Where is hee? I would hang about his necke And kisse his cheeke, he we not leaue me so: Gone? sure it was some angell, was hee not, Or doe I dreame this happinesse, wot not thou Forsake mee to?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Wedding</div><div class="body">Beauford is to marry Sir John Belfare’s daughter, Gratiana, but on the eve of the wedding his kinsman Marwood tells him that she is unchaste: he himself has slept with her. Beauford fights a duel with him in the park; Marwood is wounded, but still insists that his story is true. Beauford sends a surgeon to him, but the body disappears before he arrives, taken away for treatment by the park gamekeeper’s wife. Beauford accuses and jilts Gratiana on the day of the wedding. Questioned by. Beauford’s friend Captain Landby, Gratiana insists that she is a virgin, and he offers to help vindicate her. At his instigation, she writes to Beauford pretending to have drowned herself, and shuts herself away in the house of Landby’s uncle, Justice Landby. Milisent, a boy servant, tells Gratiana that Marwood has died insisting on the veracity of his accusation: he slept with Gratiana with the connivance of her guardian Cardona. Milisent then tells Beauford that Marwood was mistaken: Gratiana is innocent, and Cardona is to blame. The boy also claims to have brought him Marwood’s body, but the coffin actually contains the living Gratiana, and the lovers are reconciled. Beauford is arrested for Marwood’s murder arid brought before Justice Landby. Belfare rushes to the judge&#x27;s house to lay an additional accusation for the rourder of the missing Gratiana, only to find her there alive. The other murder charge proves. equally iiitounded: Marwood too is present in disguise. Cardona admits that she arranged an -assignation between Marwood and Gratiana, but substituted her 1626 own daughter Lucibel, who subsequently disappeared. She too is present: she took on a male identity and became Milisent. Marwood agrees to marry her, and Beauford and Gratiana resume their engagement. In the sub-plot, Justice Landby encourages his daughter Jane to consider two inappropriate suitors, the thin Rawbone and the obese Loadum, in order to test her judgement. She is already in love with Haver, who has got himself a job as Rawbone’s servant in order to have access to her. Loadum and Rawbone consider fighting a duel over Jane; Rawbone agrees when Haver offers to fight in his place, while Loadum is persuaded upon learning that Rawbone is not considered to be much of a duellist - so he gets a surprise when his opponent, Haver in disguise, proves ready and able to fight. Justice Landby finds a love- letter from Haver in Jane’s prayer book and, disapproving of a marriage to the impecunious Haver, decides…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

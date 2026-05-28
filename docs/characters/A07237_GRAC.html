@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GRAC in The Duke of Milan · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>GRAC</span>
+</nav>
+
+<h1>GRAC</h1>
+<p class="lede">in <em>The Duke of Milan</em> — Massinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1356</td></tr>
+<tr><th>Characters</th><td>7223</td></tr>
+<tr><th>BritDrama no.</th><td>1994</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">well 〈◊〉 any man, 〈◊〉 you had now A humor to kick me lame into an office, Where I might sit in State, and vndoe others, Stood I not bound to kisse the foot that <mark>did</mark> it? Though it seeme strange there haue been such things seene In the memorie of man. And incens&#x27;d For her commitment in her brothers absence, And by her Mothers</div>
+<div class="excerpt">me: we poore waiters Deale (as you see) in mirth, and foolish fyddles: It is our element; and could you tell me, What point of State &#x27;tis, that I am commanded To muster vp this musicke: on mine honesty, You should much befriend me. Not by your Lordships, Without a speciall warrant; looke to your owne stakes; Were I committed,</div>
+<div class="excerpt">Fourtie Dacats Vpon the little Hen: She&#x27;s of the kind, And will not leaue the Pit. I would I were well off. Would I were fiue Leagues hence. I preach patience, And <mark>must</mark> endure my fortune. <mark>Must</mark> I pay For being tormented and dishonor&#x27;d? Verie good Sir, But am I the first man of qualitie, That e&#x27;re came vnder your fingers? I was a</div>
+<div class="excerpt">honour him, That holds the wheele of Fortune? No, that sauors Too much of th antient freedome: Since great men Receiue disgraces, and give thankes, poore knaues <mark>Must</mark> haue not spleene 〈…〉 . Though I loue My limbes as well 〈◊〉 any man, 〈◊〉 you had now A humor to kick me lame into an office, Where I might sit in State, and vndoe</div>
+<div class="excerpt">beleeu&#x27;d. If I fall off From him, his threats and actions go togeither. And ther&#x27;s no hope of safetie, till I get A plummet, that may sound his deepest counsels. I <mark>must</mark> obey and serue him. Want of skill Now makes me play the rogue against my will. There he is, now speake, Or be for euer silent. He&#x27;s come. What cracke haue we next?</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">You shall scrape, and Ile sing, A scuruie Dittie, to a scuruie tune, Repine who dares. They, in Name are Lords, But I am one in Power: And for the Dutches, But yester-day we were merrie for her pleasure, We now&#x27;l be for my Ladies. Fye, no: I grant, I beare my fortunes patiently: Serue the Princesse, And haue successe at all times to her closet, Such is my impudence: when your graue Lordships Are masters of the modesty, to attend Three houres, nay sometimes foure; and then bid waite Vpon her the next morning. Who, I? alas, I haue no intelligence At home, nor abroad: I onely sometimes guesse The change of the times; I should ask of your Lordships Who are to keepe their Honors, who to loose &#x27;em; Who the Duchesse smil&#x27;d on last, or on whom frown&#x27;d, You onely can resolue me: we poore waiters Deale (as you see) in mirth, and foolish fyddles: It is our element; and could you tell me, What point of State &#x27;tis, that I am commanded To muster vp this musicke: on mine honesty, You should much befriend me. Not by your Lordships, Without a speciall warrant; looke to your owne stakes; Were I committed, here come those would baile me: Perhaps we might change places too. Your Excellence, hath the best guift to dispatch, These Arras pictures of Nobilitie, I euer read of. And couer so your bitter Pills, with sweetnesse Of Princely language to forbid reply, They are greedily swallowed. Of a little thing, It is so full of Gall: A Diuell of this size, Should they run for a wager to be spitefull, Gets not a Hors-head of her. Now the game begins. Fourtie Dacats Vpon the little Hen: She&#x27;s of the kind, And will not leaue the Pit. I would I were well off. Would I were fiue Leagues hence. I preach patience, And must endure my fortune. Must I pay For being tormented and dishonor&#x27;d? Verie good Sir, But am I the first man of qualitie, That e&#x27;re came vnder your fingers? I was a foueraigne cure, There was phisicke Was to the purpose. Prethe doe, For I grow wearie of thee. But what follow&#x27;d? Prethe be briefe. Goe, ther&#x27;s for thee, But what will be my fortune? I thanke you knaue. Whipt like a rogue? no lighter punishment striue To ballance with a little mirth: &#x27;Tis well, My credit sunke for euer, I am now Fit companie, only for Pages and for foot boyes, That haue perused the Porters Lodge. How they stare at me? am I turn&#x27;d to an Owle? The wonder Gentlemen? The reason Sir? Sir, I&#x27;le call you To a strickt account for this. Better and better still, If euer wrongs Could teach a wretch to find the way to vengence, Hell now inspire me. How, the Lord Protector! My Iudge I thank him. Whether thus in priuate, I will not see him. A braue discouerie beyond my hope, A plot euen offer&#x27;d to my hand to worke on, If I am dull now, may I liue and dye The scorne of wormes &amp; slaues, let me consider, My Lady and her Mother first committed In the fauor of the Dutches, and I whip&#x27;d, That with an Iron pen is writ in brasse On my tough hart, now growne a harder mettal, And all his brib&#x27;d approches to the Dutches To be conceal&#x27;d, good, good, This to my Lady, Deliuer&#x27;d as I&#x27;le order it, runs her mad. But this may proue but courtship, let it be I care not so it feed her Iealousie. As you see cause, I will not doe ill offices. Obserue but this, And how she prays&#x27;d my Lords care and obseruance, And then iudge Madam if my intelligence Haue any ground of truth. Sir, but allow me Only to haue read the elements of Courtship (Not the abstruce &amp; hidden acts to thriue there) And you may please to grant me so much knowledge, That iniuries from one in grace, like you, Are noble fauours. Is it not growne common In euerie sect, for those that want, to suffer From such as haue to giue? Your Captaine cast If poore, though not thought daring, but approu&#x27;d so To raise a coward into name, that&#x27;s rich, Suffers disgraces publiquely, but receiues Rewards for them in priuate. But then they tasted of your bountie. All this is Oracle. And shall I then, For a foolish whipping lerne to honour him, That holds the wheele of Fortune? No, that sauors Too much of th antient freedome: Since great men Receiue disgraces, and give thankes, poore knaues Must haue not spleene 〈…〉 . Though I loue My limbes as well 〈◊〉 any man, 〈◊〉 you had now A humor to kick me lame into an office, Where I might sit in State, and vndoe others, Stood I not bound to kisse the foot that did it? Though it seeme strange there haue been such things seene In the memorie of man. And incens&#x27;d For her commitment in her brothers absence, And by her Mothers anger is spur&#x27;d on To make discoucrie of it. This her purpose Was trusted to my charge, which I declin&#x27;d As much as in me lay, but sinding her Determinately bent to vndertake it, Though breaking my faith to her may destroy My credit with your Lordship, I yet thought, Though at my peril, I stood bound to reueale it. That may proue your ruine, The Duke alreadie being, as &#x27;tis reported, Doubtfull she hath play&#x27;d false. This is a language My Lord, I vnderstand not. I am caught on both sides. This &#x27;tis for a punie In Policies Protean Schoole, to try conclusions With one that hath commenc&#x27;d &amp; gon out doctor. If I discouer, what but now he bragg&#x27;d of, I shall not be beleeu&#x27;d. If I fall off From him, his threats and actions go togeither. And ther&#x27;s no hope of safetie, till I get A plummet, that may sound his deepest counsels. I must obey and serue him. Want of skill Now makes me play the rogue against my will. There he is, now speake, Or be for euer silent. He&#x27;s come. What cracke haue we next? Now for my whipping, And if I now out-strip him not, and catch him, And by a new and strange way to, hereafter I&#x27;le sweare there are wormes in my braines. Loue, and dutie, And vigilance in me for my Lords safetie, First taught me to imagine you were here, And then to follow you. Al&#x27;s come forth my Lord That you could wish conceal&#x27;d. The Dutchesse wound In the Dukes rage put home, yet gaue her leaue To acquaint him with your practises, which your flight Did easily confirme. I would not hurt you. How he awes me? Care to informe you, You are a condemn&#x27;d man pursu&#x27;d, and sought for, And your head rated at ten thousand Ducates To him that brings it. All passages Are intercepted, and choyce troopes of horse Scoure o&#x27;re the neighbour plaines, your picture sent To euerie State consederate with Millaine. That though I grieue to speake it, in my iudgement So thicke your dangers meet, and run vpon you, It is impossible you should escape Their curious search. He instructs me What I should doe. I labour with A strong desire t&#x27;assist you with my sernice, And now I am deliuer&#x27;d of t. I haue heard Sir Of men in debt, that layd for by their creditors (In all such places where it could be thought They would take shelter) chose for sanctuarie, Their lodgings vnderneath their creditors noses, Or neere that prison to which they were design&#x27;d If apprehended, confident that there They neuer should be sought for. This my Lord, That since all wayes of your escape are stop&#x27;d, In Millaine only, or what&#x27;s more, i&#x27;the Court (Whether it is presum&#x27;d you dare not come) Conceal&#x27;d in some disguise you may liue safe. But by my selfe. In the deuils name what meanes he? Ent. seruants My good Lord. Treason, treason.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Duke of Milan</div><div class="body">Sforza, Duke of Milan, dotes on his haughty Duchess Marcelia, and fears the prospect of losing her. Her birthday banquet is interrupted by bad news: Sforza rebuffed Charles the Emperor’s overtures and chose to ally Milan with France instead; but now the Empire has routed France at the Battle of Pavia. Sforza expects imperial reprisals, and goes to submit himself to Charles. Before he leaves, he appoints Francisco his deputy, with instructions that, should he not return, Marcelia is to be murdered so that nobody else shall enjoy her. He submits himself to Charles, offers an explanation but no excuse for his supporting France, and expresses his willingness to pay with his life in order to prevent the imperial army from sacking Milan, thus sparing his subjects further bloodshed. His dignity impresses Charles, who confirms his ducal title. In Sforza’s absence, the tensions between Marcelia and his sister Mariana break out into open violence. Though Mariana is his own wife, Francisco takes Marcelia’s side in the quarrel and imprisons Mariana. Believing that Sforza will not return, he propositions Marcelia, shows her the warrant for her execution, and suggests that they should seize power together. She refuses him, so he explains the excessive love which led Sforza to order her death. This annoys her. When Sforza returns to Milan, she greets him coldly, which gives offence. Mariana learns of Francisco’s efforts to seduce Marcelia, and informs Sforza, who will not believe her. Francisco finds out her plans in advance and sets up the situation to favour his revenge: three years before, his sister Eugenia was seduced by Sforza with a promise of marriage on which he then reneged. First he presents himself to Marcelia as a potential victim of Sforza’s jealousy, inducing her to promise to protect him. Then he tells Sforza that Marcelia has tried to seduce him. As a test of her fidelity, Sforza pretends to have murdered ===== PAGE 365 ===== 1621 Francisco; Marcelia’s outrage seems to confirm her guilt, and Sforza wounds her fatally. News arrives that Francisco has fled Milan; Marcelia tells her husband the truth, and dies. Sforza is distracted with grief. His physicians persuade him that she is merely in a coma and may one day be revived, but realize that putrefaction will soon put an end to the ruse. Francisco returns to court posing as a Jewish doctor, and offers to treat the body to prolong the appearance of life. In fact, he puts poison in her mouth, claiming it…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

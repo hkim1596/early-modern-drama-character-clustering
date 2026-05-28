@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2 SPA in A Larum for London, or The Siege of Antwerp · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_30.html">Cluster 30 — 30: kill, away, murder</a> ›
+  <span>2 SPA</span>
+</nav>
+
+<h1>2 SPA</h1>
+<p class="lede">in <em>A Larum for London, or The Siege of Antwerp</em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1602</td></tr>
+<tr><th>Words</th><td>33</td></tr>
+<tr><th>Characters</th><td>206</td></tr>
+<tr><th>BritDrama no.</th><td>1191</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 30 (<em>kill, away, murder, villaine, death, sword…</em>). Matches are highlighted.</p>
+<div class="excerpt">Tue, Tue, Tue, Tue. Follow, follow, follow, follow. Cut the Bastards throates. Zwounds, dash out their braines. Then Prophet, didst thou prophesie of this? And this, Get you together with your damned brats.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Tue, Tue, Tue, Tue. Follow, follow, follow, follow. Cut the Bastards throates. Zwounds, dash out their braines. Then Prophet, didst thou prophesie of this? And this, Get you together with your damned brats.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Larum for London, or The Siege of Antwerp</div><div class="body">Sancho D’Avila needs money to pay his troops, and plans to raise it by sacking Antwerp. He conspires with the captain of the city’s garrison, Cornelius van End, and summons Spanish forces from across the Netherlands. Claiming to be retaliating over Antwerp’s support for the Prince of Orange, he makes an artillery attack on the State House while the rulers are dining there; three people are killed. The Spanish commander, Alva, fakes his own death in order to give a pretext for further reprisals against the city. The rulers of Antwerp, including a fat burgher, do not take the threat seriously, considering defence expenditure to be a waste of money; but they are finally persuaded to accept help from the Marquis d’Havré and Count Egmont, so long as they don’t have to pay for it. Van End leaks the information to D’ Avila. The Spaniards attack and the garrison under van End defects to their side. The rulers of Antwerp struggle to organize their troops. Havré and Governor Champagny are killed, but Egmont is saved by Alva and sent to Spain as a prisoner. Antwerp falls swiftly; thousands of citizens are killed, and the victorious Spaniards execute a further 10,000 survivors in reprisal for 300 Spanish deaths. They also renege on a diplomatic agreement between England and Spain protecting English lives and property in the Low Countries: Alva demands an impossible sum by way of ransom, and rejects what they can offer as too little. ===== PAGE 119 ===== 1599 Another Englishman pays his own ransom, but is hanged by another commander when he cannot pay again. For the purposes of pillage, the Spanish commanders divide the city between them. Meanwhile the one- legged veteran Stump musters the survivors to resist the invader. D’Avila sets about despoiling his quarter of the city, demanding not only money but sexual favours from a nun; but when he cannot find a safe place to stow her pending her rape, he kills her instead. Other casualties include children, a blind man, and his wife. Van End demands a woman’s treasure, but she pushes him into a vault and Stump stones him to death. The fat burgher is captured by the Spaniards, but neither threats nor tickling can persuade him to reveal where his treasure is hidden. He is rescued by Stump, and offers his hidden gold, but Stump isn’t interested: he refused to pay the soldiers in peacetime, and it is too late now. Stump fights on to the death, intending to seek his reward in heaven. Antwerp is left in ruins, its streets piled…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_30.html">Cluster 30 — 30: kill, away, murder</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TYND in Orestes · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> ›
+  <span>TYND</span>
+</nav>
+
+<h1>TYND</h1>
+<p class="lede">in <em>Orestes</em> — Goffe, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>1172</td></tr>
+<tr><th>Characters</th><td>6326</td></tr>
+<tr><th>BritDrama no.</th><td>1929</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 18 (<em>death, thebes, did, myne, eke, wyth…</em>). Matches are highlighted.</p>
+<div class="excerpt">OVr daughter send for vs? how fares she? well? She mournes I&#x27;m sure for her husbands <mark>death</mark>. I, griefe soone ends That flowes in teares; they still are womens friends: But how is&#x27;t rumord now in Argos, though, That Agamemnon dyde. &#x27;Twas a long home, hee</div>
+<div class="excerpt">in Argos, though, That Agamemnon dyde. &#x27;Twas a long home, hee got by comming home, Well, well, Misander, I like not the course, The peoples murmure makes my cheekes to blush. O, Sir, but those that doe commend for feare, Doe in their hearts a secret hatred beare. Euer learne this; the truest praise indeed, Must from the heart,</div>
+<div class="excerpt">totally for to inuest himselfe In Agamemnons seat? Where&#x27;s young Orestes ? How took my daughter that? I feare heauen cannot looke with equall eyes Vpon so many deaths, but meanes to send Plague after plague; for in a wretched state, One ill begets another dismall Fate: But goe and tell my daughter I will come, And helpe to solemnize</div>
+<div class="excerpt">home: Fortune me thinks ne&#x27;re shew&#x27;d her power more, How quickly could she turn her Fatall sword Vpon his brest, that thought himselfe past harme, She that had vs&#x27;d <mark>death</mark> like an angry dogge, Holding him vp, when that he should haue bit, When al the game was past, and&#x27;s fury laid, The King being past all danger, safe at home, Then</div>
+<div class="excerpt">there might spring a rose, Where e&#x27;re thou trod&#x27;st could not keepe backe thy foes. Some plague he hath, but such a matricide Should neuer die, although he euer dide. WEnt they this way? my Lords, you moue mee much, Could I find him now, I would seat him new, In his right Kingdome, which doth weigh downe mee. Then now is Argos</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">OVr daughter send for vs? how fares she? well? She mournes I&#x27;m sure for her husbands death. I, griefe soone ends That flowes in teares; they still are womens friends: But how is&#x27;t rumord now in Argos, though, That Agamemnon dyde. &#x27;Twas a long home, hee got by comming home, Well, well, Misander, I like not the course, The peoples murmure makes my cheekes to blush. O, Sir, but those that doe commend for feare, Doe in their hearts a secret hatred beare. Euer learne this; the truest praise indeed, Must from the heart, and not from words proceed. I feare some foule play: doth Aegystheus meane, Then totally for to inuest himselfe In Agamemnons seat? Where&#x27;s young Orestes ? How took my daughter that? I feare heauen cannot looke with equall eyes Vpon so many deaths, but meanes to send Plague after plague; for in a wretched state, One ill begets another dismall Fate: But goe and tell my daughter I will come, And helpe to solemnize her nuptiall night: Her hasty wedding, and the old Kings neglect, Makes my coniecturall soule some ill suspect. Exeunt. O but pray Ioue the Fates now were not forc&#x27;t, But deeds like words no man can e&#x27;re recall, Bee&#x27;t good or ill; once don, we must beare all. Come Father sit we downe, and make a feast, They set to the feast. To glad our hearts; Heauen still doth for the best. Who euer trusted much on fortunes gifts, On wife, on state, on health, on friends, on lands, May looke on Agamemnons comming home: Fortune me thinks ne&#x27;re shew&#x27;d her power more, How quickly could she turn her Fatall sword Vpon his brest, that thought himselfe past harme, She that had vs&#x27;d death like an angry dogge, Holding him vp, when that he should haue bit, When al the game was past, and&#x27;s fury laid, The King being past all danger, safe at home, Then he slip&#x27;s coller, neuer vntill then; And fortune she stood hissing of him on, Till he had torne the good Kings soule away. Aegystheus, since the Gods haue bless&#x27;d you so, Haue care their blessings turne not to your woe. Your ioy, my daughters ioy, and my ioy too, Haue care it be preseru&#x27;d, and brought vp well: And take heed, sonne, of Agamemnons blood, Pierce not with enuy the Babes tender heart. I see&#x27;t Aegystheus, and my ag&#x27;d blood grows warme, As if my selfe were a new father made, And all the blessings I can render it, Shal drop like golden showers on the head: Me thinks it doth recall my sliding age, And makes swift time retire backe againe: It doth vnfold those wrincles in my face, Which griefe and yeeres had fixed as their signes Vpon my brow, and now it shall be seene, Althoug my hayres are gray, my ioyes are greene. Lay hands o&#x27;th villaine, &#x27;tis the Physicians de 〈…〉 See, see, thy mother, looke vpon her now, On her, whose eyes thou hast for euer clos&#x27;d, Which eyes haue often wakned at thy cry, And hush&#x27;d thee with a lullaby to sleepe: See, see, these hands, which oft with so much care, Wrapt gently vp thy vnset tender limbs: See, see, this face, wont at thy signes to smile, When nature gaue not leaue vnto thy tongue. To vtter thy childs meaning. O, what earth loues so much a guilty soule, That it can beare thee? Thou heire to kingdomes! thou a subiect rather, To helpe to make a Players Tragedie. Not so, but I will banish you the court, And you Electra, come, I must forget Affection too towards you, you gaue the child, Which you had charge of to the murderers sword. Vnto this punishment this one more I adde, That none shall dare to giue Orestes foode, And this decree shall stand; I speake with griefe, And here pronounce Orestes no reliefe. Hence with these corps; poore child what hadst thou don? Thy Nurses prayers, that there might spring a rose, Where e&#x27;re thou trod&#x27;st could not keepe backe thy foes. Some plague he hath, but such a matricide Should neuer die, although he euer dide. WEnt they this way? my Lords, you moue mee much, Could I find him now, I would seat him new, In his right Kingdome, which doth weigh downe mee. Then now is Argos Court like to some stage, When the sad plot fills it with murdred Trunckes, And none are left aliue but onely one, To aske the kinde spectators ( plaudite ) All else haue bid ( valete ) to the world, The man reseru&#x27;d for that, is Tyndarus, Who thus hath seen his childrens childrens end, His Grandchild, a bad sonne, a most deare friend; The Scene must now be ouerflow&#x27;d with grones, Each man sits downe to waile his priuate mones: One for the Queen doth weep, one for the King, All taste the bitter waters of this Spring: The Nurse bewails the child, that part she beares, All haue their subiects to bedew with teares; Each one yet haue but one; but all of mee, Challenge a part in griefes sad sympathy. Orestes, Clytemnstra, I must call, These all for mine, thus must I weepe for all: Let none belieue this deed, or if they doe. Let them belieue this punishment then too. &#x27;Tis vile to hate a Father, but such loue, As breeds a hate to&#x27;th mother, worse doth proue: Our life consists of ayre, our state of winde, All things we leaue behind vs which wee find, Sauing our faults; witnesse Orestes here, VVho was his owne tormentor, his owne feare. VVho flying all, yet could not fly him selfe, But needs must shipwrack vpon murders shelfe: And so his brest made hard with miserie, He grew himselfe to be his enemy. Thus griefe and gladnesse still by turnes do come, But pleasure leastwhile doth possesse the roome. Long nights of griefe may last, but lo, one day Of shining comfort slideth soone away. He, whom all feare on earth, must feare a fate, For all our powers are subordinate: Three howres space thus well can represent, Vices contriu&#x27;d and murders punishment. A Monarchs life can in this little space Shew all the pompe that all the time doth grace His risings and his falls, and in one span Of time, can shew the vanity of man. For none of vs can so command the powers That we may say, to morrow shall be ours. Now Fortunes wheele is turn&#x27;d, and time doth call, To solemnize this friendly funerall. No force so great, no so disaster wrong, As can vnknit the bands which holdeth strong Vnited hearts: who since they thus are dead, One roome, one tombe shall hold them buried: And as these friends ioyn&#x27;d hands to beare their Fate; So we desire you to imitate. VVho since they all are dead, we needs must craue Your gentle hands to bring them to their graue.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Orestes</div><div class="body">Agamemnon returns home after ten years of war. When he takes his neglected wife Clytemnestra to bed, she and her lover Aegisthus murder him. Roused by bad dreams, his son Orestes finds the body in bed. Feigning innocence, Clytemnestra curses the murderer, while the surviving Trojan glories in the death of the enemy commander: Troy is avenged. Recognizing that he is in danger, Orestes goes into hiding with Pylades until the murderer is identified, and sends a report that, unhinged with grief, he threw himself off a cliff into the sea, and that Pylades also went over trying to stop him. Aegisthus, the next in line, ascends the throne and marries Clytemnestra. She bears him a son, establishing his dynasty, and in celebration he proclaims a general pardon for all crimes. Orestes and Pylades consult the witch Canidia, who shows them a vision of Clytemnestra and Aegisthus committing the murder. They return to court in disguise. Their plotting is overheard by Misander, and they kill him to preserve secrecy, but are immediately arrested. In judging the case, Aegisthus faces two problems: the crime is covered by the general pardon, and each defendant, seeking to save the other, claims that he alone was the murderer. Aegisthus decides not to pass a death sentence on either, and is further impressed when Pylades introduces Orestes as a doctor who has perfected the secret of rejuvenation. Aegisthus asks for a demonstration, using himself and Clytemnestra as the subjects. Agamemnon’s ghost appears to Orestes, urging him to get on with the revenge and take care not to spare his mother. Pylades obtains custody of Aegisthus’ son, who is in the care of Orestes’ sister Electra. When Orestes meets with the King and Queen for their ===== PAGE 235 ===== 1620 rejuvenation, he ties them up, kills their son in front of them, forces them to drink the blood, and finally kills them. He demands his restoration to the throne, but the lords are unwilling to crown a murderer, and instead enthrone Tyndarus, whose first act is to banish Orestes and his accomplices, further stipulating that nobody must give Orestes food. Pylades’ father Strophius dies and Electra kills herself. Orestes goes mad and thinks himself tormented by the Furies. He and Pylades kill one another in a suicide pact, and Tyndarus announces that they are to be buried together in a single tomb.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PVR in Bartholomew Fair · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PVR</span>
+</nav>
+
+<h1>PVR</h1>
+<p class="lede">in <em>Bartholomew Fair</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>866</td></tr>
+<tr><th>Characters</th><td>4690</td></tr>
+<tr><th>BritDrama no.</th><td>1757</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">can be as mad in spirit, as you. Good Sir, vouchsafe a yoakefellow in your madnesse, shun not one of the sanctified sisters, that would draw with you, in truth. I <mark>must</mark> vncouer my selfe vnto him, or I shall neuer enioy him, for all the cunning mens promises. Good Sir, <mark>heare</mark> mee, I am worth sixe thousand pound, my loue to you, is</div>
+<div class="excerpt">Looke vp, sweet Win-the-fight, and suffer not the enemy to enter you at this doore, remember that your education <mark>has</mark> bin with the purest, what polluted one was it, that nam&#x27;d first the vn cleane beast, Pigge, to you, Child? O! resist it, Win-the-fight, it is the Tempter, the wicked</div>
+<div class="excerpt">lawfull as you can. Truely, I doe loue my child dearely, and I would not haue her miscarry, or hazard her first fruites, if it might be other wise. I, and I&#x27;ll <mark>goe</mark> with you my selfe, Win the-fight, and my brother, Zeale-of-the-land, shall <mark>goe</mark> with vs too, for our better con solation. Sonne, were you not warn&#x27;d of the vanity</div>
+<div class="excerpt">my loue to you, is become my racke, I&#x27;ll tell you all, and the truth: since you hate the hyporisie of the party-coloured brother-hood. These seuen yeeres, I haue beene a wilfull holy widdow, onely to draw feasts, and gifts from my in tangled suitors: I am also by office, an assisting sister of the Deacons, and a deuourer, in</div>
+<div class="excerpt">trust to deceased Brethren, and coozning their heyres, by swearing the absolute gift of their inhe ritance. And thus hauing eas&#x27;d my conscience, and vtter&#x27;d my <mark>heart</mark>, with the tongue of my loue: enioy all my deceits together. I beseech you. I should not haue reuealed this to you, but that in time I thinke you are mad, and I</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Looke vp, sweet Win-the-fight, and suffer not the enemy to enter you at this doore, remember that your education has bin with the purest, what polluted one was it, that nam&#x27;d first the vn cleane beast, Pigge, to you, Child? O! resist it, Win-the-fight, it is the Tempter, the wicked Tempter, you may know it by the fleshly motion of Pig, be strong against it, and it&#x27;s foule temptations, in these assaults, whereby it broacheth flesh and blood, as it were, on the weaker side, and pray against it&#x27;s carnall prouocations, good child, sweet child, pray. What shall we doe? call our zealous brother Busy hither, for his faithfull fortification in this charge of the aduersary; child, my deare childe, you shall eate Pigge, be comforted, my sweet child. I meane i&#x27;the Fayre, if it can be any way made, or found lawfull; where is our brother Busy? Will hee not come? looke vp, child. Slander not the Brethren, wicked one. O brother Busy ! your helpe heere to edifie, and raise vs vp in a scruple; my daughter Win-the-fight is visited with a naturall disease of women; call&#x27;d, A longing to eate Pigge. And I would be satisfied from you, Religiously-wise, whether a widdow of the sanctified assembly, or a widdowes daughter, may commit the act, without offence to the weaker sisters. Good Brother, Zeale-of-the-land, thinke to make it as lawfull as you can. Truely, I doe loue my child dearely, and I would not haue her miscarry, or hazard her first fruites, if it might be other wise. I, and I&#x27;ll goe with you my selfe, Win the-fight, and my brother, Zeale-of-the-land, shall goe with vs too, for our better con solation. Sonne, were you not warn&#x27;d of the vanity of the eye? haue you forgot the wholesome admonition, so soone? It is an aedifying consideration. Brother Zeale-of-the land ! what shall we doe? my daugh ter Win-the-fight, is falne into her fit of longing againe. To see some sights, i&#x27; the Faire. I child, so you hate &#x27;hem, as our Brother Zeale do&#x27;s, you may looke on &#x27;hem. Good brother Zeale! What doe you meane, wicked men? And shall he not into the stocks then? O, I thanke you, blessed, honest men! Is hee mad? Now heauen increase his madnesse, and blesse it, Comes a gaine. and thanke it, Sir, your poore hand-maide thanks you. Yes, I haue a warrant out of the word, to giue thankes for remouing any scorne intended to the brethren. O me! in the stocks! haue the wicked preuail&#x27;d? O good Sir, they haue set the faithfull, here to be won der&#x27;d at; and prouided holes, for the holy of the land. Mad doe they call him! the world is mad in error, but hee is mad in truth: I loue him o&#x27;the sudden, (the cunning man sayd all true) and shall loue him more, and more. How well it becomes a man to be mad in truth! O, that I might be his yoake-fellow, and be mad with him, what a many should wee draw to madnesse in truth, with vs! Sir, I loue you, and would be glad to be mad with you in truth. Verily, I can be as mad in spirit, as you. Good Sir, vouchsafe a yoakefellow in your madnesse, shun not one of the sanctified sisters, that would draw with you, in truth. I must vncouer my selfe vnto him, or I shall neuer enioy him, for all the cunning mens promises. Good Sir, heare mee, I am worth sixe thousand pound, my loue to you, is become my racke, I&#x27;ll tell you all, and the truth: since you hate the hyporisie of the party-coloured brother-hood. These seuen yeeres, I haue beene a wilfull holy widdow, onely to draw feasts, and gifts from my in tangled suitors: I am also by office, an assisting sister of the Deacons, and a deuourer, in stead of a distributer of the alms. I am a speciall maker of marriages for our decayed Brethren, with our rich wid dowes ; for a third part of their wealth, when they are marryed, for the reliefe of the poore elect: as also our poore handsome yong Virgins, with our wealthy Batchelors, or Widdowers; to make them steale from their husbands, when I haue confirmed them in the faith, and got all put into their custodies. And if I ha&#x27; not my bargaine, they may sooner turne a scolding drab, in to a silent Minister, then make me leaue pronouncing reprobation, and damna tion vnto them. Our elder, Zeale-of-the-land, would haue had me, but I know him to be the capitall Knaue of the land, making him selfe rich, by being made Feoffee in trust to deceased Brethren, and coozning their heyres, by swearing the absolute gift of their inhe ritance. And thus hauing eas&#x27;d my conscience, and vtter&#x27;d my heart, with the tongue of my loue: enioy all my deceits together. I beseech you. I should not haue reuealed this to you, but that in time I thinke you are mad, and I hope you&#x27;ll thinke mee so too, Sir? Most zealously, it is that I zealously desire.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Bartholomew Fair</div><div class="body">Bartholomew Cokes has two objectives in life: to visit the fair which shares his name, and to marry Grace Wellborn, who, as a ward, faces a financial penalty should she refuse. He sends his servant Wasp to Littlewit the proctor to obtain a marriage licence, but then, impatiently, comes himself. He brings Grace with him, and she attracts the interest of Winwife, present with his friend Quarlous as a suitor to Littlewit’s mother-in-law, Dame Purecraft. Littlewit is more interested in Cokes’s talk of the fair, having secretly written one of the puppet plays to be performed there. The only snag is that the puritanical Dame Purecraft will disapprove of their visit, thinking fairs profane. Busy, an elder of Purecraft’s church, advises the family that fairs may lawfully be visited for good reason, and comes along with them to partake of the pork. After some unfortunate experiences involving mistaken identity, Justice Overdo no longer trusts informers and has decided to do his spying personally. He visits the fair in disguise to seek out ‘enormities’ perpetrated by the fairground folk. He is impressed by one young man, Edgeworth, and decides to rescue him from the clutches of the cheaters; but he does not know that Edgeworth is a cutpurse. While Overdo is busy telling him about the wickedness of tobacco, Edgeworth steals Cokes’s purse; Overdo gets the blame. When it happens a second time, Overdo is arrested and put in the stocks. There he encounters the madman Trouble-All, who persistently demands Overdo’s warrant for any action; it transpires that he was a court official driven out of his mind by Overdo’s own actions. The watchmen, concerned to get better authority, release Overdo from the stocks for the time being. Meanwhile, the Littlewits arrive at the fair, but Busy becomes over-excited in his condemnation, attacks the fairground booths, and is arrested; Dame Purecraft goes after him, leaving Littlewit and Win free to enjoy themselves. Edgeworth tricks Wasp into making affidavit so that, at Quarlous’s instigation, he can steal Cokes’s marriage licence. Wasp too is arrested and put in the stocks, but escapes by a ruse when Overdo and Busy are put in beside him. The women visitors to the fair are separated from the men. Littlewit leaves Win in the care of two fairground bawds while he goes off to check the arrangements for his puppet show. Cokes abandons Grace and Mistress Overdo to try and get back his stolen property. Desperate for the toilet, Mistress…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

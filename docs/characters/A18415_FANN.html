@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FANN in May Day · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FANN</span>
+</nav>
+
+<h1>FANN</h1>
+<p class="lede">in <em>May Day</em> — Chapman, George</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1611</td></tr>
+<tr><th>Words</th><td>359</td></tr>
+<tr><th>Characters</th><td>1830</td></tr>
+<tr><th>BritDrama no.</th><td>1439</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Could you not spare me money for mine hostesse, where you put me to boarde? y&#x27;are a whole fortnight ar r rages. Faith Sir, shee <mark>has</mark> chaulk&#x27;t vp twenty shillings al ready, and sweares shee will chaulke no more. Alas Sir, I thinke y&#x27;are able, but the world does not know it. I hope he will foist</div>
+<div class="excerpt">stocke Innocentio, in the streets, I shall imagine still I am driuing an Oxe and an Asse before me, and cry phtroh, ho ptrough. In health sir I trust. At a poore womans labour sir. What afore my Captaine sir: you shall pardon me.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Could you not spare me money for mine hostesse, where you put me to boarde? y&#x27;are a whole fortnight ar r rages. Faith Sir, shee has chaulk&#x27;t vp twenty shillings al ready, and sweares shee will chaulke no more. Alas Sir, I thinke y&#x27;are able, but the world does not know it. I hope he will foist some money for my score, out of this gull here. Exit. In truth sir I heard no body. I haue look&#x27;t about all the house for my Mistris sir, but I cannot finde her. My Mistris in mans apparell saist thou? Would to heauen I had seene her, canst tell whither shee went. &#x27;Tis very well, shee trims my Captaine prettily, in the meane time his head paies for all, and yet alas poore hornestocke, he thinks her to haue no fault, but her too much dotage vpon him, well my conscience will not let me keepe her counsaile, he shall know on&#x27;t. No, nor if he had seene it with his owne owne eyes I thinke, I shal neuer forget how the profound Cockatrice hung on his sleeue to day, and he shoude not from her sight, shee&#x27;d follow him into the warres, one day should make an end of both their loues and liues, and then to see him the wittall, my Captaine began to stroote, and batle the pride of his merits that so height ned her affection. Well, &#x27;twill not be for any man to follow him, if this were knowne once. Well, and I were worthy to giue him counsaile, he should e&#x27;ne faire and well hang himselfe. A plague of her labour, the Captaines browes sweate while shee labours. That dare not I doe, but as often as he turnes his backe to me, I shall be here V with him thats certaine: or when I fol low him and his cheating stocke Innocentio, in the streets, I shall imagine still I am driuing an Oxe and an Asse before me, and cry phtroh, ho ptrough. In health sir I trust. At a poore womans labour sir. What afore my Captaine sir: you shall pardon me.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — May Day</div><div class="body">It is May morning. In accordance with the season, old Lorenzo is planning an amorous, adulterous adventure with Francischina, and approaches her kinsman Angelo to act as go-between. Francischina’s husband too is going out with his gull, Innocentio, who is to observe gentlemanly behaviour at an ordinary. Lodovico makes doubly sure of his absence by introducing him to an admirer, Giovanelli, and they go to a tavern together. He is implicated in a second plot which in turn requires Lorenzo to be away from his home: Lorenzo’s daughter Aemilia, whom he plans to marry against her will to Gasparo, loves Aurelio, and Lodovico has promised to bring him to her at the house’s rear terrace. Meanwhile, Leonoro conspires with Temperance to win the love of Lucretia, Aurelio’s cousin. Nothing goes entirely according to plan. Lorenzo comes to Francischina disguised as a chimney-sweep, so that he can enter the house without risk to her honour, but Lodovico lets his friends in on the secret and they tease him on the way; later Angelo pretends to be Quintiliano coming home early, and frightens Lorenzo into hiding. Aurelio’s assignation with Aemilia turns out to involve more than talking when Lodovico provides a rope ladder and he climbs up onto the terrace, which gives access to her bedroom. Lodovico waits below, muffled in his cloak, and Temperance mistakes him for Leonoro; she invites him in just as the real Leonoro arrives and is taken to Lucretia’s chamber. When he gets into bed with her, however, the liaison ends with fighting when he discovers ‘her’ to be a cross- dressed man. Meanwhile Quintiliano cozens Giovanelli of his money and then returns home drunk to find Lorenzo, still disguised, hiding in his coal-house. Lorenzo goes home in turn and discovers Aurelio and Aemilia together; Angelo helps Aurelio escape while Lorenzo is changing out of his disguise before fetching the Provost to administer justice, then substitutes Francischina in Aurelio’s clothes so that Lorenzo will infer that he misunderstood an innocent jest. Everyone goes to the May night show at Honorio’s house, which includes a masque. Leonoro and Quintiliano have the page Lionel cross-dress as a woman with a view to tricking Innocentio into chatting her up. Leonoro confronts Lodovico over his liaison with ‘Lucretia’, and he explains what happened. In fact ‘she’ is really Lucretio, whose father was a Sicilian exile and close friend of Aurelio’s family. ‘Lionel’ turns out to be Lucretio’s fiancée…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

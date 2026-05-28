@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BULL in Richard the Second · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>BULL</span>
+</nav>
+
+<h1>BULL</h1>
+<p class="lede">in <em>Richard the Second</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1597</td></tr>
+<tr><th>Words</th><td>1524</td></tr>
+<tr><th>Characters</th><td>8214</td></tr>
+<tr><th>BritDrama no.</th><td>1002</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">royalties Pluckt from my armes perforce; and giuen away To vpstart vnthrifts? wherefore was I borne? If that my cousin King be King in <mark>England</mark>, It must be granted I am <mark>duke</mark> of Lancaster: You haue a sonne, Aumerle, my noble cousin, Had you first died, and he bin thus trod downe, He should haue found his vncle Gaunt a father, To rowze</div>
+<div class="excerpt">too much vrging your pernitious liues, For twere no charitie; yet to wash your bloud From off my hands, heere in the view of men I will vnfold some causes of your deaths: You haue misled a Prince, a royall King, A happy Gentleman in bloud and lineaments, By you vnhappied, and disfigured cleane, You haue in manner with your sinfull</div>
+<div class="excerpt">cheekes With teares, drawen from her eies by your fowle wrongs, My selfe a Prince, by fortune of my birth, Neere to the King in bloud, and neere in loue, Till you <mark>did</mark> make him misinterpret me, Haue stoopt my necke vnder your iniuries, And sigh&#x27;t my English breath In forren cloudes, Eating the bitter bread of banishment, Whilst</div>
+<div class="excerpt">me no signe, Saue mens opinions, and my liuing bloud, To shew the world I am a gentleman. This and much more, much more then twice all this Condemns you to the <mark>death</mark>: see them deliuered ouer To execution and the hand of <mark>death</mark>. So that by this intelligence we learne The Welch men are disperst, and Salisburie Is gone to meete</div>
+<div class="excerpt">most redoubted Lord, As my true seruice shall deserue your loue. Call forth Bagot. Now Bagot, freely speake thy mind, What thou doest know of noble Gloucesters <mark>death</mark>, Who wrought it with the King, and who performde The bloudy office of his timeles end. Cousin, stand foorth, and looke vpon that man. Bagot, forbeare, thou shalt</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">First, heauen be the record to my speech, In the deuotion of a subiects loue, Tendring the pretious safetie of my Prince, And free from other misbegotten hate, Come I appellant to this princely presence. Now Thomas Mowbray do I tur to thee, And marke my greeting well: for what I speake My body shall make good vpon this earth, Or my diuine so le answer it in heauen: Thou art a traitour and a miscreant, Too good to be so, and too bad to liue, Since the more faire and cristall is the skie, The vglier seeme the cloudes that in it fl e: Once more, the more to aggrauate the note, With a foule tra tors name stuffe I thy throte, And wish (so please my Soueraigne) ere I moue, What my tong speaks, my right drawen sword may prou . Pale trembling coward there I throw my gage, Disclaiming here the kinred of the King, And lay aside my high bloudes royaltie, Which Feare, not Reuerence makes thee to except. If guilty dread haue left thee so m ngth, As to take vp mine honours pawn 〈◊〉 stowpe, By that, and all the rites of Knighthoo e else, W ll I make good against thee arme to arme, What I haue spoke, or thou canst worst deuise. O God defend my soule from such deepe sinne, Shall I seeme Crest-fallen in my fathers sight? Or with pale beggar-feare impeach my height, Before this out-darde Dastard? ere my tong Shall wound my honour with such feeble wrong, Or sound so base a parlee, my teeth shall teare The slauish motiue of recanting feare, And spit it bleeding in his high disgrace, Where Shame doth harbour euen in Mowbraies face. How long a time lies in one little word. Foure lagging winters and foure wanton springes, End in a word, such is the breath of Kinges. I haue too few to take my leaue of you, When the tongues office should be prodigall. To breathe the aboundant dolor of the heart. Ioy absent, griefe is present for that time. How far is it my Lord to Barckly now? Of much lesse value is my company, Then your good wordes. But who comes here? I thanke thee gentle Persy, and be sure. I count my selfe in nothing else so happy, As in a soule remembring my good friends ▪ And as my fortune ripens with thy loue, It shalbe still thy true loues recompence, My heart this couenant makes, my hand thus seales it. VVelcome my Lords, I wot your loue pursues, A banisht traitor: all my treasury Is yet but vnfelt thanks, which more inricht ▪ Shalbe your loue and labours recompence. I shall not need transport my words by you, Here comes his grace in person, my noble Vnckle. My gratious Vnckle. My gratious Vnckle let me know my fault, On what condition stands it and wherein? As I was banisht, I was banisht Hereford, But as I come, I come for Lancaster. And noble Vnck e I beseech your grace, Looke on my wrongs with an indiffere t eie: You are my father, for me thinkes in you I see old Gaunt aliue. Oh then my father, Will you permit that I shall stand condemnd A wandering vagabond, my rights and royalties Pluckt from my armes perforce; and giuen away To vpstart vnthrifts? wherefore was I borne? If that my cousin King be King in England, It must be granted I am duke of Lancaster: You haue a sonne, Aumerle, my noble cousin, Had you first died, and he bin thus trod downe, He should haue found his vncle Gaunt a father, To rowze his wrongs and chase them to the baie. I am denyed to sue my Liuery here, And yet my le ters pa tents giue me leaue. My fathers goods are all strainde and sold, And these, and all, are all amisse employed. What would you haue me do? I am a subiect ▪ And I challenge law, Atturnies are denied me, And therefore personally I lay my claime To my inheritance of free descent. An offer vncle that we will accept, But we must winne your Grace to go with vs, To Bristow castle, which they say is held By Bushie, Bagot, and their complices ▪ The caterpillers of the commonwealth, Which I haue sworne to weede and plucke away. Bring forth these men. Bushie and Greene, I will not vex your soules, Since presently your soules must part your bodies With too much vrging your pernitious liues, For twere no charitie; yet to wash your bloud From off my hands, heere in the view of men I will vnfold some causes of your deaths: You haue misled a Prince, a royall King, A happy Gentleman in bloud and lineaments, By you vnhappied, and disfigured cleane, You haue in manner with your sinfull houres Made a diuorce betwixt his Queene and him, Br ke the possession of a royall bed, And stainde the beutie of a faire Queenes cheekes With teares, drawen from her eies by your fowle wrongs, My selfe a Prince, by fortune of my birth, Neere to the King in bloud, and neere in loue, Till you did make him misinterpret me, Haue stoopt my necke vnder your iniuries, And sigh&#x27;t my English breath In forren cloudes, Eating the bitter bread of banishment, Whilst you haue fed vpon my seg ories ▪ Disparkt my parkes, and felld my forrest woods, From my owne windowes torne my houshold coate, Rac t out my imp eese, leauing me no signe, Saue mens opinions, and my liuing bloud, To shew the world I am a gentleman. This and much more, much more then twice all this Condemns you to the death: see them deliuered ouer To execution and the hand of death. So that by this intelligence we learne The Welch men are disperst, and Salisburie Is gone to meete the King, who lately landed With some few priuate friends vpon this coast. Mistake not (vncle) further then you should. I know v cle, and oppose not my selfe. Against their will. But, who comes here? Welcome Harry; what, will not this castle yeelde? Royally, why it containes no King. Noble Lords, Go to the rude ribbes of that ancient Castle, Through brazen trumpet send the breath of parlee Into his ruinde eares, and thus deliuer. H. Bull. on both his knees doth kisse king Richards hand, And sends allegeance and true faith of heart To his most royall person: hither come Euen at his feete to lay my armes and power: Prouided, that my banishment repeald, And lands restored againe be freely granted; If not, Ile vse the aduantage of my power, And lay the summers dust with showres of bloud, Rainde from the wounds of 〈◊〉 English men, The which, how 〈◊〉 off from the minde of Bulling. It is, such crimson t mpest should be drench The fresh greene lap of faire King Richards land: My stooping duety tenderly shall shew: Go signifie as much while here we march Vpon the grassie carpet of this plaine; Lets march without the noyse of threatning drumme, That from this Castels tottered battlements Our faire appointments may be well perusde. Me thinke King Richard and my selfe should meete With no lesse terrour than the elements Of fire and water, when their thundring shocke At meeting teares the cloudie cheekes of heauen. Be he the fire, Ile be the yeelding water; The rage be his, whilst on the earth I raigne. My water&#x27;s on the earth, and not on him. March on, and marke King Richard how he lookes, See see King Richard doth himselfe appeare. As doth the blushing discontented Sunne, From out the fierie portall of the East, When he perceiues the enuious cloudes are bent To dimme his glorie, and to staine the tracke Of his bright passage to the Occident. What saies his maiestie? Stand all apart, And shew faire dutie to his Maiestie: My gratious Lord. My gratious Lord, I come but for mine owne ▪ So farre be mine my most redoubted Lord, As my true seruice shall deserue your loue. Call forth Bagot. Now Bagot, freely speake thy mind, What thou doest know of noble Gloucesters death, Who wrought it with the King, and who performde The bloudy office of his timeles end. Cousin, stand foorth, and looke vpon that man. Bagot, forbeare, thou shalt not take it vp. These differences shall all rest vnder gage, Till Norffolke be repeald, repeald he shallbe, And though mine enimie, restord againe To all his landes and signiories: when he is returnd. Against Aumerle we will inforce his triall. Why B. is Norffolke dead? Sweet peace conduct his sweete soule to the bosome, O good olde Abraham Lords Appellants ▪ Your differences shall all rest vnder gage. Till we assigne you to your daies of triall. In Gods name Ile ascend the regall throne. Let it be so, and loe on wednesday next, We solemnly proclaime our Coronation, Lords be ready all.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Richard the Second</div><div class="body">HennyiBolingbroke and THOMasIMGWbiay accuse one another of treason. Bolingbroke claims that Mowbray has misappropriated money intended to pay the army, and is responsible for the murder of the Duke of Gleweester. Mowbray insists that the money he kept was in reimbursement of legitimate expenses, but has no very clear rebuttal to the murder charge. They challenge one another to fight, and KimglRi@hard is unable to persuade them out of it. On the appointed day, however, he intervenes to halt the trial by combat and banishes them both, Bolingbroke for a term of years and Mowbray forever; Bolingbroke’s sentence is ===== PAGE 288 ===== cut from ten years to six to please his father, JOHMIS Gaunt Richard is using unorthodox means to raise revenue, including leases and forced loans. He goes to visit Gaunt, who is mortally ill, hoping to find him dead so that he can seize the estate to pay for his Irish wars; but he arrives too soon and has to listen to some dying words of wisdom. He then sequesters Gaunt’s property, despite fRelDUKeIOMork&#x27;s protest at the dispossession of the rightful heir, Bolingbroke. He goes to Ireland, leaving York to rule England in his absence. NOrhUmbeHand and other nobles, discontented with Richard’s fiscal practices, learn that Bolingbroke is returning to England with an army, and join him. York mobilizes troops to defend the kingdom, but Bolingbroke insists that he only comes to claim his inheritance. Richard returns from Ireland, intending to crush the rebellion, only to find that the Welsh troops with whom he was to rendezvous have given up waiting, thinking him dead, and disbanded themselves. He gives in to despair on learning that Bolingbroke has executed his favourites and won York’s support. Bolingbroke demands the repeal of his banishment and restoration of his lands, but Richard is willing even to give up the crown. At a parliament, there are persistent rumours and recriminations about Gloucester’s death, and gages thud to the floor as numerous lords challenge one another to fight. Bolingbroke controls the situation. Richard resigns in his favour, and he becomes King Henry IV; HelBishoplofcarlisle dissents and is arrested. Richard is summoned to make a formal, public surrender of power, but he balks at the demand that he read a list of charges against his regime. His Qh returns to France, and he is imprisoned at Pontefract. WorkSMson, degraded in rank for supporting Richard, joins a conspiracy to assassinate the new King. York…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

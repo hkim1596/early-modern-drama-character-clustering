@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LORD in Timon of Athens · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_01.html">Cluster 1 — 1: timon, timons, cleora</a> ›
+  <span>LORD</span>
+</nav>
+
+<h1>LORD</h1>
+<p class="lede">in <em>Timon of Athens</em> — Shakespeare, WilliamMiddleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>139</td></tr>
+<tr><th>Characters</th><td>715</td></tr>
+<tr><th>BritDrama no.</th><td>1536</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 1 (<em>timon, timons, cleora, athens, honour, must…</em>). Matches are highlighted.</p>
+<div class="excerpt">ſome part of our zeales, we ſhould thinke our ſelues for euer perfect. We are ſo vertuouſly bound. The beſt of Happines, Honor, and Fortunes Keepe with you Lord <mark>Timon</mark>. Let it flow this way my good Lord. Ioy had the like conception in our eies, And at that inſtant, like a babe ſprung vp. With more then common thankes I will receyue</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">What time a day is&#x27;t Apemantus ? My Lord, we alwaies haue confeſt it. Might we but haue that happineſſe my Lord, that you would once vſe our hearts, whereby we might expreſſe ſome part of our zeales, we ſhould thinke our ſelues for euer perfect. We are ſo vertuouſly bound. The beſt of Happines, Honor, and Fortunes Keepe with you Lord Timon. Let it flow this way my good Lord. Ioy had the like conception in our eies, And at that inſtant, like a babe ſprung vp. With more then common thankes I will receyue it. So infinitely endeer&#x27;d. I promiſe you my Lord you mou&#x27;d me much. O he&#x27;s the very ſoule of Bounty. My Lord you take vs euen at the beſt. Where be our men? I am ſo farre already in your guifts. Our Horſes.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Timon of Athens</div><div class="body">; Timon gives freely of his riches to his acquaintances: every little gift will trigger disproportionate largesse by way of requital. He intervenes financially to secure Ventidius’ release from a debtors’ prison, and settles money on his servant Lucilius to enable him to marry the girl he loves, a wealthy man’s daughter. He entertains guests at a lavish feast at which a masque of Amazons is performed. But his creditors. are alarmed by his uncontrolled spending, and call in his debts, which amount to more than the value of his entire estate. He imagines that he can still call on the former recipients of his liberality, but they make their excuses and leave him in difficulties; he is failed even by Ventidius, now a rich man after his father’s death. Timon lays on a second feast, and invites his unreliable friends; they think normal service has been resumed, but are discomfited to find that the menu consists of water alone. Timon drives them off with abuse and leaves Athens in misanthropic fury. Alcibiades attempts to save a friend from execution for murder, but the Senate dismisses the appeal; when he persists, they banish him. In the forest, Timon digs for roots to eat, but finds only buried gold. He meets Alcibiades, marching against Athens with his soldiers, and gives him gold to ensure the city’s destruction; he also pays the army’s whores to spread venereal disease. He encourages a band of thieves to prey upon mankind, but his words persuade them to rethink their way of life. His faithful steward seeks him out and offers to share his own savings; Timon rewards him for his honesty but does not change his low opinion of the rest of humanity. News gets round that Timon still has gold, and hangers-on arrive, hoping this means his bankruptcy was only a bluff to test his friends; he drives them violently away. The Senate asks Timon to return to Athens as its tuler, to defend it against Alcibiades, but Timon, who is busy writing his own epitaph, wishes annihilation on them, and recommends suicide as their only means of escape. Alcibiades’ messenger to Timon finds only his tomb. Athens surrenders, and Timon’s epitaph is read.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_01.html">Cluster 1 — 1: timon, timons, cleora</a> page.
+</div>
+</div></body></html>

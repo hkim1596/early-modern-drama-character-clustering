@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PAT in The Gypsies Metamorphosed · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PAT</span>
+</nav>
+
+<h1>PAT</h1>
+<p class="lede">in <em>The Gypsies Metamorphosed</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1641</td></tr>
+<tr><th>Words</th><td>1822</td></tr>
+<tr><th>Characters</th><td>9577</td></tr>
+<tr><th>BritDrama no.</th><td>1987</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">us, come lend us, their ſhouts, and their noyſe, Feare not, in hell you&#x27;le never lead Apes; A mortifi&#x27;d mayden, of five ſcapes. Chriſtian ſhall get her a looſe bodide-gowne, In tri&#x27;mge, how a Gentleman differs from a Clowne. Yet looke to your ſelfe, you&#x27;le ha ſome ill luck, And ſhortly, for I have his purſe at a plucke. <mark>Away</mark></div>
+<div class="excerpt">to the cheats, Ile ſhew &#x27;em ſome feates. For that take my word, We have a record, That doth it afford, And ſayes our firſt Lord, Cocklorrell he hight, On a time <mark>did</mark> invite The Devill to a feaſt; The tayle of the jeaſt, Though ſince it be long, Lives yet in a ſong; Which if you would <mark>heare</mark>, Shall plainly appeare. Ile call in</div>
+<div class="excerpt">for fiſh, A Conſtable ſouſ&#x27;d with vineger by; <mark>Two</mark> Aldermen lobſters aſleepe in a diſh, A Deputy tart, a Churchwarden pye. All which devovr&#x27;d; He then for a cloſe, <mark>Did</mark> for a full draught of Derby call; He heav&#x27;d the huge veſſell up to his noſe, And left not till he had drunke up all. Then from the table he gave a ſtart, Where</div>
+<div class="excerpt">Yes, awake on the Bench. And <mark>has</mark> ſo much worth, Though he ſit i&#x27;the ſtocks, He will draw the Girles forth, If they can, for their guts. Come mend us, come lend us, their ſhouts, and their noyſe,</div>
+<div class="excerpt">eating of flaxe; And out of their noſes, Draw Ribbands, and poſies, As for example, Mine owne is as ample, And fruitfull a noſe, As a wit can ſuppoſe; Yet it ſhall <mark>goe</mark> hard, But there will be ſpar&#x27;d, Each of you a yard, And worth your regard. When they collour, and ſize Arrive at your eyes. And if you encline To a cup of good</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Yes, awake on the Bench. And has ſo much worth, Though he ſit i&#x27;the ſtocks, He will draw the Girles forth, If they can, for their guts. Come mend us, come lend us, their ſhouts, and their noyſe, Feare not, in hell you&#x27;le never lead Apes; A mortifi&#x27;d mayden, of five ſcapes. Chriſtian ſhall get her a looſe bodide-gowne, In tri&#x27;mge, how a Gentleman differs from a Clowne. Yet looke to your ſelfe, you&#x27;le ha ſome ill luck, And ſhortly, for I have his purſe at a plucke. Away birds Mum, I heare by the Hum, If Beck-harman come, Hee&#x27;le ſtrike us all dumbe, With a noyſe like a Drum, Let&#x27;s give him our roome, Here, this way ſome, And that way others, We are not all brothers; Leave me to the cheats, Ile ſhew &#x27;em ſome feates. For that take my word, We have a record, That doth it afford, And ſayes our firſt Lord, Cocklorrell he hight, On a time did invite The Devill to a feaſt; The tayle of the jeaſt, Though ſince it be long, Lives yet in a ſong; Which if you would heare, Shall plainly appeare. Ile call in my Clarke Shall ſing like a Larke, Come in my long ſharke, With thy face browne and darke; With thy tricks, and thy toyes, Make a merry merry noyſe, To thoſe mad Country boyes, And chant out the fart of the Grand-devils arſe. COck-lorrell, would needs have the Devill his gueſt, And bad him once into the Peake to dinner, Where never the Fiend had ſuch a feaſt, Provided him yet at the charge of a ſinner. His ſtomacke was queaſie (for comming there Coacht), The jogging had cauſ&#x27;d ſome crudities riſe; To helpe it he call&#x27;d for a Puritan poacht, That uſed to turne up the egg&#x27;s of his eyes. And ſo recover&#x27;d unto his wiſh, He ſate him downe, and he fell to eate; Promooter in plum-broth was the firſt diſh, His owne privie kitchin had no ſuch meate. Yet though with this he much were taken Vpon a ſudden he ſhifted his trencher As ſoone as he ſpi&#x27;d the Bawd, and bacon, By which you may note the devill&#x27;s a wencher. Sixe pickl&#x27;d Taylors ſliced and cut, Sempſters, Tyrewomen, fit for his pallat; With Feathermen, and perfumes put, Some twelve in a Charger to make a grand ſallet: A rich fat Vſurer ſtu&#x27;d in his marrow, And by him a Lawyers head and green-ſawce; Both which his belly tooke in like a barrow, As if till then he had never ſeene ſawce. Then Carbonadoed, and Cook&#x27;t with paines, Was brought up a cloven Serjants face; The ſauce was made of his Yeamans braines, That had beene beaten out with his owne mace. Two roaſted Sheriffes came whole to the board; (The feaſt had nothing beene without &#x27;em) Both living, and dead, they were foxt, and fu&#x27;rd, Their chaines like ſawſages hung about &#x27;em. The very next diſh, was the Mayor of a Towne, With a pudding of maintenance thruſt in his belly; Like a Gooſe in the feathers dreſt in his gowne, And his couple of Hinch-boyes boyld to a jelly. A London Cuckold, hot from the ſpit, And when the Carver up had broke him; The Devill chopt up his head at a bit, But the hornes were very neere like to have choakt him. The chine of a Lecher too there was roaſted, With a plumpe Harlots haunch and garlicke; A Panders pettitoes that had boaſted Himſelfe for a Captaine, yet never was warlicke. A large fat paſtie of a Mid-wife hot; And for a cold bak&#x27;t meat into the ſtory, A reverend painted Ladie was brought, And coffin&#x27;d in cruſt, till now ſhe was hoary. To theſe, an over-growne-juſtice of peace, With a Clarke like a gizzard thruſt under each arme; And warrants for ſippets, layd in his owne greaſe, Set o&#x27;re a chaffing diſh to be kept warme. The joule of a Jaylor, ſerv&#x27;d for fiſh, A Conſtable ſouſ&#x27;d with vineger by; Two Aldermen lobſters aſleepe in a diſh, A Deputy tart, a Churchwarden pye. All which devovr&#x27;d; He then for a cloſe, Did for a full draught of Derby call; He heav&#x27;d the huge veſſell up to his noſe, And left not till he had drunke up all. Then from the table he gave a ſtart, Where banquet, and wine were nothing ſcarce; All which he ſlirted away with a fart, From whence it was call&#x27;d the Devils Arſe. And there he made ſuch a breach with the winde, The hole too ſtanding open the while, That the ſent of the vapour, before, and behinde, Hath fouly perfumed moſt part of the Iſle. And this was Tobacco, the learned ſuppoſe; Which ſince in Countrey, Court, and Towne, In the Devills gliſter-pipe ſmoaks at the noſe Of Polle at, and Madam, of Gallant, and Clowne. From which wicked weed, with Swines-fleſh, and Ling; Or any thing elſe thats feaſt for the Fiend: Our Captaine, and wee, cry God ſave the King, And ſend him good meate, and mirth without end. FReinds not to refell yee, Or any way quell ye, To buy or to ſell ye, I onely muſt tell ye; Ye ayme at a myſtery, Worthie a Hiſtory; Ther&#x27;s much to be done, E&#x27;re you can be a Sonne, Or brother of the Moone. Tis not ſo ſoone Acquir&#x27;d, as deſir&#x27;d. You muſt be Ben-bowſie, And ſleepy, and drowſie, And laſie, and lowſie, Before ye can rowſe yee, In ſhape that arowſe yee. And then you may ſtalke The Gipſies walke; To the Coopes, and the Pennes, And bring in the Hennes, Though the Cocke be ſullen For loſſe of the Pullen: Take Turkie, or Capon, And Gammons of Bacon, Let nought be forſaken; Wee&#x27;ll let you go looſe, Like a Foxe to a Gooſe, And ſhew you the ſtie Where the little Pigs lie; Whence if you can take One or two, and not wake The Sow in her dreames, But by the Moone beames; So warily hye, As neither doe cry. You ſhall the next day Have licenſe to play At the hedge a flirt, For a ſheet, or a ſhirt; If your hand be light, Ile ſhew you the ſlight Of our Ptolomies knot, It is, and &#x27;tis not, To change your complexion, With the noble confection Of Wall-nuts, and Hogs-greaſe, Better then Dogs-greaſe: And to milke the Kine, Ere the Milke-mayd fine Hath open&#x27;d her eine. Or if you deſire To ſpit, or fart fire, Ile teach you the knacks, Of eating of flaxe; And out of their noſes, Draw Ribbands, and poſies, As for example, Mine owne is as ample, And fruitfull a noſe, As a wit can ſuppoſe; Yet it ſhall goe hard, But there will be ſpar&#x27;d, Each of you a yard, And worth your regard. When they collour, and ſize Arrive at your eyes. And if you encline To a cup of good wine, When you ſuppe, or dine; If you chance it to lacke, Be it Clarret, or Sacke; Ile make this ſnout, To deale it about, Or this to runne out, As it were from a ſpout. IS this worth your wonder, Nay then you ſhall under- Stand more of my skill. I can (for I will) Here at Burley o&#x27;th Hill, Give you all your fill, Each Jacke with his Gill, And ſhew you the King, The Prince too and bring; The Gipſies were here, Like Lords to appeare, With ſuch there attenders, As you thought offenders, Who now become new men, Youle know them for true men; For he we call cheife, Ile tell &#x27;t ye in breife, Is ſo farre from a theife, As he gives ye releife With his bread, beare, and beife And tis not long ſince Ye dranke of his Wine, And it made you fine; Both Clarret, and Sherrie, Then let us be merrie; And helpe with your call, For a Hall, a Hall. Stand up to the wall, Both good men, and tall, We are one mans all. Nothing, but beare the bob of the cloſe, It will be no bruthen you well may ſuppoſe. But bleſſe the Sov&#x27;raine, and his ſences, An to wiſh away offences, Wee&#x27;ll take them in order, as they have being, And firſt of ſeeing. FRom a Gipſie, in the morning, Or a paire of ſquint-eyes turning: From the Coblin, and the ſpectre, Or a Drunkard, though with Nectar; From a woman true to no man, Which is ougly, beſides common; A ſmocke rampant, and the itches, To be putting on the breeches: Wher ſo &#x27;ere they ha&#x27; their being, Bleſſe the Sov&#x27;raine, and his ſeeing. FRom a foole, and ſerious oyes; From a Lawyer, three parts noyſe; From impertinence, like a Drum Beate at dinner in his roome; From a tongue without a file, Heapes of Phraſes, and no ſtile. From a Fiddle out of tune, As the Cuckow is in June. From the candleſticks of Lothbury, And the lowd pure wives of Banbury: Or a long pretended fit; Meant for mirth, but is not it: Onely time, and eares out-wearing, Bleſſe the Sov&#x27;raine, and his hearing. FRom a ſtrolling Tinkers ſheete, Or a payre of Carriers feet: From a Ladie that doth breath, Worſe above, then underneath. From the Diet, and the knowledge Of the ſtudents in Beares-colledge. From Tobacco, with the tipe Of the Devills gliſter-pipe; Or a ſtincke all ſtincks excelling, A Fiſhmongers dwelling, Bleſſe the Sov&#x27;raigne, and his ſmelling. FRom an Oyſter, and fry&#x27;d fiſh A Sowes babye in a diſh: From any portion of a Swine, From bad Veniſon, and worſe wine. Ling, what Cooke ſo&#x27;ere it boyle, Though with muſtard fawc&#x27;d and oyle, Or what elſe would keepe man faſting, Bleſſe the Sov&#x27;raigne, and his taſting. BOth from birdlime, and from pitch, From a Doxie, and her itch. From the briſles of a Hogge, Or the ring-worme in a Dogge. From the courtſhippe of a brier, Or St. Anthonies old fier. From a needle, or a thorne; I&#x27;the bed at Ev&#x27;n, or Morne. Or from any Gowtes leaſt grutching. Bleſſe the Sov&#x27;raigne, and his touching. BLeſſe him too from all offences, In his ſports, as in his fences. From a Boy to croſſe his way, From a fall, or a foule day. BLeſſe him, ô bleſſe him Heav&#x27;n, and lend him long to be the ſacred burthen of all ſong; The Acts, and yeares, of all our Kings t&#x27; out go; And while hee&#x27;s mortall, we not thinke him ſo. THe ſports are done, yet doe not let Your joyes in ſudden ſilence ſett; Delight, and dumbneſſe never met In one ſelfe ſubject yet. If things oppos&#x27;d muſt mixt appeare, Then adde a boldneſſe to your feare, And ſpeake a hymne to him, Where all your duties do of right belong, Which I will ſweeten with an under ſong.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Gypsies Metamorphosed</div><div class="body">A troop of gypsies arrive with children and stolen meat, and proceed to read the palms and tell the fortunes of the King, the Prince, and various members of the aristocratic audience. Some rustics turn up, attracted by the sound of the Gypsies’ dancing. They decide to have a dance themselves with their wenches, and collect money to pay the musicians. The Gypsies steal their purses and other possessions, but then return the items to their pockets by legerdemain. The rustics are interested in the Gypsies’ place of origin, Devil’s Arse, and ask where the name came from. A song is sung by way of an answer, telling of how the first captain of the Gypsies, Cock-Lorel, entertained the Devil to a banquet, with numerous different varieties of human flesh on the menu; the Devil blew the feast away with a fart and so gave the place its name. The Gypsies are metamorphosed into white-skinned lords, and praise the King. C-Text After the Cock-Lorel song, the rustics are seized with the desire to become Gypsies themselves, and the Patrico tells them what a long process their initiation would be.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

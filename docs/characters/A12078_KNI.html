@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KNI in The Fleer · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>KNI</span>
+</nav>
+
+<h1>KNI</h1>
+<p class="lede">in <em>The Fleer</em> — Sharpham, Edward</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>553</td></tr>
+<tr><th>Characters</th><td>2774</td></tr>
+<tr><th>BritDrama no.</th><td>1495</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">hope shee doth not, Woot dwell with me? Ile vse thee well. And thou with me. O Fleir how does thy Ladie? And how does she? ha, how does she? Sure then Fleir she <mark>has</mark> eaten too much raw fruit. Sure ther. t&#x27;is so, I should send her something to comfort her nowe beeing sicke: what doest thinke were best Fleir? No, Oates is too</div>
+<div class="excerpt">should send her something to comfort her nowe beeing sicke: what doest thinke were best Fleir? No, Oates is too great a binder after her Phy sicke, I care not if I <mark>goe</mark> and visite her, and carrie her a Woodcocke. I, I meane so, but how should I carrie him Fleir? Mas, and thou saiest true, Ile <mark>goe</mark> buy one straight, and yet now I</div>
+<div class="excerpt">spits when she heares one speake on&#x27;t. Shees wondrous musicall too. Be these good tunes Fleir? Yet many of our Ladies delight much in the Scot tish Musicke. Thou hast a good wit Fleir: if I were a greatman thou shouldst be my Secretarie. Faith I am going to thy Ladies Fleir. Why sir, I hope I am a Knight, and Knights are be</div>
+<div class="excerpt">it. What poysons haue you? Why a Cat hath nine liues sir, and wilt not poyson a <mark>woman</mark>, seeing twill poyson a Cat? Tis verie deere. As how? The crime is great I <mark>must</mark> confesse my Lord, but I am sure the proofe can be but little. O had not death arrested me. I doe forgiue you Lady with my soule.</div>
+<div class="excerpt">art so melancholie? Saue you O signeur. Fleir, is the gentleman vsher that I preferd to your Ladies in any fauour with them? And how liues he with am. Signeur, I <mark>must</mark> confesse, I am beholding to your Ladie; and to tell you truly, I haue much affected her since I first saw her. Nay, I haue no reason to thinke the worse of her</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Nay, you were a most monstrous puppie. T&#x27;is a good turne hees no Flie signeur: if a were, a would burne his wings. Had you no bodie else signeur, to breake an emptie ieast on but this Ladie? God bewe Signior. In what countrie wert borne? Where then? What nation art? O then thou canst make glasses. Why art so melancholie? Saue you O signeur. Fleir, is the gentleman vsher that I preferd to your Ladies in any fauour with them? And how liues he with am. Signeur, I must confesse, I am beholding to your Ladie; and to tell you truly, I haue much affected her since I first saw her. Nay, I haue no reason to thinke the worse of her for the report of the worlde; for the world signeur per chance speakes ill of you, or me. I hope shee doth not, Woot dwell with me? Ile vse thee well. And thou with me. O Fleir how does thy Ladie? And how does she? ha, how does she? Sure then Fleir she has eaten too much raw fruit. Sure ther. t&#x27;is so, I should send her something to comfort her nowe beeing sicke: what doest thinke were best Fleir? No, Oates is too great a binder after her Phy sicke, I care not if I goe and visite her, and carrie her a Woodcocke. I, I meane so, but how should I carrie him Fleir? Mas, and thou saiest true, Ile goe buy one straight, and yet now I remember me, t&#x27;is no great matter if I defer it till she be well, it shall be so Fleir, I will. Tush, I keepe a boy for such vses. Yes, to weare a garded Cloke. No, not till I be richly married: hee should weare one now, if my money were come out o&#x27;th Countrey. Faith I was knighted to get mee a good wife Fleir. I, but say it should bee proou&#x27;d afterwards t&#x27;was not true. I would be loath to leaue my truth so far hence. But Fleir is not thy Lady a vertuous Gentlewoman? Of what I prethe? I, I warrant her, O she can endure no bawdrie, shee spits when she heares one speake on&#x27;t. Shees wondrous musicall too. Be these good tunes Fleir? Yet many of our Ladies delight much in the Scot tish Musicke. Thou hast a good wit Fleir: if I were a greatman thou shouldst be my Secretarie. Faith I am going to thy Ladies Fleir. Why sir, I hope I am a Knight, and Knights are be fore Gentlemen. Faith I. Doe, and as occasion serues Ile preferre thee. Assure ye Ladie, your gift of loue to mee shall bee deserued, though nothing but my liues deare breath re quite its. Who wee? They shall not liue. Weele stabb them. But where shall we get the poyson? because you knowe t&#x27;is daungerous, and will breede suspect where ere wee buy it. What poysons haue you? Why a Cat hath nine liues sir, and wilt not poyson a woman, seeing twill poyson a Cat? Tis verie deere. As how? The crime is great I must confesse my Lord, but I am sure the proofe can be but little. O had not death arrested me. I doe forgiue you Lady with my soule.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Fleer</div><div class="body">Before the start of the action, Piso deposed Antifront, whose daughters thereupon fled from Florence. Antifront now travels in search of his missing children. He arrives in London under the alias Fleer, and meets some gentlemen. One of them, Spark, gets him a job with two of his countrywomen, a pair of Florentine courtesans working in London. Antifront is dismayed to discover that they are his missing daughters. Two sisters, Susan and Nan, are interested in Spark and his friend Ruffle, who are among the courtesans’ many clients. They dress up as boys and try to get the gentlemen to employ them as pages; Spark and Ruffle refuse, and the ‘pages’ end up working for two other clients, Sir John Havelittle and Piso junior, the son of the Florentine usurper. ‘Fleer’ wants to engineer a marriage for his daughters, selecting Havelittle and Piso as the eligible bachelors. The daughters prefer Spark and Ruffle, but are refused; taking offence, they ask Piso and Havelittle to kill the gentlemen, and suggest poison as the safest method. The plot is overheard by ‘Fleer’ and the ‘pages’. ‘Fleer’ gets himself another job looking after an apothecary’s shop, and sells Piso and Havelittle a poison which is really a sleeping potion. Spark and Ruffle dine with Piso and Havelittle and apparently die. The hosts are at once arrested on suspicion of poisoning and are committed for trial. Fleer is sent on an errand to the senior judge, who is unable to attend through illness, and sends word back for the other two judges to proceed without him. Given a ring to authenticate the message, Fleer instead uses it to get himself deputized as the third judge. He produces a letter which establishes that the guilt extends to the daughters as well as the poisoners, and all four are sentenced to death. News arrives that Piso’s father has died, making him the new Duke of Florence; but-he tells the Florentines to recall the deposed Antifront instead, and offers to make amends for his father’s treason by marrying Antifront’s elder daughter. Antifront reveals his identity and says Piso can do just 1606 that; his younger daughter will marry Havelittle. He produces the murder victims, still alive, and bestows them on Nan and Susan.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FALST in 2 Henry the Fourth · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_04.html">Cluster 4 — 4: iohn, falstaffe, ford</a> ›
+  <span>FALST</span>
+</nav>
+
+<h1>FALST</h1>
+<p class="lede">in <em>2 Henry the Fourth</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>1957</td></tr>
+<tr><th>Characters</th><td>10108</td></tr>
+<tr><th>BritDrama no.</th><td>1083</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 4 (<em>iohn, falstaffe, ford, misteris, page, shallow…</em>). Matches are highlighted.</p>
+<div class="excerpt">Lord, I beseech you giue me leaue to go through Glostershire, and when you come to court, stand my good lord in your good report. You must excuse me master Robert <mark>Shallow</mark>. Ile follow you good <mark>maister</mark> Robert <mark>Shallow</mark>: Bar dolfe, looke to our horses: if I were sawed into quantities, I should make foure dozen of such berded hermites</div>
+<div class="excerpt">good <mark>maister</mark> Robert <mark>Shallow</mark>: Bar dolfe, looke to our horses: if I were sawed into quantities, I should make foure dozen of such berded hermites staues as <mark>maister</mark> <mark>Shallow</mark>: it is a wonderfull thing to see the semblable coherence of his mens spirits, and his, they, by obseruing him, do beare themselues like foolish Iustices: hee, by</div>
+<div class="excerpt">spirits are so married in coniunction, with the participation of society, that they flocke together in consent, like so many wild-geese. If I had a suite to master <mark>Shallow</mark>, I would humour his men with the imputation, of beeing neere their <mark>maister</mark>: if to his men, I would curry with <mark>maister</mark> <mark>Shallow</mark>, that no man could better commaund</div>
+<div class="excerpt">low, master Soccard (as I thinke.) Good master Scilens, it well befits you should be of the peace. What, dost thou roare before thou art prickt? She liues master <mark>Shallow</mark>. &#x27;I know not, here he is, and here I yeeld him, and I beseech your grace let it be bookte with the rest of this daies deedes, or by the Lord, I wil haue it in a</div>
+<div class="excerpt">bearing, or ignorant cariage is caught, as men take diseases one of another: therefore let men take heede of their company. I will deuise matter enough out of this <mark>Shallow</mark>, to keepe prince Harry in continuall laughter, the wearing out of sixe fashions, which is foure termes, or two actions, and a shal laugh without interuallums. O</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">What? a yong knaue and begging? is there not wars? is there not employment? doth not the King lacke subiects? do not the rebels need souldiers, though it be a shame to be on any side but one, it is worse shame to beg then to be on the worst side, were it worse then the name of Rebellion can tell how to make it. My good Lord, God giue your lordship good time of day, I am glad to see your lordship abroade, I heard say your lordship was sicke, I hope your lordship goes abroade by ad uise, your lordship, though not clean past your youth, haue yet some smack of an aguein you, some relish of the saltnes of time in you, and I most humbly beseech your lordship to haue a re uerend care of your health. And I heare moreouer, his highnes is falne into this same horson a poplexi. This appoplexi as I take it? is a kind of lethergie, and&#x27;t please your lordship, a kind of sleeping in the bloud, a horson tingling. It hath it originall from much griefe from study ▪ and perturbation of the braine, I haue read the cause of his effects in Galen, it is a kind of deafenes. I am as poore as Iob my lord, but not so pacient, your Lordship may minister the potion of imprisonment to me, in respect of pouerty, but how I should be your pacient to follow your prescriptions, the wise may make som dramme of a scruple or indeede a scruple it selfe. As I was then aduisde by my learned counsail in the lawes of this land seruice, I did not come. He that buckles himselfe in my belt cannot liue in lesse. I would it were otherwise, I would my meanes were greater and my waste slender. The yong prince hath misled me, I am the felow with the great belly, and he my dogge. My lord. To wake a wolfe, is as bad as smell a fox. A wassel candle my lord, al tallow, if I did say of wax, my growth would approue the truth. His effect of grauy, grauie, grauie. Not so my lord, your ill angell is light, but I hope he that lookes vpon me will take me without weighing, and yet in some respects I grant I cannot go. I cannot tell, vertue is of so little regard in these costar-mongers times, that true valour is turnd erod, Pregnancie is made a Tapster, &amp; his quick wit wasted in giuing reckonings, all the other giftes appertinent to man, as the malice of his age shapes the one not worth a goosbery, you that are old consider not the capacities of vs that are yong, you doe measure the heate of our liuers with the bit ternesse of your g lles, and we that are in the vaward of our youth, I must confesse are wagges too. How now, whose mare&#x27;s dead? whats the matter? Away varlets, draw Bardolfe, cut me off the villaines head, throw the queane in the channell. Keepe them off Bardolfe. I think I am as like to ride the mare if I haue any van tage of ground to get vp. What is the grosse summe that I owe thee? My lord this is a poore made oule, and she saies vp and downe the towne, that her eldest sonne is like you, she hath bin in good case and the trueth is pouerty hath distracted her, but for these foolish officers, I beseech you I may haue re dresse against them. My Lord I will not vndergoe this snepe without re ply, you cal honorable boldnes impudent sawcinesse, if a man wil make curtsie and say nothing, he is vertuous, no my Lord my humble duty remembred, I will not bee your s er, I say to you I do desire deliuerance from these officers, being vpon hasty imployment in the Kings affayres. Come hither hostesse. As I am a gentleman! As I am a gentleman, come, no more words of it. Glasses glasses is the onely drinking, and for thy wals a pretty sleight drollery, or the storie of the prodigal, or the Iarman hunting in waterworke, is worth a thousand of these bed-hangers, and these flie bitten tapestrie, let it be x. if thou canst: come, and twere not for thy humors, theres not a better wench in England, goe wash thy face and draw the action, come thou must not be in this humor with me, dost not know me, come, come, I know thou wast set on to this. Let it alone, ile make other shift, youle be a foole stil. Wil I liue? goe with her, with her, hooke on, hooke on. exit hostesse and sergeant. No more words, lets haue her. Whats the newes my lord? I hope my Lord al&#x27;s wel, what is the newes my lord? Comes the King back from Wales, my noble lord? My lord. So is all her sect, and they be once in a calme they are sicke. You make fat rascals mistris Dol. If the cooke help to make the gluttonie you helpe to make the diseases Doll, we catch of you Doll, we catch of you graunt that my poore vertue, grant that. Hees no swaggrer hostesse, a tame ch ter ysaith, you may stroke him as gently as a puppy grey-hound, heele not swagger with a Barbary hen, if her feathers turne backe in any shew of resistance, call him vp Drawer. Hearke thee hither mistris Dol. Pistol, I would be quiet. Quaite him downe Bardolfe like a shoue-groat shil ling, nay, and a doe nothing but speake nothing, a shall be no thing here. Giue me my rapier, boy. Thou dost giue me lattering busses. I am old, I am old. Ha? a bastard sonne of the Kings? and arte not thou Poynes his brother? A better then thou, I am a gentleman, thou art a drawer. Thou horson madde compound of maiestie, by this light, flesh, and corrupt bloud, thou art welcome. Didst thou heare me? No, no, no, not so, I did not thinke thou wast within hearing. No abuse Hall a mine honour, no abuse. No abuse Ned i&#x27;th worlde, honest Ned, none, I dis praisde him before the wicked, that the wicked might not fall in loue with thee: in which doing, I haue done the part of a carefull f iend and a true subiect, and thy father is to giue me thankes for it, no abuse Hall, none Ned, none, no faith boyes none. The fiend hath prickt down Bardolfe irrecouerable, and his face is Lucifers priuy kitchin, where he doth nothing but rost mault-worms, for the boy there is a good angel about him, but the diuel blinds him too. For one of them shees in hell already, and burnes poore soules: for th&#x27;other I owe her mony, and whether she be damnd for that I know not. No I thinke thou art not, I thinke thou art quit for that, mary there is another inditement vpon thee, for suffering flesh to be eaten in thy house contrary to the law, for the which I thinke thou wilt howle. I am glad to see you well, good master Robert Shal low, master Soccard (as I thinke.) Good master Scilens, it well befits you should be of the peace. What, dost thou roare before thou art prickt? She liues master Shallow. &#x27;I know not, here he is, and here I yeeld him, and I beseech your grace let it be bookte with the rest of this daies deedes, or by the Lord, I wil haue it in a particular ballad else, with mine owne picture on the top on&#x27;t, (Coleuile kissing my foote) to the which course, if I bee enforst, if you doe not all shew like guilt twoo pences to mee, and I in the cleere skie of Fame, ore-shine you as much as the full moone doth the cin dars of the element, (which shew like pinnes heads to her) be leeue not the worde of the noble: therefore let me haue right, and let Desert mount. Let it shine then. Let it do some thing, my good lord, that may doe me good, and call it what you will. And a famous true subiect tooke him. My Lord, I beseech you giue me leaue to go through Glostershire, and when you come to court, stand my good lord in your good report. You must excuse me master Robert Shallow. Ile follow you good maister Robert Shallow: Bar dolfe, looke to our horses: if I were sawed into quantities, I should make foure dozen of such berded hermites staues as maister Shallow: it is a wonderfull thing to see the semblable coherence of his mens spirits, and his, they, by obseruing him, do beare themselues like foolish Iustices: hee, by conuersing with them, is turned into a lustice-like seruingman, their spirits are so married in coniunction, with the participation of society, that they flocke together in consent, like so many wild-geese. If I had a suite to master Shallow, I would humour his men with the imputation, of beeing neere their maister: if to his men, I would curry with maister Shallow, that no man could better commaund his seruants. It is certaine, that eyther wise bearing, or ignorant cariage is caught, as men take diseases one of another: therefore let men take heede of their company. I will deuise matter enough out of this Shallow, to keepe prince Harry in continuall laughter, the wearing out of sixe fashions, which is foure termes, or two actions, and a shal laugh without interuallums. O it is much that a lie, with a slight oathe, and a iest, with a sad browe, will doe with a fellow that neuer had the ach in his shoulders: O you shall see him laugh til his face be like a wet cloake ill laide vp. I come maister Shallow. I come master Shallow. Fore God you haue here goodly dwelling, and rich. I did not thinke master Scilens had bin a man of this mettall. Well said master Scilens. Health and long life to you master Scilens. Why now you haue done me right. Tis so. From the Court? let him come in, how now Pistol? What wind blew you hither Pistol? What is the old King dead? Carry master Scilens to bed: master Shallow, my lord Shalow, be what thou wilt, I am fortunes steward, get on thy boots, weel ride al night: ô sweet Pistol, away Bardolf, com Pistol, vtter more to me, and withall, deuise something to doe thy selfe good, boote, boote master Shallow, I know the yong King is sicke for me: let vs take any mans horses, the lawes of England are at my commandement, blessed are they that haue bin my friends, and woe to my Lord chiefe Iustice. Stand heere by me maister Shallow, I will make the King doe you grace, I will leere vpon him as a comes by, and do but marke the countenaunce that he will giue me. Come heere Pistoll, stand behinde mee. O if I had had time to haue made new liueries: I woulde haue bestowed the thousand pound I borrowed of you, but tis no matter, this poore shew doth better, this doth inferre the zeale I had to se him. It shewes my earnestnesse of affection. My deuotion. I will deliuer her. God saue thy grace King Hall, my royall Hall. God saue thee, my sweet boy. My King my Ioue, I speake to thee, my heart.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 2 Henry the Fourth</div><div class="body">After the battle of Shrewsbury, there are contradictory rumours abroad as to the outcome: some say that the King and his son have vanquished Lord Hotspur of Lancaster, whereas in fact they won. Now Lord John of Lancaster is travelling north with a power, including Sir John Falstaff, to crush the regrouping remnants of the Percy rebellion. Mistress Quickly tries to have Falstaff arrested for debt, while threatens to prevent him setting out for London, but he talks his way out of it. Back from a military expedition in Wales, Prince Henry and Poins disguise themselves as drawers and eavesdrop on Falstaff’s conversation: he says uncomplimentary things about them, but Falstaff excuses himself inventively when confronted. Northumberland’s family persuade him to flee to Scotland rather than join the other northern rebels. Falstaff musters troops in Gloucestershire, but the best men bribe their way out, leaving him with the least suitable soldiers. Prince John sees the rebels and agrees to redress their grievances if they disband their army; but when they do so, he has them arrested for treason. Falstaff arrives in the north late, but meets the rebel Sir John Colville, who promptly surrenders without a fight, having heard Falstaff’s reputation. Prince John returns to court, but Falstaff goes via Gloucestershire to visit Justice Shallow. The sickly King prepares for death, and worries about the kingdom’s future in the hands of his eldest son. News arrives of the defeat of all the rebels. Prince Henry finds his father asleep with the crown beside him, and, thinking him dead, tries it on. The King wakes to find his crown gone. Brought back, the Prince excuses himself, and the King gives deathbed advice: he should pursue an aggressive foreign policy to distract from internal dissent. He dies in the Jerusalem chamber, fulfilling a prophecy that he will die in Jerusalem. Henry V is not the King everyone expected the Prince to be. He confirms in office the Lord Chief Justice, who had imprisoned him for his misdemeanours. Pistol brings to Gloucestershire news of his accession, and Falstaff anticipates power for himself and his associates. He is disappointed: when he accosts the King at his coronation, Henry refuses to acknowledge him, and banishes him — though with a pension to ensure that poverty does not lead him back into crime. Falstaff is convinced that this is only a public show of rejection, which will later be countermanded in private; but in fact he and his crew…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_04.html">Cluster 4 — 4: iohn, falstaffe, ford</a> page.
+</div>
+</div></body></html>

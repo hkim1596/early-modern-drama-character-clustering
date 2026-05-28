@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MOR in 1 Henry the Fourth · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>MOR</span>
+</nav>
+
+<h1>MOR</h1>
+<p class="lede">in <em>1 Henry the Fourth</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1598</td></tr>
+<tr><th>Words</th><td>425</td></tr>
+<tr><th>Characters</th><td>2326</td></tr>
+<tr><th>BritDrama no.</th><td>1059</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">〈1 line〉 Peace coosen Percy, you wil make him mad. Come, come, no more of this vnprofitable chat. The Archdeacon hath diuided it Into three limits very equally: <mark>England</mark> from Trent, and S uerne hitherto, By South and East is to my part assignd: Al westward, Wales beyond the Seuerne shore, And al the fertile land within that bound</div>
+<div class="excerpt">feeling disputation, But I will neuer be a truant loue, Till I haue learnt thy language, for thy tongue Makes Welsh as sweet as ditties highly pend, Sung by a faire <mark>Queene</mark> in a summers bowre, With rauishing diuision to her Lute. O I am ignorance it selfe in this. With all my hart. Exeunt.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">These promises are faire, the parties sure, 〈1 line〉 Peace coosen Percy, you wil make him mad. Come, come, no more of this vnprofitable chat. The Archdeacon hath diuided it Into three limits very equally: England from Trent, and S uerne hitherto, By South and East is to my part assignd: Al westward, Wales beyond the Seuerne shore, And al the fertile land within that bound To Owen Glendower: and deare coose to you The remnant Northward lying off from Trent, And our indentures tripartite are drawn, Which being s aled enterchangeably, (A businesse that this night may execute:) To morrow coosen Percy you and I And my good Lord of Worcester wil set forth To meet your father and the Scottish power, As is appointed vs at Shrewsbury. My father Glendower is not ready yet, Nor shal we need his helpe these fourteen daies, Within that space you may haue drawne together Your tenants, friends, and neighbouring gentlemen. Yea, but marke bowe he beares his course, and runs mee vp with like aduauntage on the other side, gelding the opposed continent as much as on the other side it takes from you. Fie coosen Percy, how you crosse my father. In saith he is a worthy gentleman, Exceedingly well read and profited In strange concealements, valiant as a lion, And wondrous affable; and as bountifull As mines of India; shal I tell you coosen, He holds your temper in a high respect And curbs himselfe euen of his natural scope, When you come crosse his humor, faith he does, I warrant you that man is not aliue Might so haue tempted him as you haue done, Without the tast of danger and reproofe, But do not vse it oft, let me intreat you. This is the deadly spight that angers me, My wife can speake no English, I no Welsh. Good father tell her, that she and my Aunt Percy Shal follow in your conduct speed ly. I vnderstand thy lookes, that prettie Welsh, Which thou powrest downe from these swelling heauens, I am too perfect in, and but for shame In such a parley should I answere thee. I vnderstand thy kisses, and thou mine, And thats a feeling disputation, But I will neuer be a truant loue, Till I haue learnt thy language, for thy tongue Makes Welsh as sweet as ditties highly pend, Sung by a faire Queene in a summers bowre, With rauishing diuision to her Lute. O I am ignorance it selfe in this. With all my hart. Exeunt.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 1 Henry the Fourth</div><div class="body">Civil war has ended in England, and King H@nryiliV intends to take an English army on a crusade to liberate the Holy Land. The enterprise is delayed by continuing military instability on England’s borders. Lord MOGrfimer has been defeated in battle by Owen Glemd@Wer and taken a prisoner to Wales. In the north, H@#Splr has had better success against the Scots, but refuses to hand over his prisoners until King Henry ransoms Mortimer. But Mortimer has thrown in his lot with Glendower, so Henry refuses. TH@IPEFGy family suspects an ulterior motive: Mortimer was proclaimed heir to the throne during the previous reign, so the King has good reason to want him off the scene. Led by tH@IBAPINSPIWSreeSter, the Percies plan to put together an alliance to rise in rebellion against the King; to that end, Hotspur releases his Scottish prisoners without ransom. THEMPHNCeMSMWales spends his time idly with . BaIStaif and Poyntz, secretly intending to use his bad reputation as a foil to a subsequent reformation. They plan and execute a highway robbery, but the Prince and Poyntz disguise themselves and rob Falstaff in turn. In the tavern afterwards, Falstaffs account of these events grows progressively more inflated and extravagant; but, when confronted with the truth, he claims he knew it was the Prince all the time. News of the Percies’ plans reaches the King, and Prince Henry is summoned to court. Falstaff helps the Prince with a rehearsal: at first he plays the King, but his performance is over-partial towards himself, so the Prince takes over the part and declares that he will banish Falstaff. A hue and cry after the robbery leads the SHEfiffito the tavern, but the Prince puts him off and later pays back the stolen money; he then plans to obtain a military commission for Falstaff. The rebel lords meet to agree the division of the kingdom, but Hotspur is not satisfied with his share. The Prince tells his admonishing father that he will redeem himself in battle. Troops are mobilized, and the armies meet at Shrewsbury. The rebels are depleted: Glendower’s forces are not ready and N@rthumiberland falls sick; Hotspur sees greater honour in the longer odds, WGreester only greater risk. In the parleys before battle, the Prince offers to settle things in single combat with Hotspur, but Worcester and WerniGn, knowing that the King will never trust them again, decide to keep this from Hotspur. In the battle, many of the King’s troops are dressed in bis colours, and are killed in…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

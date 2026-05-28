@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAR in 219 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MAR</span>
+</nav>
+
+<h1>MAR</h1>
+<p class="lede">in <em>219</em> — [84]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1605</td></tr>
+<tr><th>Words</th><td>532</td></tr>
+<tr><th>Characters</th><td>2785</td></tr>
+<tr><th>BritDrama no.</th><td>219</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">What should I doe? if my enamou &#x27;d sonne Haue been so forward; I assure my selfe He <mark>did</mark> it more to satisfie his loue, Then to incense my hate, or to neglect me. I <mark>must</mark> con esse the mischiefe: But alas Where is in me the power of remedy? What should I doe? If I should banish him my house and sight, What desperate resolution might</div>
+<div class="excerpt">and Dauncing-scholes, Y&#x27;are too seueere y&#x27;faith. Let me alone, I thank you for this kindnes. To be sure of that, be you her keeper. An excellent spoken boy. Thou hast halfe wonne him, Wag; ply him yet a little further. See, he comes here, he <mark>has</mark> mist him. And, me thinks, it is nothing, if not told; At least the ioy is neuer</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">God saue thee honourable Knight Gostanzo. What newes I pray you Sir? I know not where in you intend him so. A wife sir? what is she? Iest not good Sir, in an affayre so serious, I loue my sonne, and if his youth reward me With his contempt of my consent in mariage ▪ T to be fear&#x27;d that his presumption buildes not Of his good choyce, that will beare out it selfe, And being bad, the newes is worse then bad. The world accounts it so; but if my soone Haue in her birth and vertues helde his choice, Without disparagement, the sault is lesse. What should I doe? if my enamou &#x27;d sonne Haue been so forward; I assure my selfe He did it more to satisfie his loue, Then to incense my hate, or to neglect me. I must con esse the mischiefe: But alas Where is in me the power of remedy? What should I doe? If I should banish him my house and sight, What desperate resolution might it breed? To runne into the warres, and there to liue In want of competencie and p rhaps Taste th&#x27;vnrecouerable losse of his chiefe limbes, Which while he hath in peace, at home with me, May with his spirit, ransome his estate From any losse his mariage can procure. I cannot part with him. Ile do all I can. My angers storme? Ah poore Fortunio, One gentle word from th would soone resolue The storme of my rage to a showre of teares ▪ An admi able sparke. Ber-Ladie sound instructions to a Sonne. Better and better. Soft, here comes my Sonne. B -Ladie you haue plaide the Courtier rarelie. Ahlas tis but a little bashfulnes, You let him keepe no companie, nor allow him Monie to spend at Fence and Dauncing-scholes, Y&#x27;are too seueere y&#x27;faith. Let me alone, I thank you for this kindnes. To be sure of that, be you her keeper. An excellent spoken boy. Thou hast halfe wonne him, Wag; ply him yet a little further. See, he comes here, he has mist him. And, me thinks, it is nothing, if not told; At least the ioy is neuer full before. Ist possible, what danger Sir I pray? What world is this? Out of how sweete a dreame haue you awak&#x27;t me? By heauen, I durst haue laid my part in heauen All had bin true; it was so liuely handled, And drawne with such a seeming face of trueth: Your sonne had cast a perfect vaile of grie Ouer his face, for his so rash offence, To seale his loue with act of marriage, Before his father had subscrib&#x27;d his choyce: My sonne (my circumstance lessening the fact) Intreating me to breake the matter to you, And ioyning my effectuall perswasions, With yoursonnes penitent submission, Appease your ury; I at first assented, And now expect their comming to that purpose. On with your maske; here come the other ma kers sir, Why Sir, do you suspect it the more for that? Why not Sir, To blind my eyes? Answere but that Cornelio. Marke but the now vnderstand mee. Heere was a man Cornelio.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 219</div><div class="body">Christ has recently come to Jewry, and Infidelity is keen to interfere with his work: his plan is to influence the religious establishment against Christ and thereby ensure his crucifixion. Meanwhile, he encourages Mary Magdalen to enjoy her youth while she can, and introduces her to three companions who will help: Pride, Cupidity, and Carnal Concupiscence (all of whom go under less damaging names). They recommend fashionable clothes and hairstyles, which will attract men, but also advise her against marriage. Mary meets The Law of God and Knowledge of Sin, and experiences the stirrings of conscience: she despairs, thinking herself surely damned and God unjust. Christ casts seven devils out of Mary and drives away Infidelity: she is given the grace to repent. Simon the Pharisee is suspicious of Christ because he is lower-class and uneducated, and invites him to dinner. During the meal, Mary washes his feet with her tears and anoints them. Simon is outraged, but Christ emphasizes the universality of forgiveness: Mary is a genuine penitent, whereas Simon is merely a hypocrite wanting to show off his wealth and presumed holiness. Simon is offended and sets Infidelity and Malicious Judgement to follow Christ, spy on his preaching, and have him brought to trial. Mary ends the play in the company of Love and Justification, who emphasize that she is saved through her faith alone.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

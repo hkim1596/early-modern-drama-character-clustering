@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QVA in Bartholomew Fair · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>QVA</span>
+</nav>
+
+<h1>QVA</h1>
+<p class="lede">in <em>Bartholomew Fair</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>1440</td></tr>
+<tr><th>Characters</th><td>7458</td></tr>
+<tr><th>BritDrama no.</th><td>1757</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Rascall I am, and fright her out of all good con ceipt of me: I should doe so by him, I am sure, if I had the oppor tunity. But my hope is in her temper, yet; and it <mark>must</mark> needs <mark>bee</mark> next to despaire, that is grounded on any part of a <mark>woman</mark>&#x27;s dis cretion. I would giue by my troth, now, all I could spare (to my cloathes, and my sword)</div>
+<div class="excerpt">your Ward, M rs . Grace: look you, here is your hand &amp; seale, by the way. M r . Win-wife giue you ioy, you are Palemon, you are possest o&#x27;the Gentlewoman, but she <mark>must</mark> pay me value, here&#x27;s warrant for it. And honest mad-man, there&#x27;s thy gowne, and cap againe; I thanke thee for my wife. Nay, I can be mad, sweet <mark>heart</mark>, when I please,</div>
+<div class="excerpt">tatter&#x27;d sooth-sayer againe, who was my iudge i&#x27;the question, to know certainly whose word he <mark>has</mark> damn&#x27;d or sau&#x27;d. For, till then, I liue but vnder a Repreiue. I <mark>must</mark> seeke him. Who be these? How now, Numps? Nay I&#x27;ll not offend you, Numps. I thought you had sate there to be seen. Cry you mercy, Numps. Do&#x27;s your leg lie high enough?</div>
+<div class="excerpt">Good, &#x27;i faith ô he <mark>has</mark> lighted on the wro ̄ g pocket. WINW. He <mark>has</mark> it, &#x27;fore God hee is a braue fellow; pitty hee should be detected. S&#x27;lood, wee loue you. Content, I accord to that willingly.</div>
+<div class="excerpt">I&#x27;le answer you, presently. He consider with him selfe of it. Why should not I marry this sixe thousand pound, now I thinke on&#x27;t? and a good trade too, that shee <mark>has</mark> beside, ha? The tother wench, Winwife, is sure of; there&#x27;s no expectation for me there! here I may make my selfe some sauer, yet, if shee continue mad, there&#x27;s</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Good, &#x27;i faith ô he has lighted on the wro ̄ g pocket. WINW. He has it, &#x27;fore God hee is a braue fellow; pitty hee should be detected. S&#x27;lood, wee loue you. Content, I accord to that willingly. Why, wherefore should you not? What should hinder you? S&#x27;light, here&#x27;s a fine ragged Prophet, dropt downe &#x27;ithe nicke! Nay, stay a little, good Lady, put him to the question. No matter what, a Fortune-teller wee ha&#x27; made him. Which is&#x27;t, which is&#x27;t. S&#x27;lid, I forgot that, pray you pardon mee. Looke, here&#x27;s our Mercury come: The Licence arriues i&#x27;the finest time, too! &#x27;tis but scraping out Cokes his name, and &#x27;tis done. Doe so, and find out a Priest i&#x27;the meane time, I&#x27;le bring the License. Lead, which way is&#x27;t? Call you this vapours? this is such beltching of quar rell, as I neuer heard. Will you minde your businesse, Sir? Ha, ha, ha. Sir, you&#x27;ll allow mee my christian liberty. I may laugh, I hope. Faith, and I will then, for it doth please mee excee dingly. Gentlemen, I doe not play well at your game of vapours, I am not very good at it, but— In circle, Sir? what would you with me in circle? S&#x27;lid, your circle will proue more costly then your va pours, then. Sir, no, I lend you none. How Rascall? are you playing with my beard? They draw all, and fight. I&#x27;le breake circle with you. Well, Sir. You are now discharg&#x27;d: Quarlous to the Cut-purse ▪ beware of being spi&#x27;d, hereafter. Keepe it for your companions in beastlinesse, I am none of &#x27;hem, Sir. If I had not already forgiuen you a greater trespasse, or thought you yet worth my beating, I would instruct your man ners, to whom you made your offers. But goe your wayes, talke not to me, the hangman is onely fit to discourse with you; the hand of Beadle is too mercifull a punishment for your Trade of life. I am sorry I employ&#x27;d this fellow; for he thinks me such: Fa cinus quos inquinat, aequat. But, it was for sport. And would I make it serious, the getting of this Licence is nothing to me, without o ther circumstances concurre. I do thinke how impertinently I la bour, if the word bee not mine, that the ragged fellow mark&#x27;d: And what aduantage I haue giuen Ned Win-wife in this time now, of working her, though it be mine. Hee&#x27;ll go neare to forme to her what a debauch&#x27;d Rascall I am, and fright her out of all good con ceipt of me: I should doe so by him, I am sure, if I had the oppor tunity. But my hope is in her temper, yet; and it must needs bee next to despaire, that is grounded on any part of a woman&#x27;s dis cretion. I would giue by my troth, now, all I could spare (to my cloathes, and my sword) to meete my tatter&#x27;d sooth-sayer againe, who was my iudge i&#x27;the question, to know certainly whose word he has damn&#x27;d or sau&#x27;d. For, till then, I liue but vnder a Repreiue. I must seeke him. Who be these? How now, Numps? Nay I&#x27;ll not offend you, Numps. I thought you had sate there to be seen. Cry you mercy, Numps. Do&#x27;s your leg lie high enough? What, Rabby Busy ! is hee come? What&#x27;s heere! a Stoick i&#x27;the stocks? the Foole is turn&#x27;d Philosopher. O, here&#x27;s my man! dropt in, I look&#x27;d for. How! is hee a mad-man! If hee be mad, it is in vaine to question him. I&#x27;le try though, friend: there was a Gentlewoman, shew&#x27;d you two names, some houre since, Argalus and Palemon, to marke in a booke, which of &#x27;hem was it you mark&#x27;d? This fellowes madde indeede: I am further off, now, then afore. Well, I will make another vse of him, is come in my head: I haue a nest of beards in my Truncke, one some thing like his. I haue made my selfe as like him, as his gowne, and cap will giue me leaue. Quarlous in the habit of the mad-man is mis taken by M rs Pure-craft. By whose warrant? leaue your canting. Gentlewoman, haue I found you? (saue yee, quit yee, and multiply yee) where&#x27;s your booke? He desires to see the booke of Mistresse Grace. &#x27;twas a sufficient name I mark&#x27;d, let me see&#x27;t, be not afraid to shew&#x27;t me. Marke it againe, and againe, at your seruice. Palemon? fare you well, fare you well. Palemon, the word, and Win-wife the man? Away, you are a heard of hypocriticall proud Igno rants, rather wilde, then mad. Fitter for woods, and the society of beasts then houses, and the congregation of men. You are the se cond part of the society of Canters, Outlawes to order and Disci pline, and the onely priuiledg&#x27;d Church-robbers of Christendome. Let me alone. Palemon, the word, and Winwife the man? Stand aside, I&#x27;le answer you, presently. He consider with him selfe of it. Why should not I marry this sixe thousand pound, now I thinke on&#x27;t? and a good trade too, that shee has beside, ha? The tother wench, Winwife, is sure of; there&#x27;s no expectation for me there! here I may make my selfe some sauer, yet, if shee continue mad, there&#x27;s the question. It is money that I want, why should I not marry the money, when &#x27;tis offer&#x27;d mee? I haue a License and all, it is but razing out one name, and putting in another. There&#x27;s no playing with a man&#x27;s fortune! I am resolu&#x27;d! I were truly mad, an&#x27; I would not! well, come your wayes, follow mee, an&#x27; you will be mad, He takes her along with him. The Iustice calls him. I&#x27;ll shew you a warrant! He takes her along with him. The Iustice calls him. By whose warrant? Nothing but your warrant. To be gone, Sir. Your hand and seale, will doe me a great deale of good; nothing else in the whole Fayre, that I know. Why, it will satisfie me, that&#x27;s end enough, to looke on; an&#x27; you will not gi&#x27; it mee, let me goe. Why, this mad mans shape, will proue a very fortunate one, I thinke! can a ragged robe produce these effects? if this be the wise Iustice, and he bring mee his hand, I shall goe neere to make some vse on&#x27;t. Hee is come already! Hee vrgeth Mistresse Purecraft. Her hand for a witnesse, and all is well. Why should not I ha&#x27; the conscience, to make this a bond of a thousand pound? now, or what I would else? Let vs now proceed in madnesse. I know no fitter mat h, then a Puppet to commit with an Hypocrite! You are i&#x27;the right, I am mad, To Quar lous. but from the gowne out ward. Where you please, Sir. Sir, why doe you not goe on with the enormity? are you opprest with it? I&#x27;le helpe you: harke you Sir, i&#x27;your eare, your Innocent young man, you haue tane such care of, all this day, is a Cutpurse ; that hath got all your brother Cokes his things, and help&#x27;d you to your beating, and the stocks; if you haue a minde to hang him now, and shew him your Magistrates wit, you may ▪ but I should think it were better, recouering the goods, and to saue your estimation in him. I thank you S r . for the gift of your Ward, M rs . Grace: look you, here is your hand &amp; seale, by the way. M r . Win-wife giue you ioy, you are Palemon, you are possest o&#x27;the Gentlewoman, but she must pay me value, here&#x27;s warrant for it. And honest mad-man, there&#x27;s thy gowne, and cap againe; I thanke thee for my wife. Nay, I can be mad, sweet heart, when I please, still; neuer feare me: To the wid dow. And carefull Numps, where&#x27;s he? I thanke him for my licence. &#x27;Tis true, Numps. Loke i&#x27;your boxe, Numps, nay, Sir, stand not you fixt here, like a stake in Finsbury to be shot at, or the whipping post i&#x27;the Fayre, but get your wife out o&#x27;the ayre, it wil make her worse else; and remember you are but Adam, Flesh, and blood! you haue your frailty, forget your other name of Ouerdoo, and inuite vs all to supper. There you and I will compare our discoueries ; and drowne the memory of all enormity in your bigg&#x27;st bowle at home. And no enormities.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Bartholomew Fair</div><div class="body">Bartholomew Cokes has two objectives in life: to visit the fair which shares his name, and to marry Grace Wellborn, who, as a ward, faces a financial penalty should she refuse. He sends his servant Wasp to Littlewit the proctor to obtain a marriage licence, but then, impatiently, comes himself. He brings Grace with him, and she attracts the interest of Winwife, present with his friend Quarlous as a suitor to Littlewit’s mother-in-law, Dame Purecraft. Littlewit is more interested in Cokes’s talk of the fair, having secretly written one of the puppet plays to be performed there. The only snag is that the puritanical Dame Purecraft will disapprove of their visit, thinking fairs profane. Busy, an elder of Purecraft’s church, advises the family that fairs may lawfully be visited for good reason, and comes along with them to partake of the pork. After some unfortunate experiences involving mistaken identity, Justice Overdo no longer trusts informers and has decided to do his spying personally. He visits the fair in disguise to seek out ‘enormities’ perpetrated by the fairground folk. He is impressed by one young man, Edgeworth, and decides to rescue him from the clutches of the cheaters; but he does not know that Edgeworth is a cutpurse. While Overdo is busy telling him about the wickedness of tobacco, Edgeworth steals Cokes’s purse; Overdo gets the blame. When it happens a second time, Overdo is arrested and put in the stocks. There he encounters the madman Trouble-All, who persistently demands Overdo’s warrant for any action; it transpires that he was a court official driven out of his mind by Overdo’s own actions. The watchmen, concerned to get better authority, release Overdo from the stocks for the time being. Meanwhile, the Littlewits arrive at the fair, but Busy becomes over-excited in his condemnation, attacks the fairground booths, and is arrested; Dame Purecraft goes after him, leaving Littlewit and Win free to enjoy themselves. Edgeworth tricks Wasp into making affidavit so that, at Quarlous’s instigation, he can steal Cokes’s marriage licence. Wasp too is arrested and put in the stocks, but escapes by a ruse when Overdo and Busy are put in beside him. The women visitors to the fair are separated from the men. Littlewit leaves Win in the care of two fairground bawds while he goes off to check the arrangements for his puppet show. Cokes abandons Grace and Mistress Overdo to try and get back his stolen property. Desperate for the toilet, Mistress…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

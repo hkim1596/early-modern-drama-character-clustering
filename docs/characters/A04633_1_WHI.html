@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WHI in Bartholomew Fair · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>WHI</span>
+</nav>
+
+<h1>WHI</h1>
+<p class="lede">in <em>Bartholomew Fair</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>1085</td></tr>
+<tr><th>Characters</th><td>5579</td></tr>
+<tr><th>BritDrama no.</th><td>1757</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">fait now, Vrsla&#x27;s Ale, and Aqua-vitae ish to blame for&#x27;t; shit downe shweet <mark>heart</mark>, shit downe ▪ and shleep a little. I and 〈◊〉 is anoder Lady, shweet <mark>heart</mark>; if dou hasht a minde to &#x27;hem gi e me twelue pence from tee, and dou shalt haue eder-oder on &#x27;hem! But <mark>heare</mark> mee now, heere ish one o&#x27;de Ladish, a shleep, stay till shee but</div>
+<div class="excerpt">Phy? phat a clocke toest tou tinke it ish, man? Tou art right now! phen didst tou euer know, or <mark>heare</mark> of a shuffishient vatchman, but he <mark>did</mark> tell the clocke, phat bushi nesse soeuer he had? Shleeping, or vaking! ash well as te clocke himshelfe,</div>
+<div class="excerpt">vill doe it, shpeake out. I vill doe it, and more, and more, for dee. What Vrsla, and&#x27;t be bitch, and&#x27;t be baud and&#x27;t be! Heere, put vp de cloakes Vrsh ; de purchase, pre dee now, shweet Vrsh, help dis good braue voman, to a Iordan, and&#x27;t be. Nay, pre dee leaue dy consheits, and bring the veluet <mark>woman</mark> to de— O good voordsh,</div>
+<div class="excerpt">heere, be an&#x27;t be, in te pig-quarter ▪ gi&#x27;me ty twelpence from tee, Tou art a vorthy man, and a vorshipfull man still. I doe meane it, man. Prinsh Quarlous if tou <mark>has</mark> t need on me, tou shalt finde me heere, at Vrsla&#x27;s, I vill see phat ale, and punque ish i&#x27;te pigshty, for tee, blesse ty good vorship. A delicate show-pig, little</div>
+<div class="excerpt">in de graish o&#x27; God: one of hem do&#x27;s change cloth, for Ale in the Fayre, here, te toder ish a strong man, a mighty man, my Lord Mayors man, and a wrastler. Hee <mark>has</mark> wrashled so long with the bottle, heere, that the man with the beard, hash almosht streeke vp hish heelsh. Tere he ish, pre de taik him hensh, and make ty best</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Phy? phat a clocke toest tou tinke it ish, man? Tou art right now! phen didst tou euer know, or heare of a shuffishient vatchman, but he did tell the clocke, phat bushi nesse soeuer he had? Shleeping, or vaking! ash well as te clocke himshelfe, or te lack dat shtrikes him! If it be a Ledderhead, tish a very tick Ledderhead, tat sho mush noish vill not peirsh him. Phat? because o&#x27;ty wrought neet cap, and ty pheluet sherkin, Man? phy? I haue sheene tee in ty Ledder sherkin, ere now, Mashter o&#x27;de hobby-Horses, as bushy and as stately as tou sheem&#x27;st to be ▪ Away, be not sheen i&#x27;my company, here be shentlemen, and men of vorship. WEe had wonderfull ill lucke, to misse this prologue o&#x27;the purse, but the best is, we shall haue fiue Acts of him ere night: hee&#x27;le be spectacle enough! I&#x27;le answer for&#x27;t. O Creesh! Duke Quarlous, how dosht tou? tou dosht not know me, I feare? I am te vishesht man, but Iustish Ouerdoo, in all Bartholmew Fayre, now. Gi&#x27; me tweluepence from tee, I vill help tee to a vife vorth forty marks for&#x27;t, and&#x27;t be. And shee shall shew tee as fine cut o&#x27;rke fort&#x27;t in her shmock too, as tou cansht vishe i&#x27;faith; vilt tou haue her, vorship full Vin vife ? I vill helpe tee to her, heere, be an&#x27;t be, in te pig-quarter ▪ gi&#x27;me ty twelpence from tee, Tou art a vorthy man, and a vorshipfull man still. I doe meane it, man. Prinsh Quarlous if tou has t need on me, tou shalt finde me heere, at Vrsla&#x27;s, I vill see phat ale, and punque ish i&#x27;te pigshty, for tee, blesse ty good vorship. A delicate show-pig, little Mistris, with shweet sauce, and crackling, like de bay-leafe i&#x27;de fire, la! Tou shalt ha&#x27;de cleane side o&#x27;de table-clot and di glass vash&#x27;d with phatersh of Dame Annessh Cleare. Behold, man and see, what a worthy man am ee! With the fury of my sword, and the shaking of my beard, I will make ten thousand men afeard. Who told dee sho? that he vuld neuer teer, man? He shall not pardon dee, Captaine, dou shalt not be par don&#x27;d. Pre&#x27;de shweete heart doe not pardon him. Pardon me, little man, dou musht like it a little. I tinke I be, he musht not like it, indeede. By no meansh Captaine, vpon reason, he may like no thing vpon reason. Pardon mee, thou ougsht to grant him nothing, in no she sh, if dou doe loue dy shelfe, angry man. Yes, I tinke it dosh shtinke, Captaine. All vapour dosh shtinke. Pardon me, thou knowesht nothing, it cannot by thy leaue, angry man. Yesh, I am i&#x27;de right, I confesh it, so ish de little man too. No, noting was ty question, tou art a learned man, and I am a valiant man, i&#x27;faith la, tou shalt speake for mee, and I vill fight for tee. Yes, I pre dee now, let him mistake. Stay, Bristle, heere ish a noder brash o&#x27;drunkards, but very quiet, speciall drunkards, will pay dee, fiue shillings very well. Take &#x27;hem to dee, in de graish o&#x27; God: one of hem do&#x27;s change cloth, for Ale in the Fayre, here, te toder ish a strong man, a mighty man, my Lord Mayors man, and a wrastler. Hee has wrashled so long with the bottle, heere, that the man with the beard, hash almosht streeke vp hish heelsh. Tere he ish, pre de taik him hensh, and make ty best on him. How now woman o&#x27; shilke, vat ailsh ty shweet faish? art tou melancholy? Intreat a hundred, veluet voman, I vill doe it, shpeake out. I vill doe it, and more, and more, for dee. What Vrsla, and&#x27;t be bitch, and&#x27;t be baud and&#x27;t be! Heere, put vp de cloakes Vrsh ; de purchase, pre dee now, shweet Vrsh, help dis good braue voman, to a Iordan, and&#x27;t be. Nay, pre dee leaue dy consheits, and bring the veluet woman to de— O good voordsh, Vrsh, it ish a guest o&#x27;veluet, i&#x27;fait la. As soone ash tou cansht shwet Vrsh. Of a valiant man I tinke I am the patientsh man i&#x27;the world, or in all Smithfield. No fait, Captaine, dough tou beesht a vishe man, dy vit is a mile hence, now. I vas procuring a shmall courtesie, for a woman of fashion here. Gramercy good Vrsh, I tanke dee. Yes, by my fait, and trot, it is, Captaine: de honesht wo mans life is a scuruy dull life, indeed, la. Yes fait, shweet heart, beleeue him, de leefe of a Bond. woman! but if dou vilt harken to me, I vill make tee a free-wo man, and a Lady: dou shalt liue like a Lady, as te Captaine saish. I, and ride to Ware and Rumford i&#x27;dy Coash, shee de Players, be in loue vit &#x27;hem; sup vit gallantsh, be drunke, and cost de noting. And lye by twenty on&#x27;hem, if dou pleash shweet heart. Tish common, shweet heart, tou may&#x27;st doe it by my hand: it shall be iustified to ty husbands faish, now: tou shalt be as honesht as the skinne betweene his hornsh, la! Mend then, and doe euery ting like a Lady, heereafter, neuer know ty husband, from another man. I, and then it ish no dishgrash to know any man. Yes fait, dey shal all both be Ladies, and write Madame. I vill do&#x27;t my selfe for dem. Doe, is the vord, and D is the middle letter of Madame, D D, put &#x27;hem together, and make deeds, with out which, all words are alike, la. I pree dee, take a care o&#x27;dy shmall Lady, there, Edgworth ; I will looke to dish tall Lady my selfe. Predee, Mashter o&#x27;de Monshtersh, helpe a very sicke Lady, here, to a chayre, to shit in. They bring Mistr s O uerdoo a chayre. Good fait now, Vrsla&#x27;s Ale, and Aqua-vitae ish to blame for&#x27;t; shit downe shweet heart, shit downe ▪ and shleep a little. I and 〈◊〉 is anoder Lady, shweet heart; if dou hasht a minde to &#x27;hem gi e me twelue pence from tee, and dou shalt haue eder-oder on &#x27;hem! But heare mee now, heere ish one o&#x27;de Ladish, a shleep, stay till shee but vake man. Yesh faith man, and it ish fot tat, we would be gone man. Dy very owne wi e, i&#x27;fait, worshipfull Adam.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Bartholomew Fair</div><div class="body">Bartholomew Cokes has two objectives in life: to visit the fair which shares his name, and to marry Grace Wellborn, who, as a ward, faces a financial penalty should she refuse. He sends his servant Wasp to Littlewit the proctor to obtain a marriage licence, but then, impatiently, comes himself. He brings Grace with him, and she attracts the interest of Winwife, present with his friend Quarlous as a suitor to Littlewit’s mother-in-law, Dame Purecraft. Littlewit is more interested in Cokes’s talk of the fair, having secretly written one of the puppet plays to be performed there. The only snag is that the puritanical Dame Purecraft will disapprove of their visit, thinking fairs profane. Busy, an elder of Purecraft’s church, advises the family that fairs may lawfully be visited for good reason, and comes along with them to partake of the pork. After some unfortunate experiences involving mistaken identity, Justice Overdo no longer trusts informers and has decided to do his spying personally. He visits the fair in disguise to seek out ‘enormities’ perpetrated by the fairground folk. He is impressed by one young man, Edgeworth, and decides to rescue him from the clutches of the cheaters; but he does not know that Edgeworth is a cutpurse. While Overdo is busy telling him about the wickedness of tobacco, Edgeworth steals Cokes’s purse; Overdo gets the blame. When it happens a second time, Overdo is arrested and put in the stocks. There he encounters the madman Trouble-All, who persistently demands Overdo’s warrant for any action; it transpires that he was a court official driven out of his mind by Overdo’s own actions. The watchmen, concerned to get better authority, release Overdo from the stocks for the time being. Meanwhile, the Littlewits arrive at the fair, but Busy becomes over-excited in his condemnation, attacks the fairground booths, and is arrested; Dame Purecraft goes after him, leaving Littlewit and Win free to enjoy themselves. Edgeworth tricks Wasp into making affidavit so that, at Quarlous’s instigation, he can steal Cokes’s marriage licence. Wasp too is arrested and put in the stocks, but escapes by a ruse when Overdo and Busy are put in beside him. The women visitors to the fair are separated from the men. Littlewit leaves Win in the care of two fairground bawds while he goes off to check the arrangements for his puppet show. Cokes abandons Grace and Mistress Overdo to try and get back his stolen property. Desperate for the toilet, Mistress…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

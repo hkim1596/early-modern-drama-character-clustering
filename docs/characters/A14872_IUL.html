@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IUL in The Duchess of Malfi · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>IUL</span>
+</nav>
+
+<h1>IUL</h1>
+<p class="lede">in <em>The Duchess of Malfi</em> — Webster, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>905</td></tr>
+<tr><th>Characters</th><td>4727</td></tr>
+<tr><th>BritDrama no.</th><td>1726</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">came to visit an old Anchorite <mark>Heare</mark>, for deuotion You haue preuailed with me Beyond my strongest thoughts: I would not now Find you inconstant. How (my Lord?) <mark>Did</mark> you ere find them? So, (my Lord) This is very well (my Lord.) I&#x27;ll go home To my husband. You told me of a piteous wound i&#x27;th&#x27;<mark>heart</mark>, And a sicke liuour, when you</div>
+<div class="excerpt">experience Will satisfie you no, our Romane Prelates Do not keepe lodging, for Ladies. I <mark>heare</mark> he&#x27;s come to Rome? Your laughter, Is my pitty. From my husband? I <mark>must</mark> <mark>heare</mark> the condition, ere I be bound to take it. I haue a Bird more beautifull. A Lute-string far exceedes it, It hath no smell, like Cassia, or Cyu t, Nor is it</div>
+<div class="excerpt">are no liuely sparkes Of roughnes. Why ignorance in court-ship cannot make you do amisse, If you haue a <mark>heart</mark> to do well. Nay, if you lay beauty to my charge, I <mark>must</mark> plead vnguilty. You will mar me with commendation, Put your selfe to the charge of courting me, Whereas now I woe you. No, he might count me a wanton, Not lay a</div>
+<div class="excerpt">seal&#x27;d: Go, get you in, You shall see me winde my tongue about his <mark>heart</mark>, Like a skeine of silke. How now, my Lord? What ailes you? Oh, you are much alterd: Come, I <mark>must</mark> be your Secretary, and remoue This lead from off your bosome, what&#x27;s the matter? Are you so farre in loue with sorrow, You cannot part, with part of it? or thinke</div>
+<div class="excerpt">follow the warres, I&#x27;ll be your maintenance. Not leaue an Vngratefull Generall, for the loue of a sweete Lady? You are like some, cannot sleepe in feather-beds, But <mark>must</mark> haue blockes for their pillowes. Cunningly. To morrow? get you into my Cabinet, You shall haue it with you: do not delay me, No more then I do you: I am like one</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Why, (my Lord) I told him I came to visit an old Anchorite Heare, for deuotion You haue preuailed with me Beyond my strongest thoughts: I would not now Find you inconstant. How (my Lord?) Did you ere find them? So, (my Lord) This is very well (my Lord.) I&#x27;ll go home To my husband. You told me of a piteous wound i&#x27;th&#x27;heart, And a sicke liuour, when you woed me first, And spake like one in physicke. Signior Delio? &#x27;tis one of my old Suitors Sir, your are wel-come. Sure, your owne experience Will satisfie you no, our Romane Prelates Do not keepe lodging, for Ladies. I heare he&#x27;s come to Rome? Your laughter, Is my pitty. From my husband? I must heare the condition, ere I be bound to take it. I haue a Bird more beautifull. A Lute-string far exceedes it, It hath no smell, like Cassia, or Cyu t, Nor is it phisicall, though some fond Doctors Perswade vs, seeth&#x27;s in Cullisses, i&#x27;le tell you, This is a Creature bred by— Sir, you heare, &#x27;Pray let me know your busines, and your suite, As briefely as can be. Sir, i&#x27;le go aske my husband if I shall, And straight returne your answere. Exit. My Lord, I am growne your poore Petitioner, And should be an ill begger, had I not A Great mans letter, here (the Cardinalls) To Court you in my fauour. Yes: Sir, I thanke you: And he shall know how doubly I am engag&#x27;d Both in your gu t, and speedinesse of giuing, Which makes your graunt, the greater. Exit. What an excellent shape hath that fellow? Exit. So, sir, you are well met. Nay, the doores are fast enough: Now Sir, I will make you confesse your treachery. Yes, confesse to me Which of my women &#x27;twas you hyr&#x27;d, to put Loue-powder into my drinke? Yes, when I was at Malfy, Why should I fall in loue with such a face else? I haue already suffer&#x27;d for thee so much paine, The onely remedy to do me good, Is to kill my longing. Compare thy forme, and my eyes together, You&#x27;ll ind my loue no such great miracle: Now you&#x27;ll say, I am wanton: This nice modesty, in Ladies Is but a troublesome familiar, That haunts them. The better, Sure, there wants fire, where there are no liuely sparkes Of roughnes. Why ignorance in court-ship cannot make you do amisse, If you haue a heart to do well. Nay, if you lay beauty to my charge, I must plead vnguilty. You will mar me with commendation, Put your selfe to the charge of courting me, Whereas now I woe you. No, he might count me a wanton, Not lay a scruple of offence on you: For if I see, and steale a Diamond, The fault is not i&#x27;th&#x27;stone, but in me the thiefe, That purloines it: I am sudaine with you, We that are great women of pleasure, vse to cut off These vncertaine wishes, and vnquiet longings, And in an instant ioyne the sweete delight And the p tty excuse together: had you bin in&#x27;th&#x27;streete, Vnder my chamber window, euen there I should haue courted you. Bid me do somewhat for you presently, To expresse I loue you. Why would you know this? You shall not neede follow the warres, I&#x27;ll be your maintenance. Not leaue an Vngratefull Generall, for the loue of a sweete Lady? You are like some, cannot sleepe in feather-beds, But must haue blockes for their pillowes. Cunningly. To morrow? get you into my Cabinet, You shall haue it with you: do not delay me, No more then I do you: I am like one That is condemn&#x27;d: I haue my pardon promis&#x27;d. But I would see it seal&#x27;d: Go, get you in, You shall see me winde my tongue about his heart, Like a skeine of silke. How now, my Lord? What ailes you? Oh, you are much alterd: Come, I must be your Secretary, and remoue This lead from off your bosome, what&#x27;s the matter? Are you so farre in loue with sorrow, You cannot part, with part of it? or thinke you I cannot loue your grace, when you are sad, As well as merry? or do you suspect I, that haue bin a secret to your heart, These many winters, cannot be the same Vnto your tongue? Tell your eccho this, Or flatterers, that (like ecchoes) still report What they heare (though most imperfect) and not me: For, if that you be true vnto your selfe, I&#x27;ll know. No, iudgement shall Draw it from you: It is an equall fault, To tell ones secrets, vnto all, or none. But the last tyranny. Therefore may not I know it? You haue conceal&#x27;d for me, as great a sinne As adultery: Sir, neuer was occasion For perfect triall of my constancy Till now: Sir, I beseech you. Neuer. Now you dally with me. Oh heauen! (sir) what haue you done? You haue vndone your selfe (sir.) It lies not in me to conceale it. Most religiously. I forgiue you, This equall peece of Iustice you haue done: For I betraid your councell to that fellow, He ouer heard it; that was the cause I said It lay not in me, to conceale it. &#x27;Tis weakenesse, Too much to thinke what should haue bin done, I go, I know not whether.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Duchess of Malfi</div><div class="body">There are two new arrivals at the Duchess of Malfi’s court. One is Antonio, her steward, who has returned from an extended visit to France. The other is Bosola, an ex-convict who committed a murder for the Cardinal, and who is now placed at court by the Duchess’s brother Ferdinand, with instructions to supply information. Ferdinand and the Cardinal leave the court, enjoining their sister not to marry again, but she defies them and secretly woos and marries Antonio. She clandestinely gives birth to a son, which Bosola discovers after Antonio accidentally drops the baby’s horoscope. The news is duly reported to the infuriated Ferdinand. The Duchess has two more children. Ferdinand visits Malfi, planning to marry her to Count Malateste. He visits her private chamber and catches her talking to Antonio, whose identity remains unknown because he has hidden as part of a practical joke. She banishes Antonio as a pretext to get him out of court, and follows him on a feigned pilgrimage to the state of Ancona. Bosola wins her confidence by speaking well of Antonio, unlike the other court flatterers; she entrusts him with the secret of their marriage, which he duly reports to his paymaster. The Cardinal is commissioned to fight in the war, and ceremonially puts off his ecclesiastical office. By papal decree, the Duchess and Antonio are banished ===== PAGE 347 ===== 1613 from Ancona and the Duchy of Malfi is seized by the Holy See; Antonio flees to Milan with his eldest son, and Bosola arrests the Duchess. Acting on Ferdinand’s orders, he imprisons and torments her, shows her the dead bodies of Antonio and her son (which turn out to be waxworks), and finally supervises her and her younger children’s murder. Ferdinand disowms him, then goes mad with lycanthropic delusions. The Cardinal schemes to have Antonio’s lands confiscated, poisons his mistress, and inadvertently reveals to Bosola his part in the Duchess’s death. Seeking revenge, Bosola mistakenly kills Antonio in the dark. In his madness, Ferdinand kills the Cardinal and Bosola, who kills him in turn. Delio decides to advance the rights of Antonio’s surviving son.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

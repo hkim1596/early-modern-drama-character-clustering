@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MOR in 532 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MOR</span>
+</nav>
+
+<h1>MOR</h1>
+<p class="lede">in <em>532</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>1089</td></tr>
+<tr><th>Characters</th><td>6020</td></tr>
+<tr><th>BritDrama no.</th><td>532</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">hedgehog set thy braines a crowing? <mark>bee</mark> quits with him, but doe not hurt the great male-baby. Loving hearts be quick as soone as ye can, time runs apace; what you <mark>must</mark> doe, doe nimbly, and give your minds to&#x27;t; young bloods stand fumbling? fie a way, be ready for shame before-hand; hisband, stand to thy tackling hisband, like</div>
+<div class="excerpt">this was hand led like one of spirit and discretion: Nitido <mark>has</mark> pag&#x27;d it trimly too; no wording, but make ready and attend at Court. Indeed forsooth, and so we <mark>did</mark> an&#x27;t like ye. A while suspected (Gentlemen) I looke For no new Law, being quitted by the Booke.</div>
+<div class="excerpt">forsooth. You have a delicate moyst palme—umh—can yee rellish that tickle? there. And laugh, why now you have it, what hurt pray Perceive yee? there&#x27;s all, all, <mark>goe</mark> to, you want tutoring, Are an apt scholar, Ile neglect no paines For your instruction. No worse man Then marquesse of Siena, the great Master Of this small familie,</div>
+<div class="excerpt">neglect no paines For your instruction. No worse man Then marquesse of Siena, the great Master Of this small familie, your master found him, A bounteous benefactor, <mark>has</mark> advanc&#x27;d him, The gentleman o&#x27;th horse, in a shott time He meanes to visit you himselfe in person, As kind, as loving, an old man. No worse I can assure your Ladiship,</div>
+<div class="excerpt">free maintainer of the Fancies. The pretty soules VVho are companions in the house, all daughters To honest vertuous parents, and right worshipfull. A kind of chaste collapsed Ladies. Onely in their fortunes. A Fancie principall, I hope you&#x27;le fashion Your entertainment, when the Marquesse courts you, As that I may stand blamelesse.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Yes honey suckle, and doe as much for them one day, if things stand right as they should stand, Bill, Pigeon doe; thou&#x27;st be my Cattamountaine, and I thy sweet bryer, Honey, wee&#x27;l lead you to kind examples (pretty ones) believe it, and you shall find us, one in one, whiles hearts doe last. Indeed a&#x27; ha&#x27;s Sir, if yee know all, as I conceive you know enough, if not the whole: for you have (I may say) tryed me to the quick, through and through, and most of my carriage, from time to time. What&#x27;s that you mumble, Gelding, shey. &#x27;Twere eene pitty indeed, Spadone, nay tha&#x27;st a foolish loving nature of thine own, and withest wel to plaine dealings o&#x27; my conscience. Well said Gentlefolks. I could dance now, Ecne till I dropt againe; but want of practice Denies the scope of breath or so, yet sirrah, My Cattamountaine, doe not I trip quickly, And with a grace too, sirrah. Childe. Ladies and gentlemen, your eares. Spadone, discharge the fidlers instantly. Attend within, Sweeting,—your pardons Gentlemen; to your recreations deare virgins: Page have a care, One gentle word in private with your Ladiship. I shal Not hold you long. May it please your Goodnesse, You&#x27;l find him even in every point as honourable, As flesh and bloud can vouch him: He will not presse beyond his bounds. He will but chat and toy, and feele your— Your hands to kisse them. Your faire, pure, white hands, what strange businesse is it? These melting twins of Ivory, but softer Then downe of Turtles, shall but feede the appetite— The appetite Of his poore ravisht eye; should he swell higher In his desires, and soare upon ambition Of rising in humility, by degrees; Perhaps a&#x27; might crave leave to clap— Clap or pat the dimples, VVhere Loves tombe stands erected on your cheekes. Else pardon those slight exercises, pretty one, His Lordship is as harmelesse a weake implement, As ere young Lady trembled under. No, no deed la. A very grave stale Batchelor (my dainty one) There&#x27;s the conceit: Hee&#x27;s none of your hot rovers, Who ruffle at first dash, and so disfigure Your Dresses, and your sets of blush at once. Hee&#x27;s wise in yeeres, and of a temperate warmth; Mighty in meanes and power: and withall liberall. A wanton in his wishes, but else, farther, A&#x27; cannot—cause—a&#x27; cannot. You urge timely, and to purpose, A&#x27; cannot doe—the truth is truth—doe, any thing, (As one should say) that&#x27;s any thing, put case (I doe but put the case forsooth) a&#x27; finde yee. You hit it—what else—she is cunning—looke yee, Pray lend your hand forsooth. You have a delicate moyst palme—umh—can yee rellish that tickle? there. And laugh, why now you have it, what hurt pray Perceive yee? there&#x27;s all, all, goe to, you want tutoring, Are an apt scholar, Ile neglect no paines For your instruction. No worse man Then marquesse of Siena, the great Master Of this small familie, your master found him, A bounteous benefactor, has advanc&#x27;d him, The gentleman o&#x27;th horse, in a shott time He meanes to visit you himselfe in person, As kind, as loving, an old man. No worse I can assure your Ladiship, The onely free maintainer of the Fancies. The pretty soules VVho are companions in the house, all daughters To honest vertuous parents, and right worshipfull. A kind of chaste collapsed Ladies. Onely in their fortunes. A Fancie principall, I hope you&#x27;le fashion Your entertainment, when the Marquesse courts you, As that I may stand blamelesse. Meerely. Undoubtedly. True, there&#x27;s the Musick, the content, the harmony. You are pregnant. Blessing on thee. He is a foule-mouth&#x27;d man. How&#x27;s that my Cat a Mountaine? Beshrew your fingers if you be in earnest: You pinch too hard, go to, Ile pare your nailes for&#x27;t. Marry and so it does, Tho he would spit his gall out. I doe defie thee; am I old or ugly? He&#x27;s not jealous Sirrah. Pox on him, let him Put&#x27;s finger into any Gums of mine, He shall finde I have teeth about me, sound ones. I know not I, He pinched me, called me names, most filthy names. Will ye part hence Sir, I will set ye packing. Hence, there enters A civiller companion for faire Ladies Then such a sloven. Please your Lordship, It is the Ladies hower for exercise In Song and Dance. Walke on deere Ladies. Remember my instructions, or— All is inck&#x27;d here Good soule indeed. Honey-bird, Spouse, Catamountaine; ah the Child, the pretty poore Child; the sweet fac&#x27;d Child. Yes, I will helpe thee pretty heart, if my tongue cannot prevaile; my nayles shall. Barbarous minded man, let go, or I shall use my tallons. Tospot, stinckard, pander, my husband &amp; a rascal. Ah thou base fellow! wouldst thou confesse it and it were so: but &#x27;tis not so, and thou lyest and lowdly. The Boy, the Babe, the Infant; I spit at thee. Rotten in thy maw, thy guts and garbage. Are thy mad braines in thy mazar now, thou jealous Bedlam? Marry art thou, so thou art; the World sayes how vertuously I have carried my good name in every part a bout me, these threescore yeares and odde; and at last to slip with a child; there are men, men enough, tough and lustie (I hope) if one would give their mind to the iniquitie of the flesh, but this is the life I ha&#x27;led with him a while since when a lies by me as cold as a dry stone. Looke you provoke us no more, for this time you shall finde mercy;—was&#x27;t that hedgehog set thy braines a crowing? bee quits with him, but doe not hurt the great male-baby. Loving hearts be quick as soone as ye can, time runs apace; what you must doe, doe nimbly, and give your minds to&#x27;t; young bloods stand fumbling? fie a way, be ready for shame before-hand; hisband, stand to thy tackling hisband, like a man of mettall: goe, goe, goe. Yes, sirrah; all is whole yet; but if ever thou dost speak treason against my sweeting and me once more, thoul&#x27;t finde a roguy bargaine on&#x27;t; deare, this was hand led like one of spirit and discretion: Nitido has pag&#x27;d it trimly too; no wording, but make ready and attend at Court. Indeed forsooth, and so we did an&#x27;t like ye. A while suspected (Gentlemen) I looke For no new Law, being quitted by the Booke.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 532</div><div class="body">Three female courtiers tempt the King into a hedonistic lifestyle and away from sermons and the advice of his grave counsellors. They lull him to sleep and then transform him into a pig. While the court makes merry, two old men arrive and change him back to human form. The ladies and other courtiers vanish and he is sent for judgement; his plea is unsuccessful and he is carried away by evil spirits.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

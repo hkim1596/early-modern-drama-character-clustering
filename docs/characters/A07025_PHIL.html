@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PHIL in Holland&#x27;s Leaguer · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PHIL</span>
+</nav>
+
+<h1>PHIL</h1>
+<p class="lede">in <em>Holland&#x27;s Leaguer</em> — Marmion, Shackerley</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1632</td></tr>
+<tr><th>Words</th><td>1238</td></tr>
+<tr><th>Characters</th><td>6578</td></tr>
+<tr><th>BritDrama no.</th><td>2351</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">ſimpathie: No, I have more; But love is ſlow to dictate to my vowes: And yet thoſe ſacred and divine impulſions, Strike truer then my <mark>heart</mark>, and by his power That <mark>has</mark> inflam&#x27;d me, here I ſweare I love you. Nay now you wrong My true intent. That you ſhould ſpeake the like, And with the ſame affection. I know not how You may interpret</div>
+<div class="excerpt">like, And with the ſame affection. I know not how You may interpret it, but ſure the law, And the command of nature, is no baſeneſſe, A thing that love himſelfe <mark>has</mark> dignified, And in his rapes confeſſ&#x27;d the god of loue The greater of the <mark>two</mark>, who ̄ Kings haue ſtoopt to, We are allow&#x27;d t&#x27; inioy ſome ſtolne delights, So we be</div>
+<div class="excerpt">tell me Truly, how does the vulgar voice paſſe on me. And &#x27;tis all true they ſay. Such is the force of beauty, there is nothing Can pleaſe without it, and who euer <mark>has</mark> it, As there be few, is adjudg&#x27;d happy in it. He that excels in valour, wit, or honour, He that is rich, or vertuous, may be envy&#x27;d, But love is the reward of beauty;</div>
+<div class="excerpt">Augury. Prethee let me alone with her. Ladie, my preface is to know your name. I may be happie in you. I have a ſiſter ſomewhere of that name, That in her youth <mark>did</mark> promiſe ſuch a feature, And hopes of future excellence: ſhe had A beautie mixt with maieſtie, would draw From the beholders, love, and reverence. And I doe ill</div>
+<div class="excerpt">vanityes, You haue collected me anew to life: And now I come to you, with as chaſte thoughts, As they were firſt adulterous, and yeeld A due ſubmiſſion for the wrong I <mark>did</mark> Both to your ſelfe, and ſex. You were borne to quit mee. Why, who is it? Who? not Fauſtina? ſhee told me ſo indeed, Her name was Fauſtina. Let mee looke vpon her,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Bring them all three before me: If I ſurprize them not all at firſt daſh, If they fall not together by the eares for mee, Nay, if they runne not mad, and follow mee, As if they were drunke with a loue potion, Nere truſt a Prognoſticator againe. ARdelio, we are now alone, come tell me Truly, how does the vulgar voice paſſe on me. And &#x27;tis all true they ſay. Such is the force of beauty, there is nothing Can pleaſe without it, and who euer has it, As there be few, is adjudg&#x27;d happy in it. He that excels in valour, wit, or honour, He that is rich, or vertuous, may be envy&#x27;d, But love is the reward of beauty; no obiect Surpriſes more the eye, all that delights us, We aſcribe beauty to it. Let me embrace my better Genius. &#x27;Tis an Art Will make thee thrive; will ſhe be coy enough? To tell you true, I take a more delight In the perplexity of woing them, Then the enioying. If ſhe be otherwiſe than I conceiue. A pox on the Augury. Prethee let me alone with her. Ladie, my preface is to know your name. I may be happie in you. I have a ſiſter ſomewhere of that name, That in her youth did promiſe ſuch a feature, And hopes of future excellence: ſhe had A beautie mixt with maieſtie, would draw From the beholders, love, and reverence. And I doe ill me thinkes, with unchaſte thoughts To ſinne againſt her memorie: this taske Would I were rid of; but I&#x27;ll venter. Ladie, You are not blinde, I conceive. Then I hope you can Take notice of a Gentlemans good parts, Without a Periphraſis. A figure, Needleſſe at this time to explaine my deſerts, So eaſie and apparent to be ſeene. Tis too much labour, &#x27;twere a taske would dull The edg of Rhetoricke, to deſcribe them rightly; Nor would I have them dwell upon your tongue, But fixed in your thoughts, there let them moue Till they meet in coniunct: on with your love; Nature would boaſt ſo ſweet a ſimpathie: No, I have more; But love is ſlow to dictate to my vowes: And yet thoſe ſacred and divine impulſions, Strike truer then my heart, and by his power That has inflam&#x27;d me, here I ſweare I love you. Nay now you wrong My true intent. That you ſhould ſpeake the like, And with the ſame affection. I know not how You may interpret it, but ſure the law, And the command of nature, is no baſeneſſe, A thing that love himſelfe has dignified, And in his rapes confeſſ&#x27;d the god of loue The greater of the two, who ̄ Kings haue ſtoopt to, We are allow&#x27;d t&#x27; inioy ſome ſtolne delights, So we be ſecret in&#x27;t; for &#x27;tis ſet downe By ſuch as in this art haue skilfull beene. W&#x27; are not forbid to act, but to be ſeene. Tell not me of your Philoſophicall loue. I am a foole to linger, womens denyall Is but an eaſie cruelty, and they Love to be forc&#x27;d ſometimes. There&#x27;s none of you but feele the ſmart Of a libidinous ſting; elſe wherefore are Thoſe baits and ſtrong allurements to intice us? Wherefore are all your ſleekings, and your curlings, Criſpings, and paintings, and your skinne made ſoft, And your face ſmooth with ointments, then your gate, Confin&#x27;d to meaſure, and compos&#x27;d by art, Beſides the wanton petulancy of your eyes, That ſcatter flames with doubtfull motion, Vnleſſe it were to proſtitute your beauty? Now by this light I thinke you&#x27;ll moralize mee. I c me as to A Whore, but ſhall returne as from a Saint. I am ſubdu&#x27;d, ſhe has converted mee. I ſee within the mirror of her goodneſſe, The foulneſſe of my folly: ſweet inſtruct me. And I will ſtile thee my Aegeria. Here&#x27;s a woman: The ſoule of Hercules has got into her. She has a ſpirit, is more maſculine, Then the firſt gender: how her ſpeech has fill&#x27;d me With love and wonder? ſweet adie proceed ▪ You have redeem&#x27;d me, And with the ſunnie beames of your good counſell D ſperſt the miſt that hung ſo heavie on me: And that you may perceive it takes effect, I&#x27;ll to the warres immediately. I will begin it in your happy omen: But firſt confeſſe, that you haue vanquiſht me. And if I ſhall orecome an enemy, Yeild you the Trophies of the victory. I ſhall attend you. Henceforth I&#x27;le ſtriue to flye the ſight of pleaſure, As of an Harpy or a Baſiliske, And when ſhe flatters, ſeale my eares with Waxe, Tooke from that boat, that rowed with a deafe oare, From the ſweete tunes of the Sicilian ſhoare. Immediately. Is there any of you will goe along with me, Beſides this Gentleman? Ardelio, thou art my faythfull ſeruant. Brother Capritìo, what ſay you to it? M r . Trimalehio, you are yong and luſty, Full of ambitious thoughts. Why, whither are you going? Stay all at home, and hug your ignominyes, And whilſt we ſpoyle the enemy, may you Be pil&#x27;d by pimpes. Cheaters intrench vpon you. Let Bawds, and their iſſues ioyne with you. Marry With whores, and let proiectors rifle for you. And ſo I leaue you. Lady, you are a good Phyſicion, It was your counſel wrought&#x27; this miracle, Beyond the power of Aeſculapius: For when my mind was ſtupified, and loſt In the purſuit of pleaſures: all my body Torne, and diſſected with cloſe vanityes, You haue collected me anew to life: And now I come to you, with as chaſte thoughts, As they were firſt adulterous, and yeeld A due ſubmiſſion for the wrong I did Both to your ſelfe, and ſex. You were borne to quit mee. Why, who is it? Who? not Fauſtina? ſhee told me ſo indeed, Her name was Fauſtina. Let mee looke vpon her, As on the picture of all goodneſſe, engrauen By a celeſtiall finger, ſhall weare out: A marble character. I knew her not, I am glad there is aſcien of our ftock. Can beare ſuch fruit as this, ſo ripe in vertue. Where haue you liu&#x27;d recluſe? you were betrothd To one Fidelio; but croſt by your father. I haue heard good reports of the Gentleman. Vnto his face? Where is hee? I am tranſported, rauiſht: giue mee leaue Good gods, to entertaine with reuerence, So great a comfort. Let mee firſt embrace you. Great ioyes, like greifes, are ſilent. Looſe mee now, And let me make you faſt. Here ioyne your hands, Which no age ſhall vnty. Let happineſſe Diſtill from you, as the Arabian gummes, To bleſſe your iſſue. And for her dowry, I will treble it, Heere Sanrle is come to be a witneſſe to it. Thankes both to them and thee. How fares our Campe at home, Trimalchio, and the reſt? Where is Ardelio Diſcharge him the houſe. Take his accounts and office, and diſpoſe them. Tis well, I am glad of your happineſſe, And much ioy to my brother Capritio, And his faire ſpouſe. Beleeue me ſir, The Gentlewoman is not to be deſpiſde, Her wit and vertues are dowry ſufficient. Hold on your courſe, march on as you came in, And reſt content, ſince fate has thought it fit, To make your fortunes equall with your wit.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Holland&#x27;s Leaguer</div><div class="body">Six years ago, Faustina’s father sent her abroad to keep her away from her love, Fidelio, and made her swear not to marry for seven years. Now the old man is dead, she has returned to London, known only to Fidelio, but insists on keeping her oath for the last remaining year. Her brother Philautus is in love with himself, which distresses his friends and offends his wife, but gives his servant Ardelio the opportunity to steal from him by conveying away property into storage at an accomplice’s house. Fidelio plans to make him fall in love with Faustina; this will both cure him and test her fidelity. He explains it to Faustina as a plan to humiliate a lord who has cast aspersions on women. Philautus makes advances to Faustina on the assumption that all women are libidinous and enjoy being raped from time to time; but he is impressed by her militant chastity, and accedes to her demand that he prove his honour in battle. He later returns from the wars, cured of narcissism, and asks Faustina’s pardon for his earlier insolence. She identifies herself as his sister, and he gives his blessing to her marriage to Fidelio; so she agrees to abandon her oath before the seven years are out. On learning that Ardelio is a villain, Philautus dismisses him. He goes to collect the stolen goods, only to find that his partner in crime will not acknowledge that the items even exist. The ensuing argument is overheard, and the miscreants are both arrested, In the sub-plot, Agurtes intends to cheat the courtly name-dropper Trimalchio by introducing him to a young heiress - who is, in reality, his daughter and lifelong accomplice Millicent. When he visits Millicent, Trimalchio brings along Philautus’ brother-in-law ===== PAGE 537 ===== 1631 as Capritio, wiie: has’ been brought to towit: oleae: courtly manners.:Agurtés suggests to Trimalchio that: an Italian. (or Italianated) - Signor MisexE Kandy apritio’s tutor traveller, he may have&#x27;rivals for the heiress’s hand ii marriage. ~ AL PANDER at Holland’s} 1 daa Meanwhile Capritio woos Millicent’ 3 ‘Maids: ‘Margery. |ee Trimalchio declines to join. ‘Philautus: atthe. Anilitary — leaguer, preferring to visit: Holland&#x27;s: premises and arrests the: cliente: including T. sionals ; : They are ‘brought 4 and Capritio’s. tutor, ‘Miscellank before..a justice; who is really Agurtes. in @ second disguise; but freed when a letter arrives trom. hadlltéent ! asking.-for their reprieve. Miscellanio: is convinced that the letter was sent on his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

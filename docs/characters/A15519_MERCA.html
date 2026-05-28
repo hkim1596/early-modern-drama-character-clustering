@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MERCA in The Three Ladies of London · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_05.html">Cluster 5 — 5: conscience, lucre, lucar</a> ›
+  <span>MERCA</span>
+</nav>
+
+<h1>MERCA</h1>
+<p class="lede">in <em>The Three Ladies of London</em> — Wilson, Robert</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1592</td></tr>
+<tr><th>Words</th><td>1111</td></tr>
+<tr><th>Characters</th><td>5541</td></tr>
+<tr><th>BritDrama no.</th><td>700</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 5 (<em>conscience, lucre, lucar, usurie, fraud, dissimulation…</em>). Matches are highlighted.</p>
+<div class="excerpt"><mark>Fraud</mark>, <mark>Usurie</mark>, and Symony, men of great credit and calling, And to get my Ladies good wil and theirs it is no small thing But tell me can you be content to winne <mark>Lucar</mark> by <mark>Dissimulation</mark>? A good a my friend axa me no shush a question, For he dat will liue in de world must be of the world sure, And de world will loue his owne, so</div>
+<div class="excerpt">Good a my friend meshier Dauie, helpa me pray ye heartely, 〈◊〉 haue sum acquaintance a with Madona <mark>Lucar</mark> your Lady. ir vpon condition I will, therefore I would you should know, That on me and my fellowe you must largely bestow: Whose names are <mark>Fraud</mark>, <mark>Usurie</mark>, and Symony,</div>
+<div class="excerpt">prosser, and tanke you most hartily. Seneor no, not for all da god in da world, me forsake a my Christ. Oh sir, you make a great offence, You must not iudge a my <mark>conscience</mark>. You say vel sir, it dus good dat me haue coosend de Iew, Faith I would my lady <mark>Lucar</mark> de whole matter now knew. Uat is dat me well not do for her sweet sake, But</div>
+<div class="excerpt">Me will a forsake a my Fader, Moder, King, Country, &amp; more den dat, Me will lie and forsweare my selfe for a quarter so much as my hat. What is dat for loue of <mark>Lucar</mark> me dare or will not doe: Me care not for all the world, the great Deuil, nay make my God angry for you. Tinke ye not dat me haue carried ouer corne, Ledar, Beefe</div>
+<div class="excerpt">Darefore me care not for de so much as two strawes. Mary farewell and be hangd, sitten seal drunken Iew, I warrant ye me shall be able very vell to pay you. My Ladie <mark>Lucar</mark> haue sent me heere dis letter, Praying me to coossen de Iew for loue a her. Darefore mele go to get a some Turks apparell. Dat me may coossen da Iew, and end dis</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Good a my friend meshier Dauie, helpa me pray ye heartely, 〈◊〉 haue sum acquaintance a with Madona Lucar your Lady. ir vpon condition I will, therefore I would you should know, That on me and my fellowe you must largely bestow: Whose names are Fraud, Usurie, and Symony, men of great credit and calling, And to get my Ladies good wil and theirs it is no small thing But tell me can you be content to winne Lucar by Dissimulation? A good a my friend axa me no shush a question, For he dat will liue in de world must be of the world sure, And de world will loue his owne, so long as the world indure. Come hider, heers too tree Crownes for de speke me. Madona, me be a Mershant and be cald senior Merkadorus. Me be Madona an Italian. For serua voutra boungrace, me come form Turkie. Madona, me doe for loue of you tinke no paine too mush, And to doe any ting for you me will not grush: Me will a forsake a my Fader, Moder, King, Country, &amp; more den dat, Me will lie and forsweare my selfe for a quarter so much as my hat. What is dat for loue of Lucar me dare or will not doe: Me care not for all the world, the great Deuil, nay make my God angry for you. Tinke ye not dat me haue carried ouer corne, Ledar, Beefe and Bacon too all tis while: And brought hedar many bables dese country men to beguile? Yes, shall me tell you Madona, me and my countrimans haue sent ouer, Bell mettell for make ordinance, yea and ordinance it selfe beside, Day my country and other countries bee so well furnisht as dis country, and has neuer beene spide. Lady, for to do all dis and more for you me be content: But I tinke some skall knaue will put a bill in da Parliament, For dat such a tings shall not be brought heere. Me tanke my good Lady. But M. Dissimulation, heere is for your fellows, Fraud, Usurie, and Symonie, and say me giue it d m. Ah my good a friend M. Usurie, be my trot you be very well mette: Me be much beholding to you for your good will, me be in your debt. But a me take a your part so mich against a scal shurle cald Hospitalitie: Did speake against you, and sayes you bring good honest men to beggery. But I pray tell a me how fare a my lady all dis while? Shall me say to you Madama, 〈◊〉 me haue had such businesse for you in hand, For send away good commodities out of dis little countrey England: Mee haue now sent ouer brasse, copper pewter, and many odar ting, And for dat me sall ha for Gentlewomans fine trifles, that great profit will bring. Madona, me dare go to de Turkes, Moores, Pagans, and more too, What do me care and me go to da great deuill for you. Commaund a me Madona ▪ and you sall see plaine, Data for your sake me refusa no paine. Indeed de Gentlewomans heere buy so much vaine toyes, Dat me straungers laugh a to tinke wherein da haue deir ioyes. Fait Madona me will search all da strange countries me can tell, But me will haue sush tings dat please dese Gentlewomans vell. A voutro commaundemento Madona me obay. ra hartly do 〈◊〉 no such ting my good friend a me, Be me trot and fact mele pay you all euery peny. O no lacke some pretie fine toy, or some fantasticke new knack For da Gentlewomans in England buy mush tings for fantasie You pleasure a me sir, vat me meane a dare buy. Fatta me good friend me tanke you most hartly alway, Me shall a content your debt within dis two or tree day. Ha pray a beare wit me tree or foure daies, me haue much bu sinesse in hand. Me be troubled wit letters you see heere dat comes from England. Arrest me dou s al knaue, mary do if dou dare, Me will not pay de one penny, arrest me, doo, me do not care, Me will be a Turke, me came hedar for dat cause, Darefore me care not for de so much as two strawes. Mary farewell and be hangd, sitten seal drunken Iew, I warrant ye me shall be able very vell to pay you. My Ladie Lucar haue sent me heere dis letter, Praying me to coossen de Iew for loue a her. Darefore mele go to get a some Turks apparell. Dat me may coossen da Iew, and end dis quarrell. To the wedding, to the wedding, to the wedding go we, To the wedding a begging, a begging all three. TOm Beggar shall braue it, and wily Will too, Simplicitie shall knaue it where euer we go: With lustily Brauado, take care that care will, To catch it, and snatch it, we haue the braue skill. Oar fingers are lime-twigges, and Barbars we be, To catch sheeres from hedges most pleasant to see: Then to the Ilewife roundly we set them to sale, And spend the money merily vpon her good ale. To the wedding, to the wedding, to the wedding go we, To the wedding a begging, a begging all three. My Lord iudge, de matter, and circumstance be true me know well. But me will be a Turke, and for dat cause me came here. With a good will my Lord iudge, me be all readie. Furthermore I protest and sweare to be true to this countrie during life, and thereupon I forsake my Christian faith. No point da interest, no point da principall. No point da halfe, no point denere, me will be a Turke I say, me be weary of my Christs religion, and for dat me come away. O sir Gerontus, me take a your prosser, and tanke you most hartily. Seneor no, not for all da god in da world, me forsake a my Christ. Oh sir, you make a great offence, You must not iudge a my conscience. You say vel sir, it dus good dat me haue coosend de Iew, Faith I would my lady Lucar de whole matter now knew. Uat is dat me well not do for her sweet sake, But now me will p uide my iourney toward England to take. Me be a Turke, no, it will make my lady Lucar to sin e, When she knowes how me did da scal Iew beguile.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Three Ladies of London</div><div class="body">Lady Love and Lady Conscience are concerned that Lady Lucre now rules in London, but Fame assures them that she and her adherents will meet their due punishment in the end. Four knaves and Simplicity, a penurious miller, go to London in the hope of employment by one of the ladies. Conscience rejects their applications, but Love agrees to take on Simplicity; the knaves find positions in Lucre’s household. Out of work because foreigners have taken all the jobs, Artifex also seeks a place with Lucre. Simplicity procures a testimonial from Conscience for his cousin Sincerity, who seeks a benefice; but he is unable to get anything from Simony because he has no bribe to offer. Dissimulation fobs him off with the parsonage of St Nihil — nothing - and an invitation to dine with Nemo — nobody — is likewise worthless (though Simplicity has _ difficulty understanding this). Simony employs Sir Peter Pleaseman, who can be either Protestant or Catholic as it suits his circumstances, as Lucre’s chaplain. Conscience is forced to sell her cottage to Lucre, but hopes to stay on as a sitting tenant. Usury threatens eviction; there is a proposal to pack the house with foreigners who will require less living space than English tenants. Eventually he relents and quadruples the rent instead. Love and Conscience are reduced to sending Usury their clothes in lieu of payment, but Dissimulation gives Simplicity money to redeem one of the gowns. He intended it to be Love’s, since he cares nothing for Conscience, but Simplicity returns Conscience’s clothes and delivers Love’s to Usury. Lucre enters an agreement with the Italian merchant Mercadore, whereby he will export essential materials and foodstuffs from England, and import foreign trinkets for gentlewomen. Mercadore goes to Turkey to procure knick-knacks, and encounters the Jew Gerontus. Two years ago, he borrowed a lot of money from Gerontus and avoided paying it back by skipping the country. Gerontus is happy to help in the supply of 1581 worthless tat to England, but eventually loses patience with Mercadore’s promises to pay his debt, and has him arrested. Mercadore proposes converting to Islam, which will legally void all his past obligations. Fearing that he might be blamed for a Christian’s apostasy, Gerontus cancels the debt, whereupon Mercadore’s Muslim convictions evaporate. Usury murders Hospitality and goes into hiding with a rich man, who protects him; his pardon is eventually procured by a courtier. Conscience and…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_05.html">Cluster 5 — 5: conscience, lucre, lucar</a> page.
+</div>
+</div></body></html>

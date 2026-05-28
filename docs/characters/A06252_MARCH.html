@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MARCH in The Knight of the Burning Pestle · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MARCH</span>
+</nav>
+
+<h1>MARCH</h1>
+<p class="lede">in <em>The Knight of the Burning Pestle</em> — Beaumont, Francis</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1613</td></tr>
+<tr><th>Words</th><td>1006</td></tr>
+<tr><th>Characters</th><td>5209</td></tr>
+<tr><th>BritDrama no.</th><td>1562</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Merri-thought! my daughter&#x27;s gone. This mirth becomes you not, my daughters gone. Mocke not my misery, it is your sonne, Whom I haue made my owne, when all forsooke him, <mark>Has</mark> stolne my onely ioy, my childe <mark>away</mark>. Vnworthy of the kindnesse I haue shewn To thee, and thine: too late I well perceiue Thou art consenting to my daughters losse.</div>
+<div class="excerpt">her, We&#x27;le haue no stealing for it, I my selfe And some few of our friends will see you married. Some three daies hence then. Sir, that I haue wronged your loue, I <mark>must</mark> confesse, in which I haue purchast to my selfe, besides myne owne vndoing, the ill opinion of my friends, let not your anger, good sir, out liue me, but suffer</div>
+<div class="excerpt">husband for her, I take it, sir, you had not; but how euer, I&#x27;le breake the necke of that commission, And make you know you are but a Merchants Factor. And thus it <mark>must</mark> be sir, I heere discharge you My house and seruice, take your liberty, And when I want a sonne I&#x27;le send for you. O sir, I know it certaine. And how faith? how</div>
+<div class="excerpt">it now son Humphrey? &#x27;Tis well, it should be so, Im&#x27;e glad the girle Is found so tractable. How was it sonne? you told me that to morrow Before day breake, you <mark>must</mark> conuey her hence. Alasse Why should you be thus full of griefe to me? That do as willing as your selfe agree To any thing so it be good and faire, Then steale her</div>
+<div class="excerpt">neither follow, nor repent the deed. Vnhappy that I am to loose my child, Now I beginne to thinke on Iaspers words, Who oft hath vrg&#x27;d to me thy foolishnesse, Why didst thou let her go? thou loust her not, That wouldst bring home thy life, and not bring her. Get men and horses straight, we will be there Within this houre, you</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Sirrah, Il&#x27;e make you know you are my Prentice, And whom my charitable loue redeem&#x27;d Euen from the fall of fortune, gaue thee heate And growth, to be what now thou art, new cast thee, Adding the trust of all I haue at home, In forren Staples, or vpon the Sea To thy direction, ti&#x27;de the good opinions Both of my selfe and friends to thy endeauours, So faire were thy beginnings, but with these, As I remember, you had neuer charge, To loue your Maisters daughter, and euen then, When I had found a wealthy husband for her, I take it, sir, you had not; but how euer, I&#x27;le breake the necke of that commission, And make you know you are but a Merchants Factor. And thus it must be sir, I heere discharge you My house and seruice, take your liberty, And when I want a sonne I&#x27;le send for you. O sir, I know it certaine. And how faith? how goes it now son Humphrey? &#x27;Tis well, it should be so, Im&#x27;e glad the girle Is found so tractable. How was it sonne? you told me that to morrow Before day breake, you must conuey her hence. Alasse Why should you be thus full of griefe to me? That do as willing as your selfe agree To any thing so it be good and faire, Then steale her when you will, if such a pleasure Content you both, I&#x27;le sleepe and neuer see it, To make your ioyes more full, but tell me why You may not here performe your marriage? If this be all, you shall not need to feare Any deniall in your loue, proceed, I&#x27;le neither follow, nor repent the deed. Vnhappy that I am to loose my child, Now I beginne to thinke on Iaspers words, Who oft hath vrg&#x27;d to me thy foolishnesse, Why didst thou let her go? thou loust her not, That wouldst bring home thy life, and not bring her. Get men and horses straight, we will be there Within this houre, you know the place againe. Oh Maister Merri-thought! my daughter&#x27;s gone. This mirth becomes you not, my daughters gone. Mocke not my misery, it is your sonne, Whom I haue made my owne, when all forsooke him, Has stolne my onely ioy, my childe away. Vnworthy of the kindnesse I haue shewn To thee, and thine: too late I well perceiue Thou art consenting to my daughters losse. Oh might I behold her once againe, And she once more embrace her aged sire. For this thy scorne, I will pursue That sonne of thine to death. Il&#x27;e fetch my daughter. I say Il&#x27;e fetch my daughter. Il&#x27;e be reueng&#x27;d by heauen. Where abouts. Sirrah, restore my daughter. Vpon him then. Come your waies Minion, Il&#x27;e prouide a Cage For you, your growne so tame. Horse her away. Go get you vp, I will not be intreated. And gossip mine, Il&#x27;e keepe you sure hereafter From gadding out againe with boyes and vnthrifts, Come, they are womens teares, I know your fashion. Go sirrah, locke her in, and keepe the key, Safe as you loue your life. Now my sonne Humfrey, You may both rest assured of my loue In this, and reape your owne desire. I do beleeue you (my good sonne) and thanke you: For &#x27;twere an impudence to thinke you flattered. Well son, no more of complement, my daughter Is yours againe; appoint the time, and take her, We&#x27;le haue no stealing for it, I my selfe And some few of our friends will see you married. Some three daies hence then. Sir, that I haue wronged your loue, I must confesse, in which I haue purchast to my selfe, besides myne owne vndoing, the ill opinion of my friends, let not your anger, good sir, out liue me, but suffer mee to rest in peace with your forgiuenesse; let my body (if a dying man may so much preuails with you) bee brought to your daughter, that shee may truely know my hate flames are now buried, and, withall, receiue a testimony of the zeale I bore her vertue: fare well for euer, and be euer happy. Iasper. Gods hand is great in this, I do for giue him, Yet I am glad he&#x27;s quiet, where I hope He will not bite againe: boy bring the body And let him haue his will, if that be all. So sir, if you please You may conduct it in, I do not feare it. Do me this kindnesse Boy, hold here&#x27;s a crowne: Before thou bury the body of this fellow, carry it to his old merie father, and salute him from mee, and bid him sing, he hath cause. Fare-well boy. I will haue no great store of company at the wed ding, a cupple of neighbours and their wiues, and wee will haue a Capon in stewed broth, with marrow, and a good peece of beefe, stucke with rose-mary. Heauen blesse me: Iasper? Forgiue me Iasper; Oh! what might I doe? Tell me, to satisfie thy trobled Ghost? But tell me what were best for me to doe? Hence foole out of my sight, with thy fond passion Thou hast vndone me. I am sir. Nay good sir open to me. Well sir, Il&#x27;e sing. Fortune my Fee, &amp;c. O M r . Merri-thought, I am come to aske you Forgiuenesse for the wrongs I offered you, And your most vertuous sonne, they&#x27;re infinite, Yet my contrition shall be more then they. I do confesse my hardnesse broke his heart, For which, iust heauen hath giuen me punishment More then my age can carry, his wandring spirit Not yet at rest, pursues me euery where, Crying, I&#x27;le haunt thee for thy cruelty. My daughter she is gone, I know not how, Taken inuisible, and whether liuing, Or in graue, &#x27;tis yet vncertaine to me. O Maister Merry-thought, these are the weights, Will sinke me to my graue, forgiue me sir.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Knight of the Burning Pestle</div><div class="body">At the theatre, a citizen and his wife object to the satirical subject matter of the play, The London Merchant: they insist on a more romantic offering starring their apprentice, Rafe, as a heroic grocer. The boy actors do their best to provide this within the play they have rehearsed. In the play, Luce prefers her father Venturewell’s apprentice Jasper to his chosen son-in-law, Humphrey; so Venturewell discharges Jasper, and he goes home to a family impoverished by the irresponsible merriment of his father, Old Merrythought. His mother, who 1607 favours his younger brother Michael, insists that he be paid his inheritance and sent out into the world. Several of the characters go to Waltham Forest. Luce elopes with Humphrey, intending to meet Jasper there. Rafe the grocer, a voluminous reader of chivalric romance, becomes the Knight of the Burning Pestle and leaves in search of heroic deeds. He scares Mistress Merrythought, who leaves behind her jewels. These are found and taken away by Jasper, who then meets the eloping couple, beats Humphrey, and takes Luce. In the audience, the citizen and his wife take Jasper to be the villain and Humphrey the hero; they demand that Rafe return to fight Jasper, but Jasper beats him. Notified by Humphrey, Venturewell confronts Jasper’s father, but is offended by his refusal to take the matter seriously. Jasper tests Luce’s love by threatening her with violence. She accepts her fate, but Humphrey and her father seize her before he can admit he was only pretending. Rafe stays at the Bell inn, but cannot understand that he must pay for its hospitality. (The citizen settles the bill for him.) The host sends him to fight the giant Barbaroso, better known as Nick the barber, who has imprisoned many knights and ladies — actually clients and venereal disease patients. Rafe defeats the ‘giant’ and releases the ‘knights’. The citizens then have a scene inserted in which he meets a foreign king’s daughter, but refuses her offer oflove. Later interpolated scenes show Rafe as the city’s May Lord, and mustering troops at Mile End. Venturewell incarcerates Luce in her room, but Jasper gains access by pretending to be dead: Venturewell accedes to a request that his body should be brought to Luce, and then has the coffin sent on to Old Merrythought, unaware that Luce has taken Jasper’s place inside. Left behind in Luce’s room, Jasper appears to Venturewell in ghostly guise and instructs him to repent, compensate Old Merrythought for his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

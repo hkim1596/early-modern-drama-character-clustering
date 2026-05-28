@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AESOPE in Croesus · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> ›
+  <span>AESOPE</span>
+</nav>
+
+<h1>AESOPE</h1>
+<p class="lede">in <em>Croesus</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>782</td></tr>
+<tr><th>Characters</th><td>4492</td></tr>
+<tr><th>BritDrama no.</th><td>1425</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 25 (<em>did, whil, death, might, minde, fortune…</em>). Matches are highlighted.</p>
+<div class="excerpt">ſome ſupernaturall grace, Vice-gods on th&#x27;earth, great Lievtenants ot heaven. It eaſie is anothers faults to ſpie, And paint in th&#x27;aire the ſhadows of our mindes, <mark>Whil</mark>&#x27;ſt apprehending with the inward eye A high perfection which no practiſe findes. If you at Court to credit would ariſe, You muſt not ſeek by truth to gaine renowne,</div>
+<div class="excerpt">arriv&#x27;d, VVhole wiſedome fame through all the <mark>world</mark> records. In all the parts where he hath chanc&#x27;d to be, In forrain bounds, or where he firſt ſaw light, He never <mark>did</mark> ſuch ſtately wonders ſee, As ſince this Court enriched hath his ſight; VVhen regall ſhewes had raviſh&#x27;d firſt his eye, As mountains nurſlings, little ſimple ſwaines,</div>
+<div class="excerpt">water-Nymphs there (wondring) ſees, The rareneſſe of the ſight ſo much prevailes, That rillets rivers ſeeme, the rivers Seas: So all the guards that garniſht Solons way, <mark>Did</mark> to his <mark>minde</mark> a great amazement bring, The gallants (golden ſtatues) made him ſtay; Each Groome a Prince, each Eſquire ſeem&#x27;d a King, And now he comes to gaine your</div>
+<div class="excerpt">to your owne deſerts; That matchleſſe wiſedome which the <mark>world</mark> admires, And (raviſh&#x27;t with delight,) amazed heares, Since not in conſort with his vaine deſires, <mark>Did</mark> ſeeme impleaſant to diſtemper&#x27;d eares: Eares which can entry give to no diſcourſe, Save that which enters fraughted with his praiſe; He can love none but them that</div>
+<div class="excerpt">practiſe findes. If you at Court to credit would ariſe, You muſt not ſeek by truth to gaine renowne, But ſometime muſt applaud what you deſpiſe, And ſmile in ſhow <mark>whil</mark>&#x27;ſt in effect you frowne.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">That Grecian (Sir) is at the Court arriv&#x27;d, VVhole wiſedome fame through all the world records. In all the parts where he hath chanc&#x27;d to be, In forrain bounds, or where he firſt ſaw light, He never did ſuch ſtately wonders ſee, As ſince this Court enriched hath his ſight; VVhen regall ſhewes had raviſh&#x27;d firſt his eye, As mountains nurſlings, little ſimple ſwaines, VVho us&#x27;d with infant flouds them never ſpy Sport, portative (like Serpents) through the Plaines, When one of them firſt comes to view the vailes, And wanton water-Nymphs there (wondring) ſees, The rareneſſe of the ſight ſo much prevailes, That rillets rivers ſeeme, the rivers Seas: So all the guards that garniſht Solons way, Did to his minde a great amazement bring, The gallants (golden ſtatues) made him ſtay; Each Groome a Prince, each Eſquire ſeem&#x27;d a King, And now he comes to gaine your long&#x27;d-for ſight; Whom in his minde no doubt he doth adore, He gaz&#x27;d on thoſe who held of you their light, Sunne of this ſoile, he muſt admire you more; Now he o&#x27;re all will ſpread your praiſes forth, A famous witneſſe of your glorious raigne: &quot;The record of one wiſe man is more worth, &quot;Then what a world of others would maintaine. And yet what wonder though he wander thus, Whom ſtill by ſucceſſe treacherous fortune blindes? Though this indeed ſeem ſomewhat ſtrange to us, Who have with learning purifi&#x27;d our mindes; Was he not borne heire of a mighty ſtate? And us&#x27;d with fortunes ſmiles, not fear&#x27;d for frownes, Doth meaſure all things by his owne conceit? A great defect, which fatall is to Crownes; Then from his youth ſtill truſting in a Throne, With all that pride could crave, or wealth could give, Vs&#x27;d with entreaties, and contrould by none, He would the tongue of liberty deprive; Though to his ſight I dare not thus appeare, Whoſe partiall judgement, farre from reaſon parts; I grieve to ſee your entertainment here So farre inferiour to your owne deſerts; That matchleſſe wiſedome which the world admires, And (raviſh&#x27;t with delight,) amazed heares, Since not in conſort with his vaine deſires, Did ſeeme impleaſant to diſtemper&#x27;d eares: Eares which can entry give to no diſcourſe, Save that which enters fraughted with his praiſe; He can love none but them that love his courſe, And thinkes all fooles who uſe no flattering phraſe: This with the great ones doth the gods diſpleaſe, Though ſpreading all her heavenly treaſures forth, They (if not in their livery them to pleaſe) Doe vertue vilifie, as of no worth. Who come to Court, muſt with Kings faults comport. A wiſe man at their imperfections winkes. So ſhould you loſe your ſelfe, and them not ſave. By this you ſhould their indignation finde. It would be long ere you were thus preferr&#x27;d. They guerdon as they love, they love by gueſſe. It&#x27;s good to be ſtill by the Prince approv&#x27;d. But by this meane, all hope of honour failes. I thinke they ſhould excell (for vertue rare) All men in wit, who unto men give lawes; Kings of their kingdomes, as the centers are, To which each weighty thing by nature drawes: For as the mighty rivers, little ſtreames, And all the liquid pow&#x27;rs which riſe or fall, Doe ſeeke in ſundry parts by ſeverall ſeames, The Oceans boſome that receives them all. It as a Steward of the tumid deeps Doth ſend them backe by many ſecret veynes, And (as the earth hath need of moiſture) keeps Theſe humid treaſures to refreſh the Plaines. Thus are Kings breſts the depths where daily flow Cleare ſtreames of knowledge with rare treaſures charg&#x27;d, So that continually their wiſedomes grow, By many helpes, which others want, enlarg&#x27;d: For thoſe who have intelligence ov&#x27;r all, Doe commonly communicate to Kings, All th&#x27;accidents of weight that chance to fall; Which great advantage, Greatneſſe to them brings. They (jealouſly diſpos&#x27;d) comment on mindes, And theſe who Arts, or Natures gifts enhaunce, (Whoſe value no where elſe a Merchant findes ▪ ) Doe come to Kings, as who may them advance. No doubt great Iove, ſince they ſupply his place, (So with their charge to make their vertues even) Doth give to them ſome ſupernaturall grace, Vice-gods on th&#x27;earth, great Lievtenants ot heaven. It eaſie is anothers faults to ſpie, And paint in th&#x27;aire the ſhadows of our mindes, Whil&#x27;ſt apprehending with the inward eye A high perfection which no practiſe findes. If you at Court to credit would ariſe, You muſt not ſeek by truth to gaine renowne, But ſometime muſt applaud what you deſpiſe, And ſmile in ſhow whil&#x27;ſt in effect you frowne.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Croesus</div><div class="body">Solon visits Croesus, hoping to persuade him to give up his immoderate love of gold and think about less transitory things. He explains that all mortality is subject to change, and tells Croesus stories about the importance of posthumous fame, but Croesus considers them irrelevant to his situation as a king. Solon realizes that Croesus wili change only by losing the power which has made him arrogant. Adrastus is banished from Phrygia after accidentally killing his brother. (His intended victim was the man who poisoned his girlfriend.) Croesus has a nightmare about the death of his son Atys, and becomes excessively protective: he makes Atys marry in order to secure the succession, appoints him a bodyguard, and bans the type of sharp implement which caused his death in the dream. Mysia is ravaged by a wild boar, and its people appeal to Croesus for help. He is happy to hear that they don’t want his money, but distressed that they ask instead that he send Atys to hunt the boar. Atys protests at his father’s reluctance, so Croesus accedes, assigning Adrastus to look after him during the mission. Atys is killed, and Adrastus kills himself in remorse. In the past, Astyages, King of Media and Croesus’ brother-in-law, was perturbed by a prophecy that he would be deposed by his grandson. When the child was born, he tried to have it killed; but the herdsman who was given the job spared its life and adopted it as a replacement for his own stillborn baby. During his youth, Cyrus’ princely behaviour led to his identification. Astyages served Harpagus a banquet of his own son’s flesh, so Harpagus contacted Cyrus and raised a rebellion. Now Cyrus has led the Persian army to depose Astyages. Against his counsellor’s advice, Croesus plans to intervene and conquer Persia, but Cyrus anticipates him and attacks pre-emptively, ordering that Croesus be taken alive. Croesus is nearly killed by a Persian soldier, but saved when his dumb son cries out and identifies him. Cyrus intends to burn him at the stake, but is impressed by Croesus’ acknowledgement that Solon was right to warn him not to trust in worldly things. Cyrus frees him, and orders restraint in his soldiers’ looting.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> page.
+</div>
+</div></body></html>

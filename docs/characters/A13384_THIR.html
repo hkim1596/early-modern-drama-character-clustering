@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>THIR in Aminta · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> ›
+  <span>THIR</span>
+</nav>
+
+<h1>THIR</h1>
+<p class="lede">in <em>Aminta</em> — Tasso, TorquatoReynolds, Henry</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1628</td></tr>
+<tr><th>Words</th><td>1062</td></tr>
+<tr><th>Characters</th><td>5840</td></tr>
+<tr><th>BritDrama no.</th><td>2223</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 12 (<em>amyntas, phillis, did, must, endimion, death…</em>). Matches are highlighted.</p>
+<div class="excerpt">counſaile fitter: With a benigne, and milde, though graue aſpect, He highly-faire beſpake, and led me in; He great in place, mee poore and homely man: But then, what <mark>did</mark> I ſee? what <mark>did</mark> I heare? Celeſtiall goddeſſes, and louely Nimphes, New lights, new Orpheuſſes; and others too Vnuayl&#x27;d vnclouded, as the virgin-morne, When ſiluer</div>
+<div class="excerpt">then my ſelfe, Full of new powre, full of new diety? And ſang of warres, and Knightly deedes in Armes, Scorning the rurall Songs I wont to make; And though I after <mark>did</mark> (for others pleaſure) Turne to theſe woods againe, yet I retaynde Part of that Spirit; nor yet ſounds my pipe So lowly as before, but ſhriller farr. And through</div>
+<div class="excerpt">whiles,) O how vnworthy Is this rude trunke of ſo faire knots as theſe? See what aduantage haue Loues votaries, That (like this tree) haue with ſo pretious bands Their hearts entwin&#x27;d: Cruell plant, couldſt thouſe This haire thus iniur&#x27;d, that thus honours thee? Then with his hands her hands he faire vnlooz&#x27;d, In ſuch a ſort, as that</div>
+<div class="excerpt">amaine To haue oretane, and ſtaid her; but in vaine; For ſoone I loſt her; and againe returning Vnto the Fountaine where I left Aminta, I found him not; and my <mark>heart</mark> much miſgiues me Of ſome ſelfe ill befalne him; for I knowe He was reſolu&#x27;d (before this hapned him) To ende his life and miſeries together.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Lambes on the graſſe, the Wolfe feedes on th Lambe Loue (cruelleſt of things) with teares is fedd. And though he euer feedes, is neuer full. Onn. Ile tell thee willingly. When firſt my hap led mee to know theſe woods, I knew this fellow, and eſteemed him As thou do&#x27;ſt: So it fortun&#x27;d once, I had Deſire and bus&#x27;neſſe to go ſee that great Wonder of Citties, at whoſe ancient feete The broad-fam&#x27;d riuer runnes; and him I made Acquainted with my purpoſe: he replyes, And thus began to preach; My ſonne beware Now thou art going to that ſeate of fame, Where thoſe deceiptfull crafty Cittizens, And euill minded Courtiers liue, and wont To ſcoffe at vs, and hould in ſuch a ſcorne Our plaine diſtrnſtleſſe homely carriage; Be well aduiz&#x27;d (my ſonne) and preſſe not there Where the freſh colour&#x27;d robes with gould ar wrought, Gay plumes, and dayly-varied dreſsings ſhine; But aboue all, beware accurſed Fate, Or thy youths iollity conduct thee not Vnto that magazine of reſtleſſe chatt, But flye that curſed and inchaunted place. What place is that (quoth I?) &#x27;tis there (ſaid he) Where dwell th&#x27;inchantreſſes that haue the powre And arte to make men, and their minds tranſparent; And what ſo Diamonds ſeeme, and fineſt gold, But glaſſe and copper ar; thoſe ſiluer cheſtes That ſeeme full of rich treaſor, ar no more Then kennells full of filth, and cozen men; The walles ar built too with that wondrous arte, That they will ſpeake, and anſwer them that ſpeake; Nor in halfe words, and ſuch imperfect ſounds, As wont the Eccos that heere haunt our grounds, But eu&#x27;ry word whole, and entyre repeating: Nay more then this, the tables, chaires, and ſtooles, Hangings, and all that to each roome belongs, Haue toung and voice, and neuer ſilent ar; Falſe lyes there, formde into the ſhape of babes, Ar hopping all about; and be he dumbe That enters there, findes ſtraite a tongue to prate And lye with; but there is yet worſe then this, May happen thee; thou mayſt perhaps be turn&#x27;d Into a beaſt, a tree, a floud, a flame, Into a floud of teares, a fire of ſighes. All this he tould mee; and I forward went To ſee the Cittie with this falſe beliefe; And (as good happ would haue it,) chaunc&#x27;d to paſse Along the place where ſtands that bleſsed dwelling, Whence I might heare breath out ſuch melody, By Swans, and Nimphes, and heau&#x27;nly Syrens made, With voyce ſo ſhrill, ſo ſweet and full of pleaſure, That all amaz&#x27;d, I ſtay&#x27;d to gaze, and liſten: Before the doore there ſtood (mee ſeem&#x27;d) as guard Of the faire ſhowes within, a man in ſhowe And of proportion ſtout, and knightly hue; Such as (for what he ſeem&#x27;d me) made me doubt Whether for Armes he were, or counſaile fitter: With a benigne, and milde, though graue aſpect, He highly-faire beſpake, and led me in; He great in place, mee poore and homely man: But then, what did I ſee? what did I heare? Celeſtiall goddeſſes, and louely Nimphes, New lights, new Orpheuſſes; and others too Vnuayl&#x27;d vnclouded, as the virgin-morne, When ſiluer dewes her golden rayes adorne. There Phaebus ſhone, inlightning all about, With all his ſiſter Muſes; among whom Satt Elpine; at which ſight, all in a trice I felt my ſelfe growe greater then my ſelfe, Full of new powre, full of new diety? And ſang of warres, and Knightly deedes in Armes, Scorning the rurall Songs I wont to make; And though I after did (for others pleaſure) Turne to theſe woods againe, yet I retaynde Part of that Spirit; nor yet ſounds my pipe So lowly as before, but ſhriller farr. And through the woods rings with a trumpets voyce. Afterward Mopſo heard me&#x27;; and with ſo vilde, And ſowre a count&#x27;nance greeted mee, that I Became ſtraite hoarce, and was a long time mute; When all the Shepherds ſaid, ſure I had bin Scar&#x27;d with the Wolfe; but Mopſo was the Wolfe. This I haue tould thee, that thou mayſt beleeue How little this mans words deſerue beliefe; And out of doubt, th&#x27;haſt the more cauſe to hope, For that this fellow bids thee not to hope. I, naked, but. Why but ſhe does not knowe That you ſhould meete her there; though (as I ſay) Shee&#x27;ll there attend you, do but haſt away. His too much loue, and her too much diſdaine VVhom he lou&#x27;d ſo. VVhy none at all. But with a looke full of diſdaine, hung downe The head, and hidd her faire lapp all ſhee could; He ſtood vnbrayding her intangled&#x27; treſſes, And ſighing ſaid (the whiles,) O how vnworthy Is this rude trunke of ſo faire knots as theſe? See what aduantage haue Loues votaries, That (like this tree) haue with ſo pretious bands Their hearts entwin&#x27;d: Cruell plant, couldſt thouſe This haire thus iniur&#x27;d, that thus honours thee? Then with his hands her hands he faire vnlooz&#x27;d, In ſuch a ſort, as that he ſeem&#x27;d affraide To touch them, yet deſir&#x27;d to touch them ſtill: Then ſtoop&#x27;d he downe t&#x27;untye her feet; when ſhee Finding her late bound hands at libertie, Said with a ſcornefull, and diſdayning looke; Shepherd, I am Diana&#x27;s; touch me not; Leaue me, I ſhall vnbinde my feete my ſelfe. Straite he with reuerence withdrew himſelfe, Not lifting once his eyes to looke on her; Barring himſelfe of his delight; that ſhee Might lay no blame on his immodeſtie. I that was hid neere hand, and ſaw all this, And heard it all, was eu&#x27;ne exclaiming on her, But that I curb&#x27;d my ſelfe; ſee the ſtrange creature; After ſhe was with much adoe got looſe, Away ſhee hurryed ſtrait, ſwift as a Doe, Without ſo much as &#x27;Thanke yee, or farewell; And yet knew well, ſhee had no cauſe to feare; So modeſt and reſpectfull was Aminta. I cannot tell. For (angry) after her I ranne amaine To haue oretane, and ſtaid her; but in vaine; For ſoone I loſt her; and againe returning Vnto the Fountaine where I left Aminta, I found him not; and my heart much miſgiues me Of ſome ſelfe ill befalne him; for I knowe He was reſolu&#x27;d (before this hapned him) To ende his life and miſeries together.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Aminta</div><div class="body">Resenting his mother’s efforts to control his activities and limit them to persons of high estate, Cupid absconds to live as a shepherd and make Silvia fall in love. Silvia was Aminta’s companion in boyhood. Three years ago he declared his love for her, and she has refused to see him ever since. Despite Daphne’s attempts to persuade her that she should take her amorous pleasures while she can, Silvia has no maternal desires: she loves only hunting, and hates Aminta because he loves her. Recognizing that Aminta needs to be more masterful, Daphne and Thyrsis arrange for him to encounter Silvia while she is bathing. But Silvia has another rejected admirer with similar ideas, a Satyr, and when Aminta arrives he finds Silvia stark naked, tied to a tree with her own hair, and about to be raped. He drives the Satyr off, but Silvia is haughtily ungracious and runs away. Daphne restrains Aminta’s suicidal impulses. Silvia borrows some clothes from Nerina and goes hunting. She encounters a wolf and chases it; Nerina follows, loses her, and then sees a wolf-pack licking blood off the ground, with Silvia’s bloodstained veil nearby. When Aminta hears of this, his suicidal impulses are renewed: with the help of Ergastus, he climbs a cliff and throws himself off. Silvia is not really dead — the wolves’ prey was only an animal — but the news of Aminta’s death prompts her to recognize her love for him, and seek to join him in the afterlife. It turns out that he is not dead: he fell into a bush, stunned himself, and recovers on feeling Silvia’s tears splashing onto his face. Venus comes looking for Cupid, and asks the audience if they have seen him. ===== PAGE 285 ===== 1627</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> page.
+</div>
+</div></body></html>

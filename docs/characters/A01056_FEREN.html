@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FEREN in 478 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FEREN</span>
+</nav>
+
+<h1>FEREN</h1>
+<p class="lede">in <em>478</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>1359</td></tr>
+<tr><th>Characters</th><td>7170</td></tr>
+<tr><th>BritDrama no.</th><td>478</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">much more lowly Then I am to thee, thou bring&#x27;st me on my bare knees Wench, twice in euery foure and twenty houres, besides Halfe turnes instead of Beuers; what <mark>must</mark> we next Doe, sweet-<mark>heart</mark>? Indeed forsooth, how … hey by that la, I hope I neglect No opportunity to your Nunquam satis, to be call&#x27;d In question for; <mark>goe</mark>, thou</div>
+<div class="excerpt">for an Emperor: What an excellent instrument were this to purchase a sute, or a monopoly from the Dukes eare? She will most graciously entertaine it. Alas, you <mark>must</mark> aske him no questions; but clap him on the cheeke: I vnderstand his language; your Foole is tho tender hearted&#x27;st creature that is. Lose no time, my Lord. This</div>
+<div class="excerpt">coniunction, and all the other Planets Drunke at a Morrice-dance: I am haunted Aboue patience, my mind is not as infinite to doe, As my occasions are proffered of doing: Chastity! I am An Eunuch, if I think … there be any such thing; or If there be, &#x27;tis amongst vs men, for I neuer found it In a <mark>woman</mark>, throughly tempted, yet: I haue</div>
+<div class="excerpt">women in our Courts Here of Italy, are enough to discredit a whole Nation Of that sexe: he that is not a Cuckold, or a Bastard, Is a strangely happy man; for a chaste wife, or a mother That neuer stept awry, are wonders, wonders in Italy. S&#x27;life I haue got the feat on&#x27;t, and am euery day More actiue in my trade; &#x27;tis a sweet</div>
+<div class="excerpt">digge for gold in a Cole-pit: Are you answer&#x27;d? Excellent: oh for three Barbary stone horses to top three Flanders Mares? why how now Wenehes, what means this? I <mark>must</mark> rid my hands of&#x27;em, or they&#x27;ll ride on my shoulders; by your leaue, Ladies: here&#x27;s none but is of Com mon Counsaile one with another: in short, there are three</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I&#x27;me glad your Highnesse is so pleasant. Madam, by this light I vow my selfe your seruant; onely yours, inespecially yours: time, like a turne-coat, may order and disorder the outward fashions of our bodies, but shall neuer inforce a change on the constancy of my minde, sweet Colona, faire Colona, young and sprightfull Lady, doe not let me in the best of my youth, languish in my earnest affections. That I confesse too; I am euery way so vnworthy of the first fruits of thy em braces, so farbeneath the riches of thy merit, that it can be no honor to thy fame, to rank me in the number of thy seruants, yet proue me how true, how firme I will stand to thy plea sures, to thy command; and as time shall serue be euer thine Now prethe deere Colona. But what? doe not pitty thy owne gentlenesse, Louely Colona; shall I speake? shall I? say But I, and our wishes are made vp. You wil not faile to meet two houres hence, sweet. Defie me then; I&#x27;le be all thine, and a seruant Onely to thee, onely to thee.—— Very passing good, three honest women in our Courts Here of Italy, are enough to discredit a whole Nation Of that sexe: he that is not a Cuckold, or a Bastard, Is a strangely happy man; for a chaste wife, or a mother That neuer stept awry, are wonders, wonders in Italy. S&#x27;life I haue got the feat on&#x27;t, and am euery day More actiue in my trade; &#x27;tis a sweet sinne, this slip Of mortality, and I haue tasted enough for one Passion of my senses: Here comes more worke for me: And how does my owne Iulia, mew vpon this sadnesse? What&#x27;s the matter you are melancholly? Whither away, wench? Lowly? why I am sure I cannot be much more lowly Then I am to thee, thou bring&#x27;st me on my bare knees Wench, twice in euery foure and twenty houres, besides Halfe turnes instead of Beuers; what must we next Doe, sweet-heart? Indeed forsooth, how … hey by that la, I hope I neglect No opportunity to your Nunquam satis, to be call&#x27;d In question for; goe, thou art as fretting as an old Grogrum, by this hand I loue thee for&#x27;t, it becomes thee So prettily to be angry: well, if thou should&#x27;st dye, Farewell all loue with me for euer: goe, I&#x27;le meet Thee soone in thy Ladies backe lobby, I will, wench, Looke for me. All thine; I will reserue my best ability, My heart, my honour, onely to thee, onely to thee: Pitty of my blood away, I heare company Comming on: remember soone I am all thine, I will liue perpetually onely to thee, away.— S&#x27;foot I wonder about what time of the yeare I was begot; sure it was when the Moone was In coniunction, and all the other Planets Drunke at a Morrice-dance: I am haunted Aboue patience, my mind is not as infinite to doe, As my occasions are proffered of doing: Chastity! I am An Eunuch, if I think … there be any such thing; or If there be, &#x27;tis amongst vs men, for I neuer found it In a woman, throughly tempted, yet: I haue a shrewd hard Taske comming on, but let it passe: who comes now? My Lord, the Dukes friend! I will striue to be inward with Him, my Noble Lord Fernando. I will wait your pleasure, my Lord,—Good day to Your Lordship.——— The Marquesse doth loue you. And begins to doe you infinite grace. Maurucio, infinite grace. Yes, my Lord, and resolu&#x27;d tolye forth for the breuiating the prolixity of some superfluous transmigration of the Suns double Cadence to the western Horizon, my most perspicuous good Lord. I neuer beheld a more naturall Creature in my life. &#x27;Tis a present for an Emperor: What an excellent instrument were this to purchase a sute, or a monopoly from the Dukes eare? She will most graciously entertaine it. Alas, you must aske him no questions; but clap him on the cheeke: I vnderstand his language; your Foole is tho tender hearted&#x27;st creature that is. Lose no time, my Lord. This was wisely done now: S&#x27;foot you purchase A fauour from a Creature, my Lord, the greatest King of the earth wud be proud of. Will yee? hold: death of my delights, haue yee lost all sense of shame? y&#x27;are best rore about the Court, that I haue beene your womans-barber, and trimm&#x27;d yee, kinde Morona. Yet againe; nay, and if you be in that mood, shut vp your fore-shop, I&#x27;le be your Iourny-man no longer: why wise Madam Dryfist, could your mouldy braine bee so addle, to imagine I would marry a stale widdow at six and forty? Marry gip, are there not varieries enough of thirteene? come, stop your Clap-dish, or I&#x27;le purchase a Carting for you: By this light, I haue toyl&#x27;d more with this tough Carrion hen, then with ten Quailes, scarce growne into their first Feathers. Why thee, Country woman; th&#x27;ast a larger purse to pay for the nursing: nay, if you&#x27;ll needs haue the world know how you, reputed a graue-Matron-like Motherly-Madam, kick&#x27;d vp your heeles like a Iennet, whose mark is new come into her mouth, ee&#x27;ne doe, doe; the worst can be said of me is, that I was ill aduis&#x27;d to digge for gold in a Cole-pit: Are you answer&#x27;d? Excellent: oh for three Barbary stone horses to top three Flanders Mares? why how now Wenehes, what means this? I must rid my hands of&#x27;em, or they&#x27;ll ride on my shoulders; by your leaue, Ladies: here&#x27;s none but is of Com mon Counsaile one with another: in short, there are three of ye with child, you tell me by me: all of you I cannot satisfie, (nor indeed hansomely any of ye) you all hope I should mar ry you, which for that it is impossible to be done, I am con tent to haue neither of ye; for your looking big on the mat ter, keepe your owne Counsailes, I&#x27;le not bewray ye; but for mariage, heauen blesse ye, &amp; me fro ̄ ye; this is my resolution. Nor you, nor you, nor you. And to giue you some satisfaction, I&#x27;le yeeld you reasons: you, Colona, had a pretty art in your dalliance, but your fault was, you were too suddenly won; you, Madam Morona, could haue pleas&#x27;d wel enough some three or foure &amp; thirty yeares agoe, but you are too old; you, Iulia, were young enough, but your fault is, you haue a scuruy face; now euery one knowing her proper defect, thanke me, that I euer vouchsaf&#x27;d you the honor of my bed once in your liues: if you want clouts, al I&#x27;le promise, is to rip vp an old shirt or two; so wishing a speedy deliuera ̄ ce to al your burde ̄ s, I co ̄ mond you to your patience With my best 〈◊〉 and dexterity, my Lord. And&#x27;t please your Highnesse, hee&#x27;s of late growne so affectionately inward with my Lady Marquesses Foole, that I presume he is confident, there are few wise men wor thy of his society, who are not as innocently harmelesse as that creature; it is almost impossible to seperate them, and &#x27;tis a question which of the two is the wiser man. Come, my Lord, I shall intreat your helpe. Vncase me; I am slaine in iest, a pox vpon your outlan … sh feminine Antiks: pull off my Visor; I shall bleed to death, ere I haue time to feele where I am hurt: Duke, I am slaine, off with my visor, for heauens sake off with my visor. O, o, oh.— Pox vpon all Codpeece extrauagancy. I am pepper&#x27;d—oh, oh, oh—Duke forgiue me. Had I rid any tame beasts, but Barbary wild Colts, I had not bin thus jerk&#x27;d out of the saddle. My forfeit was in my blood, and my life hath answer&#x27;d it. Vengeance on all wild whores, I say,—oh &#x27;tis true; Farewell generation of Hackneyes.—ooh.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 478</div><div class="body">Eteocles and Polynices are elected co-kings of Thebes, ruling in alternate years. At the end of the first year, Eteocles refuses to stand down and banishes Polynices. Six champions join Polynices to besiege Thebes, but, after heavy losses, Polynices offers to settle the case by single combat. He and Eteocles kill one another, and Creon takes the crown. Tiresias prophesies that the walls of Thebes will stand only as long as the last of the seven champions remains alive. After Adrastus’ death, the Argive troops sack the city. 1569</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

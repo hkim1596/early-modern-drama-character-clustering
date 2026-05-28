@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PAN in 185 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PAN</span>
+</nav>
+
+<h1>PAN</h1>
+<p class="lede">in <em>185</em> — [94]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1602</td></tr>
+<tr><th>Words</th><td>1658</td></tr>
+<tr><th>Characters</th><td>9156</td></tr>
+<tr><th>BritDrama no.</th><td>185</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Thou lost a good wife, thou lost a trew friend, ha? <mark>Two</mark> of the rarest lendings of the heauens: But lendings: which at the fixed day of pay Set downe by fate, thou <mark>must</mark> restore againe. O what vnconscionable soules are here? Are you all like the spoke-shaues of the Church? Haue you no mawe to restitution? Hast lost a true friend,</div>
+<div class="excerpt">fortunes gripe can seize, He who is all impregnably his owne, Hee whose great <mark>heart</mark> heauen can not force with force, Vouchsafes his loue. Non seruio Deo, sed assentio. Didst finde her good, or didst thou make her good? If found, thou maist refinde, because thou hadst her. If made, the worke is lost: but thou that mad&#x27;st her Liu&#x27;st</div>
+<div class="excerpt">showers of dartes may darke Heauens ample browe: but not strike out a sparke; Much lesse pearce the Suns cheek. Such songs as these, I often dittied till my boy <mark>did</mark> sleepe: But now I turne plaine foole (alas) I weepe. Andrugio&#x27;s deade! My Lord, the clapper of my mouth&#x27;s not glibd With court oyle, twill not strike on both sides</div>
+<div class="excerpt">murmur, with confused dinne: One shakes his head, and sighes; O ill vs&#x27;d powre: Another frets, and sets his grinding teeth, Foaming with rage; and sweares this <mark>must</mark> not be. Here one complots, and on a sodaine starts, And cries; ô monstrous, ô deepe villanie! All knit there nerues, and from beneath swoln brows Appeares a gloting</div>
+<div class="excerpt">Murder for murder, blood for blood doth yell. No: mine. By yon bright spangled front of heauen twas I: Twas I sluc&#x27;t out his life bloode. We know the world, and <mark>did</mark> we know no more, Wee would not liue to know: but since constraint Of holy bands forceth vs keepe this lodge Of durts corruption, till dread power cals Our soules</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Tut, my young Prince, let not thy fortunes see Their Lord a coward. He, thats nobly borne, Abhorres to feare. Base feare&#x27;s the brand of slaues. Hee that obserues, pursues, slinks back for fright, Was neuer cast in mould of noble spright. Dead? Ha, ha, ha. Ha, ha, ha, Would&#x27;st haue me cry, run rauing vp &amp; down, For my sons losse? would&#x27;st haue me turn rank mad, Or wring my face with mimick action; Stampe, curse, weepe, rage, &amp; then my bosome strike? Away tis apish action, player-like. If hee is guiltlesse, why should teares be spent? Thrice blessed soule that dyeth innocent. If he is leapred with so foule a guilt, Why should a sigh be lent, a teare be spilt? The gripe of chaunce is weake, to wring a teare, From him that knowes what fortitude should beare. Listen young blood. Tis not true valors pride, To swagger, quarrell, sweare, stampe, raue, and chide, To stab in fume of blood, to keepe lowde coyle, To bandie factions in domestick broyles, To dare the act of Sins, whose filth excels. The blackest customes of blinde Infidels. No, my lou&#x27;d youth: he may of valour vaunt; Whom fortunes lowdest thunder can not daunt, Whom fretful gaules of chance, sterne fortunes siege; Makes not his reason slinke, the soules faire liege, Whose well pais&#x27;d action euer rests vpon Not giddie humours, but discretion. This heart in valour euen Ioue out-goes: Ioue is without, but this &#x27;boue sense of woes: And such a one eternitie: Behold, Good morrow sonne: thou bidst a fig for colde. Sound lowder musick: let my breath exact, You strike sad Tones vnto this dismall act. NO no, Piero, weeping for my sinnes: Had I bin a good father, he had bin a gratious sonne. Why taintst thou then the ayre with stench of flesh, And humane putrifactions noysome sent? I pray his bodie. Who lesse boone can craue, Than to bestowe vpon the deade, his graue? Peace, peace: Me thinks I heare a humming murmur creepe From out his gelli&#x27;d wounds. Looke on those lips, Those now lawne pillowes, on whose tender softnesse, Chaste modest speach, stealing from out his breast, Had wont to rest it selfe, as loath to poast From out so faire an Inne: look, look, they seeme to stir, And breath defyance to black obloquie. A wise man wrongfully, but neuer wrong Can take: his breast&#x27;s of such well tempered proofe, It may be rac&#x27;d, not pearc&#x27;t by sauage tooth Of foaming malice: showers of dartes may darke Heauens ample browe: but not strike out a sparke; Much lesse pearce the Suns cheek. Such songs as these, I often dittied till my boy did sleepe: But now I turne plaine foole (alas) I weepe. Andrugio&#x27;s deade! My Lord, the clapper of my mouth&#x27;s not glibd With court oyle, twill not strike on both sides yet. Commaund then iust and honorable things. Beware, take heed least guiltlesse blood be spilt. Where more than noble deeds to kings are free, It is no empire, but a tyranny. O, but that prince that worthfull praise aspires, From hearts, and not from lips, applause desires. Tis praise to doe, not what we can, but should. Defyance to thy power, thou rifted Iawne. Now, by the lou&#x27;d heauen, sooner thou shalt Rince thy soule ribs from the black filth of sinne, That soots thy heart, then make me wretched. Pish, Thou canst not coupe me vp. Hadst thou a Iaile With trebble walles, like antick Babilon, Pandulpho can get out. I tell thee Duke, I haue ould Fortunatus wishing cappe: And can be where I list, euen in a trice. Ile skippe from earth into the armes of heauen: And from tryumphall arch of blessednesse, Spit on thy froathy breast. Thou canst not slaue Or banish me; I will be free at home, Maugre the bearde of greatnesse. The port holes Of sheathed spirit are nere corb&#x27;d vp: But still stand open readie to discharge Their pretious shot into the shrowds of heauen ▪ Goe, boast vnto thy flattring Sycophants; Pandulpho&#x27;s slaue, Piero hath orethrowne. Loose Fortunes rags are lost; my owne&#x27;s my owne. Tis true Piero, thy vext heart shall see, Thou hast but tript my slaue, not conquerd mee. Black powers. Woe for my deare deare sonne. ANTONIO, kisse my foote: I honour thee, In laying thwart my blood vpon thy breast. I tell thee boy, he was Pandulphos sonne: And I doe grace thee with supporting him, Young man. The dominering Monarch of the earth, He who hath naught that fortunes gripe can seize, He who is all impregnably his owne, Hee whose great heart heauen can not force with force, Vouchsafes his loue. Non seruio Deo, sed assentio. Didst finde her good, or didst thou make her good? If found, thou maist refinde, because thou hadst her. If made, the worke is lost: but thou that mad&#x27;st her Liu&#x27;st yet as cunning. Hast lost a good wife? Thrice blessed man that lost her whilst she was good, Faire, young, vnblemisht, constant, louing, chaste. I tell thee youth, age knows, yong loues seeme grac&#x27;t, VVhich with gray cares, rude iarres, are oft defac&#x27;t. May be, may be: but that, which may be, stood, Stands now without all may; she died good, And dost thou grieue? I liue incompast with two blessed soules. Thou lost a good wife, thou lost a trew friend, ha? Two of the rarest lendings of the heauens: But lendings: which at the fixed day of pay Set downe by fate, thou must restore againe. O what vnconscionable soules are here? Are you all like the spoke-shaues of the Church? Haue you no mawe to restitution? Hast lost a true friend, cuz? then thou hadst one. I tell thee youth, tis all as difficult To finde true friend in this apostate age (That balkes all right affiance twixt two hearts) As tis to finde a fixed modest heart, Vnder a painted breast. Lost a true friend? O happie soule that lost him whilst he was true. Beleeue it cuz, I to my teares haue found, Oft durts respect makes firmer friends vnsounde. Why there&#x27;s the co ̄ fort ont, that he was good: Alas, poore innocent. Ha, dost aske me why? ha? ha? Good cuz, looke here. Man will breake out, despight Philosophie. Why, all this while I ha but plaid a part, Like to some boy, that actes a Tragedie, Speakes burly words, and raues out passion: But, when he thinks vpon his infant weaknesse, He droopes his eye. I spake more then a god; Yet am lesse then a man. I am the miserablest sowle that breathes. Wilt still be so? and shall you blood-hound liue? Ile knowe it all; first let&#x27;s interre the dead: Let&#x27;s dig his graue, with that shall dig the heart, Liuer, and intrals of the murderer. No, no song: twill be vile out of tune. Now sweare we by this Gordian knot of loue, By the fresh turnd vp mould that wraps my sonne; By the deade browe of triple Hecate : Ere night shall close the lids of you bright stars, Weele sit as heauie on Pieros heart, As Aetna doth on groning Pelorus. Like high-swoln floods, driue down the mud die dammes Of pent allegeance. O, my lustie bloods, Heauen sits clapping of our enterprise. I haue beene labouring generall fauour firme, And I doe finde the citizens growne sick With swallowing the bloodie crudities Of black Pieros acts; they faine would cast And vomit him from off their gouernement. Now is the plot of mischiefe ript wide ope: Letters are found twixt Strotzo and the Duke, So cleare apparent: yet more firmely strong By suiting circumstance; that as I walkt Muffled, to eues-drop speech, I might obserue The grauer States-men whispering fearefully. Here one giues nods &amp; hums, what he would speake: The rumour&#x27;s got &#x27;mong troope of citizens, Making lowde murmur, with confused dinne: One shakes his head, and sighes; O ill vs&#x27;d powre: Another frets, and sets his grinding teeth, Foaming with rage; and sweares this must not be. Here one complots, and on a sodaine starts, And cries; ô monstrous, ô deepe villanie! All knit there nerues, and from beneath swoln brows Appeares a gloting eye of much mislike: Whilst swart Pieros lips reake steame of wine, Swallowes lust-thoughts, deuours all pleasing hopes, With strong imagination of, what not? O, now Vindicta ; that&#x27;s the word we haue: A royall vengeance, or a royall graue. Who&#x27;s there? sir Geffrey? What chance of fortune hath tript vp his heels, And laid him in the kennell? ha? O now, he that wants sowle to kill a slaue, Let him die slaue, and rot in pesants graue. Weele spoyle your oratory. Out with his tong. Grinst thou, thou snurling curre? He weepes: now doe I glorifie my hands, I had no vengeance, if I had no teares. Was he thy flesh, thy son, thy dearest sonne? So was Feliche my dearest sonne. Remorse was banisht, when thou slew&#x27;st my son. Thy son? true: and which is my most ioy, I hope no bastard, but thy very blood Thy true begotten, most legitimate And loued issue: there&#x27;s the comfort ont. Sa, sa; no, let him die, and die, and stil be dying, And yet not die, till he hath di&#x27;d and di&#x27;d Ten thousand deathes in agonie of heart. This for my sonne. Murder for murder, blood for blood doth yell. No: mine. By yon bright spangled front of heauen twas I: Twas I sluc&#x27;t out his life bloode. We know the world, and did we know no more, Wee would not liue to know: but since constraint Of holy bands forceth vs keepe this lodge Of durts corruption, till dread power cals Our soules appearance, we will liue inclos&#x27;d In holy verge of some religious order, Most constant votaries.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 185</div><div class="body">Simplicity, a new arrival in London, is horrified to find the city full of heresy, where ‘old custom’, the traditional religious observances of earlier generations, is held in contempt. Knowledge offers to explain the truth, and shows how the mass has no basis in scripture and certainly does not involve transubstantiation. He teaches Simplicity the doctrinal basis of Protestant worship: pray and fast simply, and shun popish idolatry. Simplicity is duly grateful.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

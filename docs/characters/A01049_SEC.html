@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEC in 532 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SEC</span>
+</nav>
+
+<h1>SEC</h1>
+<p class="lede">in <em>532</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>1297</td></tr>
+<tr><th>Characters</th><td>6955</td></tr>
+<tr><th>BritDrama no.</th><td>532</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">or you&#x27;l finde me terrible and furious. Off I say, or I shall lay bare all the naked truth to your faces: his foreparts have been so lusty, and his po sterions <mark>must</mark> do penance for&#x27;t: Vntrusse Whiskin untrusse; <mark>away</mark> burres, out Mare-hagge moyle; avaunt, thy turne comes next, avaunt thy turn comes next; avaunt the Horns of my</div>
+<div class="excerpt">I scorn to eate em: this suck ing Ferret hath been wrigling in my old Coney borough. Appeare Spadone, my proofes are pregnant and grosse: truth is the truth; I <mark>must</mark> and I will be divorced. speake Spadone and exalt thy voice. Dambe the prick of thy weason Pipe: where but <mark>two</mark> lie in a bed you <mark>must</mark> be Bodkin bitch-baby <mark>must</mark> ye.</div>
+<div class="excerpt">knave is—but— Iumpe with me, I smell a trick too, if I could tell what. That <mark>did</mark> signior Troylo; I saw the Page part at the doore; some trick still, go to Wife, I <mark>must</mark> and I will have an eye to this geere. What, what, what, what, what Spadone? My Razer shall be my weapon, my Razer. I will trim him and tram him. One, ten, a hundred,</div>
+<div class="excerpt">smarts. You are a scurvie fellow, and I am made a Cokes, an Asse; and this same filthy Cron&#x27;s a flirt. Whope do me no harme good <mark>Woman</mark>. The young Whelp is mad, I <mark>must</mark> slice the worme out of his breech: I have noos&#x27;d his neck in the Collar; and I will once turne Dog-leech. Stand from about me, or you&#x27;l finde me terrible and furious.</div>
+<div class="excerpt">semicircle of your countenance to my left hand file) out with the truth; would you have had a leap. Let cherously goatish and an Eunuch? this cutt, and then— You <mark>must</mark> fiddle my braines into a jealousie, rub my temples with saffron, and burnish my forehead with the juyce of yellowes: have I fitted yee now sir? Now we know thou</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Spadone, hold, what&#x27;s the noise? Whom, whom my deare Spadoue, whom? Honest Spadone divine Morosa. Right, just as thon tould&#x27;st me, all&#x27;s right, For which Sirrah Spadone, I will make thee a man, a man, dost heare? I say a man. How now fellow, how now, roring ripe indeed? Nay, nay, by my Mistresse faire eyes I meant no such thing. Hold take another Duccat, as I love new cloathe; Yes or cast old ones, I intended no injury. I know it is. For me never. Shee writes as much, and Spadone, when wee are married. We will revell in such variety of delights. Liveso sumptuously. Feed so deliciously. Enjoy the sweetnes of our yeers. Tumble and wallow in aboundance. That all the world should wonder. How doe the beauties (my dainty knave) live, wish, thinke, and dreame, sirrah ha. Commend me to my choisest, and tell her, the mi nute of her appointment shall be waited on, say to her, she shall find me a man at all points. I fly Nitido, Spadone remember me. Passing neat and exquisite, I protest faire creatures; These honours to our solemnity, are liberall and uncommon; my spouse and my selfe with our posterity, shall prostitute our services, to your bounties, shals not duckling? Ever mine owne, and ever. We are all suitors. Light as a feather. Saist so Spadone? Looke, looke, looke how officious the litle knave is—but— Iumpe with me, I smell a trick too, if I could tell what. That did signior Troylo; I saw the Page part at the doore; some trick still, go to Wife, I must and I will have an eye to this geere. What, what, what, what, what Spadone? My Razer shall be my weapon, my Razer. I will trim him and tram him. One, ten, a hundred, a thousand; ten thousand: doe beyond Arithmetick Spadone, I speake it with some pas sion, I am a notorious Cuckold. Hee, Troylo, Livio, the Page, that hole-creeping Page; all horne me sirrah; Ile forgive thee from my heart: Dost not thou drive a trade too in my bottome. Now, now, now, now, the games rampant, rampant. Whore, bitch—Fox, treedle—fa la la la— Inhumanly,—keepe your bow close, vixen. Tricks, knacks, devices, now it troules about. It smarts. You are a scurvie fellow, and I am made a Cokes, an Asse; and this same filthy Cron&#x27;s a flirt. Whope do me no harme good Woman. The young Whelp is mad, I must slice the worme out of his breech: I have noos&#x27;d his neck in the Collar; and I will once turne Dog-leech. Stand from about me, or you&#x27;l finde me terrible and furious. Off I say, or I shall lay bare all the naked truth to your faces: his foreparts have been so lusty, and his po sterions must do penance for&#x27;t: Vntrusse Whiskin untrusse; away burres, out Mare-hagge moyle; avaunt, thy turne comes next, avaunt thy turn comes next; avaunt the Horns of my rage are advanced; hence or I shall gore ye. Fury, whore, baud, my Wife and the Devill. It shall out. First then know all Christian people Iewes and Infidels, hees and shees, by these presents, that I am a beast; see what I say, I say a very beast. Go to then, a horned beast: a goodly tall horn&#x27;d beast in pure verity a Cuckold: nay I will tickle their Trangdidoes. He justifie my words; I scorn to eate em: this suck ing Ferret hath been wrigling in my old Coney borough. Appeare Spadone, my proofes are pregnant and grosse: truth is the truth; I must and I will be divorced. speake Spadone and exalt thy voice. Dambe the prick of thy weason Pipe: where but two lie in a bed you must be Bodkin bitch-baby must ye. Spadone, am I a Cuckold or no Cuckold? Nay nay nay, no matter for that; this Ramkin hath tup&#x27;d my old rotten carrion Mutton. Spadone speake alowd what I am. What hast thou seen em doing together? doing. Didst not thou from time to time tell me as much? Hoyday, Ladies and Signior I am abus&#x27;d, they are agreed to scorne jeere and runne me out of my wits; by consent this gelded hobet a hoy is a corrupted Pander: the page a milke liverd Dildo; my Wife a Whore confest; and I my selfe a Cuckold arrant. Here in my fore-head it sticks, and stick it shall. law I will have; I will never more tumble in sheets with thee; I will father no mis-begotten of thine; the Court shall trounce thee, the Citie casheere thee, diseases de voure thee, and the Spittle confound thee. I am my Lord a worme, pray my Lord tread on me, I will not turne agen; &#x27;las I shall never venture To hang my Pole out; on my knees I begges it, My bare knees, I will downe unto my wife And doe what she will have me, all I can doe; Nay more, (if she will have it) aske forgivenes, Be an obedient Husband; never crosse her, Vnlesse sometimes in kindnes: Seignior Troylo, Speake one sweet word; Ile sweare &#x27;twas in my madnes, I said I knew not what, and that no creature Was brought by you amongst the Ladies, Nitido Ile forsweare thee too. Remember me now. Chuck, duckling, honye, mouse, monkey all and every thing; I am thine ever and only, will never offend againe, as I hope to shave cleane and get honour by&#x27;t, heartily I aske forgivenesse; bee gracious to thine owne flesh and blood, and kisse me home. Enough, I am wise, and will be merry,—hast Beau ties, the Caroches will sodaine receive yee; a night of pleasure is toward, pray for good husbands a peece, that may trim you featly, (dainty ones) and let mee alone to trim them. Will ye come away loyterers? shall I wait all day? Am I at livery d&#x27;ye thinke. A Chaire, a Chaire, quick, quick. Very commodiously deliver&#x27;d I protest. We light on some offices for Ladies too, as occa sion serves. Winke fast with both your eyes, the ingredients to the composition of this ball, are most odorous Cam phire, pure sope of Venice, oyle of sweet Almonds, with the spirit of Allome; they will search and smart shrewd ly, if you keep not the shop-windowes of your head close. Strange, and scarse to be credited; a gelding was lately seene to leape an old Mare; and an old man of one hundred and twelve stood in a white sheet for getting a wench of fifteene with childe, here hard by, most admi rable and portentous. With a little grecum album for mundification. Onely pare off a little superfluous downe from your chin, and all&#x27;s done. A kinde of steele instrument yeleped a Razor, a sharp toole and a keene, it has a certaine vertue of cut ting a throat, if a man please to give his mind to&#x27;t;—hold up your muzzle Signior,—when did you talke baudily to my wife last? tell me for your owne good (Signior) I advise you. Confesse, or I shall marre your grace in whissing Tobacco or squirting of sweet wines downe your gullet; —you have beene offering to play the gelding we told yee of I suppose;—speake truth, (move the semicircle of your countenance to my left hand file) out with the truth; would you have had a leap. Let cherously goatish and an Eunuch? this cutt, and then— You must fiddle my braines into a jealousie, rub my temples with saffron, and burnish my forehead with the juyce of yellowes: have I fitted yee now sir? Now we know thou art a man; we forget what hath past, and are fellowes and friends againe.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 532</div><div class="body">Three female courtiers tempt the King into a hedonistic lifestyle and away from sermons and the advice of his grave counsellors. They lull him to sleep and then transform him into a pig. While the court makes merry, two old men arrive and change him back to human form. The ladies and other courtiers vanish and he is sent for judgement; his plea is unsuccessful and he is carried away by evil spirits.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

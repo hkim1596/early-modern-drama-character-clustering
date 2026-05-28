@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IOHN in Much Ado About Nothing · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>IOHN</span>
+</nav>
+
+<h1>IOHN</h1>
+<p class="lede">in <em>Much Ado About Nothing</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>615</td></tr>
+<tr><th>Characters</th><td>3063</td></tr>
+<tr><th>BritDrama no.</th><td>1148</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">wonder that thou (being as thou saist, thou art, borne vnder Saturne) goest about to apply a morall medicine, to a mortifying mischiefe: I cannot hide what I am: I <mark>must</mark> be sad when I haue cause, and smile at no mans iests, eate when I haue stomack, and wait for no mans leisure: sleep when I am drow sie, and tend on no mans businesse,</div>
+<div class="excerpt">it better fits my bloud to be disdain&#x27;d of all, then to fashion a cariage to rob loue from any: in thi, (thogh I cannot be said to be a slatering honest man) it <mark>must</mark> not be denied but I am a plain dealing villaine, I am trusted with a mussel, and en fraunchisde with a ogge, therfore I haue decreed, not to sing in my cage: if</div>
+<div class="excerpt">thy fee is a thou sand ducates. I will presently go learne their day of marriage. Fie, fie, they are not to be named my lord, Not to be spoke of, There is not chastitie enough in language, Without offence to vtter them: thus pretty lady, I am sory for thy much misgouernement.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I thanke you, I am not of many wordes, but I thanke yo There is no measure in the occasion that breeds, ther fore the sadnesse is without limit. And when I haue heard it, what blessing brings it? I wonder that thou (being as thou saist, thou art, borne vnder Saturne) goest about to apply a morall medicine, to a mortifying mischiefe: I cannot hide what I am: I must be sad when I haue cause, and smile at no mans iests, eate when I haue stomack, and wait for no mans leisure: sleep when I am drow sie, and tend on no mans businesse, laugh when I am mery, and claw no man in his humor. I had rather be a canker in a hedge, then a rose in his grace, and it better fits my bloud to be disdain&#x27;d of all, then to fashion a cariage to rob loue from any: in thi, (thogh I cannot be said to be a slatering honest man) it must not be denied but I am a plain dealing villaine, I am trusted with a mussel, and en fraunchisde with a ogge, therfore I haue decreed, not to sing in my cage: if I had my mouth I would bite: if I had my liber ty I would do my liking: in the mean time, let me be that I am, and seeke not to alter me. I make all vse of it, for I vse it only, Who comes here? what newes Borachio? Wil it serue for any model to build mischiefe on? what is he for a foole that betrothes himselfe to vnquietnesse? Who, the most exquisite Claudio? A proper squier, and who, and who, which way looks he? A very forward March-chicke, how came you to this? Come, come, let vs thither, this may proue food to my displeasure, that yong start vp hath all the glory of my ouer throw: if I can crosse him any way, I blesse my selfe euery way, you are both sure, and wil assist me. Let vs to the great supper, their cheere is the greater that I am subdued, would the cooke were a my mind, shall we go proue whats to be done? Sure my brother is amorous on Hero, and hath with drawne her father to breake with him about it: the Ladies fo low her, and but one visor remaines. Are not you signior Benedicke? Signior, you are very neere my brother in his loue, he is enamourd on Hero, I pray you disswade him from her, she is no equall for his birth, you may doe the parte of an honest man in it. I heard him sweare his affection. Come let vs to the banquet. It is so, the Counte Claudio shall marry the daughter of Leonato. Any barre, any crosse, any impediment, will be med cinable to me, I am sicke in displeasure to him, and whatsoeuer comes athwart his affection, ranges euenly with mine, how canst thou crosse this marriage? Shew me briefely how. I remember. What life is in that to be the death of this mariage? What proofe shall I make of that? Onely to dispight them I will endeuour any thing. Grow this to what aduerse issue it can, I will put it in practise: be cunning in the working this, and thy fee is a thou sand ducates. I will presently go learne their day of marriage. Fie, fie, they are not to be named my lord, Not to be spoke of, There is not chastitie enough in language, Without offence to vtter them: thus pretty lady, I am sory for thy much misgouernement.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Much Ado About Nothing</div><div class="body">Returning to Messina after a war, Claudio falls in love with Hero. At a masked revel, Don Pedro woos her for him by proxy; Don John maliciously tells Claudio that Pedro has wooed her for himself, but the truth soon purges Claudio’s jealousy and he and Hero are engaged to be married in a week’s time. In the interim, Don Pedro undertakes to make Beatrice and Benedick, who have a humour of mutual hatred, fall in love with each other. This is done by letting each of them overhear a conversation about how much in love the other is. Don John attempts to prevent Claudio’s marriage by showing him what he takes to be a nocturnal assignation between Hero and another man; in fact it is Margaret in Hero’s clothes, wooed by Borachio whom Don John has suborned. Claudio rejects Hero at the wedding, and the Friar proposes that she feign death to inculcate remorse in him. Borachio and his associate Conrad are arrested and examined, and confess the plot. As penance, Claudio undertakes to marry another ===== PAGE 61 ===== 1598 lady, said to be Leonato’s niece, without first seeing her; she is actually Hero. Benedick and Beatrice join Hero and Claudio to make it a double wedding. Don John flees Messina, but is apprehended and brought back to face punishment.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IAN in The Wedding · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>IAN</span>
+</nav>
+
+<h1>IAN</h1>
+<p class="lede">in <em>The Wedding</em> — Shirley, James</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1629</td></tr>
+<tr><th>Words</th><td>229</td></tr>
+<tr><th>Characters</th><td>1227</td></tr>
+<tr><th>BritDrama no.</th><td>2184</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">commendation. With your licence sir— Y&#x27;are very short. You haue read many lectures to me, which My duty hath receiu&#x27;d, and practiz&#x27;d, as Prec pts from heauen, but neuer <mark>did</mark> I <mark>heare</mark> You preach so ill, you heretofore directed My study to <mark>bee</mark> carefull of my fame, Cherish desert, plant my affection on Noblenesse, which canonely be sufficient</div>
+<div class="excerpt">Anotomy. I thinke so. This is like to be a secret. What Musique haue I heard? Hee <mark>has</mark> Medusaes noble countenance, His haires do curle like soft and gentle Snakes: <mark>Did</mark> euer puppy smile so? or the Asse Better become his eares? oh generous beast Of sober carriage, sure he&#x27;s valiant too, Those blood-shot eyes betray him, but his</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">When you please sir, More liberally in my opinion. I thinke the picture of eyther o&#x27;your faces in a ring, with a Memento mors, would be as sufficient a mortification, as lying with an Anotomy. I thinke so. This is like to be a secret. What Musique haue I heard? Hee has Medusaes noble countenance, His haires do curle like soft and gentle Snakes: Did euer puppy smile so? or the Asse Better become his eares? oh generous beast Of sober carriage, sure he&#x27;s valiant too, Those blood-shot eyes betray him, but his nose Fishes for commendation. With your licence sir— Y&#x27;are very short. You haue read many lectures to me, which My duty hath receiu&#x27;d, and practiz&#x27;d, as Prec pts from heauen, but neuer did I heare You preach so ill, you heretofore directed My study to bee carefull of my fame, Cherish desert, plant my affection on Noblenesse, which canonely be sufficient To make it fruitefull, and d&#x27;ce counsell now To marry a disease? 〈◊〉 , I feare He is in earnest, marry me to my graue, o that you shall haue my consent, oh do not Enforce mee to be guilty of a fal e Vow, both to Heauen and Angels; on my knees— One minute hath ruin&#x27;d all my hope, Milisent Was cruell thus to mocke me. I obey sir: will my father cozen himselfe?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Wedding</div><div class="body">Beauford is to marry Sir John Belfare’s daughter, Gratiana, but on the eve of the wedding his kinsman Marwood tells him that she is unchaste: he himself has slept with her. Beauford fights a duel with him in the park; Marwood is wounded, but still insists that his story is true. Beauford sends a surgeon to him, but the body disappears before he arrives, taken away for treatment by the park gamekeeper’s wife. Beauford accuses and jilts Gratiana on the day of the wedding. Questioned by. Beauford’s friend Captain Landby, Gratiana insists that she is a virgin, and he offers to help vindicate her. At his instigation, she writes to Beauford pretending to have drowned herself, and shuts herself away in the house of Landby’s uncle, Justice Landby. Milisent, a boy servant, tells Gratiana that Marwood has died insisting on the veracity of his accusation: he slept with Gratiana with the connivance of her guardian Cardona. Milisent then tells Beauford that Marwood was mistaken: Gratiana is innocent, and Cardona is to blame. The boy also claims to have brought him Marwood’s body, but the coffin actually contains the living Gratiana, and the lovers are reconciled. Beauford is arrested for Marwood’s murder arid brought before Justice Landby. Belfare rushes to the judge&#x27;s house to lay an additional accusation for the rourder of the missing Gratiana, only to find her there alive. The other murder charge proves. equally iiitounded: Marwood too is present in disguise. Cardona admits that she arranged an -assignation between Marwood and Gratiana, but substituted her 1626 own daughter Lucibel, who subsequently disappeared. She too is present: she took on a male identity and became Milisent. Marwood agrees to marry her, and Beauford and Gratiana resume their engagement. In the sub-plot, Justice Landby encourages his daughter Jane to consider two inappropriate suitors, the thin Rawbone and the obese Loadum, in order to test her judgement. She is already in love with Haver, who has got himself a job as Rawbone’s servant in order to have access to her. Loadum and Rawbone consider fighting a duel over Jane; Rawbone agrees when Haver offers to fight in his place, while Loadum is persuaded upon learning that Rawbone is not considered to be much of a duellist - so he gets a surprise when his opponent, Haver in disguise, proves ready and able to fight. Justice Landby finds a love- letter from Haver in Jane’s prayer book and, disapproving of a marriage to the impecunious Haver, decides…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

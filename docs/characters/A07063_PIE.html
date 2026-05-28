@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PIE in 184 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PIE</span>
+</nav>
+
+<h1>PIE</h1>
+<p class="lede">in <em>184</em> — [94]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1602</td></tr>
+<tr><th>Words</th><td>1090</td></tr>
+<tr><th>Characters</th><td>6153</td></tr>
+<tr><th>BritDrama no.</th><td>184</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">yours, my Ladie? Ile see what tis. Meet me at Abrahams, the Iewes, where I bought my Amazons disguise. A shippe lies in the port, ready bound for England; make haste, come priuate. Antonio, Forobosco, Alberto, Feliche, Castilio, Balurdo? run, keepe the Palace, post to the ports, <mark>goe</mark> to my daugh ters chamber: whether now? scud</div>
+<div class="excerpt">I, I, my good wench, she is safe enough. Run <mark>away</mark>, <mark>away</mark>, how run <mark>away</mark>? Pursue, pursue, fly, run, post, scud <mark>away</mark>. Fly, call, run, rowe, ride, cry, shout, hurry, haste: Haste, hurry, shoute, cry, ride, rowe, run, call, fly Backward and forward, euery way about. Maldetta fortuna hy condura sorta Che faro, che diro, pur fugir</div>
+<div class="excerpt">to the gates, stop the gundolets, let none passe the marsh, doe all at once. Antonio? his head, his head. Keep you the Court, the rest stand still, or runne, or <mark>goe</mark>, or shoute, or search, or scud, or call, or hang, or doe doe doe, su su su, somthing: I know not who who who, what I do do do, nor who who who, where I am. O trista</div>
+<div class="excerpt">diro, pur fugir tanto mal! This way shee took: search, my sweet gentleme ̄ . How now Balurdo, canst thou meete with any body? What, in the name of heauen? Boy, didst thou see a yong Lady passe this way? Where man, where? Light and vnduteous! kneele not, peeuish elfe, Speake not, entreate not, shame vnto my house, Curse to</div>
+<div class="excerpt">sonne (now Ile be proud to call thee sonne) Enioy me thus; my verie breast is thine: Possesse me freely, I am wholly thine. Young Florence prince, to you my lips <mark>must</mark> beg, For a remittance of your interest. No man els makes claime vnto her. Then here I giue her to Antonio. Royall, valiant, most respected prince, Let&#x27;s clippe</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">If that be all, feare not, Ile sute it right. Who can not be proud, stroak vp the haire, and strut! But me thinks he speakes with a spruce Attick ac cent of adulterate Spanish. Tis horse-like, not for man, to know his force. Pish, I prosecute my families reuenge, VVhich Ile pursue with such a burning chace Till I haue dri&#x27;d vp all Andrugios bloud; VVeake rage, that with slight pittie is withstoode. VVhat meanes that fresh triumphall florish sound? VVeele girt them with an ample waste of loue; Conduct them to our presence royally. Let vollies of the great Artillery From of our gallies banks play prodigall, And sou ̄ d lowd welcome fro ̄ their bellowing mouths. Beautious Amazon, sit, and seat your thoughts In the reposure of most soft content. Sound musick there. Nay daughter, cleare your eyes, From these dull fogs of mistie discontent: Look sprightly girl. What? though Antonio&#x27;s droun&#x27;d, That peeuish dotard on thy excellence, That hated issue of Andrugio: Yet maist thou tryumph in my victories; Since, loe, the high borne bloodes of Italy Sue for thy seate of loue. Beautie and youth run descant on loues ground. Gallants, the night growes old; &amp; downy sleep Courts vs, to entertaine his company: Our tyred lymbes, brus&#x27;d in the morning fight, Intreat soft rest, and gentle husht repose. Fill out Greeke wines; prepare fresh cressit-light: Weele haue a banquet: Princes, then good night. Take vp your paper, Rossaline. Not yours, my Ladie? Ile see what tis. Meet me at Abrahams, the Iewes, where I bought my Amazons disguise. A shippe lies in the port, ready bound for England; make haste, come priuate. Antonio, Forobosco, Alberto, Feliche, Castilio, Balurdo? run, keepe the Palace, post to the ports, goe to my daugh ters chamber: whether now? scud to the Iewes, stay, runne to the gates, stop the gundolets, let none passe the marsh, doe all at once. Antonio? his head, his head. Keep you the Court, the rest stand still, or runne, or goe, or shoute, or search, or scud, or call, or hang, or doe doe doe, su su su, somthing: I know not who who who, what I do do do, nor who who who, where I am. O trista traditriche, rea, ribalda fortuna, Negando mi vindetta mi causa fera morte, Hold, there&#x27;s my signet, take a gundelet: Bring me his head, his head, and by mine honour, Ile make thee the wealthiest Mariner that breathes. Speake heartily ifaith, good Mariner. O, wee will mount in tryumph: soone, at night, Ile set his head vp. Lets thinke where. Sprightly, ifaith. In troth he&#x27;s somwhat like My daughter Mellida: but alas poore soule, Her honour heeles, god knowes, are halfe so light. Ho, this will warme my bosome ere I sleepe. I, I, my daughter&#x27;s safe enough, I warrant thee. This vengeance on the boy will lengthen out My daies vnmeasuredly. It shall be chronicled, time to come; Piero Sforza slewe Andrugio&#x27;s sonne. I, I, my good wench, she is safe enough. Run away, away, how run away? Pursue, pursue, fly, run, post, scud away. Fly, call, run, rowe, ride, cry, shout, hurry, haste: Haste, hurry, shoute, cry, ride, rowe, run, call, fly Backward and forward, euery way about. Maldetta fortuna hy condura sorta Che faro, che diro, pur fugir tanto mal! This way shee took: search, my sweet gentleme ̄ . How now Balurdo, canst thou meete with any body? What, in the name of heauen? Boy, didst thou see a yong Lady passe this way? Where man, where? Light and vnduteous! kneele not, peeuish elfe, Speake not, entreate not, shame vnto my house, Curse to my honour. Where&#x27;s Antonio? Thou traitresse to my hate, what is he shipt For England now? well whimpering harlot, hence. Good me no goods. Seest thou that sprightly youth? ere thou canst tearme to morrow morning old, thou shalt call him thy husband, Lord and loue. Blirt on your ay mees, gard her safely hence. Drag her away, ile be your gard to night. Young Prince, mount vp your spirits, and prepare To solemnize your Nuptials eue with popme. Faire neece, your reason? Trust me, a good strong meane, Well sung my boy. Faith, mad neece, I wonder when thou wilt marrie? Stay, stay, sweet neece, what makes you thus sus pect young gallants worth. How&#x27;s that, how&#x27;s that? too sad? By heauen dance, And grace him to, or, goe to, I say no more. How now blunt Feliche, what&#x27;s the newes? Conduct him with attendance sumptuous, Sound all the pleasing instruments of ioy: Make tryumph, stand on tiptoe whil&#x27;st wee meete: O sight most gratious, O reuenge most sweete! We still with most vnmou&#x27;d resolu&#x27;d confirme Our large munificence: and here breath A sad and solemne protestation: When I recall this vowe, O, let our house Be euen commaunded, staind, and trampled on, As worthlesse rubbish of nobilitie. We are amaz&#x27;d, our royall spirits numm&#x27;d, In stiffe astonisht wonder at thy prowesse, Most mightie, valiant, and high towring heart. We blush, and turne our hate vpon our selues, For hating such an vnpeer&#x27;d excellence. I ioy my state: him whome I loath&#x27;d before, That now I honour, loue; nay more, adore. But stay: what tragick spectacle appeares, Whose bodie beare you in that mournefull hearse? O that my teares, bedeawing thy wan cheeke, Could make new spirit sprout in thy could blood. Oh that my life, her loue, my dearest blood Would but redeeme one minute of his breath. Faire sonne (now Ile be proud to call thee sonne) Enioy me thus; my verie breast is thine: Possesse me freely, I am wholly thine. Young Florence prince, to you my lips must beg, For a remittance of your interest. No man els makes claime vnto her. Then here I giue her to Antonio. Royall, valiant, most respected prince, Let&#x27;s clippe our hands; Ile thus obserue my vowe; I promis&#x27;d twentie thousand double Pistolets, With the indeering to my dearest loue, To him that brought thy head; thine be the golde, To solemnize our houses vnitie: My loue be thine, the all I haue be thine. Fill vs fresh wine, the forme weele take by this: Weele drinke a health, while they two sip a kisse. Now, there remaines no discord that can sound Harsh accents to the eare of our accord: So please your neece to match. I will. Sound Lidian wires, once make a pleasing note, On Nectar streames of your sweete ayres, to flote.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 184</div><div class="body">Mistress Missa is under attack from Protestants: they want to replace the Mass with a simple Lord’s Supper involving none of her magical powers. Knowledge persuades Freemouth that she is guilty of heresy and blasphemy, and he cites her before Justice. Initially Justice tries to have Freemouth himself arrested, but Knowledge informs him of a recent change in the crown’s religious policy: Protestants are no longer to be persecuted. Justice agrees to allow Freemouth to proceed against Missa, and he accuses her in Palemon’s court. She admits everything except claiming to be more powerful than God. Porphyry and Philargury undertake Missa’s defence. Porphyry denies the right of Knowledge and Freemouth, lay persons, to question ecclesiastical matters, and attempts to have the charges thrown out, or at least referred to a spiritual court; but Palemon insists that he is competent to try the case even though he is not a priest. Missa’s defence turns on the claim that the mass was ordained by Christ at the Last Supper; but Knowledge demonstrates that the scriptural passages cited contain no mention of it, and that it is not coextensive with the Lord’s Supper, which requires no vestments, can be administered by anyone rather than only a priest, and claims no power to control the weather, work magic, or save souls. 1548 Porphyry tries to argue on the principle of obedience of authority, but Knowledge retorts that authority cannot command things contrary to scripture (such as the mass). Transubstantiation is invoked and rebutted, and Knowledge argues that all sacrifices are superseded by the atonement at the crucifixion; thus the mass is unnecessary. Palemon finds against Mistress Missa. Though she deserves death, he commutes the penalty to banishment, and she goes home to her father, the Pope.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

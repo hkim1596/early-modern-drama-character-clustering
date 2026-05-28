@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GEO in 540 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>GEO</span>
+</nav>
+
+<h1>GEO</h1>
+<p class="lede">in <em>540</em> — [173]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>670</td></tr>
+<tr><th>Characters</th><td>3744</td></tr>
+<tr><th>BritDrama no.</th><td>540</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">She takes me for an Eunuch. Sure my friend Hath overdone his part; and drawne the counterfeit Too neere the life of truth. Sweet Mistris <mark>heare</mark> The language of my <mark>heart</mark> that cannot glosse My plainer thoughts with superficiall words. I love you; my desires are throughly fir&#x27;d, And burne my bloud: which but your free enjoying Nothing</div>
+<div class="excerpt">am your servant faire one, and my <mark>heart</mark> Vow&#x27;s an obedience when your commands Assigne me any taske. She meanes hornes. Which if I fayle to give her, may I turne Chastities convert, and be mortifi&#x27;d From my concupiscence with hourely discipline. Alas faire Mistris, my grosse body wants A mimick activenesse. How she instructs</div>
+<div class="excerpt">Makes me suspitious shee&#x27;s some common wanton Lurks in that maske for safety. Nay rather hide her from me. She may raise motions; and if I should rivall thee, I <mark>must</mark> be serv&#x27;d: nothing was ere devis&#x27;d To fright libidinous nature from it&#x27;s pronenesse, That can restraine me. She seems a handsome piece. That opportunity Would play</div>
+<div class="excerpt">pledge for what should follow. No more of that. Nay, this way. Your will disposeth mine: we there may finde Handsome conveniences; and I&#x27;le renew My counterfeit of <mark>woman</mark>-hater: it May cast a mist before his jealous eyes Would watch us else. Exeunt. This is his Milke-maid sure. I still suspected &#x27;Twas some disguis&#x27;d name to conceale</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Yet never can the mixture Of gold with clay make any transformation Of that base matter into purer metall. You swell her praise too high; so meane a subject fits not these raptures. If she be So rare a piece, her low condition Makes me suspitious shee&#x27;s some common wanton Lurks in that maske for safety. Nay rather hide her from me. She may raise motions; and if I should rivall thee, I must be serv&#x27;d: nothing was ere devis&#x27;d To fright libidinous nature from it&#x27;s pronenesse, That can restraine me. She seems a handsome piece. That opportunity Would play the Bawd a little. They are arriv&#x27;d: let us prepare our selves. I hate women! Now by my love of pleasure, no delight Hath any relish on the wanton palat Of my desires; unlesse some mixture season it That is deriv&#x27;d from them. She takes me for an Eunuch. Sure my friend Hath overdone his part; and drawne the counterfeit Too neere the life of truth. Sweet Mistris heare The language of my heart that cannot glosse My plainer thoughts with superficiall words. I love you; my desires are throughly fir&#x27;d, And burne my bloud: which but your free enjoying Nothing can quench. I thinke you are; and one made up for pleasure, More then the dull converse of what&#x27;s defective. Fie, that&#x27;s a grosse construction; onely shame And common knowledge doth it, not the act Of a Wifes wantonnesse. A pledge for what should follow. No more of that. Nay, this way. Your will disposeth mine: we there may finde Handsome conveniences; and I&#x27;le renew My counterfeit of woman-hater: it May cast a mist before his jealous eyes Would watch us else. Exeunt. This is his Milke-maid sure. I still suspected &#x27;Twas some disguis&#x27;d name to conceale a Mistris. Now by my life shee&#x27;s faire; I envy him; And my desires have almost tempted me To put in for a share: but friendship checks it. Shee may perhaps be vertuous, and well borne. And worthy his resolves: my Citie beauty Shall serve at this time. I am your servant faire one, and my heart Vow&#x27;s an obedience when your commands Assigne me any taske. She meanes hornes. Which if I fayle to give her, may I turne Chastities convert, and be mortifi&#x27;d From my concupiscence with hourely discipline. Alas faire Mistris, my grosse body wants A mimick activenesse. How she instructs me! nay then. Exit. Be expeditious then, we lose that time Might make the pleasure fruitfull. That&#x27;s doubtles, sweet. As ever Citizens sonne was. I am a Courtier. Mischiefe on these delayes. Vexation racks me. Prevented at the point of such a happinesse! Where? Hold, hold; I am drown&#x27;d. Hell take your wife and you. Accursed women, That in your curse made Man so. Franke, though your selfe intend a reformation, You might forbeare me: this was your owne plot. Doe not abuse me left I thinke revenge: I am almost tempted to attempt it. I&#x27;le take the Tapsters word, and trye. Pardon me faire one. My intrusion tends To begg a happinesse; please you to crowne it With your consent and welcome? I take your word. The pleasure of your bed. I will reward it With a new gowne and angels; dally not In any coy deniall. &#x27;Tis a motion Sutes with my liking. The paines will make the pleasure More sweet in the enjoying. Mischiefe on suspition. I&#x27;ve given you all the flattering commendations That might confirme her love. I leave yee. Now to my practice of revenge, And the delight it comprehends within it Above Elizium. Exit. Now wench, is all ready? &#x27;Tis a good wench. I&#x27;le give thee a new gowne for it. &#x27;Tis a bargaine. The better. I&#x27;le turne her off within this fortnight, and send for thee. It shall be a moneth then? The Porter is deafe sure. Quickly then. Some nineteene with thy mistrisses. It shall, it shall: heere&#x27;s for thee Robin. Helpe him downe stayres with it. Farewell wench. Exeunt.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

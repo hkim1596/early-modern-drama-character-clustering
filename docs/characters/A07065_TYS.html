@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TYS in 214 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>TYS</span>
+</nav>
+
+<h1>TYS</h1>
+<p class="lede">in <em>214</em> — [94]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1605</td></tr>
+<tr><th>Words</th><td>502</td></tr>
+<tr><th>Characters</th><td>2602</td></tr>
+<tr><th>BritDrama no.</th><td>214</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">beſt make him your loue. Sdeath a vertue, what a damnd things this? Whole truſt faire faces, teares, and vowes, Sdeath not I, She is a <mark>woman</mark>, that is, ſhe can ly. <mark>Goe</mark> you are a flattring knaue. Hers another tack to be giuen, your ſon and daughter. yes aith father, mariage and hanging are ſpun both in one houre.</div>
+<div class="excerpt">Quickſiluer, thou little more then a Dwarfe, and ſome thing leſſe then a <mark>Woman</mark>. By the Lord I thinke thou ilt marry ſhortly too, thou groweſt ſomewhat fooliſh already. What a tart Monkey is this, by heauen if thou hadſt not ſo much wit I could</div>
+<div class="excerpt">marry thee. Faith bear with me for all this. By heauen I ſhalbe aſſoone wearne of health as of your in ioyeng: will you caſt a ſmooth cheeke vpon me? If you will <mark>bee</mark> mine, you ſhall be your owne, my purſſe, my bodie, my hart is yours, onlie <mark>bee</mark> ſilent in my houſe, modeſt at my table, and wanton in my bed, and the Empreſſe of</div>
+<div class="excerpt">The choller of a Iuſtice wrongd in wine, Ioynd with malignance of ſome haſtie Iurors, Whoſe wit was lighted by the Iuſtice noſe, The knaue was caſt, But Lord to <mark>heare</mark> his mone, his praiers, his wiſhes, His zeal ill timde, and his words vnpittied, Would make a dead man riſe and ſmile, Whilſt he obſerued how feare can make men</div>
+<div class="excerpt">words vnpittied, Would make a dead man riſe and ſmile, Whilſt he obſerued how feare can make men vile. By my tro h a rare motion, you muſt haſt, For male-factors goes like the world vpon wheeles. Ha ſeruant? Zounds I am no companion for Pandors ▪ your beſt make him your loue. Sdeath a vertue, what a damnd things this? Whole</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Quickſiluer, thou little more then a Dwarfe, and ſome thing leſſe then a Woman. By the Lord I thinke thou ilt marry ſhortly too, thou groweſt ſomewhat fooliſh already. What a tart Monkey is this, by heauen if thou hadſt not ſo much wit I could finde in my hart to my marry thee. Faith bear with me for all this. By heauen I ſhalbe aſſoone wearne of health as of your in ioyeng: will you caſt a ſmooth cheeke vpon me? If you will bee mine, you ſhall be your owne, my purſſe, my bodie, my hart is yours, onlie bee ſilent in my houſe, modeſt at my table, and wanton in my bed, and the Empreſſe of Europe cannot content, and ſhall not be contented better. Then thus, and thus, ſo Hymen ſhould begin, Sometimes a falling out, proues falling in. Exit. Speake not of anie thing thats good. Meane time to ſtrickteſt guard, to ſharpeſt priſon. Newes, newes, newes, newes. Why, is not this well now? Is not this better then louring, and pouting, and puling, which is hatefull to the liuing, and vaine to the dead? Come, come, you muſt liue by the quicke, when all is done, and for my owne part, let my wife laugh at me when I am dead, ſo ſ eele ſmile vpon me whilſt I liue, but to ſee a woman Whine, and yet keepe her eies 〈◊〉 mourne, and yet keepe her cheekes fat: nay, to ſee a woman c aw her huſbande by the feete when he is dead, that would haue ſcratcht him by the face whe he was liuing: this now is ſomewhat rediculous. I pray you? nere pray me: for by your leaue you may com mand me. This tis: the publique ſeſsions which this day is paſt, hath doom&#x27;d to death ill fortun&#x27;d Malhereux. Nothing but hanging, the Whoreſone ſlaue is mad before he hath loſt his ſences. No faith ſuſpitions, for twas thus proteſted a cloke was ſtolne, that cloke he had, he had it Himſelfe confeſt by force, the reſt of his defence The choller of a Iuſtice wrongd in wine, Ioynd with malignance of ſome haſtie Iurors, Whoſe wit was lighted by the Iuſtice noſe, The knaue was caſt, But Lord to heare his mone, his praiers, his wiſhes, His zeal ill timde, and his words vnpittied, Would make a dead man riſe and ſmile, Whilſt he obſerued how feare can make men vile. By my tro h a rare motion, you muſt haſt, For male-factors goes like the world vpon wheeles. Ha ſeruant? Zounds I am no companion for Pandors ▪ your beſt make him your loue. Sdeath a vertue, what a damnd things this? Whole truſt faire faces, teares, and vowes, Sdeath not I, She is a woman, that is, ſhe can ly. Goe you are a flattring knaue. Hers another tack to be giuen, your ſon and daughter. yes aith father, mariage and hanging are ſpun both in one houre.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

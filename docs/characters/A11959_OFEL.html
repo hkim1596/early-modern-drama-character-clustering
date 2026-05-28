@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OFEL in Hamlet, Prince of Denmark · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>OFEL</span>
+</nav>
+
+<h1>OFEL</h1>
+<p class="lede">in <em>Hamlet, Prince of Denmark</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1603</td></tr>
+<tr><th>Words</th><td>507</td></tr>
+<tr><th>Characters</th><td>2594</td></tr>
+<tr><th>BritDrama no.</th><td>1259</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">a cunning Sophister, Teach me the path and ready way to heauen, While you forgetting what is said to me, Your selfe, like to a carelesse libertine Doth giue his <mark>heart</mark>, his appetite at ful, And little recks how that his honour dies. It is already lock&#x27;t within my hart, And you your selfe shall keepe the key of it. Somthing touching</div>
+<div class="excerpt">tokens which I haue receiued of you. My Lord. What meanes my Lord? My Lord, can beauty haue better priuiledge than with honesty? My Lord, you know right well you <mark>did</mark>, And with them such earnest vowes of loue, As would haue moou&#x27;d the stoniest breast aliue, But now too true I finde, Rich giftes waxe poore, when giuers grow vnkinde.</div>
+<div class="excerpt">vowes of loue, As would haue moou&#x27;d the stoniest breast aliue, But now too true I finde, Rich giftes waxe poore, when giuers grow vnkinde. You made me beleeue you <mark>did</mark>. O heauens secure him! At home my lord. Help him good God. Alas, what change is this? Pray God restore him ▪ No my Lord. What meanes this my Lord? Enter the Prologue.</div>
+<div class="excerpt">doth this meane my lord? Will he tell vs what this shew meanes? T&#x27;is short my Lord. Ya&#x27;re as good as a Chorus my lord. Y&#x27;are very pleasant my lord. Nay, t&#x27;is twice <mark>two</mark> months, my Lord. Your iests are keene my Lord. Still better and worse. Wel God a mercy, I a bin gathering of floures Here, here is rew for you, You may call it</div>
+<div class="excerpt">better and worse. Wel God a mercy, I a bin gathering of floures Here, here is rew for you, You may call it hearb a grace a Sundayes, Heere&#x27;s some for me too: you <mark>must</mark> weare your rew With a difference, there&#x27;s a dazie. Here Loue, there&#x27;s rosemary for you For remembrance: I pray Loue remember, And there&#x27;s pansey for thoughts. Nay</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Brother, to this I haue lent attentiue eare, And doubt not but to keepe my honour firme, But my deere brother, do not you Like to a cunning Sophister, Teach me the path and ready way to heauen, While you forgetting what is said to me, Your selfe, like to a carelesse libertine Doth giue his heart, his appetite at ful, And little recks how that his honour dies. It is already lock&#x27;t within my hart, And you your selfe shall keepe the key of it. Somthing touching the prince Hamlet. My lord, he hath made many tenders of his loue to me. And withall, such earnest vowes. I shall obay my lord in all I may. I will my lord. My Lord, I haue sought opportunitie, which now I haue, to redeliuer to your worthy handes, a small remem brance, such tokens which I haue receiued of you. My Lord. What meanes my Lord? My Lord, can beauty haue better priuiledge than with honesty? My Lord, you know right well you did, And with them such earnest vowes of loue, As would haue moou&#x27;d the stoniest breast aliue, But now too true I finde, Rich giftes waxe poore, when giuers grow vnkinde. You made me beleeue you did. O heauens secure him! At home my lord. Help him good God. Alas, what change is this? Pray God restore him ▪ No my Lord. What meanes this my Lord? Enter the Prologue. What doth this meane my lord? Will he tell vs what this shew meanes? T&#x27;is short my Lord. Ya&#x27;re as good as a Chorus my lord. Y&#x27;are very pleasant my lord. Nay, t&#x27;is twice two months, my Lord. Your iests are keene my Lord. Still better and worse. Wel God a mercy, I a bin gathering of floures Here, here is rew for you, You may call it hearb a grace a Sundayes, Heere&#x27;s some for me too: you must weare your rew With a difference, there&#x27;s a dazie. Here Loue, there&#x27;s rosemary for you For remembrance: I pray Loue remember, And there&#x27;s pansey for thoughts. Nay Loue, I pray you make no words of this now: I pray now, you shall sing a downe, And you a downe a, t&#x27;is a the Kings daughter And the false steward, and if any body Aske you of any thing, say you this. Tomorrow is saint Valentines day, All in the morning betime, And a maide at your window, To be your Valentine: The yong man rose, and dan&#x27;d his clothes, And dupt the chamber doore, Let in the maide, that out a maide Neuer departed more. Nay I pray marke now, By gisle, and by saint Charitie, Away, and fie for shame: Yong men will doo&#x27;t when they come too&#x27; By cocke they are too blame. Quoth she, before you tumbled me, You promised me to wed. So would I a done, by yonder Sunne, If thou hadst not come to my bed. So God be with you all, God bwy Ladies. God bwy you Loue.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Hamlet, Prince of Denmark</div><div class="body">Less than two months. before the start of the action, King Hamlet died suddenly. Since then, his widow, Gertrude, has remarried his brother Claudius, who has become King of Denmark. The kingdom is urgently preparing for war over territory annexed thirty years ago when old Hamlet defeated and killed old Fortinbras, the King of Norway; now Prince Fortinbras is preparing to seize it back Claudius sends ambassadors to Norway to acquaint its King with young Fortinbras’s plans. Laertes is given permission to leave court for France, but Claudius denies Prince Hamlet’s request to return to his studies at Wittenberg, and names him the heir apparent. Laertes takes his leave of his family, and warns his sister Ophelia against Hamlet; their father, Polonius, goes further and forbids her even to speak to the Prince. Hamlet learns that his father’s ghost has been seen on the battlements on three consecutive nights, and joins the sentinels on the fourth night to see for himself. The ghost tells him that King Hamlet was poisoned by Claudius and enjoins him to avenge the murder. Hamlet begins to behave oddly, and Claudius summons his old schoolfellows Rosencrantz and Guildenstern to court to investigate. Polonius believes that he has been driven mad by Ophelia’s rejection, but Hamlet&#x27;s less than loving behaviour when left alone with her seems to disprove that theory. Claudius is persuaded that his nephew may be dangerous, and arranges for him to be sent to England under escort on a diplomatic mission to demand the resumption of England’s tributary payments to Denmark. But first there is a play to attend: uncertain that the ghost is all that it seems, Hamlet has arranged for a court performance of The Murder of Gonzago, with stage business reproducing the ghost’s description of King Hamlet’s death. Claudius’ reaction convinces ===== PAGE 242 ===== Hamlet that the ghost’s story is true, not a diabolic temptation. After the performance, Hamlet is summoned to see his mother. On the way to her closet, he passes Claudius praying, but passes up the opportunity to kill him lest, unlike King Hamlet, he should die in a state of grace and go directly to heaven. Polonius conceals himself in the Queen’s chamber to overhear her meeting with her son, but cries out when Hamlet becomes aggressive; Hamlet takes him for the King and stabs him in the arras. He forcefully confronts his mother with her adulterous marriage and accuses her of complicity in her first husband’s murder; the ghost…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

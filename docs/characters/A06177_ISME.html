@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ISME in Cupid&#x27;s Revenge · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ISME</span>
+</nav>
+
+<h1>ISME</h1>
+<p class="lede">in <em>Cupid&#x27;s Revenge</em> — Beaumont, FrancisFletcher, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1615</td></tr>
+<tr><th>Words</th><td>981</td></tr>
+<tr><th>Characters</th><td>4900</td></tr>
+<tr><th>BritDrama no.</th><td>1533</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">here, She would not part with her owne safetie. of whome? <mark>Heart</mark>, you shall take no leaue of me. No by the gods shall you not: nay if you haue no more wit but to <mark>goe</mark> obsolutely alone, Ile <mark>bee</mark> in a little. I wonnoty faith, neuer moue it any more; for by this good light I wonnot. Yes if you can beat me <mark>away</mark>: else, the gods resuse</div>
+<div class="excerpt">If you haue layne with her tell your Father, No doubt he <mark>has</mark> done as ill before now: The Gentlewoman will be proud ont. Who prates? Ime glad of that too: Sir will you dispatch Vs, we shall wither heere for euer. How now man,</div>
+<div class="excerpt">whore, you shall shew the duty of a childe better in being contented, and bidding much good doe his good old <mark>heart</mark> with her, then in repining thus at it: let her <mark>goe</mark>: what, there are more wenches man, weele haue another. This Rogue mocks me. Well Timantus, &#x27;pray how haue you sped here at home at shouelboord? How many Stagges</div>
+<div class="excerpt">there are more wenches man, weele haue another. This Rogue mocks me. Well Timantus, &#x27;pray how haue you sped here at home at shouelboord? How many Stagges haue you beene at the death of this grasse? Prethee how does the dunne Nagge? Mocke thee? Yes by my troth doe I: why what wouldst thou haue me doe with thee? Art good for any</div>
+<div class="excerpt">labours for, is but to rayse Her to your right, and leaue her this Duked ome. Nay as you will. Will you not take reuenge? I le call them on. And what house will you <mark>goe</mark> too? You may kill your mother, and neuer offend your father an honest man. Tima. a pox take him, would I had him here, I would kill him at his owne weapon single</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">If you haue layne with her tell your Father, No doubt he has done as ill before now: The Gentlewoman will be proud ont. Who prates? Ime glad of that too: Sir will you dispatch Vs, we shall wither heere for euer. How now man, strooke dead with a tale? Stand of your selfe: can you endure blowes, and shrinke at words? Why, for the other let her marry and hang, tis no purpos&#x27;d fault of yours: and if your father will needes haue your cast whore, you shall shew the duty of a childe better in being contented, and bidding much good doe his good old heart with her, then in repining thus at it: let her goe: what, there are more wenches man, weele haue another. This Rogue mocks me. Well Timantus, &#x27;pray how haue you sped here at home at shouelboord? How many Stagges haue you beene at the death of this grasse? Prethee how does the dunne Nagge? Mocke thee? Yes by my troth doe I: why what wouldst thou haue me doe with thee? Art good for any thing else? Sir, I am sure we dreame this cannot be. Looke, doe you see whose there? your ver tuous Mothers issue: kill her, yet take some little pid ling reuenge. Shees come againe. How does your good mother? Are you so simple, to make so much of this, Doe you not know, That all her wicked mother labours for, is but to rayse Her to your right, and leaue her this Duked ome. Nay as you will. Will you not take reuenge? I le call them on. And what house will you goe too? You may kill your mother, and neuer offend your father an honest man. Tima. a pox take him, would I had him here, I would kill him at his owne weapon single sithes wee haue built inough on him: plague ont, Ime out of all patience: discharge such an Army as this, that would haue followed you without paying, ô gods! This is one of your morall Philosophy is it? Heauen blesse me from subtilties to vndo my self with; But I know if, reason her selfe were here, She would not part with her owne safetie. of whome? Heart, you shall take no leaue of me. No by the gods shall you not: nay if you haue no more wit but to goe obsolutely alone, Ile bee in a little. I wonnoty faith, neuer moue it any more; for by this good light I wonnot. Yes if you can beat me away: else, the gods resuse me if I will leaue you till I see more reason; you sha&#x27;nt vndoe your selfe. Why Ile tell you, Because when you are gone, then — life, if I haue not forgot my reason— heele take mee: you put mee out of patience so: O! marry when you are gone, then will your Mother: a pox confound her, she neuer comes in my head but she spoiles my memory to: there are a hu ̄ dred reasons. Shew you, what a stirre here is, why I will shew you: Doe you thinke; well, well, I know what I know, I pray come, come. Tis in vaine: but I am sure. Diuels take em, what doe I meddle with em? You know your selfe. Soule, I thinke I am: is there any man ith world? as if you knew not this already better then I. Pish, pish, I le giue no reason. Tis true, and in the same Proclamation your fine sister Vrania, whome you vs&#x27;d so kindly, is pre claymd heyre apparant to the Crowne. Danger, hang danger, what tell you mee of danger? I dare not: if you speake it in earnest, you are a boy. Why so you shall, I will stay. Poxe o&#x27;me selfe for an Asse, I me crying now, God be with you, if I neuer see you againe: why then pray get you gone, for griefe and anger wonnot let me know what I say. Ile to the Court as fast as I can, and see the new heyre apparant. What would her new Grace haue with me? God blesse him that shall bee thy husband, if thou wearst breeches thus soone, thoult bee as im pudent as thy mother. Why wouldst not thou haue thy braines beat out for this, to follow thy mothers steps so young? Beleeue you? why do you thinke I neuer had wits? or that I am runne out of them? how should it belong to you to know, If I could tell? An Embassador. Pray, I know that too well, what ten? O that thou hadst no seede of thy Mother in thee, and couldst meane this now. By my troth I doe: I know Ime an Asse fort, But I cannot helpe it. You fleering harlot, Ile haue a horse to leape thee, and thy base issue shall carry Sumpters. Come Lords, bring her along, weele to the Prince all, where her hell-hood shall waite his censure; and if he spare thee she Goat, may he lye with thee againe; and be side, mayst thou vpon him some nastle soule dis ease that hate still followes, and his end, a dry ditch. Leade you corrupted whore, or Ile draw gode shall make you skippe: away to the Prince. Syr, for you we come, as Souldiers to reuenge the wrongs you haue suffered vnder this naughtie Creature: what shall bee done with her? say, I am ready. Monstrous woman, Mars would weepe at this, and yet she cannot. See, she stands as if she were inuenting Some new destruction for the world. I come to make you somewhat sadder sir. Your Fathers dead. How doe you sir? Let her be damnd already as she is: post all for Surgeants. It shall be so.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Cupid&#x27;s Revenge</div><div class="body">Leontius, King of Lycia, promises his daughter Hydaspes anything she asks for on her birthday. She wants him to ban the cult of Cupid in Lycia: the god’s naked statues are to be taken down and burnt, and Cupid-worship to be made a capital offence. Leontius agrees, persuaded that the religion is the cause of national immorality. His nephew Ismenus demurs: he will promulgate the Duke’s orders, but will himself take no hand in obeying them. As his temples are dismantled, Cupid declares vengeance on the kingdom. The Lycian royal family begins to behave with inappropriate amorousness. Hydaspes fixates on Zoilus, a deformed dwarf, and asks to be allowed to marry him; her father’s response is to have him beheaded, and she pines to death. Prince Leucippus falls for Bacha, a strumpet only interested in his wealth and power, but, questioned by his father, denies sexual misbehaviour and praises her virtue and chastity. Leontius is so impressed that he sends Leucippus away ===== PAGE 378 ===== and woos Bacha for himself, affecting youthful clothing and behaviour. Bacha becomes Queen of Lycia. When Leucippus returns to court, Bacha tries to seduce him again. He refuses to cuckold his father, and, annoyed at his refusal, she plots his death; this will leave her daughter Urania as the only heir to the throne. She makes Leontius jealous of his son’s popularity with the people and courtiers, and persuades him that Leucippus is plotting his assassination. The court parasite Timantus tells Leucippus that the King is to discuss his arrest at a council, and arranges to place him where he can eavesdrop and be forewarned of the charges. It is a ruse: Leucippus is arrested and sentenced to death, and Urania is proclaimed heir to the throne. At the execution, the citizens rise in rebellion and rescue the Prince from the scaffold. As Leontius sickens, Bacha schemes to marry Urania to a foreign prince; but she is in love with Leucippus, locates him through the good offices of Ismenus, and follows him posing as a page. Bacha engages Timantus to murder Leucippus. He finds the Prince by intercepting a letter from Ismenus; but his attack fails when Urania interposes her own body and is mortally wounded. Timantus is killed, but reveals her true identity before he dies. Ismenus brings Leucippus news that Leontius is dead. He declares that he will leave Bacha to heaven’s justice, but she stabs him. He dies, bequeathing the throne to Ismenus and enjoining him to reinstate the cult and…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

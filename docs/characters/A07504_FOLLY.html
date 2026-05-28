@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FOLLY in A Mad World, My Masters · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FOLLY</span>
+</nav>
+
+<h1>FOLLY</h1>
+<p class="lede">in <em>A Mad World, My Masters</em> — Middleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1608</td></tr>
+<tr><th>Words</th><td>1926</td></tr>
+<tr><th>Characters</th><td>10127</td></tr>
+<tr><th>BritDrama no.</th><td>1479</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">with probability, the moſt muſty-viſage Critick ſhall not except againſt me. Clay! doſt call thy Captaine Clay? indeede clay was made to ſtop holes, he ſayes true; <mark>did</mark> not I tell you raſcalls you ſhould ſee a <mark>woman</mark> quickly made vp? Come, come, my maſke and my chin-cloute—Come into&#x27;th Court. Let me ſee, where ſhall I chuſe <mark>two</mark></div>
+<div class="excerpt">you, <mark>goe</mark> too. Welcome ſweete cockſcombe; by my faith a good in duction, I perceiue by his ouerworne phraſe, and his action to ward the middle region ſtill there <mark>has</mark> bin ſome ſaucy nibling motion, and no doubt the cunning queane waited but for her prey, and I thinke tis better beſtowd vpon me for his ſoules health;—and his bodies</div>
+<div class="excerpt">ont, by your fauour Ladies. Know you the yong gentlewoman that went in lateley? Oh in good time, I like the gentlewoman well, a pre ty contriu&#x27;d beauty, But ſhe <mark>has</mark> one vncomely quality. Sfoote ſhe&#x27;s afraid of a man. Of her honour? ſlid &#x27;ime ſure I cannot get her mai den head with breathing vpon her, nor can ſhe looſe her ho</div>
+<div class="excerpt">leaſure, or they&#x27;r dull elſe. He ſtay and ſpeake a prologue, yet o&#x27;retake e&#x27;m, I cannot haue conſcience yfaith to go <mark>away</mark> and ſpeake nere a word to e&#x27;m, my Gra ̄ dſire <mark>has</mark> giuen me three ſhares here, ſure Ile do ſome what for e&#x27;m. A pox of ſuch fortune the plots betrayd: All will come out, yonder they come taken vpon ſuſpition, and</div>
+<div class="excerpt">rather leane to danger, then to ſhame. How now Conſtable what newes with thee? Whats the matter Conſtable, whats the matter? VVhy ſure the fellow&#x27;s drunke. What he <mark>did</mark>? VVhy true ſir. If you want cords, vſe garters. A gag will help all this, keepe leſſe noiſe ̄ you knaue. VVhy la you who lets you now? You may ride quietly, Ile</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Puſh, I reach paſt your fadomes; you deſire crowns. Footman. That Courtly comly forme, ſhould preſent to me Sir Bounteous Progreſſe. In this forgiue mee Sir, that being a ſtranger to your houſes, And you, I make my way ſo bold, and preſume Rather vpon your kindnes then your knowledge, Onely your bounteous diſpoſition. Fame hath diuulgd, and is to me well knowne. Old men ſhould dreame beſt. Well ſaid Leiftenant. Why the Doublet ſerues as well as the beſt, and is moſt in faſhion, weere all Male tot&#x27;h middle, mankinde from the Beuer to&#x27;th Bum, tis an Amazonian time, you ſhall haue women ſhortly treade their husbands; I ſhould haue a couple of Locks behind, prethee Lieutenant find em out for me, and wind &#x27;em about my hatband, nay you ſhall ſee, weele be in fa ſhion to a hayre, and become all with probability, the moſt muſty-viſage Critick ſhall not except againſt me. Clay! doſt call thy Captaine Clay? indeede clay was made to ſtop holes, he ſayes true; did not I tell you raſcalls you ſhould ſee a woman quickly made vp? Come, come, my maſke and my chin-cloute—Come into&#x27;th Court. Let me ſee, where ſhall I chuſe two or three for Pimps now? but I cannot chuſe amiſſe amongſt you all, thats the beſt; well, as I am a Queane, you were beſt haue a care of me, and guard me ſure, I giue you warning before hand, tis a monckie taylde-Age. Life, you ſhall goe nye to haue halfe a douzen blythe fellowes ſurprize me cowardly, carry me away with a payre of owers, and put in at Putney. Or ſhoote in vppo&#x27;th coaſt of Cue. Well, ſay you haue faire warning on&#x27;t, the hayre about the hat is as good as a flag vppo&#x27;th pole at a common Play houſe to waſt company, and a chin-cloute is of that powerfull a traction I can tell you, twill draw more Linnen toot? Yes, good maſter Gumwater. I remember it well ſir. Beſide your apparrell ſir? But then you recken your chaine ſir. Oh, pray away ſir. Pray do not handle me ſir. Vowd it? no, no, you men are fickle,— Why I bind you by vertue of this chayne to meet me to morrow at the Flowredeluce yonder, betweene Nine and Ten. Why now ile trye you, goe too. Welcome ſweete cockſcombe; by my faith a good in duction, I perceiue by his ouerworne phraſe, and his action to ward the middle region ſtill there has bin ſome ſaucy nibling motion, and no doubt the cunning queane waited but for her prey, and I thinke tis better beſtowd vpon me for his ſoules health;—and his bodies too; ile teache the ſlaue to be ſo bould yet, as once to offer to vault into his maſters ſaddle yfaith: Now Casket, by your leaue, I haue ſeene your outſide oft, but thats no proofe. Some haue fayre outſides that are nothing worth: ha? —now by my faith a gentlewoman of very good parts, Diamond, Rubie, Saphire, Onix cum prolo Silexque ; if I doe not wonder how the queane ſcapte tempting, I&#x27;me an Hermophrodite, ſure ſhe could lack nothing, but the Diuell to poynt too&#x27;t, and I wonder that he ſhould be miſſing; well, tis better as it is, this is the fruite of old-grunting-venerie. Grandſire, you may thanke your Drab for this; oh fye, in your crinckling dayes Grandſire, keepe a Curtizan to hinder your Grandchild, tis againſt Nature yfaith, and I hope youle be weary ont: Now to my villaines that lurke cloſe below: Who keepes a Harlot tell him this from me, He needes nor theeſe, diſeaſe, nor enemy. What ſo coy, ſo ſtrickt, come, come. Sfoote this is ſtrange, I&#x27;ue ſeldome ſeene a wench Stand vpon ſtricter points, life ſhe will not endure to be cour ted, do&#x27;s ſhe ere thinke to proſper? Ile nere beleeue that Tree can bring foorth fruit, that neuer beares a bloſſome, Court ſhips a bloſſome, and often brings foorth fruit in forty weeks; Twere a mad part in me, now to turne ouer: if euer there were any hope on&#x27;t, tis at this inſtant, ſhall I be madder now then euer I haue beene? &#x27;ime in the way ifaith. Mans neuer at hie height of madnes full, Vntill he loue and proue a womans gull; I doe proteſt in earneſt I nere knew At which end to begin to affect a woman, Till this bewitching minute, I nere ſaw Face worth my obiect, till mine eie met hers, I ſhould laugh and I were caught yfaith, Ile ſee her agen thats certaine, what Ere comes ont, by your fauour Ladies. Know you the yong gentlewoman that went in lateley? Oh in good time, I like the gentlewoman well, a pre ty contriu&#x27;d beauty, But ſhe has one vncomely quality. Sfoote ſhe&#x27;s afraid of a man. Of her honour? ſlid &#x27;ime ſure I cannot get her mai den head with breathing vpon her, nor can ſhe looſe her ho nour in her tongue. Haue you not ſo much power with her, to comma ̄ d her preſence. Would I might be hangd, if my loue do not ſtretch to her deeper and deeper, thoſe baſhfull maiden humors take me priſoner when their comes a reſtraint ont vpon fleſh, wee are alwaies moſt greedy vppont, &amp; that makes your mercha ̄ ts wife oftentimes pay ſo deare for a monthfull: giue me a wo man as ſhe was made at firſt, ſimple of her ſelfe, without So phiſtication, like this wench, I cannot abide them when they haue tricks, ſet ſpeeches &amp; Artfull entertainments, you ſhall haue ſome ſo impudently aſpected, they will outcry the fore head of a man, make him bluſh firſt, &amp; talke him into ſilence, &amp; this is counted manly in a woman, it may hold ſo, ſure wo manly it is not, no, If ere I loue, or any thing moue me, T will be a womans ſimple modeſty. The wonder of our time ſits in that browe, I nere beheld a perfit man till now. By my faith not I Lady. Feare not, come; erect thy happy graces in thy looke; I am no curious wooer, but infaith I loue thee honourably. Sfoot as one loues a woman for a wife, I do confeſſe it truely to you both, My eſtate is yet but ſickly, but I&#x27;ue a Grandſire Will make me Lord of thouſands at his death. Why then you know no fiction; my ſtate then will be a long dayes iourney &#x27;boue the waſt wench. And thou ſhalt often meaſure it in thy coache, And with the wheels tract make a gridle for&#x27;t. What iſt a match, if&#x27;t be clap hands &amp; lips; Why then mother I ſalute you. By my troth agreed mother. Sfoote that will ſerue till my Grandſire dyes I warrant you, heele drop away at fall a&#x27;th leafe, if euer he reach to all Hollantide ile be hangd. Ah pox, hee&#x27;s giuen to weomen; he keeps a queane at this preſent. Do not tell my wife ont. He makes a great feaſt vpon the leauenth of this month, tueſday next, and you ſhall ſee Players there,—I haue one tricke more to put vpon him; my wife and your ſelfe ſhall goe thither before as my gueſts, and proue his entertainment, Ile meete you there at night, the ieſt will be here, that feaſt which he makes wil, vnknown to him ſerue fitly for our wed ding dinner, we ſhall be royally furniſht, and get ſome charges by&#x27;te. We ſhall thriue one day wench, and clep ynough? Between our hopes theres but a Grandſires puffe. The month of May delights not in her flowers, More then we ioy in that ſweete ſight of yours. We ſerue my Lord Owemuch ſir. They come along with the Waggon ſir. I am he ſir. A pleaſant witty Comedy ſir. Tis cald the Slip. Euen vpon readineſſe ſir. I haue a ſuit to your worſhip. We could do all to the life of action ſir, both for the credit of your worſhips houſe, and the grace of our Comedy. And for ſome defects (as the cuſtome is) we would be bold to require your worſhips aſſiſtance. One&#x27;s a chaine for a Iuſtices hat ſir. VVe ſhould vſe a ring with a ſtone int. Oh this will ſerue ſir. All now ſir—one y time is brought i&#x27;th middle of the play, and I would deſire your worſhips watch time. You ſhall nere ſee that ſir. Ee&#x27;n as faſt as i can ſir,—Ile ſet my fellows going firſt, they muſt haue time and leaſure, or they&#x27;r dull elſe. He ſtay and ſpeake a prologue, yet o&#x27;retake e&#x27;m, I cannot haue conſcience yfaith to go away and ſpeake nere a word to e&#x27;m, my Gra ̄ dſire has giuen me three ſhares here, ſure Ile do ſome what for e&#x27;m. A pox of ſuch fortune the plots betrayd: All will come out, yonder they come taken vpon ſuſpition, and brought back by a Conſtable, I was accurſt to hold ſo ciety with ſuch Cockſcombs, whats to be done? I ſhall be ſhamde for euer, my wife here and al, ah pox—by light happi ly thought vpon, the chayne ▪ Inuention ſticke to me this once, and faile me euer hereafter: ſo, ſo,— Vnfortunate Iuſtice. In thy kin vnfortunate. Here comes thy Nephew now vpon ſuſpition, Brought by a Conſtable before thee, his vilde aſſociates with him, But ſo diſguizde, none knowes him but my ſelfe, Twice haue I ſet him free from officers ſangs, And for his ſake, his fellowes: let him looke too&#x27;t: My conſcience will permit but one winke more. For this time I haue be thought a meanes to worke thy freedome, tho hazarding my ſelfe; ſhould the Law ceaze him, Being kin to me, twould blenuſh much my name, No; I&#x27;de rather leane to danger, then to ſhame. How now Conſtable what newes with thee? Whats the matter Conſtable, whats the matter? VVhy ſure the fellow&#x27;s drunke. What he did? VVhy true ſir. If you want cords, vſe garters. A gag will help all this, keepe leſſe noiſe ̄ you knaue. VVhy la you who lets you now? You may ride quietly, Ile ſee you to, Take horſe my ſelfe. I haue nothing elſe to doe. Pray Grandſire giue me your bleſſing? This ſhowes like kneeling after the play, I praying for my Lord Owemuch and his good Counteſſe, our honou rable Lady and miſtreſſe. Thankes good grandſire, I was bold to bring thoſe gentlemen my friends. I am glad tis our fortune ſo happily to meete ſir. Sweete Miſtris Harebraine. Our mariage knowne? The better. Why Grandſire? A play ſir, no. Bles vs all, why were they ſuch vild ones ſir? Some rawe-ſimple fooles. What ſir? We met a company with hampers after em. Bleſſe vs all agen. Howe ſir. Are they ſuch creatures. Haue I ſcape the Conſtable to be brought in by the watch? Faith Grandſire, ſhall I be true to you? I knowing the day of your feaſt, &amp; the natural inclina tion you haue to pleaſure and paſtime, preſumde vpon your patience for a ieſt as well to prolong your daies as— Not ſo neither ſir &amp; that you may be ſeriouſly aſſured of my herafter ſtableneſſe of life, I have took another courſe. Tooke a wife. Shees both a gentlewoman and a virgin. You haue your wiſh, ſhees here. How now?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Mad World, My Masters</div><div class="body">Sir Bounteous Progress is much sought after for his generosity, but one person who has not benefited is his heir, Follywit. Down on his luck, Follywit decides to take some of his inheritance early. He poses as a lord and invites himself to stay with Sir Bounteous, and, during the night, changes clothes and burgles the house. Sir Bounteous is aghast that a lord has been robbed under his roof, and reimburses Follywit’s pretended losses. Harebrain is suspicious of his wife: he hires men to watch the house, takes away her bawdy reading matter, and allows her only the company of Lady Gullman, whom he takes for a pious virgin. In fact, Gullman is a courtesan working as a go-between for Penitent Brothel, and devises a plan to allow him access: she feigns sickness, and Harebrain allows his wife to visit her; Penitent Brothel poses as her physician. Other visitors include Sir Bounteous, Gullman’s principal client, and two other would-be clients, all of whom give money to ‘the doctor’. Mistress Harebrain arrives and has sex with Penitent Brothel. Meanwhile Gullman pretends to hold a conversation with her for the benefit of the eavesdropping Harebrain, who takes his wife home confident in her chastity. Worried that Sir Bounteous may leave his estate to a courtesan, Follywit poses as Gullman, visits the knight’s country house, and steals jewels. Back in London, he persuades Gullman to marry him on the expectation of his inheritance, not realizing who she is. Meanwhile, Penitent Brothel undergoes a spiritual conversion: his horror at his own lust is compounded by an encounter with a succubus in the shape of Mistress Harebrain. He visits the real Mistress Harebrain, partly to establish that it wasn’t her and partly to apologise for having endangered her chastity. Harebrain overhears them and is delighted. The Harebrains are invited to a feast at Sir Bounteous’s house. Follywit and his associates, disguised as actors, provide the entertainment, a comedy entitled The Slip, and Follywit persuades Sir Bounteous to hand over more valuables, including a watch, for use as props. The ‘actors’ are arrested escaping with their loot, but Follywit improvises to suggest that the constable is only a character in the ===== PAGE 231 ===== 1605 play. They tie him up get away, but return in their own persons. The truth comes out when the stolen watch starts to chime in Follywit’s pocket. He assures Sir Bounteous that he will settle down now that he has a wife, and is discomfited to…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PO in Law Tricks · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PO</span>
+</nav>
+
+<h1>PO</h1>
+<p class="lede">in <em>Law Tricks</em> — Day, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1608</td></tr>
+<tr><th>Words</th><td>1025</td></tr>
+<tr><th>Characters</th><td>5460</td></tr>
+<tr><th>BritDrama no.</th><td>1436</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">cracke a ieſt with her. What, graueld lulio? Truſt me, loue hath kild That worme-wood humor, bring th&#x27;auth oritie Of one true tongue to proue my poeſſe, Euer wrong&#x27;d <mark>woman</mark>. What a prou&#x27;d Iacke was that? but I wonder at Lawyers for one thing, many of them vſe to take their fees afore-hand. But faith Vncle tell me, what think you of</div>
+<div class="excerpt">Another, ſet it downe, ile ſpend after fortie po d a day, ile ſee which of my cheuerill braind immitators dares follow my faſhion: sblood I cannot drinke To bacco <mark>two</mark> daies, but the third the Church wardens &amp; fidemen are at it in the Alehouſe in ſermon time, I can not weare a ſute halfe a day but the Tailors Iourny man creepes</div>
+<div class="excerpt">turne now, therefore fall off, the enemie is too ſtrong, deede Tris, euerie Lambe to his fold, and Cony to her Borough, for the olde Foxe is a broad no, wilt not <mark>bee</mark>? why then God a mercyes braine. Cedant arma togae, my gowne and bookes boy, ſome ſudden deuiſe to keepe him back halfe an houre, and win my good opinion for euer.</div>
+<div class="excerpt">this ſtrange atcheiuement, That boy is worth his waight in pearle, diſt marke what a tale of a Cock and a Bull, he tolde my father whilſt I made thee and the reſt <mark>away</mark>, by a bill of Conuey anee at his back? twas admirable, doth not this ieſt deſerue to be chronicled? No matter let ▪ am, haue not we brayns? brayns and they be well</div>
+<div class="excerpt">was, and out it muſt. Who? Emilia? why looke you heere father, doe you thinke I knew her not? aske the Boy and Iulio, do you thinke I would haue maintaind her as I <mark>did</mark> but onely for affinities ſake? what ſaide I at firſt Nuncle? <mark>did</mark> I not vrge affinities? and you would ſee me hang&#x27;d ſay and I <mark>did</mark> not vrge affinitie? Well ieſton</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">This ſame ſtra ̄ ge thing i&#x27;th likenes of a woma ̄ , Taſtes of much wit, though I not loue her ſex, Ile arme my thoughts to cracke a ieſt with her. What, graueld lulio? Truſt me, loue hath kild That worme-wood humor, bring th&#x27;auth oritie Of one true tongue to proue my poeſſe, Euer wrong&#x27;d woman. What a prou&#x27;d Iacke was that? but I wonder at Lawyers for one thing, many of them vſe to take their fees afore-hand. But faith Vncle tell me, what think you of this Lady? would ſhe not make a prettie peart Dutches? Come, leaue the Bedlam. Why an Aldermans poeſt? Come ſit, ſit, nay neerer, neerer, neerer yet. Iulio and Horatio, what ſhal&#x27;s haue to ſupper? I am now in the ſpending vayne. Good action, you ſhall not remooue, I learnt that phraſe of myne vncle, boy, know what Adam hath beſpoken for our palates. Where there a banquet to be had, More rate and deere, then that Vitellius made: It ſhoulde be ſeru&#x27;d in, but Horatio, What ſhal wee eate that&#x27;s coſtly, and that&#x27;s rare? Haſt any Pheaſants or Partriges? Lay the table in the with-drawing roome. He that ſo tolde thee fellow tolde thee true. Tuſh looke here. Thou ſhouldſt haue ſaid ſo to a Porter that&#x27;s heauy loaden. But come, ſit, ſit in councell, let&#x27;s deuize How to ſpend all this countleſſe maſſe of wealth, My father hath bequeath&#x27;d mee at his death, Quite from the popular and vulgar garbe, We will be ode in all things, and retaine No common humor in our large expence. For thy good newes take that along with thee, Looke here Tris, would not theſe Make notable ſtateſ-me ̄ ? methinks ſtate ſteals vpo ̄ me. It is not poyſon&#x27;d. Come, come. Diuinely, come. Nay quickly, how? Excellent, that&#x27;s cleane out of the faſhion for Pa ges, that&#x27;s good, that ſtands, downe with it Adam. Another, ſet it downe, ile ſpend after fortie po d a day, ile ſee which of my cheuerill braind immitators dares follow my faſhion: sblood I cannot drinke To bacco two daies, but the third the Church wardens &amp; fidemen are at it in the Alehouſe in ſermon time, I can not weare a ſute halfe a day but the Tailors Iourny man creepes into&#x27;t: I cannot keepe a block priuate, but euery Citizens ſonne thruſts his head into it: I cannot keepe a wench but euery grand-Iurors ſonne in the Countre imitates me, I care not if I make it petty trea ſon for any man to kiſſe vnder ten pound a Kiſſe. As common as cracking of nuts, not a ſeruing man, but doth as much. I know you are a hot ſhot in a feather-bed Tris, but that will uot ſerue turne now, therefore fall off, the enemie is too ſtrong, deede Tris, euerie Lambe to his fold, and Cony to her Borough, for the olde Foxe is a broad no, wilt not bee? why then God a mercyes braine. Cedant arma togae, my gowne and bookes boy, ſome ſudden deuiſe to keepe him back halfe an houre, and win my good opinion for euer. preuented ſtill? now by Meduſass ſnakes, And black Erinnis euer burning lampe, If all the skill in pyromantique rules, Deep Eromancy, or the precious ſoule, Of Ge man ▪ ique ſpells and Characters Grauen in the ſur faſe of our mother earth, Can worke this ſtrange atcheiuement, That boy is worth his waight in pearle, diſt marke what a tale of a Cock and a Bull, he tolde my father whilſt I made thee and the reſt away, by a bill of Conuey anee at his back? twas admirable, doth not this ieſt deſerue to be chronicled? No matter let ▪ am, haue not we brayns? brayns and they be well mincde are ſauce for any meate, let mine vncle turne Turxe and break forth, let the whole towne turne cuckold and blow their hornes in our diſgrace, I haue brains, let the Sunne and the ſeauen Stars be oppoſ&#x27;d, I haue brayns for that too my preſent wit ſhall giue ▪ am all the lye in their throates, and may ntayne it at pocket, dagger, and pi ſtoll when I haue done. Farewell. Lend mee your watry eye, That ſwims in paſſion for my ſiſters loſſe, And in this booke proſpectiue, let it read, Apleaſing lecture. That maid&#x27;s my ſiſter, whome on magiques wing, To this fayre preſence, my rich Art ſhall bring, Prepare to meete them, for this minutes age, ſends with my charme their airy pilgrimage. Say muſique. Zoundes ten. Eighteene. Fie her witte ſcaldes. Zoundes Iulio now. Zoundes all will out, braines— Well, done it was, and out it muſt. Who? Emilia? why looke you heere father, doe you thinke I knew her not? aske the Boy and Iulio, do you thinke I would haue maintaind her as I did but onely for affinities ſake? what ſaide I at firſt Nuncle? did I not vrge affinities? and you would ſee me hang&#x27;d ſay and I did not vrge affinitie? Well ieſton gallants, and vncle, you that make a piſh at the black Art, my books to the peece of Ar ras, where Venus and Adonis ſtood kiſſing and the cuckoldly pandar Vulcan watch&#x27;d them, and all your by waies to boot, I raiſe vp my Aunt your late wife in the ſame proportion, habit and geſture, ſhee vſually wore in her life time. And if I do not, ſay Philoſophie is foolery, Logique legerdemaine, and Coniuring meere coui catching, as indeed it is. And now by vertue of this wand, Each in his circle keepe his ſtand, Now Belioll and Aſtaroth, Sole commaunders of the North, By H cates head, E innis ſnakes, S ix and all infernall Lakes, I charge you kneele to Proſerpine, And by her licence all deuine Diſmiſſe the Counteſſe from thoſe ſhades, Where pleaſure ſprings and neuer fades. Feſtina, ci o, c tius, come free Tenant of Elizium. That, theſe lynes will ſhow, Horatio, baſe Horatto poyſond me, I was your ſiſter, right mine iniurie. Aunt?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Law Tricks</div><div class="body">Prince Polymetes arrives home with news that his sister Emilia has disappeared after an attack by the Turks on her temple; grieving at the news, Duke Ferneze goes to seek her, leaving Polymetes as his deputy. Meanwhile Emilia has escaped from the galleys by feigning lunacy, and now arrives in Genoa. She adopts an alias in order to test her brother, whom she has never met. His interest in her is not very brotherly: he loses his bookish tendencies and grows prodigal, spending public money on her. He arranges for her to lodge with his uncle, Count Lurdo, in order to facilitate access. Lurdo, who has just divorced his wife, the Countess, for alleged unchastity, tries to seduce Emilia with a view to getting his hands on the money Polymetes is spending on her. Meanwhile, Horatio fails in his efforts to seduce Lurdo’s ex-wife, the Countess, and takes her steadfastness in chastity badly. ===== PAGE 127 ===== 1604 He and Lurdo plot to get rid of her by poison, administered by Horatio. Ferneze returns in disguise with news of his own _death, and Polymetes makes plans to squander his inheritance. Then Ferneze returns in his own person, and Polymetes has to reassume his original studious persona. The Countess is buried, and the penitent Horatio visits her tomb; his page, who swapped the poison for a sleeping potion, is also there to take charge of her when she wakes, and scares Horatio by pretending to be her ghost. Polymetes pretends that his dissolute behaviour was just an act to test Lurdo, and tries to win his father’s favour by using magic to bring back Emilia; in fact it is a ruse with the cross-dressed Joculo, which. deceives Ferneze until the real Emilia exposes it by close questioning. Polymetes then conjures up the supposed ghost of the Countess, who accuses Horatio of her murder. The plot comes out and Horatio and Lurdo are sentenced to be buried alive, until it becomes clear that the Countess is alive and wants her husband back. Horatio is banished from the court and Joculo praised for turning tragedy into comedy.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

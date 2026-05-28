@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRINCE in Much Ado About Nothing · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PRINCE</span>
+</nav>
+
+<h1>PRINCE</h1>
+<p class="lede">in <em>Much Ado About Nothing</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>1761</td></tr>
+<tr><th>Characters</th><td>8997</td></tr>
+<tr><th>BritDrama no.</th><td>1148</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">challengde thee. What a pretty thing man is, when he goes in his dublet and hose, and leaues off his wit! But soft you, let me be, plucke vp my <mark>heart</mark>, and be sad, <mark>did</mark> he not say my brother was fled? How now, <mark>two</mark> of my brothers men bound? Bora chio one. Officers, what offence haue these men done? First I aske thee what they haue</div>
+<div class="excerpt">turned! What should I speake? I stand dishonourd that haue gone about, To lincke my deare friend to a common stale. Why then are you no maiden. Leonato, I am sory you <mark>must</mark> <mark>heare</mark>: vpon mine honor, My selfe, my brother, and this grieued Counte <mark>Did</mark> see her, <mark>heare</mark> her, at that howre last night, Talke with a ruffian at her chamber window,</div>
+<div class="excerpt">tongues: that I beleeue said shee, for he swore a thing to mee on munday night, which hee forswore on tuesday mor ning, theres a double tongue theirs <mark>two</mark> tongues, thus <mark>did</mark> shee an houre together trans-shape thy particular vertues, yet at last she co ̄ cluded with a sigh, thou wast the properst man in Italy. Yea that she <mark>did</mark>, but yet</div>
+<div class="excerpt">Benedicke wel ▪ and I could wish he would modestly examine himselfe, to see how much he is vnworthy so good a lady. Let there be the same nette spread for her, and that <mark>must</mark> your daughter and her gentlewomen carry: the sporte will be, when they holde one an opinion of an others dotage, and no such matter, thats the scene that I woulde</div>
+<div class="excerpt">trans-shape thy particular vertues, yet at last she co ̄ cluded with a sigh, thou wast the properst man in Italy. Yea that she <mark>did</mark>, but yet for all that, and if she <mark>did</mark> not hate him deadly, she would loue him dearely, the old mans daughter told vs all. But when shall we set the sauage bulles hornes one the sensible Benedicks head?</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Will you haue me? lady. Your silence most offends me, and to be merry, best becomes you, for out a question, you were borne in a merry hower. By my troth a pleasant spirited lady. She were an excellent wife for Benedick. Countie Claudio, when meane you to goe to church? Come ▪ you shake the head at so long a breathing, but I warrant thee Claudio, the time shall not go dully by vs, I wil in the interim, vndertake one of Hercules labors, which is, to bring Signior Benedick and the lady Beatrice into a moun taine of affection, th&#x27;one with th&#x27;other, I would faine haue it a match, and I doubt not but to fashion it, if you three will but minister such assistance as I shall giue you direction. And you too gentle Hero? And Benedicke is not the vnhopefullest husband that I know: thus farre can I praise him, he is of a noble strain, of approoued valour, and confirmde honesty, I will teach you how to humour your cosin, that she shall fal in loue with Be nedicke, and I, with your two helpes, wil so practise on Bene dicke, that in dispight of his quicke wit, and his queasie sto macke, he shall fall in loue with Beatrice: if we can do this, Cu pid is no longer an Archer, his glory shall bee ours, for we are the onely loue-gods, goe in with mee, and I will tell you my drift. Come shall we heare this musique? See you where Benedicke hath hid himselfe? Come Balthaser, weele heare that song againe. It is the witnesse still of excellencie, To put a strange face on his owne perfection, I pray thee sing, and let me wooe no more. Nay pray thee come, Or if thou wilt hold longer argument, Do it in notes. Why these are very crotchets that he speakes, Note notes forsooth and nothing. By my tr th a good song. Ha 〈◊〉 〈◊〉 〈◊〉 , thou singst wel enough for a shift. Yea mary, doost thou heare Balthasar? I pray thee get 〈◊〉 some excellent musique: for to morow night we would haue it at the ladie Heroes chamber window. Do so, farewell. Come hither Leonato, what was it y u t d mee of to day, that your niece Beatrice was in loue with s nior Benedicke? May be she doth but counterfeit. Why what effects of passion shewes she? How how I pray you! you amaze me, I would haue thought her spirite had beene inuincible against all assaults of affection. Hath shee made her affection knowne to Bene dicke? It were good that Benedicke knew of it by some o ther, if she will not discouer it. And he should, it were an almes to hang him shees an excellent sweete lady, and (out of all suspition,) she is vertu ous. In euery thing but in louing Benedicke. I would shee had bestowed this dotage on mee, I would haue daft all other respects, and made her halfe my self: I pray you tell Benedicke of it, and heare what a will say. She doth well, if shee shoulde make tender of her loue, tis very possible heele scorne it, for the man (as you know all) hath a contempt ble spirite. He hath indeede a good outward happines. Hee dooth indeede shew some sparkes that are like wit. As Hector, I assure you, and in the mannaging of quarrels you may say he is wise, for either hee auoydes them with great discretion, or vndertakes them with a most christi anlike feare. And so will hee doe, for the man doth feare God, howsoeuer it seemes not in him, by some large iestes hee will make: well I am sory for your niece, shall we go seeke Bene dicke, and tell him of her loue? Well, we will heare further of it by your daughter, let it coole the while, I loue Benedicke wel ▪ and I could wish he would modestly examine himselfe, to see how much he is vnworthy so good a lady. Let there be the same nette spread for her, and that must your daughter and her gentlewomen carry: the sporte will be, when they holde one an opinion of an others dotage, and no such matter, thats the scene that I woulde see, which wil be meerely a dumbe shew: let vs send her to call him in to dinner. I doe but stay til your mariage be consummate, and then go I toward Arragon. Nay that would be as great a soyle in the new glosse of your marriage, as to shew a child his new coate and forbid him to weare it, I wil only be bold with Benedick for his com pany, for from the crowne of his head, to the sole of his foot, he is al mirth, he hath twice or thrice cut Cupides bow-string, and the little hang-man dare not shoot at him, he hath a heart as sound as a bell, and his tongue is the clapper, for what his heart thinkes, his tongue speakes. Hang him truant, theres no true drop of bloud in him to be truly toucht with loue, if he be sadde, he wantes mo ney. Draw it. What? sigh for the tooth-ach. There is no appeerance of fancie in him, vnlesse it be a fancy that he hath to strange disguises, as to be a Dutch-man to day, a French-man to morrow, or in the shape of two countries at once, as a Germaine from the waste downward, all slops, and a Spaniard from the hip vpward, no dublet: vn lesse he haue a fancie to this foolery, as it appeares he hath, he is no foole for fancy, as you would haue it appeare he is. Hath any man seene him at the Barbers? Nay a rubs himselfe with ciuit, can you smell him out by that? Yea or to paint himselfe? for the which I heare what they say of him. Indeed that tells a heauy tale for him: conclude, con clude he is in loue. That would I know too, I warrant one that knows him not. She shall be buried with her face vpwards. For my life to breake with him about Beatrice. Good den brother. In priuate? Whats the matter? You know he does. Why whats the matter? I wil not thinke it. And as I wooed for thee to obtaine her, I wil ioyne with thee, to disgrace her. O day vntowardly turned! What should I speake? I stand dishonourd that haue gone about, To lincke my deare friend to a common stale. Why then are you no maiden. Leonato, I am sory you must heare: vpon mine honor, My selfe, my brother, and this grieued Counte Did see her, heare her, at that howre last night, Talke with a ruffian at her chamber window, Who hath indeede most like a liberall villaine, Confest the vile encounters they haue had A thousand times in secret. Good den, good den. We haue some haste Leonato. Nay do not quarrel with vs, good old man. You say not right old man. Gentlemen both, we will not wake your patience, My heart is sory for your daughters death: But on my honour she was chargde with nothing But what was true, and very full of proofe. I will not heare you. See see, heere comes the man we went to seeke. Welcome signior, you are almost come to parte al most a fray. Leonato and his brother what thinkst thou? had we sought, I doubt we should haue beene too yong for them. Doest thou weare thy wit by thy side? As I am an honest man he lookes pale, art thou si ke, or angry? By this light, he chaunges more and more, I thinke he be angry indeed. What, a feast, a feast? Ile tell thee how Beatrice praisd thy witte the other day: I said thou hadst a fine witte, true said she, a fine little one: no said I, a great wit: right saies she, a great grosse one: nay said I, a good wit, iust said she, it hurts no body: nay said I, the gen tleman is wise: certaine said she, a wise gentleman: nay said I, he hath the tongues: that I beleeue said shee, for he swore a thing to mee on munday night, which hee forswore on tuesday mor ning, theres a double tongue theirs two tongues, thus did shee an houre together trans-shape thy particular vertues, yet at last she co ̄ cluded with a sigh, thou wast the properst man in Italy. Yea that she did, but yet for all that, and if she did not hate him deadly, she would loue him dearely, the old mans daughter told vs all. But when shall we set the sauage bulles hornes one the sensible Benedicks head? He is in earnest. And hath challengde thee. What a pretty thing man is, when he goes in his dublet and hose, and leaues off his wit! But soft you, let me be, plucke vp my heart, and be sad, did he not say my brother was fled? How now, two of my brothers men bound? Bora chio one. Officers, what offence haue these men done? First I aske thee what they haue done, thirdly I ask thee whats their offence, sixt and lastly why they are com mitted, and to conclude, what you lay to their charge. Who haue you offended maisters, that you are thus bound to your answere? this learned Constable is too cunning to be vnderstood, whats your offence? Runnes not this speech like yron through your bloud? But did my brother set thee on to this? He is composde and framde of treacherie, And fled he is vpon this villanie. By my soule nor I, And yet to satisfie this good old man, I would bend vnder any heauy waight, That heele enioyne me to. We will not faile. Good morrow maisters, put your torches out, The wolues haue preied, and looke, the gentle day Before the wheeles of Phoebus, round about Dapples the drowsie East with spots of grey: Thanks to you al, and leaue vs, fare you well. Come let vs hence, and put on other weedes, And then to Leonatoes we will goe. Good morrow to this faire assembly. The former Hero, Hero that is dead. How dost thou Benedicke the married man?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Much Ado About Nothing</div><div class="body">Returning to Messina after a war, Claudio falls in love with Hero. At a masked revel, Don Pedro woos her for him by proxy; Don John maliciously tells Claudio that Pedro has wooed her for himself, but the truth soon purges Claudio’s jealousy and he and Hero are engaged to be married in a week’s time. In the interim, Don Pedro undertakes to make Beatrice and Benedick, who have a humour of mutual hatred, fall in love with each other. This is done by letting each of them overhear a conversation about how much in love the other is. Don John attempts to prevent Claudio’s marriage by showing him what he takes to be a nocturnal assignation between Hero and another man; in fact it is Margaret in Hero’s clothes, wooed by Borachio whom Don John has suborned. Claudio rejects Hero at the wedding, and the Friar proposes that she feign death to inculcate remorse in him. Borachio and his associate Conrad are arrested and examined, and confess the plot. As penance, Claudio undertakes to marry another ===== PAGE 61 ===== 1598 lady, said to be Leonato’s niece, without first seeing her; she is actually Hero. Benedick and Beatrice join Hero and Claudio to make it a double wedding. Don John flees Messina, but is apprehended and brought back to face punishment.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

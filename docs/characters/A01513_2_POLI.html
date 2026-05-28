@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>POLI in Jocasta · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> ›
+  <span>POLI</span>
+</nav>
+
+<h1>POLI</h1>
+<p class="lede">in <em>Jocasta</em> — Gascoigne, GeorgeKinwelmershe, FrancisYelverton, ChristopherEuripidesDolce, Lodovico</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1573</td></tr>
+<tr><th>Words</th><td>1263</td></tr>
+<tr><th>Characters</th><td>6919</td></tr>
+<tr><th>BritDrama no.</th><td>438</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 18 (<em>death, thebes, did, myne, eke, wyth…</em>). Matches are highlighted.</p>
+<div class="excerpt">enformed was thereof, Who séeing then the ensignes that wée bare, To be euen suche as were to him foresayde, Chose eche of vs to be his sonne by lawe, And sithens <mark>did</mark> solemnize <mark>eke</mark> the ame. O <mark>mother</mark> <mark>deare</mark>, fayrer ne wyser dame Is none in Greece, Argia is hir name. Adrastus sware, that he woulde sone 〈◊〉 Unto our right <mark>both</mark> Tydeus,</div>
+<div class="excerpt">what dole I doe endure, For you and for my fathers wretched woe, And <mark>eke</mark> howe déepely I desyre to knowe What wearre lyfe my louing sisters leade, And what anoye <mark>myne</mark> absence them hath giuen. Saye on, <mark>deare</mark> <mark>mother</mark>, say what so you please, What pleaseth you, shall neuer mée disease. So heauie happe as toung can not expresse. The</div>
+<div class="excerpt">venge my cause that is <mark>both</mark> good and iust. Yet this in heauen the Gods my records be, And here in earth each mortall man may know, That neuer yet my giltlesse heart <mark>did</mark> faile Brotherly dutie to Eteocles, And that causlesse he holdes me from mine own, Thus haue I said O <mark>mother</mark>, euen as much As néedefull is, wherein I me assure,</div>
+<div class="excerpt">Here noble <mark>mother</mark>, here, not as the king, Nor as a Citizen of stately <mark>Thebes</mark>, But as a straunger nowe, I thanke my brother. I knowe not <mark>mother</mark>, if I prayse deserue, (That you to please, whome I ought not displease) Haue traynde my selfe</div>
+<div class="excerpt">shoulde say, that otherwise it were, His toung should neuer with his heart agrée. This hath me drawne besyde my bounden due, To set full light this lucklesse lyfe of <mark>myne</mark>: For of my brother, what may I else hope, But traynes of treason, force and falshoode bothe? Yet neyther perill present, nor to come, Can holde me from my due obedience:</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Here noble mother, here, not as the king, Nor as a Citizen of stately Thebes, But as a straunger nowe, I thanke my brother. I knowe not mother, if I prayse deserue, (That you to please, whome I ought not displease) Haue traynde my selfe among my trustlesse foes: But Nature drawes (whether he will or ill) Eche man to loue his natue countrey soyle: And who shoulde say, that otherwise it were, His toung should neuer with his heart agrée. This hath me drawne besyde my bounden due, To set full light this lucklesse lyfe of myne: For of my brother, what may I else hope, But traynes of treason, force and falshoode bothe? Yet neyther perill present, nor to come, Can holde me from my due obedience: I graunte I can not grieflesse, well beholde My fathers pallace, the holie aultars, Ne louely lodge wherein I fostred was: From whence driuen out, and chaste vnworthily, I haue too long aboade in forreyn coastes: And as the growing gréene and pleasant plante, Dothe beare freshe braunches one aboue an other, Euen so am dde the huge heape of my woes, Dothe grows one grudge more gréeuous than the rest, To sée my deare and dolefull mother, cladde In mournyng tyre, to tyre hir mourning mynde, Wretched alonely for my wretchednesse, So lykes that enimie my brother best: Soone shall you see that in this wandring worlde, No enmitie is equall vnto that That darke disdayne (the cause of e ery euill) Dooth bréede full ofte in consangiunitie. But Ioue, he knowes what dole I doe endure, For you and for my fathers wretched woe, And eke howe déepely I desyre to knowe What wearre lyfe my louing sisters leade, And what anoye myne absence them hath giuen. Saye on, deare mother, say what so you please, What pleaseth you, shall neuer mée disease. So heauie happe as toung can not expresse. The libertie hée with his countrey loste, &quot;And that he lacketh fréedome for to speake, &quot;What séemeth best, without controll or checke. &quot;In exile, euery man, or bonde or frée, &quot;Of noble race, or meaner parentage, &quot;Is not in this vnlyke vnto the slaue, &quot;That muste of force obey to eche mans will, &quot;And prayse the péeuishnesse of eche mans pryde. What griefe can greater he, that so constraynde, Slauelyke to serue gaynst right and reason bothe, Yea muche the more, to him that noble is, By stately lyne, or yet by vertuous lyfe, And hath a heart lyke to his noble mynde. Hope helpeth moste to comfort miserie. Yea, hope that happeneth oftentymes to late, And many die before suche hap may fall. Sometyme I founde (though seldome so it were) Some gentle heart, that coulde for curtesye, Contente himselfe to succour myne estate. Mother, he hath a foolishe fantasie, &quot;That thinkes to fynde a frende in miserie. &quot;Couerd alas, in cloake of pouerti ? The flying fame that thundred in myne eares, Howe king Adrastus, gouernour of Grece, Was swered by Oracle, that he Shoulde knitte in linkes of lawfull mariage, His two faire daughters, and his onely heires, One to a Lyon, th&#x27;other to a Boare: An answere suche as eche man wondred at. I toke my gesse euen by this ensigne héere, A Lyon loe, which I dyd alwayes beare: Yet thynke I not, but Ioue alonely broughte These handes of myne to suche an high exploite. The shining day had runne his hasted course, And deawie night bespread hir mantell darke, When I that wandred after wearie toyle, To seke some harbrough for myne irked limmes, Gan fynde at last a little cabbin, close Adioyned faste vnto the stately walles, Where king Adrastus helde his royall towres. Scarce was I there in quiet well ycoucht, But thither came an other exile eke, Named Tydeus, who straue perforce to driue Mée from this sorie seate, and so at laste, Wée settled vs to fell and blouddie fight, Whereof the rumour grewe so greate foorth with, That straight the king enformed was thereof, Who séeing then the ensignes that wée bare, To be euen suche as were to him foresayde, Chose eche of vs to be his sonne by lawe, And sithens did solemnize eke the ame. O mother deare, fayrer ne wyser dame Is none in Greece, Argia is hir name. Adrastus sware, that he woulde sone 〈◊〉 Unto our right both Tydeus, and me: And fyrst for mée, that had the greater néede, Whereby the best and bol est blouds in Greece, Haue fellowed me vnto this enterpryse. A thing both iuste and grieuous vnto mée, Gréeuous I saye, for that I doe lamente To be constrayned by suche open wrong, To warre agaynst myne owne deare countrey féeres. But vnto you (O mother) dothe pertaine To stiute this stryfe, and bothe duliuer mée ▪ From exile now, and eke the towne from siege: For otherwise, I sweare you here by heauens, Eteocles, who now doth me disdayne For brother, shortly shall sée me his lorde. I aske the seate, wherof I ought of right Possesse the halfe, I am Oedipus sonne, And yours, so am I true sonne to you both. Wherfore I hope that as in my defence The worlde will weygh, so Ioue will me assiste. &quot;My woorthie dame, I fynde that tryed truthe &quot;Doth beste beséeme a simple naked tale, &quot;Ne néedes to be with painted proces prickt, &quot;That in hir selfe hath no diuersitie ▪ &quot;But alwayes shewes one vndisguysed face, &quot;Where déepe deceipt and lyes muste séeke the shade, &quot;And wrap their wordes in guilefull eloquence, &quot;As euer fraught with contrarietie: So haue I often sayde, and say agayne, That to auoide our fathers foule reproche And bitter curse, I parted from this lande With right good will, yet thus with him agréed, That while the whirling wyngs of flying time Might roll one yeare aboute the heauenly spheare, So long alone he might with peace possesse Our fathers seate in princely diademe, And when the yeare should eke his course renue, Might I succéede to rule againe as long. And that this lawe might stil be kept for aye, He bound him selfe by vowe of solemne oth By Gods, by men, by heauen, and eke by earth: Yet that forgot, without all reuerence Unto the Gods, without respect to right, Without respecte that reason ought to rule, His faith and troth both troden vnder foote, He still vsurps most tyrantlike with wrong The right that doth of right to me belong. But if he can with equall doome consent, That I retourne into my natiue soile To sway with him alyke the kingly seate And euenly beare the bridle both in hand, Deare mother mine I sweare by all the Gods To raise with spéede the siege from these our walles, And send the souldiers home from whence they came: Which if he graunt me not, then must I do (Though loth) as much as right and reason would, To venge my cause that is both good and iust. Yet this in heauen the Gods my records be, And here in earth each mortall man may know, That neuer yet my giltlesse heart did faile Brotherly dutie to Eteocles, And that causlesse he holdes me from mine own, Thus haue I said O mother, euen as much As néedefull is, wherein I me assure, That in the iudgement both of good and badde, My words may séeme of reason to procéede, Constrained thus in my defence to speake.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Jocasta</div><div class="body">Oedipus unknowingly murdered his father and married his mother Jocasta; on learning the truth, he blinded himself. His sons imprisoned him and agreed to alternate annually as kings of Thebes: Polynices went into exile while Eteocles took the first turn on the throne; but Eteocles refused to give it up at the end of his year in office, and Polynices has besieged Thebes in association with the King of Argos. Jocasta intervenes as their mother, and persuades Polynices to enter Thebes and meet Eteocles under truce. Eteocles will not hand over power, but offers to accept his brother back as a private citizen. Jocasta is unable to reconcile her sons, and Polynices’ forces prepare for battle. Eteocles names Creon as his successor, and asks him to marry Antigone to his son Haemon. Creon consults Tiresias, and learns that Thebes is doomed to destruction in divine revenge for Jocasta’s incest; only the death of his other son, Menoeceus, can save the city. Keen to die for his country, Menoeceus refuses to go into exile as his father wishes, reports the prophecy to Eteocles, and kills himself. Meanwhile, the battle is indecisive, and Eteocles and Polynices agree to settle their dispute in single combat. Jocasta and Antigone are too late to stop them killing each other: arriving to find them both dying, Jocasta stabs herself with Polynices’ dagger. The besieging army is massacred by the Thebans. Antigone brings the three bodies back to Thebes and tells her father what has happened. Creon declares himself King of Thebes and gives order for the funerals of Jocasta and Eteocles, but demands that Polynices, as an enemy of the city, should remain unburied. Antigone protests, pleads, and refuses to marry Haemon, threatening to kill him and then herself should Creon try to force her. Creon banishes both her and Oedipus. She helps her blind father to touch the dead bodies, and he asks her to see that Polynices is buried.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> page.
+</div>
+</div></body></html>

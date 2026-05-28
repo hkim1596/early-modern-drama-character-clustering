@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRI in Albumazar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>CRI</span>
+</nav>
+
+<h1>CRI</h1>
+<p class="lede">in <em>Albumazar</em> — Tomkis, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1615</td></tr>
+<tr><th>Words</th><td>1282</td></tr>
+<tr><th>Characters</th><td>7162</td></tr>
+<tr><th>BritDrama no.</th><td>1769</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt"><mark>Away</mark>. Hast to Eugenio, and Sulpitia, Acquaint them with the businesse. Neither in Pauls, at home, nor in th&#x27;Exchange? Nor where he vses to converse? hee&#x27;s lost: And <mark>must</mark> be cried. Sir, the newes, and hast to tell it, Had almost blinded me. &#x27;Tis so fortunate, I dare not powre it all at once vpon you, Least you should faint and swound</div>
+<div class="excerpt">thy carkasse, Bury&#x27;t in horse-dung, mould it new, and turne it T&#x27; Antonio ? and when th&#x27;art chang&#x27;d, if Lelio Smell out your plot, what worlds of punishment Thou <mark>must</mark> endure, poore Trincalo! The desire Of gaines abuses thee: be not transform&#x27;d. Yonder they come, I&#x27;le hence and hast to Lelio. Vnder the vaile and colour of Astrologie,</div>
+<div class="excerpt">colour of Astrologie, He clouds his hellish skill in Necromancie. Beleeue it, by some Art, or false imposture, Hee&#x27;l much disturbe your loue, and yours, Eugenio. You <mark>must</mark> trust in Fortune That make&#x27;s or marr&#x27;s the wisest purposes. Here&#x27;s no great need of thinking Not speech; the oile of scorpions cure&#x27;s their poison. The thing it</div>
+<div class="excerpt">begunne So hee hold out still with a higher straine. What ailes you sir? WHat do I see? Is not this Trincalo Transform&#x27;d t&#x27; Antonio ? &#x27;tis: and so perfectly That <mark>did</mark> the right Antonio now confront him, I&#x27;de sweare they both were true, or both were false. Hee seeme&#x27;s so iust the man hee represent&#x27;s, That I dare hardly vse him</div>
+<div class="excerpt">selfe-bred action And a for&#x27;st carriage. Suffer him then to enter Antonio&#x27;s house: and waite th&#x27;euent: for him He cannot scape: What you entend to do, Do&#x27;t when &#x27;<mark>has</mark> seru&#x27;d your turne. I see the Maide, Let&#x27;s hence least they suspect our consultations. Foole! who loues Armellina ? Antonio neuer lou&#x27;d his kitchin-maid. Note the</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Sir you haue no reason, Shee&#x27;s a yong girle of sixteene, you of sixty. At what? He sweares and vowes he neuer will consent. She shall not play with worne antiquities, Nor lye with snow, and statues; and such replies That I omit for reverence of your worship. What Strologer? A name of force to hang him without tryall. Or hee, or some of his confederates. And sends y&#x27;a present from the head of Aries. Pray you stand here, and wonder now for mee, Be astonish&#x27;t at his Gorgon, for I cannot. This no such secret: looke to your selfe, hee&#x27;l cheate you. Not I. Meane ostentation! for shame awake your selfe. &#x27;Tis an ill time to marry. The Moone growes fork&#x27;t, and walks with Capricorne. What see you in my face? Sir, pray giue no credit to this cheater, Or with his words of Art hee&#x27;le make you dote As much on his fain&#x27;d skill, as on faire Flauia. Maister I die, I dye. Ooh! I am dead, I am dead, Trouble your selfe no more. Stab&#x27;d with a thousand daggers, My heart, my lights, my liuer, and my skin, Pearst like a siue. A Chirurgion, good sir, a Surgeon. Now I perceiue I am: I pray you pardon me Diuine Astrologer. None but the Arch of heauen, that cannot fall. Feare nothing sir, this charm&#x27;d Mercuriall cap Shields from the fall of Mountaines: &#x27;tis not a stone Can check his Art, walke boldly. What in such serious meditations? What is&#x27;t? My masters secret? keep it good Farmer, keep it, I would not lend an eare to&#x27;t if thou&#x27;dst hire me. Fare-well. Adieu good Trincalo, the secrets of our betters Are dangerous, I dare not know&#x27;t. Yes: but I had rather want it. Adieu. No danger? cut thy finger and that paines thee; Then what wil&#x27;t do to shred and mince thy carkasse, Bury&#x27;t in horse-dung, mould it new, and turne it T&#x27; Antonio ? and when th&#x27;art chang&#x27;d, if Lelio Smell out your plot, what worlds of punishment Thou must endure, poore Trincalo! The desire Of gaines abuses thee: be not transform&#x27;d. Yonder they come, I&#x27;le hence and hast to Lelio. Vnder the vaile and colour of Astrologie, He clouds his hellish skill in Necromancie. Beleeue it, by some Art, or false imposture, Hee&#x27;l much disturbe your loue, and yours, Eugenio. You must trust in Fortune That make&#x27;s or marr&#x27;s the wisest purposes. Here&#x27;s no great need of thinking Not speech; the oile of scorpions cure&#x27;s their poison. The thing it selfe that&#x27;s bent to hurt and hinder you Offer&#x27;s a remedie: &#x27;tis no sooner knowne But th&#x27;worst on&#x27;t is preuented. Soone as you see this false Antonio Come neere your dores with speeches made of purpose, Full of humility and compassion: With long narrations how he scap&#x27;t from ship-wrack And other fain&#x27;d inuentions of his dangers: Bid him be gone; and if he presse to enter, Feare not the reuerence of your father&#x27;s lookes, Cudgell him thence. Commend it t&#x27;her your selfe. Mark&#x27;t you not, while We talk&#x27;t ▪ how through the window she attended, And fed her eyes on you? there shee&#x27;s. Say, sir, what ist? Deliuer it me And I&#x27;le present it to him in your name. Then giue him The price in gold. True: I haue a trick now hatching in my braine How you may hansomely preserue your credit, And saue the chaine. What can you loose to try&#x27;t, if it take There&#x27;s so much sau&#x27;d, if otherwise, nothing lost. Lay all the fault on Trincalo. But here&#x27;s the maine point. If you can dissemble Cunningly, and frame your countnance to expresse Pitty and anger, that so learn&#x27;d a man Should vse his friend so basely: If you can call An out-cry well, roare high, and terrible ▪ But yours is the maine part, for as you play&#x27;t You win or loose the chaine. Pray you sir How long shall he retaine this metamorphosis? A naturall day? Are any daies vnnaturall? What a noise make you sir? This well begunne So hee hold out still with a higher straine. What ailes you sir? WHat do I see? Is not this Trincalo Transform&#x27;d t&#x27; Antonio ? &#x27;tis: and so perfectly That did the right Antonio now confront him, I&#x27;de sweare they both were true, or both were false. Hee seeme&#x27;s so iust the man hee represent&#x27;s, That I dare hardly vse him as I purpos&#x27;d. Your friend Pandolfo ? How are your meanes improu&#x27;d; To stile familiarly your Maister friend? That I reioyce your Worship&#x27;s safe return&#x27;d From your late drowning. Th&#x27;Exchange hath giu&#x27;n you lost. And all your friends worne mourning three monthes past. Ha, ha, ha, through what a grace And goodly countenance, the Raskall speakes? What a graue portance? Could Antonio Himselfe out-do him? ô you notorious villaine! Who would haue thought thou couldst haue thus dissembled? As though I vnderstood not, The end of all this plot and goodly businesse? Come I know all, see! this vntil&#x27;d clod of earth Conceites his minde transform&#x27;d, as well as body. Hee wringes and bites his lips for feare of laughing. Ha, ha, ha! Sirra, to see thee chang&#x27;d So strangely, that I can not spy one inch Of thy old Clownish Carkas. Ha, ha. Ha, ha, ha. Sententious Block-head! Is&#x27;t possible this. Coxcombe should conceiue His mind transform&#x27;d? How grauely he continues The countnance hee began? Ha, ha. Why block-head? Think&#x27;st to deceiue mee too? Why Trincalo ? Art not thou Trincalo, Pandolfo&#x27;s man? Dar&#x27;st thou denie&#x27;t to mee? This is a good beginning, How naturally the rogue dissembles it? With what a gentle garbe, and ciuill grace He speake&#x27;s and lookes: How cunningly Albumazar Hath for our purpose suted him in Barbary cloaths. I&#x27;le try him fur ther: Sir, We heard you were drown&#x27;d, pray you, how scap&#x27;t you ship-wrack? Good still ▪ Leaue of Antonio now, and speake like Trincalo. Stay, sir, and take my counsell. Let him still Firmely conceite himselfe the man hee seeme&#x27;s: Thus hee himselfe deceiu&#x27;d, will farre more earnestly Effect your businesse, and deceiue the rest. There&#x27;s a maine difference twixt a selfe-bred action And a for&#x27;st carriage. Suffer him then to enter Antonio&#x27;s house: and waite th&#x27;euent: for him He cannot scape: What you entend to do, Do&#x27;t when &#x27;has seru&#x27;d your turne. I see the Maide, Let&#x27;s hence least they suspect our consultations. Foole! who loues Armellina ? Antonio neuer lou&#x27;d his kitchin-maid. Note the strange power of strong imagination. It can not chuse but take. I know his humor; And can at pleasure feather him with hopes, Making him flye what pitch I wish, and stoope When I shew fowle. I&#x27;le throw them o&#x27;re your garden wall. Away. Hast to Eugenio, and Sulpitia, Acquaint them with the businesse. Neither in Pauls, at home, nor in th&#x27;Exchange? Nor where he vses to converse? hee&#x27;s lost: And must be cried. Sir, the newes, and hast to tell it, Had almost blinded me. &#x27;Tis so fortunate, I dare not powre it all at once vpon you, Least you should faint and swound away with ioy. Your transform&#x27;d Trincalo - WHere shall I find my Maister to content him With welcome newes? Hee&#x27;s here; newes! newes! Newes of good fortune, ioy and happinesse! These were th&#x27;Astrologers intelligences. That rob&#x27;d you through th&#x27;South window. I meane your plate And treasure; pray you, sir, is&#x27;t not great happinesse To re-obtaine three thousand pounds in valew, Desperately lost? and you still dote and dreame Of Flauia, who by your owne consent And oath is promis&#x27;d to your sonne Eugeni ? Why now you shew your selfe a worthy Gentleman. Come in.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Albumazar</div><div class="body">The neighbours Pandolfo and Antonio, both widowers, have arranged to marry each other’s daughters; but before they can do so, Antonio is lost and presumed dead on an overseas voyage, and the plan goes into abeyance because his son Lelio disapproves of Pandolfo as a potential brother-in-law. Albumazar’s accomplice Furbo has gained access to Pandolfo’s household, posing as his daughter’s tutor, and has learned of his .- amorous aspirations, and also his credulity about. magic and astrology. Albumazar plans to trick him, and sets about demonstrating his occult power. Ronca shows Pandolfo some of the astrologer’s amazing inventions: a telescope and an ‘otacousticon’ (actually a pair of ass’s ears) which allow him to see and hear things at a distance. Albumazar then predicts Pandolfo’s marriage, and also a stabbing which his associates then enact in a brawl. Pandolfo asks the astrologer to raise Antonio’s ghost, but instead Albumazar undertakes to transform the tenant farmer Trincalo into Antonio’s likeness for one day, so that he can give Flavia in marriage to Pandolfo. Trincalo agrees because this will give him access to Antonio’s household, and therefore to the maid Armellina, whom he loves. Pandolfo is required to prepare a room for the metamorphosis, laid out with valuable possessions. When he begins to have second thoughts about paying Albumazar, his servant Cricca suggests that he should pretend to have been robbed of his valuables; but when they are indeed stolen, Albumazar pretends in turn that the transformed Trincalo has just locked them away for safe keeping. After undergoing the fake metamorphosis, Trincalo is told he may not look at himself in a mirror for fear of breaking the spell. Ronca and Harpax greet him as Antonio, and pretend to be his debtor and creditor respectively, but Trincalo pays Harpax less than he was ===== PAGE 445 ===== 1615 given by Ronca, who has to steal back the balance. To buy time to spirit away Pandolfo’s goods, the tricksters divert him with Bevilona the courtesan, who pretends to be a gentlewoman in love with Antonio, and hides him from her husband. The real Antonio returns unexpectedly, and is taken for the transformed Trincalo: he does not understand when Pandolfo asks after his missing property, and his son and daughter, forewarned of the planned trick, beat him out of his own house. He meets Trincalo, who is still posing as him, and a duel is proposed. Lelio and Cricca realize the truth when they see the two men…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

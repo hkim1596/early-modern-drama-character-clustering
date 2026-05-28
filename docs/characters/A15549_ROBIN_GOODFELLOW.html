@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ROBIN GOODFELLOW in Wily Beguiled · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ROBIN GOODFELLOW</span>
+</nav>
+
+<h1>ROBIN GOODFELLOW</h1>
+<p class="lede">in <em>Wily Beguiled</em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1606</td></tr>
+<tr><th>Words</th><td>1742</td></tr>
+<tr><th>Characters</th><td>8849</td></tr>
+<tr><th>BritDrama no.</th><td>1321</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">a quart of wine, And know of him how he deales with the ſcholler. I wonder I <mark>heare</mark> not of Maſter Churms, I would faine know how he ſpeedes, And what ſucceſſe he <mark>has</mark> in Lelias loue: Well, if he couſen the Scholler of her, Twould make my worſhip laugh: And if he haue her, hee may ſay god a mercy Robin Good fellow. O ware a good</div>
+<div class="excerpt">muſt thou doe, cracke, and lye, and face, And thou ſhalt triumph mightily. Barlady ſo had not I, I was faine to ouerreach as many times I doe. But now experience <mark>has</mark> taught me ſo much craft, that I ex cell in cunning. Do ſo: and let me <mark>heare</mark> how you ſpeede. Well, a good beginning makes a good end, Heers ten groats for doing</div>
+<div class="excerpt">ſpeede. Well, a good beginning makes a good end, Heers ten groats for doing nothing, Icon M. Churmes thankes for this, For this was his deuiſe: And therefore Ile <mark>goe</mark> ſeeke him out, and giue him a quart of wine, And know of him how he deales with the ſcholler. I wonder I <mark>heare</mark> not of Maſter Churms, I would faine know how he ſpeedes,</div>
+<div class="excerpt">ſhape, If I could meete with Sophos in theſe woods, O, he would take me for the Diuell himſelfe, I ſhould ha good laughing, beſide the fortie ſhillings 〈…〉 Ploddall <mark>has</mark> giuen mee: and if I get noe more I am ſure of that. But ſoft: now I muſt trie my cunning, for here he ſits. The high commander of the damned ſoules Great Dis the</div>
+<div class="excerpt">ſtraight was drawne, And in a whirle wind forth of Hell ſhe came; Ore hills ſhe hurles, and ſcowres along the plaines: The trees flew vp bith rootes, the earth <mark>did</mark> quake for feare, The houſes tumble downe, ſhe playes the Diuell and all: At length not finding any one ſo fit To effect her diueliſh damned charge as I: She comes</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">How now ſirra, what make you here, with all that timber in your necke? Speake man, what art afraid? what makeſt here? O, nay then I ſee thou art a good fellow ▪ Seeſt thou not Maſter Churms the Lawer to day? I marrie would I. Nay, prithee ſtay, who wilt thou tell him would ſpeake with him? I, who am I? If thou ſeeſt him, tell him Robin Goodfellow wold ſpeake with him. Mas, the fellow was afraid, I play the Bugbeare whereſoere I come, And make them al afraid, But here comes Maſter Churms. What, Maſter Churms? Whats the beſt newes a broad? tis long ſince I ſee you. A double fee? ſpeakeman, what iſt? If it be to betray mine owne father, Ile doot for halfe a fee: And for cunning let me alone. And wherein can I doe you good in this? An excellent deuiſe, yfaith. Why this will be ſport alone, But what would you haue me doe in this action? Tuſh man, I haue a deuiſe in my head already to doe that: But they ſay hir brother Fortunatus loues him dearely. Marrie Ile do this; Ile frame an Inditement againſt Sophos, in manner and forme of a Rape, and the next Law day you ſhall preferre it; that ſo Lelia may loath him, Hir Father ſtill deadly hate him, And the young Gallant hir brother vtterly forſake him. Sounds weele hire ſome Strumpet or other to be ſworne againſt him. Come hither my honeſt friend: M. Churms tolde me you had a ſuit to me, Whats the matter? My name is Robin Goodfellow. Let mee ſeet, and thou ſhalt ſee what Ile ſay to thee. He giues him money. Well, follow my counſaile and Ile warrant thee, Ile giue thee a loue powder for thy wench, And a kinde of Nux vomica in a potion, ſhall make hir come off yfaith. Tuſh feare not the dodge; Ile rather put on my flaſhing red noſe, and my flaming face, and come wrapt in a Calue skin and crie bo ho: Ile fray the Scholler I warrant thee. But firſt go to hir, try what thou canſt doe, Perhaps ſheele loue thee without any further a doe, But thou muſt tell hir, thou haſt a good ſtocke, ſome 100. or 200. a yeare, &amp; that will ſet hir hard I warrant thee. For bith Mas, I was once in good comfort to haue coſend a Wench: And wots thou what I tolde hir? I tolde hir I had a hundred pound land a yeare, in a place where I haue not the breadth of my little finger. I promiſed hir to infeoffe hir in 40. pounds a yeare of it: &amp; I think of my conſcience, if I had had but as good a face as thine, I ſhould haue made hir haue curſt the time that euer ſhe ſee mee. And thus muſt thou doe, cracke, and lye, and face, And thou ſhalt triumph mightily. Barlady ſo had not I, I was faine to ouerreach as many times I doe. But now experience has taught me ſo much craft, that I ex cell in cunning. Do ſo: and let me heare how you ſpeede. Well, a good beginning makes a good end, Heers ten groats for doing nothing, Icon M. Churmes thankes for this, For this was his deuiſe: And therefore Ile goe ſeeke him out, and giue him a quart of wine, And know of him how he deales with the ſcholler. I wonder I heare not of Maſter Churms, I would faine know how he ſpeedes, And what ſucceſſe he has in Lelias loue: Well, if he couſen the Scholler of her, Twould make my worſhip laugh: And if he haue her, hee may ſay god a mercy Robin Good fellow. O ware a good head as long as you liue. Why, Maſter Gripe he caſts beyond the moone, And Churms is the only man, he puts in truſt with his daugh ter, and (Ile warrant) the old Churle would take it vpon his ſaluation, that he wil perſwade her to marry Peter Ploddall: But Ile make a foole of Peter Ploddall, Ile looke him ith face and picke his purſe, Whil&#x27;ſt Churms coſen him of his wench, And my old gandſir Holdfaſt of his daughter. And if he can do ſo: Ile teach him a tricke to coſen him of his gold too. Now for Sophos, let him weare the willow garland, And play the melancholie Malecontent And plucke his hat downe in his ſullen eyes, And thinke on Lelia, in theſe deſert groues: Tis ynough for him to haue her, in his thoughts; Although he nere imbrace her in his armes. But now, theres a fine deuiſe comes in my head, To ſcarre the Scholler: You ſhall ſee, Ile make fine ſport with him. They ſay, that euery day he keepes his walke Amongſt theſe woods and melancholy ſhades, And on the barke of euerie ſenſeleſſe tree In graues the tenour of his haples hope. Now when hees at Venus altar at his Oriſons; Ile put me on my great carnation noſe And wrap me in a rowſing Calueskin ſuite, And come like ſome Hob goblin or ſome diuell, Aſcended from the griefly pit of hell: And like a Scarbabe make him take his legges: Ile play the diuel, I warrant ye. How now Maſter Churmes, what newes abroad? Me thinke you looke very ſpruce: yare very frolicke now a late. Faith I eene came to ſeeke you, to beſtow a quart of wine of you. Tuſh man, one good turne askes another: cleare gaines man, cleare gaines: Peter Ploddall ſhall pay for all: I haue guld him once, And Ile come ouer him againe and againe, I warrant ye. O all the better: then I ſhall bee ſure of more of his cuſtome. But what ſucceſſe haue you in your ſuit with hir? But doe you thinke you ſhall get hir fathers good will? I, and of thoſe that are ſcarſe able to pay, Take the one halfe and forgiue them the other, rather then ſit out at all. O bith Mas well remembred, Ile tell you what I meane to doe, Ile attire my ſelfe fit for the ſame purpoſe, Like to ſome helliſh Hag or damned fiend, And meete with Sophos wandring in the woods, O I ſhall fray him terribly. Well, lets go drinke together; And then Ile go put on my diueliſh roabes, I meane my Chriſtmas Calues skin ſute, And then walke to the woodes, O Ile terrifie him I warrantye. Now I am cloathed in this helliſh ſhape, If I could meete with Sophos in theſe woods, O, he would take me for the Diuell himſelfe, I ſhould ha good laughing, beſide the fortie ſhillings 〈…〉 Ploddall has giuen mee: and if I get noe more I am ſure of that. But ſoft: now I muſt trie my cunning, for here he ſits. The high commander of the damned ſoules Great Dis the Duke of Diuels and Prince of Limbo Lake, High Regent of Acheron, Styx and Phloget By ſtrict command from Pluto, Hels great Monarch, And faire Proſerpina the Queene of Hell, By full conſent of all the damned Hagges And all the fiends that keepe the Stygian plaines, Hath ſent me here from depth of vnder ground, To ſommon thee to appeare at Plutoes Court. O good Sir, I beſeech you, Ile do any thing; O hold your hands, I am not a Diuell by my troth. O Lord ſir ſaue my life: and Ile ſay as you ſay, or any thing elſe youle ha me doe. O I wil Sit: Although in ſome places, I beare the title of a ſcuruy gen tleman: By birth I am a boate writes ſon of Hull, My father got me of a refuſ&#x27;d hagge, Vnder the olde ruines of Boobies barne, Who as ſhe liu&#x27;d, at length ſhe likewiſe died, And for her good deedes went vnto the Diuell. But, Hell not wont to harbour ſuch a gueſt, Her fellow fiends do daiely make complaint Vnto grim Pluto, and his louely Queene, Of her vnruly miſſebehauiour: Intreating that a paſport might be drawne For her to wander till the day of doome, On earth againe to vex the mindes of men, And ſwore ſhe was the fitteſt fiend in Hell To driue men to deſperation. To this intent her paſport ſtraight was drawne, And in a whirle wind forth of Hell ſhe came; Ore hills ſhe hurles, and ſcowres along the plaines: The trees flew vp bith rootes, the earth did quake for feare, The houſes tumble downe, ſhe playes the Diuell and all: At length not finding any one ſo fit To effect her diueliſh damned charge as I: She comes to me, as to her onely childe, And me her inſtrument on earth ſhe made, And by that meanes I learnd this diuelliſh trade. Faith Sir, I am in a manner a promoter, Or more fitly term&#x27;d a promoting knaue: I creepe into the preſence of great men, And vnder colour of their friendſhips, Effect ſuch wonders in the world That babes wil curſe me, that are yet vnborne. Of the beſt men, I raiſe a common fame, And honeſt women rob of their good name: Thus dayly tumbling-in comes all my thrift. That I get beſt is got but by a ſhift: But the chiefe courſe of all my life, Is to ſet diſcord betwixt man and wife. I little hope for heauen or heauen 〈…〉 But if in hell doth any place remaine, Of more eſteeme then is another roome, I hope, as guerdon for my iuſt deſert, To haue it for my deteſtable acts. A pox of the Scholler. A plague of the vortie ſhillings, and the Cheeſe too. How you vex me! powder quotha? Sounds I ha been powderd. Faith, the world goes I cannot tell how: How ſpeed you with your wench? I think the ſcholler be haunted with ſome Demi diuel. Fray him? a vengeance ont ▪ all our ſhifting kna uerie&#x27;s knowne: We are counted very vagrants: Sounds, I am afraid of euerie officer, for whipping. What courſe ſhal we take now? Faith agreed: lets go into ſome place where wee are not knowne, and there ſet vp the art of knauerie with the ſecond edition.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Wily Beguiled</div><div class="body">Grip the usurer wants to marry his daughter Lelia to the foolish son of his neighbour, Ploddall, in order to gain control of Ploddall’s extensive land-holdings. For her part, Lelia loves the scholar Sophos, but Grip doesn’t think him rich enough and warns the young man off. The fathers agree and Churms the lawyer is engaged to draw up the marriage contract. Churms persuades Grip to let him visit her to intercede for Peter Ploddall, and also agrees to act as an intermediary woeer for Sophos; but all the while his objective is to win Lelia for himself. Meanwhile he engages Robin Goodfellow to provide Peter with a fake love-philtre for Lelia, and to frame Sophos for rape so that Lelia will fall out of love with him. Robin in turn plans to cozen Churms of Lelia and Grip of his money; but his plotting is overheard by Grip’s son, Fortunatus, who has just returned from the wars. Fortunatus finds the despairing Sophos sleeping in the woods, and listens to his woes. It becomes clear that Churms is double-crossing Sophos, so Fortunatus lays a plot. At her brother&#x27;s behest, Lelia arranges to abscond with Churms, who capitalizes Grip’s debts at less than their true value in order to finance the elopement. While Fortunatus and Sophos are waiting ===== PAGE 368 ===== to.intercept Churms, Robin tries to frighten Sophos by dressing up as the devil, but Fortunatus beats him and forces him to admit his misdeeds. When the eloping ‘couple’ arrive, Fortunatus intervenes and asks Lelia to choose between Sophos and Churms; she chooses Sophos. They take up temporary residence in a hermitage while Fortunatus straightens things out with their father. Grip learns independently of Churms’s treachery - both amatory and financial - and despairs. Fortunatus offers to prevent the elopement and bring Lelia back, provided that Grip agrees to her marrying Sophos. He does, and Fortunatus fetches the happy couple home.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

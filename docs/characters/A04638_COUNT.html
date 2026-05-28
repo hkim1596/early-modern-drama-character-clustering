@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COUNT in The Case Is Altered · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>COUNT</span>
+</nav>
+
+<h1>COUNT</h1>
+<p class="lede">in <em>The Case Is Altered</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1609</td></tr>
+<tr><th>Words</th><td>2328</td></tr>
+<tr><th>Characters</th><td>12552</td></tr>
+<tr><th>BritDrama no.</th><td>1072</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">beleeue him not, He will ſweare loue to euery one he ſees. Franciſco, giue them councell, good Franciſco, I dare truſt thee with both, but him with neither. Well <mark>goe</mark> your waies <mark>away</mark>; how now Chriſtopher, What newes with you? A ſuit Chriſtopher? what ſuit I prithee? Ile pardon all ſimplicity, Chriſtopher, What is thy ſuit? What?</div>
+<div class="excerpt">Why this is rare, is he not in the garden? See, call him? VVHere ſhould he be, trow? <mark>did</mark> you looke in the armory? No, why there? ô who would keepe ſuch drones? Exeunt Sebaſt. and Baltha. How now, ha ye found him? No my Lord, I ſhall haue ſhortly all</div>
+<div class="excerpt">Tis ſtrange (ſhe being ſo poore) he ſhould affect her, But this is more ſtrange that my ſelfe ſhould loue her. I ſpide her, lately, at her fathers doore, And if I <mark>did</mark> not ſee in her ſweet face Gentry and nobleneſſe, nere truſt me more: But this perſwaſion, fancie wrought in me, That fancie being created with her lookes, For where</div>
+<div class="excerpt">my owne deere renowne ſo ere it ſwaies, He to her father ſtraight. Loue hates delays. Here is the poore old man. Be not diſmaid old man, I come to cheere you. He <mark>has</mark> forgot me ſure: what ſhould this meane? He feares authority, and my want of wife Will take his daughter from him to defame her: He that hath naught on earth but</div>
+<div class="excerpt">Come leaue your pardons, and directly ſay. What villaine is the ſame that hath vſurpt, The honor&#x27;d name and perſon of Chamount: Mounſieur Gaſper, on what occaſion <mark>did</mark> they change their names, what was their policy, or their pretext. Tut tut, be ſilent. So will not I. By heauen I will not, I will ſtop mine eares, My ſences loath</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Why this is rare, is he not in the garden? See, call him? VVHere ſhould he be, trow? did you looke in the armory? No, why there? ô who would keepe ſuch drones? Exeunt Sebaſt. and Baltha. How now, ha ye found him? No my Lord, I ſhall haue ſhortly all my family Speake nought, but no my Lord, where is Chriſtophero, Looke how he ſtands, you ſleep y knaue, What is he not in the Garden? Your good Lord, ô how this ſmels of fennell. Enter Sebaſt Baltha. You haue bene in the garden it appeares, well, well. He is not, he is no where, is he? Signior. Patience? a Saint would looſe his patience to be croſt, As I am with a ſort of motly braines, See ſee, how like a neſt of Rookes they ſtand, Gaping on one another! now Diligence, what news bring you? Tut, tut, leaue pleaſing of my honour Diligence, you double with we, come. Whats that, you mutter ſir? will you proceed? Yet more; Gods precious. What ſay you ſir knaue? What do you take exceptions at me then. Go to you are a Raskall, hold your tongue. Tempt not my patience. Nay ſee, away with him, pull his cloth ouer his eares. His name is Onion Signior, Signior Maximillian. Let me intreat you, you would not regard Any contempt flowing from ſuch a ſpirit, So rude, ſo barbarous. Why he ſues to haue his fellow Onion pardon&#x27;d, And you muſt grant it Signior. I Signior. I for then it reſts, O Sir your welcome, Why God be thanked you are found at laſt. Signior Coloma truly you are welcome, I am glad to ſee you ſir ſo well returned. O Franciſco&#x27; you knew her what ſhe was! I was ſhe not! well weepe not ſhe is gone, Paſſons duld eye can make two grieues of one, Whom death marke out, vertue, nor bluod can ſaue, Princes, as beggers, all muſt feed the graue. Sir I could wiſh the number and value of them more in reſpect of your deſeruings. But Signior Maximillian. I pay you a word in priuate. Signior, blame me not, For tending his ſecurity ſo much, He is mine onely ſonne, and that word onely, Hath with his ſtrong, and reprecuſſiue ſound, Stroke my heart cold, and giuen it a deepe wound. Why haue not you knowen it Maximilian? I had one other yonger borne then this, By twiſe ſo many how ers as would fill The circle of a yeare, his name Camillo, Whome in that blacke, and fearfull night I loſt, (Tis now a nineteene yeares agone at leaſt, And yet the memory of it fits as freſh Within my braine as twere but yeſterday) It was that night wherein the great Chamont, The generall for France ſurpriſed Vicenza, Me thinks the horrour of that clamorous ſhout His ſouldiers gaue &#x27;when they attaind the wall, Yet tingles in mine eare, me thinkes I ſee With what amazed lookes, diſtracted thoughts, And minds confuſ&#x27;d, we, that were citizens, Confronted one another: euery ſtreet Was fild with bitter ſelfe tormenting cries, And happy was that foote, that firſt could preſſe, The flowry champaigne, bordering on Verona Heere I (imploy&#x27;d about my deare wiues ſafety) Whoſe ſoule is now in peace) loſt my Camillo. Who ſure was murdered by the barbarous Souldiers, Or elſe I ſhould haue heard—my heart is great. Sorrow is faint? and paſſion makes me ſweat. Cloſe with my daughters gentlemen? wel done, Tis like your ſelues: nay luſty Angelo, Let not my preſence make you bauke your ſport, I will not breake a minute of diſcourſe Twixt you and one of your faire Miſtreſſes. Many? no Angelo. I do not thinke th&#x27;aſt many, ſome fourteene I here thou haſt, euen of our worthieſt dames, Of any note, in Millaine: By&#x27;th the Maſſe that iſt, here are their names to ſhew Fourteene, or fifteene t&#x27;one. Good Angelo. You need not be aſhamd of any of them, They are gallants all. Nay ſtay ſweet Angelo, I am diſpoſed A little to be pleaſant paſt my couſtome, He&#x27;s gone? he&#x27;s gone, I haue diſgraſt him ſhrewdly, Daughters take heede of him, he&#x27;s a wild youth, Looke what he ſayes to you beleeue him not, He will ſweare loue to euery one he ſees. Franciſco, giue them councell, good Franciſco, I dare truſt thee with both, but him with neither. Well goe your waies away; how now Chriſtopher, What newes with you? A ſuit Chriſtopher? what ſuit I prithee? Ile pardon all ſimplicity, Chriſtopher, What is thy ſuit? What? is it touching loue Chriſtopher? Art thou diſpoſt to marry, why tis well. No, no, Chriſtopher, I know thee honeſt. Then I ſhould wrong thee, thou haſt euer been Honeſt and true, and will be ſtill I knowe. I know it man. Who wouldſt thou haue I prithee? Rachel de prie? what the poore beggers daughter? Shees a right handſome maide, how poore ſoeuer, And thou haſt my conſent, with all my hart. Do ſo Chriſtofero thou ſhalt do well. Tis ſtrange (ſhe being ſo poore) he ſhould affect her, But this is more ſtrange that my ſelfe ſhould loue her. I ſpide her, lately, at her fathers doore, And if I did not ſee in her ſweet face Gentry and nobleneſſe, nere truſt me more: But this perſwaſion, fancie wrought in me, That fancie being created with her lookes, For where loue is he thinke his baſeſt obiect Gentle and noble: I am farre in loue, And ſhall be forc&#x27;d to wrong my honeſt ſteward, For I muſt ſue, and ſeeke her for my ſelfe; How much my duetie to my late dead wife, And my owne deere renowne ſo ere it ſwaies, He to her father ſtraight. Loue hates delays. Here is the poore old man. Be not diſmaid old man, I come to cheere you. He has forgot me ſure: what ſhould this meane? He feares authority, and my want of wife Will take his daughter from him to defame her: He that hath naught on earth but one poore daughter, May take this extaſie of care to keepe her. Stand vp good father, I call thee not father for thy age, But that I gladly wiſh to be thy ſonne, In honoured marriage with thy beauteous daughter. Why father, this is nothing. Indeed it is not. Father, Ile heare no more, thou mou&#x27;ſt too much With thy too curious anſwere for thy daughter, That doth deſerue a thouſand times as much, Ile be thy Sonne in law, and ſhe ſhall weare Th&#x27;attire of Counteſſes. Riſe I ſay: When I mocke poorenes, then heauens make me poore. You are right welcome ſir. What, bring you me ill newes? Ill newes of my ſonne? My deere and onely ſonne, Ile lay my ſoule, Ay me accurs&#x27;d, thought of his death doth wound me, And the report of it will kill me quite. How then? That&#x27;s enough, enough, I ſet my thoughts on loue, on ſeruile loue, Forget my vertuous wife, feele not the dangers, The bands and wounds of mine owne fleſh and bloud, And therein am a mad man: therein plagu&#x27;d, With the moſt iuſt affliction vnder heauen. Is Maximilian taken priſoner to? Iſt poſſible, can Maximilian? Returne, and view my face without my ſonne, For whom he ſwore ſuch care as for himſelfe? O! in what tempeſts do my fortunes ſaile, Still wrackt with winds more foule and contrary, Then any northen gueſt, or Southerne flawe? That euer yet inforc&#x27;t the ſea to gape, And ſwallow the poore Marchants traffique vp? Firſt in Vieenza, loſt I my firſt ſonne; Next here in Millaine my moſt deere lou&#x27;d Lady: And now my Paulo, priſoner to the French, Which laſt being printed with my other griefes, Doth make ſo huge a volume, that my breſt Cannot containe them. But this is my loue ▪ I muſt make loue to Rachel, heauen hath throwne, This vengeance on me moſt deſeruedly: Were it for nought but wronging of my ſteward. I will prepare his ranſome: gratious heauen Grant his impriſonment may be his worſt, Honored and ſouldier-like impriſonment, And that he be not manacled and made A drudge to his proude foe. And here I vow, Neuer to dreame of ſeeme-les amorous toyes, Nor aime at other ioy on earth, But the fruition of my onely ſonne. Speake not ſo loud Pacue. O that may be, for when I loſt my ſonne, This was but yong it ſeemes. He had indeed, well, ſpeake no more of him. Honor&#x27;d Chamont reach me your valiant hand, I could haue wiſht ſome happier accident Had made the way vnto this mutuall knowledge, Which either of vs now muſt take of other, But ſure it is the pleaſure of our fates, That we ſhould thus be wrack&#x27;t on Fortunes wheele, Let vs prepare with ſteeled patience To tread on torment, and with mindes confirm&#x27;d Welcome the worſt of enuy. I, and it would be with more ſpeed effected, If he would vndertake it. Away, Ile heare no more, Neuer was man ſo palpably abuld, My ſonne ſo baſely marted; and my ſelfe Am made the ſubiect of your mirth and ſcorne. I will perſiſt, and vnto thee I ſpeake. Thou. Maximilian thou haſt iniur&#x27;d me. The true Chamount ſet free, and one left here Of no deſcent, clad barely in his name. Sirrah boy come hither, and be ſure, you ſpeake the ſimple truth: Come leaue your pardons, and directly ſay. What villaine is the ſame that hath vſurpt, The honor&#x27;d name and perſon of Chamount: Mounſieur Gaſper, on what occaſion did they change their names, what was their policy, or their pretext. Tut tut, be ſilent. So will not I. By heauen I will not, I will ſtop mine eares, My ſences loath the Sauiour of thy breath. Tis poyſon to me, I ſay I will not heare. What ſhall I know, tis you haue iniurd me, What will you make? make me acknowledge it. Fetch forth that Gaſper, that lewd counterfeit. Ile make him to your face approue your wrongs. Come on falſe ſubſtance, ſhadow to Chamont: Had you none elſe to worke vpon but me, Was I your fitteſt proiect? well confeſſe, What you intended by this ſecret plot. And by whoſe policy it was contriu&#x27;d, Speake truth, and be intreated courteouſly, But double with me, and reſolue to proue The extremeſt rigor that I can inflict. Tis well, proceed then. Then Maximilian tooke you for Chamount. Tis falſe, ignoble wretch, Twas but a complot to betray my ſonne. Lye? Returne? I when? when will Chamount returne? Heele come to fetch you, will he? I tis like, Youl&#x27;d haue me thinke ſo, that&#x27;s your policy. No, no, yong gallant, your deuice is ſtale, You cannot feed me with ſo vaine a hope. O impudent diriſion? open ſcorne? Intollerable wrong? is&#x27;t not inough? That you haue plaid vpon me all this while; But ſtill to mocke me, ſtill to ieſt at me? Fellowes, away with him, thou ill-bred ſlaue, That ſets no difference twixt a noble ſpirit, And thy owne ſlauiſh humour, do not thinke But ile take worthy vengeance on thee, wretch? Nay, thou ſhalt want no torture, ſo reſolue, bring him away. Tut Maximillian, for your honor&#x27;d ſelfe, I am perſwaded, but no words ſhall turne The edge of purpoſd vengeance on that wretch, Come, bring him forth to execution. Ile hang him for my ſonne, he ſhall not ſcape, Had he an hundred liues: Tell me vile ſlaue, Thinkeſt thou I loue my ſonne? is he my fleſh? Is he my bloud, my life? and ſhall all theſe be torturd for thy ſake, and not reueng&#x27;d? truſſe vp the villaine. Diſhonorable? Max imillian? It is diſhonorable in Chamount, the day of his prefixt returne is paſt, and he ſhall pay fort. O reſolute and peremptory wretch! Ile heare no more, I ſay he ſhall not liue, My ſelfe will do it. Stay, what forme is this Stands betwixt him and me, and holds my hand. What miracle is this? tis my owne fancy, Carues this impreſſion in me, my ſoft nature, That euer hath retaind ſuch fooliſh pitty, Of the moſt abiect creatures miſery, That it abhorres it, what a child am I To haue a child? Ay me, my ſon, my ſon. My ſonne, Chriſtophero, thinkſt it poſſible, I euer ſhall behold his face againe. Now they haue yong Chamount? Chriſtophero? Surely they neuer will reſtore my ſonne. O my ſonne, my ſonne. Heare me Chriſtophero. O God that we ſhould let Chamount eſcape. It cannot be but he is handled the moſt cruelly, That euer any noble priſoner was. O thou baſe wretch, ile drag thee through the ſtreets. And as a monſter, make thee wondred at, how now. How, my ſonne returnd? O Maximillian, Franciſco, daughters? bid him enter here. Doſt thou not mocke me? O my deere Paulo welcome. Some body bid the begger ceaſe his noiſe. My moſt noble Lord? I do beſeech your Lordſhip. O worthy gentlemen, I am a ſhamd That my extreame affection to my ſonne, Should giue my honour ſo vncur&#x27;d a maine, But my firſt ſonne, being in Vicenza loſt. O the ſame night, wherein your noble father tooke the towne. Tis now well nie vpon the twentith yeare. I cannot tel, betweene the yeares of three and ſoure, I take it. I cannot well remember his attire, But I haue often heard his mother ſay: He had about his necke a tablet, Giuen to him by the Emperour Sigiſmund. His Godfather, with this inſcription, Vnder the figure of a ſiluer Globe: En minimo, mundus. Camillo Lord Chamount. O happy reuelation? ô bleſt hower? ô my Camillo. O my boy? forgiue thy fathers late auſterity: Why whats the matter Iaques. How Iaques is not Rachel then thy daughter.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

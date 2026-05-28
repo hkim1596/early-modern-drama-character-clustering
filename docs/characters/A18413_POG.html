@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>POG in 226 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>POG</span>
+</nav>
+
+<h1>POG</h1>
+<p class="lede">in <em>226</em> — [84]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1606</td></tr>
+<tr><th>Words</th><td>1351</td></tr>
+<tr><th>Characters</th><td>6565</td></tr>
+<tr><th>BritDrama no.</th><td>226</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">her that to tie her shoo with all. Whervpon, in the v … rie nicke me thought the Count came rushing in, and I ranne rushing out, with my heeles about my hose for haste. Mum, not a worde m … re, Ile <mark>goe</mark> before, and ouertake you presently. Where should I finde my Lord Vnckle? O ho, you will hunt to day. But you may hap to hop</div>
+<div class="excerpt">and you had b … ene out of fauour? Here&#x27;s my friend maister Vsher, my Lord. Why I s … w that as well as he my Lord; I knew t&#x27;was a foolish match betwixt you <mark>two</mark>; <mark>did</mark> no … you thinke so my Lord Vincentio? Lord vncle, <mark>did</mark> not I say at fi … st of the Duke ▪ will his Antiquitie neuer leaue his Imqu … tie? Who, my Lord Medice? My</div>
+<div class="excerpt">Ierkin for the Rush-man, When I doe play the Broome-man; and speake first. What sir, in spite of your Lords gentleman, Vs … r: Why thats all one sir, Gentillitie <mark>must</mark> be fa … asticall. Why here is one, that was a Rush-mans Ierkin, and I pray, wer&#x27;t not absurd then; a Broome-man should weare it? Will sir; then do your office maister</div>
+<div class="excerpt">Philosopher. And so we come (gracing your gratious Graces) To sweepe Cares cobwebs from your cleanly faces. How dee my Lord? I was not out like my Lord Medice. How <mark>did</mark> you like me Aunt? O, for taking my drink a little? faith my Lord, for that you shall haue the best sport p … ntly with Mad … Cor … , that e … er was; I haue made</div>
+<div class="excerpt">so my Lord Vincentio? Lord vncle, <mark>did</mark> not I say at fi … st of the Duke ▪ will his Antiquitie neuer leaue his Imqu … tie? Who, my Lord Medice? My Lord Stinkar … , <mark>did</mark> you like the match betwixt the Duke, and my Ladie Margaret? Ile get boyes and baite him out a&#x27;th Court my Lord. Come on my Lord Stinckerd, Ile play Fox, Fox, co</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Pray pardon mee for once, lord vnkle, for Ile bee sworne, I had such a dreame this morning: me thought one came with a commission to take a Sorrell curtoll, that was stol … e from him, 〈◊〉 hee could find him. And because I feared he woul … … ay claime to my sorrell curtoll in my stable I ran to the Smith to haue him set on his mane againe, and his taile presently, that the Com mission-man might not thinke him a curtoll. And when the Smith would not doe it, I fell a beating of him, so that I could not wake for my life til I was reuenged on him. Slud Aunt, what if my dreame had beene true ▪ (as it might haue beene for any thing I knew) there&#x27;s neuer a smith in Italie, shall make an Asse of me in my sleepe, if I can chuse. Forget Lord vncle? I hope not; you thinke belike my wittes are as brittle as a Beetle, or as skittish as your Bar barie Mare: one cannot crie weh … , but straight shee cries tihi. But which way will the dukes grace hunt to day? Who Ladie Mar … arot, that dear … yong dame? Will his antiquitie, neuer leane his iniquitie? Nassus? I know not: but I would I had all the dukes liuing for her sake, Ide make him a poore duke ifaith. I would not stand dreaming of the matter as I do now. Mary all last night me thought I was tying her shoo string. I that I was, and yet I ti … d it not neither; for as I was tying it, the string broke me thought, and then me thought, hauing but one poynt at my hose, me thought, I gaue her that to tie her shoo with all. Whervpon, in the v … rie nicke me thought the Count came rushing in, and I ranne rushing out, with my heeles about my hose for haste. Mum, not a worde m … re, Ile goe before, and ouertake you presently. Where should I finde my Lord Vnckle? O ho, you will hunt to day. But you may hap to hop without your hope: for the truth is, Kilbucke is runne mad. Nay, t&#x27;is true sir: and Ki … bucke being runne mad, bit Ringwood so by the left buttocke, you might haue turnd your nose in it. By heauen you might my Lord: d&#x27;ee thinke I he? Nay, good my Lord Vincentio, by this rush I te … l you for good will: and Venus your brache there, runnes so prowd, that your Hunts man cannot take her downe for his life. Why sir, he would soone take her down and he could take her vp I warrant her. My Lord, my Lord, I haue a speech heere worth ten of this, and yet Ile mend it too. Beshrew my heart if he take vp my heeles. How now my Lord, haue you borrowed a Snite for me: Seigneur Bassiolo, can all say, are all things ready? the Duke is hard by, and little thinks that Ile be an Actor ifaith, I keepe all close my Lord. Why sir come on; the Vsher shal be iudge: See master Vsher: this same Fungus here, Your Lords retainer, whom I hope you rule, Would weare this better Ierkin for the Rush-man, When I doe play the Broome-man; and speake first. What sir, in spite of your Lords gentleman, Vs … r: Why thats all one sir, Gentillitie must be fa … asticall. Why here is one, that was a Rush-mans Ierkin, and I pray, wer&#x27;t not absurd then; a Broome-man should weare it? Will sir; then do your office maister Vsher, M … ke him put off his Ierkin; you may plucke His coate ouer his cares, much more his Ierkin. No sir? I hope you are my Lords re … ainer. I neede not care a pudding for your Lord: But spare not, keepe it, for perhaps Ile play My part as well in this, as you in that, Come in my masters; lets be out anon. Heroes, and Heroines, of gallant straine, Let not these Broomes, motes in your eies remaine, For in the Moone, theres one beares with&#x27;red bushes: But we (deare wights) do beare greene broomes, green rushes, Where of these verdant herbals cleeped Broome, Do pierce and enter euerie Ladies roome, And to proue them high borne, and no base trash, Water with which your phisnomies you wash, Is but a Broome. And more truth to deliuer, Grim Hercules swept a stable with a riuer, The wind that sweepes fowle clowds out of the ayre, And for you Ladies makes the Welken faire, Is but a Broome: and O Dan Titan bright, Most clearkly calld the Scauenger of night, What art thou, but a verie broome of gold? For all this world not to be cride nor sold; Philosophy, that passion sweepes from thought, Is the soules Broome, and by all braue wits sought, Now if Philosophers but Broomemen are, Each Broomeman then is a Philosopher. And so we come (gracing your gratious Graces) To sweepe Cares cobwebs from your cleanly faces. How dee my Lord? I was not out like my Lord Medice. How did you like me Aunt? O, for taking my drink a little? faith my Lord, for that you shall haue the best sport p … ntly with Mad … Cor … , that e … er was; I haue made her so drunke, that she does nothing b … kisse my Lord Medice. See shee comes riding the Duke, shees passing well mounted ▪ beleeue it. Lord, how I haue wh … d her? O Go … , how wearie I am? Aunt, M … dam. Cynanche, Aunt? O God, Aunt: O God Aunt: O God. O Aunt, my Vnkle, hees shot. Why with a forked shaft As he was hunting, full in his left side. Comming with Doctor Beniuemus, Ile leaue you, and goe tell my Lord Vincentio. Where is my Lord Vincentio, where is my Lord? Slood, my Lord, I haue followed you vp and downe like a Tantalus pig, till I haue worne out my hose here abouts ▪ Ile be sworne, and yet you call me Asse still; But I can tell you passing ill newes my Lord. O Lord, my Lord vncle is shot in the side with an arrow. O danger; I, he haz lien speechlesse this two houres, And talkes so idlely. Yes, do you lead, and Ile guide you to him. Where? where? where? where&#x27;s my Lord vnche, my Lord my vncle? Nay sure he had no helpe, but all the Dukes Guard; and they set vpon him ind … d; and after he had defended him selfe, dee see? he drew ▪ &amp; hauing as good as wounded the Lord Medice almost, he strake a … him, and … d h … , dee marke? At Monks well, my Lord, Ile g … de you to him pre sen … y Come, come, I gull you master Vsher, you are like to be the Dukes Minion man; dee thinke I would haue beene seene in your companie, and you had b … ene out of fauour? Here&#x27;s my friend maister Vsher, my Lord. Why I s … w that as well as he my Lord; I knew t&#x27;was a foolish match betwixt you two; did no … you thinke so my Lord Vincentio? Lord vncle, did not I say at fi … st of the Duke ▪ will his Antiquitie neuer leaue his Imqu … tie? Who, my Lord Medice? My Lord Stinkar … , did you like the match betwixt the Duke, and my Ladie Margaret? Ile get boyes and baite him out a&#x27;th Court my Lord. Come on my Lord Stinckerd, Ile play Fox, Fox, co … e out of thy hole with you ifaith. Fox, Fox, goe out of thy hole; a two leg&#x27;d Fox, A two leg&#x27;d Fox.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 226</div><div class="body">The swords and daggers ordered for the masque suggest that the action included fighting, which presumably arose from the supposed drunkenness of the masquers.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FLA in Albumazar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FLA</span>
+</nav>
+
+<h1>FLA</h1>
+<p class="lede">in <em>Albumazar</em> — Tomkis, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1615</td></tr>
+<tr><th>Words</th><td>415</td></tr>
+<tr><th>Characters</th><td>2333</td></tr>
+<tr><th>BritDrama no.</th><td>1769</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Life of my soule well met. Eugenio, As best becomes a <mark>woman</mark>, most vnfortunate. That hauing lou&#x27;d so long, and beene perswaded Her chaste affection was by your&#x27;s requited, Haue by delayes beene famish&#x27;d. Had I conceal&#x27;d Those flames your vertue kindled, then y&#x27;had sued, Intreated, sworne, and vow&#x27;d,</div>
+<div class="excerpt">awe of parents, that wee dare not offer to bate at our owne desires. And whereas it becomes men to vent their amorous passions at their pleasure; wee poore soules <mark>must</mark> rake vp our affections in the ashes of a burnt <mark>heart</mark>, not daring to sigh, without excuse of the Spleene, or fit of the mother. I doubt not of his loue, but know</div>
+<div class="excerpt">monthes, Enforcing mee to marry th&#x27;foole Pandolfo, Thus to obtaine Sulpitia for himselfe. And so last night I dream&#x27;d, and euer since Haue bene so scar&#x27;d, that if you hast not Expect my death. Farewell Eugenio. Sulpitia I pray you pardon mee, I saw you not. True, and I thinke the same that trouble you. &#x27;Tis so, witnesse your brother</div>
+<div class="excerpt">pardon mee, I saw you not. True, and I thinke the same that trouble you. &#x27;Tis so, witnesse your brother Eugenio, and the rotten Kar case of Pandolfo. Had I a hundred hearts, I should want roome to entertaine his loue, and the other&#x27;s hate. Sulpitia, you are happy that can withstand your fortune with so merry a resolution. Alas, our</div>
+<div class="excerpt">ha. Most shamelesse villaine how hee counterfeits! I loue not to conuerse with dead men. Sir I am afear&#x27;d: Horrour incloses mee, my haires stand vp, I sweate to <mark>heare</mark> a dead man speake, you smell Of putrifaction: Fy I feel&#x27;t hither. With all obedience: sir dispose of me As of a child, that iudgeth nothing good But what you shall</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Life of my soule well met. Eugenio, As best becomes a woman, most vnfortunate. That hauing lou&#x27;d so long, and beene perswaded Her chaste affection was by your&#x27;s requited, Haue by delayes beene famish&#x27;d. Had I conceal&#x27;d Those flames your vertue kindled, then y&#x27;had sued, Intreated, sworne, and vow&#x27;d, and long e&#x27;re this Wrought all meanes possible to effect our marriage. But now. First that you loue me not. If so, Whence growes this coldnesse in soliciting My brother to the match? But other feares oppresse mee: mee thinkes I see Aontonio my old father, new return&#x27;d, Whom all intelligence gaue drown&#x27;d this three monthes, Enforcing mee to marry th&#x27;foole Pandolfo, Thus to obtaine Sulpitia for himselfe. And so last night I dream&#x27;d, and euer since Haue bene so scar&#x27;d, that if you hast not Expect my death. Farewell Eugenio. Sulpitia I pray you pardon mee, I saw you not. True, and I thinke the same that trouble you. &#x27;Tis so, witnesse your brother Eugenio, and the rotten Kar case of Pandolfo. Had I a hundred hearts, I should want roome to entertaine his loue, and the other&#x27;s hate. Sulpitia, you are happy that can withstand your fortune with so merry a resolution. Alas, our Sex is most wretched, nurst vp from infancie in continuall slauerie. No sooner able to pray for our selues, but they brayle and hudde vs so with sowre awe of parents, that wee dare not offer to bate at our owne desires. And whereas it becomes men to vent their amorous passions at their pleasure; wee poore soules must rake vp our affections in the ashes of a burnt heart, not daring to sigh, without excuse of the Spleene, or fit of the mother. I doubt not of his loue, but know no meanes, how hee dares worke against so great a Riuall: your father in a spleene may disin herite him. Fare-well Sulpitia. ARmellina? Is the dore fast? Neuer was villany so personate In seemely properties of grauity. Who&#x27;s hee that knock&#x27;s so boldly? Marke! his faire daughter Flauia ha, ha, ha. Most shamelesse villaine how hee counterfeits! I loue not to conuerse with dead men. Sir I am afear&#x27;d: Horrour incloses mee, my haires stand vp, I sweate to heare a dead man speake, you smell Of putrifaction: Fy I feel&#x27;t hither. With all obedience: sir dispose of me As of a child, that iudgeth nothing good But what you shall approue. Content. The selfe-same oath binds me.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Albumazar</div><div class="body">The neighbours Pandolfo and Antonio, both widowers, have arranged to marry each other’s daughters; but before they can do so, Antonio is lost and presumed dead on an overseas voyage, and the plan goes into abeyance because his son Lelio disapproves of Pandolfo as a potential brother-in-law. Albumazar’s accomplice Furbo has gained access to Pandolfo’s household, posing as his daughter’s tutor, and has learned of his .- amorous aspirations, and also his credulity about. magic and astrology. Albumazar plans to trick him, and sets about demonstrating his occult power. Ronca shows Pandolfo some of the astrologer’s amazing inventions: a telescope and an ‘otacousticon’ (actually a pair of ass’s ears) which allow him to see and hear things at a distance. Albumazar then predicts Pandolfo’s marriage, and also a stabbing which his associates then enact in a brawl. Pandolfo asks the astrologer to raise Antonio’s ghost, but instead Albumazar undertakes to transform the tenant farmer Trincalo into Antonio’s likeness for one day, so that he can give Flavia in marriage to Pandolfo. Trincalo agrees because this will give him access to Antonio’s household, and therefore to the maid Armellina, whom he loves. Pandolfo is required to prepare a room for the metamorphosis, laid out with valuable possessions. When he begins to have second thoughts about paying Albumazar, his servant Cricca suggests that he should pretend to have been robbed of his valuables; but when they are indeed stolen, Albumazar pretends in turn that the transformed Trincalo has just locked them away for safe keeping. After undergoing the fake metamorphosis, Trincalo is told he may not look at himself in a mirror for fear of breaking the spell. Ronca and Harpax greet him as Antonio, and pretend to be his debtor and creditor respectively, but Trincalo pays Harpax less than he was ===== PAGE 445 ===== 1615 given by Ronca, who has to steal back the balance. To buy time to spirit away Pandolfo’s goods, the tricksters divert him with Bevilona the courtesan, who pretends to be a gentlewoman in love with Antonio, and hides him from her husband. The real Antonio returns unexpectedly, and is taken for the transformed Trincalo: he does not understand when Pandolfo asks after his missing property, and his son and daughter, forewarned of the planned trick, beat him out of his own house. He meets Trincalo, who is still posing as him, and a duel is proposed. Lelio and Cricca realize the truth when they see the two men…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

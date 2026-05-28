@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PORT in Julius Caesar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> ›
+  <span>PORT</span>
+</nav>
+
+<h1>PORT</h1>
+<p class="lede">in <em>Julius Caesar</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>997</td></tr>
+<tr><th>Characters</th><td>5562</td></tr>
+<tr><th>BritDrama no.</th><td>1553</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 29 (<em>brutus, did, rome, antonius, anthony, cleopatra…</em>). Matches are highlighted.</p>
+<div class="excerpt">ſubſiſt by thee, Whoſe courſe reſts to thy ſecret motions thrall, For when thou art from cloudie fortunes free, I riſe in ioyes, but if thou faint, I fall. I was not (<mark>Brutus</mark>) match&#x27;d with thee, to bee A partner only of thy boorde and bed, Each ſeruile whore in thoſe <mark>might</mark> equall me, That <mark>did</mark> her ſelfe to nought but pleaſure wed; No,</div>
+<div class="excerpt">comes from thee. My father hath me taught what way to die, By which if I be barr&#x27;d t&#x27;encounter <mark>death</mark>, Another meanes (though farre more ſtrange) Ile trie, For after <mark>Brutus</mark> none ſhall ſee me breathe. I feare the heauens haue our confuſion ſworne, Since this illage can with no good accord; Thou and my father (ah) ſhould haue bin borne,</div>
+<div class="excerpt">ours; Good education may reforme defects, And I this vantage haue t&#x27;a vertuous life, Which other mindes do want, and mine reſpects: I&#x27;m Catoes daughter, and I&#x27;m <mark>Brutus</mark> wife; Yet would I not repoſe my truſt in ought, Still thinking that thy croſſe was great to beare, Till that my courage was t&#x27;a triall brought, Which ſuffring for</div>
+<div class="excerpt">purſu&#x27;de, Ile ſet my ſelfe betwixt thee and his ſword. But if too great a priuiledge I claime, Whoſe actions all ſhould be diſpoſde by thee: Ah, pardon me (deare <mark>Brutus</mark>, ) do but blame Theſe my exceſſiue ſorrowes, and not mee. Then proſecute thy courſe, for I proteſt, Though with ſome griefe, my ſoule the ſame approues: This reſolution</div>
+<div class="excerpt">my preſent grones, I this aduantage haue which cannot faile, Ile be a freemans wife, or elſe be nones. For if all proſper not as we pretend, And that the heauens Romes bondage do decree, Straight with thy libertie my life ſhall end, Who haue no comfort but what comes from thee. My father hath me taught what way to die, By which</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Thou haſt (deere Lord) preuented my deſigne, Which was to aske of thee, what makes me pale; It Phoebus had no light, could Phoebe ſhine? No, with the cauſe of force th&#x27;effed muſt faile. The mirrour but giues backe as it receiues, A iuſt reſemblance of th&#x27;obiected forme: And ſuch impreſſion as th&#x27;engrauer leaues, The wax retaines ſtill to the ſtampe conforme. O I&#x27;m the mirrour that reflects thy minde, According to the influence of thine eies, I take the ſtate in which thy ſtate I finde, Such is my colour as thy countnance dies. Then how can I reioyce whilſt thou art ſad, Whoſe breaſt of all thy croſſes is the ſcroule? I am ſtill as thou art, if grieu&#x27;d, or glad, Thy bodies ſhadow, th&#x27;eſſence of thy ſoule. On that great planet that diuides the yeares, As th&#x27;increaſe of th&#x27;inferiour fields depends; And as it doth euaniſh, or appeares, In th&#x27;earths cold boſome life beginnes, or ends: Sunne of my ſoule, ſo I ſubſiſt by thee, Whoſe courſe reſts to thy ſecret motions thrall, For when thou art from cloudie fortunes free, I riſe in ioyes, but if thou faint, I fall. I was not (Brutus) match&#x27;d with thee, to bee A partner only of thy boorde and bed, Each ſeruile whore in thoſe might equall me, That did her ſelfe to nought but pleaſure wed; No, Portia ſpouſde thee with a minde t&#x27;abide Thy fellow in all fortunes, good, or ill. With chaines of mutuall loue together tyde, As thoſe that haue two breaſts, one heart, two ſoules, one will. With ſacred bands whom holy Hymen bindes, They tweene them ſhould communicate all things; Yea both the bodies labors, and the mindes, Whence either pleaſure or diſpleaſure ſprings. If thus thou ſeeke thy ſorrowes to conceale Through a diſdaine, or a miſtruſt of me; Then to the world what way can I reueale, How great a matter I would doe for thee. And though our ſexe too talkatiue be deem&#x27;d, As thoſe whoſe tongues import our greateſt powres, For ſecrets ſtill bad treaſurers eſteem&#x27;d Of others greedy, prodigall of ours; Good education may reforme defects, And I this vantage haue t&#x27;a vertuous life, Which other mindes do want, and mine reſpects: I&#x27;m Catoes daughter, and I&#x27;m Brutus wife; Yet would I not repoſe my truſt in ought, Still thinking that thy croſſe was great to beare, Till that my courage was t&#x27;a triall brought, Which ſuffring for thy cauſe can nothing feare. For firſt t&#x27;experience how I could comport, With ſterne afflictions ſpirit-enfeebling blowes, Ere I would ſeeke t&#x27;aſſault thee in this ſort, To whom my ſoule a duteous reuerence owes. Loe, heere a wound, which makes me not to ſmart, Though by my ſelfe being made, to make me knowne, Since thy diſtreſſe ſtrikes deeper in my heart, Thy griefe (lifes ioy) makes me neglect mine owne. And without me can thou reſolue ſo ſoone T&#x27;aſſay the dangers of a doubtfull ſtrife? As if diſpair&#x27;d and alwayes to b&#x27;vndone, Being tyr&#x27;d of me, yea tyr&#x27;d of thy life. Yet ſince thou thus thy raſh deſigne hath ſhowne, Leaue Portias portion, venter not her part: Endanger nought but that which is thine owne, Go where thou lik&#x27;ſt, I will hold ſtill thy heart. But leſt by holding of thy beſt part backe, That th&#x27;other periſh t&#x27;aggrauate my grones, That would be ſo thonght guiltie of thy wrack, Take all thy treaſure to the Seaes at once. Like th&#x27; Aſian Monarks wife that with ſhort haires, (Sad ſignes of bondage) paſt ſtill where he paſt, To weare away, or beare away thy cares, Ile folow thee, and of thy fortune taſte. Theſe hands that were with my owne blood imbru&#x27;d, To ſtrike another may more ſtrength afford: At leaſt when thou by th&#x27;enemie art purſu&#x27;de, Ile ſet my ſelfe betwixt thee and his ſword. But if too great a priuiledge I claime, Whoſe actions all ſhould be diſpoſde by thee: Ah, pardon me (deare Brutus, ) do but blame Theſe my exceſſiue ſorrowes, and not mee. Then proſecute thy courſe, for I proteſt, Though with ſome griefe, my ſoule the ſame approues: This reſolution doth become thy breaſt, Where in the ſpheare of honor vertue moues. And doe this interpriſe no more deferre, What thee contents, to me contentment brings; I to my life thy ſaftie doe preferre, But hold thy honor deare aboue all things. It would but let the world my weakneſſe ſee, If I ſought my delights, not thy deſires: Though it giue griefe, and threaten death to me, Goe follow forth that which thy fame requires. Though nature, ſexe, and education breed No power in me, that&#x27;s with my purpoſe euen; He lend aſſiſtance to th&#x27;intended deed, If vowes and prayers may penetrate the heauen: But difficulties huge my fancie findes, Saue the ſucceſſe nought can defray my feare: Ah, Fortune alwayes frownes on worthy mindes, As hating all that truſt in ought ſaue her. Yet I diſpaire not but thou may preuaile, And by this courſe t&#x27;appeaſe my preſent grones, I this aduantage haue which cannot faile, Ile be a freemans wife, or elſe be nones. For if all proſper not as we pretend, And that the heauens Romes bondage do decree, Straight with thy libertie my life ſhall end, Who haue no comfort but what comes from thee. My father hath me taught what way to die, By which if I be barr&#x27;d t&#x27;encounter death, Another meanes (though farre more ſtrange) Ile trie, For after Brutus none ſhall ſee me breathe. I feare the heauens haue our confuſion ſworne, Since this illage can with no good accord; Thou and my father (ah) ſhould haue bin borne, When Vertue was aduauncde, and Vice abhorrd. Then ere the light of vertue was declinde, Your worth had reueren de bin, not throwne away, Where now ye both haue but in darkenes ſhinde, As ſtarres by night, that had bin ſunnes by day.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Julius Caesar</div><div class="body">Juno remains angry that a Trojan adjudged Venus the most beautiful goddess. Through the centuries, she has sought to avenge herself by harrying the Trojans’ 1607 descendants, the Romans, most recently by fomenting a civil war. But the victor of that war was Caesar, who traces his descent from Venus; he has conquered much of the world and established his ascendancy in Rome, but Juno now intends to work his overthrow. Caesar explains to Antonius that he wants to be a king not for personal ambition but to comply with a Sibylline prophecy which makes monarchy a precondition for a Roman victory in the east. Antonius warns him that there are Romans who desire his death. Cicero laments the loss of Rome’s liberty, and Decius Brutus agrees that, though Caesar’s past actions have been honourable, he should have demobilized his armies now that there is no further external threat. Brutus and Cassius agree that they will not participate in any ceremony aimed at making Caesar a king. Brutus is Caesar’s friend, but reasons that he must assassinate the tyrant for the public good. His wife Portia wrings the secret of the conspiracy out of him. Brutus and Cassius recruit conspirators, both patriots and men who have a personal grudge against Caesar. However, they exclude Cicero and agree not to kill Antonius. Caesar’s wife Calpurnia tries to persuade him not to go to the Senate on the Ides of March — an astrologer has foretold his death, and she herself has had bad dreams - but Decius Brutus induces him to change his mind. The conspirators assassinate Caesar. Antonius makes a show of friendship with them, but is obviously planning reprisals. A messenger brings Caesar’s wife Calpurnia a full account of the circumstances of the murder.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> page.
+</div>
+</div></body></html>

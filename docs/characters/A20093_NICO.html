@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NICO in The Wonder of A Kingdom · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>NICO</span>
+</nav>
+
+<h1>NICO</h1>
+<p class="lede">in <em>The Wonder of A Kingdom</em> — Dekker, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1636</td></tr>
+<tr><th>Words</th><td>599</td></tr>
+<tr><th>Characters</th><td>3222</td></tr>
+<tr><th>BritDrama no.</th><td>2017</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Letter, this a Iewell: Tell her, I kisse the little white naile of her little white Finger, of her more little white hand, of her most Little white bodie. Thou hast beene my weavers shuttle to runne betwixt me and my stuffes of Procreandi causa. No Cargo, I have still the Lapis mirabilis; be thou close— <mark>Away</mark> then, nay quicke</div>
+<div class="excerpt"><mark>heart</mark> of brasse, sound as a bell, Old? why, Ile tell your Graces; I have gone But halfe the bridge ore yet; there lies before me As much as I have pass&#x27;d, and I&#x27;le <mark>goe</mark> it all. I thanke your grace. I charge you in the Dukes name, keepe the peace; Beate downe their weapons, knock em downe Cargo. Oh my Lord: make a fray in an open</div>
+<div class="excerpt">children and fooles Together; Signior Angelo, pray be wise, and begon. If hee be banish&#x27;d, why dwells hee ith&#x27;house, whose Tiles are pull&#x27;d downe over his head? You <mark>must</mark> hunt No more in this Parke of Florence; why then Doe you lie sneaking heere, to steale venison? A good health to you both. The Constable wisely; Cargo he calls</div>
+<div class="excerpt">bragging knaue, That golden wombe thy father left so full, thou Vulture-like eat&#x27;st thorough: oh heeres trimstuffe; A good-mans state, in Gartyres, strings and ruffe; Hast not a saffron shirt on too? I feare th&#x27;art Troubled with the greene-sicknes, thou look&#x27;st wan. No, but I&#x27;de have thee live in compasse. Vaine riotous cockscombe,</div>
+<div class="excerpt">with the greene-sicknes, thou look&#x27;st wan. No, but I&#x27;de have thee live in compasse. Vaine riotous cockscombe, Tha&#x27;st fier&#x27;d to much already, Parkes, Forrests, chases, Have no part left of them, but names and places; &#x27;Tis voic&#x27;d abroad thy lands are all at pawne. And that the mony went to Entertaine the Popes great Nuntio,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Old! hem? all heart of brasse, sound as a bell, Old? why, Ile tell your Graces; I have gone But halfe the bridge ore yet; there lies before me As much as I have pass&#x27;d, and I&#x27;le goe it all. I thanke your grace. I charge you in the Dukes name, keepe the peace; Beate downe their weapons, knock em downe Cargo. Oh my Lord: make a fray in an open streete? &#x27;tis to Make a bon-fire to draw children and fooles Together; Signior Angelo, pray be wise, and begon. If hee be banish&#x27;d, why dwells hee ith&#x27;house, whose Tiles are pull&#x27;d downe over his head? You must hunt No more in this Parke of Florence; why then Doe you lie sneaking heere, to steale venison? A good health to you both. The Constable wisely; Cargo he calls me foole by craft, But let &#x27;em passe. I haue another case to handle: thou know&#x27;st the Donna Alphonsina, of the Neri Familie. The same Aspen-leafe, the same; is&#x27;t not a Galley for The Great Turke to be row&#x27;d in? Commend me to this Angelica. I am all fire. Would &#x27;twere come to that. Give her this paper, and this; in the one she may know my minde, in the other, feele me: this a Letter, this a Iewell: Tell her, I kisse the little white naile of her little white Finger, of her more little white hand, of her most Little white bodie. Thou hast beene my weavers shuttle to runne betwixt me and my stuffes of Procreandi causa. No Cargo, I have still the Lapis mirabilis; be thou close— Away then, nay quicke knave, thou rack&#x27;st mee. Thou shalt have Caesars pay—my Coach, Oh out upon this Doctor; hang him, does he thinke to cure dejected Ladies with Fidlers— Suppose all kingdomes on the earth were balls, And that thou held&#x27;st a racket in thy hand, To tosse &#x27;em as thou wu&#x27;d&#x27;st, how wo&#x27;dst thou play? A tennes-court of kings could do no more; But faith what doest thou thinke, that I now think, Of thy this days expence? I thinke thee a proud vaine-glorious bragging knaue, That golden wombe thy father left so full, thou Vulture-like eat&#x27;st thorough: oh heeres trimstuffe; A good-mans state, in Gartyres, strings and ruffe; Hast not a saffron shirt on too? I feare th&#x27;art Troubled with the greene-sicknes, thou look&#x27;st wan. No, but I&#x27;de have thee live in compasse. Vaine riotous cockscombe, Tha&#x27;st fier&#x27;d to much already, Parkes, Forrests, chases, Have no part left of them, but names and places; &#x27;Tis voic&#x27;d abroad thy lands are all at pawne. And that the mony went to Entertaine the Popes great Nuntio, On whom you spent the ransome of a king. I thanke you Sr, And leave your Curtezans bare, that leaving bare, Will one day leave thee naked, one nights waking, With a fresh-whore, cost thee 4000. duckets, Else the bawd lies. I a whore-master? To shew how much I hate it, harke, when next thy tomblers Come to dance upon the ropes, Play this jigg to &#x27;em. They shall. What&#x27;s that circle? I hope a wallet hanging at thy backe, Who spends all young, ere age comes, all will lacke. No christian creature, I enter solus. What&#x27;s that? Vd&#x27;s my life! I heare a lute, and sure it comes this way. Pox on your Catts guts. Brave girle. With what? But not with the manner my Lady. Am I then gull&#x27;d? Wo&#x27;t twere no worse, let&#x27;s in, and give &#x27;em the mornings Salutation. He that loves ducking, let him come learne of thee.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Wonder of A Kingdom</div><div class="body">The Duke of Florence has betrothed his daughter, Fiametta, to the Prince of Pisa, and, to facilitate the political marriage, banished her lover, Angelo. Fiametta sickens for her absent love, and he returns to court disguised as a French doctor, offering the Duke his services to save her life. He diagnoses sexual frustration, and proposes a cure which requires the patient to drink a potion made from the beloved’s powdered heart: she will then hate him. In order to obtain the key ingredient, Angelo must be murdered. Angelo reveals his presence to Fiametta, but she insists on identifying him to her father, in the expectation that the Duke will relent. Angelo passes this off as an insane delusion, then flees to sanctuary. He is found and brought to court with a friar. He seems to reject Fiametta, and she agrees to marry Pisa the following day, but asks for the friar to hear her confession overnight. In fact, he secretly marries her to Angelo, pre-empting Pisa; the Duke and Prince are annoyed, but recognize there is nothing to be done about it. In the sub-plot, Lord Vanni has amorous inclinations younger than his physical age, and sends a love-letter and jewel to the chaste Alphonsina Neri. Meanwhile, Alphonsina’s brother Tibaldo has fallen sick for love of Vanni’s wife Dariene. He asks Alphonsina to accept Vanni’s advances, and Vanni duly excuses himself from Dariene’s bed. Tibaldo has arranged for himself to be present disguised as Alphonsina’s sister, and offers himself as an alternative, ‘female’ bedfellow for Dariene. His plan is aborted when he learns that Vanni’s daughter Alisandra loves Trebatio and Trebatio’s son. When Vanni pays his nocturnal visit, he is scared off by Trebatio’s lute-playing, then caught by his wife and blamed for the adultery he never committed. Alphonsina and Tibaldo marry Trebatio and Alisandra. In the third plot, the hospitable Jacomo has built a house in which to entertain his guests: his uncle, who is suspected of getting rich through supernatural agency, gave him a deathbed injunction to spend his inheritance virtuously. Torrenti envies Jacomo his new house, and plans a magnificent lifestyle of his own; but whereas Jacomo entertains the poor and needy, Torrenti is only interested in luxury and guests of a high social standing. When his brother arrives, ragged and dirty after escaping from slavery in a Turkish galley, Torrenti is appalled and turns him away. He entertains the Duke with a lavishness that bankrupts him. War…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

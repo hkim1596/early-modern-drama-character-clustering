@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COR in Hans Beer-Pot (See Me and See Me Not) · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>COR</span>
+</nav>
+
+<h1>COR</h1>
+<p class="lede">in <em>Hans Beer-Pot (See Me and See Me Not)</em> — Belchier, Dabridgcourt</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1618</td></tr>
+<tr><th>Words</th><td>1745</td></tr>
+<tr><th>Characters</th><td>9688</td></tr>
+<tr><th>BritDrama no.</th><td>1849</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">that wholeſome Weede, Makes fulſome ſmell: a dying hound would choake With Belgicke fire, and with Spaniſh ſmoake. Drinkt out. — I thanke you kindly. To drinke one hearty draught, will doe me good. The Moate thou meaneſt; thou ſpeakſt in Metaphors: You haue been buſie, I perceyue the cuppe Workes his reuenge, for ioaling it ſo oft.</div>
+<div class="excerpt">tutch; its hard To finde a <mark>woman</mark> quicke of wit, ſo milde, So modeſt, ſhamefac&#x27;t, and ſo debonnaire. It ioyes me much, a womans modeſty, And grieues my ſoule to <mark>heare</mark> a ſcoulding queane, That ſets her husbands night-cap on with hornes. No, there ſhould not be, I doe not ſay there are; I know none ſuch; All women are alike to</div>
+<div class="excerpt">In them; yet wonders ſtrange they oft foreſhew, Which men may gueſſe at, none knows til tis paſt; Therefore I holde them idle vanity. Its&#x27; well your come, for I <mark>did</mark> thinke you long: And that you had forgot to keepe your words. I bid you welcome to my Country farme; Take that for all, Ile vſe no ceremonie. Ha Serieant I haue</div>
+<div class="excerpt">marke to their poſterity. But now alas, it&#x27;s growne ridiculous, Since bought with money, ſold for baſeſt prize; That ſome refuſe it, which are counted wiſe. You are <mark>two</mark> bitter ſon, you ſpeake too townſman like, As one that enuies Country Gentlemen: He that doth rayſe his houſe, although a Clowne, Is happier farre, then he that</div>
+<div class="excerpt">mirth remember them that want, To comfort them, with ſome part of our ſtore In harmeleſſe mirth; thus haue we done our parts; If you be pleaſ&#x27;d, how ioyfull are our hearts. Reuenge, reuenge for Paſquils vgly whore, Ile make him drunke, was neuer creature more. You would but cannot, thanke you good Sir Hans, If I be drunke, your ſelfe</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Well ſpoke, braue Laſſe, I thinke faire Pallas ſhine, Begirt thy temples with her glorious rayes, At thy dayes birth, the wonder of thy ſexe. What courting calſt thou them, thou rubſt me vp, To thinke vpon the times forepaſt, I ſaw In Englands Court ſo famous and renowmde Of great Elizaes bleſſed memory. That ayded ſo theſe troubled Netherlands With men and money; ſtill oh, oh ſtill me thinkes I ſee thoſe Worthies marching on earthes ſtage; The famous Eſſex, Norreis, Sidney too, And wiſeſt Ʋ ere, that held Oſtend ſo long, Gainſt hells foule mouth, and Spaniſh tyranny, As yet his complices can teſtifie. That ſaw his works beyond the bounds of witte, That now doe liue in noble fame and name; Whom Ile ore-paſſe, for feare I ſhould offend. What hath Apollos ſacred Oracle Infuſde thy Soule with high Diuinity, Or deeper iudgements, of I know not what, Made thee know more then thy fraile ſexe ſhould do I wonder: lets along, weele to the towne, Where I not doubt but I ſhall find your ſonne A drinking, not at&#x27;s booke. Tis true indeed, but yet Ile tell thee what, Twas ſtrange to ſee a younker once but drunke In Englands Kingdome, when I liued there, For to be drunke, was beggar like they ſayde, Now Beggars ſay they are drunke like Gentlemen, As ſince I haue heard an old fantaſtique rime, That thus imports if I be not deceiude. Gentlemen are ſicke, and Parſons ill at eaſe, But Seruing men are drunke, and all haue one diſeaſe. Well wife, giue but an inch, hee takes an elue. My deare, what would you doe, Or not doe, Womens witleſſe wilfull will, Is ſtrange ſometimes, with reaſon limitleſſe. Why? A reaſon reaſonleſſe, Women, Haue oft ſuch reaſon, for their wilfulneſſe, When as they ouerth wart their too kind husbands In things not meere indifferent, elſe O ſtay, my wife, Your mouth runs ore, ſhe makes all women proud; Are you ſo read in Romane Hiſtories? And I not know it: Welcome to the towne; Weele to your daughter ſtraight, ſheele be at home, I hope, where ere her thriuing husband be. My backe thin cloathde, my belly thinner linde, Keepes out no colde, I like not I theſe plankes, But when my belly is full of double Beere; Oh then I ſleepe like to mine Hoſteſſe Pigges, And feele no colde, nor hardneſſe; Feather-beds, Stand further off, three ſtiuers and a halfe, The canne of Engliſh Beere: my money&#x27;s ſpent; Pay dayes to morrow: tut, hangt, to day, Ile ſhifte, But yet were younker Harmants here; one can, My mornings draught were good; or if to day Hans Beere-pot come to towne: Oh furious Mars, Hees come, his Waggons yonder, now cock-ſure, For this whole day I am prouided for. Good morrow Paſquill, where&#x27;s my brother, where&#x27;s That Younker? and the Serieant Goodfellow. Not I good Serieant, Ile no Trinidade, My noſe ſhall not be reeyde, nor guts dyde blacke, That daintie likes me not, that wholeſome Weede, Makes fulſome ſmell: a dying hound would choake With Belgicke fire, and with Spaniſh ſmoake. Drinkt out. — I thanke you kindly. To drinke one hearty draught, will doe me good. The Moate thou meaneſt; thou ſpeakſt in Metaphors: You haue been buſie, I perceyue the cuppe Workes his reuenge, for ioaling it ſo oft. That ciuill cup breedes inciuility. When wine ſomtimes makes men be not themſelus How doſt thou Paſquill, I am glad thou art well? What doſt thou worke ſo hard? Tis well thou leadeſt a merry life. What news mine hoſt, I like your humor wel Tis merry harmeles, free without offence: But wheres my man, was not he here to day. Since you might haue ſayd; I ſaw him when he ſlinkte behind mine hoaſt Why thats wel ſaid, indeed thoſe deep diſputes Are fitter for the Vniuerſities To be diſcuſt within the Colledge walles Amongſt the learned, not to come abroad In open Pulpits mongſt the meaner ſort, Whoſe faith is weak, whoſe iudgment cannot reach Vnto the depth of things: the Magiſtrate, Whoſe ſword I dare not touch, ſhould looke to this: T&#x27;will breed combuſtions, hazard many ſoules; Beſides this place befits not this diſcourſe; Therefore ile breake it off, Come lets away; Ile to my wife, I left her at your houſe: Sonne Garland, there I meane to dine; To morrow I enuite you to my houſe To eate ſome veniſon, here tis nouelty; It came from England, baked in Rye paſte, Look that you come, mine hoſt this recknings mine: Let not my ſonne ſcore high: for if you doe Tis loſt for me, Ile not pay one penny. Well: you will ſtill excuſe, Your ſonne, this giues too much encouragement To his amiſſe. Your anſweres ſharpe, it cutteth razor like, A womans witte is quicke, as quicke her tongue, As Aſpin leaues, ſome ſay it is the laſt Part of a woman dyes. Your bellyesfull, Better and better ſtill; Your apprehenſion takes like tutch; its hard To finde a woman quicke of wit, ſo milde, So modeſt, ſhamefac&#x27;t, and ſo debonnaire. It ioyes me much, a womans modeſty, And grieues my ſoule to heare a ſcoulding queane, That ſets her husbands night-cap on with hornes. No, there ſhould not be, I doe not ſay there are; I know none ſuch; All women are alike to me, Ile ſweare, If my skill fayle not, thoult not cuckolde me, Nor bring more children, ſo thy planet ſayes, I found it, caſting thy Natiuity. Tis true: The art is lawfull, tis Aſtrologie, But th&#x27;arts abuſe in thoſe predictions Stretching a ſtring too farre, marres all; We muſt not attribute to creatures that Which the Creator wils; its he alone, That guides our bodies, not the influence Of ſtarres or Planets, without him theyr power Is nothing; nor doth he reueale his will In them; yet wonders ſtrange they oft foreſhew, Which men may gueſſe at, none knows til tis paſt; Therefore I holde them idle vanity. Its&#x27; well your come, for I did thinke you long: And that you had forgot to keepe your words. I bid you welcome to my Country farme; Take that for all, Ile vſe no ceremonie. Ha Serieant I haue known thee to ſerue long, And yet thou ſtick&#x27;ſt, belike thou lik&#x27;ſt thy game: Trie friends and fortune, may be it will hitte To make thee higher on preferments ſteppe; Stand not on thornes: aduenture, draw a carde. The Romans vſd to make their Worthies knowne, By honourde titles, and with ornaments, As rings and chaines, gilt ſwordes, and ſpurs of gold, Which none might weare but ſuch as were allowde. But now Iacke Sauce will be in&#x27;s gilded ſpurs, Whoſe father brewde good Ale for honeſt men: Lodg&#x27;d Pedlers, Tynkers, Bearewards ſuch a crew, The ſcumme of men, the plaine raſcality, Such was Auratus Eques miles calde; The French men now, call him Vncheualier ; We call them Rydders, the Engliſh name them Knights; T&#x27;was ſtrange to ſee, what Knighthood once would doe; Stirre great men vp, to lead a martiall life, Such as were nobly borne, of great eſtates To gaine this honour, and this dignity; So noble a marke to their poſterity. But now alas, it&#x27;s growne ridiculous, Since bought with money, ſold for baſeſt prize; That ſome refuſe it, which are counted wiſe. You are two bitter ſon, you ſpeake too townſman like, As one that enuies Country Gentlemen: He that doth rayſe his houſe, although a Clowne, Is happier farre, then he that puls it downe. When I was in my flowre of youth, and liu&#x27;de In Englands Court, that ſwarmde with Martialiſts, Seamen and Souldiers, there had great reſpect, Were ſet by; honourd more then other men, As Drake and Candiſh. Hawkins, Frobiſher, Williams, and Baſkernile two valiant Knights, Thoſe worthy brothers knowne by Norreis name: The Ʋ eres, the Shirleis, and the Conſtables, Sir Thomas Morgan, braue Lord Willoughbie, Whom Spaniards termde the fierce, the diuell of hel; Renowned Eſſex, famous Cumberland, And both the Howardes prooude ſo oft at Sea With tempeſts, roaring billowes, Canon ſhot; George Somers Knight, Carlile and Lancaſter, Were not the leaſt; theſe liued in my time; And diuers more whoſe names I haue forgot, That ſerude in Ireland, whom thoſe bloudy warres ▪ Made famous vnto all poſterity, Some liuing yet, ſome foulded vp in lead, That dyde in honours lappe; ſleepe in her bed. I ſaw thoſe warres, and ſaw that nauall fight In eighty eight twixt Spaine and Engliſh fleet. With Norreis went I vnto Portugall, And was with Eſſex at the ſacke of Cales, From thence to Ireland where I was a while, But Newport battell that made vp my mouth, The laſt great ſeruice that I ere was at, Where being ſore hurt, was weake, and ſicke long time, Ere I was well, and had my former health Before that time, if ought were to be done. Each ſummer was I wandring ſtill abroad, And what I got, encreaſt my liuelihood, Each yeare a little, till I had enough, I thanke my God, he toſt me to and fro, And ſent me home at laſt to liue in peace; Per mare, per terras, per tot diſcrimenarerum Tendimus in Latium : this Aeneas ſayd. In Latine land when Troian wars were paſt, To liue in peace we are arriude at laſt. Bleſt be that hand which brought this bleſſed peace; And bleſt be thoſe that pray it neuer ceaſe. Here comes my wife, and Paſquill with my man, Thinke Dinners ready, we will leaue diſcourſe. We come ſweet wife, come giue me thy fayre hand; Weele walke in couples one turne round about. Tis Temple faſhion, there obſerued yet. By th&#x27;ancient Seniors, dancing in a ring, Their ſtately meaſures, hand in hand by two And two; vpon their ſolemne reuell nights, And then weele in, and drinke full Nectar cups, And taſte ſuch meate, as God hath giuen vs, Yet midſt of mirth remember them that want, To comfort them, with ſome part of our ſtore In harmeleſſe mirth; thus haue we done our parts; If you be pleaſ&#x27;d, how ioyfull are our hearts. Reuenge, reuenge for Paſquils vgly whore, Ile make him drunke, was neuer creature more. You would but cannot, thanke you good Sir Hans, If I be drunke, your ſelfe ſhall leade the dance.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Hans Beer-Pot (See Me and See Me Not)</div><div class="body">Hans is sent to town to sell corn for his master, Cornelius; his mistress, Hanneke, gives him money to give to her younger son, a student, anda shilling on top for beer-money. Cornelius suspects that Hans is cheating him, and follows him to town. There he finds his son and son-in-law drinking with Hans at a tavern; they have been losing bets with Sergeant Goodfellow about his linguistic ability, and discussing the relative merits of infantry and cavalry (with extensive reference to Turkish history). Hans sneaks away, thinking he has not been spotted; but in fact he has. The town characters go to the country as Cornelius’ guests at Christmas dinner. There they discuss the decline in public respect for soldiers, making extensive reference to the great military men of the Elizabethan era, including some with whom Cornelius served in his younger days.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

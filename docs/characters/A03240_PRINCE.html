@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRINCE in A Maidenhead Well Lost · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PRINCE</span>
+</nav>
+
+<h1>PRINCE</h1>
+<p class="lede">in <em>A Maidenhead Well Lost</em> — Heywood, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1634</td></tr>
+<tr><th>Words</th><td>1633</td></tr>
+<tr><th>Characters</th><td>8828</td></tr>
+<tr><th>BritDrama no.</th><td>2289</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">What, and as Charte? Would you had, For both were rauisht. That I am yours: The States; and if you please So to dispose me, hers: what ere she be, Come friend, I <mark>must</mark> impart my Loue this newes, Or it will rend my <mark>heart</mark>. I figh Lauretta, cause I cannot chuse. Ile tell thee Loue, strange newes: I <mark>must</mark> be married. Why doe you weepe?</div>
+<div class="excerpt">strange newes: I <mark>must</mark> be married. Why doe you weepe? You blam&#x27;d mee now for sigh ing: Why doe you melt in teares? Sweet what&#x27;s the cause? And as I told thee Sweete; I <mark>must</mark> <mark>bee</mark> married, My Father and the State will haue it so; And I came instantly to tell the newes To thee Lauretta; As to one, from whom I nothing can conceale. <mark>Must</mark></div>
+<div class="excerpt"><mark>must</mark> <mark>bee</mark> married, My Father and the State will haue it so; And I came instantly to tell the newes To thee Lauretta; As to one, from whom I nothing can conceale. <mark>Must</mark> you? But when&#x27;s the day? The tenth of the next moneth. But doe you loue him? How happie are you aboue mee faire friend, That <mark>must</mark> inioy where you affect? When I</div>
+<div class="excerpt">Potent Queene, Where Counsell fayles mee, Ile once trust to spleene. Stay till we be resolu&#x27;d. Sir, so we haue heard. O Heauen, how am I perplext! Well, since I <mark>must</mark>, I will: Your pardon, Royall Father: Yours faire Princesse: And yours great Duke: If I shall find my self truely to haue err&#x27;d, I shall confesse your chastity much</div>
+<div class="excerpt">him state and Honours, And make him great in Florence. Is he of birth? How now my Lauretta? I prithee sweete where liues he? Honour me so much As let me know him. <mark>Must</mark>? then I will. Is he of presence sweete? Honour me so much then, as let me know him. Thee, loue I will In all things: wherefore study you? Harme? there&#x27;s none can</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">This way the voyce was, let vs leaue the Chace. Here&#x27;s beauty mixt with teares, that pouerty Was neuer bred in Cottage: I&#x27;le farther question Their state and fortune. What are you gentle Creatures? Nay answere not in teares. If you by casuall losse, or by the hand Of Fortune haue beene crusht beneath these sorrowes, He demands your griefe That hath as much will as ability To succour you, and for your owne faire sake; Nay beautious Damsell, you neede not question that. Sweete if the Prologue To thy sad passion mooue thus: what will the Sceane And tragicke act it selfe doe? Is thatt Gentlewoman Your Mother sweete? Pray of what Prouince? What fortune there? Nay, proceede beauteous Lady, How was your Father stil&#x27;d? More then her Charming beauty Her passion moues me: where inhabit you? Beneath these Trees? Gentle Creature, Had you not told me that your Birth was Noble, I should haue found it in your face and gesture. Mounsieur. Goe winde thy Horne abroad, and call to vs Some of our traine: we pitty these two Ladies, And we will raise thier hope: Cheere you old Madam, You shall receiue some bounty from a Prince. Who keepes the Lodge below? Command him to remoue, and instantly We giue it to these Ladies: besides, adde Vnto our Guest three thousand pounds a yeare: We&#x27;le see it furnisht too with Plate and Hangings. &#x27;Las pretyt Maide, your father&#x27;s dead you say, We&#x27;le take you now to our owne Patronage, And trust me Lady, whiel wee&#x27;re Prince of Florence, You shall not want nor foode, nor harborage. Arise sweete, pray your name? Faire Laure t , you shall be henceforth ours, Oh Mounsieur! I ne&#x27;re saw where I could loue Till now. Well Mounsieur, well; when e&#x27;re I match, pray Heauen, We loue so well: but loue and toyle hath made vs Euen somewhat thirsty, would we had some Wine. What hast thou there? Thou ne&#x27;re couldst come to vs in better time, Reach it vs Mounsieur. Yes sweete with thee in any thing: you know Wee are a Prince, and you shall be our taster. Sirrah, conduct those Ladies to the Lodge, And tell the Keeper we haue stor&#x27;d for him, A better fortune; you shall heare further from vs, You vsher them. Oh gentle Friend, Why was I borne high? but to raise their hopes That are deiected: so much for my bounty. It is with no intent To make the Maide my wife, because I know Her fortunes cannot equall mine. Still thou mistak&#x27;st, mine Is honourable loue, and built on vertue; Nor would I for the Emperours Diademe, Corrupt her whom I loue. Come Mounsieur, night steales on, not many yeares Shall passe me, but I purpose to reuisite This my new Mistresse, my auspicious fate To thee my happy loue I consecrate. Now my faire Friend. Looke Mounsieur, Can she be lesse then Noble? nay deserues she Thus habited, to be tearm&#x27;d lesse then Royall, What thinkst thou Mounsieur? Right courteous Lady, Our bounty is too sparing for your worth, Yet such as &#x27;tis accept it. I prithee Mounsieur, A little comp ement with that old Lady, Whilst I conferre with her. And haue you ne&#x27;re a loue then? Pray acquaint me with him, And for thy sake I&#x27;le giue him state and Honours, And make him great in Florence. Is he of birth? How now my Lauretta? I prithee sweete where liues he? Honour me so much As let me know him. Must? then I will. Is he of presence sweete? Honour me so much then, as let me know him. Thee, loue I will In all things: wherefore study you? Harme? there&#x27;s none can come from thee Lauretta, Thou art all goodnesse, nay confesse it sweete. Why my Lauretta? By all my hopes I haue in Florence, would thou wert a Dutchesse, That I might court thee vpon equall tearmes; Or that I were of low deiected fortunes, To ranke with thee in Birth: for to enioy Thy beauty, were a greater Dowre then Florence Great Duke-dome. Now sir, the newes? Mounsieur, vpon my life &#x27;tis some Embassadour. No worthy Friend, for me thou shalt not suffer, At our best leasur&#x27;d houres we meane to visite you; Now giue me leaue to take a short fare-well. Mounsieur what are those? Whence are these Lords? Their businesse Royall Sir? Vnto my bed my Lord? I am not so affraide of spirits Sir, But I can lye alone without a bed-fellow. Marry my Lord? But is she faire? What, and as Charte? Would you had, For both were rauisht. That I am yours: The States; and if you please So to dispose me, hers: what ere she be, Come friend, I must impart my Loue this newes, Or it will rend my heart. I figh Lauretta, cause I cannot chuse. Ile tell thee Loue, strange newes: I must be married. Why doe you weepe? You blam&#x27;d mee now for sigh ing: Why doe you melt in teares? Sweet what&#x27;s the cause? And as I told thee Sweete; I must bee married, My Father and the State will haue it so; And I came instantly to tell the newes To thee Lauretta; As to one, from whom I nothing can conceale. Must you? But when&#x27;s the day? The tenth of the next moneth. But doe you loue him? How happie are you aboue mee faire friend, That must inioy where you affect? When I Am tide to others fancies: It was your promise That I should know him further. &#x27;Tis Iulia, The Duke of Millaines daughter: Why change your Face? Looke to her safety, not for the Crowne Of Florence I would haue her perish. Oh Friend, that I should change my Royaltie To weaknesse now: I doe thinke this lodge A Pallace, and this Beautious Mayden-head Of greater worth then Iulia. Thy newes. Whence? The Millaine Princesse is betroathed; deflowred, Not worthy of your loue, beleeue this true Vpon a Prince his word; when you, shall bed her, And find her flawd in her Virginitie, You shall haue cause to thinke vpon his loue From whom you had this caution; But doe it with that Princely management, Her honour bee not slandered: Hee that loues, Admires, and honours you: Where&#x27;s hee that brought this Letter? Poast after; bring him backe, Could hee not set his hand to &#x27;t— How now, the newes? Thou hast lost mee quite. Mounsieur reade there, What will confound thee: Oh if shee bee vnchast! Could they find none but mee to worke vpon. If shee bee Chast, How shall I wrong her, to question her faire Vertues? But if shee bee not right? I wrong my Honor, Which after marriage, how shall I recall? Yes: Oh how am I perplext! Come, Ile to Court, Ile not bee sway&#x27;d: Were shee a Potent Queene, Where Counsell fayles mee, Ile once trust to spleene. Stay till we be resolu&#x27;d. Sir, so we haue heard. O Heauen, how am I perplext! Well, since I must, I will: Your pardon, Royall Father: Yours faire Princesse: And yours great Duke: If I shall find my self truely to haue err&#x27;d, I shall confesse your chastity much iniur&#x27;d. Oh good morrow Lady, I come to tell you newes! Pardon Lords, I haue stay&#x27;d you long, your blessing royall Father. My custome is, euer to rise before A womans houre: Now heare me speake my Lords, I&#x27;m married to a Lady, whose chaste honour, Reports and false Suggestions, did inforce me To call in publike question; but that we leaue Vnto our last nights rest. Last night. In your Bed. Being broad awake. &#x27;Twas well put off: &#x27;Tis strange shee&#x27;s so forgetfull: I prethee Stroza Where are they? Where? Why studdy you? Where man? Not till I see my deeds. See which o&#x27; the Traine is wanting. Your Masters name? Giue this Gentleman A 100. crownes: This will much grace our banquet. Wee are hee. Excuse mee Sir, I know him not: But if I much mistake not, Wee are late indebted to you for a present. Parma speake, and if thy speech was bent to mee? Parma proceede. &#x27;Tis false, I neuer imbrac&#x27;d saue with one, And her, I found to bee most truely chast. Yes. Wee are pleased. Tell mee Stroza, Was Iulia chaste? Did her Father know it? Will Parma fight? I heere protest, wee parted both, as cleere, As at our first encounter. Willingly. Then Prince Parma, With your words Ile proceed. &#x27;Tis fit all Iustice hee not quite exil&#x27;d, That hee that wedds the Mother keepe the child. At hand my Lord: Mounsieur conduct them hither? This the Maide, To whom I am so bound? Sweete arise. But by your fauour Sir, This must bee our owne charge. You crowne me with your wishes, Royall father; My Mistris first, and next my bed-fellow, And now my Bride most welcome. Excellent Sir, Imbrace the Millaine Duke, whil&#x27;st I change hand With Princely Parma; Iulia, once my Wife? Backe to your husband I returne you chast: Mounsieur, bee still our friend: You our kind Mother: And let succeeding Ages, thus much say: Never was Maiden-head better giuen away. NEw Playes, are like new Fashions; If they take? Followed and worne: And happy&#x27;s hee can make First into &#x27;th Garbe: But when they once haue past Censure, and proue not well, they seldome last. Our Play is new, but whether shaped well In Act or Seane, Iudge you, you best can tell: Wee hope the best, and &#x27;tis our least of feare, That any thing but comely should shew heere; Howeuer Gentlmen, &#x27;tis in your powers, To make it last; or weare out, in two houres.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Maidenhead Well Lost</div><div class="body">Julia has given herself sexually to her flance, the Prince of Parma, but is now concerned that he mav have fost interest in her: she has been told of a dalliance between him and Lauretta. When lulia publicly strikes Eauretta, Parma breaks off the engagement. In fact, Julia’. informant, Stroza, was lying: he has a grudge agamoat ===== PAGE 406 ===== Lauretta’s father, General Sforza, and has also been working to secure his downfall by delaying the shipment of money and supplies to the front. News arrives that the war is won, but that Sforza, unable to pay his men, gave them everything he had and died of grief. His widow pays the soldiers’ arrears out of her estate and leaves Milan with Lauretta. Fearful of dishonour, Julia tries to persuade Parma to stay by telling him she is pregnant. He denies paternity — she consented so readily to pre-marital sex that, misled by Stroza, he believes she must also have had other men - and leaves anyway. Her father the Duke learns of the situation, and sends Stroza to fetch Parma back, dead or alive. Julia’s unborn child saves her from execution for her misdeed, and she goes into hiding until the baby is born. When it is, the Duke orders Stroza to dispose of it, and plans to conceal her shame with a hasty marriage to another foreign prince. Stroza leaves the baby in a grove to be found by passers-by; sure enough, when he returns a few hours later, it has gone, found by Parma and recognized as his own true issue. Lauretta and her mother are found in the forest by the Prince of Florence, and installed by him in a ducal hunting lodge. She falls in love with him, but, knowing herself too low-born, gives cryptic answers to his questions about her love-life. Stroza arrives in Florence as an ambassador to negotiate a marriage between the Prince and Julia. The Duke of Florence accepts, and the Prince is obliged to consent. When he tells Lauretta about it, she initially assumes herself to be the bride, and continues her cryptic answers, telling him that she too will be marrying a prince at the exact same time; on learning he is to wed Julia, she faints. The Prince receives a letter from Parma warning him that Julia is unchaste, and he interrupts the wedding to raise the matter; only on receiving assurances of the bride’s virginity does he allow the ceremony to be completed. To avoid the deception being exposed on the wedding night, Stroza plans to put a substitute bride in the Prince’s bed, and bribes Lauretta to undertake the…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

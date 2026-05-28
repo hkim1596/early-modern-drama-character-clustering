@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BER in Love&#x27;s Labor&#x27;s Lost · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BER</span>
+</nav>
+
+<h1>BER</h1>
+<p class="lede">in <em>Love&#x27;s Labor&#x27;s Lost</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1598</td></tr>
+<tr><th>Words</th><td>1703</td></tr>
+<tr><th>Characters</th><td>9063</td></tr>
+<tr><th>BritDrama no.</th><td>1031</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">keepe his oth. But is there no quicke recreation graunted? This fellow, What would&#x27;ſt? This is he. To <mark>heare</mark>, or forbeare hearing ▪ For the following ſir. I know you <mark>did</mark>. You muſt not be ſo quicke. Your wit&#x27;s too hot, it ſpeedes too faſt, twill tire. What time a day? Now faire befall your maſke. And ſend you manie louers. Nay then</div>
+<div class="excerpt">ſweetely, then they name her name, And Roſalin they call her, aſke for her: And to her white hand ſee thou do commend This ſeald-vp counſaile. Ther&#x27;s thy guerdon: <mark>goe</mark>. O and I forſoth in loue, I that haue been loues whip? A verie Bedell to a humerous ſigh, a Crietick, nay a night-watch Conſtable. A domineering pedant ore the</div>
+<div class="excerpt">watcht, that it may ſtill go right. Nay to be periurde, which is worſt of all: And among three to loue the worſt of all, A whitly wanton, with a veluet brow, With <mark>two</mark> pitch balles ſtucke in her face for eyes. I and by heauen, one that will do the deede, Though Argus were her eunuch and her garde. And I to ſigh for her, to watch</div>
+<div class="excerpt">companie With men like men of inconſtancie. When ſhall you ſee mee write a thing in rime? Or grone for Loue? or ſpend 〈◊〉 minutes time, In pruning mee when ſhall you <mark>heare</mark> that I will prayſe a hand, a foote, a face, an eye: a gate, a ſtace, a brow, a breſt, a waſt, a legge, a limme. I poſt from Loue, good Louer let me go. A toy my</div>
+<div class="excerpt">flow, heauen ſhew his face: Young blood doth not obay an olde decree. We can not croſſe the cauſe why we were borne: Therefore of all handes muſt we be forſworne. <mark>Did</mark> they quoth you? Who ſees the heauenly Roſaline, That (like a rude and ſauadge man of Inde. ) At the firſt opning of the gorgious Eaſt, Bowes not his vaſſall head,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Things hid &amp; ard (you meane) from cammon ſenſe. The Spring is neare when greene geeſe are a bree ding. Fit in his place and tyme. Item, That no woman ſhall come within a myle of my Court. Hath this bin proclaymed? Lets ſee the penaltie ▪ On payne of looſing her tung. Who deuiſ&#x27;d this penaltie? This Article my liedge your ſelfe muſt breake, For well you know here comes in Embaſſaie, The French kinges daughter with your ſelfe to ſpeake: A Maide of grace and complet maieſtie, About ſurrender vp of Aquitaine, To her decrepit, ſicke, and bedred Father. Therefore this Article is made in vaine, Or vainely comes th&#x27; admired Princeſſe hither. So Studie euermore is ouerſhot, While it doth ſtudie to haue what it would, It doth forget to do the thing it ſhould: And when it hath the thing it hunteth moſt ▪ Tis won as townes with fire, ſo won ſo loſt. Neceſſitie will make vs all forſworne Three thouſand times within this three yeeres ſpace: For euery man with his affectes is borne, Not by might maſtred, but by ſpeciall grace. If I breake fayth, this word ſhall ſpeake for me, I am forſworne on meere neceſſitie. So to the Lawes at large I write my name, And he that breakes them in the leaſt degree, Standes in attainder of eternall ſhame. Suggeſtions are to other as to me ▪ But I beleeue although I ſeeme ſo loth, I am the laſt that will laſt keepe his oth. But is there no quicke recreation graunted? This fellow, What would&#x27;ſt? This is he. To heare, or forbeare hearing ▪ For the following ſir. I know you did. You muſt not be ſo quicke. Your wit&#x27;s too hot, it ſpeedes too faſt, twill tire. What time a day? Now faire befall your maſke. And ſend you manie louers. Nay then will I be gon. Ladie I will commend you to my none hart. I would you heard it grone. Sicke at the hart. Will you prickt with your eye. Now God ſaue thy life. I cannot ſtay thankes-giuing. Is ſhe wedded or no? O you are welcome ſir, adew. O my good 〈…〉 O what is a remuneration? O, why then three farthing worth of Silke. O ſtay ſlaue, I muſt employ thee. As thou wilt win my fauour, good my knaue, Do one thing for me that I ſhall in reate. O this after-noone. O thou knoweſt not what it is. Why villaine, thou muſt know firſt. It muſt be done this after noone, Harke ſlaue, it is but this: The Princeſſe comes to hunt here in the Parke, And in her traine there is a gentle Ladie: When tongues ſpeake ſweetely, then they name her name, And Roſalin they call her, aſke for her: And to her white hand ſee thou do commend This ſeald-vp counſaile. Ther&#x27;s thy guerdon: goe. O and I forſoth in loue, I that haue been loues whip? A verie Bedell to a humerous ſigh, a Crietick, nay a night-watch Conſtable. A domineering pedant ore the Boy, then whom no mor tall ſo magnificent. This wimpled whyning purblind wayward Boy, This ſignior Iunios gyant dwa ffe, dan Cupid, Regent of Loue-rimes, Lord of folded armes, Th&#x27; annoynted ſoueraigne of ſighes and groones: Liedge of all loyterers and malecontents: Dread Prince of Placcat , King of Codpeece ▪ Sole Emperator and great generall Of trotting Parrators (O my litle hart.) And I to be a Corporall of his fielde, And weare his coloures like a Tumblers hoope. What ▪ I loue, I ſue, I ſeeke a wife, A woman that is like a Iermane Cloake, Still a repairing: euer out of frame, And neuer going a right, being a Watch: But being watcht, that it may ſtill go right. Nay to be periurde, which is worſt of all: And among three to loue the worſt of all, A whitly wanton, with a veluet brow, With two pitch balles ſtucke in her face for eyes. I and by heauen, one that will do the deede, Though Argus were her eunuch and her garde. And I to ſigh for her, to watch for her, To pray for her, go to: it is a plague That Cupid will impoſe for my neglect, Of his almightie dreadfull little might. Well, I will loue, write, ſigh, pray, ſhue, grone, Some men muſt loue my Ladie, and ſome Ione. One drunkard loues an other of the name. I could put thee in comfort, not by two that I know, Thou makeſt the triumpherie, the corner cap of ſocietie, The ſhape of Loues Tiburne, that hanges vp Simplicitie. O Rimes are gardes on wanton Cupids hoſe, Disfigure not his Shop. By earth ſhe is not, croporall, there you ly. An amber colourd Rauen was well noted. Stoope I ſay, her ſhoulder is with child. I as ſome dayes, but then no Sunne muſt ſhine. Amen, ſo I had mine: Is not that a good word? A Feuer in your blood, why then inciſion Would let her out in Sawcers, ſweete miſpriſon. Once more Ile marke how Loue can varrie Wit. On a day, alacke the day: Loue, whoſe Month is euer May: Spied a bloſſome pasſing faire, Playing in the wanton aire: Through the Veluet, leaues the wind, All vnſeene, can paſſage finde: That the Louer ſicke to death. Wiſh himſelfe the heauens breath. Ayre (quoth he) thy cheekes may blow, Ayre would I might triumph ſo, But alacke my hand is ſworne, Nere to plucke thee from thy throne: Vow alacke for youth vnmeete, Youth ſo apt to pluck a ſweete. Do not call it ſinne in me, That I am forſworne for thee: Thou for whom Ioue would ſweare, Iuno but an Aethiop were, And denie himſelfe for Ioue, Turning mortall for thy loue. This will I ſend, and ſomething els more plaine. That ſhall expreſſe my true loues faſting paine. O would the King, Berowne, and Longauill, Were Louers too, ill to example ill, Would from my forehead wipe a periurde note: For none offende, where all alike do dote. Not you by mee, but I betrayed to you. I that am honeſt, I that holde it ſinne To breake the vow I am ingaged in. I am betrayed by keeping companie With men like men of inconſtancie. When ſhall you ſee mee write a thing in rime? Or grone for Loue? or ſpend 〈◊〉 minutes time, In pruning mee when ſhall you heare that I will prayſe a hand, a foote, a face, an eye: a gate, a ſtace, a brow, a breſt, a waſt, a legge, a limme. I poſt from Loue, good Louer let me go. A toy my Leedge, a toy: your grace needs not feare it. That you three fooles, lackt me foole, to make vp the meſſe ▪ Hee, hee, and you ▪ and you my Leege, and I, Are pick-purſe i Loue, and we deſerue to die. O diſmiſſe this audience, and I ſhall tell you more. Sweete Lords, ſweete Louers ▪ O let vs imbrace, As true we are as fleſh and blood can be, The Sea will ebb and flow, heauen ſhew his face: Young blood doth not obay an olde decree. We can not croſſe the cauſe why we were borne: Therefore of all handes muſt we be forſworne. Did they quoth you? Who ſees the heauenly Roſaline, That (like a rude and ſauadge man of Inde. ) At the firſt opning of the gorgious Eaſt, Bowes not his vaſſall head, and ſtrooken blind. Kiſſes the baſe ground with obedient breaſt. What peromptorie Eagle-ſighted eye Dares looke vpon the heauen of her brow, That is not blinded by her maieſtie? My eyes are then no eyes, nor I Berowne, O, but for my Loue, day would turne to night, Of all complexions the culd ſoueraigntie, Do meete as at a faire in her faire cheeke, Where ſeuerall worthies make one dignitie, Where nothing wantes, that want it ſelfe doth ſeeke. Lend me the floriſh of all gentle tongues, F e paynted Rethoricke, O ſhee needes it not, To thinges of ſale, a ſellers prayſe belonges: She paſſes prayſe, then prayſe too ſhort doth blot. A witherd Hermight fiueſcore winters worne, Might ſhake off fiftie, looking in her eye: Beautie doth varniſh Age, as if new borne, And giues the Crutch the Cradles infancie. O tis the Sunne that maketh all thinges ſhine. Diuels ſooneſt tempt reſembling ſpirites of light. O if in blacke my Ladyes browes be deckt, It mournes, that painting vſurping haire Should rauiſh dooters with a falſe aſpect: And therefore is ſhe borne to make blacke fayre. Her fauour turnes the faſhion of the dayes, For natiue blood is counted paynting now: And therefore redd that would auoyde diſprayſe, Paintes it ſelfe blacke, to imitate her brow. Your Miſtreſſes dare neuer come in raine, For feare their colours ſhould be waſht away. Ile proue her faire, or talke till doomſe-day heere. O if the ſtreetes were paued with thine eyes, Her feete were much too daintie for ſuch tread. O nothing ſo ſure, and thereby all forſworne. O tis more then neede. Haue at you then affections men at armes, For Charitie it ſelfe fulfilles the Law: And who can ſeuer Loue from Charitie. Firſt from the Parke let vs conduct them thither, Then homeward euery man attach the hand Of his faire Miſtres, in the after noone We will with ſome ſtrange paſtime ſolace them: Such as the ſhortneſſe of the time can ſhape, For Reuels, Daunces, Maſkes, and merrie houres, Forerunne faire Loue, ſtrewing her way with flower . Alone alone ſowed Cockell, reapt no Corne, And Iuſtice alwayes whirles in equall meaſure: Light Wenches may proue plagues to men forſome, If ſo our Copper byes no better treaſure. Is this your perfectnes? begon you rogue. O, I am yours and all that I poſſeſſe. I cannot giue you leſſe. Where, when, what Vizard? why demaund you this? Welcome pure wit, thou partſt a faire fray. Hide thy head Achilles, here comes Hector in Armes. Worthies away, the Scaene begins to cloude.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Love&#x27;s Labor&#x27;s Lost</div><div class="body">The King of Navarre has proclaimed a three-year period of study during which his courtiers must live abstemiously and refrain from seeing women; no woman may even approach the court. Unfortunately the Princess of France is due to arrive on a diplomatic mission concerning a dispute over money and territory, and the King is forced to meet her; however, the evidence in support of France’s claim against Navarre has not arrived, and the issue is deferred. Costard is caught canoodling with Jaquenetta and is remitted to Don Armado’s custody. Armado is himself enamoured of Jaquenetta, and sends Costard to her with a love-letter. Biron also pays Costard to carry a similar letter to his love, Rosaline, and Costard mixes up the two letters. Armado’s causes amusement to the French ladies when they receive it; Biron’s causes embarrassment to himself when, directed by Holofernes, Jaquenetta brings it to the King just after Biron has attacked him and the other lords for falling in love. Biron argues the illegitimacy of their original vows, and they set about wooing the ladies, first with gifts, then by appearing in a masque of Russians. The ladies confound the latter by wearing masks themselves and swapping gifts so that each lord woos the wrong lady; they also refuse to dance. Don Armado and the locals offer the court a pageant of the Nine Worthies, devised by the schoolmaster: it is mocked by the lords and breaks up in confusion when Costard accuses Don Armado of fathering the pregnant Jaquenetta’s baby. News then arrives that the King of France is dead. The lords propose marriage to the ladies, who refuse: the court of France is in mourning, and the lords must wait a year; given particular conditions by their ladies, the King will spend it in a hermitage and Biron trying vainly to entertain dying men. The play ends with a song of winter and spring, the owl and the cuckoo.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

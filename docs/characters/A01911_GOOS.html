@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GOOS in Sir Giles Goosecap · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>GOOS</span>
+</nav>
+
+<h1>GOOS</h1>
+<p class="lede">in <em>Sir Giles Goosecap</em> — Chapman, George</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1606</td></tr>
+<tr><th>Words</th><td>1989</td></tr>
+<tr><th>Characters</th><td>9740</td></tr>
+<tr><th>BritDrama no.</th><td>1340</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">a Beare cood doe, and the beare being heauie with hunger you know, fell vppon the dogge, broke his backe, and the dogge neuer stird more. Frenchmen, I, so they <mark>did</mark> too, but yet and hee had not bin kild, twood nere a greeud me. VVelcome sweet Will, good Iacke. VVood I might be degraded if I speake a word, Ile tell them I care</div>
+<div class="excerpt">Neuer stirre, if it <mark>bee</mark> not a richer Caparison, then my Lorde my Cosine wore at tilt, for that was bro dred with nothing but mooneshine ith the water, and this <mark>has</mark> Sa ̄ mons in&#x27;t; by heauen a most edible Capariso ̄ . <mark>Bee</mark> Caparisons odious Sir Cutt: what like flow ers? A botts athat stincking worde odorous, I can neuer hitt</div>
+<div class="excerpt">good, this. Nay good knight if your French wood bry … le, let … im alone, introth our Ladies are a little too coy and subtill Captaine indeed. I detest Sir Cutt, I <mark>did</mark> not thinke hee had bin halfe the quintissence of a … choller he is. Yes Ile ensure you Captaine, there are many of them truely Emphaticall but all your French Ladies</div>
+<div class="excerpt">captaine. The moone Sir Cut: I scorne the moone yfaith, Slydd sometimes a man shal not get her to shine &amp; if he wood giue her a couple of Capons, and one of them <mark>must</mark> be white too, God forgiue me I cud neuer abide her since yesterday, she seru&#x27;de me such a trick tother night. VVhy sir Cut: cause the daies be mortall and short</div>
+<div class="excerpt">batchellers, &amp; the married men be al my friends, so I wood faine mar rie to take the married mens parts in truth. I pray will you keepe my worke a little mistris; I <mark>must</mark> needes straine a little courtsie in truth. Pray good my Lord, whats that you talke on? O good my Lord lets visit him, cause I knowe his brother. Pray my Lord whether</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">In truth Sir Cutt. we might haue tickled the va nitie ant, an howre longer if my watch be trustible. God giue you good night madams, thanke you for my good cheere, weele tickle the vani … e ant, no longer with you at this time, but ile ind … te your La: to supper at my lodging one of these mornings; and that ere long too, because we are all mortall you know. Nay good Sir Cutt. doe not agrauate him no more. As I am true mortall Knight, it is most superla tiuely good, this. Nay good knight if your French wood bry … le, let … im alone, introth our Ladies are a little too coy and subtill Captaine indeed. I detest Sir Cutt, I did not thinke hee had bin halfe the quintissence of a … choller he is. Yes Ile ensure you Captaine, there are many of them truely Emphaticall but all your French Ladies are not fatt? are they Sir? See heere he comes, and my Ladies two pages, they haue bin tickling the vanitie ont yfa … th. O as cleare as can dlelight, by this day-light. Our worships shal attend their Ladiships thether. No it is too farre to goe to night, weele bee vp betimes ith morning, and not goe to bedd at all. But ten miles? what doe ye talke Captaine? I, … elaie ten pounds its more then ten mile, or twelue either. Ile laie fiue hundred, to a hundred, Slight I will not be out borne with a wager, in that I know, I am sure it was foure yeares agon ten miles thether, and I hope tis more now, Slidd doe not miles growe thinke you, as well as other Animals. Not we Sir, you are a Captaine, and a leader. VVood I might neuer be mortall Sir C … tt: if I ridd not aftter him, till my horse sweat, so that he had nere a drie thread on him, &amp; hollod &amp; hollod to him to stay him, till I had thought my fingers ends wood haue gon off with hollowings; Ile be sworn to ye &amp; yet he ran his way like a Diogenes, and would neuer stay for vs. Why hee is but a lame Iade neither Sir Meyle, we shal soone our&#x27;take him I warrant ye. But heres all the doubt Sir Cutt: if nobo die shoold catch him now, when hee comes at London, some boy or other wood get vppe o … him and ride him … otte into the water to washe him; Ile bee sworne I followed one that ridd my horse into the Thames, till I was vppe tooth knees hetherto; and if it had not beene for feare of going ouer shooes, because I am troubled with the rheume, I wood haue taught him to washe my horse when hee was hott yfath; how now sweet Captaine dost feele any 〈◊〉 in thy payne yet ▪ Light Sir Cutt, Slight and I had my horse again, theres nere a paltrie English frost an them all shood make me light. Why Sir Cut I care not if I be not sound so I be well but we were iustly plaugde, by this hill for fol lowing women thus. O God sir, I stud and heard it, as I satith pre sence. VVhy so Captaine, and yet you talke of your great frenchmen, to God little England had neuer knowne them I may say. Slydd captaine VVood not make one, Ile be sworne, Ile be sworne, they tooke away a mastie dogge of mine by commission now, I thinke on&#x27;t makes my teares stand in my eyes with greefe, I had rather lost the dearest friend that euer I lay withal, in my life be this light, neuer stir if if hee fought not with great Sekerson foure hours to one, foremoste take vp hindmoste, and tooke so many loaues from him, that hee sterud him presently: So at last the dogg cood doe no more then a Beare cood doe, and the beare being heauie with hunger you know, fell vppon the dogge, broke his backe, and the dogge neuer stird more. Frenchmen, I, so they did too, but yet and hee had not bin kild, twood nere a greeud me. VVelcome sweet Will, good Iacke. VVood I might be degraded if I speake a word, Ile tell them I care not for loosing my labour. Neuer stirre Sir Cutt, if I haue euer a groat about me but one three pence. A my mortallitie the boy knowes more then I doe of our house. VVhats that good Captain. Nay good Sir Cutt: you know fooles doe come into your companies. A my word I haue not seene pages haue so much witt, … hat haue neuer bin in Fraunce Captain. And let&#x27;s prouide torches for our men to sit at dore with all captaine. The moone Sir Cut: I scorne the moone yfaith, Slydd sometimes a man shal not get her to shine &amp; if he wood giue her a couple of Capons, and one of them must be white too, God forgiue me I cud neuer abide her since yesterday, she seru&#x27;de me such a trick tother night. VVhy sir Cut: cause the daies be mortall and short now you knowe, and I loue daie light well; I thought it went a waie faster then it needed, and run after it into Finsburie -fieldes ith calme euening to see the winde mils goe? &amp; euen as I was going ouer a ditch the moone by this light of purpose runnes me be hind a cloud, and lets me fall into the ditch by hea uen. Ill done sir Cut: Slydda man may beare, and beare, but and she haue noe more good manners, but to make euery black slouenly cloude a pearle in her eye I shall nere loue English moone againe, while I liue Ile besworne to ye. The passingst description of a candle, that euer liu&#x27;d Sir Cutt: I dare … nsure your Lordship, Truth is truth, &amp; I haue heard in Fraunce, they speake French as well, as their mother tongue my Lord. Neuer stirre, if it bee not a richer Caparison, then my Lorde my Cosine wore at tilt, for that was bro dred with nothing but mooneshine ith the water, and this has Sa ̄ mons in&#x27;t; by heauen a most edible Capariso ̄ . Bee Caparisons odious Sir Cutt: what like flow ers? A botts athat stincking worde odorous, I can neuer hitt on&#x27;t, O good my Lord, let him prayse you, what so ere it costs your Lordshippe. By this fire they doe my Lord, I haue heard am. I know him best my Lord. Why my go … d L … rd? hee will nere be long from vs, because we are all mortall you know. And as soone as euer wee goe to dinner, and supper togeather, A will come you in amongst vs, with his Cloake buttond, loose vnder his chinne. I me Lord buttond loose still, and both the flaps cast o … r before, both his shoulders afore him. Like a potentate My Lord? For all the w … rld like a Potentate S. Cut: ye know. All his beard nothing but hai … e. Or something else as you say. His Mellons, or his Apricocks, Orrenges al waies in an vncleane hand kerchiffe very cleanely I warrant you my Lord. Then hi … fine words that hee sets them in, con catic … ll, a fine Annisseede wenche foole vppon ticket and so forth. Knoth euery man at the table, though he neuer saw him before, by sight and then will he foole you so finely my Lorde, that hee will make your hart ake, till your eyes runne ouer. M. Iack ▪ M. Iacke; how do ye M. William, frolick? Slydd pages, youle not cheates of our foole wil ye? Begg me? slight I wood I had knowne that, to ther daie, I thought I had met him in Paules, &amp; he had byn anie body else but a piller, I wood haue runne him through by heauen, beg me? O does he praise me, then I commend him. That we wil a my word my Lord, and haue him too for all this. Dead? Slight that cannot be man, I knowe he wood ha writ to me ont had byn so. O braue s … r 〈◊〉 come 〈◊〉 prick vp the Ladies: … e make my Lord my Cosin speake for me. Gods mee, wood I might neuer be mortall if I doe not carty my worke with me. O rare Sir Cutt: we shall eate nut-shells. hold belly hold Here my Lord. A little at once my Lorde for Idlenes sake. VVhy looke you mistris ▪ I am makeing a fine drie sea, full of fishe, playing in the bottome, &amp; here ile let in the water so liuely, that you shall heare it rore. Yes in sooth madam with your eyes. This shall be a great whale mistris, at all his bignesse spouting huge hils of salt-water afore him, like a little ▪ water squirt, but you shall not neede to feare him mistris, for he shalbe si … ke and gould ▪ he shall doe you noe harme, and he be nere so liuely. Heere ile take out your eye, and you wil mistris. VVhy Ladie, Ile but take it out in iest, in carnest. VVhy then here shall be a Camell, and he shall haue hornes, and he shall looke (for al the world) like a maide without a husband. I bought am for nothing madam in th&#x27;ex ange VVhy my Lord, t&#x27;was bigg enough, when I wrought it, for I wore pantables then you knowe. But I beleeue madam, my Lord my cosen has not told you all my good parts. Marrie madam I can take tobacco now, and I haue bought glow-wormes to kindle it withall, better then all the burning glasses ith world. O od madam I feed am with nothing but fire, a purpose, Ile besworne they eat me siue faggots a weeke in charcoale. Nay indeede mistris I wood faine marrie for all that, and ile tell you my reason, if you will. VVhy madam we haue a great match at foot-ball towards, married men against batchellers, &amp; the married men be al my friends, so I wood faine mar rie to take the married mens parts in truth. I pray will you keepe my worke a little mistris; I must needes straine a little courtsie in truth. Pray good my Lord, whats that you talke on? O good my Lord lets visit him, cause I knowe his brother. Pray my Lord whether was eldest, he or his elder brother? I say so still my Lord, but I am so borne down with truth as neuer any knightith world was I thinke. Sweet Lord lets see them. … wells my Lord, why is not this candlestick … one of yo … r iew … pray? … is a most si … e candlesticke in truth, it wants nothing but the languages. VVhy mistris; there was a la … tin cand … estick h … re afore, and that had the languages I am sure. Yes, that I haue I hope my Lord my Cosen. Ide be … oth to goe without paper about me against my mistris, hold my worke againe, a man knows not what neede he shall haue perhaps. Pray read my Lorde, I made this sonnet of my mistris. No intruth Sir Cut: I cannot reade mine owne hande. Thanke you good my Lord as much as tho you had giuen me twentie shillings in truth, now I may take the married mens parts at footeball.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Sir Giles Goosecap</div><div class="body">The widow Eugenia lives in chastity with two virgins, Hippolyta and Penelope. They entertain three foolish would-be suitors to supper: Sir Giles Goosecap, Sir Cuthbert Rudesby, and Captain Foulweather. A page tells the guests that the ladies plan an early morning visit to Barnet the next day, and encourages them to rendezvous there; in fact, it is to be a wild-goose chase. The pages later meet the suitors on their way back, and tell them that the ladies decided not to go after all, asa test of tolerance. Clarence is also in love with Eugenia, and confides this to his best friend, her uncle, Lord Momford. Disturbed to hear of the supper with the knights, Momford visits his niece and tries to press Clarence’s suit. Relatives of Goosecap and Rudesby likewise sing their in-laws’ praises, albeit rather unconvincingly. Momford brings a love-letter from Clarence and tries to get Eugenia to reply; he agrees to take dictation from her, but writes down her refusal with additional phrases which turn it into an acceptance, then signs her name on her behalf. Momford invites the ladies to supper. Eugenia is persuaded to come only on the assurance that Clarence is too ill to be present. The other suitors are also invited. Momford takes his guests on a tour of the house, during which they overhear Clarence discussing Eugenia with his doctor - an ‘accident’ which was planned by Momford all along. Eugenia suspects that he also intends to arrange a more direct encounter with Clarence, so she hides in the one place they will not expect to find her: Clarence’s bedroom. But Clarence is there, and they agree to marry. Momford is delighted that she has accepted his friend without knowing that the young man is also his heir.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

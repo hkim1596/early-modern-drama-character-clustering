@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PESC in The Duke of Milan · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PESC</span>
+</nav>
+
+<h1>PESC</h1>
+<p class="lede">in <em>The Duke of Milan</em> — Massinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>911</td></tr>
+<tr><th>Characters</th><td>4914</td></tr>
+<tr><th>BritDrama no.</th><td>1994</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt"><mark>woman</mark>? Yet I haue seene her equals. Well Sir, I&#x27;le not crosse you, Nor labour to diminish your esteeme Hereafter of her, since your happinesse (As you will haue it) <mark>has</mark> alone dependance Vpon her fauour, from my Soule, I wish you A faire attonement. Well said old sellow. Hold Sir, this is madnesse. &#x27;Tis so past beliefe, To me it</div>
+<div class="excerpt">then should haue iust cause to say, Pescara Look&#x27;d not vpon your State, but on your Vertues, When he made suit to be writ in the List Of those you fauord. But my hast forbids All complement. Thus then, Sir, to the purpose. The cause that vnattended brought me hether, Was not to tell you of your losse, or danger; For Fame hath</div>
+<div class="excerpt">yeelding may find grace, And will admit defence, at least excuse: But should you linger doubtfull, till his Powers Haue seas&#x27;d your Person, and Estates perforce, You <mark>must</mark> expect extreames. Indeed, I haue trauaild hard, And will embrace your counsell. So Sir, this tempest is well ouerblowne, And all things fall out to our wishes.</div>
+<div class="excerpt">peace) may beget danger, At least suspition. Vse your owne pleasure, I&#x27;le bere you companie. My Lord, from whence Growes this amazement? You promis&#x27;d to be merrie. I <mark>must</mark> borrow The priuiledge of a friend, and will, or else I am, like these, a seruant, or what&#x27;s worse, A parasite to the sorrow, Storza worships In spite of reason.</div>
+<div class="excerpt">th&#x27;offences that mankind could doe, Would neuer be so cruell as to rob it Of so much sweetnesse, &amp; of so much goodnesse, That not alone was facred in her selfe, But <mark>did</mark> preserue all others innocent That had but conuerse with her: Then it came Into his fancie that she was accus&#x27;d By his mother &amp; his sister, thrice he curs&#x27;d &#x27;em,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Blame him not good Francisco, He hath much cause to grieue: Would I might end so, And not ad this, to feare. If it were As well in my weake power, in act to raise it, As &#x27;tis to beare a part of sorrow with you; You then should haue iust cause to say, Pescara Look&#x27;d not vpon your State, but on your Vertues, When he made suit to be writ in the List Of those you fauord. But my hast forbids All complement. Thus then, Sir, to the purpose. The cause that vnattended brought me hether, Was not to tell you of your losse, or danger; For Fame hath many Wings to bring ill tidings, And I presume you haue heard it: But to giue you such, Such friendly counsell, as perhaps may make Your sad disaster, lesse. Thus then, Sir. To hope you can hold out against the Emperor, Were flatterie in your selfe, to your vndooing; Therefore, the safest course that you can take, Is, to giue vp your selfe to his discretion, Before you be compeld. For rest assur&#x27;d, A voluntarie yeelding may find grace, And will admit defence, at least excuse: But should you linger doubtfull, till his Powers Haue seas&#x27;d your Person, and Estates perforce, You must expect extreames. Indeed, I haue trauaild hard, And will embrace your counsell. So Sir, this tempest is well ouerblowne, And all things fall out to our wishes. But In my opinion, this quicke returne, Before you haue made a partie in the Court Among the great ones (for these needy Captains Haue little power in peace) may beget danger, At least suspition. Vse your owne pleasure, I&#x27;le bere you companie. My Lord, from whence Growes this amazement? You promis&#x27;d to be merrie. I must borrow The priuiledge of a friend, and will, or else I am, like these, a seruant, or what&#x27;s worse, A parasite to the sorrow, Storza worships In spite of reason. Would it were bestow&#x27;d Vpon a worthier subiect. Haue you stood the shock Of thousand enemies, and out-fac&#x27;d the anger Of a great Emperor, that vowed your ruine, Though by a desperate, a glorious way, That had no president? Are you return&#x27;d with honor, Lou&#x27;d by your subiects? Does your fortune court you, Or rather say, your courage does command it? Haue you giu&#x27;n proofe to this houre of your life, Prosperitie (that searches the best temper) Could neuer puffe you vp, nor aduerse fate Deiect your valor? Shall I say, these vertues, So many and so various trials of Your constant mind, be buried in the frowne (To please you I will say so) of a faire woman? Yet I haue seene her equals. Well Sir, I&#x27;le not crosse you, Nor labour to diminish your esteeme Hereafter of her, since your happinesse (As you will haue it) has alone dependance Vpon her fauour, from my Soule, I wish you A faire attonement. Well said old sellow. Hold Sir, this is madnesse. &#x27;Tis so past beliefe, To me it shewes a fable. You speake Sir The language I should vse. The like was neuer read of. &#x27;Troth I&#x27;le tell you, And briefly as I can, by what degrees He fell into this madnesse, When by the care Of his Physitians he was brought to life, As he had only pass&#x27;d a fearefull dreame, And had not acted what I grieue to thinke on, He call&#x27;d for faire Marcelia, and being told That she was dead, he broke forth in extreames, (I would not say blasphem&#x27;d) &amp; cri&#x27;d that heauen For all th&#x27;offences that mankind could doe, Would neuer be so cruell as to rob it Of so much sweetnesse, &amp; of so much goodnesse, That not alone was facred in her selfe, But did preserue all others innocent That had but conuerse with her: Then it came Into his fancie that she was accus&#x27;d By his mother &amp; his sister, thrice he curs&#x27;d &#x27;em, And thrice his desperat hand was on his sword To haue kill d&#x27;em both, but he restrayn&#x27;d, &amp; they Shunning his furie, spite of all preuention He would haue turn&#x27;d his rage vpon himselfe, When wisely his Physitians looking on The Dutches wound, to stay his readie hand, Cry&#x27;d out it was not mortall. He easily beleeuing what he wish&#x27;d, More then a perpetuitie of pleasure In any obiect else, flatter&#x27;d by hope Forgetting his owne greatnesse, he fell prostrate At the doctors feet, implor&#x27;d their ayd, &amp; swore, Prouided they recouer&#x27;d her, he would liue A priuat man, &amp; they should share his dukedom. They seem&#x27;d to promise faire, and euerie houre Varie their iudgements as they find his fit To suffer intermission, or extreames. For his behauiour since Now be your owne witnesses. I am preuented. With me? What is he? Bring me to him, As I find cause I&#x27;le doe. Doe but this, Till we vse meanes to win vpon his passions T&#x27;indure to heare shee&#x27;s dead with some small patience And make thy owne reward. I will procure it. Sooth me in all I say There is a maine end in&#x27;t. Looke vp Sir chearefully, comfort in me Flowes strong lie to you. O damn&#x27;d villaine! Away with him. It is in vaine to labour To call him backe, wee&#x27;ll giue him funerall, And then determine of the state affaires And learne from this example ther&#x27;s no trust In a foundation that is built on lust.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Duke of Milan</div><div class="body">Sforza, Duke of Milan, dotes on his haughty Duchess Marcelia, and fears the prospect of losing her. Her birthday banquet is interrupted by bad news: Sforza rebuffed Charles the Emperor’s overtures and chose to ally Milan with France instead; but now the Empire has routed France at the Battle of Pavia. Sforza expects imperial reprisals, and goes to submit himself to Charles. Before he leaves, he appoints Francisco his deputy, with instructions that, should he not return, Marcelia is to be murdered so that nobody else shall enjoy her. He submits himself to Charles, offers an explanation but no excuse for his supporting France, and expresses his willingness to pay with his life in order to prevent the imperial army from sacking Milan, thus sparing his subjects further bloodshed. His dignity impresses Charles, who confirms his ducal title. In Sforza’s absence, the tensions between Marcelia and his sister Mariana break out into open violence. Though Mariana is his own wife, Francisco takes Marcelia’s side in the quarrel and imprisons Mariana. Believing that Sforza will not return, he propositions Marcelia, shows her the warrant for her execution, and suggests that they should seize power together. She refuses him, so he explains the excessive love which led Sforza to order her death. This annoys her. When Sforza returns to Milan, she greets him coldly, which gives offence. Mariana learns of Francisco’s efforts to seduce Marcelia, and informs Sforza, who will not believe her. Francisco finds out her plans in advance and sets up the situation to favour his revenge: three years before, his sister Eugenia was seduced by Sforza with a promise of marriage on which he then reneged. First he presents himself to Marcelia as a potential victim of Sforza’s jealousy, inducing her to promise to protect him. Then he tells Sforza that Marcelia has tried to seduce him. As a test of her fidelity, Sforza pretends to have murdered ===== PAGE 365 ===== 1621 Francisco; Marcelia’s outrage seems to confirm her guilt, and Sforza wounds her fatally. News arrives that Francisco has fled Milan; Marcelia tells her husband the truth, and dies. Sforza is distracted with grief. His physicians persuade him that she is merely in a coma and may one day be revived, but realize that putrefaction will soon put an end to the ruse. Francisco returns to court posing as a Jewish doctor, and offers to treat the body to prolong the appearance of life. In fact, he puts poison in her mouth, claiming it…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

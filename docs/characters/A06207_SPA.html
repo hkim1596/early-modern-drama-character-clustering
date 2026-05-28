@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SPA in A King and No King · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SPA</span>
+</nav>
+
+<h1>SPA</h1>
+<p class="lede">in <em>A King and No King</em> — Beaumont, FrancisFletcher, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1619</td></tr>
+<tr><th>Words</th><td>882</td></tr>
+<tr><th>Characters</th><td>4383</td></tr>
+<tr><th>BritDrama no.</th><td>1636</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">can neuer reach: But why ſhould you <mark>goe</mark> to Iberia? That conquer&#x27;d thee, Tigranes he <mark>has</mark> won but halfe of Thy bodie; but thy minde may be as free As his, his will <mark>did</mark> neuer combate thine, And take it priſoner: O Tigranes, I know you are to ſee a Ladie there, To ſee, and like I feare: perhaps the hope Of her makes you forget me</div>
+<div class="excerpt">wiſh: farewell. Can you imagine that a longing maide VVhen ſhee beholds you, can be puld <mark>away</mark> VVith words from louing you? VVhy, I had rather looſe you: Can my <mark>heart</mark> Conſent to let my tongue throw out ſuch words, And I that euer yet ſpoke what I thought, Shall find it ſuch a thing at firſt to lie: Sir I ſhall find no want of</div>
+<div class="excerpt">you hee&#x27;s vaine and fooliſh: Tis true, he is not, would he would ſeem leſſe: I know a Lady may, and more I feare Another Lady will. I doe beſeech you Madam ſend <mark>away</mark> Your other women, and receiue from me A few ſad words, which ſet againſt your ioyes, May make vm ſhine the more. I kneele a ſtranger here to beg a thing Vnfit for</div>
+<div class="excerpt">mine. Alas, tis of that nature, that it muſt Be vtterd, I, and granted, or I die: I am aſham&#x27;d to ſpeake it; but where life Lies at the ſtake, I cannot thinke her <mark>woman</mark>, That will not take ſomething vnreaſonably To hazard ſauing of it: I ſhall ſeeme A ſtrange petitioner, that wiſh all ill To them I beg of, ere they giue mee ought,</div>
+<div class="excerpt">To them I beg of, ere they giue mee ought, Yet ſo I muſt: I would you were not faire, Nor wiſe, for in your ill conſiſts my good: If you were fooliſh, you would <mark>heare</mark> my prayer; If foule, you had not power to hinder me: He would not loue you. Nay, my requeſt is more without the bounds Of reaſon yet; for tis not in the power Of</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Nay, let me ſtay alone, And when you ſee Armenia againe, You ſhall behold a Toombe more worth then I, Some friend that either loues me, or my cauſe, VVill build me ſomething to diſtinguiſh me From other women: Many a weeping verſe He will lay on, and much lament thoſe maides That place their loues vnfortunately 〈◊〉 hight, As I haue done, where they can neuer reach: But why ſhould you goe to Iberia? That conquer&#x27;d thee, Tigranes he has won but halfe of Thy bodie; but thy minde may be as free As his, his will did neuer combate thine, And take it priſoner: O Tigranes, I know you are to ſee a Ladie there, To ſee, and like I feare: perhaps the hope Of her makes you forget me ere we part, Be happier then you know to wiſh: farewell. Can you imagine that a longing maide VVhen ſhee beholds you, can be puld away VVith words from louing you? VVhy, I had rather looſe you: Can my heart Conſent to let my tongue throw out ſuch words, And I that euer yet ſpoke what I thought, Shall find it ſuch a thing at firſt to lie: Sir I ſhall find no want of that. I will not take vpon me to gouerne your tongue Sir, you ſhall call me what you pleaſe: Thaleſtris. My truth. Aboue my knee? I hope your Grace knowes him ſo well already, I ſhall not neede to tell you hee&#x27;s vaine and fooliſh: Tis true, he is not, would he would ſeem leſſe: I know a Lady may, and more I feare Another Lady will. I doe beſeech you Madam ſend away Your other women, and receiue from me A few ſad words, which ſet againſt your ioyes, May make vm ſhine the more. I kneele a ſtranger here to beg a thing Vnfit for me to aske, and you to grant, Tis ſuch another ſtrange ill laid requeſt, As if a beggar ſhould intreat a King To leaue his Scepter and his Throne to him, And take his rags to wander ore the World Hungry and cold. As ill is mine. Alas, tis of that nature, that it muſt Be vtterd, I, and granted, or I die: I am aſham&#x27;d to ſpeake it; but where life Lies at the ſtake, I cannot thinke her woman, That will not take ſomething vnreaſonably To hazard ſauing of it: I ſhall ſeeme A ſtrange petitioner, that wiſh all ill To them I beg of, ere they giue mee ought, Yet ſo I muſt: I would you were not faire, Nor wiſe, for in your ill conſiſts my good: If you were fooliſh, you would heare my prayer; If foule, you had not power to hinder me: He would not loue you. Nay, my requeſt is more without the bounds Of reaſon yet; for tis not in the power Of you to doe what I would haue you grant. Your brother brings a Prince into this Land Of ſuch a noble ſhape, ſo ſweete a grace, So full of worth withall, that euery maide That lookes vpon him, giues away her ſelfe To him for euer; and for you to haue He brings him: and ſo mad is my demand, That I deſire you not to haue this man, This excellent man, for whom you needs muſt die, If you ſhould miſſe him. I doe now expect You ſhould laugh at me. Tis by me, His owne deſire too, that you would not loue him. Tis yet His owne deſire, but when he ſees your face, I feare it will not be; therefore I charge you As you haue pitty, ſtop thoſe tender eares From his inchanting voice, cloſe vp thoſe eyes, That you may neither catch a dart from him, Nor he from you: I charge you as you hope To liue in quiet, for when I am dead For certaine I ſhall walke to viſit him, If he breake promiſe with me: for as faſt As oathes without a formall ceremony Can make me, I am to him: Indeed it is not Spaconia is name; but I deſire Not to be knowne to others: O, I feare Tigranes will be caught, he lookes me thinkes As he would change his eyes with her; ſome helpe There is aboue for me I hope. O, tis certaine ſo. Bleſt be that breath. Alas my Fortune. I nere reioyc&#x27;d at any ill to him, But this impriſonment: what ſhall become Of me forſaken? O deere Ladie. 〈2 pages missing〉 Many, and ſtrange ones, I feele my olde fire flame againe, and burne So ſtrong and violent, that ſhould I ſee her Againe, the griefe, and that would kill me 〈◊〉 . No more, the King Sir. This is the impriſonment I haue lookt for alwayes, and the deare place I would chuſe. Though I haue done nothing but what was good, I dare not ſee my Father: It was fault Enough not to acquaint him with that good. O good Sir forgiue me. Should it be meaſur&#x27;d by my meane deſerts, Indeed you are not. Sir. What doe you meane? Sir I was neuer whore. Farewell good Father. But you may ſee another May alter that againe.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A King and No King</div><div class="body">Arbaces has been away from his kingdom for many years fighting a war with Armenia, which he has just won. He has received reports from his Lord Protector, Gobrias, about the virtue and accomplishments of his younger sister Panthea, whom he has not seen since she was nine years old. He offers her hand in marriage to Tigranes, the vanquished Armenian King, but Tigranes demurs. Arbaces takes him back to Iberia to see her for himself. Tigranes’ objection lies in the fact that he already has a girlfriend, Spaconia, and he bribes the cowardly Bessus to bring her along and place her in Panthea’s household. Once there, she begs Panthea not to marry Tigranes, and Panthea agrees. Arane, Arbaces’ mother, has been trying to assassinate him since he came to the throne. Another attempt is foiled, but he pardons her when he returns in triumph. She clearly has an ulterior motive which is known to Gobrias, but both are discreet about its precise nature. Arbaces’ first meeting with Panthea as an adult proves unsettling: he falls in love with her. So does Tigranes. Identifying a rival, Arbaces imprisons him. Torn between desire and conscience, he also imprisons Panthea. Panthea gives Spaconia a token authorizing her to visit Tigranes in prison. He rejects her, but Arbaces finds them together and assumes that she is a go-between. Gobrias importunes him to release Panthea, who persuades him that his suspicions are unfounded: she loves him, and would act upon that love if to do so were not incestuous. The Armenians send Spaconia’s father as an ambassador to negotiate for Tigranes’ release. He believes his daughter has eloped with Bessus, but his denunciations of her bring Tigranes to his senses: he will make Spaconia his Queen. When Arbaces decides to kill Gobrias for corrupting him to incest, the truth comes out. Arbaces is not of royal blood. The old King married Arane when he was old and impotent, and, fearful about the succession, Gobrias and Arane conspired to produce an heir: Gobrias gave Arane his new-born son, and she faked his birth. Later, it proved that the King was not so impotent after all, and he died leaving Arane pregnant with Panthea, but by the time this was known, the young Arbaces had already succeeded to the throne. Since then, Gobrias and Arane have both been trying to put matters to rights, Arane with her murder plots and Gobrias by encouraging Arbaces to marry his putative sister and so establish the legitimacy of his teign. Arbaces publicly announces…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SNAR in Holland&#x27;s Leaguer · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SNAR</span>
+</nav>
+
+<h1>SNAR</h1>
+<p class="lede">in <em>Holland&#x27;s Leaguer</em> — Marmion, Shackerley</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1632</td></tr>
+<tr><th>Words</th><td>470</td></tr>
+<tr><th>Characters</th><td>2586</td></tr>
+<tr><th>BritDrama no.</th><td>2351</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">them forth, and carries ſtill in ſtore A Plaudite, when they breake wind, or urine. He fits his Maſter right, although he nere Tooke meaſure of him, and though he <mark>has</mark> not beene Farre from home, yet will lye like a Traveller. Hee&#x27;ll rather vex you with officiouſneſſe Then you ſhall paſſe unſaluted: his buſineſſe Is onely to be</div>
+<div class="excerpt">then he comes forth ſo bath&#x27;d in perfumes, Had you no ſenſe to guide you, but your noſe, You&#x27;d thinke him a Muske-cat, he ſmels as ranke, As th&#x27;extreame unction of <mark>two</mark> funerals. There was an age When Iuno was a maide, and Iov had no beard, When miſerable Atlas was not oppreſt With ſuch a ſort of Dieties, and each Din&#x27;d by himſelfe:</div>
+<div class="excerpt">to be buſie, and his tongue&#x27;s ſtill walking, Though himſelfe be one of the worſt moveables: A confus&#x27;d lumpe leavened with knavery. Stand by a little, and let&#x27;s <mark>heare</mark> his diſcourſe. To what purpoſe, I wonder, ſhould Nature create this fellow? He is good for nothing elſe, but to maintaine The mutinie of the Paunch, againſt the</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">And all deſire to live long, and healthy; But ambition and luxury will not permit it. Who, he? the moſt beſotted on his beauty; He ſtudies nothing but to court himſelfe; No Muſicke but the harmony of his limbes; No worke of art but his owne ſymmetry, Allures his ſenſe to admiration. And then he comes forth ſo bath&#x27;d in perfumes, Had you no ſenſe to guide you, but your noſe, You&#x27;d thinke him a Muske-cat, he ſmels as ranke, As th&#x27;extreame unction of two funerals. There was an age When Iuno was a maide, and Iov had no beard, When miſerable Atlas was not oppreſt With ſuch a ſort of Dieties, and each Din&#x27;d by himſelfe: before Vſhers and Pages Swarm&#x27;d ſo, and Banquets, and your Maſques came up Riding in Coaches, viſiting, and Titles, So many Playes, and Puritan preachings, That women might be chaſte; now &#x27;tis impoſſible: Now ſhould I finde ſuch a prodigious faith, I&#x27;de honour&#x27;t with a ſacrifice. Then I pronounce The deſtruction of Bedlam, and all mad folkes Shall be thy patients. That&#x27;s a cure Worſe then any diſeaſe. I can as ſoone Beleeve a fire may be extinct with oyle, Or a Fever coold with drinking of Sacke. One that feeds all mens humors that feed him, Can apprehend their ieſts, before they ſpeake them, And with a forced laughter play the Midwife. To bring them forth, and carries ſtill in ſtore A Plaudite, when they breake wind, or urine. He fits his Maſter right, although he nere Tooke meaſure of him, and though he has not beene Farre from home, yet will lye like a Traveller. Hee&#x27;ll rather vex you with officiouſneſſe Then you ſhall paſſe unſaluted: his buſineſſe Is onely to be buſie, and his tongue&#x27;s ſtill walking, Though himſelfe be one of the worſt moveables: A confus&#x27;d lumpe leavened with knavery. Stand by a little, and let&#x27;s heare his diſcourſe. To what purpoſe, I wonder, ſhould Nature create this fellow? He is good for nothing elſe, but to maintaine The mutinie of the Paunch, againſt the members. Keepe him from his Whore, and his Sacke, and you Detaine him from his center. How the rancke Raskall Is overgrowne with fleſh and villanie? Very likely. HOw now Ardelio, what? ſo melancholy? Why what&#x27;s the matter? Tis much, The ſtrange activity that ſome men haue To diſpatch buſineſſe. Yes, and what then? They are like to be well edified. But how if you ſhould chance to meet Diana? Take heed of her, it is a teſty Girle, A profeſt Virgin. Phil. &#x27;Tis my ambition To meet with her, to bath my limbs with her, In the ſame Well, ſhoot in her bow, dance with her, And get the formoſt of her troupe with child, And turne the rape on Iupiter. Fine yfaith.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Holland&#x27;s Leaguer</div><div class="body">Six years ago, Faustina’s father sent her abroad to keep her away from her love, Fidelio, and made her swear not to marry for seven years. Now the old man is dead, she has returned to London, known only to Fidelio, but insists on keeping her oath for the last remaining year. Her brother Philautus is in love with himself, which distresses his friends and offends his wife, but gives his servant Ardelio the opportunity to steal from him by conveying away property into storage at an accomplice’s house. Fidelio plans to make him fall in love with Faustina; this will both cure him and test her fidelity. He explains it to Faustina as a plan to humiliate a lord who has cast aspersions on women. Philautus makes advances to Faustina on the assumption that all women are libidinous and enjoy being raped from time to time; but he is impressed by her militant chastity, and accedes to her demand that he prove his honour in battle. He later returns from the wars, cured of narcissism, and asks Faustina’s pardon for his earlier insolence. She identifies herself as his sister, and he gives his blessing to her marriage to Fidelio; so she agrees to abandon her oath before the seven years are out. On learning that Ardelio is a villain, Philautus dismisses him. He goes to collect the stolen goods, only to find that his partner in crime will not acknowledge that the items even exist. The ensuing argument is overheard, and the miscreants are both arrested, In the sub-plot, Agurtes intends to cheat the courtly name-dropper Trimalchio by introducing him to a young heiress - who is, in reality, his daughter and lifelong accomplice Millicent. When he visits Millicent, Trimalchio brings along Philautus’ brother-in-law ===== PAGE 537 ===== 1631 as Capritio, wiie: has’ been brought to towit: oleae: courtly manners.:Agurtés suggests to Trimalchio that: an Italian. (or Italianated) - Signor MisexE Kandy apritio’s tutor traveller, he may have&#x27;rivals for the heiress’s hand ii marriage. ~ AL PANDER at Holland’s} 1 daa Meanwhile Capritio woos Millicent’ 3 ‘Maids: ‘Margery. |ee Trimalchio declines to join. ‘Philautus: atthe. Anilitary — leaguer, preferring to visit: Holland&#x27;s: premises and arrests the: cliente: including T. sionals ; : They are ‘brought 4 and Capritio’s. tutor, ‘Miscellank before..a justice; who is really Agurtes. in @ second disguise; but freed when a letter arrives trom. hadlltéent ! asking.-for their reprieve. Miscellanio: is convinced that the letter was sent on his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

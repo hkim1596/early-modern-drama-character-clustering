@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BEL in The Wedding · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BEL</span>
+</nav>
+
+<h1>BEL</h1>
+<p class="lede">in <em>The Wedding</em> — Shirley, James</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1629</td></tr>
+<tr><th>Words</th><td>1342</td></tr>
+<tr><th>Characters</th><td>7245</td></tr>
+<tr><th>BritDrama no.</th><td>2184</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">you beene carefull, to inuite those friends, you had direction for? We shall want no guests then. How sir? Who are they? Oh hees reported a good Trencher-man, He <mark>has</mark> a tall stomacke, he shall be welcome. How does he liue liue? He does not eate it. Who is the other? Hee&#x27;s a great man indeede. They will be well met. How liues</div>
+<div class="excerpt">young Captayn si your Nephew? They are inseperable friends, as they had Diuided hearts, they both are glad, when eyther Mee e a good fortune. Do mistresse Iane, she <mark>has</mark> Her maides blush yet, she&#x27;le make you amends for this, And ere&#x27;t be long I hope &#x27;dance at your wedding. Exit Iane. Master Lan by, It would refresh my age to see</div>
+<div class="excerpt">Souldier: for heauens sake, permit me Chastise the most vncharitable slander Of this bad man. Not iniur&#x27;d me? what is there then in nature, Left, to be cald an iniury? didst not mocke Me, and m poore fond girle with marriage? Till all things were design&#x27;d, the very day When Hymen should haue worne his saffron robe: My friends inuited,</div>
+<div class="excerpt">He that pretended marriage—he gaue her A wound before. Iustice, iustice, I will haue iustice: Ha Gratiana ! Art a liue, oh my ioy, it growes To mighty for me, I <mark>must</mark> weepe a little To saue my <mark>heart</mark>— I ha not wept enough for ioy Gratiana That th&#x27;art aliue yet — I vnderstand nothing Beside this comfort. It was ill done sir — I</div>
+<div class="excerpt">sent off. Where? Not well, tis then no time to chide: How fare you sir? Ha? Into the Garden Gentle-men. This begets my wonder, master Lodam. Not speak with him, he <mark>must</mark> haue stronger guard To keepe me out: where&#x27;s Beauford? Then there&#x27;s a Villaine. I <mark>must</mark> not spin it finer, till you make me Vnderstand better, why my daughter, and</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Isaac. Haue you beene carefull, to inuite those friends, you had direction for? We shall want no guests then. How sir? Who are they? Oh hees reported a good Trencher-man, He has a tall stomacke, he shall be welcome. How does he liue liue? He does not eate it. Who is the other? Hee&#x27;s a great man indeede. They will be well met. How liues he? Mr. Beauford and Captayne Landby: Isaac, call forth my Daughter. I possesse nothing but in trust for thee, Gratiana makes all th ne. Your friendship noble Captaine to Mr. Beauford, Makes your person most welcome, Had you no other merit, pray enter. Exe. Bea. &amp; Cap. Heauen hath already crownd my gray hayres! I liue to see my daughter married To a noble hu band, the enuye of our time, And exact patterne of a Gentleman, As hopefull as the Spring, I am growne proud, Euen in my age. Exit. Tis hee. Mr. Marwood, you haue beene a great stranger to the City, or my house for the course entertaynement you receiu&#x27;d, hath beene vnworthy of your visit. Beauford, Gentlemen enter my house, And perfect your embraces there: I lead the way. Exit. Y&#x27;are welcome Mr Landby, and mistresse Iane. Where&#x27;s the young Captayn si your Nephew? They are inseperable friends, as they had Diuided hearts, they both are glad, when eyther Mee e a good fortune. Do mistresse Iane, she has Her maides blush yet, she&#x27;le make you amends for this, And ere&#x27;t be long I hope &#x27;dance at your wedding. Exit Iane. Master Lan by, It would refresh my age to see her fruitful to him, I should finde a blessing for a young eaufor , and be glad to d ndle him, the First newes of a boy borne by my daughter Would set me backe seauen yeares: O Master Landby, Old men do neuer truely doate, vntill Their children bring em babies. Neuer see me, But when you are inuited. Y&#x27;aue a fresh seruant master Rawbone, A proper fellow, and maintaines himselfe Hansomely. We expect him sir, euery minute. Can you blame me sir: I would not haue our mornings expectation Frustrate— I know not what to thinke. The morne growes old. What should procure his absence; he departed But odly yester-day. But we see neither. That&#x27;s another iealousie. Ha? Master Lodam, W lcome. Saw you master Beauford sir. My daughter vndone, name what vnhappines, My heart already doth beginne to prophesie How 〈…〉 , name what disaster, giue it Expression pray, what is the newes? What ist? Doth it concerne my knowledge? trifle not. Saw you master Beauford? Pray heauen hee may: My daughter. Dost not wonder girle at Beaufords absence? Gratiana. Lod spies Iane. Isaac.— Exit Isaac as sent off. Where? Not well, tis then no time to chide: How fare you sir? Ha? Into the Garden Gentle-men. This begets my wonder, master Lodam. Not speak with him, he must haue stronger guard To keepe me out: where&#x27;s Beauford? Then there&#x27;s a Villaine. I must not spin it finer, till you make me Vnderstand better, why my daughter, and In her, my family is abus&#x27;d. Is she not honest, will you Make her then a whore? Thou lyest, nor can my age make me appeare Vnworthy a satisfactio from thy sword. Keep me not from him Captaine he has in this Giuen a fresh wound, I came t&#x27;expostulate, The reason of a former suffering, Which vnto this was charity, as thou art A Gentle-man, I dare thee to the Combate: Contemne not Beauford my gray haires, if t&#x27;has A Noble soule, keepe not this distance; meete me, Thou art a Souldier: for heauens sake, permit me Chastise the most vncharitable slander Of this bad man. Not iniur&#x27;d me? what is there then in nature, Left, to be cald an iniury? didst not mocke Me, and m poore fond girle with marriage? Till all things were design&#x27;d, the very day When Hymen should haue worne his saffron robe: My friends inuited, and prepar&#x27;d to call Her Bride; and yet, as if all this could not (Summ&#x27;d vp together) make an iniury: Does thy corrupted soule at last conspire To take her white name from her? —giue me leaue To expresse a Father, in a teare, or two, For my wrong&#x27;d child. O Beauford! thou hast rob A father, and a daughter—but I wo not Vsurpe heauens iustice, which shall punish thee &#x27;Boue my weake arme; mayst thou liue, to haue Thy heart as ill rewarded, to be a father At my yeares, haue one daughter, and no more Belou&#x27;d as mine, so mock&#x27;d, and then cald Whore. Whether art fled Gratiana? that I can Conuerse with none to tell mee thou art still A mortall? taken hence by miracle? Though angels should intice her hence, to heauen, She was so full of piety, to her father, She would first take her leaue. Tis so, hee murder&#x27;d her; For he that first would rob her of her honor, W uld or feare after-ward to kill Gratiana, He shall be arrangn&#x27;d for&#x27;t; —but where shall wee Get honest men enough to make a Iury? That dare be conscionable, when the Iudge Lookes on, and frownes vpon the Verdict, men That will not be corrupted, to fauour A great man euidence, but preferre iustice To ready mony? h this age is barren— Guarded for what? Gratiana. Oh my girle, my Gratiana, — Isaac, Beauford is taken, tis apparent he hath slayne my daughter, and shanot I reuenge her Death? Ile prosecute the Law with violence agaynst him, not leaue the Iudge, till hee pronounce his sentence, then Ile dye, and carry Gratiana the newes before him. Follow me ▪ Exeunt. But I ha found the way, tis but procuring Acquaintance with the fore-man of the Iury, The Sessions bell-weather, he leades the rest Like sheepe when hee makes a gap, they follow In huddle to his sentence. I am a little serious—do not trouble mee. I n yther know, nor care for you, vnlesse You can bee silent. Away foole. A Physition? can you cure my daughter? Cannot you find her out by arte? a good Physition, shud be acquainted with the Starres: Prethee erect a figure, graue Astronomer, Sh&#x27;at ha the minute she departed; turne Thy Ephemerides a little, ile lend Thee Ptolomy, and a nest of learned Rabbies To iudge by: te l me whither she be a liue, Or dead, and thou shalt bee my Doctor, ile Giue thee a round per Annum pension, And thou shalt kill me for it. What sayes the Rauen? Ha&#x27;your pardon gentle sir I know you now, Impute it to my griefe, t&#x27;hath almost made mee Forget my selfe. Doctor I am sicke, I&#x27;me very sicke at heart losse of my daughter I feare, will make me mad, how long d&#x27;ee thinke Mans nature able to resist it, can Your loue or arte prescribe your friend a Cordial? No, no, you cannot. As these? why do you know what tis to Loose a daughter? you conuerse with men, that Are diseas&#x27;d in body; punish&#x27;d with a gout Or feauer: yet some of these are held The shames of physicke, but to th&#x27;mind you can Apply no salutary medicine: My daughter sir, my daughter— Speake well A&#x27;th dead, for liuing shee would not be absent Thus from mee, shee was euer dutifull Tooke pleasure in obedience: oh my child, But I haue strong suspition, by whom She&#x27;s made away. Beauford — He that pretended marriage—he gaue her A wound before. Iustice, iustice, I will haue iustice: Ha Gratiana ! Art a liue, oh my ioy, it growes To mighty for me, I must weepe a little To saue my heart— I ha not wept enough for ioy Gratiana That th&#x27;art aliue yet — I vnderstand nothing Beside this comfort. It was ill done sir — I am in a laborinth? Ist possible? Both my lou&#x27;d children. You le marry her. Young Hauer. Away, away. Set on.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Wedding</div><div class="body">Beauford is to marry Sir John Belfare’s daughter, Gratiana, but on the eve of the wedding his kinsman Marwood tells him that she is unchaste: he himself has slept with her. Beauford fights a duel with him in the park; Marwood is wounded, but still insists that his story is true. Beauford sends a surgeon to him, but the body disappears before he arrives, taken away for treatment by the park gamekeeper’s wife. Beauford accuses and jilts Gratiana on the day of the wedding. Questioned by. Beauford’s friend Captain Landby, Gratiana insists that she is a virgin, and he offers to help vindicate her. At his instigation, she writes to Beauford pretending to have drowned herself, and shuts herself away in the house of Landby’s uncle, Justice Landby. Milisent, a boy servant, tells Gratiana that Marwood has died insisting on the veracity of his accusation: he slept with Gratiana with the connivance of her guardian Cardona. Milisent then tells Beauford that Marwood was mistaken: Gratiana is innocent, and Cardona is to blame. The boy also claims to have brought him Marwood’s body, but the coffin actually contains the living Gratiana, and the lovers are reconciled. Beauford is arrested for Marwood’s murder arid brought before Justice Landby. Belfare rushes to the judge&#x27;s house to lay an additional accusation for the rourder of the missing Gratiana, only to find her there alive. The other murder charge proves. equally iiitounded: Marwood too is present in disguise. Cardona admits that she arranged an -assignation between Marwood and Gratiana, but substituted her 1626 own daughter Lucibel, who subsequently disappeared. She too is present: she took on a male identity and became Milisent. Marwood agrees to marry her, and Beauford and Gratiana resume their engagement. In the sub-plot, Justice Landby encourages his daughter Jane to consider two inappropriate suitors, the thin Rawbone and the obese Loadum, in order to test her judgement. She is already in love with Haver, who has got himself a job as Rawbone’s servant in order to have access to her. Loadum and Rawbone consider fighting a duel over Jane; Rawbone agrees when Haver offers to fight in his place, while Loadum is persuaded upon learning that Rawbone is not considered to be much of a duellist - so he gets a surprise when his opponent, Haver in disguise, proves ready and able to fight. Justice Landby finds a love- letter from Haver in Jane’s prayer book and, disapproving of a marriage to the impecunious Haver, decides…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

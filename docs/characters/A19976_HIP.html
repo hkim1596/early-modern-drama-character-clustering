@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HIP in The Isle of Gulls · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>HIP</span>
+</nav>
+
+<h1>HIP</h1>
+<p class="lede">in <em>The Isle of Gulls</em> — Day, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1606</td></tr>
+<tr><th>Words</th><td>1022</td></tr>
+<tr><th>Characters</th><td>5228</td></tr>
+<tr><th>BritDrama no.</th><td>1491</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">forſooth, onely to keep vs fro ̄ mariage. By this ſtone me thinks I long like a <mark>woman</mark> with child, till I know the difference betwixt a maid and a wife. O that I had beene with thee I might ha beene ſo to: for loue of marriage how? Is that a creature? And with old women to. In what agreed you? Would I had dreampt I might ha done</div>
+<div class="excerpt">thee I might ha beene ſo to: for loue of marriage how? Is that a creature? And with old women to. In what agreed you? Would I had dreampt I might ha done ſo to. O twould ha vext a ſaint, my blood would burne To be ſo neere, and miſſe ſo good a turne. You ſhould not be my ſiſter elſe. And in good ear neſt we are not fatherd much</div>
+<div class="excerpt">they are loth to die. For our loues ſiſter, you may ſee the properer women, the worſe lucke. No at any hand ſiſter, for with a feare it comes. Then let em keepe <mark>away</mark> ſtill, for I haue vowed my maiden-head ſhall neuer doe homage to the bed of a coward. Yes ſayth Dametas. Thanke you good father, who euer looſe by the bargaine,</div>
+<div class="excerpt">indeede cleane contrary to the world, he weares the worſt ſide outward, &amp; is much better then he ſeemes: but what thinke you of your manly Amazon. How euer man or <mark>woman</mark>, the ieſt holds currant in one. You were as ſhe is, but faith madam Mopſa, I perceiue my ſer uant Dorus beares a months mind to you, be not ſo ſtraight laced to</div>
+<div class="excerpt">ſer uant Dorus beares a months mind to you, be not ſo ſtraight laced to him. Mop. Straight lac&#x27;d, ſgod mend me I am not lac&#x27;d at all, am I Dorus, no in ſoth, I <mark>goe</mark> wide ope wenſday, I neuer lace my ſelfe but on ſondaies, &amp; that for feare I ſhould burſt with eating of plum por ridge. Hip. I mean let fall ſome comfortable lookes</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">A prize, a prize, rare worke for Fencers. Well then ſiſter, I ſee we muſt to hap-hazard for husbands. Loue and be thy will, ſend mee one with a fayre table in his forhead, like Time. VVhy your quotidian, Dametas the Court ſurfet, hee that dwells in your eye, like a diſeaſe in your blood. He is the moſt miſhapen ſute of gentility that euer the Court wore. Nay, you haue beſtowed too much of the making of him vp already. So was the end of ours to liue in peace, And not to tyranniſe on harmeleſſe beaſtes, But Forreſters, like Images ſet forth The tyrannie of greatneſſe without pittie, As they the Deare, ſo couetous wealth purſues The trembling ſtate of their inferiors. And to claſpe vp the volume of their ſinnes, They drinke theyr blood, and clothe them with their skinnes, Then ceaſe to preſſe poore beaſts with tyrannie, You loue your liues, thinke they are loth to die. For our loues ſiſter, you may ſee the properer women, the worſe lucke. No at any hand ſiſter, for with a feare it comes. Then let em keepe away ſtill, for I haue vowed my maiden-head ſhall neuer doe homage to the bed of a coward. Yes ſayth Dametas. Thanke you good father, who euer looſe by the bargaine, I ha got me a ſeruant by the match: wot ſerue me fellow? Ile try your du ious ſeruice: I command, Your knee to kiſſe the ground, your lip my hand. Wot te beleeue me ſiſter, I neuer eate a cherry, but it puts me in mind of a husband, it kiſſes my lippes with ſuch a harmleſſe pret tines. Of what, not of husbands Violetta. Surfet after what, a husband? I warrant you ſiſter, an old lady in Lacedemon taught mee a preſeruatiue againſt that. Marry this it was, ſtil ſayd ſhe, betwixt euery cherry ſaid ſhee, be ſure to cracke a ſtone ſaid ſhe. You muſt take heede you cracke not too many to, for you may ſurfet of the ſtone as well as of the cherry. So haue I to for this time, but ſiſter, is it not a ſtrange kind of ſeruile libertie that we liue in heere in Archadea? And for what cauſe forſooth, onely to keep vs fro ̄ mariage. By this ſtone me thinks I long like a woman with child, till I know the difference betwixt a maid and a wife. O that I had beene with thee I might ha beene ſo to: for loue of marriage how? Is that a creature? And with old women to. In what agreed you? Would I had dreampt I might ha done ſo to. O twould ha vext a ſaint, my blood would burne To be ſo neere, and miſſe ſo good a turne. You ſhould not be my ſiſter elſe. And in good ear neſt we are not fatherd much amis. As of a ſweet Almond in a rugged ſhell, the ſun in a clowde, or a welthy diamond in a rock, indeede cleane contrary to the world, he weares the worſt ſide outward, &amp; is much better then he ſeemes: but what thinke you of your manly Amazon. How euer man or woman, the ieſt holds currant in one. You were as ſhe is, but faith madam Mopſa, I perceiue my ſer uant Dorus beares a months mind to you, be not ſo ſtraight laced to him. Mop. Straight lac&#x27;d, ſgod mend me I am not lac&#x27;d at all, am I Dorus, no in ſoth, I goe wide ope wenſday, I neuer lace my ſelfe but on ſondaies, &amp; that for feare I ſhould burſt with eating of plum por ridge. Hip. I mean let fall ſome comfortable lookes on your ſuter. Why thats kindly ſaid, &amp; Dorus your loue is verie ambitious, to climbe ſo hie as the beautifull Mopſa. Theſe extraordinary graces muſt not want admiration, but where&#x27;s your mother. Nay, ſhe cannot be ſaid to ſteale a nap, for the noiſe ſhe makes herſelfe would diſcouer her theft: but Dorus ſith your fortunes are poore, you ſhould ſtudie to enoble your deſerts, and beget effects worthy to court and win your Ladies acceptance. What a kenes neceſsity ſets vpon the edge of inuention, truſt me Mopſa your ſeruant ſpeakes wel, &amp; if he can proue himſelfe the man he ſpeakes of, and my wiſhes wel hope, Demetrius, you haue no reaſon to thinke ſcorne of him. I am no counſeller, but ſhold Demetrius in like diſguiſe court me, thus would I imbrace him, thus ſeale my affections with a kiſſe, &amp; thus argue: think not Demetrius that the clowds of baſenes could ſo muffle thee, but that the ſun of valor ſhind thro them long ſince, &amp; in regard of thy ſeruiceable dutie in concealing, and vnpre ented policy in thus making known thy loue, ſort but out fit oportunity, &amp; in deſpight of all gardians ſtrict obſeruance, go where thou wilt, the worth of Demetrius ſhall draw Hippolita, this would I vow, and this will I performe. You were worſe then the deuil els, for they ſay hee helps his ſeruants, then you may doe little &amp; you cannot helpe yours. Truſt me but you haue deſerued high commendation. I do not thinke but the ladies had ſome hand int: I can not detract from the ladies worth, for I knowem for excellent work women, I by my faith do I, nay your beſt tailors are arrant botchers to em, you ſhal haue a lady make an end of a ſute, a court ſute, eſpe cially when all the tailors in a countrey know not how to ſet a ſtich int. your beſt court ſuits that are, are finiſht by ladies, I haue known a ſuit my ſelfe lien a making and maring 3, 4, and fiue yeare together and then a lady hath deſpacht it in a month with a wet finger, ſuch a finger might the ladies haue in your plot. If in any thing your wits deſerue the bable tis in that, And in a ſhip to,</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Isle of Gulls</div><div class="body">Three members of the audience ask the Prologue about the play they are to see, The Isle of Gulls. They prove to have irreconcilable tastes in drama: one wants satire, one bawdy, and one bombast, but all eventually agree to give the play a chance. Concerned about his daughters’ unsuitable suitors, Basilius retires with them for a year to an uninhabited, fortified island, leaving his brother to rule Arcadia in his stead. A proclamation challenges royal would-be suitors to win the princesses by stealth. This attracts Julio and Amintor to the island, alerted by Basilius’ unworthy favourite Dametas; and also Lysander and Demetrius, respectively disguised as Zelmane, an Amazon, and Dorus, a woodman. ‘Zelmane’ becomes Violetta’s companion, and Demetrius enters Dametas’ service. Dametas arranges an opportunity for Julio and Amintor to rape the princesses by isolating them during a hunt. They kidnap the girls, but ‘Zelmane’ and ‘Dorus’ rescue them. ‘Dorus’ is rewarded with an appointment as Hippolita’s attendant, but the incident also casts doubt on ‘Zelmane’s’ gender, so Lysander loses his access to Violetta. Basilius and Gynecia are both enamoured of Lysander (each believing him to be a different sex), and each persuades him to accept the other’s advances for sport. Meanwhile Dametas’ daughter Mopsa falls in love with ‘Dorus’. Amintor and Julio continue to have ill success: they pose as envoys from Basilius’ brother, appealing for him to deal with an outbreak of abuses, corruption, and crime, but they are denied their promised reward by the avaricious Dametas. ‘Dorus’ gets rid of Dametas and his family by sending each of them on a wild-goose chase: Dametas to find buried treasure, his jealous wife Miso to Dametas’ supposed mistress, and Mopsa to the chapel in Adonis’ bower where a priest will marry them. ‘Zelmane’ similarly disposes of Basilius and Gynecia by arranging assignations with each at the same chapel, with the priest Manasses standing in for the Amazon. This frees Lysander and Demetrius to elope with the princesses; but their plans are overheard by Amintor and Julio, whom they then employ to smuggle the girls off the island. Digging for the gold, Dametas finds only a scornful poem directing him to Adonis’ bower, and he curses 1606 poets. Everyone meets up at the bower, and the knot of identity confusion is unravelled. Lysander and Demetrius present themselves to Basilius as his new sons-in-law; but Amintor and Julio have double- crossed them and kept…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

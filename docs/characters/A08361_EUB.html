@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EUB in 39 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_10.html">Cluster 10 — 10: death, realme, porrex</a> ›
+  <span>EUB</span>
+</nav>
+
+<h1>EUB</h1>
+<p class="lede">in <em>39</em> — [15, 16]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1570</td></tr>
+<tr><th>Words</th><td>923</td></tr>
+<tr><th>Characters</th><td>5095</td></tr>
+<tr><th>BritDrama no.</th><td>39</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 10 (<em>death, realme, porrex, noble, both, lordes…</em>). Matches are highlighted.</p>
+<div class="excerpt">seemed best to lyke. Pardon I craue, and that my wordes be de ed To flowe from hartie zeale vnto your <mark>grace</mark>, And to the safetie of your common weale. To parte your <mark>realme</mark> vnto my <mark>lordes</mark> your sounes, I thinke not good for you, ne yet for them, But worste of all for this our natiue lande, Within one land, one single rule is best: Diuided</div>
+<div class="excerpt">the one, that the other be forsene. Arme not vnskilfulnesse with princely power. But you that long haue wisely ruled the reignes. Of royaltie within your <mark>noble</mark> <mark>realme</mark>, So holde them, while the Gods for our auayles Shall stretch the thred of your prolonged daies. To soone he clambe into the flaming carre, Whose want of skill did</div>
+<div class="excerpt">Shall stretch the thred of your prolonged daies. To soone he clambe into the flaming carre, Whose want of skill did set the earth on fire. Time and example of your <mark>noble</mark> <mark>grace</mark>, Shall teach your sonnes <mark>both</mark> to obey and rule, When tune hath taught them, time shal make the ̄ place, The place that now is full and so I pray Long it remaine,</div>
+<div class="excerpt">Your aged life drawes on to febler tyme, Wherin you shall lesse able be to beare The trauailes that in youth you haue susteyned, <mark>Both</mark> in your persones and your realmes defence. If planting now your sonnes in furder partes, You sende them furder from your present reach, Lesse shall you know how they them selues demeane: Traiterous</div>
+<div class="excerpt">geues a rightfull hope To be your heire and to succede your reigne, Shall thinke that he doth suffre greater wrong Than he perchaunce will beare, if power serue. <mark>Porrex</mark> the younger so vpraised in state, Perhappes in courage will be raysed also. If flatterie then, which fayles not to assaile The tendre mindes of yet vnskilfull youth,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Your wonted true regarde of faithfull hartes, Makes me (O kinge) the bolder to presume, To speake what I conceiue within my brest, Although the same do not agree at all With that which other here my lordes haue said. Nor which your selfe haue seemed best to lyke. Pardon I craue, and that my wordes be de ed To flowe from hartie zeale vnto your grace, And to the safetie of your common weale. To parte your realme vnto my lordes your sounes, I thinke not good for you, ne yet for them, But worste of all for this our natiue lande, Within one land, one single rule is best: Diuided reignes do make diuided hartes. But peace preserues the countrey and the prince, Suche is in man the gredy minde to reigne, So great is his desire to climbe alofte, In worldly stage the stateliest partes to beare, That faith and iustice and all kindly loue, Do yelde vnto desire of soueraignitie, Where egall state doth raise an egall hope To winne the thing that either wold attaine. Your grace remembreth how in passed yeres The mightie Brute, first prince of all this lande, Possessed the same and ruled it well in one, He thinking that the compasse did suffice, For his three sonnes three kingdoms eke to make, Cut it in three, as you would now in twaine. But how much Brittish bloud hath since bene spilt, To ioyne againe the sondred vnitie? What princes slaine before their tunely houre? What wast of townes and people in the lande? What treasons heaped on murders and on spoiles? Whose iust reuenge euen yet is scarcely ceased, Ruthefull remembraunce is yet rawe in minde. The Gods forbyd the like to chaunce againe: And you (O king) geue not the cause therof. My Lord Ferrex your elder sonne, perhappes Whome kinde and custome geues a rightfull hope To be your heire and to succede your reigne, Shall thinke that he doth suffre greater wrong Than he perchaunce will beare, if power serue. Porrex the younger so vpraised in state, Perhappes in courage will be raysed also. If flatterie then, which fayles not to assaile The tendre mindes of yet vnskilfull youth, In one shall kindle and encrease disdaine, And enuie in the others harte enflame, This fire shall waste their loue, their liues, their land, And ruthefull ruine shall destroy them both. I wishe not this (O kyng) so to befall, But feare the thing, that I do most abhorre. Geue no beginning to so dreadfull ende. Kepe them in order and obedience: And let them both by now obeying you, Learne such behauiour as beseemes their state, The elder, myldenesse in his gouernaunce, The yonger, a yelding contentednesse. And kepe them neare vnto your presence still, That they restreyned by the awe of you, May liue in compasse of well tempred staye, And passe the perilles of their youthfull yeares. Your aged life drawes on to febler tyme, Wherin you shall lesse able be to beare The trauailes that in youth you haue susteyned, Both in your persones and your realmes defence. If planting now your sonnes in furder partes, You sende them furder from your present reach, Lesse shall you know how they them selues demeane: Traiterous corrupters of their plyant youth, Shall haue vnspied a muche more free accesse, And if ambition and inflamed disdaine Shall arme the one, the other, or them both, To ciuill warre, or to vsurping pride, Late shall you rue, that you ne recked before. Good is I graunt of all to hope the best, But not to liue still dreadlesse of the worst. So truste the one, that the other be forsene. Arme not vnskilfulnesse with princely power. But you that long haue wisely ruled the reignes. Of royaltie within your noble realme, So holde them, while the Gods for our auayles Shall stretch the thred of your prolonged daies. To soone he clambe into the flaming carre, Whose want of skill did set the earth on fire. Time and example of your noble grace, Shall teach your sonnes both to obey and rule, When tune hath taught them, time shal make the ̄ place, The place that now is full and so I pray Long it remaine, to comforte of vs all. What meaneth this? Loe yonder comes in hast Philander from my lord your yonger sonne. Loe here the perill that was erst foresene, When you, (O king) did first deuide your lande, And yelde your present reigne vnto your sonnes, But now (O noble prince) now is no time To waile and plaine, and wast your wofull life. Now is the time for present good aduise. Sorow doth darke the iudgement of the wytte. &quot; The hart vnbroken and the courage free &quot; From feble faintnesse of bootelesse despeire, &quot; Doth either ryse to safetie or renowme &quot; By noble valure of vnuanquisht minde, &quot; Or yet doth perishe in more happy sort. Your grace may send to either of your sonnes Some one both wise and noble personage, Which with good counsell and with weightie name, Of father, shall present before their eyes Your hest, your life, your safetie and their owne, The present mischiefe of their deadly strife. And in the while, assemble you the force Which your commaundement and the spedy hast Of all my lordes here present can prepare. The terrour of your mightie power shall stay The rage of both, or yet of one at lest.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_10.html">Cluster 10 — 10: death, realme, porrex</a> page.
+</div>
+</div></body></html>

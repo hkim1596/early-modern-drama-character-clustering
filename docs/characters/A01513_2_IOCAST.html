@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IOCAST in Jocasta · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> ›
+  <span>IOCAST</span>
+</nav>
+
+<h1>IOCAST</h1>
+<p class="lede">in <em>Jocasta</em> — Gascoigne, GeorgeKinwelmershe, FrancisYelverton, ChristopherEuripidesDolce, Lodovico</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1573</td></tr>
+<tr><th>Words</th><td>647</td></tr>
+<tr><th>Characters</th><td>3574</td></tr>
+<tr><th>BritDrama no.</th><td>438</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 18 (<em>death, thebes, did, myne, eke, wyth…</em>). Matches are highlighted.</p>
+<div class="excerpt">vnworthie exile thy brother thée gaue: Ne was there euer sonne or friende farre off, Of his <mark>deare</mark> frendes or <mark>mother</mark> so desyred, As thy returne, in all the towne of <mark>Thebes</mark>. And of my selfe more than the rest to speake, I haue as thou mayste sée, cleane cast asyde My princely roabes, and thus in worfull wéede, Bewrapped haue these</div>
+<div class="excerpt">Naught else but teares haue trickled from <mark>myne</mark> eyes, And <mark>eke</mark> thy wretched blynde and aged syre, Since first he hearde what warre twéene you there was, As one that <mark>did</mark> his bitter cursse repent, Or that he prayed to Ioue for your decaye, With stretching string, or else with blouddie knyfe Hath sought full ofte to ende his loathed</div>
+<div class="excerpt">whome I sighed haue so often syth, For whom I spende bothe nightes and dayes in teares? O sonne, O swéete and my desyred sonne, These eyes they sée, these handes of <mark>myne</mark> thée touche, Yet scarsly can this mynde beléeue the same, And scarsly can this brused breast susteyne The sodeyne ioye that is inclosde therein: O gladsome glasse,</div>
+<div class="excerpt">more than the rest to speake, I haue as thou mayste sée, cleane cast asyde My princely roabes, and thus in worfull wéede, Bewrapped haue these lustlesse limmes of <mark>myne</mark>: Naught else but teares haue trickled from <mark>myne</mark> eyes, And <mark>eke</mark> thy wretched blynde and aged syre, Since first he hearde what warre twéene you there was, As one that</div>
+<div class="excerpt">seruaunt lacketh libertie To speake his mynde, without his masters leaue. And séemed this so grieuous vnto thée? What helpeth moste in suche aduersitie? And howe didst thou before thy mariage sonne, Mainteyne thy lyfe, a straunger so bestad? Thy fathers friends and thyne, <mark>did</mark> they not helpe For to reléeue that neked néede of</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">My faithfull frendes, my deare beloued maydes, I come at call, and at your wordes I moue My féebled féete with age and agonie: Where is my sonne? O tell me where is he, For whome I sighed haue so often syth, For whom I spende bothe nightes and dayes in teares? O sonne, O swéete and my desyred sonne, These eyes they sée, these handes of myne thée touche, Yet scarsly can this mynde beléeue the same, And scarsly can this brused breast susteyne The sodeyne ioye that is inclosde therein: O gladsome glasse, wherein I sée my selfe. At thy departe, O louely chylde, thou lefte My house in teares, and mée thy wretched dame, Myrrour of martirdome, waymenting still Th vnworthie exile thy brother thée gaue: Ne was there euer sonne or friende farre off, Of his deare frendes or mother so desyred, As thy returne, in all the towne of Thebes. And of my selfe more than the rest to speake, I haue as thou mayste sée, cleane cast asyde My princely roabes, and thus in worfull wéede, Bewrapped haue these lustlesse limmes of myne: Naught else but teares haue trickled from myne eyes, And eke thy wretched blynde and aged syre, Since first he hearde what warre twéene you there was, As one that did his bitter cursse repent, Or that he prayed to Ioue for your decaye, With stretching string, or else with blouddie knyfe Hath sought full ofte to ende his loathed lyfe. Thou this meane whyle my sonne, hast lingred long In farre and forreyn coastes, and wedded eke, By whome thou mayste, (when heauens appoyntes it so) Straunge issue haue by one a stranger borne, Whiche gréeues me sore, and much the more deare chylde, Bicause I was not present at the same, There to performe thy louing mothers due. But for I fynde thy noble matche so méete, And woorthie bothe for thy degrée and byrthe, I séeke to comforte thée by myne aduise, That thou returne this citie to inhabite, Whiche best of all may séeme to be the bowre, Bothe for thy selfe and for thy noble spouse. Forget thou then thy brothers iniuries, And knowe deare chylde, the harme of all missehap, That happes twixt you, must happe likewyse to mée: Ne can the cruell swoorde so slightly touche Your tender fleshe, but that the selfe same wounde Shall déepely bruse this aged breast of myne. Alas, alas, howe wrekefull wrath of Gods Dothe still afflicte Oedipus progenie: The fyrste cause was thy fathers wicked bedde, And then (Oh why doe I my plagues recompte?) My burdein borne, and your vnhappie birth: &quot;But néedes wée must with pacient heartes abyde, &quot;What so from high the heauens doe prouide. With thée my chylde, fayne woulde I question yet Of certaine things: ne woulde I that my woordes Might thée anoye, ne yet renewe thy griefe. And séemes it not a heauie happe my sonne, To be depriued of thy countrey coastes? And what may moste molest the mynde of man That is exiled from his natiue soyle? Why so? eche seruaunt lacketh libertie To speake his mynde, without his masters leaue. And séemed this so grieuous vnto thée? What helpeth moste in suche aduersitie? And howe didst thou before thy mariage sonne, Mainteyne thy lyfe, a straunger so bestad? Thy fathers friends and thyne, did they not helpe For to reléeue that neked néede of thyne? Thou myghtst haue helpe by thy nobilitie. &quot;Wel ought we then that are but mortall héere, &quot;Aboue all treasure counte our countrey deare: Yet let me knowe my sonne, what cause thée moued To goe to Grece? And how belongs this answere now to thée. And howe yet came it to this straunge effect? Howe couldst thou to this doubtefull enterprise, So many bring, thus armed all at once?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Jocasta</div><div class="body">Oedipus unknowingly murdered his father and married his mother Jocasta; on learning the truth, he blinded himself. His sons imprisoned him and agreed to alternate annually as kings of Thebes: Polynices went into exile while Eteocles took the first turn on the throne; but Eteocles refused to give it up at the end of his year in office, and Polynices has besieged Thebes in association with the King of Argos. Jocasta intervenes as their mother, and persuades Polynices to enter Thebes and meet Eteocles under truce. Eteocles will not hand over power, but offers to accept his brother back as a private citizen. Jocasta is unable to reconcile her sons, and Polynices’ forces prepare for battle. Eteocles names Creon as his successor, and asks him to marry Antigone to his son Haemon. Creon consults Tiresias, and learns that Thebes is doomed to destruction in divine revenge for Jocasta’s incest; only the death of his other son, Menoeceus, can save the city. Keen to die for his country, Menoeceus refuses to go into exile as his father wishes, reports the prophecy to Eteocles, and kills himself. Meanwhile, the battle is indecisive, and Eteocles and Polynices agree to settle their dispute in single combat. Jocasta and Antigone are too late to stop them killing each other: arriving to find them both dying, Jocasta stabs herself with Polynices’ dagger. The besieging army is massacred by the Thebans. Antigone brings the three bodies back to Thebes and tells her father what has happened. Creon declares himself King of Thebes and gives order for the funerals of Jocasta and Eteocles, but demands that Polynices, as an enemy of the city, should remain unburied. Antigone protests, pleads, and refuses to marry Haemon, threatening to kill him and then herself should Creon try to force her. Creon banishes both her and Oedipus. She helps her blind father to touch the dead bodies, and he asks her to see that Polynices is buried.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> page.
+</div>
+</div></body></html>

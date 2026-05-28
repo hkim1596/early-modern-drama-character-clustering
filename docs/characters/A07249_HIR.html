@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HIR in The Virgin Martyr · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>HIR</span>
+</nav>
+
+<h1>HIR</h1>
+<p class="lede">in <em>The Virgin Martyr</em> — Dekker, ThomasMassinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1622</td></tr>
+<tr><th>Words</th><td>1483</td></tr>
+<tr><th>Characters</th><td>7582</td></tr>
+<tr><th>BritDrama no.</th><td>1957</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">are more hungry after mutton, then Catchpoles after prisoners. Spunoius. Hast any money? No, my mony is a mad Bull, and finding any gap opend, <mark>away</mark> it runs. Thou didst, I <mark>did</mark> not; yet I had run to, but that one gaue me turpentine pilles, &amp; that stayde my running. Sure thy father was some botcher, and thy hungry tongue bit off</div>
+<div class="excerpt">Antipodes, because they are vnlucky to meete. Orany other member that <mark>has</mark> no legges. If I meet one that&#x27;s more the ̄ my match, &amp; that I can not stand in their hands, I <mark>must</mark> &amp; will creep on my knees. Nay if we come to malling once, puh, How! my Mistresse! I begin to haue a Christians <mark>heart</mark>, made of sweet butter, I melt, I cannot strike</div>
+<div class="excerpt">let the poore beg, starue and hang, or dye a the pip: our puling snotty-nose Lady sent me out like wise with a purse of mony, to releeue and release prisoners: <mark>did</mark> I so thinke you? As I am a totall Pagan, I swore they should be hangd first: for sirra Spungius, I lay at my old ward of lechery, and cryed a poxe in your <mark>two</mark>-penny</div>
+<div class="excerpt"><mark>two</mark>-penny wards, and so I tooke scuruy common flesh for the mony. All my feare is of that pinke-an-eye Iacke-an Apes boy, her page. With the durty pudding; so he <mark>did</mark> me once with a cowturd, which in knauery I would haue crumd into ones porridge, who was halfe a Pagan to: the smug dandiprat smels vs out whatsoeuer we are doing.</div>
+<div class="excerpt">belly full of gold. Gold poyson! there&#x27;s neuer a she-thrasher in Ca sarea that liues on the flaile of money will call it so. The gallowes and we fell out, so she <mark>did</mark> but part vs I can but let my Nose drop in sorrow with wet eyes for her. Yes, &amp; the smocke of her charity is now all to peeces How la peece of siluer! if thou wert</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">So then, if any Coxecombe has a galloping de sire to ride, heres a Gelding, if he can but sit him. But thats a kickish Iade, fellow Spungins, haue not I as much cause to complaine as thou hast? When I was a Pagan, there was an Infidell Punke of mine, would haue let me come vpon trust for my coruetting, a pox of your christian Coxatrices, they cry like Poulterers wiues, no mo ney, no Cony. Thy Last shall serue my foote, so will I. And Woodcocke fellow Spungins. Eate it, and be choakt else. Therein thou shewdst thy selfe a perfect demy-Christian too, to let the poore beg, starue and hang, or dye a the pip: our puling snotty-nose Lady sent me out like wise with a purse of mony, to releeue and release prisoners: did I so thinke you? As I am a totall Pagan, I swore they should be hangd first: for sirra Spungius, I lay at my old ward of lechery, and cryed a poxe in your two-penny wards, and so I tooke scuruy common flesh for the mony. All my feare is of that pinke-an-eye Iacke-an Apes boy, her page. With the durty pudding; so he did me once with a cowturd, which in knauery I would haue crumd into ones porridge, who was halfe a Pagan to: the smug dandiprat smels vs out whatsoeuer we are doing. Tis my Lady spoyles the boy, for he is euer at her tayle: and she&#x27;s neuer well but in his company. We ha not bene idle, take it vpon my word. Went no, I carryed it; and with these fingers paid it away. Or me giuen so to the flesh, my cheekes speake my doings. Or in mine? come amiable. Angelo, beate the flint of your braines. No, better burne him, for I thinke he is a witch, but sooth, soth him. And she-ones for mine, we haue &#x27;em swim in sholes hard by. Yes indeed, we layd lill on both of vs, we cousen&#x27;d the poore, but &#x27;tis a comon thing, many a one that counts himselfe a better Christian then we two, has done it, by this light. And put nothing but the poy sond tailes of Rats into those skins. Wud I were haugd rather then thus betold of my faults. Lets breake his necke, and bid him mend. Deliuerd with good hands madam, else let me neuer licke my fingers more when I eate butterd fish. Whisper, nay Lady, for my part Ile cry whoope. The fowle Feind snap all Pagans for me. A patch, a patch. How now Angelo how ist? how ist? what thred spins That whore Fortune vpon her wheele now. Com a porte von, com a porte von, my petite garsoone We thanke our fates, the signe of the gingle-boyes hangs at the doores of our pockets. Nay who can say any citizen is an Asse, for lading his owne backe, with money, till his soule crackes agen, onely to leaue his sonne like a gilded coxccombe behinde him? will not any foole take me for a wiseman now, seeing me draw out of the pit of my treasury, this little god with his belly full of gold. Gold poyson! there&#x27;s neuer a she-thrasher in Ca sarea that liues on the flaile of money will call it so. The gallowes and we fell out, so she did but part vs I can but let my Nose drop in sorrow with wet eyes for her. Yes, &amp; the smocke of her charity is now all to peeces How la peece of siluer! if thou wert an Angell of gold I would not put thee into white money, vnlesse I weigh&#x27;d thee, and I weigh thee not a rush. And so sweet Nit we crawle from thee. Ide be sorry my dog were so full of the poxc. Away, away boy. Spungius y&#x27;are a picke-pocket. Th&#x27;art a thiese, and thou lyest in that gut through which thy wine runs, if thou denyest it. Yes, if his hornes once get into the codpeece, Lets both be turnd into a rope of Onyons if we do Let him leade that way, but follow thou me this way. A way and shift for our selues, sheele do wel enough there, for prisoners are more hungry after mutton, then Catchpoles after prisoners. Spunoius. Hast any money? No, my mony is a mad Bull, and finding any gap opend, away it runs. Thou didst, I did not; yet I had run to, but that one gaue me turpentine pilles, &amp; that stayde my running. Sure thy father was some botcher, and thy hungry tongue bit off these shreds of complaints, to patch vp the elbowes of thy nittie cloquence. A low minded Cobler, a Cobler whose zeale set many a woman vpright, the remembrance of whose Awle I now hauing nothing, thrusts such scuruy stitches into my soule, that the heele of my happines has gone awry. Long I cannot last, for all sowterly waxe of comfort melting away, and misery taking the length of my foote, it bootes not me to sue for life when all my hopes are seame. rent, and go wetshod. So would I, for both of vs being now wearie of our liues, should then be sure of shoomakers ends. So am not I, but I am more then famishd. So are mine, and nothing but a cooke being a constable can appease them, presenting to my nose, instead of his painted staffe, a spitfull of rost-meate. And my mouth sets out a throate to my hand why dost not thou lift vp meate and cramme my choppes with it. Which mine eyes seeing, full of teares, crie alowd, and curse my feet for not ambling vp and downe to feede Colon, sithence if good meate be in any place, tis knowne my feet can smell. Why mong so many millions of people, should thou and I onely bee miserable totterdemalions, rag-a muffins, and lowsie desperates. Lowsie, beggerly, thou whorson Assa Faetida. As how arsnicke: come make the world smart. Stop, looke who&#x27;s yonder. Clothes! you see euery woman almost goe in her loose gowne, and why should not wee haue our clothes loose? The gold! we put that into a Scriueners hands, and he has cousend vs. I haue dwelt thou knowst along time in the Sub vrbs of the conscience, and they are euer bawdy, but now my heart shall take a house within the walls of honesty. A pox on&#x27;em, I neuer prosperd since I did it. Oh! those dayes, those dayes. Disguisde! how! drunke, Before any master vnder the Zodiake. Let her be hangd. Ther&#x27;s mony, fetch your cloths home, theres for you Auoid Vermine: giue ouer our mistresse! a man can not prosper worse if he serue the diuell. Is hee so! wud wee two might come acquainted with him. Weele giue him no such cause. Then my Lord, he loues a Gatchpole does he not? Har. As a Bearward does a dog, a Gatchpole! he has sworn if euer he dies, to make a Serieant his heire, and a Yoeman his euerseer. Doe not they whom he makes much on, for all his stroking their cheekes, leade hellish liues vnder him. Oh my elbow itches: will the diuel keepe the dore? How! ath&#x27; chops. Yes, yes, I, I. O inueaglingrascall, I am rauishd. Hang &#x27;em. Ile see &#x27;em hangd first. Suppose this shee, and that I had no hands, heere&#x27;s my teeth. But will not you be there sir. Sure lie cannot chuse but haue a horrible number of seruants. A Lords sute! I wud not giue vp the cloake of your seruice to meet the splay-foot estate of any leftey&#x27;d knight aboue the Antipodes, because they are vnlucky to meete. Orany other member that has no legges. If I meet one that&#x27;s more the ̄ my match, &amp; that I can not stand in their hands, I must &amp; will creep on my knees. Nay if we come to malling once, puh, How! my Mistresse! I begin to haue a Christians heart, made of sweet butter, I melt, I cannot strike a woma ̄ . Not I, vnlesse she scratch, bum my mistresse! Whats that? I doubt me I shall haue no sweet buttet in me. If we be Cuckolds. I desire but one inch longer, The first thing I doe Ile take her Ore the lips. Then I know where ile hit her. He come vpon her with rounce, robble-hobble, and thwicke thwacke thirlety bouncing. O mine armes, I cannot list&#x27;em to my head. No sir, not the bridge of her nose fall, tis full of Iron worke. Hang vs! master Harpax, what a diuell shall we be thus vsde. I thanke you. I, I, if no woman can endure my sight, away with me.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Virgin Martyr</div><div class="body">An imperial edict orders the extirpation of Christianity from the Roman Empire, and the re-establishment of the worship of the pagan gods. In Caesarea, Theophilus works to that end, abetted by Harpax; his many successes so far include the forced apostasy of his own daughters, once Christians but now votaresses of Jupiter. Diocletian gives his daughter Artemia the right to choose her own husband, and she selects the unwilling Antoninus, who loves the Christian Dorothea and asks for time to consider. Artemia remains in Caesarea as her father’s deputy. Harpax tells Theophilus that Antoninus is having an illicit relationship with Dorothea, and Theophilus suborns her servants Spungius and Hircius to smuggle him into her home so that he can witness a meeting between them. Dorothea and Antoninus are arrested. Theophilus sets his daughters, Dorothea’s childhood friends, to convert her to paganism; but instead Dorothea persuades them to revert to Christianity. When they demonstrate their new faith by spitting at an idol of Jupiter, their outraged father kills them. Antoninus is taken ill. His father brings Dorothea to his sick-bed in the hope that he will rape her and so be cured. He refuses, and Dorothea is taken for torture and execution. Destitute after losing the gold Theophilus gave them, Spungius and Hircius are engaged by Harpax to be the torturers. They flog her, but miraculously she feels nothing; they are wrongly suspected of botching the job out of regard for their former mistress, and hanged. After praying that Antoninus’ love for her be transformed into love for God, Dorothea is beheaded. Antoninus drops dead at the sight. Artemia gets her second choice of husband: the co-Emperor Maximinus. Dorothea’s faithful page Angelo, whom she took in as a beggar, turns out to be an angel, and brings Theophilus a gift from her: a basket of fruit and flowers to persuade him of the joys of the Christian heaven. Harpax comes in his true form, a devil, to claim Theophilus, but is frightened off by a floral cross in the basket. Theophilus is converted, orders the release of all Christian prisoners, and gives them ships in which to flee persecution. He is arrested by the authorities and asks to die on the worst of his extensive collection of torture instruments. He is racked but will not recant; Harpax is balked of his aim, and Dorothea and the other martyrs receive him into heaven. Diocletian is unmoved: the state will continue the persecution of Christians. =====…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

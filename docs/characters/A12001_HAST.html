@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HAST in Richard the Third · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>HAST</span>
+</nav>
+
+<h1>HAST</h1>
+<p class="lede">in <em>Richard the Third</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1597</td></tr>
+<tr><th>Words</th><td>964</td></tr>
+<tr><th>Characters</th><td>4881</td></tr>
+<tr><th>BritDrama no.</th><td>950</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">Then was I going prisoner to the tower, By the suggestion of the Queenes allies: But now I tell thee (keepe it to thy selfe.) This day those enemies are put to <mark>death</mark>, And I in better state then euer I was. Gramercy Hastings hold spend thou that ▪ What Sir Iohn, you are wel met, I am beholding to you for your last daies exercise:</div>
+<div class="excerpt">But for his purpose in the coronation: I haue not 〈◊〉 him nor he deliuerd His Graces pleasure any way therein: But you my noble Lo: may name the time, And in the Dukes behalfe, Ile giue my voice, Which I presume he will take in Gentle part. I thanke your <mark>Grace</mark>. Mary, that with no man here he is offended, For if he were, he would</div>
+<div class="excerpt">tender loue I beare your <mark>grace</mark> my Lord, Makes me most forward in this noble presence, To doome the offenders whatsoeuer they be: I say my Lo: they haue deserued <mark>death</mark>. If they haue done this thing my gratious Lo: O momentary state of worldly men, Which we more hunt for, then the <mark>grace</mark> of heauen: Who buildes his hopes in aire</div>
+<div class="excerpt">ond ▪ To trust the mockery of vnquie s umbers, To flie the boare, before the boare pursues vs, Were to incense the boare to follow vs, And make pursuite where he <mark>did</mark> me an no chase: Go bid thy Master 〈◊〉 nd come to me, And we will both together to the tower, Where he shall see the boare will vse vs kindely. Good morrow Catesby,</div>
+<div class="excerpt">they haue beene still mine enemies: But that Ile giue my voice on Richards side, To barre my Masters he i es in true discent, God knowes I will not doe it to the <mark>death</mark>. But I shall laugh at this a tweluemonth hence ▪ That they who brought me in my Masters hate, I liue to looke vpon their tragedy: I tell thee Catesby. Ere a fortnight</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Good time of day vnto my gratious Lord: With patience (noble Lord) as prisoners must: But I shall liue my Lord to giue them thankes That were the cause of my imprisonment. More pitty that the Eagle should be mewed, While k ihts and bussards prey at liberty. No newes so bad abroad as this at home: The King is sickly, weake and melancholy, And his Phisitions feare him mightily. He is. O twas the foulest deede to slaie that babe, And the most mercilesse that euer was heard of. False boading woman, end thy frantike curse, Lest to thy harme thou moue our patience. My haire doth stand on end to heare her curses. So thriue I as I truely sweare the like. So prosper I, as I sweare perfect loue. And so sweare I my Lord. On what occasion, God he knowes, not I: The Queene your mother and your brother Yorke Haue taken sanctuary: The tender Prince Would faine haue come with me, to meete your Grace, But by his mother was perforce withheld. I go my Lord. Who knockes at the dore. Whats a clocke? Cannot thy Master sleepe these tedious 〈◊〉 ? And then. Go fellow go, returne vnto thy Lord, Bid him not feare the seperated counsels: His honour and my selfe are at the one ▪ And at the other, is my seruant Catesby: Where nothing can proceede that toucheth vs, Whereof I shall not haue intelligence. Tell him his feares are shallow, wan ing instance. And for his dreames, I 〈…〉 is so ond ▪ To trust the mockery of vnquie s umbers, To flie the boare, before the boare pursues vs, Were to incense the boare to follow vs, And make pursuite where he did me an no chase: Go bid thy Master 〈◊〉 nd come to me, And we will both together to the tower, Where he shall see the boare will vse vs kindely. Good morrow Catesby, you are early stirring, What newes what newes, in this our tottering state? Howe? we are the garland? doest thou meane the crowne? Ile haue this crowne of mine, cut from my shoul ders Ere I will see the crowne so foule misplaste: But canst thou guesse that he doth a me at it. Indeede I am no mourner for that newes, Because they haue beene still mine enemies: But that Ile giue my voice on Richards side, To barre my Masters he i es in true discent, God knowes I will not doe it to the death. But I shall laugh at this a tweluemonth hence ▪ That they who brought me in my Masters hate, I liue to looke vpon their tragedy: I tell thee Catesby. Ere a fortnight make me elder, Ile send some packing, that yet thinke not on it. O Monstrous monstrous, and so fals it out With Riuers, Vaug an, Gray, and so twill doe With some men els, who thinke themselues as safe As thou, and I, who as thou knowest are deare To Princely Richard, and to Buckingham. I know they doe, and I haue well deserued it. What my Lo: where is your boare-speare man? Feare you the boare and go so vnprouided? My Lo: I hould my life as deare as you doe yours, And neuer in my life I doe protest, Was it more pretious to me then it is now: Thinke you, but that I know our state secure ▪ I would be so triumphant as I am? I go: but stay, heare you not the newes, This day those men you talkt of, are beheaded. Go you before, Ile follow presently. Well met Hastings, how goes the world with thee? I tell thee fellow tis better with me now. Then when I met thee last where now vve meete: Then was I going prisoner to the tower, By the suggestion of the Queenes allies: But now I tell thee (keepe it to thy selfe.) This day those enemies are put to death, And I in better state then euer I was. Gramercy Hastings hold spend thou that ▪ What Sir Iohn, you are wel met, I am beholding to you for your last daies exercise: Come the next sabaoth and I will content you. Good faith and when I met this holy man, Those men you talke of came into my minde: What, go you to the tower my Lord Tis like enough, for I stay dinner there. My Lords at once the cause why we are met, Is to determine of the coronation: In Gods name say, when is this royall day? I thanke his Grace, I know he loues me well: But for his purpose in the coronation: I haue not 〈◊〉 him nor he deliuerd His Graces pleasure any way therein: But you my noble Lo: may name the time, And in the Dukes behalfe, Ile giue my voice, Which I presume he will take in Gentle part. I thanke your Grace. Mary, that with no man here he is offended, For if he were, he would haue shewen it in his lookes. The tender loue I beare your grace my Lord, Makes me most forward in this noble presence, To doome the offenders whatsoeuer they be: I say my Lo: they haue deserued death. If they haue done this thing my gratious Lo: O momentary state of worldly men, Which we more hunt for, then the grace of heauen: Who buildes his hopes in aire of your faire lookes, Liues like a drunken sayler on a mast, Ready with euery nod to tumble downe Into the fatall bowels of the deepe. Come leade me to the blocke, beare him my head, They smile at me that shortly shalbe dead.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Richard the Third</div><div class="body">The House of York has won the civil war, but the deformed RGGHaFaNGfNGIOucester considers himself unsuited to such peacetime pursuits as love; instead he will be a villain. He engineers his brother @aeHiGe’s imprisonment over a prophecy which suggests that Clarence poses a threat to the sickly King Edward’s issue. BAGYSAINe meets Richard as she is taking King Henry&#x27;s body for burial; the corpse’s wounds bleed afresh, identifying Richard as the murderer, but he still succeeds in wooing her. Rancorous rivalry between Richard and the Queen’s recently ennobled family is temporarily suspended when , Henry VI’s widow, curses the lot of them with misery and early death. Richard sends murderers to dispose of Clarence quickly, before the King can die; Clarence dreams of drowning, and, despite the conscience of one of the murderers, he is stabbed and drowned in a butt of wine. The King tries to reconcile his factious courtiers, and learns that his order for Clarence’s death has been carried out: the countermand arrived too late. He dies, and Richard has the P#ifiée brought to London to be crowned. Several members of the Queen’s family are imprisoned; the Queen herself takes sanctuary with her younger son. : The Prince arrives in London and has his brother brought from sanctuary to join him; they are lodged together in the Tower. Richard sounds out Hastings and other barons to see if they will support his claim to the throne, and promises Bulékingham the earldom of Hereford in reward for his help. Hastings disregards a warning against Richard, declares his loyalty to the Prince, and attends a council to discuss the coronation. Richard and Buckingham claim that Richard has been deformed by witchcraft, and that Hastings is complicit; he is arrested and beheaded. Richard has Buckingham suggest to the citizens of London that Richard is the lawful heir to the throne because the Prince was the issue of a bigamous marriage, and so_ illegitimate. Richard feigns unwillingness to accept the crown, but capitulates under pressure. After his coronation, he tries to persuade Buckingham to arrange the murder of his nephews in the Tower. When Buckingham hesitates, he makes alternative arrangements and refuses him the promised earldom; this spells the end of their alliance. Both the princes and Queen Anne are murdered; Richard seeks to secure his position by marrying his niece, King Edward’s daughter, using her mother as a proxy wooer. As characters fall and die, Queen Margaret…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

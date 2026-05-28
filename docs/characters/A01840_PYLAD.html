@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PYLAD in Orestes · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> ›
+  <span>PYLAD</span>
+</nav>
+
+<h1>PYLAD</h1>
+<p class="lede">in <em>Orestes</em> — Goffe, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>826</td></tr>
+<tr><th>Characters</th><td>4495</td></tr>
+<tr><th>BritDrama no.</th><td>1929</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 18 (<em>death, thebes, did, myne, eke, wyth…</em>). Matches are highlighted.</p>
+<div class="excerpt">strooke againe, He grew so hot, he drw and made a Stab; At which encounter <mark>both</mark> inclosing him &#x27;Twixt vs, he tooke a wound worse then we thought To giue, for we <mark>did</mark> thinke to haue giuen none; But since &#x27;tis thus, we must appeale to th&#x27; King. O hold thy doome a while, it was not he, His serious studies in the learned Arts. Hearing</div>
+<div class="excerpt">the catalogue, Vntill thou findest there, engrauen those Which kild the King of Greece, great Agamemnon. Looke here thou King of Greece, fond Menelaus, Thou which didst bring so many goodly shapes, Taks vp the scull. Into such things as these, and all for Helen, Which when the worms bred of her dainty flesh, Shall haue knaw&#x27;d</div>
+<div class="excerpt">we must appeale to th&#x27; King. O hold thy doome a while, it was not he, His serious studies in the learned Arts. Hearing acute Philosophers dispute &#x27;twixt life and <mark>death</mark>, and of a future state Would faine haste to it; but the man was I, Beleeue not him, &#x27;twas his desire to die. That was my dagger King, he took&#x27;t from me, No King,</div>
+<div class="excerpt">happy man, Whose accurate and watchfull indagation, Hath taught him for to heale the wounds of Nature, By his exceeding skill in wholesome hearbs, One that when I <mark>did</mark> thinke my thred of life Had beene quite cut, <mark>did</mark> tie it vp againe, And make it last: recald my youthfull dayes, And made me Aeson -like becom thus yong, For which</div>
+<div class="excerpt">time Hath brought true punishment on euery crime. O what a strange distemper stirs his braine, Thou gentle Somnus, in whom care doth rest, Kinde father of cold <mark>death</mark>, and son of peace, Which comes to Kings and poore men all alike: Binde his disturbed braine, tye vp his sense. Let him but liue to die; now tis not long Before</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Neare to this shady groue, where neuer light Appeares, but when `tis forced with som charm, Canidia dwells, in such a dusky place, That the night goblins feare to come too neare it, Here let vs knocke. Alas, where be his wits? He stands declaming against senselesse worms, And turnes more senslesse then the worms themselues; Wher&#x27;s now the oracle you should consult, The great Magician, now the Centaurs thought Shall be example to all future yeers, And now transcend Proserpina&#x27;s inuention, Ha, hast thou found them out, ha, were they worms? Prompt vs some Ghost, Great feare of earth, and gouernesse of nature, In whose deepe closet of that sacred heart Are written the characters of future Fate; And what is done, or what must be thou knowst: Whose words make burning Acheron grow cold, And Ioue leaue thundring, when he heares thy name, To thee we come: O turne thy secret booke, And looke whose names thou there shalt see inscrib&#x27;d For murderers, reade or&#x27;e all the catalogue, Vntill thou findest there, engrauen those Which kild the King of Greece, great Agamemnon. Looke here thou King of Greece, fond Menelaus, Thou which didst bring so many goodly shapes, Taks vp the scull. Into such things as these, and all for Helen, Which when the worms bred of her dainty flesh, Shall haue knaw&#x27;d off her tender rubie lips, And left her gumlesse, looke vpon her then; And thou wouldst euen disgorge thy selfe to see, Such putride vermin to lye kissing her. Gentlemen, we as louers to the court, Came here as strangers, for to see the King, This man being comming out, too soone for vs; And for himselfe vs&#x27;d vs vnciuilly, We haue been gentlemen, though our Fortunes now Haue put on beggars weeds vpon our backs ▪ Who answering in the same sort he propos&#x27;d, He strooke vs, and men cannot indure blows: So thinking much to be strooke againe, He grew so hot, he drw and made a Stab; At which encounter both inclosing him &#x27;Twixt vs, he tooke a wound worse then we thought To giue, for we did thinke to haue giuen none; But since &#x27;tis thus, we must appeale to th&#x27; King. O hold thy doome a while, it was not he, His serious studies in the learned Arts. Hearing acute Philosophers dispute &#x27;twixt life and death, and of a future state Would faine haste to it; but the man was I, Beleeue not him, &#x27;twas his desire to die. That was my dagger King, he took&#x27;t from me, No King, &#x27;tis I confesse. Great King, our duty owes to thee our liues, And were we men that striu&#x27;d to set a cloud Before these gifts, Art hath instructed vs: Or we haue purchac&#x27;t at a most deare rate, Of cost and labour, yet thy clemency Commands vs to lay open all to thee, Yet for my selfe I rather count my state, Blest that I lighted on this happy man, Whose accurate and watchfull indagation, Hath taught him for to heale the wounds of Nature, By his exceeding skill in wholesome hearbs, One that when I did thinke my thred of life Had beene quite cut, did tie it vp againe, And make it last: recald my youthfull dayes, And made me Aeson -like becom thus yong, For which great practises I did owe my life, And thence proceeded our late pious strife. Alas, deare friend, see the pretty knaue. Why I am hee, looke friend, dost not know me. He feares the heauenly signes, nay then now time Hath brought true punishment on euery crime. O what a strange distemper stirs his braine, Thou gentle Somnus, in whom care doth rest, Kinde father of cold death, and son of peace, Which comes to Kings and poore men all alike: Binde his disturbed braine, tye vp his sense. Let him but liue to die; now tis not long Before we both shall sing our funerall song. So gentle sleepe, Thou gather&#x27;st vp his wandring braines againe, This is but halfe dead, yet halfe dead he lies, But tis not long; before he wholly dies. Musique within. Harke they play musike; O these sounds do harme, Enticing woe with their melodious charme; These please not men in woe; these time doe keepe, But miseries best falling is to weepe. Or stops are nought but sobs, our hearts we bring. Whereon we prickt the soulefa which we sing. Weepe, weepe you Argonauts, Bewaile the day That first to fatall Troy You tooke your way. Weepe Greece, weepe Greece, Two Kings are dead, Argos, thou Argos, now a graue Where Kings are buried. No heire, no heire is left, But one that&#x27;s mad, See Argos, hast not thou, Cause to be sad? Sleepe, sleepe wild braine, Rest rocke thy sence; Liue if thou canst To grieue for thy offence. Weepe, weepe you Argonauts, &amp;c. Still harping on thy mother?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Orestes</div><div class="body">Agamemnon returns home after ten years of war. When he takes his neglected wife Clytemnestra to bed, she and her lover Aegisthus murder him. Roused by bad dreams, his son Orestes finds the body in bed. Feigning innocence, Clytemnestra curses the murderer, while the surviving Trojan glories in the death of the enemy commander: Troy is avenged. Recognizing that he is in danger, Orestes goes into hiding with Pylades until the murderer is identified, and sends a report that, unhinged with grief, he threw himself off a cliff into the sea, and that Pylades also went over trying to stop him. Aegisthus, the next in line, ascends the throne and marries Clytemnestra. She bears him a son, establishing his dynasty, and in celebration he proclaims a general pardon for all crimes. Orestes and Pylades consult the witch Canidia, who shows them a vision of Clytemnestra and Aegisthus committing the murder. They return to court in disguise. Their plotting is overheard by Misander, and they kill him to preserve secrecy, but are immediately arrested. In judging the case, Aegisthus faces two problems: the crime is covered by the general pardon, and each defendant, seeking to save the other, claims that he alone was the murderer. Aegisthus decides not to pass a death sentence on either, and is further impressed when Pylades introduces Orestes as a doctor who has perfected the secret of rejuvenation. Aegisthus asks for a demonstration, using himself and Clytemnestra as the subjects. Agamemnon’s ghost appears to Orestes, urging him to get on with the revenge and take care not to spare his mother. Pylades obtains custody of Aegisthus’ son, who is in the care of Orestes’ sister Electra. When Orestes meets with the King and Queen for their ===== PAGE 235 ===== 1620 rejuvenation, he ties them up, kills their son in front of them, forces them to drink the blood, and finally kills them. He demands his restoration to the throne, but the lords are unwilling to crown a murderer, and instead enthrone Tyndarus, whose first act is to banish Orestes and his accomplices, further stipulating that nobody must give Orestes food. Pylades’ father Strophius dies and Electra kills herself. Orestes goes mad and thinks himself tormented by the Furies. He and Pylades kill one another in a suicide pact, and Tyndarus announces that they are to be buried together in a single tomb.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> page.
+</div>
+</div></body></html>

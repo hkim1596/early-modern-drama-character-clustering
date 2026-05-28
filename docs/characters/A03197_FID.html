@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FID in The Fair Maid of the Exchange · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FID</span>
+</nav>
+
+<h1>FID</h1>
+<p class="lede">in <em>The Fair Maid of the Exchange</em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>899</td></tr>
+<tr><th>Characters</th><td>4663</td></tr>
+<tr><th>BritDrama no.</th><td>1326</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">ther&#x27;s a man in the middle of her, how can she be chaste then? Gallants good-night; if time and place were in pros peritie, I were yours for an houres societie, I <mark>must</mark> after yon mulbery with my torch: adue deare hearts, adue. Exit. Porter, I am not for you, you see I am perambulating before a female. Speake in time then Porter,</div>
+<div class="excerpt">Heer&#x27;s a fidling indeed, I thinke your tongue be made of nothing but fiddlestrings, I hope the fiddle <mark>must</mark> haue some rest as well as the fiddle-sticke: well Crowde, what say you to Fiddle now? It is indeed, Master. To <mark>goe</mark> to bed againe Sir. What a fidling doe you keepe,</div>
+<div class="excerpt">Cripple you know I haue spent some time in idle words, therefore be you compendions, and tell me if my mistris handkercher be done or no. If his stomacke be vp to <mark>goe</mark> to dinner. What else maister? with the best belly in my <mark>heart</mark>, the sweetest straine in my musicke, and the worst entertainment that may be, Fiddle bids your worship</div>
+<div class="excerpt">all the towne. I by this siluer, and as good a fellow as euer went vp on foure legges, if you would multiply till mid-night, I would neuer speake otherwise. The chaste Moone, why the Moone is not chaste. Why sir, ther&#x27;s a man in the middle of her, how can she be chaste then? Gallants good-night; if time and place were in pros</div>
+<div class="excerpt">excellent yfaith. Why this it is, the Serieants are watching to arrest you at maister Berries sute. Nay, I know not where; alas sir, there is no such mat ter, I <mark>did</mark> but say so much, to make you warme the handle of your rapier: But M. Bawdler, I haue good newes for you. How, russeting? You are a You are a, O that I could speake</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Heer&#x27;s a fidling indeed, I thinke your tongue be made of nothing but fiddlestrings, I hope the fiddle must haue some rest as well as the fiddle-sticke: well Crowde, what say you to Fiddle now? It is indeed, Master. To goe to bed againe Sir. What a fidling doe you keepe, are you not ashamde to make such musicke; I hope sir, you will christen mee anew shortly, for you haue so worne this name, that ne&#x27;re a wench in all the towne but will scorne to dance after my fiddle. Thats more than you know, Master. Youle be damn&#x27;d then, Master. I had rather your daughter lou&#x27;d me, I hold with you Master, if my yong mistresse would like so well of my musicke, that she would dance after no bo dies instrument but mine. A shame on you, I thought you would not heare on that side True, master; therin you say well. Who he sir, neuer regard him, I know the vildest thing by him, O tis abhominable! I tell you sir, twill make your haire to stand on end as stiffe as a Rubbing-brush, to heare his villanies. What&#x27;s this you haue giuen me? Haue you any skill in Arithmeticke? Sir, I would haue you to multiply; could you not make this one shilling two or three? I would not be knowne to beg, but if out of your cunning you can doe this tricke of multi plication, I shall speake the better. So sir, this is multiplication, now sir, if you know the Rule of addition you are an excellent Scholler: can you not adde? An other shilling sir. Why then attend you Hilles and Dales, and stones so quicke of hearing, this Cripple is. An honest man, as any is in all the towne. I by this siluer, and as good a fellow as euer went vp on foure legges, if you would multiply till mid-night, I would neuer speake otherwise. The chaste Moone, why the Moone is not chaste. Why sir, ther&#x27;s a man in the middle of her, how can she be chaste then? Gallants good-night; if time and place were in pros peritie, I were yours for an houres societie, I must after yon mulbery with my torch: adue deare hearts, adue. Exit. Porter, I am not for you, you see I am perambulating before a female. Speake in time then Porter, for otherwise I doe not loue to answer you, and bee as briefe as you can, good Por ter. Then you are an asse Porter, tis the faire Maide of the Exchange. God giue you the time of the day, pardon mee Gal lants, I was so neere the middle that I knew not which hand to take. And yet because I wil be sure to giue you a true salu tation, Cripple, quomodo vales? Good morrow Cripple, good den good maister Barnard, maister Bowdler, Bonos noches, as they say, good night; and thus you haue heard my manner of salutation. The best newes I know not sir, but the newest news is most excellent yfaith. Why this it is, the Serieants are watching to arrest you at maister Berries sute. Nay, I know not where; alas sir, there is no such mat ter, I did but say so much, to make you warme the handle of your rapier: But M. Bawdler, I haue good newes for you. How, russeting? You are a You are a, O that I could speake for indignation! Yon are a pippinmonger to call me Russetting or ap ple Iohn. You pippinmonger, Ile cut off your legs, and make you trauel so neere the mother earth, that euery boy shall be high enough to steale apples out of thy basket, call mee Rus setting? As I am a gentleman cripple, I meant him no harme, but the name of Russetting to maister Fiddle, that many times trauells vnder the arme in veluet, but for the most part in lea ther trussd with calue-skinne points, tis most tolerable, and not to be indured, flesh and bloud cannot beare it. Say you so? why then anger auoid the roume, melan choly march away, choler to the next chamber, and heres my hand I am yours to command from this time foorth, your ve ry mortall frend, and louing enemy, maister Fiddle. O, the sweet newes, faith sir, this it is, that I was sent to the Cripple from my young Mistris. Maister Cripple you know I haue spent some time in idle words, therefore be you compendions, and tell me if my mistris handkercher be done or no. If his stomacke be vp to goe to dinner. What else maister? with the best belly in my heart, the sweetest straine in my musicke, and the worst entertainment that may be, Fiddle bids your worship adesdum. I, and heele be heere I warrant you. Alls well, alls well, but there wants some saffron, To colour the custards withall. I sir, and here comes one more than you lookt for. Why sir I thinke it is no good conceit. Master, wheres my maister? heeres one would couple a brace of words with you. No sir, with my yong mistris. A crooked knaue sir, tis the Cripple. Runne away with her? well may shee carry him, but if he runne away with her, ile neuer trust crutch more.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Fair Maid of the Exchange</div><div class="body">Phyllis and Ursula are assaulted by two ruffians as they go to deliver wares to a customer at night. A cripple rescues them, and a second assault is foiled by the intervention of Frank Golding; the cripple promises to help Frank if ever he can. Frank&#x27;s two brothers are both in love with Phyllis, and, though he scorns amorous passions, Frank has fallen for her too. Phyllis, however, loves the cripple, and woos him by giving him a handkerchief to embroider “for a friend’. Meanwhile, Bobbington poses as a sailor going on a voyage, and borrows money from Phyllis’s father, Flower, leaving a diamond ring with him as security. Ferdinand and Anthony overhear one another&#x27;s plans to woo Phyllis, but neither knows that Frank is also a rival. Ferdinand writes to her; Anthony plans to intercept the letter and substitute his own, but Ferdinand disguises Frank as a porter and gets him hired as Anthony&#x27;s messenger. Planning to double-cross them both, Frank enlists the cripple&#x27;s help. The cripple supplies him with two rejection letters to take back to his brothers, as from Phyllis. They each enlist the help of one of Phyllis’s parents, ===== PAGE 378 ===== who then quarrel over which brother shall marry their daughter. _ Knowing Phyllis loves him but thinking himself unworthy, the cripple lends Frank his clothes. Frank courts Phyllis in disguise, and she gives him her ring; then. he brings the parents forged letters from his brothers withdrawing their suits. Each parent decides to:spite the other by offering Phyllis to Frank instead of the other’s favoured son-in-law. The thwarted brothers realize what has happened, but Phyllis asks to be allowed a say in her.own marriage — and chooses Frank. As the play ends, Flower is arrested for receiving stolen property — Bobbington’s ring — and sent for trial. In the sub-plot, Mall Berry is in love with Barnard, but suffers the unwanted attentions of Bowdler. Barnard is surety for a £100 debt to Mall’s father; the original borrower is dead and the debt about to fall due, but Berry refuses to allow Barnard any more time to find the money. Bowdler persists in his pursuit of Mall, using lines he remembers from Venus and Adonis. Berry engages sergeants to arrest Barnard. Mall agrees to marry Bowdler, but the cripple points out that, through a party wall, he has overheard her talking about Barnard in her sleep: he is the man she truly loves. Barnard is arrested, but the sergeants allow him and Mall to get married before bringing him to…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

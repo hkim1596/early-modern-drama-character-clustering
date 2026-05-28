@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAP in The Phoenix · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>CAP</span>
+</nav>
+
+<h1>CAP</h1>
+<p class="lede">in <em>The Phoenix</em> — Middleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>1798</td></tr>
+<tr><th>Characters</th><td>9294</td></tr>
+<tr><th>BritDrama no.</th><td>1420</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">madde. Pox on&#x27;t, and now am I tyed ee&#x27;n as the Deuil would ha&#x27;t. S&#x27;foot, ſo would I my ſelfe man, giue mee my Due, you know I ha ſworne all heauen ouer and ouer: Why <mark>goe</mark> too then. Why tis abhominable I grant you now I ſee&#x27;t: Then t&#x27;ad beene ſomething: And I to play the Artificer and marrie: to haue my wife daunce at home, and my</div>
+<div class="excerpt">to her, take hold of that: ask counſell: and now I remember, I haue acquaintance with an olde craftie Client, who by the puzzle of ſuites &amp; ſhifting of Courts, <mark>has</mark> more tricks &amp; ſtarting holes, then the dizzie pates of fifteene Atturneys: one that <mark>has</mark> beene muzled in Law like a Beare, and lead by the Ring of his ſpectacles</div>
+<div class="excerpt">vpon balde Oake. Happier that man ſay I, whom no man truſts, It makes him valiant, dares outface the priſons, Vpon whoſe carkaſſe no Gownde Rauen iets, Oh he that <mark>has</mark> no credite owes no debts. Tis time I were rid on&#x27;t. No, ile ſell thee then to the Smocke: ſee heere comes my honourable Chapman. Fine ſhee pollicie? ſhe makes my</div>
+<div class="excerpt">diſſemblance: I will to ſ n. In health. You might count me an aſſe then yfaith. Prethe ha done, I am aſham&#x27;d of nothing. This Lord ſtickes in my ſtomacke. What and they <mark>did</mark>, I ſell none but mine owne: as for the Duke, hee&#x27;s abroad by this time, and for Fide lio hee&#x27;s in labour. What call you Trauelling? Slaue and foole: —ha, who? oh—</div>
+<div class="excerpt">vpon a poore vnfethered Rouer that will as truely pray for you, and wiſh you hangd, as any man breathing. Well &#x27;ime yet glad, i&#x27;ue libertie and theſe: The Land <mark>has</mark> plagu&#x27;d me, and ile plague the ſeas.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Hah? Why you make me madde. Pox on&#x27;t, and now am I tyed ee&#x27;n as the Deuil would ha&#x27;t. S&#x27;foot, ſo would I my ſelfe man, giue mee my Due, you know I ha ſworne all heauen ouer and ouer: Why goe too then. Why tis abhominable I grant you now I ſee&#x27;t: Then t&#x27;ad beene ſomething: And I to play the Artificer and marrie: to haue my wife daunce at home, and my Ship at Sea, and both take in ſalt water together: oh Leiftenant thou&#x27;rt hap pie, thou keepſt a Wench. How? is there anye ſuch fortunate man brea thing? and I ſo miſerable to liue honeſt? I enuie thee Lieutenant, I enuie thee, that thou art ſuch a happye Knaue, heres my hand among you, ſhare it equally, Ile to ſea with you. Lets heare from you, there will be newes ſhortly. What luſtfull paſſion came aboord of mee, that I ſhould marrye, was I drunke? yet that cannot altoge ther holde, for it was foure a clocke &#x27;ith morning, had it beene fiue, I would ha ſworne it: that a man is in danger euerie minute to be caſt away, without hee haue an ex traordinarie Pilot that can performe more then a man can doe: and to ſay truth too, when &#x27;ime abroad what can I doe at home? no man liuing can reach ſo farre: &amp; what a horrible thing t&#x27;would bee to haue hornes brought me at Sea, to looke as if the Deuill were &#x27;ith ſhip: and all the greate Tempeſtes would bee thought of my Rayſing, to bee the generall curſſe of all Mer chants: and yet they likely are as deepe in as my ſelfe, and thats a comfort: O that a Captaine ſhould liue to be marryed! nay, I that haue beene ſuch a Gallant ſalt-theefe, ſhould yet liue to be marryed: What a fortu nate Elder Brother is he, whoſe father being a Ramiſh Plough-man, himſelfe a perfumde Gentleman, ſpen ding the labouring reeke from his Fathers: Noſthrils in Tobacco: the ſweate of his Fathers bodye in monthlye Phiſickc for his pretty queſie Harlot: he ſowes a pace &#x27;ith Countrie: the Taylor oretakes him i&#x27;th Cittie, ſo that often times before the Corne comes to Earning, tis vp to the eares in high Collars, and ſo at euerie harueſt the Reapers take paines for the Mercers, ha! why this is ſtirring happineſſe indeede, would my father had held a plow ſo, and fed vpon ſqueaz&#x27;d Curds and Onions, that I might haue bath&#x27;d inſenſualitie: but hee was too ruttiſh himſelfe to let me thriue vnder him, canſumde me before hee got me, &amp; that makes me ſo wretched, now to be ſhackled with a wife, &amp; not greatly rich nei ther. S&#x27;life call me husband agen, &amp; ile play the Cap taine and beate you. Goe make a Widdower, hang thy ſelfe, How comes it that you are ſo oppoſite To loue and kindenes? I deſerue more Reſpect, But that you pleaſe to be forgetfull of it. Then to that end I doo&#x27;t. How now ſir? What, my Lord: I muſt make much of him, heele one day write me Cuckold: tis good to make much of ſuch a man, ee&#x27;n to my face, hee plyes it hard I thanke him:— what, my worthy Lord! Oh thats in order: a kiſſe is the Gammoth to prickſong. My deere eſteemed Count, I haue a life for you: What may it be my Lord? May it bee poſſible my Lord, and yet ſo little rumord? Why, is there any doubt to bee had of that my Lord? That&#x27;s ful of certaintie my Lord, but who be his Attendants? Is it to be beleeu&#x27;d? I promiſe you my Lord then I beginne to feare him my ſelfe, that fellow will vndoe him: I durſt vndertake to corrupt him with twelue pence ouer and aboue, and thats a ſmall matter: ha&#x27;s a whoriſh Conſcience, hee&#x27;s an inſeperable Knaue, and I could neere ſpeake well of that fellow. Though it bee in mine owne houſe, I deſire I may follow your Lordſhip. So, his way is in, he knowes it, We muſt not be vncurteous to a Lord, Warne him our houſe t&#x27;were vilde: his preſence is an honour, if he lie with our wiues, tis for our credite, wee ſhall be the better truſted, tis a ſigne wee ſhall liue ith world: O Tempeſts and Whirlewinds (who but that man whom the forefinger cannot daunt, that makes his ſhame his liuing:) Who but that man I ſay, could en dure to be throughly married? Nothing but a diuorce can relieue me: any way to be rid of her would rid my torment: if all meanes faile Ile kil, or poyſon her, and purge my fault at ſea: but firſt Ile make gentle Trie of a Diuorce: But how ſhal I accuſe her ſubtle honeſtie? Ile attach this Lords comming to her, take hold of that: ask counſell: and now I remember, I haue acquaintance with an olde craftie Client, who by the puzzle of ſuites &amp; ſhifting of Courts, has more tricks &amp; ſtarting holes, then the dizzie pates of fifteene Atturneys: one that has beene muzled in Law like a Beare, and lead by the Ring of his ſpectacles from office to office: him Ile ſeeke out with haſte, all paths Ile tread, All deathes Ile die ere I die married. The Diuorſe ſhall reſt then, and the fiue hun dred crownes ſhall ſtand in full force and vertue. A way ſayle I, fare thee well. But ah! Remember a Scriuener Away. Hence, we&#x27;re at a price for thee, at a price, wants but the telling, and the ſealing, then — Credit? pox of credit, that makes me owe ſo much: it had bine better for me by a thouſand Royals I had loſt my credite, ſeauen yeare ago, t&#x27;as vndone me, that&#x27;s it that makes me flie: what neede I to ſea elſe, in the Spring time, when Woods haue leaues, to looke vpon balde Oake. Happier that man ſay I, whom no man truſts, It makes him valiant, dares outface the priſons, Vpon whoſe carkaſſe no Gownde Rauen iets, Oh he that has no credite owes no debts. Tis time I were rid on&#x27;t. No, ile ſell thee then to the Smocke: ſee heere comes my honourable Chapman. Fine ſhee pollicie? ſhe makes my backe her Bol ſter, but before my face, ſhe not indures him, Tricks. Oh for Modeſties cauſe awhile my Lord: ſhee muſt reſtraine her ſelfe, ſhee&#x27;s not yours yet: Beſide, it weare not wiſdome to appeare, Eaſie before my ſight, fah, wherefore ſerues modeſtie but to pleaſure a Lady now and then, and help her from ſuſ ſpect, that&#x27;s the beſt vſe tis put too. No doubt youle be ſoone friendes my Lord. And make what haſt I can to my ſhip, I durſt wa ger you&#x27;l be vnder ſaile before me. I, a verie pleaſant voyage as can be: I ſee the houre is Ripe, heere comes the Priſons Bawde the bond-maker, one that bindes heires before they are begot. A Farmers ſonne, iſt true? I giue you your ſalute ſir. I heare a good report of you ſir—y&#x27;aue money. An excellent vertue. Is your venture three hundred? y&#x27;are verie pre tiouſly welcome: heere&#x27;s a voyage towarde will make vs all.— Feare him not my Lord, hee&#x27;s a Gull&#x27;, hee ven tures with me, ſome filthy Farmers ſonne, the father&#x27;s a Iew, and the ſonne a Gentleman:pha.— Why, that in our Countrey makes him a Gen tleman. By my troth my Lord and ſo ſhe is.— 3.4.5.6.7. Well ſaid Scriuener, haſt put&#x27;em all in: you ſhal heare now my L. You haue bought a Iewell yfaith, my L, nine and thirtie, fortie. You haue bought as louely a penny-woorth my Lord, as ere you bought in your life. I could not affoord her ſo y faith, but that I am-going to ſea and haue need of money. Ninteene—occupation? Pox out, out with oc cupation, a Captaine is of no occupation, man. Vſe? put out vſe too for ſhame. Till we are all gone, I prethee. Former ſailes, nine &amp; twenty thirty, by my troth my Lord, this is the firſt time that euer I ſolde her. Let it run on then, nine and fortie, fiftie, — For Reentryes, I will not ſweare for her. Faces: I knowe what you meane by faces: Scriuener, there&#x27;s a great figure in faces. Verie good ſir, Ile bee ready for you preſently, foure hundred and twentie. 1.2.3.4.5.— Right yfaith, my Lord fully fiue hundred, Amply contented. S&#x27;foote dooſt take me to be a pen-man? I proteſt I could nere write more then A, B, C, thoſe three letters in my life. I could nere get furder. It goes on hardly, and comes off eaſily. Hee? he ſhall, prethe come and ſet thy hand for witneſſe Rogue, thou ſhall venture with me? What a faire fiſt the pretty whorſone writes, as if he had had manners and bringing vp, a farmers Sonne: his Father dam&#x27;s himſelfe to ſell muſtie Corne, while hee ventures the Money, twill proſper well at Sea no doubt he ſhall nere ſee&#x27;t agein As my deede, what elſe ſir? So my Lord, you haue her, clip her, enioy her, ſhee&#x27;s your owne, and let me be proud to tell you now my Lord, ſhee&#x27;s as good a ſoule if a man had a minde to liue honeſt, and keepe a wench, the Kindeſt, ſweeteſt, comfortableſt Rogue.— This fine worke: a verie braue end, hum— The end of me is lowzie. Pox of his diſſemblance: I will to ſ n. In health. You might count me an aſſe then yfaith. Prethe ha done, I am aſham&#x27;d of nothing. This Lord ſtickes in my ſtomacke. What and they did, I ſell none but mine owne: as for the Duke, hee&#x27;s abroad by this time, and for Fide lio hee&#x27;s in labour. What call you Trauelling? Slaue and foole: —ha, who? oh— Is this the Scriuener and the Farmers Sonne, Fire on his Lordſhip he tolde me they Trauaild. S&#x27;foot he vndoes me, I am a Rogue &amp; a Beggar, The Aegiptian plague creepes ouer me alreadie, I begin to be lowſie. I doe beſeech your good Lordſhip conſider the ſtate of a poore downe-caſt Captaine. More&#x27;s the pittie. I do beſeech your Ladiſhip not ſo much for par don, as to beſtow a few of thoſe Crownes vpon a poore vnfethered Rouer that will as truely pray for you, and wiſh you hangd, as any man breathing. Well &#x27;ime yet glad, i&#x27;ue libertie and theſe: The Land has plagu&#x27;d me, and ile plague the ſeas.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Phoenix</div><div class="body">The old Duke of Ferrara has reigned 45 years, and is now near death. He accepts his nobles’ advice that his son, ===== PAGE 76 ===== Prince Phoenix, should travel to other nations in order to prepare himself for government. Phoenix suspects a stratagem to have him out of the country at the time his father dies, jeopardizing the succession, so he decides instead to travel incognito within Ferrara itself, witnessing abuses which require reformation, but which would be concealed from a visitor known to be of high rank; he will be attended only by his servant Fidelio. Fidelio has a new stepfather, a sea-captain: against all advice, his mother Castiza has remarried, only to find herself tied to an abusive bully. The captain also regrets the marriage and is looking for a way out of it; so he agrees to sell his wife to the courtier Proditor. Phoenix and Fidelio hear of this and infiltrate the sales meeting in disguise: Fidelio poses as the scrivener who has.drawn up the contract, and Phoenix as a potential investor in the captain’s next voyage. Once the contract is signed and the money handed over, they confront the captain and force him to go into exile, giving the money to Castiza. Fidelio’s girlfriend has just lost her father, whose will leaves her in the custody of her uncle, the corrupt Justice Falso. He proposes to marry her, threatening to withhold payment of her dowry if she should marry anyone else (such as Fidelio). Fidelio goes to see her in disguise, bringing a letter and gift from himself, but on the way he and Phoenix are attacked by robbers and the token is stolen. The thieves are in fact Falso’s servants in disguise, seeking to supplement the meagre wage he pays them. Phoenix captures one of them and has him brought before a judge; but this happens to be Falso himself, and he commits the prisoner to the custody of the other servants, his accomplices. The niece explains to Phoenix what has happened and absconds with him and Fidelio. Falso also abets his own daughter’s adultery with her husband’s brother, a knight. She sets up an assignation, promising to give him money: he is gently to disturb the door-knocker after her jeweller husband has gone to bed, whereupon the maid will let him in. Phoenix accidentally gives the signal and is admitted by mistake. Meeting him in darkness, the wife does not notice the error, and gives him the money. Meanwhile the knight is arrested for debt. He takes the officers to his lover’s house, expecting to receive the…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

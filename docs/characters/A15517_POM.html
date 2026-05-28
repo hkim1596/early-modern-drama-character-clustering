@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>POM in The Three Lords and Three Ladies of London · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_05.html">Cluster 5 — 5: conscience, lucre, lucar</a> ›
+  <span>POM</span>
+</nav>
+
+<h1>POM</h1>
+<p class="lede">in <em>The Three Lords and Three Ladies of London</em> — Wilson, Robert</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1590</td></tr>
+<tr><th>Words</th><td>1211</td></tr>
+<tr><th>Characters</th><td>6538</td></tr>
+<tr><th>BritDrama no.</th><td>821</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 5 (<em>conscience, lucre, lucar, usurie, fraud, dissimulation…</em>). Matches are highlighted.</p>
+<div class="excerpt">Women loue Pompe. If <mark>lucre</mark> like to match with <mark>Londons</mark> Pomp, In stately port all others she shall passe. The rather in d spight of vs? Not so. <mark>Nemo</mark> keepe cloase, and <mark>Conscience</mark> pray for vs. Bée gone and recommend vs to our God. For <mark>Conscience</mark> sake more than for <mark>Lucre</mark> now, In this deuice such liking I conceiue, As <mark>London</mark> shall not lack</div>
+<div class="excerpt">can tel, for he doth follow them. Enter <mark>Nemo</mark>. loue by pure zeale. Nay to support the haughty magnificence And lordly Pompe of <mark>Londons</mark> excellence, Befits it rather <mark>Lucre</mark> ioine with me, By whom her honor shal be most aduanced. What Pompe or port without respect of gaine pomp hath need of <mark>Lucre</mark>: Pomp decaies without <mark>Lucre</mark>, If <mark>lucre</mark></div>
+<div class="excerpt">of <mark>London</mark> for his loue: Call if he come that can encounter me, Or mooue me not for ech enuious swad. Wealth watch for pomp for thou canst wel defend Loue, <mark>Lucre</mark>, <mark>Conscience</mark> we of thée desire, Which in thy self hast all perfection, Accomplished with all integritie: And needest no helpe so doe what pleaseth thee, Who holdest Fame and</div>
+<div class="excerpt">while, I will answere you with reason. Maister Vsury come hether, you desire to serue me, you haue done Lady <mark>Lucre</mark> good seruice you say, but it was against God and <mark>Conscience</mark> you did it, neither euer in your life did ye anie thing for Loue: Well to be short, serue me you shall not, and I would I could banish you from <mark>London</mark> for euer,</div>
+<div class="excerpt">great mislike amongst vs that might breede. And one with I sauns partner of my loues. Whom louest thou <mark>pleasure</mark>? Lush, ye lie. VVhy <mark>Pleasure</mark>? Pompe hath chosen Lucres loue. Lord pollicie with reason hath discuss <mark>pleasure</mark> consent, and so our loue shall hold. And you (sir boy) for pompe perform the like, To Wea th. Bid him that</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">A great mislike amongst vs that might breede. And one with I sauns partner of my loues. Whom louest thou pleasure? Lush, ye lie. VVhy Pleasure? Pompe hath chosen Lucres loue. Lord pollicie with reason hath discuss pleasure consent, and so our loue shall hold. And you (sir boy) for pompe perform the like, To Wea th. Bid him that dare this Ympreze batter once, Be well aduisde he be no beggers brat, Nor base of courage, nor of bad conceit: To match himselfe with such magnificence, As fits Lord pompe of London for his loue: Call if he come that can encounter me, Or mooue me not for ech enuious swad. Wealth watch for pomp for thou canst wel defend Loue, Lucre, Conscience we of thée desire, Which in thy self hast all perfection, Accomplished with all integritie: And needest no helpe so doe what pleaseth thee, Who holdest Fame and Fortune both thy slaues, And doest compell the Destinies draw the coatch: To thée we sue, sith power thou hast thereto, To set those Ladies at their libertie. Yet Nemo was the Iudge that sentence gaue. Thou onlie milde and curteous sir, vouchsafe To graunt our suit, and set those Ladies free. And loue doth couer hears of combrous euils. Alas good Ladies, was there none that sued For their release, before we took&#x27;t in hand? Becommeth vs to waite on Nemo still, Doe but commaund and we shall all subscribe. Much may their fortune and their feature be. But what it is we cannot thus discerne. Right stately dames, if they were wel attir&#x27; : Of rare perfection. A louely face. A face angelicall. With Londons Pomp may one of you be ioin&#x27;d, Possessing more than Fortune can affoord, Fortune&#x27;s a foole, but heauenly prouidence Guards Londons pompe, and her that shal be his: Nemo can tel, for he doth follow them. Enter Nemo. loue by pure zeale. Nay to support the haughty magnificence And lordly Pompe of Londons excellence, Befits it rather Lucre ioine with me, By whom her honor shal be most aduanced. What Pompe or port without respect of gaine pomp hath need of Lucre: Pomp decaies without Lucre, If lucre be not mad she wil be mine, Women loue Pompe. If lucre like to match with Londons Pomp, In stately port all others she shall passe. The rather in d spight of vs? Not so. Nemo keepe cloase, and Conscience pray for vs. Bée gone and recommend vs to our God. For Conscience sake more than for Lucre now, In this deuice such liking I conceiue, As London shall not lack what pomp can doe, And well I know that worthy Citizens Doe carie mindes so franke and bountiful, As for their honor they will spare no cost: Especially, to let their enemie know. Honor in England, not in Spaine doth grow. Then let vs go and each man to his charge ▪ I think it good, and time that it were done. And here they come, Oh proud Castillians. Which now belike our Herald shall receiue, For theirs comes to him. It is my wealth, but kéep him if they dare, Ile fetch him double if they doo my Lordes, Before we fight? soft sic, ye braue too fast. Castilians, know that Englishmen wil knock, but say. Dooth Spanish Pride for Londons Lucre gape, But in this Molehil many Plsmyres be, All which will sting before they be remoou&#x27;d, What is thy name? shealty, say vnto yen Thrasos thrée. The Lordes of London dare them to the field, Wittieng their pride and their Ambition, Scerning their Tiranny, and yet fearing this, That they are come from home and dare not fight, But if they dare in ioint or seueral armes, Battaile or combat, him that Lucre seekes, Your Spanish pride, him dare I from the rest. This Lucres fauour, Pomp for her will fight. You Spanish Fesants crow vpon your pearch, But when we fire your coates about your eares, And take your shippes before your walled townes, We make a donghill of your rotten boanes, And cram our chickens with your graines of gold. So do we for theirs: but Fealtie, canst thou declare to me the cause why all their pages follow them, when ours in showes do euer goe before. What brauing cowards these Castillians be, My Lordes let&#x27;s hang our Scutchens vp againe, And shroud our selues but not farre off vnséene, To prooue if that may draw them to some deed, Be it but to batter our ymprezed shieldes. Vp haue they set their owne, sée if we dare Batter on them, and beat their brauing Lordes. My selfe wil onset giue on Prides, at your Peacocke sir. Their shieldes are ours, they fled away with shame, But Lordings, whiles the stratageum is fresh, And memorie of thir misfortune greene, Their hartes yet fainting with the nouell griefe, Let vs pursue them flieng, if you say it, Haply, we may preuent their passage yet. Faire and beloued Lucre, though I speake last, As kindly I thy welcome do accept, As heart can thinke, pen write, or tongue can tell. Fair lucre, loe, my present and my self. the wished good this world could giue to me. And on that day in honor of these Dames, these shields in triumph shall be borne about. Ladies, adue. the Lords bring the ̄ to the doore, &amp; they go out &amp; Ne. Maister Vsury, I thanke ye that ye offer me your seruice, it séemes to be for your old maistresse sake, Lady lucre, stay but a while, I will answere you with reason. Maister Vsury come hether, you desire to serue me, you haue done Lady Lucre good seruice you say, but it was against God and Conscience you did it, neither euer in your life did ye anie thing for Loue: Well to be short, serue me you shall not, and I would I could banish you from London for euer, or keepe you cloase prisoner, but that is not in me, but what is or may be, that strait you shall see: By pollicies counsell this shall be done, Diligence bring that yron, helpe me my Lords. A craf ie villaine, perceiuing how we meant to Vsurie, slipt away. What&#x27;s here my boy, what&#x27;s here? pleasure, this suit is sure to you, for it&#x27;s mad stuffe, and I know not what it meanes. And what fault find ye with this? they that haue it need not shew it. Against which feast, repaire you to Diligence, and hee shal appoint you furniture and money, and a place in the show, till when farewell. Exeunt Yet more adoe before we can inioy The ioies of mariage with our mistresses? Be these the Lords that tytle doo pretend? My Lords of Lincolne, so we heare you be. What are your names? Which comes for Lucre ? First that from heauen vpon our gratious Queene, All maner blessings may be multiplied, That as her raigne most prosperous hath bene, During worlds length so may it stil abide, And after that with saintes be glorified· Lord graunt her here health, hearts-ease, ioy and mirth. And heauen at last, after long life on earth.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Three Lords and Three Ladies of London</div><div class="body">The three lords of London, in want of wives, plan to marry the three ladies. There are two complications. ===== PAGE 450 ===== First, it emerges that they all want the same lady, Lucre. More pressingly, all three ladies are in prison. The lords agree to secure their freedom and worry later about who marries whom. But Judge Nemo has heard petitions for the ladies’ release before: many men wanted Lucre, some wanted Love, and nobody cared about Conscience. His conditions are that either all three ladies go free or none of them, and that, if they do, he shall decide which lady marries which lord. The ladies are taken from prison and sat on uncomfortable penitential stones. They are visited by Lucre’s former servants, who were banished from London but now want their old jobs back; Lucre is unable to accommodate them. Falsehood and Double- Dealing offer the ladies clothes to replace their prison rags, but they refuse. Nemo arranges for them to have more virtuous garments, the first stage in their rehabilitation. When the three lords continue to quarrel over which of them should have Lucre, Nemo agrees to give up his right to make the marital dispositions, on condition that the lords accept the lady’s own choice. He then has Conscience pose as Lucre. Each lord offers her a different benefit — power, magnificence, and hedonism - and she eventually bestows herself on Pleasure. He is happy with his fiancée even when he learns of the deception. Conscience declares that Policy should marry Love and that Lucre is best suited to Pomp. Before the lords can proceed with their marriages, however, they must repel a Spanish invasion. Three lords of Spain arrive and plan to take the ladies for themselves. The London lords defeat them and present their captured shields to their ladies. Nemo grants the two remaining ladies to the appropriate lords, but three lords of Lincoln intervene, claiming pre-contracts with the ladies. The London lords outface their rivals, who are sent away with the penitential stones in lieu of the ladies. In the sub-plot, Fraud sells Simplicity some cheap ‘gold’, which turns out to be mere copper, so Simplicity repeatedly attempts to have him arrested. Posing as Skill and Fair Semblance, Fraud and Dissimulation seek jobs with the lords, but are recognized. Dissimulation is branded, and Fraud is taken to prison, but bribes Diligence to release him on the way; the bribe money is later found to be counterfeit. Fraud attends the lords’ wedding in…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_05.html">Cluster 5 — 5: conscience, lucre, lucar</a> page.
+</div>
+</div></body></html>

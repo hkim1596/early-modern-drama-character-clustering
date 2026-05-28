@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ANT in Julius Caesar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> ›
+  <span>ANT</span>
+</nav>
+
+<h1>ANT</h1>
+<p class="lede">in <em>Julius Caesar</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>2071</td></tr>
+<tr><th>Characters</th><td>10963</td></tr>
+<tr><th>BritDrama no.</th><td>1198</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 29 (<em>brutus, did, rome, antonius, anthony, cleopatra…</em>). Matches are highlighted.</p>
+<div class="excerpt">People take The cruell iſſue of theſe bloody men, According to the which, thou ſhalt diſcourſe To yong Octauius, of the ſtate of things. Lend me your hand. For <mark>Brutus</mark> ſake, I am beholding to you. You gentle Romans. But yeſterday, the word of Caeſar <mark>might</mark> Haue ſtood againſt the <mark>World</mark>: Now lies he there, And none ſo poore to do</div>
+<div class="excerpt"><mark>World</mark>: Now lies he there, And none ſo poore to do him reuerence. O Maiſters! If I were diſpos&#x27;d to ſtirre Your hearts and mindes to Mutiny and Rage, I ſhould do <mark>Brutus</mark> wrong, and Caſſius wrong: Who (you all know) are Honourable men. I will not do them wrong: I rather chooſe To wrong the dead, to wrong my ſelfe and you, Then I</div>
+<div class="excerpt">heere by Caeſar, and by you cut off, The Choice and Maſter Spirits of this Age. I doubt not of your Wiſedome: Let each man render me his bloody hand. F rſt Marcus <mark>Brutus</mark> will I ſhake with you; Next Caius Caſſius do I take your hand; Now Decius <mark>Brutus</mark> yours; now yours Metellus ; Yours Cinna ; and my valiant Caska, yours; Though laſt,</div>
+<div class="excerpt">his Tent, That day he ouercame the Neruij. Looke, in this place ran Caſſius Dagger through: See what a rent the enuious Caska made: Through this, the wel-beloued <mark>Brutus</mark> ſtabb&#x27;d, And as he pluck&#x27;d his curſed Steele away: Marke how the blood of Caeſar followed it, As ruſhing out of doores, to be reſolu&#x27;d If <mark>Brutus</mark> ſo vnkindely knock&#x27;d,</div>
+<div class="excerpt">he pluck&#x27;d his curſed Steele away: Marke how the blood of Caeſar followed it, As ruſhing out of doores, to be reſolu&#x27;d If <mark>Brutus</mark> ſo vnkindely knock&#x27;d, or no: For <mark>Brutus</mark>, as you know, was Caeſars Angel. Iudge, O you Gods, how deerely Caeſar lou&#x27;d him: This was the moſt vnkindeſt cut of all. For when the Noble Caeſar ſaw him ſtab,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Caeſar, my Lord. I ſhall remember, When Caeſar ſayes, Do this; it is perform&#x27;d. Caeſar. Feare him not Caeſar, he&#x27;s not dangerous, He is a Noble Roman, and well giuen. So to moſt Noble Caeſar. O mighty Caeſar ! Doſt thou lye ſo lowe? Are all thy Conqueſts, Glories, Triumphes, Spoiles, Shrunke to this little Meaſure? Fare thee well. I know not Gentlemen what you intend, Who elſe muſt be let blood, who elſe is ranke: If I my ſelfe, there is no houre ſo fit As Caeſars deaths houre; nor no Inſtrument Of halfe that worth, as thoſe your Swords; made rich With the moſt Noble blood of all this World. I do beſeech yee, if you beare me hard, Now, whil&#x27;ſt your purpled hands do reeke and ſmoake, Fulfill your pleaſure. Liue a thouſand yeeres, I ſhall not finde my ſelfe ſo apt to dye. No place will pleaſe me ſo, no meane of death, As heere by Caeſar, and by you cut off, The Choice and Maſter Spirits of this Age. I doubt not of your Wiſedome: Let each man render me his bloody hand. F rſt Marcus Brutus will I ſhake with you; Next Caius Caſſius do I take your hand; Now Decius Brutus yours; now yours Metellus ; Yours Cinna ; and my valiant Caska, yours; Though laſt, not leaſt in loue, yours good Trebonius Gentlemen all: Alas, what ſhall I ſay, My credit now ſtands on ſuch ſlippery ground, That one of two bad wayes you muſt conceit me, Either a Coward, or a Flatterer. That I did loue thee Caeſar, O &#x27;tis true: If then thy Spirit looke vpon vs now, Shall it not greeue thee deerer then thy death, To ſee thy Antony making his peace, Shaking the bloody fingers of thy Foes? Moſt Noble, in the preſence of thy Coarſe, Had I as many eyes, as thou haſt wounds, Weeping as faſt as they ſtreame forth thy blood, It would become me better, then to cloſe In tearmes of Friendſhip with thine enemies. Pardon me Iulius, heere was&#x27;t thou bay&#x27;d braue Hart, Heere did&#x27;ſt thou fall, and heere thy Hunters ſtand Sign&#x27;d in thy Spoyle, and Crimſon&#x27;d in thy Lethee. O World! thou waſt the Forreſt to this Hart, And this indeed, O World, the Hart of thee. How like a Deere, ſtroken by many Princes, Doſt thou heere lye? Pardon me Caius Caſſius: The Enemies of Caeſar, ſhall ſay this: Then, in a Friend, it is cold Modeſtie. Therefore I tooke your hands, but was indeed Sway&#x27;d from the point, by looking downe on Caeſar. Friends am I with you all, and loue you all, Vpon this hope, that you ſhall giue me Reaſons, Why, and wherein, Caeſar was dangerous. That&#x27;s all I ſeeke, And am moreouer ſutor, that I may Produce his body to the Market-place, And in the Pulpit as becomes a Friend, Speake in the Order of his Funerall. Be it ſo: I do deſire no more. Caeſar did write for him to come to Rome. Thy heart is bigge: get thee a-part and weepe: Paſsion I ſee is catching from mine eyes, Seeing thoſe Beads of ſorrow ſtand in thine, Began to water. Is thy Maſter comming? Poſt backe with ſpeede, And tell him what hath chanc&#x27;d: Heere is a mourning Rome, a dangerous Rome, No Rome of ſafety for Octauius yet, Hie hence, and tell him ſo. Yet ſtay a-while, Thou ſhalt not backe, till I haue borne this courſe Into the Market place: There ſhall I try In my Oration, how the People take The cruell iſſue of theſe bloody men, According to the which, thou ſhalt diſcourſe To yong Octauius, of the ſtate of things. Lend me your hand. For Brutus ſake, I am beholding to you. You gentle Romans. But yeſterday, the word of Caeſar might Haue ſtood againſt the World: Now lies he there, And none ſo poore to do him reuerence. O Maiſters! If I were diſpos&#x27;d to ſtirre Your hearts and mindes to Mutiny and Rage, I ſhould do Brutus wrong, and Caſſius wrong: Who (you all know) are Honourable men. I will not do them wrong: I rather chooſe To wrong the dead, to wrong my ſelfe and you, Then I will wrong ſuch Honourable men, But heere&#x27;s a Parchment, with the Seale of Caeſar, I found it in his Cloſſet, &#x27;tis his Will: Let but the Commons heare this Teſtament: (Which pardon me) I do not meane to reade, And they would go and kiſſe dead Caeſars wounds. And dip their Napkins in his Sacred Blood; Yea, begge a haire of him for Memory, And dying, mention it within their Willes, Bequeathing it as a rich Legacie Vnto their iſſue. Haue patience gentle Friends, I muſt not read it. It is not meete you know how Caeſar lou&#x27;d you: You are not Wood, you are not Stones ▪ but men: And being men, hearing the Will of Caeſar, It will inflame you, it will make you mad: &#x27;Tis good you know not that you are his Heires, For if you ſhould, O what would come of it? Will you be Patient? Will you ſtay a-while? I haue o&#x27;re-ſhot my ſelfe to tell you of it, I feare I wrong the Honourable men, Whoſe Daggers haue ſtabb&#x27;d Caeſar: I do feare it. You will compell me then to read the Will: Then make a Ring about the Corpes of Caeſar, And let me ſhew you him that made the Will: Shall I deſcend? And will you giue me leaue? Nay preſſe not ſo vpon me, ſtand farre off. If you haue teares, prepare to ſhed them now. You all do know this Mantle, I remember The firſt time euer Caeſar put it on, &#x27;Twas on a Summers Euening in his Tent, That day he ouercame the Neruij. Looke, in this place ran Caſſius Dagger through: See what a rent the enuious Caska made: Through this, the wel-beloued Brutus ſtabb&#x27;d, And as he pluck&#x27;d his curſed Steele away: Marke how the blood of Caeſar followed it, As ruſhing out of doores, to be reſolu&#x27;d If Brutus ſo vnkindely knock&#x27;d, or no: For Brutus, as you know, was Caeſars Angel. Iudge, O you Gods, how deerely Caeſar lou&#x27;d him: This was the moſt vnkindeſt cut of all. For when the Noble Caeſar ſaw him ſtab, Ingratitude, more ſtrong then Traitors armes, Quite vanquiſh&#x27;d him: then burſt his Mighty heart, And in his Mantle, muffling vp his face, Euen at the Baſe of Pompeyes Statue (Which all the while ran blood) great Caeſar fell. O what a fall was there, my Countrymen? Then I, and you, and all of vs fell downe, Whil&#x27;ſt bloody Treaſon flouriſh&#x27;d ouer vs. O now you weepe, and I perceiue you feele The dint of pitty: Theſe are gracious droppes. Kinde Soules, what weepe you, when you but behold Our Caeſars Veſture wounded? Looke you heere, Heere is Himſelfe, marr&#x27;d as you ſee with Traitors. Stay Country-men. Good Friends, ſweet Friends, let me not ſtirre you vp To ſuch a ſodaine Flood of Mutiny: They that haue done this Deede, are honourable. What priuate greefes they haue, alas I know not, That made them do it: They are Wiſe and Honourable, And will no doubt with Reaſons anſwer you. I come not (Friends) to ſteale away your hearts, I am no Orator, as Brutus is; But (as you know me all) a plaine blunt man That loue my Friend, and that they know full well, That gaue me publike leaue to ſpeake of him: For I haue neyther writ nor words, nor worth, Action, nor Vtterance, nor the power of Speech, To ſtirre mens Blood. I onely ſpeake right on: I tell you that, which you your ſelues do know, Shew you ſweet Caeſars wounds, poor poor dum mouths And bid them ſpeake for me: But were I Brutus, And Brutus Antony, there were an Antony Would ruffle vp your Spirits, and put a Tongue In euery Wound of Caeſar, that ſhould moue The ſtones of Rome, to riſe and Mutiny. Yet heare me Countrymen, yet heare me ſpeake Why Friends, you go to do you know not what: Wherein hath Caeſar thus deſeru&#x27;d your loues? Alas you know not, I muſt tell you then: You haue forgot the Will I told you of. Heere is the Will, and vnder Caeſars Seale: To euery Roman Citizen he giues, To euery ſeuerall man, ſeuenty fiue Drachmaes. Heare me with patience. Moreouer, he hath left you all his Walkes, His priuate Arbors, and new-planted Orchards, On this ſide Tyber, he hath left them you, And to your heyres for euer: common pleaſures To walke abroad, and recreate your ſelues. Heere was a Caeſar : when comes ſuch another? Now let it worke: Miſcheefe thou art a-foot, Take thou what courſe thou wilt. How now Fellow? Where is hee? And thither will I ſtraight, to viſit him: He comes vpon a wiſh. Fortune is merry, And in this mood will giue vs any thing. Belike they had ſome notice of the people How I had moued them. Bring me to Octauius. Theſe many then ſhall die, their names are prickt He ſhall not liue; looke, with a ſpot I dam him. But Lepidus, go you to Caeſars houſe: Fetch the Will hither, and we ſhall determine How to cut off ſome charge in Legacies. This is a ſlight vnmeritable man, Meet to be ſent on Errands: is it fit The three-fold World diuided, he ſhould ſtand One of the three to ſhare it? Octauius, I haue ſeene more dayes then you, And though we lay theſe Honours on this man, To eaſe our ſelues of diuers ſland&#x27;rous loads, He ſhall but beare them, as the Aſſe beares Gold, To groane and ſwet vnder the Buſineſſe, Either led or driuen, as we point the way: And hauing brought our Treaſure, where we will, Then take we downe his Load, and turne him off (Like to the empty Aſſe) to ſhake his eares, And graze in Commons. So is my Horſe Octauius, and for that I do appoint him ſtore of Prouender. It is a Creature that I teach to fight, To winde, to ſtop, to run directly on: His corporall Motion, gouern&#x27;d by my Spirit, And in ſome taſte, is Lepidus but ſo: He muſt be taught, and train&#x27;d, and bid go forth: A barren ſpirited Fellow; one that feeds On Obiects, Arts, and Imitations. Which out of vſe, and ſtal&#x27;de by other men Begin his faſhion. Do not talke of him, But as a property: and now Octauius, Liſten great things. Brutus and Caſſius Are leuying Powers; We muſt ſtraight make head: Therefore let our Alliance be combin&#x27;d. Our beſt Friends made, our meanes ſtretcht, And let vs preſently go ſit in Councell, How couert matters may be beſt diſclos&#x27;d, And open Perils ſureſt anſwered. Tut I am in their boſomes, and I know Wherefore they do it: They could be content To viſit other places, and come downe With fearefull brauery: thinking by this face To faſten in our thoughts that they haue Courage; But &#x27;tis not ſo. Octauius, leade your Battaile ſoftly on Vpon the left hand of the euen Field. Why do you croſſe me in this exigent. Not ſtingleſſe too. Villains: you did not ſo, when your vile daggers Hackt one another in the ſides of Caeſar: You ſhew&#x27;d your teethes like Apes, And fawn&#x27;d like Hounds, And bow&#x27;d like Bondmen, kiſſing Caeſars feete; Whil&#x27;ſt damned Caska, like a Curre, behinde Strooke Caeſar on the necke. O you Flatterers. Old Caſſius ſtill. Where is hee? This is not Brutus friend, but I aſſure you, A prize no leſſe in worth; keepe this man ſafe, Giue him all kindneſſe. I had rather haue Such men my Friends, then Enemies. Go on, And ſee where Brutus be aliue or dead, And bring vs word, vnto Octauius Tent: How euery thing is chanc&#x27;d. This was the Nobleſt Roman of them all: All the Conſpirators ſaue onely hee, Did that they did, in enuy of great Caeſar : He, onely in a generall honeſt thought, And common good to all, made one of them. His life was gentle, and the Elements So mixt in him, that Nature might ſtand vp, And ſay to all the world; This was a man.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> page.
+</div>
+</div></body></html>

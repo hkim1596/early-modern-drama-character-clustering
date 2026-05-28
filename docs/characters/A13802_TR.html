@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TR in Albumazar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>TR</span>
+</nav>
+
+<h1>TR</h1>
+<p class="lede">in <em>Albumazar</em> — Tomkis, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1615</td></tr>
+<tr><th>Words</th><td>1467</td></tr>
+<tr><th>Characters</th><td>8022</td></tr>
+<tr><th>BritDrama no.</th><td>1769</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">daughter, And buy a bouncing Pedigree of a welsh Heralt: and then— Albumazar. Albumazar Th&#x27;Astrologer hath vnder-tooke to change me T&#x27; Antonio&#x27;s shape: this done, <mark>must</mark> I giue Flauia To my old master, and his maid to Trincalo. Gone newly home to choose a chamber fitting For transmutation: So now my <mark>heart</mark>&#x27;s at ease. And when you</div>
+<div class="excerpt">better then my birth: for in all the yeares of my yeomanry I could neuer yoke <mark>two</mark> crownes, and now I haue hearded ten faire twenty shil ling peeces. Now will I <mark>goe</mark> to this Astrologer, and hire him turne my Cart to a Caroch, my foure Iades to <mark>two</mark> paire of Dutch mares, my mistres Armellina to a Lady, my Plow-boy Dick to <mark>two</mark></div>
+<div class="excerpt">Bird-lime, or the Pox. I can not part with&#x27;t. Within, I am still thy Farmer Trincalo. Fetch one. Let my old maisters businesse sink or swim, This sweet occasion <mark>must</mark> not be neglected. Now shall I know th&#x27;Astrologers skill: ô wonderfull! Admir&#x27;d Albumazar in <mark>two</mark> transmutations: Here&#x27;s my old Farmers face. How in an instant I</div>
+<div class="excerpt">and Horses. Then Armellina shall be giuen to Trincalo, Three hundred Crownes her portion: wee&#x27;l get a boy And call him Transformation Trincalo. I&#x27;le doo&#x27;t sir. I <mark>did</mark> but iest. And yet my hand, I&#x27;le do&#x27;t. For I am mutable And therefore apt to change. Come, come sir, quickly, Let&#x27;s to th&#x27;Astrologer, and there transforme, Reforme,</div>
+<div class="excerpt">worship, To such a clowne as Trincalo, a branded foole, An Asse, a laughing-stock to Towne and Countrey? Art not asham&#x27;d to name him with Antonio? Villaine, th&#x27;hast broke my shoulders. I with a poxe. &#x27;Tis I, &#x27;tis I. O Armellina! Come let mee kisse thy brow like my owne daughter. True; and being drown&#x27;d, Nothing so grieu&#x27;d</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Pray giue me leaue: this side saies do&#x27;t, this do not. Before I leaue you Tom Trincalo take my counsell. Thy Mistresse Armellina is Antonios Mayde, And thou in his shape maist possesse her. Turne. But if I be Antonio, then Antonio Enioyes that happinesse, not Trincalo. A pretty trick to make my selfe a Cuckold. No, no; there, take your Lease. I&#x27;le hang first. Soft, Be not so cholerick Thomas: If I become Antonio, Then all his riches follow. This faire occasion Once vanish&#x27;t, hope not the like; of a starke Clowne I shall appeare speck and span Gentleman. A pox of Ploughes, and Carts, and Whips, and Horses. Then Armellina shall be giuen to Trincalo, Three hundred Crownes her portion: wee&#x27;l get a boy And call him Transformation Trincalo. I&#x27;le doo&#x27;t sir. I did but iest. And yet my hand, I&#x27;le do&#x27;t. For I am mutable And therefore apt to change. Come, come sir, quickly, Let&#x27;s to th&#x27;Astrologer, and there transforme, Reforme, conforme, deforme me at your pleasure. I loath this Country countnance; dispatch: my skin Itch&#x27;es like Snakes in Aprill, to be strip&#x27;t off. , ô quickly, as you loue Flauia, quickly. License all Alehouses, Match my sonne Transformation t&#x27;a knights daughter, And buy a bouncing Pedigree of a welsh Heralt: and then— Albumazar. Albumazar Th&#x27;Astrologer hath vnder-tooke to change me T&#x27; Antonio&#x27;s shape: this done, must I giue Flauia To my old master, and his maid to Trincalo. Gone newly home to choose a chamber fitting For transmutation: So now my heart&#x27;s at ease. And when you come to th&#x27;hart, spoyle not the loue of Armellina. And in my braine leaue as much discretion As may spye falshood in a Tauerne reckoning; And let me alone for bounty to winke and pay&#x27;t. And if you change me perfectly, I&#x27;le bring y&#x27;a dozen knights for customers. As fast as Alchochoden and Almuten Can carry me: for sure these two are Divels. Here sir. NOw am I grown a gentleman, and a fine one, I know&#x27;t by th&#x27;kissing of my hands so courtly, My courteous knees bend in so true a distance, As if my foot walk&#x27;t in a frame of purpose. Thus I accost you: or thus, sweet sir, your seruant: Nay more, your seruants seruant: that&#x27;s your grand-seruant. I could descend from th&#x27;top of Pauls to th&#x27;bottome, And on each step strew parting complements, Striue for a doore while a good Carpenter Might make a new one. I am your shadow sir, And bound to wait vpon you. I&#x27;faith I will not: pray sir, &amp;c. O braue Albumazar ! Now I know I am perfectly transform&#x27;d, my mind incites me To chalenge some braue fellow for my credit, And for more safety, get some friend in priuate To take the businesse vp in peace and quiet. Is the gold good, for mine was good I lent you. Farewell good seruant, ha, ha, ha, ha, ha. I know not so much as his name! ten pound? this change is better then my birth: for in all the yeares of my yeomanry I could neuer yoke two crownes, and now I haue hearded ten faire twenty shil ling peeces. Now will I goe to this Astrologer, and hire him turne my Cart to a Caroch, my foure Iades to two paire of Dutch mares, my mistres Armellina to a Lady, my Plow-boy Dick to two guar ded foot-men: then will I hurry my selfe to the Mercers bookes, weare rich cloathes, be cal&#x27;d Tony by a great man, sell my lands, pay no debts, hate Citizens, and beate Sergeants: and when all failes, sneake out of Antonio with a two-peny looking-glasse, and turne as true Trincalo as euer. I thank you sir. While my deere Ronca Clipt me, my purse shooke dangerously; yet both his armes And hands embrac&#x27;d my necke: here&#x27;s none behinde me, How can this be? Shew me your hand. But wheres th&#x27;other? Giue me your right. Your left. Now both. Why are you married? O I remember him: but if he come? &#x27;Tis as high as Paules. Open the Garden dore. Oh I am drown&#x27;d, I drowne! I drowne, I smother! Who? you meane Pandolfo&#x27;s Farmer. Alas poore foole, hee&#x27;s a stark Asse, but harmelesse. And though she talk with him, &#x27;tis but to laugh, As all the world do&#x27;s at him: Come be friends At my entreaty. Lead in. Alas poore, Trincalo had&#x27;st thou beene taken, Thou hadst bene tunn&#x27;d for Turky. Ha; ha, ha; faire fall Antonio&#x27;s shape. What a notorious Wittall&#x27;s this! Ha, ha, ha. How? one with thee? speake such another sillable, And by the terror of this deadly steele, That nere saw light, but sent to endlesse darknesse All that durst stand before&#x27;t: thou diest. What art now? What boldnesse madded thee to steale my name? And sirra when y&#x27;are drunk, Is there no person to put on, but mine, To couer your intended villanies? An Oxe, an Asse, a dog. Stay. Vnderstand&#x27;st thou well nice points of duell? Art borne of gentle bloud, and pure discent? Was none of all thy linage hang&#x27;d, or cuckold? Bastard, or bastinado&#x27;d? is thy pedigree As long and wide as mine? For otherwise Thou wert most vnworthy; and &#x27;twere losse of honour In me to fight. More, I haue drawne fiue teeth: If thine stand sound, the tearmes are much vnequall. And by strict lawes of duell, I am excus&#x27;d To fight on disadvantage. My name is Don Antonio, I am now going To my owne house, to giue Pandolfo Flauia, And Armellina to his Farmer Trincalo. How dar&#x27;st thou Cricca, but a meaner seruant, Resemble me, a man of worth and worship, To such a clowne as Trincalo, a branded foole, An Asse, a laughing-stock to Towne and Countrey? Art not asham&#x27;d to name him with Antonio? Villaine, th&#x27;hast broke my shoulders. I with a poxe. &#x27;Tis I, &#x27;tis I. O Armellina! Come let mee kisse thy brow like my owne daughter. True; and being drown&#x27;d, Nothing so grieu&#x27;d mee as to loose thy company. But since I am safe return&#x27;d, for thy good seruice I&#x27;le helpe thee to a husband. Hee&#x27;s not like mee In yeares and grauity, but faire proportion. A hansome well-set man as I. &#x27;Tis Tom Trin calo of Totnam, Then sweare to keep my counsell. Why I am Trincalo. Look vpon mee and see him. I doe not. Now would I break this head against the stones, To be vnchang&#x27;d; fye on this Gentry, it stick&#x27;s Like Bird-lime, or the Pox. I can not part with&#x27;t. Within, I am still thy Farmer Trincalo. Fetch one. Let my old maisters businesse sink or swim, This sweet occasion must not be neglected. Now shall I know th&#x27;Astrologers skill: ô wonderfull! Admir&#x27;d Albumazar in two transmutations: Here&#x27;s my old Farmers face. How in an instant I am vnchang&#x27;d that was so long a changing. Here&#x27;s my flatte nose againe, &amp;c. Now Armellina take thy lou&#x27;d Trincalo To thy desir&#x27;d embracements, vse thy pleasure, Kisse him thy belly-full. Help Armellina, help! I am fal&#x27;n i&#x27;th&#x27; cellar: Bring a fresh Plantane leafe, I haue broke my shinne. You&#x27;l beat me out on&#x27;t sir: how haue I wrong&#x27;d you? Fare-well humilitie. Now am I beaten sober. ( takes away Pandolfo&#x27;s staffe ) Shall age and weaknesse master my youth and strength? Now speake your pleasure: what&#x27;s my fault? I haue bin faithfull In all you trusted me. I giue your Mistresse? Why when was I your iudge? See your error! Then was I fast lock&#x27;t in Antonio&#x27;s Cellar: Where making vertue of necessitie, I drunke starke drunke; and waking, found my selfe Cloth&#x27;d in this Farmers sute, as in the morning. Ha, ha, ha! Ha, ha, ha! Whilst Trincalo laughes, and fals the staffe, Pan dolfo recouers it, and beates him. Haue you got mistresse Patience ? ha, ha, ha! Ha, ha! Truth it selfe. Beleeue me no such matter: I nere was gentleman, nor otherwise Then what I am, vnlesse &#x27;twere when I was drunke. Pardon you? When you haue beaten mee to paste, good Trincalo Pardon mee? What ailes you? Sir, what ailes you? Loose not your patience too. Leaue this lamenting, And lay the Towne; you may recouer it. Haj! I&#x27;le follow. TWo hundred Crownes? and twentie pound a yeare For three good liues? Cargo ! Hai Trincalo ! My wife&#x27;s extreamely busie, dressing the supper For these great marriages; and I not idle, So that I cannot entertaine you here As I would else-where. But if you come to Totnam Some foure dayes hence, and aske for Trincalo At th&#x27;signe o&#x27;th Hogshead; I&#x27;le morgage all my liues To bid you welcome. You that loue Trincalo, And meane to meete, clappe hands and mak&#x27;t a bargaine.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Albumazar</div><div class="body">The neighbours Pandolfo and Antonio, both widowers, have arranged to marry each other’s daughters; but before they can do so, Antonio is lost and presumed dead on an overseas voyage, and the plan goes into abeyance because his son Lelio disapproves of Pandolfo as a potential brother-in-law. Albumazar’s accomplice Furbo has gained access to Pandolfo’s household, posing as his daughter’s tutor, and has learned of his .- amorous aspirations, and also his credulity about. magic and astrology. Albumazar plans to trick him, and sets about demonstrating his occult power. Ronca shows Pandolfo some of the astrologer’s amazing inventions: a telescope and an ‘otacousticon’ (actually a pair of ass’s ears) which allow him to see and hear things at a distance. Albumazar then predicts Pandolfo’s marriage, and also a stabbing which his associates then enact in a brawl. Pandolfo asks the astrologer to raise Antonio’s ghost, but instead Albumazar undertakes to transform the tenant farmer Trincalo into Antonio’s likeness for one day, so that he can give Flavia in marriage to Pandolfo. Trincalo agrees because this will give him access to Antonio’s household, and therefore to the maid Armellina, whom he loves. Pandolfo is required to prepare a room for the metamorphosis, laid out with valuable possessions. When he begins to have second thoughts about paying Albumazar, his servant Cricca suggests that he should pretend to have been robbed of his valuables; but when they are indeed stolen, Albumazar pretends in turn that the transformed Trincalo has just locked them away for safe keeping. After undergoing the fake metamorphosis, Trincalo is told he may not look at himself in a mirror for fear of breaking the spell. Ronca and Harpax greet him as Antonio, and pretend to be his debtor and creditor respectively, but Trincalo pays Harpax less than he was ===== PAGE 445 ===== 1615 given by Ronca, who has to steal back the balance. To buy time to spirit away Pandolfo’s goods, the tricksters divert him with Bevilona the courtesan, who pretends to be a gentlewoman in love with Antonio, and hides him from her husband. The real Antonio returns unexpectedly, and is taken for the transformed Trincalo: he does not understand when Pandolfo asks after his missing property, and his son and daughter, forewarned of the planned trick, beat him out of his own house. He meets Trincalo, who is still posing as him, and a duel is proposed. Lelio and Cricca realize the truth when they see the two men…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

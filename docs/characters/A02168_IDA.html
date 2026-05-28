@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IDA in The Scottish History of James the Fourth · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>IDA</span>
+</nav>
+
+<h1>IDA</h1>
+<p class="lede">in <em>The Scottish History of James the Fourth</em> — Greene, Robert</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1598</td></tr>
+<tr><th>Words</th><td>799</td></tr>
+<tr><th>Characters</th><td>4108</td></tr>
+<tr><th>BritDrama no.</th><td>854</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">courteous Countesse sake. Good sir sit downe, my mother heere and I, Count time mispent, an endlesse vanitie. My needle sir. What if it were? Good Lord sir no, for hearts but pricked soft, Are wounded sore, for so I <mark>heare</mark> it oft. Should life &amp; death within this needl urke, Ile pricke no hearts, Ile pricke vpon my worke. My Lord</div>
+<div class="excerpt">were remoued, The more I thinke of heauen I were beloued. Because the Court is counted Venus net, Where gifts and vowes for stales are often set, None, be she chaste as Vesta, but shall meete A curious toong to charme her eares with sweet. In sooth this is my thoght most gratious king, That they that little proue Are mickle</div>
+<div class="excerpt">knit in one? Oh how hee talkes as if hee should not die, As if that God in iustice once could winke, Vpon that fault I am a sham&#x27;d to thinke. Better then liue vnchaste, to liue in graue. But can his warrant keep my soule from hell? So counsell him, but sooth thou not his sinne, Tis vaine alurement that doth make him loue, I</div>
+<div class="excerpt">to name it? As I haue said, in dutie I am his: For other lawlesse lusts, that ill beseeme him, I cannot like, and good I will not deeme him. If he haue no great haste, he may come nye. If haste, tho he be gone, I will not crie. I cannot hate. Tis Greeke to mee my Lord, Ile wish you well, and thereon take my word. I, if her</div>
+<div class="excerpt">Greeke to mee my Lord, Ile wish you well, and thereon take my word. I, if her Ladiship will giue me leaue. Then noble English Peere, Accept this ring, wherein my <mark>heart</mark> is set, A constant <mark>heart</mark>, with burning flames befret: But vnder written this: O morte dura: Heereon when so you looke with eyes Pura, The maide you fancie most</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I count of Court my Lord, as wise men do, Tis fit for those that knowes what longs thereto: Each person to his place, the wise to Art, The Cobler to his clout, the Swaine to Cart. If bewtie (as I know there&#x27;s none in me) Were sworne my loue, and I his life should be: The farther from the Court I were remoued, The more I thinke of heauen I were beloued. Because the Court is counted Venus net, Where gifts and vowes for stales are often set, None, be she chaste as Vesta, but shall meete A curious toong to charme her eares with sweet. In sooth this is my thoght most gratious king, That they that little proue Are mickle blest, from bitter sweets of loue: And weele I wot, I heard a shepheard sing, That like a Bee, Loue hath a little sting: He lurkes in flowres, he pearcheth on the trees, He on Kings pillowes, bends his prettie knees: The Boy is blinde, but when he will not spie, He hath a leaden foote, and wings to flie: Beshrow me yet, for all these strange effects, If I would like the Lad, that so infects. And why dread King? What then? And were Apollo moued and rulde by me, His wisedome should be yours, and mine his tree. Not in delights, or pompe, or maiestie. Since these are meanes to draw the minde From perfect good, and make true iudgement blind. Yet would I (might I chuse) be honest poore. For she that sits at fortunes feete alowe Is sure she shall not taste a further woe. But those that prancke one top of fortunes ball ▪ Still feare a change: and fearing catch a fall. Good reaso ̄ why, they know not good indeed. Yes they that vertue deeme an honest dowre. Madame, by right this world I may compare, Vnto my worke, wherein with heedfull care, The heauenly workeman plants with curious hand, As I with needle drawe each thing one land, Euen as hee list, some men like to the Rose, Are fashioned fresh, some in their stalkes do close, And borne do suddaine die: some are but weeds, And yet from them a secret good proceeds: I with my needle if I please may blot, The fairest rose within my cambricke plot, God with a becke can change each worldly thing, The poore to earth, the begger to the king. What then hath man, wherein hee well may boast, Since by a becke he liues, a louer is lost? As much salute as may become my sex, And hee in vertue can vouchsafe to thinke, I yeeld him for the courteous Countesse sake. Good sir sit downe, my mother heere and I, Count time mispent, an endlesse vanitie. My needle sir. What if it were? Good Lord sir no, for hearts but pricked soft, Are wounded sore, for so I heare it oft. Should life &amp; death within this needl urke, Ile pricke no hearts, Ile pricke vpon my worke. My Lord why are you thus impatient? Is hee not married sir vnto our Queen? And are not they by God accurst, That seuer them whom hee hath knit in one? Oh how hee talkes as if hee should not die, As if that God in iustice once could winke, Vpon that fault I am a sham&#x27;d to thinke. Better then liue vnchaste, to liue in graue. But can his warrant keep my soule from hell? So counsell him, but sooth thou not his sinne, Tis vaine alurement that doth make him loue, I shame to heare, bee you a shamde to mooue, In all alleageance I will serue his grace, But not in lust, oh how I blush to name it? As I haue said, in dutie I am his: For other lawlesse lusts, that ill beseeme him, I cannot like, and good I will not deeme him. If he haue no great haste, he may come nye. If haste, tho he be gone, I will not crie. I cannot hate. Tis Greeke to mee my Lord, Ile wish you well, and thereon take my word. I, if her Ladiship will giue me leaue. Then noble English Peere, Accept this ring, wherein my heart is set, A constant heart, with burning flames befret: But vnder written this: O morte dura: Heereon when so you looke with eyes Pura, The maide you fancie most will fauour you. Thanks good Woodman for the same, And our sport and merrie meeting. Why not my Lord, since nature teacheth art, To sencelesse beastes to cure their greeuous smart. Dictanum serues to close the wound againe. Why loue againe. Then I the hearbe would bee. You shall not die for help, come follow me.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Scottish History of James the Fourth</div><div class="body">Bohan has shut himself up in a tomb and scorns the world. He is visited by GB@FGn, who gives blessings to his sons: preferment for Nad, and for Slippér the promise of fairy help when he is in danger. Bohan shows him a story of King JameSEIV to justify his misanthropy. During the action, Oberon falls asleep. The King of Scots marries the English princess Dorothea, but in the church his eye lights on [da and he falls in tove. Al@iiKin offers to help him with his affair, hires servants (among them Slipper), and woos Ida on James’s behalf. Although Dorothea assumes the King’s pursuit of Ida is only a sham to test her own love, his behaviour and his liking for flatterers is ===== PAGE 35 ===== 1590 driving the nobles away from his court; James secretly welcomes this, since their absence gives him greater freedom of action. Ateukin attributes his lack of success with Ida to the adulterous nature of the proposal: if she had an expectation of marriage, she would be more pliable; therefore Dorothea must die, and Ateukin engages Jaqwes to murder her, with the promise of promotion at court. Ateukin uses his influence at court to sell favours. His own servants are equally corrupt: Sir Bartram bribes Slipper to steal a lease from Ateukin’s pocket, but what Slipper actually takes is the murder warrant. When the document is missed, Ateukin orders Andrew to find it; because reporting Slipper will expose his own malfeasance, Andrew instead robs him of the bribe- money to teach him a lesson. Sir Bartram shows the stolen warrant to Dorothea, and prevails upon her to escape dressed as a squire; but Jaques catches up with her, wounds her, and leaves her for dead. She is taken in by Sir GWEHBEMNAMAERSGh, whose wife, mistaking her for a young man, falls in love with ‘him’. Things go badly for the King of Scots. To insure himself against the possibility of Ateukin’s fall, Andrew secretly informs the Kinglefllngland of Dorothea’s fate. This precipitates an English invasion of Scotland in reprisal. Ateukin goes to resume the wooing of Ida, but on arrival finds her just married to Lord Eiistace; unable to persuade Jaques to kill Eustace too, he goes into hiding. Corruption, poverty, and lawlessness spread through Scotland, and the price of peace with England is ‘dead’ Dorothea’s return. When James proclaims a reward, the Queen reveals her identity to the disappointed DaayNAMGersGn, and goes to court. James puts a price on Ateukin’s head and orders Slipper and Andrew imprisoned…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

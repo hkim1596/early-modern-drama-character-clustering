@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>STEP in Every Man in His Humor · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>STEP</span>
+</nav>
+
+<h1>STEP</h1>
+<p class="lede">in <em>Every Man in His Humor</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1601</td></tr>
+<tr><th>Words</th><td>1507</td></tr>
+<tr><th>Characters</th><td>7181</td></tr>
+<tr><th>BritDrama no.</th><td>1143</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">thus. Your cloake sir? I bought it euen now in the market. Arrest me? there take your cloake: ile none of it. Why is not here your cloake? what would you haue? <mark>Must</mark> I <mark>goe</mark>? Gods my vvitnesse my vn e, I am vvrongd here mon strously, he chargeth me vvith stealing of his cloake, &amp; vvould I might neuer stir, if I <mark>did</mark> not finde it</div>
+<div class="excerpt">will) I scorne it I, so I doe, to <mark>bee</mark> a consort for euerie hum-drum; hang them scroiles, ther&#x27;s nothing in them in the world, what doe you talke on it? a gentleman <mark>must</mark> shew himselfe like a gentleman, vncle I pray you be not angrie, I know what I haue to do I trow, I am no nouice. What would you haue me do trow? Welcome good friend,</div>
+<div class="excerpt">my turne. Marry I do thinke of it, and I will be more melancho lie, and gentlemanlike then I haue beene, I doe ensure you. Ile follow you. Le. iu. Follow me? you <mark>must</mark> go before. <mark>Must</mark> I? nay then I pray you shew me good cousin. Gods foot, I haue lost my purse, I thinke. I cannot tell, stay. No, I thinke I was bewitcht, I. Oh it&#x27;s</div>
+<div class="excerpt">it&#x27;s here, nay and it had beene lost, I had not car&#x27;d but for a et ring Marina ent me. Fine ifaith: Though fancie sleepe, my loue is deepe: mea ning that though I <mark>did</mark> not fancie her, yet shee loued mee dearely. And then I sent her another, and my poesie was; The deeper the sweeter, Ile be iudg&#x27;d by Saint Peter. Marrie, S. Peter</div>
+<div class="excerpt">with you. And so I would sir, and you were out of mine vncle ground, I can tell you. Horson base fellow, by Gods lid, and&#x27;t were not for shame, I would. Oh Musco, didst thou not see a fellow here in a what sha-callum doublet; he brought mine vncle a letter euen now? Where is he, canst thou tell? Gone? which way? when went he?</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">No wusse; but ile practise against next yeare: I haue bought me a hawke, and bels and all; I lacke nothing but a booke to keepe it by. Nay looke you now, you are angrie vncle, why you know, and a man haue not skill in hawking and hunting now a daies, ile not giue a rush for him; hee is for no gentlemans company, and (by Gods will) I scorne it I, so I doe, to bee a consort for euerie hum-drum; hang them scroiles, ther&#x27;s nothing in them in the world, what doe you talke on it? a gentleman must shew himselfe like a gentleman, vncle I pray you be not angrie, I know what I haue to do I trow, I am no nouice. What would you haue me do trow? Welcome good friend, we doe not stand much vpon our gentilitie; yet I can assure you mine vncle is a man of a thousand pounde land a yeare; hee hath but one sonne in the world; I am his next heire, as simple as I stand here, if my co sen die: I haue a faire liuing of mine owne too beside. In good time sir? you do not flout, do you? And you should, here be them can perceiue it, and that quickly too: Go too, and they can giue it againe soundly, and need be. By God, and I thought you had sir, I would talke with you. And so I would sir, and you were out of mine vncle ground, I can tell you. Horson base fellow, by Gods lid, and&#x27;t were not for shame, I would. Oh Musco, didst thou not see a fellow here in a what sha-callum doublet; he brought mine vncle a letter euen now? Where is he, canst thou tell? Gone? which way? when went he? how long since? Horson Scanderbag rogue, oh that I had a horse; by Gods lidde i&#x27;de fetch him backe againe, with heaue and ho. But I haue no boots, thats the spite on it. I by my troth; Musco, I pray thee help to trusse me a li tle; nothing angers mee, but I haue waited such a while for him all vnlac&#x27;d and vntrust yonder, and now to see hee is gone the other way. I will, I will: oh how it vexes me. Nay to see, he stood vpon poynts with me too. What? Hast thou done? God a mercy, good Musco. Fo, the stockings be good inough for this time of the yeere; but Ile haue a payre of silke, e&#x27;re it be long: I thinke, my legge would shewe well in a silke hose. In sadnesse I thinke it would: I haue a reasonable good legge. A thousand thankes, good Musco. What, I hope he laughs not at me; and he doe— Oh, now I see who he laught at: hee laught at some body in that letter. By this good light, and he had laught at me, I would haue told mine vncle. The better for your asking, I will assure you. I haue beene all about to seeke you; since I came I saw mine vncle; &amp; ifaith how haue you done this great while? Good Lord, by my troth I am glad you are well cousin. Why cousin you shall command me and&#x27;t were twise so farre as Florence to do you good; what doe you thinke I will not go with you? I protest. By God, but I will sir, by your leaue ile protest more to my friend then ile speake of at this time. Nay not so neither, but I speake to serue my turne. Marry I do thinke of it, and I will be more melancho lie, and gentlemanlike then I haue beene, I doe ensure you. Ile follow you. Le. iu. Follow me? you must go before. Must I? nay then I pray you shew me good cousin. Gods foot, I haue lost my purse, I thinke. I cannot tell, stay. No, I thinke I was bewitcht, I. Oh it&#x27;s here, nay and it had beene lost, I had not car&#x27;d but for a et ring Marina ent me. Fine ifaith: Though fancie sleepe, my loue is deepe: mea ning that though I did not fancie her, yet shee loued mee dearely. And then I sent her another, and my poesie was; The deeper the sweeter, Ile be iudg&#x27;d by Saint Peter. Marrie, S. Peter to make vp the meeter. How will you sell this Rapier friend? True, I am a gentleman, I know that; but what though, I pray you say, what would you aske? Nay and&#x27;t be mine it shall haue a veluet scabberd, that is flat, &#x27;de not weare it as&#x27;tis and you would giue me an angell. I had rather it were a Spaniard: but tell me, what shal I giue you for it? and it had a siluer hilt— Why but I will buy it now, because you say so: what shall I go without a rapier? Tut, ile buy this, so I will; tell me your lowest price. By Gods lid, but I will, though I giue more then &#x27;tis worth. Friend, ile haue it for that word: follow me. My name is signior Stephano, sir, I am this Gentlemans cousin, sir his father is mine vnckle; sir, I am somewhat melan cholie, but you shall commaund me sir, in whatsoeuer is inci dent to a Gentleman. I truely sir, I am mightily giuen to melancholy. Truely sir and I loue such things out of measure. I thanke you sir, I shalbe bolde I warrant you, haue you a close stoole there? Cousin, is it well? am I melancholie inough? So, I had as liefe as an angell I could sweare as well as that gentleman. Nay &amp; you heard him discourse you would say so: how like you him? I marle whether it be a Toledo or no? I haue a countriman of his here. Why do you pish signior? Of a scuruy rogue Souldier, a pox of God on him, he swore it was a Toledo. VVell I will not put it vp, but by Gods foote, and ere I meete him— Horson conny-catching Raskall; oh I could eate the very hilts for anger. A stomack? would I had him here, you should see and I had a stomacke. Oh, Gods lid, by your leaue, do you know me sir. You sold me a Rapier, did you not? You said it was a Toled ha? But it is none. Gentlemen beare witnesse, he has con est it. By Gods lid, and you had not confest it— Nay I haue done cousin. No truly sir? but i&#x27;le learne to take it now, since you commend it so. Oh he sweares admirably: (by this faire heauen:) Body of Cesar: I shall neuer doe it, sure (vpon my saluation) no I haue not the right grace. Oh this Gentleman doth it rarely too, but nothing like the other. By this ayre, as I am a Gentleman: by Phoebus. As I haue a soule to be saued, I doe protest; I sir: vpon my saluation. I protest, as I am a Gentleman, but no souldier in deede. I sir that&#x27;s true: cousin may I sweare as I am a souldier, by that? Then as I am a Gentleman, and a souldier, it is diuine Tabacco. Musco? where? is this Musco? Not I by this faire heauen, as I haue a soule to be saued, by Phoebus. Not I sir: as I haue a soule to b saued, as I 〈…〉 . Cosen how do you like this gen lem ns vers . By this fayr eauens, they are admirable, The best that euer I heard. Vpon my saluation it vvas h . Masse ile haue this cloke. Nay but tis mine now, another might haue tan it vp aswell as I, ile vv e it so I vvill. I but he shall not haue it ▪ ile s y I bo ght it. Signior Giulli o? am I signior Giulliano? I am one signi or Stephano I tell you, and you do not vvell by Gods slid to arest me, I tell you truely; I am not in your maisters bookes, I would you should vvell know I: and a plague of God on you for making me afrayd thus. Your cloake sir? I bought it euen now in the market. Arrest me? there take your cloake: ile none of it. Why is not here your cloake? what would you haue? Must I goe? Gods my vvitnesse my vn e, I am vvrongd here mon strously, he chargeth me vvith stealing of his cloake, &amp; vvould I might neuer stir, if I did not finde it in the street by chance. And you sayd I stole it, nay now my vnckle is here I care not. Oh vncle, Musco has beene with my cosen and I all this day. And not me sir.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Every Man in His Humor</div><div class="body">Prospero invites DOrenzo—jinior to visit him in Florence and see two gulls, Mathes and Bobadilla; Lorenzo decides to bring along his cousin St@pHAHG as a third. His father has intercepted the letter and, concerned to wean him away from poetry and towards more profitable studies, follows him to the city. The servant Misco follows EGFEHZOISEHIOF and insinuates himself into his master’s service under a new identity, disguised as a soldier. MGFENG is concerned that Prospero has become dissolute, and that the bad company which visits him will corrupt his sister M@Sperida and cuckold him; consequently he is anxious about leaving his house to do business. Matheo, who has been threatened with a cudgelling by GiliaiG, visits Bobadilla at his lodgings and they practice fighting. Later, Bobadilla assaults @6B for speaking against tobacco, and Cob procures a warrant from the city magistrate, DGGtGPIGIEMERL, to prevent ===== PAGE 52 ===== him fighting. Matheo woos Hesperida, using plagiarized verses. Giuliano provokes a fight with Matheo, but Bobadilla cannot participate because he is bound over by Cob’s warrant (and also because he is a coward); Giuliano later gives him a beating, which again he cannot resist. Thorello and his wife are lured away on false errands while Lorenzo Junior marries Hesperida. A series of ‘mistaken identities and tricks by Musco leads all the major characters to Doctor Clement’s house, either as litigants or prisoners. Lorenzo Junior pronounces on the current state of poetry. Matheo’s verses are destroyed, and he is sentenced to do public penance; Bobadilla is imprisoned. Doctor Clement requires the others to abandon their humours and dine with him, awarding Musco the place of honour. B-Text</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

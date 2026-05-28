@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COCLE in 214 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>COCLE</span>
+</nav>
+
+<h1>COCLE</h1>
+<p class="lede">in <em>214</em> — [94]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1605</td></tr>
+<tr><th>Words</th><td>1639</td></tr>
+<tr><th>Characters</th><td>8753</td></tr>
+<tr><th>BritDrama no.</th><td>214</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Deliuerie. Maids in your: Maiſter Conſtable, whoſe that ith&#x27;ſtoks? Know him: O maiſter Conſt. what good ſeruice haue you done. Know him? Hees a ſtrong theefe, his houſe <mark>has</mark> beene ſuſpected for a bawdie Tauerne a great while: and a receipt for Cut-purſes, tis moſt certaine: He <mark>has</mark> beene long in the blacke booke, and is he tane now?</div>
+<div class="excerpt">blew tooth&#x27;d Patrones of 〈…〉 wickedneſſe, giue me the gobletts. No by the Lord A , 〈◊〉 Catholi e and 〈◊〉 know&#x27;ſt we loue. Oracles are ſeas&#x27;d: Tempu pr t , do&#x27;ſt <mark>heare</mark> my orſhipfull gliſterpipe, thou vngodly fyer that burnt Diana 〈◊〉 , do&#x27;ſt <mark>heare</mark> Ba d, In very good truthnes you are the fouleſt mou &#x27;d propha ne railing Brother,</div>
+<div class="excerpt">worſhipfull then the poyntmaker, the ſilkeman more wor ſhipfull then the Draper, and the Goldſmith more honorable then both, Little Mary ſo, that 〈◊〉 hon all, her ſho <mark>has</mark> the beſt were, for where theſe ell but 〈◊〉 ſattens, and 〈…〉 ſels diuine vertues as virginitie, modeſtie and ſuch rare I mmes, and thoſe not like a petty chapman,</div>
+<div class="excerpt">ſoures man, and ſhall pleaſe your good worſhip, my nam&#x27;es Andrew Sharke. Very well, hee&#x27;s gone to trim M. Quicquid our Parſon, hold vp your head. Not long Sir, this <mark>two</mark> yeare. O feare not, we ha polde better men then you, we learn the trade very quickly, will your good worſhip be ſhaue not 〈◊〉 I was a Pedler in Germany, but my</div>
+<div class="excerpt">growes vnperegall, Tis time to take a nap, vntill halfe an houre hence: God giue your Worſhip Muſicke, content, and reſt. I Sir, and it ſhall pleaſe you the poore <mark>has</mark> your purſe a . O ſir, haue a good ſtomach and mawes, you ſhal haue a ioyfull ſupper. I will looke to your wi es paiment I warrant you. But brothers, brothers, you</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Come any worſhipfull 〈…〉 any blew tooth&#x27;d Patrones of 〈…〉 wickedneſſe, giue me the gobletts. No by the Lord A , 〈◊〉 Catholi e and 〈◊〉 know&#x27;ſt we loue. Oracles are ſeas&#x27;d: Tempu pr t , do&#x27;ſt heare my orſhipfull gliſterpipe, thou vngodly fyer that burnt Diana 〈◊〉 , do&#x27;ſt heare Ba d, In very good truthnes you are the fouleſt mou &#x27;d propha ne railing Brother, call a woma ̄ the moſt vngodly 〈◊〉 : I 〈◊〉 we all eate of the forbidden fruite, and for mine owne part tho I am one of the family of loue and as they ſay a bawd that couers the multitude of ſinnes, yet I truſt I am none of the wicked that eate fiſh a Fridaies. Hang toaſtes, I raile at thee my worſhipfull organ bel lowes that fills the pipes, my fine ratling fleamy cough a the lun ges and cold with a Po , I raile at thee what my right pretious pandres ſupportres of Barbar Surgeons and inhauntres of lati and dyet drinke: I raile at thee neceſſary damnation, Ile make an oration, I, in praiſe of thy moſt courtly in faſhion, and moſt plea ſureable function. I. Liſt then, a Band, firſt for he profeſſion or ye can i is moſt worſhipfull of all the 12. Companies, for as that trade it moſt honorable that ſells the beſt como ̄ dityes, as the Draper is more worſhipfull then the poyntmaker, the ſilkeman more wor ſhipfull then the Draper, and the Goldſmith more honorable then both, Little Mary ſo, that 〈◊〉 hon all, her ſho has the beſt were, for where theſe ell but 〈◊〉 ſattens, and 〈…〉 ſels diuine vertues as virginitie, modeſtie and ſuch rare I mmes, and thoſe not like a petty chapman, by retaile, but like a great marchant hy whole ale, , ha, ho, and who are her cuſtomers, not baſe corn cutters, or ſowgelders, but moſt ra e wealthie Knightes, and moſt 〈…〉 are her cuſtomers 〈…〉 profite, but by the loſſe and diſpleaſure of another, as the Marchant thriues non but by the licentiouſnes of giddie, and vnſetled youth: the Law yer, but by (the vexation of his client, the Phiſition, but by the maladies of his patient, onely my ſmothe gumbde Bawd hues by others pleaſure, and onely growes rich by other riſing. O mercifull gaine, O righteous in-come. So much for her voca on, trade and life, as for their death, how can it bee 〈…〉 their wickedneſſe is alwayes before their eyes, and a deathes head moſt commonly on their middle finger. To conclude, ti&#x27;s moſt certaine they muſt needes both liue well, and d e well, ſince 〈◊〉 commonly they liue in Clearken-well, and dye in 〈…〉 Dixi Mary. Hang toaſtes, you are an Aſſe, much a your worſhips brayne lyes in your Calues, bread a God boy, I was at ſupper laſt night with a new weande bulchin, bread a God drunke, hor ribly drunke, horribly drunke, there was a wench one Franke Frailty, a puncke, an honeſt pole-cat, of a cleane In ſtep, found legge, ſmooth thigh, and the nimble Diuell in her buttocke, al fieſt a grace, when ſaw you Tyſefew, or M. Caque ure, that prat ling gallant of a good draught common cuſtomes, fortunate, impudence and ſound fare. Qùanquam to Marce fi my fine boy, does your wor ſhip want a Barb Surgeon. Let the Malligrubs beware the knaue, what a Bar bar Surgeon ▪ my delicate boy? Rainſcure? good M. Holifernes I deſire your further acquaintance, nay pray yee bee couered my fine boy, kill thy itch and heale thy skabes, is thy Maiſter rotten? And laid in his graue, alas what comfort ſhall Peggy then haue. Widdow Raine ſoures man, and ſhall pleaſe your good worſhip, my nam&#x27;es Andrew Sharke. Very well, hee&#x27;s gone to trim M. Quicquid our Parſon, hold vp your head. Not long Sir, this two yeare. O feare not, we ha polde better men then you, we learn the trade very quickly, will your good worſhip be ſhaue not 〈◊〉 I was a Pedler in Germany, but my countrimen thriue better by this trade. Sometimes pole a Page or ſo ſir. What an arrogant knaue&#x27;s this, Ile acquaintance yee (tis caſh,) ſay yee ſir. hee ſpieth the bag Marry ſir you know the Conduit at Greenewich, and the vnder-holes that ſpowtes vp water. Thus Sir, out of thoſe little holes in the midſt of the night crawlde out 24. huge horrible, monſtrous, fearefull de uouring. Serpents, which no ſooner were beheld, but they turnd to maſſiues which howlde, thoſe maſtiues inſtantly turnde to Cockes which crowed, thoſe cockes in a moment were changde to Beares which roard, which Beares are at this hower to bee yet ſcene in Paris Garden, liuing vpon nothing but toaſted cheeſe and greene onions. Yes worſhipfull Fieſt, thou&#x27;ſt feele what portendes by and by. They ſay Sir that 25, coople of Spaniſh Iennetes are to bee ſeene hand in hand daunce the olde meaſures, whileſt fixe goodly Flaunders Mares play to them on a noyſe of flutes. Shut your eyes cloſe, wincke ſure ſir, this bal wil make you ſmart. Your head will take cold. I will put on your good worſhips night-cap, whileſt I ſhaue you, ſo, much: hang toaſtes: faugh: viah: ſparrowes muſt pecke and Cocledemoy munch. Come catafuge Fra … 〈…〉 hall, who who he, Excellent, Ha, heers a plmp r mp wench, with a breaſt Softer then a Courtyers tongue, 〈◊〉 Ladies gums, Or an old mans mentula, my fine gue. Hadamoy key doſt thou frowne medianthou teukey Nay look heer: Numeron key Siluer blithe for cany Os cany goblet: Ʋ s key ne moy bl gef y 〈◊〉 pox On you Goſling. Humpum, plumpum ſquat, I am gone. Ex. Cocle. within Wa, ha, h , Ex. A Wolfe, a wolfe, a wolfe, Exit. Cocledemoy Bread a God Conſtable, you are a Watch for the deuil. Honeſt men are robd vnder your noſe, thers a falſe knaue in the habit of a Vintner, ſet vpon me, he would haue had my purſe, But I tooke me to my heeles: yet he got my Cloke, a plaine ſtuffe cloke poore, yet twill ſerue to hang him? Tis my loſſe, poor man that I am. The night growes old, And many a cockould is now Wha, ha, ha, ho, Maids on their backes, Dreame of ſweet ſmackes, and warme: Wo, ho, ho, ho, I muſt go comfort my venerable Mullegrub, I muſt Fiddle him till he fyſt: fough: Maides in your Night-railes, Looke well to your light Keepe cloſe your lockes, and downe your ſmocks, Keepe a brode eie And a cloſe thigh, excellent, excellent, whoſe there? Now Lord, Lord, (maiſter Mullegrub) deliuer vs: what does your Worſhip in the ſtocks? I pray come ou Sir. Tis more then I deſerue ſir: Let me alone for your Deliuerie. Maids in your: Maiſter Conſtable, whoſe that ith&#x27;ſtoks? Know him: O maiſter Conſt. what good ſeruice haue you done. Know him? Hees a ſtrong theefe, his houſe has beene ſuſpected for a bawdie Tauerne a great while: and a receipt for Cut-purſes, tis moſt certaine: He has beene long in the blacke booke, and is he tane now? Whie but; wha ha ha, excellent, excellent, ha my fine Cocledemoy, my Vintner fiſtes, Ile make him fart crackers be fore I ha done with him; to morrow is the daie of Iudgment. Afore the Lord God my knauerie growes vnperegall, Tis time to take a nap, vntill halfe an houre hence: God giue your Worſhip Muſicke, content, and reſt. I Sir, and it ſhall pleaſe you the poore has your purſe a . O ſir, haue a good ſtomach and mawes, you ſhal haue a ioyfull ſupper. I will looke to your wi es paiment I warrant you. But brothers, brothers, you muſt thinke of your ſins and iniquities, you haue bin a brocher of prophane veſſels, you haue made vs drinke of the iuice of the whore of Babylon, for whereas good ale, Perrys, Bragets, Syders, and metheglins, was the true aunti ent Britiſh and Troyan drinks, you ha brought in Popiſh wines, Spa niſh wines, French wines, tam marti quam mercurio, both muſcadi and malmſey, to the ſubuerſion, ſtaggering, and ſometimes ouer throw of manie a good Chriſtian: You ha bin a great Iumbler, O remember the ſins of your nights, for your night works ha bin vn ſauorie in the taſt of your Cuſtomers. O verie wel: know him? an honeſt man he is and a com ly, an vpright dealer with his neighbours, and their wiues ſpeake good things of him. You do from your harts, and midrifs, and intrales forgiue him then you wil not let him rot in ruſty Irons, procure him to be hangd in lowſie linnen without a ſong, and after he is dead piſſe on his graue. Why then my worſh. good friends I bid my ſelfe moſt har tily welcome to your merry nuptials, and wanton Iigga-ioggies And now my verie fine Heliconian Gallantes, and you my Worſh. friends in the middle Region: If with content our hurtleſſe mirth hath bin, Let your pleaſd minds as our much care hath bin: For he ſhall find that ſlights ſuch triuiall wit, Tis eaſier to reproue then better it: We ſcorne to feare, and yet we feare to ſwell, We do not hope tis beſt: tis all, 〈…〉 Exe If with content our hurtleſſe mirth hath bin, Let your pleaſd minds as our much care hath bin: For he ſhall find that ſlights ſuch triuiall wit, Tis eaſier to reproue then better it: We ſcorne to feare, and yet we feare to ſwell, We do not hope tis beſt: tis all, 〈…〉 Exe</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

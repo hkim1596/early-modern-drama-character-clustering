@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WOR in 1 Henry the Fourth · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>WOR</span>
+</nav>
+
+<h1>WOR</h1>
+<p class="lede">in <em>1 Henry the Fourth</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1598</td></tr>
+<tr><th>Words</th><td>1310</td></tr>
+<tr><th>Characters</th><td>6964</td></tr>
+<tr><th>BritDrama no.</th><td>1059</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">of a wanton time, The seeming sufferances that you had borne, And the contrarious winds that held the king So long in his vnlucky Irish wars, That all in <mark>England</mark> <mark>did</mark> repute him dead: And from this swarme of faire aduantages, You tooke occasion to be quickly wooed To gripe the general sway into your hand, Forgot your oath to</div>
+<div class="excerpt">lookes Of fauor from my selfe, and all our house, And yet I must remember you my Lord, We were the first and dearest of your friends, For you my staffe of office <mark>did</mark> I breake In Richards time, and posted day and night To meet you on the way, and kisse your hand, When yet you were in place, and in account Nothing so strong and</div>
+<div class="excerpt">hand, When yet you were in place, and in account Nothing so strong and fortunate as I. It was my selfe, my brother and his sonne, That brought you home and boldly <mark>did</mark> outdare The dangers of the time. You swore to vs, And you <mark>did</mark> sware that oath at Dancaster, That you <mark>did</mark> nothing purpose gainst the state, Nor clame no further</div>
+<div class="excerpt">the general sway into your hand, Forgot your oath to vs at Dancaster, And being fed by vs, you vsd vs so As that vngentle gull the Cuckoes bird Vseth the sparrow, <mark>did</mark> oppresse our neast, Grew by our feeding to so great a bulke, That euen our loue durst not come neare your sight, For feare of swallowing: but with nimble wing We</div>
+<div class="excerpt">youth and heat of blood, And an adopted name of priueledge, A hair-braind Hotspur gouernd by a spleene, All his offences liue vpon my head And o his fathers. We <mark>did</mark> traine him on, And his corruption being tane from vs, We as the spring of all shall pay for all: Therefore good coosen, let not Harry know In any case the offer</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Our house (my soueraigne liege) little deserues The scourge of greatnes to be vsd on it, And that same greatnes e to, which our owne hands Haue holpe to make so portly. Who strooke this heat vp after I was gone? Peace coosen, say no more And now I will vnclaspe a secret booke, And to your quicke conceiuing discontents Ile reade you matter deepe and daungerous, As full of perill and aduenterous spirit, As to ore walke a Current roring lowd, On the vnstedfast footing of a speare. He apprehends a world of figures here, But not the forme of what he should attend, Good coosen giue me audience for a while. Those same noble Scots that are your prisoners You start away, And lend no care vnto my purposes: Those prisoners you shall keepe. Heare you cosen a word. Farewel kinsman, ile talke to you When you are better temperd to attend. Nay, if you haue not, to it againe, We wil stay your leisure. Then once more to your Scottish prisoners, Deliuer them vp without their ransome straight, And make the Douglas sonne your only meane For Powers in Scotland, which for diuers reasons Which I shall send you written, be assur&#x27;d Wil easely be granted you my Lord. Your sonne in Scotland being thus emploied, Shal secretly into the bosome creepe Of that same noble prelat welbelou&#x27;d, The Archbishop. True, who beares hard His brothers death at Bristow the lord Scroop, I speake not this in estimation, As what I thinke might be, but what I know Is ruminated, plotted, and set downe, And onely staies but to behold the face Of that occasion that shal bring it on. And so they shall. And tis no little reason bids vs speed, To saue our heads by raising of a head, For beare our selues as euen as we can, The king will alwaies thinke him in our debt, And thinke we thinke our selues vnsatisfied, Till he hath found a time to pay vs home. And see already how he doth begin To make vs strangers to his lookes of loue. Yea but a little charge wil trench him here, And on this Northside win this cape of land, And the he ru s straight and euen. In faith my Lord you are too wilfull blame, And since your comming hither haue done enough To put him quite besides his patience, You must needes learne Lord to amend this fault, Though sometimes it shew greatnes, courage, bloud, And thats the dearest grace it renders you, Yet oftentimes it doth present harsh rage, Defect of maners, want of gouernment, Pride, hautinesse, opinion, and disdaine, The least of which hanting a noble man, Looseth mens harts and leaues behind a staine Vpon the beauty of all parts besides, Beguiling them of commendation. I preethe tel me, doth he keepe his bed? I would the state of time had first been whole, Eare he by sicknesse had bin visited, His health was neuer better worth then now. You fathers sicknesse is a maime to vs. But yet I would your father had bin heere: The quality and haire of our attempt Brookes no deuision, it will be thought By some that know not why he is away, That wisedome, loialty, and meere dislike Of our proceedings kept the Earle from hence, And thinke how such an apprehension May turne the tide of fearfull faction, And breed a kind of question in our cause For wel you know we of the offring side Must keepe aloofe from strict arbitrement, And stop al sight-holes euery loope from whence The eie of reason may prie in vpon vs, This absence of your fathers drawes a curtain That shewes the ignorant a kind of feare Before not dreamt of. I by my faith, that beares a frosty sound. It may not be. Good coosen be aduisd, stir not to night. The number of the King exceedeth our, For Gods sake coosen stay till all come in. It pleasd your maiesty to turne your lookes Of fauor from my selfe, and all our house, And yet I must remember you my Lord, We were the first and dearest of your friends, For you my staffe of office did I breake In Richards time, and posted day and night To meet you on the way, and kisse your hand, When yet you were in place, and in account Nothing so strong and fortunate as I. It was my selfe, my brother and his sonne, That brought you home and boldly did outdare The dangers of the time. You swore to vs, And you did sware that oath at Dancaster, That you did nothing purpose gainst the state, Nor clame no further then your new falne right, The seat of Gaunt, Dukedom of Lancaster: To this we swore our aide: but in short space It rainde downe fortune showring on your head, And such a floud of greatnesse fell on you, What with our helpe, what with the absent king, What with the iniuries of a wanton time, The seeming sufferances that you had borne, And the contrarious winds that held the king So long in his vnlucky Irish wars, That all in England did repute him dead: And from this swarme of faire aduantages, You tooke occasion to be quickly wooed To gripe the general sway into your hand, Forgot your oath to vs at Dancaster, And being fed by vs, you vsd vs so As that vngentle gull the Cuckoes bird Vseth the sparrow, did oppresse our neast, Grew by our feeding to so great a bulke, That euen our loue durst not come neare your sight, For feare of swallowing: but with nimble wing We were inforst for safety sake to flie Out of your sight, and raise this present head, Whereby we stand opposed by such meanes, As you your selfe haue forgde against your selfe By vnkind vsage, daungerous countenance, And violation of all faith and troth, Sworne to vs in your yonger enterprize. O no, my nephew must not know sir Richard, The liberal and kind offer of the king. Then are we all vnder one. It is n t possible, it cannot be The king should keepe his word in louing vs, He will suspect vs still, and find a time To punish this offence in other faults, Supposition al our liues shall be stucke full of eyes, For treason is but trusted like the Foxe, Who neuer so tame, so cherisht and lockt vp, Will haue a wilde tricke of his ancesters, Looke how we can, or sad or merely, Interpretation will misquote our lookes, And we shall feed like oxen at a stall, The better cherisht still the nearer death, My nephewes trespasse may be well forgot, It hath the excuse of youth and heat of blood, And an adopted name of priueledge, A hair-braind Hotspur gouernd by a spleene, All his offences liue vpon my head And o his fathers. We did traine him on, And his corruption being tane from vs, We as the spring of all shall pay for all: Therefore good coosen, let not Harry know In any case the offer of the King. Enter Percy. The king will bid you battell presently. There is no seeming mercie in the king. I tolde him gently of our greeuances, Of his oath breaking, which he mended thus, By now forsweari g that he is forsworne, He cals vs rebels traitors, and will scourge With haughtie armes this hatefull name in vs. Enter Douglas. The Prince of Wales stept forth before the king, And nephew, chalengd you to single fight. What I haue done my safety vrg&#x27;d me to ▪ And I embrace this fortune patiently, Since not to be auoided it fals on me.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 1 Henry the Fourth</div><div class="body">Civil war has ended in England, and King H@nryiliV intends to take an English army on a crusade to liberate the Holy Land. The enterprise is delayed by continuing military instability on England’s borders. Lord MOGrfimer has been defeated in battle by Owen Glemd@Wer and taken a prisoner to Wales. In the north, H@#Splr has had better success against the Scots, but refuses to hand over his prisoners until King Henry ransoms Mortimer. But Mortimer has thrown in his lot with Glendower, so Henry refuses. TH@IPEFGy family suspects an ulterior motive: Mortimer was proclaimed heir to the throne during the previous reign, so the King has good reason to want him off the scene. Led by tH@IBAPINSPIWSreeSter, the Percies plan to put together an alliance to rise in rebellion against the King; to that end, Hotspur releases his Scottish prisoners without ransom. THEMPHNCeMSMWales spends his time idly with . BaIStaif and Poyntz, secretly intending to use his bad reputation as a foil to a subsequent reformation. They plan and execute a highway robbery, but the Prince and Poyntz disguise themselves and rob Falstaff in turn. In the tavern afterwards, Falstaffs account of these events grows progressively more inflated and extravagant; but, when confronted with the truth, he claims he knew it was the Prince all the time. News of the Percies’ plans reaches the King, and Prince Henry is summoned to court. Falstaff helps the Prince with a rehearsal: at first he plays the King, but his performance is over-partial towards himself, so the Prince takes over the part and declares that he will banish Falstaff. A hue and cry after the robbery leads the SHEfiffito the tavern, but the Prince puts him off and later pays back the stolen money; he then plans to obtain a military commission for Falstaff. The rebel lords meet to agree the division of the kingdom, but Hotspur is not satisfied with his share. The Prince tells his admonishing father that he will redeem himself in battle. Troops are mobilized, and the armies meet at Shrewsbury. The rebels are depleted: Glendower’s forces are not ready and N@rthumiberland falls sick; Hotspur sees greater honour in the longer odds, WGreester only greater risk. In the parleys before battle, the Prince offers to settle things in single combat with Hotspur, but Worcester and WerniGn, knowing that the King will never trust them again, decide to keep this from Hotspur. In the battle, many of the King’s troops are dressed in bis colours, and are killed in…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

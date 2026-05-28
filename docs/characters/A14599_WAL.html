@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WAL in The Valiant Scot · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_00.html">Cluster 0 — 0: wallace, selby, clifford</a> ›
+  <span>WAL</span>
+</nav>
+
+<h1>WAL</h1>
+<p class="lede">in <em>The Valiant Scot</em> — W., J.</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>1721</td></tr>
+<tr><th>Characters</th><td>9232</td></tr>
+<tr><th>BritDrama no.</th><td>2189</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 0 (<em>wallace, selby, clifford, bloud, own, scot…</em>). Matches are highlighted.</p>
+<div class="excerpt">to raiſe it higher, So death&#x27;s rebound ſhall make my ſoule aſpire The glorious clouds, ſo long I die ſecure. Death cannot threat more then I dare endure. Shall <mark>Wallace</mark> live till his owne <mark>bloud</mark> prove falſe, Why, that can never be till palſey age Hath thruſt his icy fingers through my veins, And frozen up the paſſages of <mark>bloud</mark>.</div>
+<div class="excerpt">waſh this infamy. Shift for your ſelves, &#x27;twill prove a ſtormy day. And ſay the moat be fifty fathomes deep, Fiftie times fiftie, ſay it reach through to hell, <mark>Wallace</mark> will ſwim&#x27;t. Why ſhould proud <mark>Selby</mark>, though his forward ſon Were juſtly ſlain, impriſon Peg? Poor Lambe ſhe is no murtherer. With Peggie, father, manacles of griefe,</div>
+<div class="excerpt">fellon death, Tha&#x27;ſt acted ſacrilegious burglary, and told my father. No excuſe. This is all perfit Engliſh, have ye yet ſpoke? The fitter him that undertakes it, <mark>Wallace</mark> Would hold himſelf not worthy of his fate Should he bawke danger, diſſwade not, I will on Were certain death againſt my boſome bent, There&#x27;s gain in <mark>bloud</mark> it&#x27;s</div>
+<div class="excerpt">he&#x27;s a gude King, and y&#x27;are all bonny men, I&#x27;ze follow ye all to the death, and to the Devill, and ony man dare gang ſo far for all my clutches, giffe I clutch <mark>Wallace</mark>, he&#x27;s neer carry it till hell nor heaven. I&#x27;ze not run away fra yee, giffe I do hang mee and drae mee, cum bully Joe, I dare not gang to the Scottis Campe, th&#x27;yle</div>
+<div class="excerpt">Hang heavy on my ſences. What thunderclap was that? Able to waken death or ſhake the ſhrowd From off a dead mans ſhoulders, Peggie dies, Should thunder ſpeak it, <mark>Wallace</mark> would ſweare it lies, Who ſpake that, fatall Nuntio? Whence, from the Devill? The charitable Angels waft her to heaven. How ſhall we ſave her, ſingly as I am I</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I&#x27;le die, or in thy heart bloud waſh this infamy. Shift for your ſelves, &#x27;twill prove a ſtormy day. And ſay the moat be fifty fathomes deep, Fiftie times fiftie, ſay it reach through to hell, Wallace will ſwim&#x27;t. Why ſhould proud Selby, though his forward ſon Were juſtly ſlain, impriſon Peg? Poor Lambe ſhe is no murtherer. With Peggie, father, manacles of griefe, Hang heavy on my ſences. What thunderclap was that? Able to waken death or ſhake the ſhrowd From off a dead mans ſhoulders, Peggie dies, Should thunder ſpeak it, Wallace would ſweare it lies, Who ſpake that, fatall Nuntio? Whence, from the Devill? The charitable Angels waft her to heaven. How ſhall we ſave her, ſingly as I am I will oppoſe me &#x27;gainſt the town of Lavercke, Swim the vaſt moat, and with my truſtie ſword Hew down the Caſtle-gates, diſhinge the doores, File off her irons, and through a wall of ſteele Attempt her reſcue. Impoſſible, what&#x27;s the news from Englands? Sir John Graham, you ſhall be the engine Our policie muſt work with, ſtreight give out That hearing of the Engliſh expedition, Our faction is diſſolv&#x27;d. Much, this rumour Blown through the Land will ſtay the Engliſh forces, And give us time and means to ſtrengthen ours, That once in act, repair to Haſterig, Selby and Thorn, urge Peggies innocence, And for her freedom and your own make faith, To yeeld me priſoner, &#x27;twill be no doubt excepted, Your ſelf once pardon&#x27;d, and your daughter free. Proſper&#x27;d deſtinie, If the great cauſe we undertake be good, &#x27;Twill thrive, if not, be&#x27;t waſht in VVallace bloud. Traiterous man, Is this thy love? theſe thy deep promiſes? Art thou their Aspies? See Selby here&#x27;s the hand Cleft thy ſonnes heart. Thou knoweſt not thy own eyes, May feed the Crows aſſoon as mine, Toads and Snakes May dig their lodgings in thy breſt, And Devils make faggots of thy bones firſt, But my ſentence. Why Grimsby, if I fall, &#x27;Tis but to gather ſtronger force to riſe, For as a ball&#x27;s thrown down to raiſe it higher, So death&#x27;s rebound ſhall make my ſoule aſpire The glorious clouds, ſo long I die ſecure. Death cannot threat more then I dare endure. Shall Wallace live till his owne bloud prove falſe, Why, that can never be till palſey age Hath thruſt his icy fingers through my veins, And frozen up the paſſages of bloud. Cloſe with advantage, put your ſelves in Armes, And ceaſe their forfeit lives, this holy Frien Shall firſt beſtow a matrimoniall band Of our united love, and then my ſword Like winged lightning ſhall prepare a way, To Lavercks doom. Then fate diſſembles with mee, this the ſecond time She has by viſion ſummon&#x27;d me to armes, Purſue the ſlaughter, whilſt I, ſalvation ſhield me. Fryer Gertrid anſwer me, what barbarous hand Has caſt my friend into this cold dead ſweat, Reſolve me gentle Father, fellon death, Tha&#x27;ſt acted ſacrilegious burglary, and told my father. No excuſe. This is all perfit Engliſh, have ye yet ſpoke? The fitter him that undertakes it, Wallace Would hold himſelf not worthy of his fate Should he bawke danger, diſſwade not, I will on Were certain death againſt my boſome bent, There&#x27;s gain in bloud it&#x27;s honorably ſpent. Exit. Whare man? till the Engliſh Campe ſenu you, gad ſides you gang as I ha&#x27; ſeene mony a your Contry men like ranck riders amble up weſtward, you gang the wrang wey man, you ſall luſe and ye play at ſhoola groate, ha&#x27; ye na linckers? Gan … alang man tis hard by now, a mans head I deempt the pure man had gaugand lang to lawe And ſae was thruſt out of dores by head and ſhoulders. Ah bonny men, I met um playe and at bo-peep, &amp; gangand out a their way, and ſall I be hanged for my good deeds of charrity, I&#x27;ze a poor Scutch ſouldier, and am ron away from that Rebell Wallas, to feight and for your gude Prince, ah he&#x27;s a gude King, and y&#x27;are all bonny men, I&#x27;ze follow ye all to the death, and to the Devill, and ony man dare gang ſo far for all my clutches, giffe I clutch Wallace, he&#x27;s neer carry it till hell nor heaven. I&#x27;ze not run away fra yee, giffe I do hang mee and drae mee, cum bully Joe, I dare not gang to the Scottis Campe, th&#x27;yle ſa ſlay upon me, Iſe near cum back agen, but lze bring you where yee ſhall ſee that Lowne VVal lace. Marry ſall I, luke to your ſelfe, Iſe thruſt you into the Dewles chops. I am a drown&#x27;d rat. Pox rot you, I am ſhipwrack&#x27;t, Give me ſome meate. I am neceſſities ſlave, and now muſt beare. Well they are. Right ſir. Sets down the Trunk. Hunger is good, and two Woodcocks are good, But the feathers of thoſe two Woodcocks muſt be pluck&#x27;d firſt. Y are a ſcurvy Iuſtice, yare man&#x27;s an Aſſe, and you another with a velvet foot-cloth on your back, I ken ye vary weel, and Iſe knock ye vary weele, if any thing be worth victales, it goes down here. Wiſeacres, if you would fain know who ha&#x27;s got this traſh from yee, &#x27;tis I, Wallace the Scot. D&#x27;e ye grumble? raiſe the Devill and ſpare not. Wert thou a cheſt of gold, I&#x27;de give thee all for victuals, Hunger, they ſay, will break ſtone wals, Your chops are not ſo hard, Ye ſhall burſt tho with iron ribs ye were bar&#x27;d, —victuals—wine too,—few juſtices doe feed the hungry thus, o theſe VViſeacres are the braveſt fel lowes, ſpecially Engliſh VViſeacres. And when tha&#x27;ſt hang&#x27;d thy ſelfe, whither do&#x27;ſt thinke to go then? Who dwels hereabouts? Thou ſhalt have fire anon old man, ba&#x27;, murdred? What ſhouldſt thou be? the face of Haſlerig, &#x27;Tis he, juſt heavens ye have beſtow&#x27;d my office Vpon ſome other, I thank ye that my bloud Stains not my hand, however both did die (In love or hate) both ſhall together lie, The Coffin you muſt ſleep in is this Cave, Whole heaven your winding ſheet, all earth your grave, The early Lark ſhall ſadly ring your Knell, Your Dirge be ſung by mournfull Philomell, Inſtead of flowres and ſtrewing herbs take theſe, And what my charity now fails to do, Poor Robin-redbreſt ſhall, my laſt adue, I have other ſtreames to ſwim through, or calme Venture, &#x27;tis brave when danger&#x27;s crown&#x27;d with palme. And ſo retiring be held runawayes. Here ſtands my body, and ere this Engliſh Wolves Stretch their jaws ne&#x27;re ſo wide, from hence ſhall drive I&#x27;le rather lie here fifty fathome deep, Now at this minute, then by giving back One foot, prolong my life a thouſand yeers. Fall back? not I, death of my ſelfe is part, I&#x27;le never flie my ſelf, heres no falſe heart: Lets in our riſing be, or in our falls Like bels which ring alike at Funerals, As at Coronations, each man meet his wound, With ſelf-ſame joy as Kings go to be crown&#x27;d, Where charge you? No, ſir. Let Mentith, Wallace ſhall not. Were I to hunt within a Wilderneſſe A herd of Tigres, I would ſcorn to cheat My glories from the ſweat of others brows, By encountring the fierce beaſts at ſecond hand, When others ſtrength had tam&#x27;d him, let me meet The Lion being new rowz&#x27;d, and when his eyes Sparkle with flames of indignation, I ha&#x27; not in the Academe of War So oft read Lectures, chief now to come lag, Ile ha&#x27; the leading of the Van or none. So, diſhonour&#x27;d. Well be&#x27;t ſo then, the Reare, ſee you yon hill, Yonder i&#x27;le ſtand, and tho I ſhould ſee Butchers, Cut all your throats like ſheep, I will not ſtirre Till I ſee time my ſelfe. Whoſe is the day? Who? Is the day loſt? Vnleſſe the day be quite loſt, I&#x27;le not ſtirre. Why then deſcend amaine, art ſure tis loſt? Then wee&#x27;le winne it againe. Lets breathe and talke. You ſee I lift it not. Longſhancks was never Soveraigne of mine, Nor ſhall whilſt Bruce lives, Bruce is my Soveraigne, Thou art but baſtard Engliſh, Scotch true borne, Th&#x27;art made a maſtive &#x27;mongſt a heard of wolves, To weary thoſe thou ſhouldſt be ſhepheard of. The fury of the battell now declines, And take my counſell, though I ſeeme thy foe, Waſh both thy hands in bloud, and when anon The Engliſh in their Tents their deeds do boaſt, Lift thou thy bloudy hands up, and boaſt thine, And with a ſharpe eye note, but with what ſcorne, The Engliſh pay thy merit. Dar&#x27;ſt thou alone meet me in Glaſco -moore, And there I&#x27;le tell thee more? No more, I&#x27;le ride. Jack Mentith, I do laugh to think what face, Longſhancks wil make, when he ſhall heare what gueſts Will dine with him in&#x27;s Court on Chriſtmas day. Oh! ſome charme for me to be inviſible there, and ſee him. Thou art a lying ſpirit. Whom did you meete? It is not yet his houre. Do. Where am I? Bruce my Soveraigne? My bloud is ſold, this is not Glaſco -moore, Some villaine hath betray&#x27;d me. Comyn and Mentith? Something it was that made the modeſt night Looke angry on the world, I this was it, And this was it that cleft my fathers grave, And rais&#x27;d him from his monumentall bed of earth To give me gentle warning, this was it, That made my ſtarre, when all the reſt look&#x27;d pale, Bluſh like a fiery Meteor, can Heaven winke at this? Not of thy acting? Not here. Why then goe act them there, Boaſt of them there, in that black Kingdome tell That by a true ſubject a baſe Rebell fell. Heare me ſpeak King Edward. Firſt heare me ſpeak, Farewell, to all the World, I ha met death too often to feare him now, Only it grieves me that I have not freed Scotland my native ſoile from tyranny, Bruce, thou haſt a Kingdome, loſe it not. I go to one too, And on my grave, when death hath there down laid me, Be this my Epitaph, mine own betrayes me— Exit.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Valiant Scot</div><div class="body">PLOT Scotland is under English rule. An attempt is made to dispossess Old Wallace of his office and lands; but Old Wallace partially circumvents it by transferring ownership of the land to his son. King Edward plans to make war on France, and appoints Bruce his general. Scotland is left in the charge of Queen Elinor and a panel of commissioners. Young Selby, son of one of the commissioners, abducts Peggy Graham, intending to marry her by force. Wallace intervenes and kills Young Selby in a duel. Commissioner Selby arrests Peggy and threatens her with execution for the murder. Wallace gives himself up, and Peggy is released. His own execution is forestalled when the Queen orders him brought to court for interrogation. He escapes en route, marries Peggy, and becomes a rebel. Friar Gertrid prophesies that he will be victorious until betrayed by his own blood. The English capture Peggy, Gertrid, and Old Wallace, and Selby has them killed. King Edward sends Wallace an ultimatum: if he will surrender and beg for mercy, he may be spared. Wallace sends an alternative ultimatum back: if Edward will admit himself to be a tyrant, he may be spared. Upon discovering that one of the ambassadors, the Queen’s nephew, has no diplomatic accreditation, he puts the young man to death. He then cuts out an ambassador’s tongue and blinds another, and accompanies them back to King Edward disguised as a lame soldier. The English plan to entice Wallace into a trap, and send another messenger to invite him to a parley; but the stratagem fails because the man appointed to escort the messenger to the Scottish camp is the lame soldier — Wallace himself. Wallace sails to seek help from France, but his ship is wrecked. On the shore, he meets first Bolt, from whom he forcibly takes possession of a washed-up chest of provisions, then Selby, who is now banished from England and penurious, and regrets the execution of Old Wallace. Wallace decides not to take revenge, but while he is away fetching food, another of the fallen commissioners turns up and kills Selby in an argument. Bolt returns and kills the murderer, taking him for Wallace. He is presented to King Edward and rewarded, but later discredited when Wallace turns out to be alive. The Scots prepare to fight, but Wallace is offended to be placed in the rearguard, and withdraws his services. He watches the battle from a hill, and finally intervenes after the Scottish general is killed. On the battlefield he meets Bruce, the rightful…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_00.html">Cluster 0 — 0: wallace, selby, clifford</a> page.
+</div>
+</div></body></html>

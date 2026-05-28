@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAL in King John · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SAL</span>
+</nav>
+
+<h1>SAL</h1>
+<p class="lede">in <em>King John</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1224</td></tr>
+<tr><th>Characters</th><td>6644</td></tr>
+<tr><th>BritDrama no.</th><td>1043</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">cripple thee vnto a Pagan ſhore, Where theſe <mark>two</mark> Chriſtian Armies might combine The bloud of malice, in a vaine of league, And not to ſpend it ſo vn-neighbourly. I <mark>did</mark> not thinke the King ſo ſtor&#x27;d with friends. That misbegotten diuell Falconbridge, In ſpight of ſpight, alone vpholds the day. When we were happie, we had other</div>
+<div class="excerpt">falſe, That giue you cauſe to proue my ſaying true. What other harme haue I good Lady done. But ſpoke the harme, that is by others done? Pardon me Madam, I may not <mark>goe</mark> without you to the kings. Therefore, to be poſſeſs&#x27;d with double pompe, To guard a Title, that was rich before; To gilde refined Gold, to paint the Lilly; To throw</div>
+<div class="excerpt">what we would Doth make a ſtand, at what your Highneſſe will. The colour of the King doth come, and go Betweene his purpoſe and his conſcience, Like Heralds &#x27;twixt <mark>two</mark> dreadfull battailes ſet: His paſsion is ſo ripe, it needs muſt breake. Indeed we fear&#x27;d his ſickneſſe was paſt cure. It is apparant foule-play, and &#x27;tis ſhame That</div>
+<div class="excerpt">Meloone, a Noble Lord of France, Whoſe priuate with me of the Dolphines loue, Is much more generall, then theſe lines import. Or rather then ſet forward, for &#x27;twill be <mark>Two</mark> long dayes iourney (Lords) or ere we meete. The king hath diſpoſſeſt himſelfe of vs, We will not lyne his thin-beſtained cloake ▪ With our pure Honors: nor attend</div>
+<div class="excerpt">not thoſe cunning waters of his eyes, For villanie is not without ſuch rheume, And he, long traded in it, makes it ſeeme Like Riuers of remorſe and innocencie. <mark>Away</mark> with me, all you whoſe ſoules abhorre Th&#x27; vncleanly ſauours of a Slaughter-houſe, For I am ſtifled with this ſmell of ſinne. Vpon our ſides it neuer ſhall be broken.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">As true as I beleeue you thinke them falſe, That giue you cauſe to proue my ſaying true. What other harme haue I good Lady done. But ſpoke the harme, that is by others done? Pardon me Madam, I may not goe without you to the kings. Therefore, to be poſſeſs&#x27;d with double pompe, To guard a Title, that was rich before; To gilde refined Gold, to paint the Lilly; To throw a perfume on the Violet, To ſmooth the yee, or adde another hew Vnto the Raine-bow; or with Taper-Light To ſeeke the beauteous eye of heauen to garniſh, Is waſtefull, and ridiculous exceſſe. In this the Anticke, and well noted face Of plaine old forme, is much disfigured, And like a ſhifted winde vnto a ſaile, It makes the courſe of thoughts to fetch about, Startles, and frights conſideration: Makes ſound opinion ſicke, and truth ſuſpected, For putting on ſo new a faſhion&#x27;d robe. To this effect, before you were new crown&#x27;d We breath&#x27;d our Councell: but it pleas&#x27;d your Highnes To ouer-beare it, and we are all well pleas&#x27;d, Since all, and euery part of what we would Doth make a ſtand, at what your Highneſſe will. The colour of the King doth come, and go Betweene his purpoſe and his conſcience, Like Heralds &#x27;twixt two dreadfull battailes ſet: His paſsion is ſo ripe, it needs muſt breake. Indeed we fear&#x27;d his ſickneſſe was paſt cure. It is apparant foule-play, and &#x27;tis ſhame That Greatneſſe ſhould ſo groſſely offer it; So thriue it in your game, and ſo farewell. Lords, I will meet him at S. Edmondsbury, It is our ſafetie, and we muſt embrace This gentle offer of the perillous time. The Count Meloone, a Noble Lord of France, Whoſe priuate with me of the Dolphines loue, Is much more generall, then theſe lines import. Or rather then ſet forward, for &#x27;twill be Two long dayes iourney (Lords) or ere we meete. The king hath diſpoſſeſt himſelfe of vs, We will not lyne his thin-beſtained cloake ▪ With our pure Honors: nor attend the foote. That leaues the print of blood where ere it walkes. Returne, and tell him ſo: we know the worſt. Our greefes, and not our manners reaſon now. This is the priſon: What is he lyes heere? Murther, as hating what himſelfe hath done, Doth lay it open to vrge on reuenge. Sir Richard, what thinke you? you haue beheld, Or haue you read, or heard, or could you thinke? Or do you almoſt thinke, although you ſee, That you do ſee? Could thought, without this obiect Forme ſuch another? This is the very top, The heighth, the Creſt: or Creſt vnto the Creſt Of murthers Armes: This is the bloodieſt ſhame, The wildeſt Sa agery, the vildeſt ſtroke That euer wall-ey&#x27;d wrath, or ſtaring rage Preſented to the teares of ſoft remorſe. If that it be the worke of any hand? We had a kinde of light, what would enſue: It is the ſhamefull worke of Huberts hand, The practice, and the purpoſe of the king: From whoſe obedience I forbid my ſoule, Kneeling before this ruine of ſweete life, And breathing to his breathleſſe Excellence The Incenſe of a Vow, a holy Vow: Neuer to taſte the pleaſures of the world, Neuer to be infected with delight, Nor conuerſant with Eaſe, and Idleneſſe, Till I haue ſet a glory to this hand, By giuing it the worſhip of Reuenge. Oh he is bold, and bluſhes not at death, Auant thou hatefull villain, get thee gone. Muſt I rob the Law? Not till I ſheath it in a murtherers skin. Thou art a Murtherer. Stand by, or I ſhall gaul you Faulconbridge. Truſt not thoſe cunning waters of his eyes, For villanie is not without ſuch rheume, And he, long traded in it, makes it ſeeme Like Riuers of remorſe and innocencie. Away with me, all you whoſe ſoules abhorre Th&#x27; vncleanly ſauours of a Slaughter-houſe, For I am ſtifled with this ſmell of ſinne. Vpon our ſides it neuer ſhall be broken. And Noble Dolphin, albeit we ſweare A voluntary zeale, and an vn-urg&#x27;d Faith To your proceedings: yet beleeue me Prince, I am not glad that ſuch a ſore of Time Should ſeeke a plaſter by contemn&#x27;d reuolt, And heale the inueterate Canker of one wound, By making many: Oh it grieues my ſoule, That I muſt draw this mettle from my ſide To be a widdow-maker: oh, and there Where honourable reſcue, and defence Cries out vpon the name of Salisbury. But ſuch is the infection of the time, That for the health and Phyſicke of our right, We cannot deale but with the very hand Of ſterne Iniuſtice, and confuſed wrong: And is&#x27;t not pitty, (oh my grieued friends) That we, the ſonnes and children of this Iſle, Was borne to ſee ſo ſad an houre as this, Wherein we ſtep after a ſtranger, march Vpon her gentle boſom, and fill vp Her Enemies rankes? I muſt withdraw, and weepe Vpon the ſpot of this inforced cauſe, To grace the Gentry of a Land remote, And follow vnacquainted colours heere: What heere? O Nation that thou couldſt remoue, That Neptunes Armes who clippeth thee about, Would beare thee from the knowledge of thy ſelfe, And cripple thee vnto a Pagan ſhore, Where theſe two Chriſtian Armies might combine The bloud of malice, in a vaine of league, And not to ſpend it ſo vn-neighbourly. I did not thinke the King ſo ſtor&#x27;d with friends. That misbegotten diuell Falconbridge, In ſpight of ſpight, alone vpholds the day. When we were happie, we had other names. Wounded to death. May this be poſſible? May this be true? We do beleeue thee, and beſhrew my ſoule, But I do loue the fauour, and the forme Of this moſt faire occaſion, by the which We will vntread the ſteps of damned flight, And like a bated and retired Flood, Leauing our rankneſſe and irregular courſe, Stoope lowe within thoſe bounds we haue ore-look&#x27;d, And calmely run on in obedience Euen to our Ocean, to our great King Iohn. My arme ſhall giue thee helpe to beare thee hence, For I do ſee the cruell pangs of death Right in thine eye. Away, my friends, new flight, And happie newneſſe, that intends old right. Be of good comfort (Prince) for you are borne To ſet a forme vpon that indigeſt Which he hath left ſo ſhapeleſſe, and ſo rude. You breath theſe dead newes in as dead an eare My Liege, my Lord: but now a King, now thus. It ſeemes you know not then ſo much as we, The Cardinall Pandulph is within at reſt, Who halfe an houre ſince came from the Dolphin, And brings from him ſuch offers of our peace, As we with honor and reſpect may take, With purpoſe preſently to leaue this warre. Nay, &#x27;tis in a manner done already, For many carriages hee hath diſpatch&#x27;d To the ſea ſide, and put his cauſe and quarrell To the diſpoſing of the Cardinall, With whom your ſelfe, my ſelfe, and other Lords, If you thinke meete, this afternoone will poaſt To conſummate this buſineſſe happily. And the like tender of our loue wee make To reſt without a ſpot for euermore.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — King John</div><div class="body">The Plantagenets have a dynastic dispute: J@lih is de facto King of England, but Alptiillir, the young son of his dead elder brother, has a better claim in primogeniture; France takes Arthur’s side. John is asked to adjudicate in another case of . disputed inheritance: Robert Falé@nbridge claims that his elder brother BHiliip is a bastard, begotten in his father’s absence by the dead King Richard. John rules for Philip’s legitimacy irrespective of parentage, since he was conceived in wedlock; but Philip decides to be a king’s son rather than a knight’s heir, cedes his brother the family lands, and joins John’s court. John meets the Kinglofibrance outside the town of Angers, which claims loyalty to the English crown but is holding out against both claimants until the issue is decided. England and France decide to defer their differences until they have subjugated Angers, but the citizens save themselves by suggesting an Anglo- French marriage between DOUISNEHEMDapHin and John’s niece BI@HEHE; France expediently transfers its support from Arthur to John. After the wedding, the papal legate Pandulph excommunicates John for his interference in ecclesiastical affairs, and declares his assassination legitimate. The French revert to support for Arthur, leaving Blanche with a conflict of interests. Arthur is captured in battle and taken back to England ===== PAGE 337 ===== 1596 in MWbert’s custody; John instructs Hubert to arrange the boy’s death. Anticipating this outcome, Pandulph .encourages Louis to prepare a claim to the English throne through his new wife’s right of succession. Hubert makes arrangements to blind Arthur, but cannot bring himself to go through with it. John’s lords demand Arthur’s release, but Hubert untruthfully reports that he is dead as ordered. The lords infer John’s responsibility and plan rebellion. Setbacks build up: John’s mother, left behind to govern his French possessions, dies, and the Dauphin lands his invasion force in England. Faced with internal rebellion and an external threat, John tries to disclaim responsibility for Arthur’s murder, only to be.told by Hubert that the boy is alive after all. But not for long: Arthur falls to his death while trying to escape from prison, and the rebel lords find the body and accept the Dauphin’s overtures. John submits to papal authority, fulfilling a prophecy that he would lose his crown. Pandulph tries to intervene with the Dauphin, only to find that he has started something he cannot…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

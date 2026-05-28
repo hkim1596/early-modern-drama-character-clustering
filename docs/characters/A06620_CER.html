@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CER in Love&#x27;s Metamorphosis · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> ›
+  <span>CER</span>
+</nav>
+
+<h1>CER</h1>
+<p class="lede">in <em>Love&#x27;s Metamorphosis</em> — Lyly, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1601</td></tr>
+<tr><th>Words</th><td>1148</td></tr>
+<tr><th>Characters</th><td>6111</td></tr>
+<tr><th>BritDrama no.</th><td>841</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 12 (<em>amyntas, phillis, did, must, endimion, death…</em>). Matches are highlighted.</p>
+<div class="excerpt">and therefore <mark>must</mark> <mark>bee</mark> flattered; Virginitie hath, and therefore <mark>must</mark> be humble. Those that often say, they cannot loue, or will not loue, certainely they loue. Didst thou neuer see <mark>Cupid</mark> ? Well Nisa, thou shalt see him. Well, let vs to <mark>Cupid</mark>, and tak eede 〈◊〉 your stubbernesse yo&#x27;i offend him not, whome by entrea ties you</div>
+<div class="excerpt">of virginitie: th&#x27;one hauing absolute authoritie to commaund, the other difficultie to resist: and where such continuall warre is betweene loue and vertue, there <mark>must</mark> <mark>bee</mark> some parties, and continuall perils: <mark>Cupid</mark> was neuer conquered, and therefore <mark>must</mark> <mark>bee</mark> flattered; Virginitie hath, and therefore <mark>must</mark> be humble. Those that</div>
+<div class="excerpt">haue your shapes: this great god <mark>Cupid</mark>, that for your prides and follies changed, hath by my praier and promise restored you. Why speake you not, Nymphes? This <mark>must</mark> <mark>bee</mark> done, and you <mark>must</mark> yeeld. Not yeeld? Then shal <mark>Cupid</mark> in his furie turne you againe to sencelesse, and shamefull shapes. My sweete Nymphs, for the honor of your</div>
+<div class="excerpt">art but a god <mark>Cupid</mark>. Art thou so cruell? Canst thou make such difference in affection, and yet shall it all be loue? How may my Nymphes be restored? Erisicthon <mark>did</mark> in contempt hewe downe my sa cred tree. Hee slew most cruelly my chast Fidelia, whose bloud lieth yet on the ground. What honour shal he doe to Ceres? What amends</div>
+<div class="excerpt">who e resist they cannot. In virgines what dost thou 〈◊〉 desire? What doest thou most hate in virgines? What may protect my virgines that they 〈◊〉 ne r loue? Why didst thou so cruellie torment all Dianas Nymphe wit oue? What is the substance of loue? What the signes? What the causes? What the meanes? What the end? What require</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Thou canst not misse of her, if thou remember but her name; and that canst thou not forget, for that comming neere to the place, thou shalt find gnawing in thy stomacke. Shee lyeth gaping, and swalloweth noughe but ayre; her face pale and so leane, that as easily thou maiest, through the verie skinne behold the bone, as in a glasse thy shadow; her haire long, blacke and shaggie; her eyes sunke so farre into her head, that shee looketh out of the nape of her necke; her lips white and rough; her teeth hollow and red with rustinesse; her skin so thin, that thou maiest as liuely make an Anatomie of her body, as shee were cut vp with Chirurgio ̄ s; her maw like a drie bladder, her heart swo ne bigge with wind, and all her bowels like snakes working in her body. This monster when thou shalthehold, tell her my mind, and returne with speed. Take thou these few cares of corne, but let not 〈◊〉 so much as smell to them; and let her goe aloose from thee: Now shall Erisicthon see that Ceres is a great goddesse, as full of power as himselfe of pride; and as pit tilesse, as he presumptuous; how thinke you Ladies, is not this reuenge apt for o great iniurie? But let vs to the Temple of Cupid, and offer sacri fice; they that thinke it straunge for chastime to humble it selfe to Cupid, knowe neither the power of loue, nor t e nature of virginitie: th&#x27;one hauing absolute authoritie to commaund, the other difficultie to resist: and where such continuall warre is betweene loue and vertue, there must bee some parties, and continuall perils: Cupid was neuer conquered, and therefore must bee flattered; Virginitie hath, and therefore must be humble. Those that often say, they cannot loue, or will not loue, certainely they loue. Didst thou neuer see Cupid ? Well Nisa, thou shalt see him. Well, let vs to Cupid, and tak eede 〈◊〉 your stubbernesse yo&#x27;i offend him not, whome by entrea ties you ought to follow Dianas Nymphes were as cha t as Ceres virgines, as faire, as wife: how Cupid tormented them, I had rather you should heare then feele, but this is truth, they all yeelded to loue: looke not scornefully, my Nymphes, I say they are yeelded to loue. This is the tem ple, thou great god Cupid, whome the gods regard and men reuerence, let it bee lawfull for Ceres to offer her sa crifice. Then Loue, to thee I bring these white and spot lesse Doues, in token that my heart is as free from any thought of loue, as these from any blemish, and as cleare in virginitie, as these perfect in whitenesse. But that my Nymphes may know both thy power and thy lawes, and neither erre in ignorance nor pride; let me aske some questions to instruct them that they offend not th , who e resist they cannot. In virgines what dost thou 〈◊〉 desire? What doest thou most hate in virgines? What may protect my virgines that they 〈◊〉 ne r loue? Why didst thou so cruellie torment all Dianas Nymphe wit oue? What is the substance of loue? What the signes? What the causes? What the meanes? What the end? What require thou of men? What 〈◊〉 for those that will not loue? Well, Cupid, intreate my Nymphes with fauour and though to loue it be no vice, yet spotlesse virginitie is the onely vertue: let me keepe their thoughtes as chast as their bodies, than Ceres may be happie, &amp; they praised. 〈…〉 continuall sacrifice, warme vs with mild 〈…〉 wee seeme immodest 〈…〉 ble like stockes. How say you, my Nymphs, doth not Cupid speake like a o ▪ Counsel you I will not to loue, but coniure you I u t that you be not disdainefull, let vs in, and see how Er sictson speedeth; famine f eth swiftly, and hath alrea dy seyzed on his stomacke. Cupid, thou hast transformed my Nymphes and incensed me, them to shapes vnreasonable, me to anger immortall, for at one time I am both robd of mine honour and my Nymphes. Thou art but a god Cupid. Art thou so cruell? Canst thou make such difference in affection, and yet shall it all be loue? How may my Nymphes be restored? Erisicthon did in contempt hewe downe my sa cred tree. Hee slew most cruelly my chast Fidelia, whose bloud lieth yet on the ground. What honour shal he doe to Ceres? What amends can he make to Fidelia? What sacrifice shall I and my Nymphes offer thee? For I will doe any thing to restore my Nymphes, and honour thee. Cupid, I yeeld, and they shall: but sweete Cupid, let them not bee deceiued by flatterie, which taketh the shape of affection, nor by lust, which is clothed in the habit of loue; for men haue as many slights to delude, as they haue words to speake. Well, I will goe to Erisicthon, and bring him be fore thee. They shall. Well, doe so, and thanke Cupid that commands, nay, thanke my foolish Nymphes, that know not how to obey; here be the louers ready at receipt: How now Gen tlemen, what seeke you? Ceres hath found those, that I would shee had lost, vaine louers. You thinke so one of another. You might haue made me a counsell of your loues. Cupid, here is Erisicthon in his former state, restore my N mphs to theirs, then shal they embrace these louers, who wither out their youth. What, more louers yet? I thinke it bee impossible for Ceres to haue any follow her in one hower, that is not in loue in the next. Why stare you, my Nymphs, as amazed triumph rather because you haue your shapes: this great god Cupid, that for your prides and follies changed, hath by my praier and promise restored you. Why speake you not, Nymphes? This must bee done, and you must yeeld. Not yeeld? Then shal Cupid in his furie turne you againe to sencelesse, and shamefull shapes. My sweete Nymphs, for the honor of your sex, for the loue of Ceres, for regard of your own countrie, yeeld to loue, yeeld, my sweete Nymphes, to sweete loue. Well, my good Nymphes, yeeld let Ceres intreat you yeeld. I will charme my Nymphes, as they shall neither be so stately, as not to stoope to loue, nor so light as pre sently to yeeld. I to my haruest, whose corne is now come out of the blade, into the eare, and let all this amorous troupe to the temple of Venus, ther to consummate what Cupid hath commaunded. Let it bee so; these louers mind nothing what we say. Well, doe.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Love&#x27;s Metamorphosis</div><div class="body">Three nymphs are loved by three foresters but reject them. The foresters offend Erisychthon, ruler of the forest, by cutting down a tree sacred to Ceres and blaspheming the goddess. The tree is revealed to contain Fidellia, a nymph transformed after being raped by a satyr, and she calls for revenge. Ceres punishes Erisychthon with perpetual hunger, driving him to attempt to sell his daughter Protea for food. Neptune grants Protea the power of metamorphosis, allowing her to escape. Meanwhile, the foresters seek help from Cupid, who punishes the disdainful nymphs through transformations: Nisa becomes a rock, Celia a rose, and Niobe a bird. Protea later saves her lover from a Siren’s temptation. Eventually Cupid and Ceres reverse the punishments, freeing Erisychthon from hunger and restoring the nymphs to their original forms. The nymphs finally accept the love of the foresters.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> page.
+</div>
+</div></body></html>

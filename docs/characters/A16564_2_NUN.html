@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NUN in Darius · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> ›
+  <span>NUN</span>
+</nav>
+
+<h1>NUN</h1>
+<p class="lede">in <em>Darius</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>1271</td></tr>
+<tr><th>Characters</th><td>7167</td></tr>
+<tr><th>BritDrama no.</th><td>1404</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 25 (<em>did, whil, death, might, minde, fortune…</em>). Matches are highlighted.</p>
+<div class="excerpt">with a ſword he ſought to make them ſmart. But having ſcap&#x27;d what firſt was fear&#x27;d from rage, They ſeem&#x27;d ſo much their errour to lament, His indignation that they <mark>did</mark> aſſwage, (Falſe hypocrits) pretending to repent. Whilſt Artabazus as an honeſt man Who judg&#x27;d of <mark>others</mark> by his vpright <mark>minde</mark>, (No fraud conceav&#x27;d) ſought more to</div>
+<div class="excerpt">friend. When Alexander (who at peace repin&#x27;d) <mark>Did</mark> (ſave ſubmiſſion) hold all offers vaine, Bent of ſterne Mars to try the doubtfull <mark>minde</mark>; A generall muſter Darius <mark>did</mark> ordaine, And (in one battell bent to venture all) He caus&#x27;d his will be publikely proclaim&#x27;d, Whilſt two vile Traitours <mark>did</mark> conſpire his fall, Who Beſſus and Narbazanes</div>
+<div class="excerpt">And why? But firſt to you. Your ſonne is dead. You wrong that Prince, for he with haſt in vaine Came him to helpe whom <mark>others</mark> had deſtroi&#x27;d. Two whom he rais&#x27;d <mark>did</mark> his confuſion breed, He found his friend his foe, his foe a friend. When Alexander (who at peace repin&#x27;d) <mark>Did</mark> (ſave ſubmiſſion) hold all offers vaine, Bent of ſterne</div>
+<div class="excerpt">venture all) He caus&#x27;d his will be publikely proclaim&#x27;d, Whilſt two vile Traitours <mark>did</mark> conſpire his fall, Who Beſſus and Narbazanes were nam&#x27;d; Thoſe two in councell <mark>did</mark> diſcover firſt Some portion of the poiſon of their heart, Which caus&#x27;d the king ſuſpect, but not the worſt, Yet with a ſword he ſought to make them ſmart. But having</div>
+<div class="excerpt">ſcape then ſcan, What they with craft to compaſſe Crownes deſign&#x27;d. They urg&#x27;d him with the king to interceed, That in his favour he would give them place, And <mark>did</mark> proteſt that by ſome valorous deed, They labour would to gaine againe his grace; Then Artabazus came and told the king, That in the battell he <mark>might</mark> try their faith,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">The meſſage (madame) which my ſoule affords Muſt once be knowne, and once knowne ſtill accurſt. And why? But firſt to you. Your ſonne is dead. You wrong that Prince, for he with haſt in vaine Came him to helpe whom others had deſtroi&#x27;d. Two whom he rais&#x27;d did his confuſion breed, He found his friend his foe, his foe a friend. When Alexander (who at peace repin&#x27;d) Did (ſave ſubmiſſion) hold all offers vaine, Bent of ſterne Mars to try the doubtfull minde; A generall muſter Darius did ordaine, And (in one battell bent to venture all) He caus&#x27;d his will be publikely proclaim&#x27;d, Whilſt two vile Traitours did conſpire his fall, Who Beſſus and Narbazanes were nam&#x27;d; Thoſe two in councell did diſcover firſt Some portion of the poiſon of their heart, Which caus&#x27;d the king ſuſpect, but not the worſt, Yet with a ſword he ſought to make them ſmart. But having ſcap&#x27;d what firſt was fear&#x27;d from rage, They ſeem&#x27;d ſo much their errour to lament, His indignation that they did aſſwage, (Falſe hypocrits) pretending to repent. Whilſt Artabazus as an honeſt man Who judg&#x27;d of others by his vpright minde, (No fraud conceav&#x27;d) ſought more to ſcape then ſcan, What they with craft to compaſſe Crownes deſign&#x27;d. They urg&#x27;d him with the king to interceed, That in his favour he would give them place, And did proteſt that by ſome valorous deed, They labour would to gaine againe his grace; Then Artabazus came and told the king, That in the battell he might try their faith, And both before his majeſtie did bring, Who (when ſubmiſſe) did quickly calme his wrath. With hands ſtretch&#x27;d up to Heaven, and humbled knees, With teares like thoſe which Crocodiles doe ſhed, Woe in their face and pitie in their eyes, Did for compaſſion (though from rigour) pleade. The king of nature milde did them receave, And them (who thus but for the forme complain&#x27;d) Not onely all (relenting) quite forgave; But wept in earneſt too whil&#x27;ſt they but fain&#x27;d; When in his Coach from all ſuſpition free, With count&#x27;nance ſad long following on behinde (As ſtill pretending ſupplicants to be) They bow&#x27;d to him whom they were bent to binde; The Grecian Captaine curiouſly neare (When mark&#x27;d a ſuter) crav&#x27;d what he requir&#x27;d, By pregnant proofes did evidently cleare, What treaſon was againſt his ſtate conſpir&#x27;d: He told what way their purpoſe might be tri&#x27;d, And how the Bactrians were for trouble bent, Then for his ſafety pray&#x27;d him to provide, By ſtraight with him retyring to his Tent; But in the King who did neglect his ſtate, No kinde of care this friendly offer bred: So that (it ſeem&#x27;d) he by ſome pow&#x27;rfull fate Was head-long forward to confuſion led: The Greeke paſt thence deſpairing him to ſave, Who thus all meanes to help himſelfe refus&#x27;d; With ſubtle words then Beſſus there did crave To purge himſelfe, and errours paſt excus&#x27;d; Old Artabazus happ&#x27;ning to approach, The King to him did Patrons ſpeech report, Who then perceiv&#x27;d what danger did encroach, And wiſh&#x27;d he would where Greeks were ſtrong reſort. But in his breaſt this purpoſe firmly plac&#x27;d, That from his Subjects he would never flie, With mutuall teares they tenderly embrac&#x27;d, And parted there, like two who went to dye. Now ſilent night in pitchie vapours cled, Had muſt&#x27;red myſts, and march&#x27;d out of the Weſt; (Dayes beauties darkning, ſhadowie horrours ſpread) The Sentinels were ſet, and all at reſt, When (loe) a terrour did diſtract the hoſt! Whoſe bands to murmure were diſpers&#x27;d in parts, With ſounds reſembling ſhips in ſtormes neare loſt, Whil&#x27;ſt each to other cauſe of feare imparts. Thoſe who their King appointed were to guard, From what was due by fraud or feare did ſtray; And (to his danger having no regard) His Fortunes Minions fled with heraway. The deſolation then growne wondrous great, With ſome few Eunuchs Darius left alone, (No ſtrength remaining, nor no ſigne of ſtate) He thus them ſpake, who for his fall did mone: Go, part in peace ere further harme be had, Leſt that my ruine likewiſe you ſurpriſe. They hearing thoſe ſad words (as men gone mad) Went howling through the hoſt with dolorous cryes; So that all thoſe who heard what plaints they made, Thought that they had their Soveraignes death bewail&#x27;d; And (forcing truſt) ſome forg&#x27;d reports were ſpread, That he had kill&#x27;d himſelfe, all hope quite fail&#x27;d. The Perſians griev&#x27;d whil&#x27;ſt theſe things did occurre, Did firſt encourage all their Countrey bands To help their Prince, but yet they durſt not ſtirre For feare of falling in the Bactrians hands; Even in the time when this confuſion was, The Traitors to deferre the fact no more, Did to their Soveraignes Tent with Squadrons paſſe, And took, and bound, him whom they ſerv&#x27;d before; Who in a golden Coach once proudly rode, Was throwne in one for common carriage us&#x27;d, And who of late was honour&#x27;d like a God, Two of his owne (as if their ſlave) abus&#x27;d: Thoſe royall hands to beare a Scepter borne, Were baſely bound, and which the more him griev&#x27;d, &quot;(Thus miſery can hardly ſcape from ſcorne) &quot;With bands of gold, which burden&#x27;d, not reliev&#x27;d. When Alexander (great with courage) ſpy&#x27;d Our Armies flie, he (who in hope them chac&#x27;d) To follow us with diligence did ride, &quot;Baſe ſeem&#x27;d the Conqueſt which no danger grac&#x27;d; But when at laſt at length by ſome inform&#x27;d How he was made a captive to his owne, At this indignity he highly ſtorm&#x27;d, As if by it his hopes had beene o&#x27;re-throwne. Out of his hoſt he did ſelect a few Who were beſt hors&#x27;d, and fit for ſuch a fight, With whom his foes he did ſo faſt purſue, That e&#x27;re they could ſuſpect, he came in ſight; The Traitors vex&#x27;d when ſpying him appeare, Came to the Cart whereas the King did ſtay, And call&#x27;d to horſe in haſte, ſince foes were neare, Leſt that they elſe might finde him for a prey. He look&#x27;d aloft, and cry&#x27;d aloud, I ſee That Nemeſis is frowning from above; Should I with Traitors as a captive be? And flie from him, who but brave warres doth move? Then thoſe in whom impiety abounds, Throw&#x27;d Darts at him (vile beaſts to be abhorr&#x27;d) And hurt the horſes with an hundred wounds, Then men more truſty, dying for their Lord; As falſe in hearts, ſo feeble with their hands, When Guilt and Danger doubled had deſpaires, The Traitors firſt, then all their trait&#x27;rous bands Fled from a number leſſe by halfe then theirs. But to the bounds of Deaths pale kingdome brought. The King retyr&#x27;d where leaſt by people ſpy&#x27;d, More wounded with ingratitude then ought, Did leave the world, whoſe folly he had tri&#x27;d; The laſt divorce which laſts, was ſcarcely made Twixt ſoule and body whil&#x27;ſt the eyes grew dim, When Alexander came and found him dead, Who labour&#x27;d had ſo long to ruine him, And (whil&#x27;ſt his teares a generall mourning mov&#x27;d) That ſtately veſture which himſelfe array&#x27;d, (Much fear&#x27;d for valour, more for vertue lov&#x27;d) With his owne hand on Darius corps he layd; Then wailing long as for a brother loſt To have his funerals furniſh&#x27;d like a Kings, He bids you uſe his wealth, and ſpare no coſt; For, you ſhall want no neceſſary things. He hath his body hither ſent by me, And ſunerall rites ſolemnely bent to do, He thinks that they may beſt accompliſh&#x27;d be, Whil&#x27;ſt who him bred doth ſee him buried too ▪</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Darius</div><div class="body">Vanquished by Alexander, Darius fears for his mother, wife, and children, who have been taken captive. He offers a ransom for them, and Parmenio encourages Alexander to accept (the money can be used to finance future campaigns), but Alexander refuses. The women assume that Darius is dead and ask leave to bury him. Alexander gives them his personal assurance that Darius is alive and that they v.ill be treated honourably. Bessus and Narbazanes plan to betray Darius to Alexander in the hope of getting kingdoms for themselves. Darius learns that his wife has died, but is impressed by Alexander&#x27;s honourable treatment of her. Narbazanes encourages him to resign the crown to Bessus, while others advise him not to trust the two traitors, and to rely on his mercenary troops if necessary. Darius meditates on tl1e inevitable fall of princes and accepts the coming of death. The traitors spread a rumour that he has committed suicide, then take him prisoner and offer him to Alexander. Darius dies with a speech honouring Alexander for his magnanimity in victory. Alexander vows to hunt down and dismember the traitors.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FIT in The Staple of News · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FIT</span>
+</nav>
+
+<h1>FIT</h1>
+<p class="lede">in <em>The Staple of News</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>1206</td></tr>
+<tr><th>Characters</th><td>6490</td></tr>
+<tr><th>BritDrama no.</th><td>2174</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">where he was wont to get In, hungry Captaines ▪ obscure Statesmen. We ha&#x27; seen&#x27;t, And dish ou newes, Were&#x27;t true, or false. How, doe you call him there? He that <mark>has</mark> the maidenhead Of all the bookes. Or rather prostituted. O Sir! it is the printing we oppose. Though it be ne&#x27;re so false, it runnes Newes still. I, that&#x27;s an Error</div>
+<div class="excerpt">as Newes come, in, And for a need can make &#x27;hem. So is your creature. We shall be your seruants. Our selues. This noble Doctor here. This Man o&#x27; war, he was our Muster-Master. Thou needst not feare him man, his credit is sound, Of an vntainted credit; what say you to him? An Heyre to a faire fortune, A drench of sacke At a good</div>
+<div class="excerpt">it. And you Mas. Broker Shall haue a feeling. O! the Prodigall! Will you be at so much charge with vs, and losse? And yet his eyes were dryer then a pummise. Hee <mark>has</mark> offer d To gather vp spilt water, and preserue Each haire falls from him to stop balls with all. Let vs leaue the viper. And counsell of an Oracle! brother Picklock,</div>
+<div class="excerpt">tidings, It will cry vp the credit of our Office, Eternally, and make our Staple immortall! Thou seem&#x27;st, by thy language, No lesse a Courtier, then a man o&#x27; Law. I <mark>must</mark> embrace thee. Fitton is brought a bent. I do admire this nimble ingine, Picklock. You haue rectified my errour! BY your leaue, Gentlemen, what newes? good, good</div>
+<div class="excerpt">hand to kisse, He was my Barber, now he writes Clericus ! I bought this place for him, and gaue it him. For pennance. Sir, all are alike true, and certaine. &#x27;T <mark>has</mark> bin long the ayme Of the house of Austria. No, of Liechtenstein, Lord Paul, I thinke. Witnesse the Engine, that they haue presented him, To winde himselfe with,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Or Newes of doubtfull credit, as Barbers newes. Whereto, beside the Corant , and Gazetti. As vacation newes, Terme-newes, and Christmas-newes. As the Reformed newes, Protestant newes, And men of Correspondence i&#x27;the Countrey — Factors, and Agents — Nay more I&#x27;ll stan to&#x27;t. For, where he was wont to get In, hungry Captaines ▪ obscure Statesmen. We ha&#x27; seen&#x27;t, And dish ou newes, Were&#x27;t true, or false. How, doe you call him there? He that has the maidenhead Of all the bookes. Or rather prostituted. O Sir! it is the printing we oppose. Though it be ne&#x27;re so false, it runnes Newes still. I, that&#x27;s an Error Ha&#x27;s abus&#x27;d many; but we shall reforme it, As many things beside (we haue a hope) Are crept among the popular abuses. once, in Seuen Yeares, As the age doates— Fresh and new stamp&#x27;d, And if a man will assure his Newes, he may: Two-pence a Sheet he shall be warranted, And haue a policie for&#x27;t. Sir. It ha&#x27;s Cost sweat, and freesing. But now it ha&#x27;s the shape— Emissarie Westminster. For his Essay, his peece. &#x27;Tis as Newes come, in, And for a need can make &#x27;hem. So is your creature. We shall be your seruants. Our selues. This noble Doctor here. This Man o&#x27; war, he was our Muster-Master. Thou needst not feare him man, his credit is sound, Of an vntainted credit; what say you to him? An Heyre to a faire fortune, A drench of sacke At a good tauerne, and a fine fresh pullet, Would cure him. An odde bargaine of Venison, To driue. Hee may be in time, hee is his Agent, now. Or Curriers hands! His face lookes like a Diers apron, iust! No certaine species sure, A kinde of mule! That&#x27;s halfe an Ethnicke, halfe a Christian ! See! this pure rogue! A rogue, a cheater. Hee neuer thinkes. More then a logge, of any grace at Court, A man may doe him: or that such a Lord Reach&#x27;t him his hand. What a damn&#x27;d Harpy it is? where&#x27;s Madrigall? Is he sneek&#x27;d hence. That was a fauour. Good morrow, Master Secretary. Or in porc lane dishes There were some hope. Who would hold any Land To haue the trouble to marle it. And you Mas. Broker Shall haue a feeling. O! the Prodigall! Will you be at so much charge with vs, and losse? And yet his eyes were dryer then a pummise. Hee has offer d To gather vp spilt water, and preserue Each haire falls from him to stop balls with all. Let vs leaue the viper. And counsell of an Oracle! brother Picklock, I shall adore thee, for this parcell of tidings, It will cry vp the credit of our Office, Eternally, and make our Staple immortall! Thou seem&#x27;st, by thy language, No lesse a Courtier, then a man o&#x27; Law. I must embrace thee. Fitton is brought a bent. I do admire this nimble ingine, Picklock. You haue rectified my errour! BY your leaue, Gentlemen, what newes? good, good still? I&#x27;your new Office? Princesse, here&#x27;s the Staple! This is the Gouernor, kisse him, noble Princesse, For my sake. Thom, how is it honest Thom ? How does thy place, and thou? my Creature, Princesse? Hee tells Pe cunia of Thom. This is my Creature, giue him your hand to kisse, He was my Barber, now he writes Clericus ! I bought this place for him, and gaue it him. For pennance. Sir, all are alike true, and certaine. &#x27;T has bin long the ayme Of the house of Austria. No, of Liechtenstein, Lord Paul, I thinke. Witnesse the Engine, that they haue presented him, To winde himselfe with, vp, into the Moone : And thence make all his discoueries! It shall cleare consume, Palace, and place; demolish and beare downe, All strengths before it! Why, let him, &#x27;Tis but writing so much ouer againe. Come, do not stick with the gentleman. From a right hand I assure you, The Ecle -boats here, that lye before Queen-Hyth, Came out of Holland. I doe grant you ▪ Spinola&#x27;s new proiect: an army in cork-shooes. But what if Spinola haue a new Proiect : To bring an army ouer in corke-shooes, And land them, here, at Harwich? all his horse Are shod with corke, and fourescore pieces of ordinance, Mounted vpon cork-carriages, with bladders, In stead of wheeles to runne the passage ouer At a spring-tide. As true as the rest ▪ As there is no Princesse, But may perfume her chamber with th&#x27; extraction. A very Paradise, if you saw all, Lady. Sweet Mistresse Statute, gentle Mistresse Band, And Mother Mortgage, doe but get her Grace To soiourne here.— Come, they all scorne vs, Doe you not see&#x27;t? the family of scorne! Let&#x27;s ieere a little. Madrigall, A ieere. Very like, But we were not well in. This Canter, Is an old enuious Knaue! I ha&#x27; mark&#x27;d him all this meale, he has done nothing But mocke, with scuruy faces, all wee said. We say, we wonder not, your man o&#x27; Law, Should be so gracious wi&#x27;you; but how it comes, This Rogue, this Canter! A fellow That speakes no language— And no honest Christian Can vnderstand— A Lady, The Graces taught to moue! Whose lips are the instructions of all Louers ! A voyce, as if that Harmony still spake! Young Hebes necke, or Iunoe&#x27;s armes! Laeda might yeeld vnto her, for a face! Flora, for cheekes! The pearle doth striue in whitenesse, with her necke, O, she has A front too slippery to be look&#x27;t vpon! That&#x27;s the &#x27;ill luck of all his workes still. To beginne many works, but finish none; Imperfect. It is his Rose. He can make nothing else That&#x27;s fairely said of Money. &#x27;Tis good. And then I &#x27;haue a Saraband — She makes good cheare, she keepes full boards, She holds a Faire of Knights, and Lords, A Mercat of all Offices, And Shops of honour, more or lesse. According to Pecunia&#x27;s Grace, The Bride hath beauty, blood, and place, The Bridegrome vertue, valour, wit, And wisedome, as he stands for it. Nor none shall know, by my consent. O, hee&#x27;s a dainty Poet ! When he sets to&#x27;t! &#x27;Tis excellent! A dainty Ayre ! The Pumpe They all threaten, Is not farre off; If&#x27;t were, the sinke is neere: Or a good Iordan. No, you are kick&#x27;d And vsed kindly, as you should be. O Master Pyed-mantle ! Pyed-man tle brings the Lady Pecunia her pedigree. BY your leaue, Gentlemen. Her Graces Herald, A decay&#x27;d Doctor at least! This is some other then he seemes! This cannot be a Canter! &#x27;Tis his Father! We come to baile your dogs. And tender, we are told. To be fairely knock&#x27;d o&#x27;the head. No, nor no Mortgage. Pox o&#x27;these true ieasts, I say. Wher&#x27;s your venison, now? I, and now, and then, An Embleme, o&#x27;your selfe, an o&#x27;re-growne Pyke ? You ha&#x27; made a shift To swallow twenty such poore Iacks ere now. Tut, he&#x27;ll liue like a Gras hopper— Faith, and when they are gone, Here&#x27;s nothing to be seene beyond. He calls his dogs to his ayd. Away. Hee&#x27;s a flame.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Staple of News</div><div class="body">Young. Pennyboy has recently heard of his father’s death; he retains Canter, the beggar who told him of his bereavement, as his constant companion. Now, a week later, he comes of age, and can-spend his inheritance as -‘he ‘pleases. He buys himself fashionable. clothes at .extravagant prices, and agrees to pay the £50 that will ~ procure Tom, his barber, a place at a newly opened news _-agency, the Staple. His lawyer, Picklock, shows him a codicil to his father’s will requiring him to pay court to . Pecunia, his uncle Richer’s ward, so he joins her many -Suitors, likes her, and takes her out. First they visit the ‘Staple ef News, where Pennyboy pays lavishly for . unlikely stories of European affairs, while Cymbal, the - proprietor, unsuccessfully tries to persuade Pecunia to come and live with him. Pennyboy entertains Pecunia to-dinner at a tavern, after which he and his worthless friends énjoy one another&#x27;s songs and jeering games. .Pecunia.agrees to live with Pennyboy, resenting the restraints and mean accommodation she has endured at shis. miser uncle’s house. Pennyboy plans to use his ‘wealth to. establish a canting school where people may . learn-the techniques of meaningless verbosity. ‘.. Canter reveals himself to be Pennyboy’s father, Francis. He reported his own death, entrusting his estate to Picklock’s safe keeping, in order to test how his:son would treat Pecunia, and is unimpressed by the - resultant riot and prodigality. He takes Pecunia into “his:own custody, leaving his son only the ragged cloak - of his. beggar’s disguise. . The Staple of News explodes, putting Tom out of his - mew job. Picklock claims that he was given the Pennyboy estate absolutely, rather than in trust; but he also tries to make more money playing father and son off against one another, and admits too much to the son. Young Pennyboy produces Tom as a witness to what was said, and gets the crucial document back by a ruse. Richer Pennyboy goes mad at the loss of Pecunia and blames his dogs for driving her away. He is mocked by Young Pennyboy’s unworthy friends, but Francis gets rid of them. Richer gives his blessing to Young Pennyboy’s marriage to Pecunia.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

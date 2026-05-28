@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ADRAST in Croesus · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> ›
+  <span>ADRAST</span>
+</nav>
+
+<h1>ADRAST</h1>
+<p class="lede">in <em>Croesus</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>1629</td></tr>
+<tr><th>Characters</th><td>9137</td></tr>
+<tr><th>BritDrama no.</th><td>1425</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 25 (<em>did, whil, death, might, minde, fortune…</em>). Matches are highlighted.</p>
+<div class="excerpt">light which flow&#x27;d not from that Sunne, As life without her had beene worſe then <mark>death</mark>; Yea, <mark>Fortune</mark> ſeem&#x27;d to favour his deſire, And where to build high hopes <mark>did</mark> give him ground : The Nymph her parents daily <mark>did</mark> require, That ſhe <mark>might</mark> furniſh phyſick for his wounds; Of my diſtracted <mark>thoughts</mark> ſtrange was the ſtrife, Who</div>
+<div class="excerpt">not juſtly wiſh his ſtate o&#x27;re-throwne, Nor blame the ſprite that ſympathiz&#x27;d with mine; I envi&#x27;d not his lot, but wail&#x27;d mine owne. Now in my beaſt a mighty rage <mark>did</mark> raigne, Which forc&#x27;d my ſoule with inward wounds to bleed, Some fancies fear&#x27;d what once his love <mark>might</mark> gaine, Since it was poſſible that he <mark>might</mark> ſpeed, Then <mark>others</mark></div>
+<div class="excerpt">Autumnes windes; Yet many conflicts paſt &#x27;twixt hopes and feares, To feaſt, at leaſt to nurce my ſtarv&#x27;d deſires; She granted had a truce unto my teares, And temper <mark>did</mark> with equall flames my fires: For as ſhe was the moſt eſteemed Saint, Whoſe image Love erected in my <mark>minde</mark>, So when her cares had harbour&#x27;d once my plaint, It pitie</div>
+<div class="excerpt">my fires: For as ſhe was the moſt eſteemed Saint, Whoſe image Love erected in my <mark>minde</mark>, So when her cares had harbour&#x27;d once my plaint, It pitie firſt, and then <mark>did</mark> favour finde; But ah triumphing in mine owne conceit As one whoſe love his Lady <mark>did</mark> preferre, I was corrivall&#x27;d (O diſaſtrous fate!) By one who lov&#x27;d, but was not</div>
+<div class="excerpt">lov&#x27;d, but was not lov&#x27;d by her, He looking as I look&#x27;d, faw what I ſaw, Saw Natures wonder, and the worlds delight, And ſtraight as that blinde god (blinde guide) <mark>did</mark> draw, Still (like a Lizard) liv&#x27;d upon her ſight. Then labour&#x27;d he that Iewell ſtraight to wonne, Whoſe matchleſſe worth he priz&#x27;d above his breath, And loath&#x27;d</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Whence (mighty Soveraigne) can this change proceed, Which doth obſcure the rayes of Princely grace? Thoſe who are ſchool&#x27;d in woe, may clearly reade A mighty paſſion written in your face; And (if a ſtranger may preſume ſo farre) What friend is falſe, or who are fear&#x27;d as foes? For I imagine in what ſtate you are: A ſecret ſympathie imparting woes; Two ſtrings in divers Lutes ſet in accord, (Some ſay) th&#x27;one onely touch&#x27;d both give a ſound, Even ſo ſouls tun&#x27;d to griefe, the like afford, Whoſe airie motions mutually do wound. As bodies temper&#x27;d are, or ſouls inclin&#x27;d, All dreames by ight th&#x27;imagination makes, Or elſe th&#x27;impreſſion thoughts worke in the minde, By which (when wakening) one moſt travell takes. Souls at ſuch times their ſtrength ſo ſtrongly ſtraine, That oft their burdens as aſtoniſh&#x27;d ſtart. Ah (Sir) if ſuch a dreamed ill as this, Hath plung&#x27;d your ſoule even in the depths of griefe, Unhappie I, who waile a thing that is, Whil&#x27;ſt hope (though rack&#x27;d) dare promiſe no reliefe; Though all thoſe dreadfull fancies took effect, (Which heavy chance th&#x27;almighty Iove with-hold) None can compare them, no, in no reſpect With thoſe miſ-fortunes which my ſtate enfold: For though your Sonne dye by anothers hand, You ſhall but waile his death, and not your crime; The heavens of me my brothers bloud demand, His fate, my fault, mourne muſt I all my time. My ſorrows ground I ſmother&#x27;d ſtill till now, As too offenſive food for dainty cares, But ſince of ſuch diſcourſe you do allow, Ile tell a tale that may move ſtones to teares; Of Phrygian Princes my great Father come, Had in my growing age a tender care, That all my education might become One whom he might for mighty hopes prepare; As yet foure luſtres ſcarcely had begun To grace my witneſſ&#x27;d ſex with blooming cheeks, When I (fond youth) that lab&#x27;rinth could not ſhunne, Whence backe in vaine the ſtraying Entrer ſeeks. I lov&#x27;d, O fatall love, unlovely fate! The vertuouſly faire, yet faireſt Dame That ever was enſhrin&#x27;d in ſoules conceit, Or ditties gave to grace the ſounds of fame; Straight were my fancies to her beauties ty&#x27;d, &quot;None can paint paſſions, but in feeling mindes, I burn&#x27;d, freez&#x27;d, doubted, hop&#x27;d, deſpair&#x27;d, liv&#x27;d, dy&#x27;d, With actions chang&#x27;d as oft as Autumnes windes; Yet many conflicts paſt &#x27;twixt hopes and feares, To feaſt, at leaſt to nurce my ſtarv&#x27;d deſires; She granted had a truce unto my teares, And temper did with equall flames my fires: For as ſhe was the moſt eſteemed Saint, Whoſe image Love erected in my minde, So when her cares had harbour&#x27;d once my plaint, It pitie firſt, and then did favour finde; But ah triumphing in mine owne conceit As one whoſe love his Lady did preferre, I was corrivall&#x27;d (O diſaſtrous fate!) By one who lov&#x27;d, but was not lov&#x27;d by her, He looking as I look&#x27;d, faw what I ſaw, Saw Natures wonder, and the worlds delight, And ſtraight as that blinde god (blinde guide) did draw, Still (like a Lizard) liv&#x27;d upon her ſight. Then labour&#x27;d he that Iewell ſtraight to wonne, Whoſe matchleſſe worth he priz&#x27;d above his breath, And loath&#x27;d all light which flow&#x27;d not from that Sunne, As life without her had beene worſe then death; Yea, Fortune ſeem&#x27;d to favour his deſire, And where to build high hopes did give him ground : The Nymph her parents daily did require, That ſhe might furniſh phyſick for his wounds; Of my diſtracted thoughts ſtrange was the ſtrife, Who threatned thus with eminent miſhap, Was like to loſe a thing more deare then life, Whil&#x27;ſt others ſtriv&#x27;d my treaſure to entrap; The man who ſought my joyes to undermine, I could not juſtly wiſh his ſtate o&#x27;re-throwne, Nor blame the ſprite that ſympathiz&#x27;d with mine; I envi&#x27;d not his lot, but wail&#x27;d mine owne. Now in my beaſt a mighty rage did raigne, Which forc&#x27;d my ſoule with inward wounds to bleed, Some fancies fear&#x27;d what once his love might gaine, Since it was poſſible that he might ſpeed, Then others call&#x27;d her conſtancy to minde, Which would not yeeld by ſuch aſſaults though prov&#x27;d, Yet forc&#x27;d to feare the frailty of her kinde, &quot;A hearing woman may in time be mov&#x27;d; Thus toſſ&#x27;d with doubts amidſt a deep of woe, Which with ſuſpition did my joyes ſupplant, I blam&#x27;d the thoughts that durſt accuſe her ſo, As vertues patterne could one vertue want; And, or I hop&#x27;d, his toils no further wrought, &quot;(Affliction oft affection doth enflame) She of her ſex who was the wonder thought, Would thus not wrong the glory of her name, Though in my abſence they had oft aſſai&#x27;d, That from her minde they might have me remov&#x27;d, (The Sunne burns hoteſt when his beames are ſtay&#x27;d) The more they croſſ&#x27;d her love, the more ſhe lov&#x27;d; For finding that delay no end affords, And how faire Generals onely flow&#x27;d from Art, She did upbraid him with diſdainefull words, To raze thoſe hopes that had abuſ&#x27;d his heart; &quot;Love is a joy which upon paine depends, &quot;A drop of ſweet, drown&#x27;d in a ſea of ſowres; &quot;What folly doth begin, oft fury ends, &quot;They hate for ever, who have lov&#x27;d for houres: When all his arguments prov&#x27;d of no force, Straight with diſdaine his ſoule in ſecret burn&#x27;d, And what he thought was ill, to make farre worſe, That Apoſtate to furie favour turn&#x27;d; Through love prepoſterous procreating hate, His thoughts amongſt themſelves could not agree, Whil&#x27;ſt what was beſt he deeply did debate, To ſee her dead, or then enjoy&#x27;d by me: What (ſaid he) when he firſt had mus&#x27;d a ſpace, (So hard it is to quench affections fires) Shall I disfigure that Angelike face, And cloud thoſe beauties which the world admires? Shall ſhe by me be to confuſion brought, To whom I vows, and prayers did impart? To whom I ſacrifiz&#x27;d each ſecret thought, And on her beauties altar burn&#x27;d my heart? Or ſhall I ſee her in anothers pow&#x27;r, And in his boſome laid, upbraid my loſſe, Whil&#x27;ſt both with ſcornfull ſmiles; then death more ſowre, To point me out for ſport, report my croſſe? That ſight which ſometime did me ſweetly charme, Should it become a cauſe of griefe to me? No, none who live ſhall glory in my harme, Since ſhe will not be mine, ſhe ſhall not be. The hatefull love having vow&#x27;d her death, Did with a cup of poyſon drowne my joyes; The faireſt body from the ſweeteſt breath Was parted thus (O ocean of annoyes!) That Monſter Fame, whoſe many mouthes and eares Muſt know, but not conceale a rare thing long, And prodigall of ill, moſt chiefly beares The worſt news firſt, inform&#x27;d me of this wrong: For neighbouring neare the moſt unhappy part, That had beene ſpoyl&#x27;d of ſuch a noble gueſt, As death had hers, the furies ſeiz&#x27;d my heart, Whoſe paine did ſpring from that which bred her reſt; How huge a weight did firſt confound my ſoule No tongue can tell; it ſtill my minde torments, Rage did of griefe the outward ſignes controll: &quot;When great windes blow the fire, the ſmoak worſt vents; Whil&#x27;ſt generous furie did diſguiſe my griefe, I ranne tranſported with a mighty rage, Bent (by revenge, or death to get relife) A tragicke actor for a bloudy ſtage: For I was come no ſooner to the place, Whereas I thought the Murtherer to have found, But I did meet (O ruine and diſgrace!) Too deare a friend to catch and enemies wound; Ah! paſſions dimn&#x27;d mine eyes, wrath led my hand, I was no more my ſelfe, Griefe had me kill&#x27;d; The firſt by Night, who did before me ſtand, (As one whoſe breaſt with rage Alecto fill&#x27;d) By chance encount&#x27;ring, ere he ſpake a word, I bath&#x27;d his boſome with a crimſon floud, And in his breaſt did drowne the cruell ſword, That in anothers body drank my bloud; But when a Torch had partly rob&#x27;d the night, Proud of ſuppoſ&#x27;d revenge (ah bitter gaine) I ſaw, I knew, black knowledge, cruell ſight, My brother was the man, whom I had ſlaine; O bitter loſſe, which nothing can repaire! My ſoule with tow ſuch monſtrous deeds annoy&#x27;d, Griefe, rage, ſpite, ſhame, amazement, and deſpaire, Gall&#x27;d, toſſ&#x27;d, burn&#x27;d, daſh&#x27;d, aſtoniſh&#x27;d, and deſtroy&#x27;d; The thought of my offence doth grieve me moſt, Yet am I ſometime by loves verdict cleanſ&#x27;d; And ſtraight my brothers violated ghoſt, By dreadfull dreames doth bragge to be reveng&#x27;d. He having heard this lamentable ſtirre, Who ſelf-accuſing thoughts convicted ſoone, Straight (wounded by a wonderfull remorſe) Led by mad love, or deſp&#x27;rate feare to death, He bent to follow her, or dreading worſe, (Stab&#x27;d by himſelfe) dy&#x27;d to defraud my wrath. No wonder (Sir) though by all means you ſtrive, From dangerous actions Atis to reſtraine. I never ſhall thoſe courteſies neglect: It grieves me not to thinke, nor heare the ſame, For whilſt this ſprite thoſe members doth direct, All ſhall concurre to celebrate your fame; Yet were you pleas&#x27;d, I would not hence depart, Who doe all things that mirth may move abhorre, But with my paſſions here (retir&#x27;d a part) Woe paſt would waile, and ſhunne all cauſe of more; If to converſe where not one croſſe annoies, I feare my fellowſhip infect with woe, Thoſe who themſelves would recreate with Ioyes ▪ Still ſtrange miſhaps attend me where I goe, But ſince you will commit this charge to mee, Your Majeſtie I&#x27;le ſtudie to content, At leaſt my faith ſhall from defects be free, And all my paines ſhall as you pleaſe be ſpent.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Croesus</div><div class="body">Solon visits Croesus, hoping to persuade him to give up his immoderate love of gold and think about less transitory things. He explains that all mortality is subject to change, and tells Croesus stories about the importance of posthumous fame, but Croesus considers them irrelevant to his situation as a king. Solon realizes that Croesus wili change only by losing the power which has made him arrogant. Adrastus is banished from Phrygia after accidentally killing his brother. (His intended victim was the man who poisoned his girlfriend.) Croesus has a nightmare about the death of his son Atys, and becomes excessively protective: he makes Atys marry in order to secure the succession, appoints him a bodyguard, and bans the type of sharp implement which caused his death in the dream. Mysia is ravaged by a wild boar, and its people appeal to Croesus for help. He is happy to hear that they don’t want his money, but distressed that they ask instead that he send Atys to hunt the boar. Atys protests at his father’s reluctance, so Croesus accedes, assigning Adrastus to look after him during the mission. Atys is killed, and Adrastus kills himself in remorse. In the past, Astyages, King of Media and Croesus’ brother-in-law, was perturbed by a prophecy that he would be deposed by his grandson. When the child was born, he tried to have it killed; but the herdsman who was given the job spared its life and adopted it as a replacement for his own stillborn baby. During his youth, Cyrus’ princely behaviour led to his identification. Astyages served Harpagus a banquet of his own son’s flesh, so Harpagus contacted Cyrus and raised a rebellion. Now Cyrus has led the Persian army to depose Astyages. Against his counsellor’s advice, Croesus plans to intervene and conquer Persia, but Cyrus anticipates him and attacks pre-emptively, ordering that Croesus be taken alive. Croesus is nearly killed by a Persian soldier, but saved when his dumb son cries out and identifies him. Cyrus intends to burn him at the stake, but is impressed by Croesus’ acknowledgement that Solon was right to warn him not to trust in worldly things. Cyrus frees him, and orders restraint in his soldiers’ looting.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> page.
+</div>
+</div></body></html>

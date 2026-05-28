@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LUCE in The Knight of the Burning Pestle · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LUCE</span>
+</nav>
+
+<h1>LUCE</h1>
+<p class="lede">in <em>The Knight of the Burning Pestle</em> — Beaumont, Francis</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1613</td></tr>
+<tr><th>Words</th><td>1122</td></tr>
+<tr><th>Characters</th><td>5827</td></tr>
+<tr><th>BritDrama no.</th><td>1562</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">depart a little, whilst I take My leaue of this dead man, that once I lou&#x27;d: Hold, yet a little, life and then I giue thee To thy first heauenly being; O my friend! Hast thou deceiu&#x27;d me thus, and got before me? I shall not long <mark>bee</mark> after, but beleeue me, Thou wert too cruell Iasper gainst thy selfe, In punishing the fault, I could</div>
+<div class="excerpt">shall not long <mark>bee</mark> after, but beleeue me, Thou wert too cruell Iasper gainst thy selfe, In punishing the fault, I could haue pardoned, With so vntimely death; thou didst not wrong me, But euer wer&#x27;t most kind, most true, most louing; And I the most vnkind, most false, most cruell. Didst thou but aske a teare? Il&#x27;e giue thee all,</div>
+<div class="excerpt">Princes power. Yes and loue him deerly Euen as I loue an ague, or foule weather, I prethee Iasper feare him not. Yes, and will performe My part exactly. I take it, He <mark>must</mark> do miracles makes me forsake it. Sir, these are quickely answered. What makes you thinke of that sir? Your game sir. Beshrew me sir, I am sorry for your losses,</div>
+<div class="excerpt">fathers grant, get his consent, And then you may with assurance try me. Sweete Maister Humfrey then I am content. Yet take me with you, There is another clause <mark>must</mark> be annext, And this it is, I swore and will performe it; No man shall euer ioy me as his wife But he that stole me hence, if you dare venter I am yours; you need</div>
+<div class="excerpt">stole me hence, if you dare venter I am yours; you need not feare, my father loues you, If not farewell for euer. I am satisfied, And so I giue my hand, our course <mark>must</mark> lie Through Waltham Forrest, where I haue a friend Will entertaine vs, so fare-well sir Humfrey, And thinke vpon your businesse. O feare not Maister Humphrey, I</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Why, how now friend, struck with my fathers thun der? But mine. O feare me not, In this I dare be better then a woman. Nor shall his anger, nor his offers moue me, Were they both equall to a Princes power. Yes and loue him deerly Euen as I loue an ague, or foule weather, I prethee Iasper feare him not. Yes, and will performe My part exactly. I take it, He must do miracles makes me forsake it. Sir, these are quickely answered. What makes you thinke of that sir? Your game sir. Beshrew me sir, I am sorry for your losses, But as the prouerbe saies, I cannot cry, I would you had not seene me. Why, cannot this strange passion be withstood, Send for a Constable and raise the Towne. Beshrew me sir, &#x27;twere good I yeelded then, Weake women cannot hope, where valiant men Haue no resistance. Well sir, I take them kindly, and I thanke you, What would you more? Why then fare-well. Speake and declare your minde in termes so briefe. Alas good Gentleman, alas the day. Now by S. Mary That were great pitty. Why sir, you know my will is nothing worth Without my fathers grant, get his consent, And then you may with assurance try me. Sweete Maister Humfrey then I am content. Yet take me with you, There is another clause must be annext, And this it is, I swore and will performe it; No man shall euer ioy me as his wife But he that stole me hence, if you dare venter I am yours; you need not feare, my father loues you, If not farewell for euer. I am satisfied, And so I giue my hand, our course must lie Through Waltham Forrest, where I haue a friend Will entertaine vs, so fare-well sir Humfrey, And thinke vpon your businesse. O feare not Maister Humphrey, I am guide For this place good enough. Faith and you say the word we&#x27;le e&#x27;ne sit downe And take a nap. You&#x27;re merrie Maister Humphrey. Your nurce had the lesse labour. Heere Iasper. Alas poore Humphrie Get thee some wholsome broth with sage and comfrie: A little oile of Roses and a feather, To noint thy backe withall. Fare-well my prettie Nump, I am verie sorrie I cannot beare thee companie. No my best friend, I cannot either feare, Or entertaine a weary thought, whilst you (The end of all my full desires) stand by me. Let them that loose their hopes, and liue to languish Amongst the number of forsaken louers, Tell the long weary steps, and number time, Start at a shadow, and shrinke vp their bloud, Whilst I (possest with all content and quiet) Thus take my prettie loue, and thus imbrace him. I cannot sleepe, Indeed I cannot friend. Il&#x27;e sing, or say, or any thing but sleepe. You mocke me Iasper. &#x27;Tis a lightning from aboue, &#x27;Tis an arrow, &#x27;tis a fire, &#x27;Tis a boy they call desire. &#x27;Tis a smile Doth beguile Some loue change, and so do you. Yes, when men turne with the winde. Euer toward, Those that loue, to loue a new. I am very heauy. Why do you fright me, friend, With those distempered lookes? what makes your sword Drawne in your hand? who hath offended you? I pre&#x27;chee Iasper sleepe, thou art wilde with watching. Oh Iasper! How haue my tender yeares committed euill, (Especially against the man I loue) Thus to be cropt vntimely? Oh Iasper! be not cruell, If thou wilt kill me, mile and do it quickly. And let not many deaths appeare before me. I am a woman made of feare and loue, A weake, weake woman, kill not with thy eyes, They shoot me through and through. Strike I am ready, And dying stil I loue thee. If there be any punishment inflicted Vpon the miserable, more then yet I feele, Let it together ceaze me, and at once Presse downe my soule, I cannot beare the paine Of these delaying tortures: thou than art The end of all, and the sweete rest of all; Come, come ô death, bring me to thy peace, And blot out all the memory I nourish Both of my father and my cruell friend. O wretched maide still liuing to be wretched, To be a say to fortune in her changes, And grow to number times and woes together, How happy had I bene, if being borne My graue had bene my cradle? For me I hop&#x27;t &#x27;tis come, and &#x27;tis most welcome. He shall haue many: Good friends depart a little, whilst I take My leaue of this dead man, that once I lou&#x27;d: Hold, yet a little, life and then I giue thee To thy first heauenly being; O my friend! Hast thou deceiu&#x27;d me thus, and got before me? I shall not long bee after, but beleeue me, Thou wert too cruell Iasper gainst thy selfe, In punishing the fault, I could haue pardoned, With so vntimely death; thou didst not wrong me, But euer wer&#x27;t most kind, most true, most louing; And I the most vnkind, most false, most cruell. Didst thou but aske a teare? Il&#x27;e giue thee all, Euen all my eies can powre downe, all my sigh&#x27;s And all my selfe, before thou goest from me There are but sparing rites: But if thy soule Be yet about this place, and can behold And see what I prepare to decke thee with, It shall go vp, borne on the wings of peace And satisfied: first will I sing thy dirge, Then kisse thy pale lips, and then die my selfe, And fill one Coffin and one graue together. Come you whose loues are dead, And whiles I sing Weepe and wring Euery hand and euery head, Bind with Cipres and sad Ewe, Ribands blacke, and candles blew, For him that was of men most true. Come with heauy mourning, And on his graue Let him haue Sacrifice of sighes and groaning, Let him haue faire flowers enow, White and purple, greene and yellow, For him that was of men most true. Thou sable cloth, sed couer of my ioies I lift thee vp, and thus I meete with death. Saue me heauen. O thou deere shadow of my friend. This death I&#x27;le giue you for it, So, now I am satisfied: you are no spirit, But my owne truest, truest, truest friend, VVhy doe you come thus to mee. It cannot bee, For I am lockt vp here and watcht at all howers, That &#x27;tis impossible for me to scape. Good M r . Merri-thought let mee entreat you, I will not be denied.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Knight of the Burning Pestle</div><div class="body">At the theatre, a citizen and his wife object to the satirical subject matter of the play, The London Merchant: they insist on a more romantic offering starring their apprentice, Rafe, as a heroic grocer. The boy actors do their best to provide this within the play they have rehearsed. In the play, Luce prefers her father Venturewell’s apprentice Jasper to his chosen son-in-law, Humphrey; so Venturewell discharges Jasper, and he goes home to a family impoverished by the irresponsible merriment of his father, Old Merrythought. His mother, who 1607 favours his younger brother Michael, insists that he be paid his inheritance and sent out into the world. Several of the characters go to Waltham Forest. Luce elopes with Humphrey, intending to meet Jasper there. Rafe the grocer, a voluminous reader of chivalric romance, becomes the Knight of the Burning Pestle and leaves in search of heroic deeds. He scares Mistress Merrythought, who leaves behind her jewels. These are found and taken away by Jasper, who then meets the eloping couple, beats Humphrey, and takes Luce. In the audience, the citizen and his wife take Jasper to be the villain and Humphrey the hero; they demand that Rafe return to fight Jasper, but Jasper beats him. Notified by Humphrey, Venturewell confronts Jasper’s father, but is offended by his refusal to take the matter seriously. Jasper tests Luce’s love by threatening her with violence. She accepts her fate, but Humphrey and her father seize her before he can admit he was only pretending. Rafe stays at the Bell inn, but cannot understand that he must pay for its hospitality. (The citizen settles the bill for him.) The host sends him to fight the giant Barbaroso, better known as Nick the barber, who has imprisoned many knights and ladies — actually clients and venereal disease patients. Rafe defeats the ‘giant’ and releases the ‘knights’. The citizens then have a scene inserted in which he meets a foreign king’s daughter, but refuses her offer oflove. Later interpolated scenes show Rafe as the city’s May Lord, and mustering troops at Mile End. Venturewell incarcerates Luce in her room, but Jasper gains access by pretending to be dead: Venturewell accedes to a request that his body should be brought to Luce, and then has the coffin sent on to Old Merrythought, unaware that Luce has taken Jasper’s place inside. Left behind in Luce’s room, Jasper appears to Venturewell in ghostly guise and instructs him to repent, compensate Old Merrythought for his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

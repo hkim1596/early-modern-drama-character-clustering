@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FER in 593 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_09.html">Cluster 9 — 9: lapirus, bloud, niniuie</a> ›
+  <span>FER</span>
+</nav>
+
+<h1>FER</h1>
+<p class="lede">in <em>593</em> — [152]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1640</td></tr>
+<tr><th>Words</th><td>608</td></tr>
+<tr><th>Characters</th><td>3280</td></tr>
+<tr><th>BritDrama no.</th><td>593</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 9 (<em>lapirus, bloud, niniuie, radagon, love, death…</em>). Matches are highlighted.</p>
+<div class="excerpt">yet do me as great a curtesie As dying comes too, if his error hold, And the Kings anger. How&#x27;s that? <mark>Deare</mark> father. We owe Archimagus for more then life For your loves, without which, life is a curse. My life is going from me. But why have we so long Delay&#x27;d our blest enjoyings, thus content With words, the shaddowes of our happinesse.</div>
+<div class="excerpt">enjoyings, thus content With words, the shaddowes of our happinesse. Where&#x27;s Rodamant? The doore is safe; come, my <mark>deare</mark> princely Mistresse, And with the crowne of <mark>love</mark> reward your servant. Fruition of our joyes. Where, Madam? Than mine? here&#x27;s none, try it agen: Why should her constitution be so cold? I would not lose more opportunities,</div>
+<div class="excerpt">that 〈◊〉 . Agen. I prethee leave this fooling with my face, I shall be angrie. Rodamant. Teare off these antick habits quickly, brother, Doe you the same. More <mark>bloud</mark> upon our faces. Oh, my Fedella, something may preserve us To meet agen: Endarius, so, so: open. Oh do not pull more wrath from heaven upon you. <mark>Love</mark> innocence,</div>
+<div class="excerpt">servant. Fruition of our joyes. Where, Madam? Than mine? here&#x27;s none, try it agen: Why should her constitution be so cold? I would not lose more opportunities, <mark>Love</mark>, shoot a flame like mine into her bosome. Oh, I could dwell for ever in this bosome, Rod. puls Fer. by the nose. But is there nothing else for us to taste? Hold.</div>
+<div class="excerpt">nothing else for us to taste? Hold. Something has almost torne away my nose. Endarius? Did you pull me by the nose? Wonot that prompt you to something else? Mine? <mark>Bloud</mark>; I felt something that like a flie Glanc&#x27;d o&#x27;my cheeke: Brother, your nose bl … d you that 〈◊〉 . Agen. I prethee leave this fooling with my face, I shall be angrie.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Mighty Priest, as you Respect the safety of the King, you must Make haste, the Court is up in armes, and he Calls for his sword. His owne wilde thoughts, and apprehension Of what, he sayes, was in his sleepe presented, He calls upon his Guard, and railes upon &#x27;em, When they appeare with no more armes, and swearos That every man shall weare a Tun of Iron. You will finde Ilands Peopled with Squirrils, Rate, and Crowes, and 〈◊〉 , Where you may better plant, my reverend Moles. I am his eldest son, he shall find me reasonable, He may doe worse, considering how long I have been of age. He is well agen. He may yet do me as great a curtesie As dying comes too, if his error hold, And the Kings anger. How&#x27;s that? Deare father. We owe Archimagus for more then life For your loves, without which, life is a curse. My life is going from me. But why have we so long Delay&#x27;d our blest enjoyings, thus content With words, the shaddowes of our happinesse. Where&#x27;s Rodamant? The doore is safe; come, my deare princely Mistresse, And with the crowne of love reward your servant. Fruition of our joyes. Where, Madam? Than mine? here&#x27;s none, try it agen: Why should her constitution be so cold? I would not lose more opportunities, Love, shoot a flame like mine into her bosome. Oh, I could dwell for ever in this bosome, Rod. puls Fer. by the nose. But is there nothing else for us to taste? Hold. Something has almost torne away my nose. Endarius? Did you pull me by the nose? Wonot that prompt you to something else? Mine? Bloud; I felt something that like a flie Glanc&#x27;d o&#x27;my cheeke: Brother, your nose bl … d you that 〈◊〉 . Agen. I prethee leave this fooling with my face, I shall be angrie. Rodamant. Teare off these antick habits quickly, brother, Doe you the same. More bloud upon our faces. Oh, my Fedella, something may preserve us To meet agen: Endarius, so, so: open. Oh do not pull more wrath from heaven upon you. Love innocence, the gods have thus reveng&#x27;d In your sonnes tragedy: Draw not a greater Vp on your self and this faire Iland, by Threatning the temples, and the gods themselves, Looke on them still with humble reverence, Or greater punishments remaine for you To suffer; and our ghosts shall never leave To fright thy conscience, and with thousand stings Afflict thy soule to madnesse and despaire: Be patient yet and prosper, and let fall Thy anger on the Christians, that else Will poyson thy faire kingdome. Where are we yet Endarius? And we are lost, our feare to die i&#x27;th sight Of men, hath brought us hither with our blood To quench the thirst of wolves: Or worse, to starve. Now that lust is punish&#x27;d, Which fed our hope, if we had staid i&#x27;th Temple To have polluted it, with foule embraces: How wearinesse, with travell, and some fasting Will tame the flesh. Take heede, It may be a Lion, or a fierce wolves den; How nature trembles at the thought of death: Though it be prest downe, with the weight of life. The worst is welcome, with our clamor, rouse What ever doth inhabite here, or man Or beast appeare, if any such dwell in This Cave? We can meet charity or death. We are no spirits, but your living sons, Preserv&#x27;d without the knowledge of the King, By Archimagus, till a new mis-fortune Compell d us hither to meet death, we feare, In want of food.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 593</div><div class="body">public office. Araspas argues that reason should be the</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_09.html">Cluster 9 — 9: lapirus, bloud, niniuie</a> page.
+</div>
+</div></body></html>

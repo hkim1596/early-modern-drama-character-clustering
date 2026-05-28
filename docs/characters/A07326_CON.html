@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CON in The Heir · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>CON</span>
+</nav>
+
+<h1>CON</h1>
+<p class="lede">in <em>The Heir</em> — May, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1622</td></tr>
+<tr><th>Words</th><td>571</td></tr>
+<tr><th>Characters</th><td>2963</td></tr>
+<tr><th>BritDrama no.</th><td>1943</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">you, I cannot now deny what I have ſaid You ouer heard me, I poiſoned Eugenio ſonne to Lord Polimetes. Let him alone, the law Shall puniſh him, but ſirra where <mark>did</mark> you poiſon Him. But ſirrah who ſet you a worke Confeſſe, I ſhall finde out the whole ne of there Rogues, ſpeake. Oh lying Raſcall. <mark>Away</mark> with him, Ile <mark>heare</mark> no more,</div>
+<div class="excerpt">Raſcall. <mark>Away</mark> with him, Ile <mark>heare</mark> no more, remit him to Priſon; Sirrah, you ſhall <mark>heare</mark> of theſe things To morrow, where you would be loath to <mark>heare</mark> vm. Come lets <mark>goe</mark>. exeunt. murder. No maſter Conſtable, twas but poiſoning of a man. 〈…〉 a foole. 〈…〉 for euer, all will out. What proofes haue you againſt him? His owne profeſſion</div>
+<div class="excerpt">againſt him? His owne profeſſion if it pleaſe your honor. And 〈…〉 ill profeſſion, to be a murderer, thou 〈…〉 <mark>has</mark> confe the fact. Yes my Lord, hee cannot deny it. <mark>Did</mark> he not name the party who it was that he had 〈…〉 marry with reuerance be it ſpoken. 〈…〉 my Lord Polimetes his ſonne. How&#x27;s this Ile leaue the fell on with your</div>
+<div class="excerpt">care to be apprehended, As others doe to ſcape the watch, I muſt ſpeake To be ouerheard, and plainly too, or els theſe dolts Will neuer conceiue mee. Harke who goes by? How, conſcience talkes hee of, He&#x27;s an honeſt man, I warant him, let him paſſe How made me poiſon him, he&#x27;s a knaue I warrant him. I warant you a knaue cannot</div>
+<div class="excerpt">〈…〉 marry with reuerance be it ſpoken. 〈…〉 my Lord Polimetes his ſonne. How&#x27;s this Ile leaue the fell on with your Lordſhip. Murder I ſee will out. exit Con. Why didſt thou poiſon him.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Come fellow watchmen, for now you are my fellowes, I do it to encourage you in your office, it is a tricke that we commanders haue, your great Captains call your ſouldiers fellow ſouldiers to encourage them. Well I muſt ſhew now what you haue to do, for I my ſelfe before I came to this prefermity, was as ſimple as one of you, and for your better deſtruction, I will deride my ſpeech into two parts. Firſt, what is a watchman. Se condly, what is the office of a watchman. For the firſt, fany man aske me what is a watchman, I may anſwer him, he is a man as others are, nay a tradeſman, as a Vintner, a Tayler, or the like, for they haue long bils. For the ſecond, what is his office; I anſwer, he may by vertue of his office reprehend any perſon, or perſons, that w lke the ſtreets too late at a ſeaſonable houre. Nay, if you meet any of thoſe rogues at ſeaſonable houres, you may by vertue of your office commit him to priſon, and then aske him whither he was going. True, my Lord Maior can doe no more then you in that point. Why if he do reſiſt, you may knocke him downe, and then id him ſtand, and come afore the Conſtable. So 〈…〉 you are ſufficiently cnſtructed concerning you office take your ſtands, you ſhall heare rogues wal king at theſe ſeaſonable houres, I warrant you, ſtand cloſe. Purpoſe, now doe I take as much care to be apprehended, As others doe to ſcape the watch, I muſt ſpeake To be ouerheard, and plainly too, or els theſe dolts Will neuer conceiue mee. Harke who goes by? How, conſcience talkes hee of, He&#x27;s an honeſt man, I warant him, let him paſſe How made me poiſon him, he&#x27;s a knaue I warrant him. I warant you a knaue cannot paſſe me, go reprehend him, Ile take his excommunication my ſelfe. Sirrah, ſirrah, you would haue ſcap&#x27;d Would you, no ſirrah you ſhall know the Kings Officers haue eyes to heare ſuch roagues as you, Come ſirrah, confeſſe who it was you poiſon&#x27;d, he Lookes like a notable roague. You would deny it Would you ſirra, we ſhall ſift you, I cannot now deny what I have ſaid You ouer heard me, I poiſoned Eugenio ſonne to Lord Polimetes. Let him alone, the law Shall puniſh him, but ſirra where did you poiſon Him. But ſirrah who ſet you a worke Confeſſe, I ſhall finde out the whole ne of there Rogues, ſpeake. Oh lying Raſcall. Away with him, Ile heare no more, remit him to Priſon; Sirrah, you ſhall heare of theſe things To morrow, where you would be loath to heare vm. Come lets goe. exeunt. murder. No maſter Conſtable, twas but poiſoning of a man. 〈…〉 a foole. 〈…〉 for euer, all will out. What proofes haue you againſt him? His owne profeſſion if it pleaſe your honor. And 〈…〉 ill profeſſion, to be a murderer, thou 〈…〉 has confe the fact. Yes my Lord, hee cannot deny it. Did he not name the party who it was that he had 〈…〉 marry with reuerance be it ſpoken. 〈…〉 my Lord Polimetes his ſonne. How&#x27;s this Ile leaue the fell on with your Lordſhip. Murder I ſee will out. exit Con. Why didſt thou poiſon him.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Heir</div><div class="body">In order to facilitate a marriage between his daughter Leucothoe and the wealthy Count Virro, Polymetes has the rumour put about that his son Eugenio has died during a trip overseas, which means that Leucothoe is now his heir. Among her many other admirers is Philocles, the son of Polymetes’ enemy, Euphues; he is barred from direct access to her, but is able to see her through the window of his friend Clerimont’s lodgings, next door to Polymetes’ house. He overhears her admitting that she does not love Virro, who is too old for her, but has fallen in love with a young man she saw riding in the street: Philocles. He throws a letter to her, and she plans an assignation with him in her father’s absence. Eugenio returns home disguised as the scholar Irus, but Polymetes seems less interested in the news of his son’s survival than that the rumour of his death should not be contradicted. Polymetes learns of Philocles’ assignation with Leucothoe; he and ‘Irus’ eavesdrop on it and hear the lovers plan to elope, even though stealing an heiress is a capital crime. Approving of his sister’s choice, Eugenio tells Virro that he will be marrying Leucothoe under false pretences, since the true heir is still alive; but Virro’s response is to hire ‘Irus’ to poison Eugenio. Polymetes catches Philocles and Leucothoe in the act of elopement, and Euphues’ attempts to secure a pardon are fruitless. Leucothoe’s pleading has more effect on the King, but only because he is attracted to her: he swears not to issue a pardon unless she has sex with him. When she adamantly refuses, the King tries to find a way out of his oath, but the papal price list for exemptions disgusts him and there is no legal loophole. At the trial, Philocles pleads guilty and is sentenced to death; Leucothoe declares her determination to die with him. ‘Irus’ is produced in court, having contrived to get himself arrested for murdering Eugenio; both he and Virro are also sentenced to death. ‘Irus’ gets Polymetes to declare in open court that, as things stand, he would allow Leucothoe to marry Philocles after all, if he were available. Then he reveals himself to be Eugenio: no murder has been committed, and no heiress stolen, so the death sentences are all quashed. In the sub-plot, Francisco has got Luce pregnant, and offers to make amends by marrying her; but her father Franklin intends her instead for the rich, foolish Shallow. Shallow is persuaded that he himself is responsible for her condition, and that,…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

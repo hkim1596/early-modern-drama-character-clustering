@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TIM in Cupid&#x27;s Revenge · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>TIM</span>
+</nav>
+
+<h1>TIM</h1>
+<p class="lede">in <em>Cupid&#x27;s Revenge</em> — Beaumont, FrancisFletcher, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1615</td></tr>
+<tr><th>Words</th><td>977</td></tr>
+<tr><th>Characters</th><td>4994</td></tr>
+<tr><th>BritDrama no.</th><td>1533</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">full of dangerous whispers. By no means Syr, rather make more your loue, And hold your fauour to him: for tis now Impossible to yoke him, if his thoughts, As I <mark>must</mark> nere belieue, run with their rages, Hee neuer was so innocent, but what reason His grace <mark>has</mark> to with draw his loue from mee And other good men that are neert your</div>
+<div class="excerpt">hold my life, I could boult him in an houre: O but since, his Taylor came, and they haue fallen out about the fashion on&#x27;s cloathes: and yon ders a fellow come, <mark>has</mark> board a hole in&#x27;s eare; and he <mark>has</mark> bespake a Vauting-horse, you shall see him come foorth presently: hee lookes like Winter, stucke here and there with fresh flowers.</div>
+<div class="excerpt">I could guesse, but you shall pardon me: hee will take me along with him some whither. Sir. Yes faith, tis such a one as the rest of the yong Gallants weare. He <mark>has</mark> not bene drest this twenty yeares then, If this vaine holde but a weeke, hee will learne to play oth base violl and sing too&#x27;t: Hees poeticall alreadie; For I haue</div>
+<div class="excerpt">dead, hees dead, and I am following. Hee will be sir, and the gray Barbary, they are fiery both. In deed her Age lyes not in her mouth: nere looke it there Syr she <mark>has</mark> a better register, if it be not burnt. Fourteen of your owne, &amp; some three fingers. Before the gods, your grace looks like AEncaes. You doe not know what tis to</div>
+<div class="excerpt">so innocent, but what reason His grace <mark>has</mark> to with draw his loue from mee And other good men that are neert your person I cannot yet finde out: I know my duety <mark>Has</mark> euer bene attending. Madame ti&#x27;s done. Yes Madame they are heere: I waite a fur ther seruice. No I haue it. No Syr: Hee is not to blame; If I were as I was. Faith</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Your Lordships wondrous witty, very plea sant, beleeue&#x27;t. They haue good eyes then. Ile hold my life, I could boult him in an houre: O but since, his Taylor came, and they haue fallen out about the fashion on&#x27;s cloathes: and yon ders a fellow come, has board a hole in&#x27;s eare; and he has bespake a Vauting-horse, you shall see him come foorth presently: hee lookes like Winter, stucke here and there with fresh flowers. I thinke he will. I know not: but by this light I thinke hee is in loue; he wou&#x27;d ha bin shau&#x27;d but for me. I could guesse, but you shall pardon me: hee will take me along with him some whither. Sir. Yes faith, tis such a one as the rest of the yong Gallants weare. He has not bene drest this twenty yeares then, If this vaine holde but a weeke, hee will learne to play oth base violl and sing too&#x27;t: Hees poeticall alreadie; For I haue spyde a Sonnet ons making lye by&#x27;s beddes side, Ile be so vnmannerly to reade it. Hees dead, hees dead, and I am following. Hee will be sir, and the gray Barbary, they are fiery both. In deed her Age lyes not in her mouth: nere looke it there Syr she has a better register, if it be not burnt. Fourteen of your owne, &amp; some three fingers. Before the gods, your grace looks like AEncaes. You doe not know what tis to be a Queene, Goe to your Maide, else what the olde man falls short of, theres others can eech out, when you please to call on em. Sir, your Highnes is welcome home, the Duke and Queene will presently come foorth to you. Faith reasonable. How many Townes haue you taken in this Summer? A number. &#x27;pray how is the prouince setled? I thinke you mocke me my Lord. I shall bend my seruice vnto your Highnes. Goodnes attend your Honours. The Dutchesse, whose humble Seruant I am prou&#x27;de to be, would speake with you. An houre hence my good Lords, and so I leaue my seruice. I left him now Syr. How I like him? But you take me wrong: All I know by him I dare deliuer boldly: He is the store-house And head of vertue: your great selfe excepted That feeds the Kingdome. Syr, I cannot, If there bee any, sure they are the times which I could wish lesse dangerous. But pardon me, I am too bolde. For Syr if you consider How like a Sunne in all his great employments, How full of heate. And then at his returne Talke and prate, as their ignoant rages leades em, without Allegeance or Religion. For Heauens sake haue a care of your owne person, I cannot tell, theyr wickednes may leade Farther then I dare thinke yet. Yet the prince, for who this is pretended may Perswadeem, &amp;c no doubt will, vertue is euer watchfull But be you still secur&#x27;de and comforted. Braue Gentl: that such a madding loue shuld sollow thee, to robbe thee of a Father: All the Court is full of dangerous whispers. By no means Syr, rather make more your loue, And hold your fauour to him: for tis now Impossible to yoke him, if his thoughts, As I must nere belieue, run with their rages, Hee neuer was so innocent, but what reason His grace has to with draw his loue from mee And other good men that are neert your person I cannot yet finde out: I know my duety Has euer bene attending. Madame ti&#x27;s done. Yes Madame they are heere: I waite a fur ther seruice. No I haue it. No Syr: Hee is not to blame; If I were as I was. Faith Syr, I am ashamed to speake before you, My conscience tells me I haue iniurd you, And by the earnest instigation, Of others haue not done you to the King All wayes the best and friendliest offices, Which pardon mee, or I will neuer speake. Your mother sure is naught O noble Syr, your honest eyes perceiue not The dangers you are led to shame vpon her, And what fell miseries the gods can thinke on Shewe downe vpon her wicked head, she has plotted, I know too well your death: would my poore life Or thousand such as mine is might be offered Like sacrifices vp for your presuming, What free oblations would she haue to glut her, But shee is mercilesse, and bent to ruine, If Heauen and good men steppe not to your reskue, And timely, very timely, O this Duke dome! I weepe, I weepe for the poore Orphanes ith Countrey Left with but Friends; or parents. Treason, treason. Tis done. Or I would weeepe out mine eyes. Faith shees gone: theres a Letter I found it in her pocket, would I were with her, shees a hansome Lady, a plague vpon my bashfulnes, I had bobd her longagoe else. Whither Madame? What shall I doe there? I haue done too much mischiefe to be beleeued againe, or indeede, to scape with my head on my backe if I be once knowne. Sure I shall neuer walke when I am dead. I haue no spirit Madame, Ile bee drunke but Ile doe it, thats all my refuge. I come to you (for if I not mistake, you are the Prince ) from that most Noble Lord Ismenus with a Letter. His Letters speake him sir — O pardon me, know you me now sir? Tis true sir, pardon me. I am not guilty sir. I doe beseech you sir let me not fight. O spare me sir, I am not fit for death. Of none. I would hane tane your Page, and maried her. Your boy there. — Dyes.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Cupid&#x27;s Revenge</div><div class="body">Leontius, King of Lycia, promises his daughter Hydaspes anything she asks for on her birthday. She wants him to ban the cult of Cupid in Lycia: the god’s naked statues are to be taken down and burnt, and Cupid-worship to be made a capital offence. Leontius agrees, persuaded that the religion is the cause of national immorality. His nephew Ismenus demurs: he will promulgate the Duke’s orders, but will himself take no hand in obeying them. As his temples are dismantled, Cupid declares vengeance on the kingdom. The Lycian royal family begins to behave with inappropriate amorousness. Hydaspes fixates on Zoilus, a deformed dwarf, and asks to be allowed to marry him; her father’s response is to have him beheaded, and she pines to death. Prince Leucippus falls for Bacha, a strumpet only interested in his wealth and power, but, questioned by his father, denies sexual misbehaviour and praises her virtue and chastity. Leontius is so impressed that he sends Leucippus away ===== PAGE 378 ===== and woos Bacha for himself, affecting youthful clothing and behaviour. Bacha becomes Queen of Lycia. When Leucippus returns to court, Bacha tries to seduce him again. He refuses to cuckold his father, and, annoyed at his refusal, she plots his death; this will leave her daughter Urania as the only heir to the throne. She makes Leontius jealous of his son’s popularity with the people and courtiers, and persuades him that Leucippus is plotting his assassination. The court parasite Timantus tells Leucippus that the King is to discuss his arrest at a council, and arranges to place him where he can eavesdrop and be forewarned of the charges. It is a ruse: Leucippus is arrested and sentenced to death, and Urania is proclaimed heir to the throne. At the execution, the citizens rise in rebellion and rescue the Prince from the scaffold. As Leontius sickens, Bacha schemes to marry Urania to a foreign prince; but she is in love with Leucippus, locates him through the good offices of Ismenus, and follows him posing as a page. Bacha engages Timantus to murder Leucippus. He finds the Prince by intercepting a letter from Ismenus; but his attack fails when Urania interposes her own body and is mortally wounded. Timantus is killed, but reveals her true identity before he dies. Ismenus brings Leucippus news that Leontius is dead. He declares that he will leave Bacha to heaven’s justice, but she stabs him. He dies, bequeathing the throne to Ismenus and enjoining him to reinstate the cult and…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

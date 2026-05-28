@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HIP in Love&#x27;s Cruelty · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>HIP</span>
+</nav>
+
+<h1>HIP</h1>
+<p class="lede">in <em>Love&#x27;s Cruelty</em> — Shirley, James</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1640</td></tr>
+<tr><th>Words</th><td>1477</td></tr>
+<tr><th>Characters</th><td>7657</td></tr>
+<tr><th>BritDrama no.</th><td>2349</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">new come to Court, in the high way to fall too, if any thing will doot, the Duke <mark>has</mark> taken a course to take in her Maiden towns. No faith, I cannot properly say I <mark>did</mark> ever love her, she was too honest, if she have praid since, she <mark>has</mark> beene sorry for loving me so well,—she was too wise to be a whoore, and I was not so much a</div>
+<div class="excerpt">to tell the Duke he <mark>has</mark> done ill To court thee sinfully Enter Duke. That title Will be aboue all honors the Duke can Let fall upon me, that I have beene wild I <mark>must</mark> with shame remember, but my study Of after life to her and all the world I hope shall purchase thee a better name. I shall returne, excuse me a few minutes. It</div>
+<div class="excerpt">a solescisme, tis more honorable to be a peepe out, then stand at a single game, tis neither Courtly nor fashionable, and whats be come of her wise brother? He <mark>must</mark> needs shew a high forehead, tis such a dog in a wheele, hee&#x27;le never become a doublet in fashion, he talkes as if he had read Poetry out of Almanacks, and makes</div>
+<div class="excerpt">highnesse to save the childs nose, you have the whole treasure presented to you, Jupiter in a golden shower falling into your lap intreats to be accepted, come You <mark>must</mark> receive him The Duke Will you feast, the water shall be summond to bring in her finny and shell inhabitants, the aire shall be unpeopled, and the birds come singing</div>
+<div class="excerpt">the love I have to number dayes But by some noble service, to wash off This shame, this leprosie upon my name I have but vainely interrupt your fury You cannot <mark>must</mark> not pardon it, such mercie Becomes not an Italian. I am prepared so well As this short time will give me leave. A miracle I <mark>must</mark> not appeare melancholy His graces</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Eubella come to Court A Knight? Wy much good doot him, hee&#x27;s a gentleman may deserve it for his daughters sake. The Duke has the advan tage, he is able to make great men, there is no bande to a round pension per annum, or the severe brow of authority, promoti on will turne the stomack, we under-sinners o&#x27;the common wealth, ha nothing but our good parts to procure for us, she is like to become game royall then. In some neere place with the Duke, when the Duchesse is in another bed and never Dreames on&#x27;t; she may in time be a gamster, in the meane time the Duke will play at Cards with her, and if he chance turne up a coate, the honor shall be hers, and a stock perhaps to set up the precious sinne withall, is she not yet Ladified? Thou art mistaken, she is in the way to fall, a hansome Gen tle woman and new come to Court, in the high way to fall too, if any thing will doot, the Duke has taken a course to take in her Maiden towns. No faith, I cannot properly say I did ever love her, she was too honest, if she have praid since, she has beene sorry for loving me so well,—she was too wise to be a whoore, and I was not so much a foole to marry, till my time were come, Why the fall of the leafe, when my Summer is over, the Dog-days may do much wo me, marry before one and thirty? a solescisme, tis more honorable to be a peepe out, then stand at a single game, tis neither Courtly nor fashionable, and whats be come of her wise brother? He must needs shew a high forehead, tis such a dog in a wheele, hee&#x27;le never become a doublet in fashion, he talkes as if he had read Poetry out of Almanacks, and makes a leg like a Farmer, I wonder who begot him? What father? It had beene a question, had his mother beene a Courtier, and not liv&#x27;d and died honest in the Country, they that looke upon him, and his sister, would never think two, Pollux and Helena, twinnes, i&#x27;th same egge, yet she may be a good hen hereafter and lay, but and he be not addled, he is wiser then his nurse tooke him for Where are they? No Ile backe agen, I ha not eaten to day, and I dare not looke upon an honest woman fasting, tis ominous, and we have too many fishdayes already, if the Duke aske for me make some excuse, If thou lov&#x27;st me interrupt me not, I dare not stay, there are new things at Court, and I ha not provided a complement yet Ile see thee anon. Come on sir. What de&#x27;e thinke ont, I shall never hit your subtle body Agen sir How now man? I cannot take too deepe an oath in such briske claret, Say shall I know it Lady? You are a foole, You understand his meaning, will you be wise, and meet it? such favours are not offred to every body, I ha knowne as hansome a Lady as you, would ha given all the world, and her selfe too for a bribe to any man that would ha procured her but a kisse, nay as honest women no dispraise ha longd for&#x27;t, and it was mercie in his highnesse to save the childs nose, you have the whole treasure presented to you, Jupiter in a golden shower falling into your lap intreats to be accepted, come You must receive him The Duke Will you feast, the water shall be summond to bring in her finny and shell inhabitants, the aire shall be unpeopled, and the birds come singing to their sacrifice, Banquets shall spread like wildernesses, and present more variety then men can possibly take in surfets. Are you sicke? all the Court shall take phisick for you, if but your finger ake, the Lords shall put on night-caps, and happiest that Courtier that can first betray how much he suffers with you. Doth not this Pallace please, the Court remoues to morrow: doth the Scituation distast, new places are built, and piramids to put downe the Egyptians: will you hunt to day? the game is provided and taught newes to delight you: will you take the pleasure of the River? the Barge attends, Musicke and the Marmaides go a long, Swannes dy a long the shores and sing their owne dirges: will you spend? the Exchequer is yours all honor and offices yours, and which is the crowne of all, the Duke himselfe is yours, whose ambition shall be to make those pleasures lasting, and every day create new ones to delight his Mistresse. How now, he wo&#x27;not serve me so? WHat pitty tis these pleasures are not lawfull. Prethee no more o&#x27;that Death, from that hand, I apprehend no mercie Not have I so much innocenee to hope You will delay your justice,, were I arm&#x27;d With power to resist, I should adde more Offences by defending of this life That has so basely iniured you. With this I have sometime releeud your valour And had no pitty of my blood, but then I was a friend, in such a cause as this I have no arme no weapon, not, if I Were sure the bullet would dceline my heart. It does beget a cowardise to thinke How I am falne. You shewed a charity above my hope By giving a few minutes for my prayer, Which shewes you had no meaning to destroy The soule, twas Rare compassion, but if you Could possibly forgive? I say if it were possible you could Remitt so foule (in me the blakst) offence Not for the love I have to number dayes But by some noble service, to wash off This shame, this leprosie upon my name I have but vainely interrupt your fury You cannot must not pardon it, such mercie Becomes not an Italian. I am prepared so well As this short time will give me leave. A miracle I must not appeare melancholy His graces humble creature Both in prison You too much honor me Lady, I am sent to know your full and finall resolution touching the businesse the Duke propounded, though your father be shut up yet change of aire is fitter for your complexion, the Duke is a Gentleman that may command in these parts tis not for want of provision, the Duke has a mind to cut up your virginity. Thats very hard Stay a litle There&#x27;s something more in my commission You meane a pander it ha&#x27;s been a thriving way for some, But I am imployed by his grace. Thou hast so rich A stocke of goodnesse, were all other women Vitious, thou mightst impart enough to make The whole sexe white agen, and leave thy selfe One degree lesse then angell: canst thou pardon That I have tempted thee so farre? thy hand To give it a relligious kisse, when next My tongue is orator in so foule a cause The argument it selfe turne a disease And eate it to the roote. I am chang&#x27;d Eubella And more to trie thy strength then to orecome I speake nowe for the Duke, keepe still thy thoughts Deuout to honor, after I have studied A yeares repentance for my wrongs to thee, I will presume to say I love Eubella The first proofe of my conversion Shall be to tell the Duke he has done ill To court thee sinfully Enter Duke. That title Will be aboue all honors the Duke can Let fall upon me, that I have beene wild I must with shame remember, but my study Of after life to her and all the world I hope shall purchase thee a better name. I shall returne, excuse me a few minutes. It concernes my honor, but nothing shall Detaine me long; all places are but darkenesse Without thy eies, Ile visit em&#x27; agen You shall scarce thinke me absent Your voice has better musicke too, it sounds As some religious melancholy strooke. Vpon your heart y&#x27;aue praid lately I distinguish A teare upon your cheeke still tis well done I cannot blame thy eyes, If every time, I ame presented to &#x27;em Th&#x27; unhadpy obiect thou dost weepe Clariana, I have deserved to find the lowest place Within thy charity, yet such is thy Compassion, when my fate is cast And my unworthy life markd for the sacrifice Thou art willing to preserve Hippolito And to that purpose sentst to speake with me Y&#x27;are not yet quite lost What meanes Clariana ? Enter Milena. Cruell dessembler. My wound hath had a happy patience. Farewell.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Love&#x27;s Cruelty</div><div class="body">Hippolito has decided to avoid seeing his friend Bellamente’s fiancée Clariana before they are married, for fear that he will fall in love with her. On learning this, Clariana pays him a visit, without revealing her identity, and he woos her. The session is interrupted by a summons from the Duke, so Hippotite leaves Clariana in his room, locking the door behind him. The Duke’s business turns out to take longer than anticipated: he has brought the virgin Eubella to court to be his mistress, but, despite bestowing promotien: on her father Sebastian, he cannot persuade Rubella into bed, and wants Hippolito to do the jab ter him. Hippolito asks Bellamente to go and release the unnamed gentlewoman from his unsuccessfully attempts his blandishments on Bubs Meanwhile, Bellamente is dismayed to find dit bh: friend’s visitor was Clariana; she argues coyenth thet her visit was innocent curiasity. but decides to make sure of her by advanciny the dete their wedding. , Having seen Clariana, Hippolite: talix fur her ia he expected. Bellamente’s servant discevers thet i + locked room together and, iooking threuuh os oralt the wall, sees them having sex. Puid «4 the on Bellamente swears revenge and catuhe: thera ten in bed. He forces Hippolito inte the Gosct ani oa orders Clariana to tidy the bed. and thes --2 the servant and rebukes him te: Released from his hiding-place. Hipruiies.: Bellamente to be a true Italien amd biit si Bellamente cannot bring himiselt tc: declares that he will never ayer seo bry: sleep with Clariana. Determined tx compromising Eubella’s chastity. and is imprisoned tor it. The Puke sunene. POT. alte Betlaipcit: prevent to exercise his silver tongue again dogs pe ae woos her for himself. net for theo Gece fe 4 learns his lessun and sitiles any then ocece Not so Clariana: she asks Hiippoittes te sige ss wedding morning on the pretuar ihe sao ue of a plot against him. and tries fe per tes up Eubella. When he ts adetngns shies last act is to Rill her mm tur Sua Bellamente drops dead we grant compensate Fubetla by miarrvitis fee Pa + SCENE DESTOUN NEON Piet Bea aba ge epi AA only)</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

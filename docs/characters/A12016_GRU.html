@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GRU in The Taming of the Shrew · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>GRU</span>
+</nav>
+
+<h1>GRU</h1>
+<p class="lede">in <em>The Taming of the Shrew</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>1297</td></tr>
+<tr><th>Characters</th><td>6562</td></tr>
+<tr><th>BritDrama no.</th><td>916</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">many things. Face not mee: thou haſt brau&#x27;d many men, braue not me; I will neither <mark>bee</mark> fac&#x27;d nor brau&#x27;d. I ſay vnto thee, I bid thy Maſter cut out the gowne, but I <mark>did</mark> not bid him cut it to peeces; Ergo thou lieſt. The note lies in&#x27;s throate if he ſay I ſaid ſo. Maſter, if euer I ſaid looſe-bodied gowne, ſow me in the Skirts of</div>
+<div class="excerpt">his ſeuice, looke you ſir: He bid me knocke him, and &amp; rap him ſoundly ſir, Well, was it fit for a ſeruant to vſe his maſter ſo, being perhaps (for ought I ſee) <mark>two</mark> and thirty, a peepe out? Whome would to God I had well knockt at firſt then had not Grumio come by the worſt. Knocke at the gate? Oh heauens: ſpake you not theſe</div>
+<div class="excerpt">all titles the worſt. Heere&#x27;s no knauerie. See, to beguile the olde folkes, how the young folkes lay their heads together. Maſter, maſter, looke about you: Who goes there? Oh this Woodcocke, what an Aſſe it is. And that h s bags ſhall proue. Wil he woo her? I: or Ile hang her. For he feares none. I would I were as ſure of</div>
+<div class="excerpt">they are com ming after to warme them: now were not I a litle pot, and ſoone hot; my very lippes might freeze to my teeth, my tongue to the roofe of my mouth, my <mark>heart</mark> in my belly, ere I ſhould come by a fire to thaw mee, but I with blowing the fire ſhall warme my ſelfe: for conſidering the weather, a taller man then I will take</div>
+<div class="excerpt">euer I ſaid looſe-bodied gowne, ſow me in the Skirts of it, and beate me to death with a bottome of browne thred: I ſaid a gowne. I confeſſe the cape. I confeſſe <mark>two</mark> ſleeues. Error i&#x27;th bill ſir, error i&#x27;th bill? I commanded the ſleeues ſhould be cut out, and ſow&#x27;d vp againe, and that Ile proue vpon thee, though thy litle finger</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Knocke ſir? whome ſhould I knocke? Is there any man ha&#x27;s rebsu&#x27;d your worſhip? Knocke you heere ſir? Why ſir, what am I ſir, that I ſhould knocke you heere ſir. My M r is growne quarrelſome: I ſhould knocke you firſt, And then I know after who comes by the worſt. Helpe miſtris helpe, my maſter is mad. Nay &#x27;tis no matter ſir, what he leges in Latine. If this be not a lawfull cauſe for me to leaue his ſeuice, looke you ſir: He bid me knocke him, and &amp; rap him ſoundly ſir, Well, was it fit for a ſeruant to vſe his maſter ſo, being perhaps (for ought I ſee) two and thirty, a peepe out? Whome would to God I had well knockt at firſt then had not Grumio come by the worſt. Knocke at the gate? Oh heauens: ſpake you not theſe words plaine? Sirra, Knocke me heere: rappe me heere: knock me well, and knocke me ſoundly? And come you now with knock ing at the gate? I pray you Sir let him go while the humor laſts. A my word, and ſhe knew him as well as I do, ſhe would thinke ſcolding would do little good vpon him. Shee may perhaps call him halfe a ſcore Knaues, or ſo: Why that&#x27;s nothing; and he begins once, hee&#x27;le raile in his rope trickes, Ile tell you what ſir, and ſhe ſtand him but a litle, he will throw a figure in her face, and ſo diſfigure hir with it, that ſhe ſhall haue no more eies to ſee withall then a Cat: you know him not ſir. Katherine the curſt, A title for a maide, of all titles the worſt. Heere&#x27;s no knauerie. See, to beguile the olde folkes, how the young folkes lay their heads together. Maſter, maſter, looke about you: Who goes there? Oh this Woodcocke, what an Aſſe it is. And that h s bags ſhall proue. Wil he woo her? I: or Ile hang her. For he feares none. I would I were as ſure of a good dinner. I ſir they be ready, the Oates haue eaten the horſes. Fie fie on all tired Iades, on all mad Maſters, and all foule waies: was euer man ſo beaten? was euer man ſo raied? was euer man ſo weary? I am ſent before to make a fire, and they are com ming after to warme them: now were not I a litle pot, and ſoone hot; my very lippes might freeze to my teeth, my tongue to the roofe of my mouth, my heart in my belly, ere I ſhould come by a fire to thaw mee, but I with blowing the fire ſhall warme my ſelfe: for conſidering the weather, a taller man then I will take cold: Holla, hoa Curtis. A peece of Ice: if thou doubt it, thou maiſt ſlide from my ſhoulder to my heele, with no greater a run but my head and my necke. A fire good Curtis. Oh I Burtis I, and therefore fire, fire, caſt on no water. She was good Curtis before this froſt: but thou know&#x27;ſt winter tames man, woman, and beaſt: for it hath tam&#x27;d my olde maſter, and my new miſtris, and my ſelfe fellow Curtis. Am I but three inches? Why thy horne is a foot and ſo long am I at the leaſt. But wilt thou make a fire or ſhall I com plaine on thee to our miſtris, whoſe hand (ſhe being now at hand) thou ſhalt ſoone feele, to thy cold comfort, for being ſlow in thy hot office. A cold world Curtis in euery office but thine, and there fore fire: doe thy dutie, and haue thy dutie, for my Maſter and miſtris are allmoſt frozen to death. Why Iacke boy, ho boy, and as much newes as thou wilt. Why therefore fire, for I haue caught extreme cold. Where&#x27;s the Cooke, is ſupper readie, the houſe trim&#x27;d, ruſhes ſtrew&#x27;d, cobwebs ſwept, the ſeruingmen in their new fuſtion, the white ſtockings, and euery officer his wedding garment on? Be the Iackes faire wi hin, he Gils faire without, the Ca pets laide, and euery thing in order? Firſt know my horſe is tired, my maſter and miſtris falne out. Out of their ſaddles into the durt, and thereby hangs a tale. Lend thine eare. There. And therefore &#x27;tis cal&#x27;d a ſenſible tale: and this Cufte was but to knocke at your eare, and beſeech liſtning: now I begin Inprimis we came downe a foule hill, my Maſter riding behinde my Miſtris. What&#x27;s that to thee? Tell thou the tale: but hadſt thou not croſt me, thou ſhouldſt haue heard how her horſe fell, and ſhe vnder her horſe: thou ſhouldſt haue heard in how miery a place, how ſhe was be moil&#x27;d, how he left her with the horſe vpon her, how he beate me becauſe her horſe ſtumbled, how ſhe waded through the durt to plucke him off me: how he ſwore, how ſhe prai&#x27;d, that neuer prai&#x27;d before: how I cried, how the horſes ranne away, how her bridle was burſt: how I loſt my crupper, with many thinges of worthy memorie, which now ſhall die in obliuion, and thou re turne vnexperienc&#x27;d to the graue. I, and that thou and the proudeſt of you all ſhall finde when he comes home. But what talke I of this? Call forth Na thaniell, Ioſeph, Nicholas, Phillip, Walter, Sugerſop and the reſt: let their heads bee ſlickely comb&#x27;d, their blew coats bruſh&#x27;d, and their garters of an indifferent knit, let them curtſie with their left legges, and not preſume to touch a haire of my Maſters horſe-taile till they kiſſe their hands. Are they all readie? Call them forth. Why ſhe hath a face of her owne. Thou it ſeemes, that calls for company to countenance her. Why ſhe comes to borrow nothing of them. Welcome you: how now you: what you: fellow you: and thus much for greeting. Now my ſpruce companions, is all readie, and all things neate? Heere ſir, as fooliſh as I was before. No, no forſooth I dare not for my life. What ſay you to a Neats foote? I feare it is too chollericke a meate, How ſay you to a fat Tripe finely broyl&#x27;d? I cannot tell, I feare &#x27;tis chollericke. What ſay you to a peece of Beefe and Muſtard? I but the Muſtard is too hot a little. Nay then I will not, you ſhall haue the Muſtard Or elſe you get no Beefe of Grumio. Why then the Muſtard without the beefe. I gaue him no order, I gaue him the ſtuffe. Marrie ſir with needle and thred. Thou haſt fac&#x27;d many things. Face not mee: thou haſt brau&#x27;d many men, braue not me; I will neither bee fac&#x27;d nor brau&#x27;d. I ſay vnto thee, I bid thy Maſter cut out the gowne, but I did not bid him cut it to peeces; Ergo thou lieſt. The note lies in&#x27;s throate if he ſay I ſaid ſo. Maſter, if euer I ſaid looſe-bodied gowne, ſow me in the Skirts of it, and beate me to death with a bottome of browne thred: I ſaid a gowne. I confeſſe the cape. I confeſſe two ſleeues. Error i&#x27;th bill ſir, error i&#x27;th bill? I commanded the ſleeues ſhould be cut out, and ſow&#x27;d vp againe, and that Ile proue vpon thee, though thy litle finger be armed in a thimble. I am for thee ſtraight: take thou the bill, giue me thy meate-yard, and ſpare not me. You are i&#x27;th right ſir, &#x27;tis for my miſtris. Villaine, not for thy life: Take vp my Miſtreſſe gowne for thy maſters vſe.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Taming of the Shrew</div><div class="body">: GHHStSpHEMSIy is ejected from a tavern after breaking some glasses and refusing to pay for them. A lord finds him in a drunken stupor, takes him home, and plays a prank on him: he is treated as if he is himself a lord who has just woken from a dream of being a beggar. Players visit the lord and he engages them to perform for Sly. ; In the play, BaptistalMindla refuses to allow his younger daughter Bidi@a to marry any of her suitors before her elder sister Kath@filia is married. Katherina is not considered a desirable wife: she is aggressive and disobedient. The rival suitors H@HEnSio and Greiilio agree to find someone to marry Katherina. Hortensio jokingly suggests the idea to his friend PEHWEEID, only to find that Petruccio is willing to co-operate, so long as Katherina brings an adequate dowry; Hortensio and Gremio agree to pay his expenses. Baptista asks the various suitors to provide schoolmasters to instruct Bianca, and two of them see this as an opportunity to get closer access to her: Hortensio poses as Bifi6, a music master, and gets Petruccio to present him to the household; and Digentio, a new arrival in Padua, poses as Cambio, a Latin teacher, while his servant [faiio assumes his identity and presents himself to Baptista as another suitor for Bianca. Petruccio woos Katherina by insisting on her beauty and refusing to rise to her bad behaviour. Afterwards he tells her father that she has consented to marry him, and pre-empts her contradiction by claiming they have agreed that she will remain contrary in public until the wedding. On the wedding day, he arrives late and inappropriately dressed, and behaves badly at the ceremony. As soon as they are married, he insists they leave for his home, rather than celebrate with | Katherina’s family and friends. At home, he violently abuses his servants, sees to it that she neither eats nor sleeps, and finds fault with her choice of new clothing. Baptista offers Bianca to ‘Lucentio’, so long as he can produce evidence to confirm that he can offer her a better financial settlement than Gremio. Lucentio and Tranio persuade a schoolmaster from Mantua that any . Mantuan found in Padua will be executed, and allow him to pose as Lucentio’s father, WiH@@Hiid} he underwrites Lucentio’s expectations, and the marriage is agreed. Hortensio decides to marry a wealthy widow, and visits Petruccio with the news. Petruccio and Katherina set out for Padua, but Petruccio will only leave when his wife agrees with him that…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

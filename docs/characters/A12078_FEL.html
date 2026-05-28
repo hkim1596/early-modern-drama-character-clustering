@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FEL in The Fleer · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FEL</span>
+</nav>
+
+<h1>FEL</h1>
+<p class="lede">in <em>The Fleer</em> — Sharpham, Edward</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>696</td></tr>
+<tr><th>Characters</th><td>3639</td></tr>
+<tr><th>BritDrama no.</th><td>1495</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">sister we are wrong&#x27;d. You make my soule sweet harmony, come lets a bout it then. We are? Faith his stile is plaine, onely a little courtlike silk en phrase it <mark>has</mark>, but I hope your lord hath sent rich words like iewels, for your eares against your nuptiall day. With all my <mark>heart</mark>. Let me see what&#x27;s this? You the vnderstanding</div>
+<div class="excerpt">they are no drunkards. Howe dost like the Gentlemen of this Coun trey? Whats the reason Fleir, the Citizens wiues weare all Corks in their shooes? What good cheere didst see there? Why? are you so angry sister? you know they speak truth. What are we else? And what difference pra&#x27;y? And doe so still, wee allow thee to say anie</div>
+<div class="excerpt">Beautie, with some heate of your affection shine vpon the creature that adores yee, and with the heauenlye comfort of your loue, melt and thaw dispaire from in dying <mark>heart</mark> which if it liue, it liues to loue, it dye if it dyes in loue, but howsoeuer, tis your&#x27;s, twas made for you, liues by you, and dies without you. Yours in the moste</div>
+<div class="excerpt">Beautie, with some heate of your affection shine vpon the creature that adores yee, and with the heauenlye comfort of your loue, melt and thaw dispaire from in dying <mark>heart</mark> which if it liue, it liues to loue, it dye if it dyes in loue, but howsoeuer, tis your&#x27;s, twas made for you, liues by you, and dies without you. Sister vpon my</div>
+<div class="excerpt">to Duke Piso that now is. Let them challenge vs, wee and our loues are won. but say they should reueale vs. But say they raile on vs. I like it well, come lets hasten it, For this is euen as true as er&#x27;e was text, Plots are but dreames vntill they take effects. Our, good wishes euer waite vpon our best belooued friendes Maister</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Tis base to be a whore. And is&#x27;t not basenes to abuse great birth? His mansred hose, were the colour of his nose, and his breech was made of blue, And he in shape, but a French-mans Ape, And so sweete sir adieu. &quot; Holla, holla ye pampred Iades of Asia, &quot; And can you draw but twentie miles a day? Why ti&#x27;s impossible. O I am in an excellent humor, now I could laugh, daunce, leape, or doe anie light tricks that belongs to a light wench. O signeur Fleir, how dost, how dost man? we may bee merrie before thee, thoul&#x27;t be secret, wo&#x27;t not? How lik&#x27;st the Citie Fleir, ha, how lik&#x27;st it? Thats a signe they are no drunkards. Howe dost like the Gentlemen of this Coun trey? Whats the reason Fleir, the Citizens wiues weare all Corks in their shooes? What good cheere didst see there? Why? are you so angry sister? you know they speak truth. What are we else? And what difference pra&#x27;y? And doe so still, wee allow thee to say anie thing, for thereby we shall know our friendes from our foes. Come sister will you in? O sir, my fortunes are not fellowes with my birth, they make me stoope to base deiected courses, but would you loue me, I would as swift as thought flie this life, and leaue lusts fowlest sinne, for fleshlye beastes to sleepe and wallow in. Contemn&#x27;d. Abus&#x27;d. A shall not liue: Condemne a Ladie borne? sister we are wrong&#x27;d. You make my soule sweet harmony, come lets a bout it then. We are? Faith his stile is plaine, onely a little courtlike silk en phrase it has, but I hope your lord hath sent rich words like iewels, for your eares against your nuptiall day. With all my heart. Let me see what&#x27;s this? You the vnderstanding spirit of a woman, let the splender of your Beautie, with some heate of your affection shine vpon the creature that adores yee, and with the heauenlye comfort of your loue, melt and thaw dispaire from in dying heart which if it liue, it liues to loue, it dye if it dyes in loue, but howsoeuer, tis your&#x27;s, twas made for you, liues by you, and dies without you. Yours in the moste affectionate degree of affection. Don Piso De Florence. You the vnderstanding spirit of a woman, let the splender of your Beautie, with some heate of your affection shine vpon the creature that adores yee, and with the heauenlye comfort of your loue, melt and thaw dispaire from in dying heart which if it liue, it liues to loue, it dye if it dyes in loue, but howsoeuer, tis your&#x27;s, twas made for you, liues by you, and dies without you. Sister vpon my life this is sonne and heire to Duke Piso that now is. Let them challenge vs, wee and our loues are won. but say they should reueale vs. But say they raile on vs. I like it well, come lets hasten it, For this is euen as true as er&#x27;e was text, Plots are but dreames vntill they take effects. Our, good wishes euer waite vpon our best belooued friendes Maister Ruffell, and Maister Sparke. Worthie Knight, I would my wordes had but the power so worke in you, that which your lines haue done in me, then should the happie consolation of my life dwell euer in your loues embracements. True, so shall ye then be sure, T&#x27;inioy our loues, we yours, and liue secure. And Ruffell. Then for the meanes: Giue them a Figg. Poyson them: I want a seruice, and am by my profession an Apo thecarie, and shall be glad to be intertained by you. Very well. I very perfectly doe know it to be his. Show mercy heauen, my sinnes doe thee offend, Theres none can say hee&#x27;s happie till his end; Forgiuenesse Knight, and since the law on vs, Hath laid so strickt a hand, O let me be Thy wife before I die, and were I now A thousand yeares to liue, I would be honest Louing none but thee.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Fleer</div><div class="body">Before the start of the action, Piso deposed Antifront, whose daughters thereupon fled from Florence. Antifront now travels in search of his missing children. He arrives in London under the alias Fleer, and meets some gentlemen. One of them, Spark, gets him a job with two of his countrywomen, a pair of Florentine courtesans working in London. Antifront is dismayed to discover that they are his missing daughters. Two sisters, Susan and Nan, are interested in Spark and his friend Ruffle, who are among the courtesans’ many clients. They dress up as boys and try to get the gentlemen to employ them as pages; Spark and Ruffle refuse, and the ‘pages’ end up working for two other clients, Sir John Havelittle and Piso junior, the son of the Florentine usurper. ‘Fleer’ wants to engineer a marriage for his daughters, selecting Havelittle and Piso as the eligible bachelors. The daughters prefer Spark and Ruffle, but are refused; taking offence, they ask Piso and Havelittle to kill the gentlemen, and suggest poison as the safest method. The plot is overheard by ‘Fleer’ and the ‘pages’. ‘Fleer’ gets himself another job looking after an apothecary’s shop, and sells Piso and Havelittle a poison which is really a sleeping potion. Spark and Ruffle dine with Piso and Havelittle and apparently die. The hosts are at once arrested on suspicion of poisoning and are committed for trial. Fleer is sent on an errand to the senior judge, who is unable to attend through illness, and sends word back for the other two judges to proceed without him. Given a ring to authenticate the message, Fleer instead uses it to get himself deputized as the third judge. He produces a letter which establishes that the guilt extends to the daughters as well as the poisoners, and all four are sentenced to death. News arrives that Piso’s father has died, making him the new Duke of Florence; but-he tells the Florentines to recall the deposed Antifront instead, and offers to make amends for his father’s treason by marrying Antifront’s elder daughter. Antifront reveals his identity and says Piso can do just 1606 that; his younger daughter will marry Havelittle. He produces the murder victims, still alive, and bestows them on Nan and Susan.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

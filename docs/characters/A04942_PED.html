@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PED in The Spanish Tragedy (Hieronimo is Mad Again) · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PED</span>
+</nav>
+
+<h1>PED</h1>
+<p class="lede">in <em>The Spanish Tragedy (Hieronimo is Mad Again)</em> — Kyd, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1592</td></tr>
+<tr><th>Words</th><td>632</td></tr>
+<tr><th>Characters</th><td>3211</td></tr>
+<tr><th>BritDrama no.</th><td>783</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">company. But how shall Serberine be there my Lord? It shalbe done my L. it shall be done, And ile <mark>goe</mark> arme my selfe to meet him there. Heere comes the bird that I <mark>must</mark> ceaze vpon, Now Pedringano or neuer play the man. For this Serberine, and thou shalt ha&#x27;te. So, there he lyes, my promise is performde. Now by the sorrowes of the</div>
+<div class="excerpt">So I should <mark>goe</mark> out of this geere my raiment, into that geere the rope. But Hangman, now I spy your knauery, ile not change with out boot, thats fl t. So then I <mark>must</mark> vp. Yes, but there shalbe for my comming downe. How? be turned off. What doe you hang by the howre, if you doo, I may chance to break your olde custome. Dost thou</div>
+<div class="excerpt">prethee request this good company to pray with me. Nay, nay, now I remember me, let them alone till some other time, for now I haue no great need. Nay soft, no hast. Why I. Why Rascall by my pardon from the King.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Signior. Hath your Lordship any seruice to command me? What ere it be your Lordship shall demaund, My bounden duety bids me tell the truth. If case it lye in me to tell the truth. Alas my Lord, since Don Andreas death, I haue no credit with her as before, And therefore know not if she loue or no. Oh stay my Lord. If Madame Bel-imperia be in loue. O stay my Lord, she loues Horatio. Euen him my Lord. She sent him letters which my selfe perusde, Full fraught with lines and arguments of loue, Preferring him before Prince Balthazar. I sweare to both by him that made vs all. What I haue saide is true, and shall for me, Be still conceald from Bel-imperia. Besides your Honors liberalitie, Deserues my duteous seruice, euen till death. I will my Lord. In steed of watching ile deserue more golde. By fetching Don Lorenzo to this match. Now Hieronimo. I know not, heers my Lord. He asketh for my Lady Bel-imperia. My Lord, I see it, and suspect it too. My Lord, he could not, twas so lately done, And since he hath not lest my company. But how shall Serberine be there my Lord? It shalbe done my L. it shall be done, And ile goe arme my selfe to meet him there. Heere comes the bird that I must ceaze vpon, Now Pedringano or neuer play the man. For this Serberine, and thou shalt ha&#x27;te. So, there he lyes, my promise is performde. Now by the sorrowes of the soules in hell, Who first laies hand on me, ile be his Priest, Why, because he walkt abroad so late. Hieronimo, carry me before whom you will, What ere he be ile answere him and you, And doe your worst, for I defie you all. Gramercy boy, but it was time to come, For I had written to my Lord anew, A neerer matter that concerneth him, For feare his Lordship had forgotten me: But sith he hath remembred me so well, Come, come, come on, when shall we to this geere. This is short worke, well, to your Marshallship First I confesse, nor feare I death therfore, I am the man, twas I slew Serberine. But sir, then you think this shalbe the place, Where we shall satisfie you for this geare? Now I think not so. To doo what, my fine officious knaue? O sir, you are to forward, thou wouldst faine furnish me with a halter, to disfurnish me of my habit. So I should goe out of this geere my raiment, into that geere the rope. But Hangman, now I spy your knauery, ile not change with out boot, thats fl t. So then I must vp. Yes, but there shalbe for my comming downe. How? be turned off. What doe you hang by the howre, if you doo, I may chance to break your olde custome. Dost thou mock me hangman, pray God I be not preserued to break your knaues pate for this. Sirra, dost see yonder boy with t e box in his hand? I that companion. Doost thou think to liue till his olde doublet will make thee a new trusse? What hath he in his boxe as thou thinkst? Why sirra Hangman? I take it, that that is good for the body, is likewise good for the soule: and it may be, in that box is balme for both. Is your roaguery become an office with a knaues name? I prethee request this good company to pray with me. Nay, nay, now I remember me, let them alone till some other time, for now I haue no great need. Nay soft, no hast. Why I. Why Rascall by my pardon from the King.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Spanish Tragedy (Hieronimo is Mad Again)</div><div class="body">Don Andrea) Beleimiperia’s secret lover, was separated from her by the war with Portugal and killed in battle by Baltazar Now the powers of hell have promised him vengeance, and he and R@Véfige sit down to watch it worked out in the play. In the course of the action Andrea expresses mounting impatience, while Revenge makes him wait, sleeps, and finally takes control of the action. Spain wins the war and Portugal agrees to pay tribute. Balthazar has been taken prisoner, and is committed to DGFSHZO!s custody. BElAImperia is wooed by Balthazar, and the King plans to settle the succession on their issue, thereby uniting Spain and Portugal. But Bel-Imperia cannot accept her dead love&#x27;s killer, and opts for MGFatiG instead. Lorenzo learns of this by suborning her servant Pédfingafio, who then assists him and Balthazar in murdering MOratio! Miéroninie finds his son’s body hanging in his arbour and swears revenge, but his wife counsels patience while heaven puts matters right. In Portugal, Willipps falsely accuses AUSXandrS of murdering Balthazar in battle. At the last moment Alexandro is saved from burning at the stake by the arrival of the Ambassador from Spain with news that Balthazar is alive. Alexandro is released and Wiliippo condemned. Béleimpera is imprisoned by DGFeHZ6) but writes Hieronimo a letter in her own blood. Fearing a trap, Hieronimo investigates, but his suspicions alert Lorenzo. PR@HigaHG is persuaded to murder his accomplice]/Sérbenine] on promise of a pardon; but the box supposedly containing it is empty, and Pedritigane’s confident jesting on the gallows ends with his execution. An incriminating letter found on his body confirms the guilt of Lorenzo and Balthazar, but HigfonimiG is so far unhinged by grief that Lorenzo finds it easy to prevent him informing the King; his mental state also inhibits him from the efficient discharge of his judicial responsibilities. ISB@lla also goes mad and cuts down the arbour before killing herself, but Hieronimo rejects suicide, preferring revenge. Beleimperia is now to marry Balthazar, and the Micero6yMicomes from Portugal. for the ceremony. HieronimiG organizes his revenge under the pretext of the entertainment: a tragedy of SHISHA and PERSeda} in which he and Bel-Imperia kill Lorenzo and Balthazar ===== PAGE 372 ===== in earnest. Bél@lmipéria kills herself, and MieronimG bites out his tongue to avoid interrogation, then stabs the Duke of @aStilé and himself. DOnlNAKGEEd is avenged, and Revenge promises…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ELP in Aminta · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> ›
+  <span>ELP</span>
+</nav>
+
+<h1>ELP</h1>
+<p class="lede">in <em>Aminta</em> — Tasso, TorquatoReynolds, Henry</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1628</td></tr>
+<tr><th>Words</th><td>689</td></tr>
+<tr><th>Characters</th><td>3678</td></tr>
+<tr><th>BritDrama no.</th><td>2223</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 12 (<em>amyntas, phillis, did, must, endimion, death…</em>). Matches are highlighted.</p>
+<div class="excerpt">Freinds be merry What of his <mark>death</mark> perhaps ye haue heard, is falſe. Tis true he <mark>did</mark>. But &#x27;twas a fortunate and happy fall; That look&#x27;d ſo like <mark>death</mark>, and is proou&#x27;d to him Not life alone, but a moſt ioyfull life; For now he lyes lull&#x27;d in the tenter</div>
+<div class="excerpt">Drying each teare he lets fall, with a ſighe, Or with the like, freindly requiting it. But I am going to finde out Montane Her Father, and conduct him where they <mark>bee</mark>; For there wants nothing elſe but his conſent, To both their boundleſſe ioyes accompliſhment. I am well content; Heare then, heare that which with theſe eyes I</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Freinds be merry What of his death perhaps ye haue heard, is falſe. Tis true he did. But &#x27;twas a fortunate and happy fall; That look&#x27;d ſo like death, and is proou&#x27;d to him Not life alone, but a moſt ioyfull life; For now he lyes lull&#x27;d in the tenter lapp. Of his beloued one that ſeemes much more Fonde of him now, then ſhe was coy before; Drying each teare he lets fall, with a ſighe, Or with the like, freindly requiting it. But I am going to finde out Montane Her Father, and conduct him where they bee; For there wants nothing elſe but his conſent, To both their boundleſſe ioyes accompliſhment. I am well content; Heare then, heare that which with theſe eyes I ſaw; I was before my Caues mouth, which ye knowe Lyes at the hills foote, on the valleyes brimme; There Thirſi&#x27; and I were reaſoning together Of the faire ſhee that in the ſelfe ſame nett Had firſt inſnar&#x27;d him, and me afterward; When I preferring my lou&#x27;de ſeruitude Before his free ſtate; all at once we heard A ſhreeke; and ſaw a man fall frbm aboue, Vpon a buſhy knowle; for on the ſide Of the ſteepe hill, there growes (all of a heape, And as &#x27;twere woue tog ther,) a round maſſe Of brambles, thornes, and certaine weedes among; There firſt he light before he lower fell; And though hee made way through them with his weight, And fell downe to the ground before our feete; Yet ſo that ſtop abated the falls force, As &#x27;twas not mortall; though ſo dangerous As that he lay a while deuoyd of ſenſe, And as a dead man without ſhow of motion. We with amazement, and compaſsion were Dumbe-ſtrucken at the ſudden ſpectacle: And knowing him, and knowing ſoone (with all) He was not dead, nor perhas like to die, Appeaz&#x27;d his woe, and eas&#x27;d him all we could; Then Thirſis made me throughly&#x27; acquainted with Th&#x27;whole paſſage of his loues. but while we ſought To bring him to himſelfe againe, and ſent To fetch Alpheſibeo (t&#x27;whom Appollo Tanght th&#x27;art of Phiſicke, when he gaue his Harp And Lute to me) came Daphne, and Siluia, Who (as I heard) had bin to ſeeke him out Whom they ſuppos&#x27;d dead. But when Siluia Had found and knew him, and beheld his cheekes And lips ſo bloudleſſe, and diſcoloured, As the wanne Violet&#x27;s hue their paleneſſ paſt; And ſaw him languiſh, as if then he had Bin drawing his laſt breath; ſhee gaue her ſorrowes A liberall paſsage through her earneſt cryes; And beating her faire breſt, falls downe vpon him, Laying her face on his, and on his lipps Her lipps. Baſhfulnes oft barrs weak loues of their longings, But is too weake a curbe for a ſtrong loue. But then, as if her eyes had bin two fountaines, She drown&#x27;d his colde face with her powring teares; Whoſe water was of ſo great force, and vertue, That he reuiu&#x27;d; and op&#x27;ning his dimme eyes, He ſighes foorth a hollow&#x27; Ay mee, from the bottome Of his ſad breſt; ſhee caught the heauy ſound Of that ſame bitter breath; and mingled it With her ſweet breath; and ſo reſtor&#x27;d, and heal&#x27;d him. Then; who can ſay? who can imagine what Both of them thought, and at that inſtant felt? Each now aſsur&#x27;d of others life? and he Aſsur&#x27;d of her loue, and to finde himſelfe Intangled in ſo lou&#x27;d, and louing armes? He that loues firmly may imagine it, Yet hardly too; but no tongue ſure can tell it. He&#x27;s ſafe, and well; ſaue that he has a little Battred his fleſh, and ſomwhat ſcratcht his face; But &#x27;twill be nothing; and he wayes it not. Thriſe happy he, t&#x27;haue giu&#x27;n ſo great and high A ſigne, and earneſt of his Conſtancie; And now inioyes the fruit of his firme loue; To which his ſad indurings, and paines paſt, Prooue pleaſing and ſweet ſawces at the laſt. But peace be wi&#x27;yee&#x27;; I muſt goe ſeeke about Till I haue found the good Montano out.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Aminta</div><div class="body">Resenting his mother’s efforts to control his activities and limit them to persons of high estate, Cupid absconds to live as a shepherd and make Silvia fall in love. Silvia was Aminta’s companion in boyhood. Three years ago he declared his love for her, and she has refused to see him ever since. Despite Daphne’s attempts to persuade her that she should take her amorous pleasures while she can, Silvia has no maternal desires: she loves only hunting, and hates Aminta because he loves her. Recognizing that Aminta needs to be more masterful, Daphne and Thyrsis arrange for him to encounter Silvia while she is bathing. But Silvia has another rejected admirer with similar ideas, a Satyr, and when Aminta arrives he finds Silvia stark naked, tied to a tree with her own hair, and about to be raped. He drives the Satyr off, but Silvia is haughtily ungracious and runs away. Daphne restrains Aminta’s suicidal impulses. Silvia borrows some clothes from Nerina and goes hunting. She encounters a wolf and chases it; Nerina follows, loses her, and then sees a wolf-pack licking blood off the ground, with Silvia’s bloodstained veil nearby. When Aminta hears of this, his suicidal impulses are renewed: with the help of Ergastus, he climbs a cliff and throws himself off. Silvia is not really dead — the wolves’ prey was only an animal — but the news of Aminta’s death prompts her to recognize her love for him, and seek to join him in the afterlife. It turns out that he is not dead: he fell into a bush, stunned himself, and recovers on feeling Silvia’s tears splashing onto his face. Venus comes looking for Cupid, and asks the audience if they have seen him. ===== PAGE 285 ===== 1627</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> page.
+</div>
+</div></body></html>

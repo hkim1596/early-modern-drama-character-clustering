@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BEAUF. JUN in The Unnatural Combat · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BEAUF. JUN</span>
+</nav>
+
+<h1>BEAUF. JUN</h1>
+<p class="lede">in <em>The Unnatural Combat</em> — Massinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1639</td></tr>
+<tr><th>Words</th><td>1176</td></tr>
+<tr><th>Characters</th><td>6262</td></tr>
+<tr><th>BritDrama no.</th><td>2185</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">the worthiest of Women, now observe him. It <mark>has</mark> gone round Sir. Since then you meet my flames with equall order As you professe, it is your bo ty mistresse, Nor <mark>must</mark> I call it debt, yet tis your glory, That your excesse supplies my want, and makes 〈◊〉 Strong in my weakenesse, which could never <mark>bee</mark>, But in your good opinion.</div>
+<div class="excerpt">impartiall eyes, and then Let envie if it can, name one grac&#x27;d feature In which she is defective. <mark>Did</mark> she need it, The praise which you (and well deservd) give to her <mark>Must</mark> of necessity raise new desires In one indebted more to yeares; to me Your words are but as oyle powr&#x27;d on a fire, That flames already at the height. Tis beyond</div>
+<div class="excerpt">honour to the Conquerour. Who dares tax My friend of treacherie now? I can wish No happinesse beyond it. These rites Paid to the dead, the Conquerour that survives <mark>Must</mark> reape the harvest of his bloudy labour. Sound all l d instruments of joy and triumph, And with all circumstance, and ceremonie Wait on the Patron of our libertie,</div>
+<div class="excerpt">triumph, And with all circumstance, and ceremonie Wait on the Patron of our libertie, Which he at all parts merits. &#x27;Tis short of your deserts. Lead on: Oh Sir you <mark>must</mark>: you are too modest. You demand That which with all the service of my life I should have labour&#x27;d to obtaine from you. O, Sir, why are you slow to meet fo faire</div>
+<div class="excerpt">instruct you. Then being mine, And wholly mine, the river of your love To kinsmen and allies, nay to your father, (Howere out of his tendernesse he admires you) <mark>Must</mark> in the Ocea of your affection To me be swallow&#x27;d up, and want a name Compar&#x27;d with what you owe me. Both parties being agreed to. This I foresaw. No. Neither. His</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">As yet it is resolv&#x27;d so, in their determination. But suppose, for I would nourish hope, not kill it in you, I should divert the torrent of their purpose, and render them that are implacable, impartiall Judges, and not sway&#x27;d with spleene: will you, I dare not say in recompence, for that includes a debt you cannot owe me, but in your liberall bountie, in my suit to you be gracious? But this effected, and your father free, what is your answer? I urge no more, confirme it with a kisse. Here comes my father with the Councell of war, deliver your petition, nd leave the rest to me. For my sake, Sir, pray you receive, and read it. Thus far we are happie. Madam quit the place, ou shall heare how we succeed. I humbly thanke you, Sir. Sir, I dare not. They put him hardly o it. Strange and prodigious. Let me, Sir, have the honour To be your second. I would gladly Be a spectator (since I am deni&#x27;d To be an Actor) of each blow, and thrust, And punctually observe&#x27;em. That a certaine hit. With utmost speed Acquaint the Governour with the good successe, That he may entertaine to his full merit, The father of his Countries peace and safetie. All honour to the Conquerour. Who dares tax My friend of treacherie now? I can wish No happinesse beyond it. These rites Paid to the dead, the Conquerour that survives Must reape the harvest of his bloudy labour. Sound all l d instruments of joy and triumph, And with all circumstance, and ceremonie Wait on the Patron of our libertie, Which he at all parts merits. &#x27;Tis short of your deserts. Lead on: Oh Sir you must: you are too modest. You demand That which with all the service of my life I should have labour&#x27;d to obtaine from you. O, Sir, why are you slow to meet fo faire And noble an offer? Can France shew a virgin That may be parallel&#x27;d with her? Is she not The Phoenix of the time? the fairest star In the bright sphere of women? Here she comes, Looke on her with impartiall eyes, and then Let envie if it can, name one grac&#x27;d feature In which she is defective. Did she need it, The praise which you (and well deservd) give to her Must of necessity raise new desires In one indebted more to yeares; to me Your words are but as oyle powr&#x27;d on a fire, That flames already at the height. Tis beyond example, His resolution to part with his estate, To make her dower the waightier is nothing, But to observe how curious he is In his owne person to adde ornament To his daughters ravishing features, is the wonder. I sent a page of mine in the way of courtship, This morning to her to present my service, From whom I understand all: there he found him Sollicitous in what shape she should appeare, This gowne was rich, but the fashion stale, the other Was quaint, and neate, but the stuffe not rich enough, Then does he curse the Taylor, and in rage Falls on her Shoomaker, for wanting art To expresse in every circumstance, the forme Of her most delicate foote, then s s in counsell With much deliberation to finde out What tire would best adorne her; and one chosen Varying in his opinion, he teares off, And stamps it under foot, then tries a second A third and fourth, and satisfied at length With much a doe in that, he growes agen, Perplexd and troubl&#x27;d where to place her Jewells To be most mark&#x27;d, and whether she, should weare This diamond on her forehead, or betweene Her milke-white paps, disputing on it both wayes, Then taking in this hand, a rope of pearle, (The best of France) he seriously considers Whither she should dispose it on her arme Or on her necke, with 20 other tri es, too redious to deliver. I have ever found you, (And tis my happinesse) a loving father, And carefull of my good:—by the loud musicke, As you gave order for his entertainment, He&#x27;s come into the house two long houres since, The Colonels, commissioners and captaines, To pay him all the rites his worth can challenge, Went to wayt on him hither. The Favour 〈◊〉 doubl&#x27;d on my part, most worthy Sir, Since your faire daughter, my incomparable Mistresse, Daines us her presence. Nay tis yours Without more complement. Tis my purpose, And if I can winne her to give her heart, I have a holy man in readinesse To joyne our hands, for the Admirall her father repents him of his grant to me, and So far transported with a strange opinion of her faire features, that should we desire it, I thinke ere long he will beleeve, and strongly, The Daulphine is not worthy of her, I Am much amazd with&#x27;t. And drink a health, and let it be if you please To the worthiest of Women, now observe him. It has gone round Sir. Since then you meet my flames with equall order As you professe, it is your bo ty mistresse, Nor must I call it debt, yet tis your glory, That your excesse supplies my want, and makes 〈◊〉 Strong in my weakenesse, which could never bee, But in your good opinion. Which you returne With large increase (since that you will recome And I dare 〈…〉 pleas&#x27;d To make what&#x27;s yet divided one. but what assurance, (But still without offence) may I demand That may secure me that your heart tongue Joyne to make up this harmonie? I may take then This hand, and with a thousand burning kisses, Sweare tis the anchor to my hopes? I&#x27;ll instruct you. Then being mine, And wholly mine, the river of your love To kinsmen and allies, nay to your father, (Howere out of his tendernesse he admires you) Must in the Ocea of your affection To me be swallow&#x27;d up, and want a name Compar&#x27;d with what you owe me. Both parties being agreed to. This I foresaw. No. Neither. His doores are fast lockd up, and solitude Dwels round about em, no accesse allow&#x27;d To friend or enemy, but— Or in his death Which for her sake till now I have forborne I will revenge the injury he hath done To my true and lawfull love. Troth he never had Affection to the match: yet in his pitty To me, he&#x27;s gone in person to his house, Nor will he be denide, and if he finde not Strong and faire reasons Malefort will heare from him In a kinde he does not looke for. Mine suite my fortune. Looke you the Comedy Make good the Prologue, or the scorne will dw ll Upon your selfe. S&#x27;light, how she stares, they are worse then she-wolves to him. What answer, Sir, From the Admirall? But here&#x27;s one retaine Her native innocence, that never ye Call&#x27;d downe heavens anger.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Unnatural Combat</div><div class="body">Malefort Junior, son of the Admiral, has committed treason by allying himself with pirates and threatening the ruin of Marseilles. The Admiral is suspected of complicity and imprisoned. Theocrine, his daughter, reluctantly offers herself to Beaufort Junior, son of the Governor of Marseilles, if he will only persuade his father to allow hers a hearing. Beaufort Senior can refuse his son nothing, so the Admiral gets his opportunity to protest his innocence. Malefort Junior ‘challenges his father to a duel over a wrongdoing which he will not specify. The Admiral refuses to be held accountable by his son, and accepts the challenge. Malefort Junior is killed: the threat to Marseilles is over, and Admiral Malefort is lauded a hero. Malefort suggests that Theocrine should marry Beaufort Junior; Beaufort Senior half-heartedly agrees and invites them to a nuptial feast. The Governor&#x27;s table is open to any former soldier who needs a free ~ meal, a custom regularly invoked by Belgarde, who is unemployed in peacetime and angry at being denied - his -back pay. Fearing embarrassment at the feast, Beaufort Senior has his steward discourage Belyarde with the suggestion that he is underdressed for the ===== PAGE 200 ===== occasion; but the upshot is that Belgarde turns up in a suit of armour and declares his worthiness. His plain- speaking wins him respect and a gift of money from the Governor. He spends it all on new clothes, but the signs of prosperity attract his creditors, and he is still unable to pay them. People are noticing Malefort’s excessive solicitude towards his daughter. This comes to a head when Beaufort Junior takes her off to woo her in private, with a priest ready to perform the marriage. Malefort reacts by calling off the marriage and taking Theocrine home. He harbours an incestuous passion for his daughter, who is very like his dead second wife. Struggling to conquer the urge, he confesses to his friend Montreville and asks him to abduct her: he cannot be tempted if he never sees her again. Beaufort Junior realizes something is wrong and has Belgarde muster troops to besiege Montreville’s fort. Montreville demands sexual favours from Theocrine, and reveals her father’s secret. Meanwhile Malefort reasons from classical precedent that incest is not wicked after all, and goes to fetch his daughter back. Montreville denies him access and reveals that he has.a long-standing grudge: Theocrine’s mother was his mistress before Malefort stole her, poisoning his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

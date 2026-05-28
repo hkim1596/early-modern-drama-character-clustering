@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ANG in The Elder Brother · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ANG</span>
+</nav>
+
+<h1>ANG</h1>
+<p class="lede">in <em>The Elder Brother</em> — Fletcher, JohnMassinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>1513</td></tr>
+<tr><th>Characters</th><td>8030</td></tr>
+<tr><th>BritDrama no.</th><td>1866</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">pretty Gentleman, and he may please too, And some few flashes I have hear&#x27;d come from him, But not to admiration, as to others; Hee&#x27;s young, and may be good, yet he <mark>must</mark> make it, And I may helpe, and helpe to thanke him also. It is your pleasure I should make him mine, And&#x27;t <mark>has</mark> been still my duty to observe you. So I looke honestly,</div>
+<div class="excerpt">nere choose for me, y&#x27; are old and dimme Sir, And th&#x27; shadow of the earth ecclips&#x27;d your judgement, Y&#x27; have had your time without controwle deare father, And you <mark>must</mark> give me leave to take mine now Sir. <mark>Must</mark> I be gone too? Then this man will, what fortune he shall runne, father, <mark>Bee</mark>&#x27;t good or bad, I <mark>must</mark> partake it with him.</div>
+<div class="excerpt">But yet you know— I shall be an Heretique if this continue. What would you doe a bed? you make me blush, Sir. I am becomming Traitor. I&#x27;ve too much <mark>woman</mark> in me. I <mark>must</mark> be gone. Then we may walke. To bed, and pray then, we may have a faire end Of our faire loves; would I were worthy of you, Or of such parents that might give you</div>
+<div class="excerpt">though he have the meanes To bring his Mistresse to a Masque, or by Conveyance from some great ones lippes, to taste Such favour from the kings; or grant he purchase, Precedency in the Country, to be sworne A servant Extraordinary to the Queene; Nay, though he live in expectation of Some huge preferment in reversion; If He</div>
+<div class="excerpt">cannot love ye, let that satisfie you; Such vanities as you are to be laught at. But doe not kill &#x27;em Sir. To borrow me a while, Sir; But one that never fought yet <mark>has</mark> so curried, So bastinado&#x27;d them with manly carriage, They stand like things Gorgon had turn&#x27;d to stone: They watch&#x27;d your being absent, and then thought They might</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I am tyr&#x27;d Sir, And nere shall foot it home. Nor can you taxe me, Sir, I hope, for want of duty to deserve These favours from you. Make me understand Sir, What &#x27;tis you point at. And who gave you Commission to deliver Your verdict, Minion? Sir, I know them By publique fame, though yet I never saw them; And that oppos&#x27;d antipathy betweene Their various dispositions, renders them The generall discourse and argument; One part inclining to the Scholar Charles, The other side preferring Eustace, as A man compleat in Courtship. To be plaine, Sir, (Since you will teach me boldnesse) As they are Simply themselves, to neither; Let a Courtier Be never so exact, Let him be blest with All parts that yeeld him to a Virgin gracious, If he depend on others, and stand not On his owne bottomes, though he have the meanes To bring his Mistresse to a Masque, or by Conveyance from some great ones lippes, to taste Such favour from the kings; or grant he purchase, Precedency in the Country, to be sworne A servant Extraordinary to the Queene; Nay, though he live in expectation of Some huge preferment in reversion; If He Want a present fortune, at the best Those are but glorious dreames, and onely yeeld him A happinesse in posse, not in esse; Nor can they fetch him silkes from th&#x27;Mercer; nor Discharge a Taylors bill; nor in full plenty (Which still preserves a quiet bed at home) Maintaine a family. Troth (if he be nothing else) As of the Courtier; all his Songs, and Sonnets, His Anagrams, Acrosticks, Epigrammes, His deepe and Philosophicall discourse Of natures hidden secrets, makes not up A perfect husband; He can hardly borrow The Starres of the Celestiall crowne to make me A tire for my head; nor Charles Waine for a Coach, Nor Ganimede for a Page, nor a rich gowne From Juno&#x27;s Wardrobe, nor would I lye in (For I despaire not once to be a mother) Under heavens spangled Canopy, or banquet My guests and Gossips with imagin&#x27;d Nectar, Pure Orleans would doe better; no, no, father, Though I could be well pleas&#x27;d to have my husband A Courtier, and a Scholar, young, and valiant, These are but gawdy nothings, If there be not Something to make a substance. A full estate, and that said, I&#x27;ve said all, And get me such a one with these additions, Farewell Virginity, and welcome wedlocke. I am not So punctuall in all ceremonies, I will bate Two or three of these good parts, before Ile dwell Too long upon the choice. A husband&#x27;s welcome, And as an humble wife Ile entertaine him, No soveraignty I aime at, &#x27;tis the mans Sir, For she that seekes it, killes her husbands honour: The Gentleman I have seene, and well observ&#x27;d him, Yet finde not that grac&#x27;d excellence you promise, A pretty Gentleman, and he may please too, And some few flashes I have hear&#x27;d come from him, But not to admiration, as to others; Hee&#x27;s young, and may be good, yet he must make it, And I may helpe, and helpe to thanke him also. It is your pleasure I should make him mine, And&#x27;t has been still my duty to observe you. So I looke honestly, I feare no eyes, Sir. Waite on your Master, he shall have that befits him. A mad old Gentleman. I would not have a light head, nor one laden With too much learning, as they say, this Charles is, That makes his booke his Mistresse: Sure, there&#x27;s something Hid in this old mans anger, that declares him Not a meere Sot. I finde no fault, Better things well done than want time to doe them. Uncle, why are you sad? Can he speake, Sir? And does he speake well there? He is a man, Then conversation me thinkes— I like thy noblenesse. And me thinkes bravely, This the meere Scholar? I wonder; Is he your brother, Sir? Speake not so softly Sir, tis very likely. No certaine, Sir, I have heard nothing from you but things excellent. They have rich linings Sir. I would your brother— But touch&#x27;em inwardly, they smell of Copper. And one hand seale the match, Ime yours for ever. Nay certainly, tis done Sir. Onely conditionall, That if he had the Land, he had my love too; This Gentleman&#x27;s the heire, and hee&#x27;ll maintaine it. Pray be not angry Sir, at what I say; Or if you be, tis at your owne adventure. You have the outside of a pretty Gentleman, But by my troth your inside is but barren; Tis not a face I onely am in love with, Nor will I say your face is excellent, A reasonable hunting face to court the winde with; Nor th&#x27; are not words unlesse they be well plac&#x27;d too, Nor your sweet Dam mees, nor your hired verses, Nor telling me of Cloathes, nor Coach and horses, No nor your visits each day in new suites, Nor your blacke patches you weare variously, Some cut like starres, some in halfe Moones, some Lozenges, (All which but shew you still a younger brother.) Nor your long travailes, nor your little knowledge, Can make me doate upon you. Faith goe study, And gleane some goodnesse, that you may shew manly, Your brother at my suite Ime sure will teach you, Or onely study how to get a wife Sir, Y&#x27; are cast farre behinde, tis good you should be melancholy, It shewes likes a Gamester that had lost his money, And tis the fashion to weare your arme in a skarfe Sir, For you have had a shrewd cut ore the fingers. Yes, beleeve me father, You shall nere choose for me, y&#x27; are old and dimme Sir, And th&#x27; shadow of the earth ecclips&#x27;d your judgement, Y&#x27; have had your time without controwle deare father, And you must give me leave to take mine now Sir. Must I be gone too? Then this man will, what fortune he shall runne, father, Bee&#x27;t good or bad, I must partake it with him. When shall the Masque beginne? Ile weare course flannell first. Dare you venter that? He followes still, yet with a sober face; Would I might know the worst, and then I were satisfied. I am going to bed Sir. I feare he will perswade me to mistake him. Pray ye to your bed. True Sir, when tis lawfull: But yet you know— I shall be an Heretique if this continue. What would you doe a bed? you make me blush, Sir. I am becomming Traitor. I&#x27;ve too much woman in me. I must be gone. Then we may walke. To bed, and pray then, we may have a faire end Of our faire loves; would I were worthy of you, Or of such parents that might give you thankes: But I am poore in all but in your love. Once more, good night. Let it be ever night when I lose you. This is no time of night. Hold off your hands, unmannerly, rude Sir; Nor I, nor what I have depend on you. I cannot love ye, let that satisfie you; Such vanities as you are to be laught at. But doe not kill &#x27;em Sir. To borrow me a while, Sir; But one that never fought yet has so curried, So bastinado&#x27;d them with manly carriage, They stand like things Gorgon had turn&#x27;d to stone: They watch&#x27;d your being absent, and then thought They might doe wonders here, and they have done so; For by my troth, I wonder at their coldnesse, The nipping North or frosts never came neere them, St. George upon a Signe would grow more sensible: If the name of honour were for ever to be lost, These were the most sufficient men to doe it In all the world, and yet they are but young, What wil they rise to? They&#x27;re as full of fire As a frozen Glo-wormes tailes, and shine as goodly; Nobility and patience are match&#x27;d rarely In these three Gentlemen, they have right use on&#x27;t; They&#x27;ll stand still for an houre and be beaten. These are the Anagrammes of three great Worthies. Pray Sir be carefull of us. Sir, let not passion So farre transport you as to thinke in reason, This violent course repaires, but ruines it; That honour you would build up you destroy; What you would seeme to nourish, if respect Of my preferment or my reputation May challenge your paternall love and care, Why doe you, now good fortune has provided 〈2 pages duplicate〉 A better husband for me than your hopes Could ever fancy, strive to robbe me of him? In what is my Lord Charles defective, Sir? Unlesse deepe learning be a blemish in him, Or well proportion&#x27;d limbs be mulcts in Nature, Or what you onely aim&#x27;d at large revenewes, Are on the sudden growne distastfull to you? Of what can you accuse him? As I have a soule Sir.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Elder Brother</div><div class="body">Louis wishes his lazy daughter Angelina would take more exercise, but her woman Sylvia has a better idea: she should get married. Unfortunately Angelina has high standards: when Louis proposes one or other of Brisac’s sons, Charles the scholar and Eustace the courtier, she objects that neither will have the money to keep her as she would wish. Louis pursues the idea anyway, but the bookish Charles, who has only ever seen one woman, his mother, has been put off marriage by the bad examples of antiquity. Louis is willing to accept Eustace, the younger brother, so long as Brisac agrees to disinherit Charles. Much to the disgust of Charles’s uncle, Miramont, a legal instrument is drawn up for the purpose. Charles seems unconcerned by his father’s plans, until he sees Angelina, whereupon he changes his mind about women, refuses to sign away his birthright, and woos the girl himself. She finds him more attractive than Eustace, and the wedding is aborted. Brisac throws him out; Angelina goes with him, and they live together in unmarried chastity. Spurred on by his father, Eustace visits them at night and tries to seize Angelina, but Charles puts up a fight and takes Eustace’s sword from him. Brisac has arranged for Charles’s servant Andrew to marry Lily, and given the couple a farm; but in reality Lily is his mistress and, on the same night as the brothers fight, he visits her for sex. Andrew brings Miramont to the farm to see the liaison for himself, and intervenes as Brisac is undressing for bed. Brisac tries to buy Andrew’s silence with a larger grant of land before realizing that there is a second witness. Eustace borrows a sword and confronts Charles, but Charles will not give up Angelina, and they fight. The bout is interrupted by the arrival of news that Brisac has been arrested by Louis, who insists on the return of Angelina (in the same condition as before). The brothers join forces to rescue their father. Miramont points out that, if he pursues the case, Louis will both ruin Angelina’s reputation and put himself in the control of lawyers; so Louis drops the matter. Miramont pays off the officers and insists that, as a penance, Brisac should abide by his offer to enlarge Andrew’s farm.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

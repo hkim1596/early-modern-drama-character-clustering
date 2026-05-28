@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BAWDB in Thierry and Theodoret · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BAWDB</span>
+</nav>
+
+<h1>BAWDB</h1>
+<p class="lede">in <em>Thierry and Theodoret</em> — AnonymousFletcher, JohnMassinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1621</td></tr>
+<tr><th>Words</th><td>532</td></tr>
+<tr><th>Characters</th><td>2754</td></tr>
+<tr><th>BritDrama no.</th><td>1848</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">haue bene so long vs&#x27;d to prouide you Fresh bits of flesh since mine grew stale, that surely If cashir&#x27;d now, I shall proue a bad Cator In the Fishmarket of cold chastity, And for me, If I faile in my office to prouide you Fresh delicates, hang me. Faith I know none else, allmy bringing vp Aimdeat no other learning. The Phystian</div>
+<div class="excerpt">shall receiue this from my Lord, Shall haue a thousand crownes. besides His day of bastinadoing past ore, He shall not lose your grace, nor your good fauor. It <mark>must</mark> be a man Of credit in the Court, that is to be The foyle vnto your valour. If he be a Lord, &#x27;Twill be the greater grace. Why then behold that valiant man and Lord,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I hope your Highnesse Is pleas&#x27;d that I shall still hold my place with you, For I haue bene so long vs&#x27;d to prouide you Fresh bits of flesh since mine grew stale, that surely If cashir&#x27;d now, I shall proue a bad Cator In the Fishmarket of cold chastity, And for me, If I faile in my office to prouide you Fresh delicates, hang me. Faith I know none else, allmy bringing vp Aimdeat no other learning. The Phystian Helps euer at a dead lift; a fine calling, That can bothraise, and take downe, our vpon thee. Behold the man yon talke of. This lie beares a similitude of truele, Fie, you take the hangmans place. Would your highnesse Were pleas&#x27;d to informe me better of your purpose: I feele you Madam, The man that shall receiue this from my Lord, Shall haue a thousand crownes. besides His day of bastinadoing past ore, He shall not lose your grace, nor your good fauor. It must be a man Of credit in the Court, that is to be The foyle vnto your valour. If he be a Lord, &#x27;Twill be the greater grace. Why then behold that valiant man and Lord, That for your sake will take a cudgelling, For be assurde when it is spread abroad That you haue dealt with me, the&#x27;ile giue you out For one of the nine Worthies. This man of war will aduance. Wind him backe as you fauor my eares, I loue no noyse in my head, my braines haue hitherto Bin imployde in silent businesses. Giue ground whilst I drill my wits to the encounter, Deuitry. I take it. Is there another parcell of you, if it be at pawne I will gladly redeeme it to make you wholy mine. Thankes for your good remembrance, You haue bin a souldier Deuitry, and borne armes. Much good may it do you Sir. It is time you put vp your sword, and run a way for meate sir, nay if I had not withdrawne ere now, I might haue kept the; fast with you: but since the way to thriue is neuer late, what is the neerest course to profit thinke you? True sence, bawdry. Ile shew you a new way of prostitution, fall backe, further yet, further, there is fifty crownes, do but as much to Protaldye the Queenes fauoret, they are doubled. Giue him but an affront as he comes to the presence, and in his drawing make way like a true bawde to his valour, the son&#x27;s thy owne; if you take a scratch in the arme or so, euery drop of blood weighes downe a ducket. See, you shall not belong earning your wages, your worke&#x27;s before your eyes. What opinion will the managing of this affaire Bring to my wisedome? my inuention tickles With apprehension on&#x27;t: This is the man. Remember the condition as you looke for payment. Plague of the scruiners running hand, What a blow is this to my reputation? Where could I wish my selfe now? in the Ile of dogs, So I might scape scratching, for I see by her cats eyes I shall be claw&#x27;d fearefully.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Thierry and Theodoret</div><div class="body">up her attempts lascivious to make his mother life and enter holy Brunhild orders. give Her · . 60 I 1848. Thierry, King of France, and his Brother Theodoret 1617 response is to abscond to her other son, Thierrv, whom she persuades to appoint her lover, Protaldi, tda senior military command. Theodoret follows her and Thierry faces a conflict of loyalty, which he resolves in his brother&#x27;s favour. With Thierry&#x27;s agreement, Martel demonstrates comprehensively that Protaldi is a coward, first by tricking him into giving up his sword without a fight, then showing to what lengths he will go to avoid having to fight a duel. Brunhild fears that Thierry&#x27;s bride, Ordella, will eclipse her in preeminence, so at the wedding banquet she gives Thierry a potion that makes him impotent that night. Ordella is very understanding , but Thierry is concerned about the need to beget an heir, so Brunhild suggests he should consult a local hermit and astrologer. Her parasite, Lecure, impersonates the wise man, and tells Thierry that he will regain his potency ifhe kills the first female person he encounters the next day, whoever she may be. Lecure arranges for this to be Ordella herself. Not recognizing her in her veil, Thierry explains why she must die, and she agrees; but he cannot bring himself to go through with it when he realizes who she is. Martel dissuades Ordella from loyally committing suicide, and, suspecting a plot, has her pretend to be dead in order to smoke it out Meanwhile Brunhild spreads a rumour that Theodoret is illegitimate and has him secretly murdered by Protaldi at the continuing wedding revels. Believing that Theodoret was not his brother and that Ordella is dead, Thierry offers to make amends by marrying Memberge, Theodoret&#x27;s daughter. Brunhild is forced to admit her lies in order to prevent an incestuous marriage. She gives Thierry a poisoned handkerchief, which kills him; Martel brings Ordella to his deathbed. Brunhild admits complicity in his murder, and is sentenced to remain awake for the rest of her life; disturbed by the sight of Protaldi being tortured to death, she commits suicide. Thierry and Ordella die together , and Martel becomes King of France.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

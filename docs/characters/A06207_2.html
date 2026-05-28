@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2 in A King and No King · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>2</span>
+</nav>
+
+<h1>2</h1>
+<p class="lede">in <em>A King and No King</em> — Beaumont, FrancisFletcher, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1619</td></tr>
+<tr><th>Words</th><td>791</td></tr>
+<tr><th>Characters</th><td>4081</td></tr>
+<tr><th>BritDrama no.</th><td>1636</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">We ſhall out-<mark>goe</mark> her. The man told vs hee would walke a foote through the people. S&#x27;life yonders my Maſter I thinke. Let her looke to her ſelfe then, <mark>has</mark> ſhee not had thruſting enough yet; if ſhee ſtay ſhouldring here, ſhee may hap to <mark>goe</mark> home with a Cake in her bellie. <mark>Away</mark>, <mark>away</mark>, all&#x27;s done. You cannot hang too</div>
+<div class="excerpt">So much for vs; proceede. The error, and a ſore one, as I take it; Lies in the thing kicking. There ſprings a new branch: whoſe was the foo e? If he be ſure he <mark>has</mark> beene kickt enough: For that braue ſufferance you ſpeake of brother, Conſiſts not in a beating, and <mark>away</mark>, But in a cudgeld bodie, from eighteene To eight and thirtie:</div>
+<div class="excerpt">are bound By vertue of ou calling, to vtter our opinions Shortly, and diſ reetly. How farre Sir? Brother, this is a pretty caſe, pray ponder on&#x27;t, Our friend here <mark>has</mark> beene kickt. Sorely he ſayes: Now had he ſit downe here Vpon the meere kicke, it had beene cowardly. But our friend <mark>has</mark> r d m&#x27;d it, in deliuering His ſword without</div>
+<div class="excerpt">ſent me with to get it mended Sir; for if you marke, the noſe is ſomewhat looſe. My Lord this is foule play ifaith, to put a freſh man v pon vs; Men are but men. <mark>Has</mark> a diuelliſh hard foote, I neuer felt the like. If he kicke thus ith dog-daies, he will be drie founderd: what cure now Captaine, beſides oyle of bayes? Yes, God</div>
+<div class="excerpt">If he kicke thus ith dog-daies, he will be drie founderd: what cure now Captaine, beſides oyle of bayes? Yes, God be thanked; but I feele a ſhrewd ach, ſure he <mark>has</mark> ſprang my huckle bone. Captaine, we muſt requeſt your hands now to our ho nours. O my ſmall guts, a plague vpon theſe ſharpe toe&#x27;d ſhooes, they are murderers.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">We ſhall out-goe her. The man told vs hee would walke a foote through the people. S&#x27;life yonders my Maſter I thinke. Let her looke to her ſelfe then, has ſhee not had thruſting enough yet; if ſhee ſtay ſhouldring here, ſhee may hap to goe home with a Cake in her bellie. Away, away, all&#x27;s done. You cannot hang too much Sir for your honour, But to your cauſe, be wiſe, and ſpeake truth. Brother what thinke you of this caſe If he haue beaten him I grant the caſe; But how? VVe cannot be too ſubtill in this buſineſſe I ſay, but how? Thoſe blowes ath&#x27;face haue made a new caſe ont&#x27;, The reſt were but an honourable rud neſſe ▪ The King may doe much Captaine beieeue it, for had hee crackt your skull through like a bottle, or broke a rib or two with croſſing of you, yet you had loſt no honour: This is ſtrange you may imagin; but this is truth now Captaine. Brother you erre, tis fifteene mile a day, His ſtage is ten, his beatings are fifteene. No trouble at all to vs Sir, if we may Profit your vnderſtanding; we are bound By vertue of ou calling, to vtter our opinions Shortly, and diſ reetly. How farre Sir? Brother, this is a pretty caſe, pray ponder on&#x27;t, Our friend here has beene kickt. Sorely he ſayes: Now had he ſit downe here Vpon the meere kicke, it had beene cowardly. But our friend has r d m&#x27;d it, in deliuering His ſword without compulſion; and that man That tooke it of him, I pronounce a weake one, And his kicks nullities. He ſhould haue kickt him after the deliuerie, Which is the confirmation of a coward. I muſt not ſay ſo; Nor I muſt not heare it ſpoke byth&#x27; tongue of man You kickt deare brother; you are merrie. Lot them put it that are things wearie of their liues, &amp; know not honour: put caſe you were kickt? Nor no ſilly creature, that weares his head without a caſe, his ſoule in a skin-coate: you kickt deare brother. The boy may be ſuppoſ&#x27;d, hee&#x27;s lyable; but kicke my brother? By no meanes Captaine, let it be ſuppoſ&#x27;d ſtill; this word grant, makes not for vs. This muſt be granted brother? Still the muſt: Giue me the muſt againe, ag ine; brother you palter. Brother, I ſay you palter, the muſt three times toge ther; I weare as ſharpe ſteele as another man, And my Foxe bites as deepe, muſt my deare brother: But to the cauſe againe: In a word I ha done. Forward. So much for vs; proceede. The error, and a ſore one, as I take it; Lies in the thing kicking. There ſprings a new branch: whoſe was the foo e? If he be ſure he has beene kickt enough: For that braue ſufferance you ſpeake of brother, Conſiſts not in a beating, and away, But in a cudgeld bodie, from eighteene To eight and thirtie: in a head rebuk&#x27;t With pots of all Size, daggers, ſtooles, and bedſtaues, This ſhewes a valiant man. Imbrace him brother, this man is valiant, I know it by my ſelfe hees valiant. Tis fit it ſhould be. We will, and tell that Lord he muſt be rul&#x27;d, Or there be thoſe abroad will rule his Lordſhip. VVe knew that, or the fooliſh fellow had better a kick&#x27;t His Grandſire. Confirme, confirme I pray. Now let him come, and ſay he was not ſorry, And he ſleepes for it. It is ſo moſt renowned, Tis ſomewhat ſtrange. Your Lordſhip muſt vnderſtand we are no men ath&#x27; Law, that take pay for our opinions: it is ſufficient wee haue cleer&#x27;d our friend. O Lord ▪ my good Lord. O good Lord. More of your foot, I doe beſeech your Lordſhip. I beſeech your Lordſhip ſtay a little, my ſtrap&#x27;s tied to my codpiece point: Now when you pleaſe. Here tis Sir, a ſmall piece of Artillerie, that a gentle man a deare friend of your Lordſhips ſent me with to get it mended Sir; for if you marke, the noſe is ſomewhat looſe. My Lord this is foule play ifaith, to put a freſh man v pon vs; Men are but men. Has a diuelliſh hard foote, I neuer felt the like. If he kicke thus ith dog-daies, he will be drie founderd: what cure now Captaine, beſides oyle of bayes? Yes, God be thanked; but I feele a ſhrewd ach, ſure he has ſprang my huckle bone. Captaine, we muſt requeſt your hands now to our ho nours. O my ſmall guts, a plague vpon theſe ſharpe toe&#x27;d ſhooes, they are murderers.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A King and No King</div><div class="body">Arbaces has been away from his kingdom for many years fighting a war with Armenia, which he has just won. He has received reports from his Lord Protector, Gobrias, about the virtue and accomplishments of his younger sister Panthea, whom he has not seen since she was nine years old. He offers her hand in marriage to Tigranes, the vanquished Armenian King, but Tigranes demurs. Arbaces takes him back to Iberia to see her for himself. Tigranes’ objection lies in the fact that he already has a girlfriend, Spaconia, and he bribes the cowardly Bessus to bring her along and place her in Panthea’s household. Once there, she begs Panthea not to marry Tigranes, and Panthea agrees. Arane, Arbaces’ mother, has been trying to assassinate him since he came to the throne. Another attempt is foiled, but he pardons her when he returns in triumph. She clearly has an ulterior motive which is known to Gobrias, but both are discreet about its precise nature. Arbaces’ first meeting with Panthea as an adult proves unsettling: he falls in love with her. So does Tigranes. Identifying a rival, Arbaces imprisons him. Torn between desire and conscience, he also imprisons Panthea. Panthea gives Spaconia a token authorizing her to visit Tigranes in prison. He rejects her, but Arbaces finds them together and assumes that she is a go-between. Gobrias importunes him to release Panthea, who persuades him that his suspicions are unfounded: she loves him, and would act upon that love if to do so were not incestuous. The Armenians send Spaconia’s father as an ambassador to negotiate for Tigranes’ release. He believes his daughter has eloped with Bessus, but his denunciations of her bring Tigranes to his senses: he will make Spaconia his Queen. When Arbaces decides to kill Gobrias for corrupting him to incest, the truth comes out. Arbaces is not of royal blood. The old King married Arane when he was old and impotent, and, fearful about the succession, Gobrias and Arane conspired to produce an heir: Gobrias gave Arane his new-born son, and she faked his birth. Later, it proved that the King was not so impotent after all, and he died leaving Arane pregnant with Panthea, but by the time this was known, the young Arbaces had already succeeded to the throne. Since then, Gobrias and Arane have both been trying to put matters to rights, Arane with her murder plots and Gobrias by encouraging Arbaces to marry his putative sister and so establish the legitimacy of his teign. Arbaces publicly announces…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

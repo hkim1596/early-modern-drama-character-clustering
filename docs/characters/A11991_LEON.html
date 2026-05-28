@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LEON in Much Ado About Nothing · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LEON</span>
+</nav>
+
+<h1>LEON</h1>
+<p class="lede">in <em>Much Ado About Nothing</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>365</td></tr>
+<tr><th>Characters</th><td>1922</td></tr>
+<tr><th>BritDrama no.</th><td>1148</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">she, by my own spirit, for I should flout him, if he writ to me, yea thogh I loue him I should. Where is but a humour or a worme. Indeed he lookes yonger than he <mark>did</mark>, by the losse of a beard. Ile wait vpon them, I am ready. Confirmd, confirmd, O that is stronger made, Which was before bard vp with ribs of yron, Would the <mark>two</mark></div>
+<div class="excerpt"><mark>did</mark>, by the losse of a beard. Ile wait vpon them, I am ready. Confirmd, confirmd, O that is stronger made, Which was before bard vp with ribs of yron, Would the <mark>two</mark> princes lie, and Claudio lie, Who loued her so, that speaking of her foulenesse, Washt it with teares! hence from her, let her die. What shall become of this? what</div>
+<div class="excerpt">hence from her, let her die. What shall become of this? what will this do? Being that I flow in griefe, The smallest twine may leade me. Theres for thy paines. <mark>Goe</mark>, I discharge thee of thy prisoner, and I thanke thee. Vntill to morrow morning, Lords, farewell. No that you shall not till you take her hand, Before this Frier,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">You will neuer runne madde niece. Neuer came trouble to my house, in the likenesse of your grace; for trouble being gone, comfort should remaine: but when you depart from mee, sorrow abides, and happines takes his leaue. If you sweare my lord, you shall not be forsworne, let mee bidde you welcome, my lord, being reconciled to the Prince your brother: I owe you all duetie. Please it your grace leade on? Theres little of the melancholy element in her my lord, she is neuer sad, but when she sleeps, &amp; not euer sad then: for I haue heard my daughter say, she hath often dreampt of vnhappines, and wakt her selfe with laughing. O God ▪ counterfeit? there was neuer counterfeit of passion, came so neare the life of passion as she discouers it. What effects my Lord? she wil sit you, you heard my daughter tell you how. O she tore the letter into a thousand halfpence, raild at her self, that she should be so immodest to write, to one that she knew would flout her, I measure him, saies she, by my own spirit, for I should flout him, if he writ to me, yea thogh I loue him I should. Where is but a humour or a worme. Indeed he lookes yonger than he did, by the losse of a beard. Ile wait vpon them, I am ready. Confirmd, confirmd, O that is stronger made, Which was before bard vp with ribs of yron, Would the two princes lie, and Claudio lie, Who loued her so, that speaking of her foulenesse, Washt it with teares! hence from her, let her die. What shall become of this? what will this do? Being that I flow in griefe, The smallest twine may leade me. Theres for thy paines. Goe, I discharge thee of thy prisoner, and I thanke thee. Vntill to morrow morning, Lords, farewell. No that you shall not till you take her hand, Before this Frier, and sweare to marry hir. She died my Lord, but whiles her slaunder liu&#x27;d. Come cosin, I am sure you loue the gentleman. Peace I will stop your mouth. Weele haue dancing afterward.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Much Ado About Nothing</div><div class="body">Returning to Messina after a war, Claudio falls in love with Hero. At a masked revel, Don Pedro woos her for him by proxy; Don John maliciously tells Claudio that Pedro has wooed her for himself, but the truth soon purges Claudio’s jealousy and he and Hero are engaged to be married in a week’s time. In the interim, Don Pedro undertakes to make Beatrice and Benedick, who have a humour of mutual hatred, fall in love with each other. This is done by letting each of them overhear a conversation about how much in love the other is. Don John attempts to prevent Claudio’s marriage by showing him what he takes to be a nocturnal assignation between Hero and another man; in fact it is Margaret in Hero’s clothes, wooed by Borachio whom Don John has suborned. Claudio rejects Hero at the wedding, and the Friar proposes that she feign death to inculcate remorse in him. Borachio and his associate Conrad are arrested and examined, and confess the plot. As penance, Claudio undertakes to marry another ===== PAGE 61 ===== 1598 lady, said to be Leonato’s niece, without first seeing her; she is actually Hero. Benedick and Beatrice join Hero and Claudio to make it a double wedding. Don John flees Messina, but is apprehended and brought back to face punishment.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SA in 146 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SA</span>
+</nav>
+
+<h1>SA</h1>
+<p class="lede">in <em>146</em> — [84]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1598</td></tr>
+<tr><th>Words</th><td>1115</td></tr>
+<tr><th>Characters</th><td>5367</td></tr>
+<tr><th>BritDrama no.</th><td>146</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">grace if I liue. Nor mine I sweare. and so d … th mine which I like but little, Now if my husband be not all alone, He is from home and hath left me alone, So I <mark>must</mark> learne to lie, as children <mark>goe</mark>, All alone, all alone, which lesson now. I am able to beare a childe is worsse to me then when I was a child The morall this strength</div>
+<div class="excerpt">seemes to expresse. Happie Elimine, oh that I myght too. My fortune now sweete Irus. Say, s … y sweete Irus what my fortune is, Thou turnst from me, as when thou didest admire. The happ … e fortune of Elimine. Blest be thy … ppes sweete Irus, and that light, That guides thy bosome with such deepe fore sight, Sleepe shall not</div>
+<div class="excerpt">ppes sweete Irus, and that light, That guides thy bosome with such deepe fore sight, Sleepe shall not make a closet for these eyes, All this succeeding night for hast to rise. we that are sisters Irus by our vow, VVill be of one selfe blood and thankefull minde, To adore so cleare a sight in one so blinde. Not for a woer onely</div>
+<div class="excerpt">claret with my lookes, From whom if no … from old men should I flie I would haue my loue ne … ther old nor young But in the middle Iust betweene them both. Euen thus <mark>did</mark> … rsu say that he should say, Then by your leaue sir I will sit with you, And what was that I pray sir. Tis very prettie is it not Jaquine. I loue it sir aswell</div>
+<div class="excerpt">would my mother say, when you haue a husband. Keepe to him onely but now one may see, How horible a thing it is to change, Because it angers one so ho … bly, You <mark>must</mark> haue Vshers to make way be … e you, VVell mad … shorte heeles Ile be euen withyou, See where the mad brayne Count her husband comes ▪ VVhy no my Lord. Is this your</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">VVhy what is dalliance sayes my seruant then, How say you by that, well do you keepe it from vs, as much as you can, weele desire it neuerlesse I can tell ye, Trust vs good seruantes by our selues a while. Ile lay my life tis that my mother vses when she and o thers, Do beginne to talke and that she sayes to me mayde, Get ye hence fall to your needle: what a mayd and Idle. then do not name it for I feare tis naught. For … esterday I hard Menippus as he was talking, VVith my mothers maide and I stoode harkning at the cham ber doore, Sayde that, with that woord a mayd was got with childe. I meane with that the woord seemes to expresse. Happie Elimine, oh that I myght too. My fortune now sweete Irus. Say, s … y sweete Irus what my fortune is, Thou turnst from me, as when thou didest admire. The happ … e fortune of Elimine. Blest be thy … ppes sweete Irus, and that light, That guides thy bosome with such deepe fore sight, Sleepe shall not make a closet for these eyes, All this succeeding night for hast to rise. we that are sisters Irus by our vow, VVill be of one selfe blood and thankefull minde, To adore so cleare a sight in one so blinde. Not for a woer onely my Jaquine, But a quicke speeder girle for this is he, That all my … tune runnes vpon I tell thee, No my fine wench this and my selfe is well. And let him not sit downe like the oxe and the asse, But giue God thanks for we are worthie of it though we faite. Pardon me sir for if I see a man, I shall so blush still that I warrant you, I could make white wine claret with my lookes, From whom if no … from old men should I flie I would haue my loue ne … ther old nor young But in the middle Iust betweene them both. Euen thus did … rsu say that he should say, Then by your leaue sir I will sit with you, And what was that I pray sir. Tis very prettie is it not Jaquine. I loue it sir aswell as you loue me. VVel sir I drinke to you &amp; pray you thinke You are as welcome to me as this wine, Nay gentle Leon talke no more of loue If you loue God or a good countenance, For I shal quite be out of countenance then, Oh but he hath a great nose. Leon I loue and since tis foorth farewell. Impart it to my Parentes gentle Leon, And till we meete agayne at home farewell. And past a Lord what is that past I pray, And why so I pray. And yet he is not knowne to haue much land. I but my husband is able to 〈◊〉 〈◊〉 yours, And so will I by Gods grace if I liue. Nor mine I sweare. and so d … th mine which I like but little, Now if my husband be not all alone, He is from home and hath left me alone, So I must learne to lie, as children goe, All alone, all alone, which lesson now. I am able to beare a childe is worsse to me then when I was a child The morall this strength without a health a disaduantage is. Mistris what will you say if I can tel you where my maister is, VVhere Druso I pray thee. Out on her strumpet doth she bragge so much, Of her great Count, and glad to take my husband Hence comes her head tyres and her fay … gownes, Her trayne borne vp and a man bare before her, VVas this my fortune that should be so good, I fayth you begger you, you old false knaue, You holy v … e you propheticke asse, Know you noe better what shall come to passe, Ile be reuenged I fayth, I fayth Ile be reuenged. Now madam countesse do you make account. To take vp husbandes by your countishippe. Haue you the broade seale for i … , are you so hye, and stoope, To one so lowe as is my husband, Hence come your headtyres and your costly gownes, Your trayne borne vp and a man bare before you, Now sye on pride when woman goe thous naked. I euer thoug … that pride would haue a fall But little thought it would haue such a fall. There you lay last, forsooth there you lay last. I know I am deceiued for thou deceiuedst me, Thou mightest aswell haue pict my pursse I tell thee, Oh would my mother say, when you haue a husband. Keepe to him onely but now one may see, How horible a thing it is to change, Because it angers one so ho … bly, You must haue Vshers to make way be … e you, VVell mad … shorte heeles Ile be euen withyou, See where the mad brayne Count her husband comes ▪ VVhy no my Lord. Is this your riding gowne my Lord. VVhy, my Lord I meane not to trouble you, Why you may ch … se my Lord. My Lord I am sory for your heauinesse. My Lord tis enough to make an asse wise to beare tre s … . Loue you my Lord it is strange you wil aske it. Nor you shall not be the last I wi … refuse. Nor the foulest you hau … loud. Nor the vnfittest to hate. VVhy so my Lord. Do you delight in my fall so much. My Lord Ile bestowe an old Ierkin on you, I do not thinke so. A prettie fiction. I hope your Lordshippe will not doe me that wrong. VVhy my Lord what will you do there. Twentie to one he will, well my Lord if you come you come. Pittie gratious Lord. And I my Lord humbly intreate your grace. That where my husband Leon is deceast, And left me much in debt, his creditors Hauing seased all I haue into their handes, And turnd me with this haplesse burthen heere, Into the streetes your highnesse will descend, To my reliefe by some conuenient order. So thinkes the world my husband was with you. Oh holy Irus blessed be thy tongue, That like an orator hath told our fortunes. Tis not the face and colour I regard, But fresh and louely youth allures my choyse. And thee most beautious Bion I affecte.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 146</div><div class="body">Jehovah sends John the Baptist to proclaim the coming of Christ in accordance with ancient prophecy. Having baptised Christ, John turns his attention to King Herod. The Pharisees, who feel threatened by John’s preaching, instigate an inquiry; but Herod is satisfied that he is not an evil man, and consents to see him. However, the Pharisees have an ally in Herod’s wife, Herodias: John has spoken against their happy but illicit marriage, and she fears being sent back to her despised first husband. Using her sexual allure, she persuades Herod to imprison John, but Herod will not put him to death. From his prison cell, John sends his disciples to find out whether Jesus is the promised saviour; they report back that he is. Herodias visits him, but cannot persuade him to recant. Herod celebrates his birthday with a feast. Tryphera’s dancing pleases him so much that he swears to give her whatever she desires. Herodias puts her up to asking for John’s severed head on a charger. Herod obliges; nobody tries to dissuade him. Jehovah declares that good will come of John’s death. Both Herodias and Herod feel guilty; Herod gives John’s body to his disciples for burial.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

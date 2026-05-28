@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QUICK in Eastward Ho · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>QUICK</span>
+</nav>
+
+<h1>QUICK</h1>
+<p class="lede">in <em>Eastward Ho</em> — Chapman, GeorgeJonson, BenMarston, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1605</td></tr>
+<tr><th>Words</th><td>1997</td></tr>
+<tr><th>Characters</th><td>10480</td></tr>
+<tr><th>BritDrama no.</th><td>1473</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">thy friends, For one to ſell thy baſe gold ends Quickeſiluer, now no more attends Thee Touchſtone. But Dad, haſt thou ſeene my running Gelding dreſt to day? What <mark>did</mark> he eate him? Tuſh hee&#x27;s no Iourney-man in his craft, that can not doe that. I Dad thou mayſt well <mark>bee</mark> called Securitie, for thou takeſt the ſafeſt courſe. And you</div>
+<div class="excerpt">muſt haue Trades to liue withall; For wee cannot ſtand without legges, nor flye with out wings; and a number of ſuch skurvie phraſes. No, I ſay ſtill; hee that <mark>has</mark> wit, let him liue by his wit: hee that <mark>has</mark> none, let him be a Tradeſ-man. <mark>Two</mark> hundered pounds woorth of wood readye to fell. And a fine ſweete houſe that ſtands</div>
+<div class="excerpt">begot thee, thou Goul ding of Goulding-hall, ha boy? Rakehell? rakehell? I forſooth: (vmp.) Tis but the coldneſſe of my ſtomack forſooth. An&#x27;t pleaſe you ſir, we <mark>did</mark> but drinke (vmp,) to the comming off, of the Knightly Bridegrome. I forſooth: we druncke to his comming on (vmp,) when we went to bed; and now we are vp, we muſt</div>
+<div class="excerpt">ney, ſaue my credit, I muſt dine with the Seruing men and their wiues; and their wiues ſirha. So do I. my fathers a Gentleman, Worke vpon that now; Eaſtward hoe. <mark>Did</mark> liue impriſon&#x27;d in my wanton fleſh. Well ſayd ſweet Syn: bring forth my brauerie. Now let my Truncks ſhoote ſoorth their ſilkes concealde, I now am free; and now</div>
+<div class="excerpt">Dalida, Ile lie and ſnore out my enfranchiſde ſtate. When Sampſon was a tall yong man His power and ſtrength increaſed than, He ſould no more, nor cup, nor can, But <mark>did</mark> them all diſpiſe. Old Touchstone, now wright to thy friends, For one to ſell thy baſe gold ends Quickeſiluer, now no more attends Thee Touchſtone. But Dad, haſt</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Indeed, and in very good ſo ber truth, Sir. Why Sir I hope a man may vſe his recreation with his maiſters profit. Worke vpon that now. Why zbloud ſir, my mother&#x27;s a Gentlewoman: and my father a Iuſtice of Peace, and of Quorum, and tho I am a yonger brother and a prentiſe yet I hope I am my fathers ſonne: and by Gods lidde, tis for your worſhip and for your commodi tie that I keepe companie. I am intertaind among gallants, true: They call me coozen Franke, right; Ilend them mon nies, good; they ſpend it, well. But when they are ſpent, muſt not they ſtriue to get more? muſt not their land flye? and to whom? ſhall not your worſhip ha, the refuſall? well, I am a good member of the Citty if I were well conſide red. How would Morchants thriue, if Gentlemen would not be vnthriftes? How could Gentlemen be vnthriſts if their humours were not fed? How ſhould their humours be fedde but by whit meate, and cunning ſecondings? well, the Cittie might conſider vs. I am going to an Ordinary now; the gal lants fall to play, I carry light golde with me: the gallants call coozen Francke ſome golde for ſiluer, I change, gaine by it, the gallants looſe the gold; and then call coozen Francke lend me ſome ſiluer. Why— Why Slid ſir, I haue as good, as proper gallants wordes for it as any are in London, Gentlemen of good phraſe, perfect language, paſſingly behau&#x27;d, Gallants that weare ſocks and cleane linnen, and call me kinde coozen Francke, good coozen Francke, for they know my Father; and by god; lidde ſhall not I truſt hem? not truſt? Mary ſough goodman flat-cap: Sfoot tho I am a prentiſe I can giue armes, and my father&#x27;s a iuſtice a peace by diſcent: and zbloud— Why do nothing, be like a gentleman, be idle the curſſe of man is labour. Wipe thy bum with teſtones, &amp; make Duckes and Drakes with ſhillings: What Eaſtward hoe. Wilt thou crie, what iſt yee lack? ſtand with a bare pate, and a dropping noſe, vnder a wodden pent-houſe, and a t a gentle man? wilt thou beare Tankards, and maiſt beare Aimes? be rul&#x27;d, turne gallant, Eaſtward hoe, ta lyre, lyre, ro., Who calls Ieronimo? ſpeake here I am: gods ſo, how like a ſheepe thou lookſt, a my conſcience ſome cowheard begot thee, thou Goul ding of Goulding-hall, ha boy? Rakehell? rakehell? I forſooth: (vmp.) Tis but the coldneſſe of my ſtomack forſooth. An&#x27;t pleaſe you ſir, we did but drinke (vmp,) to the comming off, of the Knightly Bridegrome. I forſooth: we druncke to his comming on (vmp,) when we went to bed; and now we are vp, we muſt drinke to his comming off: for thats the chiefe honour of a Souldier ſir, and therfore we muſt drinke ſo much the more to it, forſooth. (vmp.) The Knights men forſooth be ſtill a their knees at it, (vmp) &amp; becauſe tis for your credit ſir, I wold be loth to flinch. So ſir, now I will go keepe my (vmp) credit with &#x27;hem an&#x27;t pleaſe you ſir. Yes forſooth. Exit. Quick. Eaſtward Hoe; Holla ye pampered lades of Aſia. Shame? what ſhame? I thought, thou wouldſt ſhow thy bringing vp: and thou wert a Gentleman as I am, thou wouldſt thinke it no ſhame to be drunke. Lend me ſome mo ney, ſaue my credit, I muſt dine with the Seruing men and their wiues; and their wiues ſirha. So do I. my fathers a Gentleman, Worke vpon that now; Eaſtward hoe. Did liue impriſon&#x27;d in my wanton fleſh. Well ſayd ſweet Syn: bring forth my brauerie. Now let my Truncks ſhoote ſoorth their ſilkes concealde, I now am free; and now will iuſtifie My Trunkes and Punkes: Auant dull Flat-cap then, Ʋ ia, the curtaine that ſhaddowed Borgia; There lie thou huske of my envaſſail&#x27;d State. I Sampſon now, haue burſt the Philiſtins Bands, And in thy lappe my louely Dalida, Ile lie and ſnore out my enfranchiſde ſtate. When Sampſon was a tall yong man His power and ſtrength increaſed than, He ſould no more, nor cup, nor can, But did them all diſpiſe. Old Touchstone, now wright to thy friends, For one to ſell thy baſe gold ends Quickeſiluer, now no more attends Thee Touchſtone. But Dad, haſt thou ſeene my running Gelding dreſt to day? What did he eate him? Tuſh hee&#x27;s no Iourney-man in his craft, that can not doe that. I Dad thou mayſt well bee called Securitie, for thou takeſt the ſafeſt courſe. And you haue good ſecuritie? And yet forſooth wee muſt haue Trades to liue withall; For wee cannot ſtand without legges, nor flye with out wings; and a number of ſuch skurvie phraſes. No, I ſay ſtill; hee that has wit, let him liue by his wit: hee that has none, let him be a Tradeſ-man. Two hundered pounds woorth of wood readye to fell. And a fine ſweete houſe that ſtands iuſt in the midſt an&#x27;t, like a Pricke in the midſt of a Circle; would I were your Far mer, for a hundred pound a yeere. A pox of your hunger and thirſt. Well Dad, let him haue money: All he could any way get, is beſtowed on a Ship, now bound for Ʋ irginia: the frame of which voiage is ſo cloſe ly conuaide, that his new Ladie nor any of her friendes know it. Notwithſtanding, as ſoone as his Ladyes hand is gotten to the ſale of her inheritance, and you haue furniſht him with money, he will inſtantly hoyſt Saile, and away. How ventrous he is to him, and how iealous to others! Mary Madam, ſhee&#x27;s married by this time to Pren tiſe Goulding; your Father, and ſome one more, ſtole to Church with &#x27;hem, in all the haſte, that the cold meat leſt at your wed ding, might ſerue to furniſh their Nuptiall table. I Madam. I know not what you meane Madam. Well ſaid olde Touchstone, I am proude to heare thee enter a ſet ſpeech yfaith, forth I beſeech thee. Go too old Quipper: forth with thy ſpeech I ſay. Now, O now, I muſt depart; Parting though it abſence moue, This Dittie knight, doe I ſee in thy lookes in Capitall Letters. What a grieftis to depart, and leaue the ſlower that has my hart? My ſweete Ladie, and alacke for wee, why ſhould we part ſo? Tell truth Knight, and ſhame all diſſembling Louers; does not your paine lye on that ſide? Excellent eaſily; diuide your ſelfe in two halfes, iuſt by the girdleſtead; ſend one halfe with your Lady, and keepe the cother your ſelfe: or elſe doe as all true Louers doe, part with your heart and leaue your bodie behinde: I haue ſeen&#x27;t done a hundred times: Tis as eaſie a matter for a Louer to part with out a heart from his ſweete heart, and he nere the worſe: as for a Mouſe to get from a Trappe and leaue her taile behinde him. See here comes the Writings. Thinke what they liſt; They long&#x27;d for a vagarie in to the Countrie, and now they are fitted: So a woman marry to ride in a Coach, ſhe cares not if ſhe ride to her Ruine; Tis the great ende of many of their mariages: This is not firſt time a Lady has ridde a falſe iournie in her Coach I hope. Was euer Raſcall, honied ſo with poyſon? He that delights in ſlauiſh Auarice. Is apt to ioy in euery ſort of vice. He that delights in ſlauiſh Auarice. Is apt to ioy in euery ſort of vice. Wel, ile goe fetch his wife, whilſt he the Lawyers. Gods me there&#x27;s the miſchiefe; but harke you, here&#x27;s an excellent deuice; fore God a Rare one: I will carry her a Saylers gowne and cap and couer her; &amp; a players beard; I tell you a Sailers Cap: ſlight God forgiue mee, what kind of ſigentmemorie haue you? Tuſh man, for that, make her a ſawcie ſayler. What ſtratagem haue you now? O my Dad! he goes as twere the Deuill to fetch the Lawyer; and deuill ſhall he be if hornes wil make him. A pox of that head, is there more toyes yet? For that I hope Dad you will take our words. Ile wait vpon you ſir. And fetch you ouer, you were nere ſo fetcht: Go, to the Tauerne Knight, your followers Dare not be drunke I thinke, before their Captaine. Exit. Here&#x27;s the Gentlewoman your coſin ſir, whom with much entreatie I haue brought to take her leaue of you in a Tauerne; aſham&#x27;d whereof, you muſt pardon her if ſhe put not off her Maske. Pray ſir, take you no notice of her, for ſhe will not be knowne to you. No more then you ſir, at this time, his learning muſt pardon her. I pledge it Sir, hath it gone rounde, Captaines? Accur&#x27;ſt, that euer I was ſau&#x27;d, or borne. How fatall is my ſad ariuall here? As if the Starres, and Prouidence ſpake to mee, And ſayd, the drift of all vnlawfull courſes, (What euer ende they dare propoſe themſelues, In frame of their licentious policyes.) In the firme order of iuſt Deſtinie, They are the ready high wayes to our Ruines. I know not what to doe, my wicked hopes Are, with this Tempeſt, torne vp by the rootes. O, which way ſhall I bend my deſperate ſteppes, In which vnſufferable Shame and Miſerie Will not attend them? I will walke this Banck, And ſee if I can meete the other reliques Of our poore ſhip-wrackt Crew, or heare of them. The Knight (alas) was ſo farre gone with wine, And th&#x27;other three, that I refuſ de their Boate, And tooke the hapleſſe Woman in another, Who cannot but be ſuncke, what euer Fortune Hath wrought vpon the others deſperate liues. Faith gone quite from her Name, as ſhe is from her Fame I thinke; I left her to the mercie of the water. Nay this I will do beſides; Ile take you off twelue pence from euery Angell, with a kind of Aquafortis, and neuer deface any part of the Image. O God Sir! Good Sir, goe in and talke with him. The Light dos him harme, and his example will bee hurtfull to the weake Pri ſoneis. Fit, Father Securitie, that you&#x27;le bee ſtill ſo prophane, will nothing humble you? Enter two Priſoners, with a Friend. How now, M, Woolfe? What newes? what returne? I thanke him. Good M. Bramble, trouble our quiet no more; doe not moleſt vs in Priſon thus, with your winding deuiſes: Pray you depart. For my pat, I co mm t my cauſe to him that can ſuccour mee, let God worke his will. M. Woolfe, I pray you let this be diſtributed, among the Priſoners, and deſire &#x27;hem to pray for vs. Sir, it is all the Teſtmonie I ſhall leaue behind me to the World, and my Maſter, that I haue ſo offended. It is in imitation of Maningtons; he that was hangd at Cambridge, that cut of the Horſes head at a blow. To the tune of I waile in woe, I plunge in paine. How like you it Gentlemen? This is the laſt, and the Farewell. Farevvel Cheapſide, ſarevvel ſvveet trade Of Goldſmithes all, that neuer ſhall fade Farevvell deare fellovv Prentiſes all And be you vvarned by my ſall: Shun Vſurers, Bauds, and dice, and drabs. Auoide them as you vvould French ſcabs Seeke not to goe beyond your Tether, But cut your Thongs vnto your Lether So ſhall you thriue by little and little, Scape Tiborne, Cou ̄ ters, &amp; the Spitle Maſter! O ſir, I am not worthy to ſee your worſhipfull face.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Eastward Ho</div><div class="body">The goldsmith [owehstone has two apprentices, the rebellious prodigal QUIEKSIWVEF and the virtuous Golding, and two daughters, the proud Gertrude and the modest Mildréd. Mistress Touchstone insists that Gertrude should marry above her rank to Sim@PéetronelFlash, while Touchstone bestows Mildred on Golding. Quicksilver is sacked after appearing for work drunk; Golding is also released from his indentures to become his former master’s son-in-law. Quicksilver considers becoming a merchant, then conspires with Security to entrap Sir Petronel Flash into debt to finance the secret expedition to Virginia he is planning. While Gertrude travels to her new husband’s fictitious country castle, Sir Petronel plans a _ - sexual liaison with [Winifméd| Security’s wife. Quicksilver and Sir Petronel both set sail, each in a different vessel, with the jealous S€@uirity following in a third, but a storm wrecks all three boats at Cuckold’s Haven. Winifred convinces Security that his suspicions are groundless. Quicksilver and Sir Petronel are arrested and sent to prison by Golding, now a deputy alderman, on suspicion of stealing from Touchstone. They and Security become penitent in their incarceration, but Touchstone is determined to prosecute them. Golding wishes to be more forgiving, and feigns his own imprisonment to bring his father-in-law to the jail. There Touchstone sees and accepts the sincerity of the miscreants’ repentance; Quicksilver, Sir Petronel, and Security are released, and Quicksilver promises to marry Sindefy, his punk.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

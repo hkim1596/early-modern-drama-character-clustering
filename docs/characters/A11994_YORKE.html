@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YORKE in Richard the Second · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>YORKE</span>
+</nav>
+
+<h1>YORKE</h1>
+<p class="lede">in <em>Richard the Second</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1597</td></tr>
+<tr><th>Words</th><td>1851</td></tr>
+<tr><th>Characters</th><td>9740</td></tr>
+<tr><th>BritDrama no.</th><td>1002</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">heire, and his high scepter yeeldes, To the possession of thy royall hand: Ascend his throne, descending now from him, And long liue <mark>Henry</mark> fourth of that name. Where <mark>did</mark> I leaue? Then (as I said) the <mark>Duke</mark> great Bullingbrooke Mounted vpon a hote and fierie steede, Which his aspiring rider seemd to know, With slow, but stately pase</div>
+<div class="excerpt">brooke, About his mariadge, nor my owne disgrace, Haue euer made me sower my patient cheeke, Or bende one wrinckie on my soueraignes face: I am the last of noble Edwards sonnes, Of whom thy father Prince of Wales wa first In warre was neuer Lyon ragde more fierce, In peace was neuer gentle lambe more milde, Then was that young</div>
+<div class="excerpt">After a well-graced Actor leaues the stage, Are ydly bent on him that enters next, Thinking his prattle to be edious; Euen so, or with much more contempt mens eies <mark>Did</mark> scowle on gentle Ric. no man cried, God saue him, No ioyfull tongue gaue him his welcome home, But dust was throwen vpon his 〈…〉 Which with such gentle sorrow he</div>
+<div class="excerpt">hast, for euen so lookt he, Accomplisht with a number of thy howers; But when he frowned it was against the french, And not against his friends: his noble hand <mark>Did</mark> win what he <mark>did</mark> spende, and spent not that Which 〈◊〉 triumphant fathers hand had won e: His hands were guilty of no kin ed bloud, But bloudie with the enemies of</div>
+<div class="excerpt">gripe into your hands The roialties and rights of banisht Hereford: Is not Gaunt dead? and doth not Here ford liue? Was not Gaunt iust? and is not Harrie true? <mark>Did</mark> not the one deserue to haue an heire? Is not his heire a well deseruing sonne? Take Herefordes rightes away, and take from time His charters ▪ and his cust omarie</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">No, it is stopt with other flattering foundes. As praises of wh se taste the wise are found Lasciuious meeter to whose venome sound The open eare of youth doth alwayes listen. Report of fashions in proude Italie, Whose maners still our tardy apish nation Limps after in base i itation: Where doth the world th ust forth a vanitie. So it be new, theres no respect how vile, That is not quickly buzd into his eares? Then all too late comes Counsell to be heard, Where will doth mutiny with wits regard: Direct not him whose way himselfe wil chuse. Tis breath thou lackst and that breath wilt thou loose. The King is come, deale mildely with his youth, For young hot colts being ragde, do rage the more. I doe beseech your Maiesty, impute his words To waiward sicklines and age in him, He loues you on my life, and holdes you deere, As Harry Duke of Hereford were he here. Be Yorke the next that must be bankrout so ▪ Though death be poore, it ends a mortall wo. How long shal I be patient? ah how long Shall tender duty make me suffer wrong? Not Glocesters death, nor Herefords banishment, Nor Gauntes robukes, not Englands priuate wrongs, Nor the preuention or poore Bulling brooke, About his mariadge, nor my owne disgrace, Haue euer made me sower my patient cheeke, Or bende one wrinckie on my soueraignes face: I am the last of noble Edwards sonnes, Of whom thy father Prince of Wales wa first In warre was neuer Lyon ragde more fierce, In peace was neuer gentle lambe more milde, Then was that young and princely Gentleman: His face thou hast, for euen so lookt he, Accomplisht with a number of thy howers; But when he frowned it was against the french, And not against his friends: his noble hand Did win what he did spende, and spent not that Which 〈◊〉 triumphant fathers hand had won e: His hands were guilty of no kin ed bloud, But bloudie with the enemies of his kinne: Oh Richard: Yorke is too far gone with griefe, Or else he neuer would compare betweene. Oh my liege, pardone me if you please, If not I pleasd not to be pardoned, am content with all, Seeke you to seaze and gripe into your hands The roialties and rights of banisht Hereford: Is not Gaunt dead? and doth not Here ford liue? Was not Gaunt iust? and is not Harrie true? Did not the one deserue to haue an heire? Is not his heire a well deseruing sonne? Take Herefordes rightes away, and take from time His charters ▪ and his cust omarie rightes; Let not to morrow then ensue to da e: Be not thy selfe. For how a t thou a King But by faire sequence and succession? Now afore God God forbidde I say true, If you doe wrongfully seaze Herefords rightes, Call in the letters patents that he hath By his attourneies generall to sue His liuery, and deny his offred homage, You plucke a thousand dangers on your head, You loose a thousand well disposed hearts, And pricke my tender patience to those thoughts. Which honour, and alleageance cannot thinke. Ile not be by the while, my liege farewell, What will ensue hereof thers none can tell: But by bad courses may be vnderstood That their euents can neuer fall out good. Should I do so I should bely my thoughts, Comfort&#x27;s in heauen, and we are on the earth, VVhere nothing liues but c osses, cares and griefe: Your husband, he is gone to saue far off, VVhilst others come to make him loose at home: Heere am I lef to vnderprop his land, Who weake with age cannot support my selfe, Now comes the sicke houre that his surfet made, Now shall he trie his friends that flatterd him. He was; why so go all which way it will: The nobles they are fled, the commons they are colde, And will (I feare) reuolton Herefords side. S rra, get thee to Plashie to my sister Glocester, Bid her send me presently a thousand pound, Hold take my ring. What ist knaue? God for his mercy, what a tide of woes Comes rushing on this wofull land at once! I know not what to do: I would to God, (So my vntruth had not prouokt him to it) The King had cut off my head with my brothers. Wh t are there no Posts dispatcht for Ireland? H w shal we do for money for these wars? Come sister, cousin I would say, pray pardon me: Go fellow get thee home, prouide some cartes, And bring away the armour that is there. Gentlemen, will you go muster men? If I know how or which way to order these affayres Thus disorderly thrust into my hands, Neuer beleeue me: both are my kinsmen. Tone is my soueraigne, whom both my oath And duety bids defend; tother againe Is my kinsman, whom the King hath wrongd, Whom conscience, and my kinred bids to right. Wel somewhat we must do: Come cousin, Ile dispose of you: Gentlemen, go muster vp your men, And meete me presently at Barkly: I sho ld to Plashie too, but time wil not permit: All is vneuen, and euery thing is left at sixe and seauen. Shew me thy humbl heart, and not thy knee, Whose duety is deceiueable and false. Euen in condition of the worst degree, In grosse rebelli n and detested treason, Thou art a banisht man and here art come, Before the expiration of thy time, In bra ng armes against thy soueraigne. My Lords of England, let me tell you this: I haue had feeling of my cou ins wrongs, And labourd all I could to do him right: But in this kind to come, in brauing armes Be his owne caruer, and cut out his way, To finde out right wyth wrong it may not be: And you that do abette him in this kinde, Cherish rebellion, and are rebells all. Wel wel ▪ I see the issue of these armes, I cannot mend it I must needes confesse, Because my power is weake and all ill left: But if I could, by him that gaue me life, I would attach you all, and make you stoope Vnto the soueraigne mercie of the king; But since I cannot, be it knowen vnto you, I do remaine as newter, so fare you well, Vnlesse you please to enter in the castle, And there repose you for this night. It may be I will go with you, but yet Ile pawse, For I am loath to breake our countries lawes ▪ Nor friends, nor foes to me welcome you are: Things past redresse, are now with me past care. A gentleman of mine I haue dispatcht, With letters of your loue to her at large. It would beseeme the Lord Northumberland To say King Richard; alacke the heauy day, When such a sacred King should 〈◊〉 his head. The time hath bin, would you haue beene so briefe with him, He would haue bin so briefe to shorten you, For taking so the head. your whole heads length: Take not (good cousin) further then you should, Lest you mistake the heauens are ouer our heads. Yet lookes he like a King, beholde his eye. As bright as is the Eagles, lightens forth Controlling maiestie; alacke alacke for woe, That any harme should staine so faire a shew. Great Duke of Lancaster I come to thee; From plume-pluckt Richard, who with willing soule, Adopts the heire, and his high scepter yeeldes, To the possession of thy royall hand: Ascend his throne, descending now from him, And long liue Henry fourth of that name. Where did I leaue? Then (as I said) the Duke great Bullingbrooke Mounted vpon a hote and fierie steede, Which his aspiring rider seemd to know, With slow, but stately pase kept on his course, Whilst all tongues cried, God saue the Bullingbrooke, You would haue thought the very 〈…〉 o many greedy lookes of yong and old Through casements darted their desiring eies Vpon his visage, and that all the wa les With painted imagery had said at once, Iesu preserue the welcome Bullingbrooke, Whilst he from the one side to the other turning Bare-headed, lower than his prowd steedes ne ke Bespake them thus; I thanke you country men: And thus still doing ▪ thus he passt along. As in a Theater the eies of men, After a well-graced Actor leaues the stage, Are ydly bent on him that enters next, Thinking his prattle to be edious; Euen so, or with much more contempt mens eies Did scowle on gentle Ric. no man cried, God saue him, No ioyfull tongue gaue him his welcome home, But dust was throwen vpon his 〈…〉 Which with such gentle sorrow he shooke off, His face still combating with teares and smiles, The badges of his griefe and patience, That had not God for some strong purpose steeld The hearts of men, they must perforce haue melted, 〈…〉 But heauen hath a hand in these euents, To whose high ▪ will we bound our calme contents, To Bullingbrooke are we sworne subiects now, Whose state and honour I for ay allow. Aumerle that was, But that is lost, for being Richards friend: And Madam, you must call him Rutland now: I am in parleament pledge for his truth And lasting fealtie to the new made king. Well, beare you wel in this new spring of time, Lest you be cropt before you come to prime. What newes from Oxford, do these iusts &amp; triump hs hold? you will be there I know. What seale is that that hangs without thy bosome? yea, lookst thou pale? let me see the writing, No matter then who see it, I will be satisfied, let me see the writing. Which for some reasons sir I meane to see. I feare I feare. Bound to himselfe; what doth he with a bond That he is bound to. Wife, thou art a foole: Boy, let me see the writing. I will be satisfied, let me see it I say: Treason, foule treason, villaine, traitor ▪ slaue, Ho, who is within there? saddle my horse, God or his mercy! what treachery is here? Giue me my bootes I say, saddle my horse ▪ Now by mine honour, by my life, by my troth I will appeach the villaine. Peace foolish woman. If thou do pardon whosoeuer pray, More sinnes for this forgiuenes prosper may: This festred ioynt cut off, the rest rest found, This let alone wil all the rest confound. Thou frantike woman, what dost thou make here? Shall thy old dugs once more a traitor reare? Against them both my true ioynts bended be, Ill maist thou thriue if thou graunt any grace. Good aunt stand vp. Speake it in French, King say, Pardonne oy.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Richard the Second</div><div class="body">HennyiBolingbroke and THOMasIMGWbiay accuse one another of treason. Bolingbroke claims that Mowbray has misappropriated money intended to pay the army, and is responsible for the murder of the Duke of Gleweester. Mowbray insists that the money he kept was in reimbursement of legitimate expenses, but has no very clear rebuttal to the murder charge. They challenge one another to fight, and KimglRi@hard is unable to persuade them out of it. On the appointed day, however, he intervenes to halt the trial by combat and banishes them both, Bolingbroke for a term of years and Mowbray forever; Bolingbroke’s sentence is ===== PAGE 288 ===== cut from ten years to six to please his father, JOHMIS Gaunt Richard is using unorthodox means to raise revenue, including leases and forced loans. He goes to visit Gaunt, who is mortally ill, hoping to find him dead so that he can seize the estate to pay for his Irish wars; but he arrives too soon and has to listen to some dying words of wisdom. He then sequesters Gaunt’s property, despite fRelDUKeIOMork&#x27;s protest at the dispossession of the rightful heir, Bolingbroke. He goes to Ireland, leaving York to rule England in his absence. NOrhUmbeHand and other nobles, discontented with Richard’s fiscal practices, learn that Bolingbroke is returning to England with an army, and join him. York mobilizes troops to defend the kingdom, but Bolingbroke insists that he only comes to claim his inheritance. Richard returns from Ireland, intending to crush the rebellion, only to find that the Welsh troops with whom he was to rendezvous have given up waiting, thinking him dead, and disbanded themselves. He gives in to despair on learning that Bolingbroke has executed his favourites and won York’s support. Bolingbroke demands the repeal of his banishment and restoration of his lands, but Richard is willing even to give up the crown. At a parliament, there are persistent rumours and recriminations about Gloucester’s death, and gages thud to the floor as numerous lords challenge one another to fight. Bolingbroke controls the situation. Richard resigns in his favour, and he becomes King Henry IV; HelBishoplofcarlisle dissents and is arrested. Richard is summoned to make a formal, public surrender of power, but he balks at the demand that he read a list of charges against his regime. His Qh returns to France, and he is imprisoned at Pontefract. WorkSMson, degraded in rank for supporting Richard, joins a conspiracy to assassinate the new King. York…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

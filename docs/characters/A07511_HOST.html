@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HOST in A Trick to Catch the Old One · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>HOST</span>
+</nav>
+
+<h1>HOST</h1>
+<p class="lede">in <em>A Trick to Catch the Old One</em> — Middleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1608</td></tr>
+<tr><th>Words</th><td>1063</td></tr>
+<tr><th>Characters</th><td>5484</td></tr>
+<tr><th>BritDrama no.</th><td>1467</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Miſtris is like to bring him to a goodly ſeate yonder, foure hundred a yeare by my faith, I ſir ▪ A Leſterſhire gentleman ſir. Fayth he brought her vp to towne ſir, <mark>has</mark> the beſt card in all the bunch fort, her <mark>heart</mark>: and I know my Miſtris will <mark>bee</mark> married, ere ſhe <mark>goe</mark> downe, nay Ile ſweare that, for ſhe&#x27;s none of thoſe widdowes</div>
+<div class="excerpt">worſhip know him ſir? Then your worſhippe may ſaue mee a labour, for I had charge giuen me to enquire after him. No doubt ſir: Why very true ſir. Since your worſhippe <mark>has</mark> ſo much knowledge in him, can you reſolue me Sir what his liuing might <mark>bee</mark>, my duty bindes me ſir to haue a care of my miſtris eſtate, ſhe <mark>has</mark> beene euer a good</div>
+<div class="excerpt">what his liuing might <mark>bee</mark>, my duty bindes me ſir to haue a care of my miſtris eſtate, ſhe <mark>has</mark> beene euer a good miſtris to me though I ſay it, many welthy Sui ters <mark>has</mark> ſhee Nonſuted for his ſake, yet tho her Loue <mark>bee</mark> ſo fixt, a man cannot tell whether his Non-performance may helpe to remoue it ſir; hee makes vs beleeue hee <mark>has</mark></div>
+<div class="excerpt">am ſent from my Miſtriſſe to any ſufficient Gentleman indeed, to aske aduiſe vpon a doubtfull point, &#x27;tis indifferent ſir, to whome I come, for I know none, nor <mark>did</mark> my Miſtres direct mee to any perticuler man, for ſhee&#x27;s as meere a ſtranger here as my ſelfe, onely I found your worſhip within, and tis a thing I euer lou&#x27;d ſir</div>
+<div class="excerpt">No doubt your worſhip might do much then, but ſhe&#x27;s fayrely promiſt to a bachiler already. A Country Gentleman too, one whome your worſhip knowes not Ime ſure: <mark>has</mark> ſpent ſome fewe follies in his youth, but marriage by my fayth begins to call him home, my Miſtris loues him ſir, and loue couers faults you know, one maiſter VVit-good</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Young maiſter Wit-good. Why what&#x27;s the newes Bully-Hadland? Why man, why? How: let me ſee this trick, and Ile ſay thou haſt more Arte then a Coniurer. Do I loue Sack and Ginger? Come forfeitures to a Vſurer, fees to an officer, punkes to an Hoſte, and Pigs to a Parſon deſiredly? why then la. Wilt thou command me now? I am thy ſpirit, coniure me into any ſhape. No &#x27;tis a toung with a great T my boye that winnes a widdow. Command all my beaſts ith houſe. Wilt thou but truſt the managing of thy buſineſſe with me? Thanke you for your good report yfaith ſir, and if I ſtand you not inſteed, why then let an Hoſte come off Hic &amp; haec hoſtis, a deadly enemie to Dice, Drinke, and Venery; come where&#x27;s this widdow? Feare you nothing ſir, I haue lodgd her in a houſe of credit I warrant you. Firme ſir Dampit ? ſure I haue heard of that Dampit. Hee lookt as if hee would obay the commandement well, when he began firſt with ſtealing. How the deuill came he by it? Bleſſe your venerable worſhip. Hee calles me theefe at firſt ſight, yet he little thinkes I am an Hoſt? Faith ſir, I am ſent from my Miſtriſſe to any ſufficient Gentleman indeed, to aske aduiſe vpon a doubtfull point, &#x27;tis indifferent ſir, to whome I come, for I know none, nor did my Miſtres direct mee to any perticuler man, for ſhee&#x27;s as meere a ſtranger here as my ſelfe, onely I found your worſhip within, and tis a thing I euer lou&#x27;d ſir to be diſpacht as ſoone as I can: Fayth a Cuntry Gentlewoman and a widdow ſir, yeſter day was the firſt flight of vs, but now ſhee entends to ſtay till a little Tearme buſineſſe be ended. It runnes there in the writings ſir, among her Lands, widdow Medler? Yes, I wa nt you, haue you ſir, not the rich widdowe in Staffordſheere : No doubt your worſhip might do much then, but ſhe&#x27;s fayrely promiſt to a bachiler already. A Country Gentleman too, one whome your worſhip knowes not Ime ſure: has ſpent ſome fewe follies in his youth, but marriage by my fayth begins to call him home, my Miſtris loues him ſir, and loue couers faults you know, one maiſter VVit-good if euer you haue heard of the Gentleman: Thats his name indeede ſir; my Miſtris is like to bring him to a goodly ſeate yonder, foure hundred a yeare by my faith, I ſir ▪ A Leſterſhire gentleman ſir. Fayth he brought her vp to towne ſir, has the beſt card in all the bunch fort, her heart: and I know my Miſtris will bee married, ere ſhe goe downe, nay Ile ſweare that, for ſhe&#x27;s none of thoſe widdowes that will goe downe firſt, and bee married af ter, ſhe hates that I can tell you ſir. Why do&#x27;s your worſhip know him ſir? Then your worſhippe may ſaue mee a labour, for I had charge giuen me to enquire after him. No doubt ſir: Why very true ſir. Since your worſhippe has ſo much knowledge in him, can you reſolue me Sir what his liuing might bee, my duty bindes me ſir to haue a care of my miſtris eſtate, ſhe has beene euer a good miſtris to me though I ſay it, many welthy Sui ters has ſhee Nonſuted for his ſake, yet tho her Loue bee ſo fixt, a man cannot tell whether his Non-performance may helpe to remoue it ſir; hee makes vs beleeue hee has lands and liuing. Nay I know not ifaith. Is he ſo ſir, to ſee how rumor will alter, truſt me ſir we heard once he had no lands, but all lay morgagde to an Vncle he has in towne here. I can aſſure you ſir twas credibly reported to my Miſtris. That was my ſaying ſtill ſir. I do beſeech your ſir do me the fauour to conceale it, what a Beaſt was I to vtter ſo much: pray ſir doe mee the kindneſſe to keepe it in, I ſhall haue my coate pull&#x27;d ore my eares, ant ſhould bee knowne, for the truth is an&#x27;t pleaſe your worſhippe, to preuent much rumour and many ſuiters, they entend to bee married verie ſuddenly and priuately. So I might haue no anger ſir— I dare truſt your worſhip ſir, but I&#x27;me a ſtranger to your houſe, and to auoyde al Intelligencers I deſire your worſhippes eare. Pleaſe you ſir now I haue begunne with your worſhip when ſhall I attend, for your aduice vpon that doubtfull poynt, I muſt come warily now. The time ſhall cauſe my attendance. I am the worſt of ſixe ſir, good inough for blew-coates. Not ſo ſir. Maiſter Wit-good your Vncle— A prety familiar Priggin raſkall, hee has his part with out booke? What Miſtres? The deuill of ring I can finde? My Miſtris? is ſhe not here ſir? Shee ſent me for a Ring. What? I trac&#x27;de e&#x27;m neerely.— And heare for certaine, they haue tooke Cole-harbor. My life for yours ſir now, I know my Miſtriſſes minde to well toward your Nephew, let things be in preparation, and ile traine her hether in moſt excellent faſhion: Maiſter Wit-good. May I ſpeake one word with you in priuate ſir? A thing that concernes my Miſtris ſir. I and you knaue too, (cry your worſhippe mercy) you are both like to come into trouble I promiſe you ſir, a praecon tract I feare they haue too much proofe on&#x27;t ſir, old Lucre he runs mad vp and downe and will to lawe as faſt as he can, yong Wit-good layde hold on by his creditors, hee exclaymes vpon you a tother ſide, ſaies you haue wrought his vndoing, by the in iurious detayning of his contract. He will haue vtmoſt ſatiſfaction. The lawe ſhall giue him recompence he ſaies. True ſir— A prety ſhift yfaith, I commend a woman when ſhee can make away a letter from her huſband handſomely, and this was cleanely done by my troth. This will be ſome reuenge yet. Yes ſir, there are as good Teirs in the houſe, as any are in England. Has ſhe ſo, the better for her ▪ and the worſe for you.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Trick to Catch the Old One</div><div class="body">The spendthrift Witgood has mortgaged all his lands to his uncle, Lucre, but he is still in debt, and fear of his creditors keeps him away from London. Nevertheless he must go there if he is to make his fortune by marrying Joyce, the wealthy niece to Lucre’s enemy Walkadine Hoard. He conspires with Jane, a courtesan, to give the impression that he now has good prospects: she poses as a rich country widow who plans to marry him. Lucre’s attitude to his nephew is immediately transformed: hoping to acquire the widow’s lands too after the wedding, he denies the existence of the mortgage and lends Witgood money for new clothes. News of the widow also attracts Witgood’s creditors, but he persuades them that if they are over-attentive they will break his engagement, and thereby wreck their chances of repayment: the widow must continue to believe him to be financially secure. To that end, they eagerly agree to lend him even more money. Meanwhile Jane herself is a magnet for suitors, including the young men who were earlier trying to woo the reluctant Joyce, who is only interested in Witgood. Hoard throws his hat in the ring, bringing gentlemen to give Witgood a bad testimonial and discredit Lucre’s claims that there is no mortgage. Jane denies that she has any lands, but Hoard takes it for winsomeness and insists that her love is all that matters. They arrange an elopement; she absconds from Witgood at a tavern and marries Hoard. Lucre intervenes, not knowing he is too late, and gets her to promise that she will not change her marital status until he has made matters good by returning his nephew’s mortgage, which he duly does before witnesses. On discovering that he has been tricked, he initiates a law-suit, alleging that the widow’s marriage to Hoard is invalidated by a pre-contract to Witgood. Hearing that he has lost the widow, Witgood’s creditors have him arrested. Jane persuades Hoard to pay his debts and secure his release in exchange for his signature on a legal document renouncing any marital claim on her. Hoard drives a hard bargain with the creditors, but Witgood is duly freed. He secretly marries Joyce and delights his uncle with the truth that Hoard has married a whore. Hoard himself learns this when his brother comes from the country to attend the nuptial celebrations, and recognizes Jane. Jane points out that Hoard has only his own avarice to blame: she never misrepresented herself as having ===== PAGE 206 ===== 206 | 1467.A Trick to Catch the Old…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

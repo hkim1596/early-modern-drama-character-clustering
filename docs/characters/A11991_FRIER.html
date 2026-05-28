@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FRIER in Much Ado About Nothing · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FRIER</span>
+</nav>
+
+<h1>FRIER</h1>
+<p class="lede">in <em>Much Ado About Nothing</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>584</td></tr>
+<tr><th>Characters</th><td>3214</td></tr>
+<tr><th>BritDrama no.</th><td>1148</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Change slaunder to remorse, that is some good, But not for that dreame I on this strange course, But on this trauaile looke for greater birth: She dying, as it <mark>must</mark> be so maintaind, Vpon the instant that she was accusde, Shal be lamented, pittied, and excusde Of euery hearer: for it so falls out, That what we haue, we prize</div>
+<div class="excerpt">presently <mark>away</mark>, For to strange sores, strangely they straine the cure, Come lady die to liue, this wedding day Perhaps is but prolong&#x27;d, haue patience and endure. <mark>Did</mark> I not tell you shee was innocent? To doe what Signior? And my helpe. Heere comes the Prince and Claudio. All this amazement can I qualifie, When after that the</div>
+<div class="excerpt">inward impediment why you should not be conioyned, I charge you on your soules to vtter it. Know you any, Counte? Haue comfort lady. Yea, wherefore should she not? <mark>Heare</mark> me a little, for I haue only bin silent so long, &amp; giuen way vnto this course of fortune, by noting of the lady, I haue markt, A thousand blushing apparitions,</div>
+<div class="excerpt">of fortune, by noting of the lady, I haue markt, A thousand blushing apparitions, To start into her face, a thousand innocent shames, In angel whitenesse beate <mark>away</mark> those blushes, And in her eie there hath appeard a fire, To burne the errors that these princes hold Against her maiden truth: call me a foole, Trust not my reading,</div>
+<div class="excerpt">and lost, Why then we racke the valew, then we find The vertue that possession would not shew vs Whiles it was ours, so will it fare with Claudio: When hee shall <mark>heare</mark> she died vpon his words, Th Idaea of her life shall sweetly creepe, Into his study of imagination, And euery louely Organ of her life, Shall come apparelld in more</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Lady, you come hither to be married to this counte. If either of you know any inward impediment why you should not be conioyned, I charge you on your soules to vtter it. Know you any, Counte? Haue comfort lady. Yea, wherefore should she not? Heare me a little, for I haue only bin silent so long, &amp; giuen way vnto this course of fortune, by noting of the lady, I haue markt, A thousand blushing apparitions, To start into her face, a thousand innocent shames, In angel whitenesse beate away those blushes, And in her eie there hath appeard a fire, To burne the errors that these princes hold Against her maiden truth: call me a foole, Trust not my reading, nor my obseruations, Which with experimental seale doth warrant The tenure of my booke: trust not my age, My reuerence, calling, nor diuinitie, If this sweete ladie lie not guiltlesse here, Vnder some biting errour. Lady, what man is he you are accusde of? There is some strange misprision in the princes. Pawse awhile, And let my counsell sway you in this case, Your daughter here the princesse (left for dead,) Let her awhile be secretly kept in, And publish it, that she is dead indeede, Maintaine a mourning ostentation, And on your families old monument, Hang mourneful epitaphes, and do all rites, That appertaine vnto a buriall. Mary this well caried, shall on her behalfe, Change slaunder to remorse, that is some good, But not for that dreame I on this strange course, But on this trauaile looke for greater birth: She dying, as it must be so maintaind, Vpon the instant that she was accusde, Shal be lamented, pittied, and excusde Of euery hearer: for it so falls out, That what we haue, we prize not to the worth, Whiles we enioy it, but being lackt and lost, Why then we racke the valew, then we find The vertue that possession would not shew vs Whiles it was ours, so will it fare with Claudio: When hee shall heare she died vpon his words, Th Idaea of her life shall sweetly creepe, Into his study of imagination, And euery louely Organ of her life, Shall come apparelld in more precious habite, More moouing delicate, and full of life, Into the eie and prospect of his soule Then when she liude indeed: then shall he mourne, If euer loue had interest in his liuer, And wish he had not so accused her: No, though he thought his accusation true: Let this be so, and doubt not but successe Will fashion the euent in better shape, Then I can lay it downe in likelihood. But if all ayme but this be leuelld false, The supposition of the ladies death, Will quench the wonder of her infamie. And if it sort not wel, you may conceale her, As best befits her wounded reputation, In some reclusiue and religious life, Out of all eies, tongues, minds, and iniuries. Tis wel consented, presently away, For to strange sores, strangely they straine the cure, Come lady die to liue, this wedding day Perhaps is but prolong&#x27;d, haue patience and endure. Did I not tell you shee was innocent? To doe what Signior? And my helpe. Heere comes the Prince and Claudio. All this amazement can I qualifie, When after that the holy rites are ended, Ile tell you largely of faire Heroes death, Meane time let wonder seeme familiar, And to the chappell let vs presently.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Much Ado About Nothing</div><div class="body">Returning to Messina after a war, Claudio falls in love with Hero. At a masked revel, Don Pedro woos her for him by proxy; Don John maliciously tells Claudio that Pedro has wooed her for himself, but the truth soon purges Claudio’s jealousy and he and Hero are engaged to be married in a week’s time. In the interim, Don Pedro undertakes to make Beatrice and Benedick, who have a humour of mutual hatred, fall in love with each other. This is done by letting each of them overhear a conversation about how much in love the other is. Don John attempts to prevent Claudio’s marriage by showing him what he takes to be a nocturnal assignation between Hero and another man; in fact it is Margaret in Hero’s clothes, wooed by Borachio whom Don John has suborned. Claudio rejects Hero at the wedding, and the Friar proposes that she feign death to inculcate remorse in him. Borachio and his associate Conrad are arrested and examined, and confess the plot. As penance, Claudio undertakes to marry another ===== PAGE 61 ===== 1598 lady, said to be Leonato’s niece, without first seeing her; she is actually Hero. Benedick and Beatrice join Hero and Claudio to make it a double wedding. Don John flees Messina, but is apprehended and brought back to face punishment.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

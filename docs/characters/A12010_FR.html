@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FR in Romeo and Juliet · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FR</span>
+</nav>
+
+<h1>FR</h1>
+<p class="lede">in <em>Romeo and Juliet</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1597</td></tr>
+<tr><th>Words</th><td>1431</td></tr>
+<tr><th>Characters</th><td>7535</td></tr>
+<tr><th>BritDrama no.</th><td>987</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">God pardon sin, wert thou with Rosaline? For doating, not for louing, pupill mine. Not in a graue, To lay one in another out to haue ▪ Oh she knew well Thy loue <mark>did</mark> read by rote, and could not spell. But come yong Wauerer, come <mark>goe</mark> with mee, In one respect Ile thy assistant <mark>bee</mark>: For this alliaunce may so happie proue, To turne</div>
+<div class="excerpt">late the dead, What light is yon? if I be not deceiued, Me thinkes it burnes in Capels monument? Who is it? How long hath he beene there? <mark>Goe</mark> with me thether. Then <mark>must</mark> I <mark>goe</mark>: my minde presageth ill. What bloud is this that staines the entrance Of this marble stony monument? What meanes these maisterles and goo y weapons ▪ Ah me</div>
+<div class="excerpt">it not. I would I knew not why it should be slowd. Heere comes the Lady to my cell, Thats a certaine text. My leasure serue me pensiue daughter now. My Lord we <mark>must</mark> entreate the time alone. Ah Iuliet I already know thy griefe, I <mark>heare</mark> thou <mark>must</mark> and nothing may proroge it, On Thursday next be married to the Countie. Stay Iuliet,</div>
+<div class="excerpt">which Romeo VVas banished from hence to Mantua. He gone, her Father sought by foule constrain To marrie her to Paris: But her Soule (Lo thing a second Contract) <mark>did</mark> refuse To giue consent; and therefore <mark>did</mark> she vrge me 〈◊〉 to finde a meanes she might auoyd Vhat so her Father sought to force her too Or els all desperately she</div>
+<div class="excerpt">to finde a meanes she might auoyd Vhat so her Father sought to force her too Or els all desperately she threatned Euen in my presence to dispatch her selfe. Then <mark>did</mark> I giue her, (tutord by mine arte) A potion that should make her seeme as dead: And told her that I would with all post speed Send hence to Mantua for her Romeo,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">God pardon sin, wert thou with Rosaline? For doating, not for louing, pupill mine. Not in a graue, To lay one in another out to haue ▪ Oh she knew well Thy loue did read by rote, and could not spell. But come yong Wauerer, come goe with mee, In one respect Ile thy assistant bee: For this alliaunce may so happie proue, To turne your Housholds rancour to pure loue. Without more words I will doo all I may, To make you happie if in me it lye. I gesse she will indeed, Youths loue is quicke, swifter than swiftest speed. See where she comes. So ligh of foote nere hurts the troden flower: Of loue and ioy, see see the soueraigne power, Come wantons, come, the stealing houres do passe Defer imbracements till some fi rer time, Part for a while, you shall not be alone, Till holy Church haue ioynd ye both in one. O, soft and faire makes sweetest worke they say. Hast is a common indrer in crosse way. Romeo come forth, come forth thou fearfull man, Affliction is enamourd on thy parts, And thou art wedded to Calamitie. Too familiar Is my yong sonne with such fowre companie: I bring thee tidings of the Princes doome. A gentler iudgement vanisht from his lips, Not bodies death, but bodies banishment. Hence from Verona art thou banished: Be patient, for the world is broad and wide. Oh monstrous sinne, O rude vnthankfulnes: Thy fault our law calls death, but the milde Prince (Taking thy part) hath rushd aside the law, And urnd that blacke word death to banishment: This is meere mercie, and thou seest it not. Thou fond mad man, heare me but speake a word. Ile giue thee armour to beare off this word, Aduersities sweete milke, philosophie, To comfort thee though thou be banished. O, now I see that madmen haue no eares. Let me dispute with thee of thy estate. Romeo arise, stand vp thou wilt be taken, I heare one knocke, arise and get thee gone. Gods will what wilfulnes is this? By and by I come. Who is there? Then come neare. There on the ground, with his owne teares made drunke. Hold, stay thy hand: art thou a man? thy forme Cryes out thou art, but thy wilde actes denote The vnresonable furyes of a beast. Vnseemely woman in a seeming man, Or ill beseeming beast in seeming both. Thou hast amaz&#x27;d me. By my holy order, I thought thy disposition better temperd, Hast thou slaine Tybalt? wilt thou slay thy selfe? And slay thy Lady too, that liues in thee? Rouse vp thy spirits, thy Lady Iuliet liues, For whose sweet sake thou wert but lately dead: There art thou happy. Tybalt would kill thee, But thou sluest Tybalt, there art thou happy too. A packe of blessings lights vpon thy backe, Happines Courts thee in his best array: But like a misbehaude and sullen wench Thou fro w st vpon thy Fate that smilles on thee. Take heede, take heede, for such dye miserable. Goe get thee to thy loue as was decreed: Ascend her Chamber Window, hence and comfort her, But looke thou stay not till the watch be set: For then thou canst not passe to Mantua. Nurse prouide all things in a readines, Comfort thy Mistresse, haste the house to bed, Which heauy sorrow makes them apt vnto. Soiorne in Mantua, Ile finde out your man, And he shall signifie from time to time: Euery good hap that doth befall thee heere. Farwell. On Thursday say ye: the time is very short, You say you doe not know the Ladies minde? Vneuen is the course, I like it not. I would I knew not why it should be slowd. Heere comes the Lady to my cell, Thats a certaine text. My leasure serue me pensiue daughter now. My Lord we must entreate the time alone. Ah Iuliet I already know thy griefe, I heare thou must and nothing may proroge it, On Thursday next be married to the Countie. Stay Iuliet, I doo spie a kinde of hope, VVhich craues as desperate an execution, As that is desperate we would preuent. If rather than to marrie Countie Paris Thou hast the strength or will to slay thy selfe, Tis not vnlike that thou wilt vndertake A thing like death to chyde away this shame, That coapst with death it selfe to flye from blame. And if thou doost, Ile giue thee remedie. Hold Iuliet, hie thee home, get thee to bed, Let not thy Nurse lye with thee in thy Chamber: And when thou art alone, take thou this Violl, And this distilled Liquor drinke thou off: VVhen presently through all thy veynes shall run A dull and heauie slumber, which shall seaze Each vitall spirit: for no Pulse shall keepe His naturall progresse, but surcease to beate: No signe of breath shall testifie thou li st. And in this borrowed likenes of shrunke death, Thou shalt remaine full two and fortie houres. And when thou art laid in thy Kindreds Vault, He send in hast to Mantua to thy Lord, And he shall come and take thee from thy graue. O peace for shame, if not for charity. Your daughter ues in peace and happines, And it is vaine to wish it otherwise. Come sticke your Rosemary in this dead co rse, And as the custome of our Country is, In all her best and sumptuous ornaments, Conuay her where her Ancestors lie tomb&#x27;d, Who is it that consorts so late the dead, What light is yon? if I be not deceiued, Me thinkes it burnes in Capels monument? Who is it? How long hath he beene there? Goe with me thether. Then must I goe: my minde presageth ill. What bloud is this that staines the entrance Of this marble stony monument? What meanes these maisterles and goo y weapons ▪ Ah me I doubt, whose heere? what Romeo dead? Who and Paris too? what vnluckie houre Is accessary to so foule a sinne? The Lady sturres. Ah comfor able Fryer. 〈…〉 I should be ▪ And what we 〈◊〉 of: but yet I cannot see Him for whose sake I vndertooke this haza d ▪ Lady come foorth I heare some noise at hand, We shall be taken, Paris ▪ e is slaine, And Romeo dead: and if we heere be tane We shall be thought to be a accessarie. I will prouide for you in some close Nunery. I heare so e noise, I d e no ▪ stay, come, come ▪ I am the greatest able to doo least. Most worthie Prince, heare me but speake the truth. And Ile informe you how these things fell out. Iu iet here slaine was married to that Romeo, Without her Fathers or her Mothers grant: The Nurse was priuie to the marriage. The balefull day of this vnhappie marriage, VVas Tybalts doomesday: for which Romeo VVas banished from hence to Mantua. He gone, her Father sought by foule constrain To marrie her to Paris: But her Soule (Lo thing a second Contract) did refuse To giue consent; and therefore did she vrge me 〈◊〉 to finde a meanes she might auoyd Vhat so her Father sought to force her too Or els all desperately she threatned Euen in my presence to dispatch her selfe. Then did I giue her, (tutord by mine arte) A potion that should make her seeme as dead: And told her that I would with all post speed Send hence to Mantua for her Romeo, That he might come and take her from the Toombe, But he that had my Letters (Frier Iohn) Se king a Brother to associate him, VVhereas the sicke infection remaind, VVas stayed by the Searchers of the Towne ▪ But Romeo vnderstanding by his man, That Iuliet was deceasde, returnde in post Vnto Verona for to see his loue. VVhat after happened touching Paris death, Or Romeos is to me vnknowne at all. But when I came to take the Lady hence, I found them dead, and she awakt from sleep: VVhom faine I would haue taken from the tombe, VVhich she refused seeing Romeo dead. Anone I heard the watch and then I fled, VVhat afterhappened I am ignorant of. And if in this ought haue miscaried. By me, or by my meanes let my old life Be sacrified some houre before his time. To the most strickest rigor of the Law.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Romeo and Juliet</div><div class="body">After a street fight breaks out between servants of the rival Veronese households of Capulet and Montague, the Prince decrees death for any further breach of the peace in the matter. Romeo, the Montague son, is hopelessly in love with a Capulet lady, Rosaline, and discovers by chance that she is to be present at Old Capulet’s feast that night. He and his friends gatecrash _ the party disguised as masquers; Tybalt notices Romeo and wants to throw him out, but Old Capulet discourages this. Also present is Capulet’s daughter, Juliet, who is intended for marriage to Count Paris. Romeo meets her and they fall in love before knowing one another&#x27;s identity as members of the two enemy houses. Afterwards, Romeo climbs into the Capulet 1595 orchard, overhears Juliet’s private acknowledgement of her love, declares himself, and makes arrangements for a follow-up contact. Seeing an opportunity to end the feud, Friar Laurence agrees to marry the lovers. Juliet rendezvouses with Romeo at the Friar’s cell under cover of going to confession, and they become husband and wife. After sending Romeo a challenge, Tybalt attempts to fight him in the street; when Romeo refuses, Mercutio steps in and is killed, whereupon the enraged Romeo avenges his friend by killing Tybalt. The Prince banishes him for the murder. Friar Laurence and the Nurse arrange for the lovers to have a night together before Romeo leaves the city. Thinking Juliet is distressed by Tybalt’s death, her father arranges to hasten her marriage to Paris, and threatens to disown her when she refuses to comply. The Nurse advises her to accept the situation and marry Paris, but Friar Laurence gives her a sleeping potion to take the night before the wedding: it will make her appear dead, and meanwhile he will send to Romeo to fetch her from the family tomb after her funeral. When she returns home apparently ready to submit to the marriage, her father brings the date forward. Juliet takes the potion and is found, apparently dead, on the morning of the planned wedding. The Friar’s letter miscarries, so Romeo hears only of Juliet’s death; he buys poison from a needy apothecary and returns to Verona. Hearing that his arrangements have gone awry, the Friar plans to rescue Juliet from the tomb and keep her hidden until Romeo can fetch her; but Romeo gets there first. He encounters and kills Paris as he tries to break into the tomb, and takes the poison beside Juliet’s body. Meanwhile Paris’s page summons the watch. The Friar…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

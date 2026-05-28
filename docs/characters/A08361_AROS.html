@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AROS in 39 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_10.html">Cluster 10 — 10: death, realme, porrex</a> ›
+  <span>AROS</span>
+</nav>
+
+<h1>AROS</h1>
+<p class="lede">in <em>39</em> — [15, 16]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1570</td></tr>
+<tr><th>Words</th><td>663</td></tr>
+<tr><th>Characters</th><td>3631</td></tr>
+<tr><th>BritDrama no.</th><td>39</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 10 (<em>death, realme, porrex, noble, both, lordes…</em>). Matches are highlighted.</p>
+<div class="excerpt">therein. What furder meanes behouefull are and meet At greater leisure may your <mark>grace</mark> deuise, When all haue said, and when we be agreed If this be best to part the <mark>realme</mark> in twaine, And place your sonnes in present gouernement. Whereof as I haue plainely said my mynde, So woulde I here the rest of all my <mark>Lordes</mark>, Your <mark>grace</mark> should</div>
+<div class="excerpt">ruled, For publique wealth and not for priuate ioye, Do wast mannes lyfe, and hasten crooked age, With furrowed face and with enfcebled lymines, To draw on creepyng <mark>death</mark> a swifter pace. They two yet yong shall beare the parted reigne With greater ease, than one, <mark>nowe</mark> olde, alone, Can welde the whole, for whom muche harder is With</div>
+<div class="excerpt">ere this y price of mortall ioyes, How short they be, how fading here in earth, How full of chaunge, how brittle our estate, Of nothing sure, saue onely of the <mark>death</mark>, To whom <mark>both</mark> man and all the world doth owe Their end at last, neither should natures power In other sort against your hart preuaile, Than as the naked hand whose</div>
+<div class="excerpt">growing yeres may beare the burden long, And long I pray the Goddes to graunt it so, And in your life while you shall so beholde Their rule, their vertues, and their <mark>noble</mark> deedes, Suche as their kinde behighteth to vs all, Great be the profites that shall growe therof, Your age in quiet shall the longer last. Your lasting age shalbe</div>
+<div class="excerpt">the hazarde of their whole successe, Shall bridle so their force of youthfull heates, And so restreine the rage of insolence, Whiche most assailes the yonge and <mark>noble</mark> minds, And so shall guide and traine in tempred stay Their yet greene bending wittes with reuerent awe, As now inured with vertues at the first, Custome (O King)</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">And this is much, and asketh great aduise, But for my part, my soueraigne lord and kyng, This do I thinke. Your maiestie doth know, How vnder you in iustice and in peace, Great wealth and honour, long we haue enioyed. So as we can not seeme with gredie mindes To wisshe for change of Prince or gouernaunce: But if we lyke your purpose and deuise, Our lyking must be deemed to proceede Of rightfull reason, and of heedefull care, Not for our selues, but for the common state, Sithe our owne state doth neede no better change: I thinke in all as erst your Grace hath saide. Firste when you shall vnlode your aged mynde Of heuye care and troubles manifolde, And laye the same vpon my Lordes your sonnes, Whose growing yeres may beare the burden long, And long I pray the Goddes to graunt it so, And in your life while you shall so beholde Their rule, their vertues, and their noble deedes, Suche as their kinde behighteth to vs all, Great be the profites that shall growe therof, Your age in quiet shall the longer last. Your lasting age shalbe their longer stay, For cares of kynges, that rule as you haue ruled, For publique wealth and not for priuate ioye, Do wast mannes lyfe, and hasten crooked age, With furrowed face and with enfcebled lymines, To draw on creepyng death a swifter pace. They two yet yong shall beare the parted reigne With greater ease, than one, nowe olde, alone, Can welde the whole, for whom muche harder is With lessened strength the double weight to beare. Your eye, your counsell, and the graue regarde Of Father, yea of such a fathers name, Nowe at beginning of their sondred reigne, When is the hazarde of their whole successe, Shall bridle so their force of youthfull heates, And so restreine the rage of insolence, Whiche most assailes the yonge and noble minds, And so shall guide and traine in tempred stay Their yet greene bending wittes with reuerent awe, As now inured with vertues at the first, Custome (O King) shall bring delightfulnesse. By vse of vertue, vice shall growe in hate, But if you so dispose it, that the daye, Which endes your life, shall first begin their reigne, Great is the perill what will be the ende, When such beginning of such liberties Uoide of suche stayes as in your life do lye, Shall leaue them free to randon of their will, An open praie to traiterous flatterie, The greatest pestilence of noble youthe. Whiche perill shalbe past, if in your life, Their tempred youthe with aged fathers awe, Be brought in vre of skilfull stayednesse. And in your life their liues disposed so, Shall length your noble life in ioyfulnesse. Thus thinke I that your grace hath wisely thought, And that your tender care of common weale, Hath bred this thought, so to diuide your lande, And plant your sonnes to beare the present rule, While you yet liue to see their rulinge well, That you may longer lyue by ioye therein. What furder meanes behouefull are and meet At greater leisure may your grace deuise, When all haue said, and when we be agreed If this be best to part the realme in twaine, And place your sonnes in present gouernement. Whereof as I haue plainely said my mynde, So woulde I here the rest of all my Lordes, Your grace should now in these graue yeres of yours Haue found ere this y price of mortall ioyes, How short they be, how fading here in earth, How full of chaunge, how brittle our estate, Of nothing sure, saue onely of the death, To whom both man and all the world doth owe Their end at last, neither should natures power In other sort against your hart preuaile, Than as the naked hand whose stroke assayes The armed brest where force doth light in vaine.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_10.html">Cluster 10 — 10: death, realme, porrex</a> page.
+</div>
+</div></body></html>

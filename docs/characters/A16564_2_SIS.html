@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIS in Darius · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> ›
+  <span>SIS</span>
+</nav>
+
+<h1>SIS</h1>
+<p class="lede">in <em>Darius</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>1597</td></tr>
+<tr><th>Characters</th><td>8921</td></tr>
+<tr><th>BritDrama no.</th><td>1404</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 25 (<em>did, whil, death, might, minde, fortune…</em>). Matches are highlighted.</p>
+<div class="excerpt">findes; &quot;Who ſo this flame within his boſome ſmothers, &quot;He many fancies doth contrive, &quot;And even forgets himſelfe alive, &quot;To be remembred after <mark>death</mark> by <mark>others</mark>; &quot;Thus while he is, his paines are never ended, &quot;That <mark>whil</mark>&#x27;ſt he is not, he may be commended. What can this help the happineſſe of Kings So to ſubdue their Neighbours as they</div>
+<div class="excerpt">in my wombe was form&#x27;d. Shall I no more in him my Image ſee? Would God my ruine <mark>might</mark> his ranſome be. Muſt thoſe gray haires my Sonnes greene youth furvive? But <mark>whil</mark>&#x27;ſt our wretched ſtate we juſtly mone, We may lament this Infant too a ſpace, Who in miſhap inferiour were to none, If he could apprehend his Tragicke caſe. By many</div>
+<div class="excerpt">encounter with ſo ſad a ſight? O flinty heart! what hinders thee to breake, Since (cruſh&#x27;d with cares) a ſtranger to repoſe? Why part&#x27;ſt thou not (poore ſoule) that <mark>whil</mark>&#x27;ſt I ſpeake In opening of my lips, mine eyes may cloſe? This heritage of <mark>death</mark>, this wither&#x27;d ſtocke Is but a place appointed for deſpaires, A torture to it ſelfe,</div>
+<div class="excerpt">I know my ſelfe, another leſſe; My ſoule in ſuch an agony I finde, As words, nor teares, nor grones cannot expreſſe. This tender name of Mother wounds my heart, <mark>Whil</mark>&#x27;ſt nam&#x27;d by him, who of that name me ſpoils: I was (woe that I was) a Mother late Of two faire Sonnes (faire Sunnes) lights of my life, But one is dead, and in</div>
+<div class="excerpt">pompes and triumphs ſtand them in no ſtead; Their Arches, Tombes, Pyramides high, And ſtatues are but vanity: They dye, and yet would live in what is dead; And while they live, we ſee their glorious actions Oft wreſted to the worſt, and all their life Is but a ſtage of endleſſe toyle, and ſtrife, Of tumults, uproares, mutinies,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Help, help, alas, alas the Empreſſe falls. This heavy ſight my panting heart appals: Heaven, earth, and all, are now become our foes. Deare daughter, ſtrive your paſſions to reſtraine, Leſt that the torrent of your griefe grow ſuch, That both it carry you where horiours raigne; And him o&#x27;re-whelme for whom you mourn ſo much; No doubt but he, if we reſt captives thus Diſdaining thoſe indignities of ours, To venge himſelfe in reobtaining us, Will hazard all his orientall pow&#x27;rs; But ah, what comfort can a wretch afford, Whoſe care-worne breaſt the worſt of woe containes: Yet though my heart would faine impugne my word, I hopeleſſe ſpeake of hope, to eaſe her paines. I waile my Sonne. No woe like mine, mine cannot be releev&#x27;d, I waile his woe who ſhould my woe aſſwage, Who lives by me, by whom I ſhould have liv&#x27;d, Sport of my youth, and pillar of mine age. I mourne for him who in my wombe was form&#x27;d. Shall I no more in him my Image ſee? Would God my ruine might his ranſome be. Muſt thoſe gray haires my Sonnes greene youth furvive? But whil&#x27;ſt our wretched ſtate we juſtly mone, We may lament this Infant too a ſpace, Who in miſhap inferiour were to none, If he could apprehend his Tragicke caſe. By many ſignes we may our ſelves aſſure T&#x27;is Alexander whom we long&#x27;d not for. Spare, ſpare ſuch ſpeeches now, leſt all go wrong, We are environ&#x27;d with outragious hoſts; Thoſe who are weake muſt yeeld unto the ſtrong: For, Victors rage when as the vanquiſh&#x27;d boſts; I will entreat him too, not for my ſelfe (Age bows my body to embrace pale death) But that you yet may ſhunne this wrackfull ſhelfe, Whoſe youth and beauty worthy are of breath. R Iſe Mother, riſe, and calme thoſe needleſſe cares, I come to cure, not to procure your woe; The duty which I owe thoſe ſilver haires, Doth grieve my minde to ſee you humbled ſo. Moſt gracious Prince, forgive me if I err&#x27;d In taking him for you, who ſtands you by. My ſorrows ſo confounded have my minde That ſcarce I know my ſelfe, another leſſe; My ſoule in ſuch an agony I finde, As words, nor teares, nor grones cannot expreſſe. This tender name of Mother wounds my heart, Whil&#x27;ſt nam&#x27;d by him, who of that name me ſpoils: I was (woe that I was) a Mother late Of two faire Sonnes (faire Sunnes) lights of my life, But one is dead, and in a worſe eſtate, The other lives, involv&#x27;d in woe, and ſtrife; Like to the trunke of ſome disbranched tree Which Aeolus hath to confuſion brought, Since ſpoil&#x27;d of thoſe brave Impes which ſprung from me Unprofitable ſtock, I ſerve for nought. Moſt mighty King thou doſt deſerve indeed, That (as for Darius ) we ſhould pray for thee, Who do&#x27;ſt ſo much in clemency exceed, That thou bewail&#x27;ſt our loſſe, no leſſe then he; Not onely thou ſurmount&#x27;ſt all other Kings, In glory riſing from thy labours gone; And for thoſe benefits which Fortune brings, But in all vertues worthy of a Throne; Thou do&#x27;ſt vouchſafe on me (more then I crave) The title of a Queene, and Mother ſtill, But I confeſſe my ſelfe thy humble ſlave, Whoſe life hath now no limits but thy will; The dreamed good, that Greatneſſe gave, forgot, My count&#x27;nance ſhall be free from clouds of cares, And I&#x27;le allow of this my preſent lot, As one who for my fate my force prepares; Yea, if this wofull woman here were free, Who hath no heaven except her husbands face; I could content my ſelfe (great Prince) to be The meaneſt hand-mayd that attends your Grace. Heavens recompenſe this courteſie of thine, Which in all ages thouſands ſhall admire. Ah! ſhall I ſee (no, let me firſt be blinde) That body breathleſſe, which I brought to light? Where would my ſoule a force ſufficient finde That could encounter with ſo ſad a ſight? O flinty heart! what hinders thee to breake, Since (cruſh&#x27;d with cares) a ſtranger to repoſe? Why part&#x27;ſt thou not (poore ſoule) that whil&#x27;ſt I ſpeake In opening of my lips, mine eyes may cloſe? This heritage of death, this wither&#x27;d ſtocke Is but a place appointed for deſpaires, A torture to it ſelfe, a ſtumbling block, Whoſe aged furrows fertile are in cares. Once for good Fortunes, now for bad deſign&#x27;d, (To ſtate betray&#x27;d) drawne forth from calme repoſe, To have beene happie moſt afflicts my minde, Who, rais&#x27;d to fall, got much, the more to loſe. Ah me! malitious fates have done me wrong, Who firſt come to the world, ſhould firſt depart, And ah! why ſhould the old o&#x27;re-live the yong? This Nature wrongs by a prepoſt&#x27;rous art; Ah! why ſhould Death ſo indiſcreet be found To ſpare a caitive, and to ſpoyle a Prince? My halfe-dead body, bending to the ground, Through griefe is grown ripe for the grave long ſince. WHat makes vaine worldlings ſo to ſwell with pride, Who come of th&#x27;earth, and ſoone to th&#x27;earth returne? &quot;So helliſh furies with their fire-brands burne &quot;Proud and ambitious men, that they divide &quot;Them from themſelves, and ſo turmoyle their mindes; &quot;That all their time they ſtudy ſtill &quot;How to content a boundleſſe will, &quot;Which never yet a full contentment findes; &quot;Who ſo this flame within his boſome ſmothers, &quot;He many fancies doth contrive, &quot;And even forgets himſelfe alive, &quot;To be remembred after death by others; &quot;Thus while he is, his paines are never ended, &quot;That whil&#x27;ſt he is not, he may be commended. What can this help the happineſſe of Kings So to ſubdue their Neighbours as they do? And make ſtrange Nations tributaries too? &quot;The greater ſtate, the greater trouble brings; Their pompes and triumphs ſtand them in no ſtead; Their Arches, Tombes, Pyramides high, And ſtatues are but vanity: They dye, and yet would live in what is dead; And while they live, we ſee their glorious actions Oft wreſted to the worſt, and all their life Is but a ſtage of endleſſe toyle, and ſtrife, Of tumults, uproares, mutinies, and factions; &quot;They riſe with feare, and lye with danger downe, &quot;Huge are the cares which wait upon a Crowne. And as Ambition Princes under-mynes; So doth it thoſe who under them rule all: We ſee in how ſhort time they riſe and fall, How oft their light ecclips&#x27;d but dimmely ſhines; They long time labour by all meanes to move Their Prince to value much their parts, And when advanc&#x27;d by ſubtle arts, O what a danger is&#x27;t to be above! For, ſtraight expos&#x27;d to hatred, and deſpight, With all their skill they cannot march ſo even; But ſome opprobrious ſcandall will be given: For all men envy them who have moſt might; &quot;And if the King diſlike them once, then ſtraight &quot;The wretched Courtiers fall with their owne weight. me of a ſprite more poore, who would be prais&#x27;d, And yet have nought for which to be eſteem&#x27;d, What they are not in deed would faine be deem&#x27;d, And indirectly labour to be rais&#x27;d. This crue each publicke place of honour haunts, And (changing garments every day) Whil&#x27;ſt they would hide, do but bewray With outward ornaments their inward wants; And men of better judgement juſtly loath Thoſe, who in outward ſhows place all their care, And decke their bodies, whil&#x27;ſt their mindes are bare, Like to a ſhadow, or a painted cloth, The multitude which but th&#x27;apparrell notes, Doth homage, not to them, but to their cotes. Yet Princes muſt be ſerv&#x27;d, and with all ſorts: Some both to do, and co nſell what is beſt, Some ſerve for Cyphers to ſet out the reſt, Like life leſſe pictures which adorne the ports; &quot;Faire Palaces repleniſh&#x27;d are with feares, &quot;Thoſe ſeeming pleaſures are but ſnares, &quot;The royall robe doth cover cares; &quot;Th&#x27; Aſſyrian dye deare buys he who it beares; &quot;Thoſe dainty delicates, and farre-fetch&#x27;d food, &quot;Oft (through ſuſpition) ſavour out of ſeaſon, &quot;Embrodred beds, anatapeſtries hatch treaſon; &quot;The golden Goblets mingled are with bloud. &quot;Such ſhows the ſhadows are when Greatneſſe ſhines, &quot;Whoſe ſtate by them the gazing world divines. O happie he who farre from Fame at home, Securely ſitting by a quiet fire, (Though having little) doth not more deſire, But firſt himſelfe, then all things doth o&#x27;recome; His purchaſe weigh&#x27;d, or what his parents left, He ſquares his charge to his ſtore, And takes not what he muſt reſtore, Nor eates the ſpoyles that from the poore were reft: Not proud, nor baſe, he (ſcorning creeping Art) From jealous thoughts and envy free, No poyſon feares in cups of tree; No treaſon harbours in ſo poore a part: No heavy dreame doth vex him when he ſleeps, &quot;A guiltleſſe minde the guardleſſe cottage keeps ▪ He doth not ſtudie much what ſtormes may blow, Whoſe poverty can hardly be impair&#x27;d; He feares no forraine force, nor craves no guard; None doth deſire his ſpoyle, none looks ſo low, Whereas the great are commonly once croſt, As Darius hath beene in his flowre, Or Siſigambis at this houre, Who hath ſcap&#x27;d long, and now at length is loſt: But how comes this, that Potentates oft fall, And muſt confeſſe this trouble of their ſoule? There is ſome higher pow&#x27;r that can controull, The Monarchs of the Earth, and cenſure all: Who once will call their actions to account, And them repreſſe who to oppreſſe were prompt.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Darius</div><div class="body">Vanquished by Alexander, Darius fears for his mother, wife, and children, who have been taken captive. He offers a ransom for them, and Parmenio encourages Alexander to accept (the money can be used to finance future campaigns), but Alexander refuses. The women assume that Darius is dead and ask leave to bury him. Alexander gives them his personal assurance that Darius is alive and that they v.ill be treated honourably. Bessus and Narbazanes plan to betray Darius to Alexander in the hope of getting kingdoms for themselves. Darius learns that his wife has died, but is impressed by Alexander&#x27;s honourable treatment of her. Narbazanes encourages him to resign the crown to Bessus, while others advise him not to trust the two traitors, and to rely on his mercenary troops if necessary. Darius meditates on tl1e inevitable fall of princes and accepts the coming of death. The traitors spread a rumour that he has committed suicide, then take him prisoner and offer him to Alexander. Darius dies with a speech honouring Alexander for his magnanimity in victory. Alexander vows to hunt down and dismember the traitors.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> page.
+</div>
+</div></body></html>

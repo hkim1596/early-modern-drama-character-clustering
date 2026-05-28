@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SHEP in The Winter&#x27;s Tale · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SHEP</span>
+</nav>
+
+<h1>SHEP</h1>
+<p class="lede">in <em>The Winter&#x27;s Tale</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1075</td></tr>
+<tr><th>Characters</th><td>5581</td></tr>
+<tr><th>BritDrama no.</th><td>1631</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">boy, or a Childe I wonder? (A pretty one, a verie prettie one) ſure ſome Scape; Though I am not bookiſh ▪ yet I can reade Waiting-Gentlewoman in the ſcape: this <mark>has</mark> beene ſome ſtaire-worke, ſome Trunke-worke, ſome be hinde-doore worke: they were warmer that got this, then the poore Thing is heere. Ile take it vp for pity, yet</div>
+<div class="excerpt">thing, though I report it That ſhould be ſilent: If yong Doricles Do light vpon her, ſhe ſhall bring him that Which he not dreames of. <mark>Away</mark>: Wee&#x27;l none on&#x27;t; heere <mark>has</mark> beene too much homely foolery already. I know (Sir) wee wea rie you. Leaue your prating, ſince theſe good men are pleaſ&#x27;d, let them come in: but quickly now. But</div>
+<div class="excerpt">the betweene) but getting wen ches with childe, wronging the Auncientry, ſtealing, fighting, hearke you now: would any but theſe boylde-braines of nineteene, and <mark>two</mark> and twenty hunt this wea ther? They haue ſcarr&#x27;d <mark>away</mark> <mark>two</mark> of my beſt Sheepe, which I feare the Wolfe will ſooner finde then the Mai ſter; if any where I haue them,</div>
+<div class="excerpt">Prince, and wouldſt aduenture To mingle faith with him. Vndone, vndone: If I might dye within this houre, I haue liu&#x27;d To die when I deſire. Nay, but <mark>heare</mark> me. <mark>Goe</mark> too then. I will tell the King all, euery word, yea, and his Sonnes prancks too; who, I may ſay, is no honeſt man, neither to his Father, nor to me, to <mark>goe</mark> about</div>
+<div class="excerpt">him, and will make Her Portion, equall his. Come, your hand: And daughter, yours. Let him (my ſonne) he ſhall not need to greeue At knowing of thy choice. Oh my <mark>heart</mark>. I cannot ſpeake, nor thinke, Nor dare to know, that which I know: O Sir, You haue vndone a man of foureſcore three, That thought to fill his graue in quiet: yea,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I would there were no age betweene ten and three and twenty, or that youth would ſleep out the reſt: for there is nothing (in the betweene) but getting wen ches with childe, wronging the Auncientry, ſtealing, fighting, hearke you now: would any but theſe boylde-braines of nineteene, and two and twenty hunt this wea ther? They haue ſcarr&#x27;d away two of my beſt Sheepe, which I feare the Wolfe will ſooner finde then the Mai ſter; if any where I haue them, &#x27;tis by the ſea-ſide, brou zing of Iuy ▪ Good-lucke (and&#x27;t be thy will) what haue we heere? Mercy on&#x27;s, a Barne? A very pretty barne; A boy, or a Childe I wonder? (A pretty one, a verie prettie one) ſure ſome Scape; Though I am not bookiſh ▪ yet I can reade Waiting-Gentlewoman in the ſcape: this has beene ſome ſtaire-worke, ſome Trunke-worke, ſome be hinde-doore worke: they were warmer that got this, then the poore Thing is heere. Ile take it vp for pity, yet Ile tarry till my ſonne come: he hallow&#x27;d but euen now. Whoa-ho-hoa. What? art ſo neere? If thou&#x27;lt ſee a thing to talke on, when thou art dead and rotten, come hither: what ayl&#x27;ſt thou, man? Why boy, how is it? Name of mercy, when was this boy? Would I had bin by, to haue help&#x27;d the olde man. Heauy matters, heauy matters: but looke thee heere boy. Now bleſſe thy ſelfe: thou met&#x27;ſt with things dying, I with things new borne Here&#x27;s a ſight for thee: Looke thee, a bearing-cloath for a Squires childe: looke thee heere, take vp, take vp (Boy:) open&#x27;t: ſo, let&#x27;s ſee, it was told me I ſhould be rich by the Fairies. This is ſome Changeling: open&#x27;t: what&#x27;s within, boy? This is Faiery Gold boy, and &#x27;twill proue ſo: vp with&#x27;t, keepe it cloſe: home, home, the next way. We are luckie (boy) and to bee ſo ſtill requires nothing but ſecrecie. Let my ſheepe go: Come (good boy) the next way home. That&#x27;s a good deed: if thou mayeſt diſcerne by that which is left of him, what he is, fetch me to th&#x27; ſight of him. &#x27;Tis a lucky day, boy, and wee&#x27;l do good deeds on&#x27;t Fy (daughter) when my old wife liu&#x27;d: vpon This day, ſhe was both Pantler, Butler, Cooke, Both Dame and Seruant: Welcom&#x27;d all: ſeru&#x27;d all, Would ſing her ſong, and dance her turne: now heere At vpper end o&#x27; th Table; now, i&#x27; th middle: On his ſhoulder, and his: her face o&#x27; fire With labour, and the thing ſhe tooke to quench it She would to each one ſip. You are retyred, As if you were a feaſted one: and not The Hoſteſſe of the meeting: Pray you bid Theſe vnknowne friends to&#x27;s welcome, for it is A way to make vs better Friends, more knowne. Come, quench your bluſhes, and preſent your ſelfe That which you are, Miſtris o&#x27; th&#x27; Feaſt. Come on, And bid vs welcome to your ſheepe-ſhearing, As your good flocke ſhall proſper. They call him Doricles, and boaſts himſelfe To haue a worthy Feeding; but I haue it Vpon his owne report, and I beleeue it: He lookes like ſooth: he ſayes he loues my daughter, I thinke ſo too; for neuer gaz&#x27;d the Moone Vpon the water, as hee&#x27;l ſtand and reade As &#x27;twere my daughters eyes: and to be plaine, I thinke there is not halfe a kiſſe to chooſe Who loues another beſt. So ſhe do&#x27;s any thing, though I report it That ſhould be ſilent: If yong Doricles Do light vpon her, ſhe ſhall bring him that Which he not dreames of. Away: Wee&#x27;l none on&#x27;t; heere has beene too much homely foolery already. I know (Sir) wee wea rie you. Leaue your prating, ſince theſe good men are pleaſ&#x27;d, let them come in: but quickly now. But my daughter, Say you the like to him. Take hands, a bargaine; And friends vnknowne, you ſhall beare witneſſe to&#x27;t: I giue my daughter to him, and will make Her Portion, equall his. Come, your hand: And daughter, yours. Let him (my ſonne) he ſhall not need to greeue At knowing of thy choice. Oh my heart. I cannot ſpeake, nor thinke, Nor dare to know, that which I know: O Sir, You haue vndone a man of foureſcore three, That thought to fill his graue in quiet: yea, To dye vpon the bed my father dy&#x27;de, To lye cloſe by his honeſt bones; but now Some Hangman muſt put on my ſhrowd, and lay me Where no Prieſt ſhouels-in duſt. Oh curſed wretch, That knew&#x27;ſt this was the Prince, and wouldſt aduenture To mingle faith with him. Vndone, vndone: If I might dye within this houre, I haue liu&#x27;d To die when I deſire. Nay, but heare me. Goe too then. I will tell the King all, euery word, yea, and his Sonnes prancks too; who, I may ſay, is no honeſt man, neither to his Father, nor to me, to goe about to make me the Kings Brother in Law. Well: let vs to the King: there is that in this Farthell, will make him ſcratch his Beard. To th&#x27; Pallace (and it like your Worſhip.) Are you a Courtier, and&#x27;t like you Sir? My Buſineſſe, Sir, is to the King. I know not (and&#x27;t like you.) None, Sir: I haue no Pheazant Cock, nor Hen. His Garments are rich, but he weares them not handſomely. Sir, there lyes ſuch Secrets in this Farthell and Box, which none muſt know but the King, and which hee ſhall know within this houre, if I may come to th&#x27; ſpeech of him. Why Sir? So &#x27;tis ſaid (Sir:) about his Sonne, that ſhould haue marryed a Shepheards Daughter. And&#x27;t pleaſe you (Sir) to vndertake the Buſineſſe for vs, here is that Gold I haue: Ile make it as much more, and leaue this young man in pawne, till I bring it you. I Sir. Let&#x27;s before, as he bids vs: he was prouided to doe vs good. Come Boy, I am paſt moe Children: but thy Sonnes and Daughters will be all Gentlemen borne. And ſo haue I, Boy. We may liue (Sonne) to ſhed many more. &#x27;Prethee Sonne doe: for we muſt be gentle, now we are Gentlemen. You may ſay it, but not ſweare it. How if it be falſe (Sonne?)</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Winter&#x27;s Tale</div><div class="body">Polixenes of Bohemia is coming to the end of a nine- month stay at the Sicilian court of Leontes, his childhood playmate. Leontes cannot persuade him to extend his stay, but the pregnant queen, Hermione, has more success. Leontes conceives a suspicion that Polixenes and Hermione have committed adultery, and that her unborn child is a bastard. He commands Camillo to poison Polixenes, but instead Camillo warns the intended victim and escapes with him to Bohemia. Leontes arrests Hermione and sends to the oracle of Apollo for confirmation of her adultery. She gives birth to a daughter in prison, and Paulina hopes to bring Leontes to his senses by showing him the baby; instead, he orders her husband, Antigonus, to take it out of his dominions and abandon it. Hermione is tried for adultery and treason. The oracle, when read, exonerates her and foretells that, unless the lost be found, Leontes will have no heir. Leontes refuses to believe it, whereupon his son Mamillius, who fell sick when his mother was arrested, dies. Hermione collapses in court and is later reported dead. Antigonus abandons the baby on the coast of Bohemia, and is eaten by a bear. The child, Perdita, is found and adopted by an old shepherd. Sixteen years pass. The penitent Leontes, still mourning Hermione, attempts to recall Camillo to Sicily, but Polixenes will not let him go. Worried by rumours that Prince Florizel is courting a shepherd’s daughter, Polixenes attends the sheep-shearing feast in disguise. When it becomes clear that Florizel intends to marry Perdita without consulting his father, Polixenes intervenes and threatens awful reprisals. Camillo helps Florizel and Perdita to abscond to Sicily, knowing that Polixenes will follow them, enabling him to return home at last. Leontes welcomes the newcomers, who include not only the Bohemian royal family but also the old shepherd, who produces the objects found with baby Perdita; these establish her identity as Leontes’ long-lost daughter. The two kings are reconciled, and Polixenes withdraws his objection to his son’s marriage. The court visits a newly sculpted statue of Hermione in Paulina’s chapel. It turns out to be Hermione herself, still alive and awaiting the return of her daughter.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TECH in 2 Tamburlaine the Great · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_24.html">Cluster 24 — 24: tamburlaine, tamburlain, mahomet</a> ›
+  <span>TECH</span>
+</nav>
+
+<h1>TECH</h1>
+<p class="lede">in <em>2 Tamburlaine the Great</em> — Marlowe, Christopher</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1590</td></tr>
+<tr><th>Words</th><td>793</td></tr>
+<tr><th>Characters</th><td>4443</td></tr>
+<tr><th>BritDrama no.</th><td>789</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 24 (<em>tamburlaine, tamburlain, mahomet, zenocrate, baiazeth, persea…</em>). Matches are highlighted.</p>
+<div class="excerpt">And mighty <mark>Tamburlaine</mark>, our earthly God, Whose lookes make this inferiour <mark>world</mark> to quake, I here present thee with the crowne of Fesse, And with an hoste of Moores trainde to the war,</div>
+<div class="excerpt">wals. Trumpets and drums, alarum presently, And souldiers play the men, the holds is yours. Twas brauely done, and like a souldiers wife, Thou shalt with vs to <mark>Tamburlaine</mark> the great, Who when he heares how resolute thou wert, Wil match thee with a viceroy or a king. Madam, sooner shall fire consume vs both, Then scortch a face so</div>
+<div class="excerpt">wide breach, And enter in, to seaze vpon the gold: How say ye Souldiers, Shal we not? Nay Captain, thou art weary of thy life, If thou withstand the friends of <mark>Tamburlain</mark>. Captaine, these Moores shall cut the leaden pipes, That bring fresh water to thy men and thee, And lie in trench before thy castle walles: That no supply of victuall</div>
+<div class="excerpt">with a viceroy or a king. Madam, sooner shall fire consume vs both, Then scortch a face so beautiful as this. In frame of which, Nature hath shewed more skill, <mark>Than</mark> when she ga e eternall Chaos forme, Drawing from it the shining Lamps of heauen. No Madam, but the beginning of your ioy, Come willinglie, therfore. I smile to</div>
+<div class="excerpt">carkasses, Amasde, swim vp and downe vpon the waues, As when they swallow Assafitida, Which makes them fleet aloft and gaspe for aire, What is it dares distemper <mark>Tamburlain</mark> ? O then ye Powers that sway eternal seates, And guide this massy substance of the earthe, If you retaine desert of holinesse, As your supreame estates instruct</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">And mighty Tamburlaine, our earthly God, Whose lookes make this inferiour world to quake, I here present thee with the crowne of Fesse, And with an hoste of Moores trainde to the war, Whose coleblacke faces make their foes retire, And quake for feare, as if infernall Ioue Meaning to aid them in this Turkish armes, Should pierce the blacke circumference of hell, With vgly Furies bearing fiery flags, And millions of his strong tormenting spirits: From strong Tesella vnto Biledull, All Barbary is vnpeopled for thy sake. And I haue martch&#x27;d along the riuer Nise To Machda, where the mighty Christian Priest Cal&#x27;d Iohn the great, sits in a milk-white robe, Whose triple Myter I did take by force, And made him sweare obedience to my crowne. From thence vnto Cazates did I martch, Wher Amazonians met me in the field: With whom (being women) I vouchsaft a league, And with my power did march to zansibar The Westerne part of Affrike, where I view&#x27;d. The Ethiopian sea, riuers and lakes: But neither man nor child in al the land: Therfore I tooke my course to Manico. Where vnresisted I remoou&#x27;d my campe: And by the coast of Byather at last, I came to Cubar, where the Negros dwell, And conquering that, made haste to Nubia, There hauing sackt Borno the Kingly seat, I took the king, and lead him bound in chaines Vnto Damasco, where I staid before. Then let vs bring our light Artilery, Minions, Fauknets, and Sakars to the trench, Filling the ditches with the walles wide breach, And enter in, to seaze vpon the gold: How say ye Souldiers, Shal we not? Nay Captain, thou art weary of thy life, If thou withstand the friends of Tamburlain. Captaine, these Moores shall cut the leaden pipes, That bring fresh water to thy men and thee, And lie in trench before thy castle walles: That no supply of victuall shall come in, Nor issue foorth, but they shall die: And therefore Captaine, yeeld it quietly. A hundred horse shall scout about the plaines To spie what force comes to relieue the holde. Both we (theridamas) wil intrench our men, And with the Iacobs staffe measure the height And distance of the castle from the trench, That we may know if our artillery Will carie full point blancke vnto their wals. Trumpets and drums, alarum presently, And souldiers play the men, the holds is yours. Twas brauely done, and like a souldiers wife, Thou shalt with vs to Tamburlaine the great, Who when he heares how resolute thou wert, Wil match thee with a viceroy or a king. Madam, sooner shall fire consume vs both, Then scortch a face so beautiful as this. In frame of which, Nature hath shewed more skill, Than when she ga e eternall Chaos forme, Drawing from it the shining Lamps of heauen. No Madam, but the beginning of your ioy, Come willinglie, therfore. I smile to think, how when this field is fought, And rich Natolia ours, our men shall sweat With carrieng pearle and treasure on their backes, Nay, we wil break the hedges of their mouths And pul their kicking colts out of their pastures, Let vs not be idle then my Lord, But presently be prest to conquer it. Yeeld foolish Gouernour, we offer more Than euer yet we did to such proud slaues, As durst resist vs till our third daies siege: Thou seest vs prest to giue the last assault, And that shal bide no more regard of parlie. What shal be done with their wiues and chil dren my Lord. I will about it straight, come Souldiers. I haue fulfil&#x27;d your highnes wil, my Lord, Thousands of men drown&#x27;d in Asphal is Lake, Haue made the water swell abore the bankes, And fishes feed by humaine carkasses, Amasde, swim vp and downe vpon the waues, As when they swallow Assafitida, Which makes them fleet aloft and gaspe for aire, What is it dares distemper Tamburlain ? O then ye Powers that sway eternal seates, And guide this massy substance of the earthe, If you retaine desert of holinesse, As your supreame estates instruct our thoughtes, Be not iuconstant, carelesse of your fame, Beare not the burthen of your enemies ioyes, Triumphing in his fall whom you aduaimst, But as his birth, life, health and maiesty Were strangely blest and gouerned by heauen, So honour heauen til heauen dissolued be, His byrth, his life, his health and maiesty. Sit stil my gratious Lord, this griefe wil cease, And cannot last, it is so violent. Then let some God oppose his holy power, Against the wrath and tyranny of death, That his teare-thyrsty and vnquenched hate, May be vpon himselfe reuerberate.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 2 Tamburlaine the Great</div><div class="body">Q@reames has invaded Europe, but the advance of @amiburlaine in Asia forces him to make peace: he concludes a defensive treaty with SigiSiOHa) and both swear by the gods of their respective religions. Sigismond breaks his vow and makes war; Orcanes prays to Jesus Christ for victory, and Sigismond interprets his defeat as divine vengeance for his perjury. Bajazetli’s son @allapimé escapes from prison in Egypt by offering his jailer wealth and a crown. He is installed as Emperor of Turkey, and he and (Bamiburlaine muster their forces for war on one another. Tamburlaine encourages his sons to martial pursuits, and promises to settle the succession on the most warlike, not the eldest. He teaches them courage by wounding himself, but @alypHaS proves reluctant. Zenoeraté dies. Tamburlaine has her body embalmed and takes it with him; Bamissa, the town of her death, is burned. @echelles and [iieridamas besiege BalSSPA at the Syrian frontier. The fort is taken and its captain shot; determined not to outlive him, his wife Olympia kills her son but is captured before she can kill herself. Miteridamias woos her, and threatens rape when she rejects him. She offers him an ointment that will make him invulnerable, and offers to test it by anointing her own throat; this turns out to be a trick to make him kill her. Wamburiaine’s forces arrive at the frontier and give battle. GalyphasiStays away, preferring to play cards, so Tamburlaine kills him. Callapine’s subject kings are captured and made to draw Tamburlaine’s chariot, while the Turkish concubines are given to the common soldiers. Callapine himself escapes and regroups while Tamburlaine marches on Babylon. EH@GG¥ErHOE is captured, hung up in chains on his city walls, and shot. The citizens are drowned in the asphalt lake nearby. Tamburlaine burns the Koran and challenges Muhammad to take vengeance. He is taken ill and dies, regretting the parts of the world he has left unconquered. Amyras succeeds his father, while Callapine’s army advances.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_24.html">Cluster 24 — 24: tamburlaine, tamburlain, mahomet</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RO in The Scornful Lady · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>RO</span>
+</nav>
+
+<h1>RO</h1>
+<p class="lede">in <em>The Scornful Lady</em> — Beaumont, FrancisFletcher, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1616</td></tr>
+<tr><th>Words</th><td>978</td></tr>
+<tr><th>Characters</th><td>5052</td></tr>
+<tr><th>BritDrama no.</th><td>1626</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">would you not shake me into a quotidian Coxcombe? Would you not vse me scuruily againe, and giue me possets with purging comsets in&#x27;t? I tel thee Gentlewoman, thou hast been har der to me then a long chapter with a pedigree. I am mollified: as wel shal testifie this faithful kisse: and haue a great care Mistres, Abigall, how you</div>
+<div class="excerpt">Doe I dreame, or doe I wake? surely I know not: am I rub&#x27;d off? is this the way of all my mornings prayers? Oh … ger, thou art but grasse, and <mark>woman</mark> as a flower. <mark>Did</mark> I for this consume my quarters in meditation, vowes, and wooed her in Heroycall Epistles? <mark>Did</mark> I expound the Owle, and vn dertooke, with labour and expence the recollection</div>
+<div class="excerpt">and Tobacco shops of that our honour&#x27;d Englishman Ni. Br.? Haue I done this, and am I done thus too? I will end with the Wise-man, and say, He that holds a <mark>woman</mark>, <mark>has</mark> an Eele by the tayle. Solamen Miseris socios habuisse doloris: but I alone. Good Sir, peace be with you. Faire Gentlewoman, my name is Roger. Vngentle Abigall.</div>
+<div class="excerpt">depresse the spirit any more with your rebukes and mo … kes: for certainely the edge of such a folly cuts it selfe. Now cannot I hold if I should <mark>bee</mark> hang&#x27;d, I <mark>must</mark> crie to. Come to thine own beloued, &amp; doe euen what thou wilt withme, sweet, sweet, Abi. I am thine own for … uer: heers my hand, whe ̄ Ro. proues a recreant, hang</div>
+<div class="excerpt">formerly denied sutor, disguised in this mes sage: For I can assure you shee delights not in Tha lame: Himen and sh … are at variance, I shall returne with much hast. Iam but a Bachiler of Art Sir; aud I haue the men ding of all vnder this roofe, from my Lady on her downe bed, to the maide in the pease strawe. No Sir. I inculcate</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">God saue you Sir, My Lady lets you know shee de sires to be acquainted with your name before she conferre with you. Sir, you are a gentleman of a good name. I&#x27;le trie his wit. I knew a worshipfull and a religious gentleman of your name in the Bishopricke of Durham. Call you him Cosen? It is modestly said: I should carry the badge of your Christianity with me to. I meane the name which your Godfathers &amp; God mothers gaue you at the Font. Roger. More roomes then one. Her owne words were these; To know whether you were a formerly denied sutor, disguised in this mes sage: For I can assure you shee delights not in Tha lame: Himen and sh … are at variance, I shall returne with much hast. Iam but a Bachiler of Art Sir; aud I haue the men ding of all vnder this roofe, from my Lady on her downe bed, to the maide in the pease strawe. No Sir. I inculcate Diuine seruice within these walles, Yes, I doe take the aire many mornings on foote, three or foure miles for egges: but why moue you that? Most properly Sir. I doe Sir. Your vnderstanding is ingen … ous. O Lord Sir, Surely I loue it, but it loues not me; yet with your reuerence ile be bold. I promise you it is notable stinging geare indeede. It is wet Sir, Lord how it brings downe Reume? Thanks euer premised for it. I promise you it is very powerfull, and by a Trope, spirituall: for certainely it moues in sundrie places. Assuredly I will speake the truth vnto you; you shall vnderstand Sir, that my head is broken, and by whom; e uen by that visible beast the Butler. Reprouing him at Tra-trip Sir, for swearing: you haue the totall surely. Haue patience Sir, vntill our fellowe Nicholas bee deceast, that is, a sleepe: for so the word is taken; to sleepe to die, to die to sleepe: a very Figure Sir. Not till the man bee in his bed, his graue; his graue, his bed; the very same againe Sir. Our Comick Poet giues the reason sweetly; Plenus rimarum est, he is full of loope holes, and will discouer to our Patronesse. Sir be addrest, the graces doe salute you with the full bowle of plenty. Is our old enemy entomb&#x27;d? And does he snore out supinely with the Poet? Shall we giue thanke,? Doe I dreame, or doe I wake? surely I know not: am I rub&#x27;d off? is this the way of all my mornings prayers? Oh … ger, thou art but grasse, and woman as a flower. Did I for this consume my quarters in meditation, vowes, and wooed her in Heroycall Epistles? Did I expound the Owle, and vn dertooke, with labour and expence the recollection of those thousand Peeces, consum&#x27;d in Cellors and Tobacco shops of that our honour&#x27;d Englishman Ni. Br.? Haue I done this, and am I done thus too? I will end with the Wise-man, and say, He that holds a woman, has an Eele by the tayle. Solamen Miseris socios habuisse doloris: but I alone. Good Sir, peace be with you. Faire Gentlewoman, my name is Roger. Vngentle Abigall. You are weake indeed: for so the Poet sings. Good my Ladies Gentlewoman, or my … ood Ladies Gen tlewoman (this trope is lost to you now) leaue your prating, you haue a season of your first Mother in yee: and surely had the diuel beene in loue, he had beene abused too, goe Dalid … ; you make men fooles, and weare figge breeches. I they were pearles once with you. Nay, nay, I doe beseech you leaue your cogging, what they ate, they are, they serue me without Spectacles I thanke vm, I doe not thinke I can, Y&#x27;are like a Coppy-hold with nine liues in&#x27;t. I was a Christian foole then: Doe you remember what a dance you led me? how I grew quaum&#x27;d in loue, and was a dunce? could expound but once a quarter, &amp; then was out too: and then at prayers once (out of the stinking stir you put me in) I praid for mine owne royall issue. You doe remember all this? I thanke you for it; surely I vvil be wiser Abigall: and as the Ethnick Poet sings, I wil not loose my oile and labour too. Y&#x27;are for the worshipfull I take it Abigall. I like these teares well, and this humbling also, they are Symptomes of contrition, as a Father saith. If I should fall into my fit againe, would you not shake me into a quotidian Coxcombe? Would you not vse me scuruily againe, and giue me possets with purging comsets in&#x27;t? I tel thee Gentlewoman, thou hast been har der to me then a long chapter with a pedigree. I am mollified: as wel shal testifie this faithful kisse: and haue a great care Mistres, Abigall, how you depresse the spirit any more with your rebukes and mo … kes: for certainely the edge of such a folly cuts it selfe. Now cannot I hold if I should bee hang&#x27;d, I must crie to. Come to thine own beloued, &amp; doe euen what thou wilt withme, sweet, sweet, Abi. I am thine own for … uer: heers my hand, whe ̄ Ro. proues a recreant, hang him i&#x27;th Bel-ropes. Ent. La. and Mar. I humblie aske your pardon: Ile clap vp Praiers (but staic a little) and be with you againe. Ioy be amongst you all. Marriage an&#x27;t like your worship. As well as the next priest could doe it, Madam. Not the best benifice in your worships gift Sir. Sir you grow scurrilous: What I shall doe, I shall doe: I shall not neede your helpe.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Scornful Lady</div><div class="body">The Loveless brothers are in trouble. The younger owes money to Morecraft and stands to lose his land, while the elder has been ordered by his lady-love to go into exile for a year as penance for his over-eagerness. He leaves his brother in charge of his house during his absence, with an allowance for his maintenance, and the steward Saville to restrain him, but the young man associates with rogues. Together they reinterpret his brother’s written instructions in order to license his prodigal behaviour. While they are drinking and wenching, the elder Loveless returns in disguise bringing news of his own death: young Loveless inherits his brother’s land, and promptly mortgages it to Morecraft. The elder Loveless also reports his death to the Lady, who consoles herself by chatting up another lover, Welford. When Loveless reveals his true identity, she retorts that she knew it was him and sends him on his way, but also disappoints Welford. Loveless returns and abuses her, pretending to be out of love. She faints and he relents: it was a trick to test her; but, she says, she knew that all along, and Loveless is sent away again. The elder Loveless dismisses Saville for negligence and reclaims his mortgaged property, but his younger brother not only keeps the money but also steals Morecraft’s intended fiancée, a rich, socially ambitious widow. She objects to his low-life friends, but he persuades her that they are cheaper than servants. The Lady’s affections begin to turn: she sends the elder Loveless a love letter. He conspires with Welford to get their own back: Welford cross-dresses as his new fiancée, and Loveless graciously gives in to the Lady’s pleas that he should jilt ‘her’. Loveless marries the Lady (who is angry when she learns how she has been tricked), and Welford sleeps with her sister. Young Loveless arrives with his new wife, and persuades his brother to reinstate Saville.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MORT in 1 Henry the Sixth · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>MORT</span>
+</nav>
+
+<h1>MORT</h1>
+<p class="lede">in <em>1 Henry the Sixth</em> — AnonymousMarlowe, ChristopherShakespeare, WilliamNashe, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>649</td></tr>
+<tr><th>Characters</th><td>3722</td></tr>
+<tr><th>BritDrama no.</th><td>919</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">deceaſe. I will, if that my fading breath permit, And <mark>Death</mark> approach not, ere my Tale be done. <mark>Henry</mark> the Fourth, Grandfather to this King, Depos&#x27;d his Nephew Richard, Edwards Sonne, The firſt begotten, and the lawfull Heire Of <mark>Edward</mark> King, the Third of that Deſcent. During whoſe Reigne, the Percies of the North, Finding his Vſurpation</div>
+<div class="excerpt">They laboured, to plant the rightfull Heire, I loſt my Libertie, and they their Liues. Long after this, when <mark>Henry</mark> the Fift (Succeeding his Father Bullingbrooke ) <mark>did</mark> reigne: Thy Father, Earle of Cambridge, then deriu&#x27;d From famous Edmund Langley, <mark>Duke</mark> of Yorke, Marrying my Siſter, that thy Mother was; Againe, in pitty of my</div>
+<div class="excerpt">remou&#x27;d, Leauing no Heire begotten of his Body) I was the next by Birth and Parentage: For by my Mother, I deriued am From Lionel <mark>Duke</mark> of Clarence, third Sonne To King <mark>Edward</mark> the Third; whereas hee, From Iohn of Gaunt doth bring his Pedigree, Being but fourth of that Heroick Lyne. But marke: as in this haughtie great attempt, They laboured,</div>
+<div class="excerpt">dying Mortimer here reſt himſelfe. Euen like a man new haled from the Wrack, So fare my Limbes with long Impriſonment: And theſe gray Locks, the Purſuiuants of <mark>death</mark>, Neſtor -like aged, in an Age of Care, Argue the end of Edmund Mortimer. Theſe Eyes, like Lampes, whoſe waſting Oyle is ſpent, Waxe dimme, as drawing to their Exigent.</div>
+<div class="excerpt">latter gaſpe. Oh tell me when my Lippes doe touch his Cheekes, That I may kindly giue one fainting Kiſſe. And now declare ſweet Stem from Yorkes great Stock, Why didſt thou ſay of late thou wert deſpis&#x27;d? That cauſe (faire Nephew) that impriſon&#x27;d me, And hath detayn&#x27;d me all my flowring Youth, Within a loathſome Dungeon, there</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Kind Keepers of my weake decaying Age, Let dying Mortimer here reſt himſelfe. Euen like a man new haled from the Wrack, So fare my Limbes with long Impriſonment: And theſe gray Locks, the Purſuiuants of death, Neſtor -like aged, in an Age of Care, Argue the end of Edmund Mortimer. Theſe Eyes, like Lampes, whoſe waſting Oyle is ſpent, Waxe dimme, as drawing to their Exigent. Weake Shoulders, ouer-borne with burthening Griefe, And pyth-leſſe Armes, like to a withered Vine, That droupes his ſappe-leſſe Branches to the ground. Yet are theſe Feet, whoſe ſtrength-leſſe ſtay is numme, (Vnable to ſupport this Lumpe of Clay) Swift-winged with deſire to get a Graue, As witting I no other comfort haue. But tell me, Keeper, will my Nephew come? Enough: my Soule ſhall then be ſatisfied. Poore Gentleman, his wrong doth equall mine. Since Henry Monmouth firſt began to reigne, Before whoſe Glory I was great in Armes, This loathſome ſequeſtration haue I had; And euen ſince then, hath Richard beene obſcur&#x27;d, Depriu&#x27;d of Honor and Inheritance. But now, the Arbitrator of Deſpaires, Iuſt Death, kinde Vmpire of mens miſeries, With ſweet enlargement doth diſmiſſe me hence: I would his troubles likewiſe were expir&#x27;d, That ſo he might recouer what was loſt. Direct mine Armes, I may embrace his Neck, And in his Boſome ſpend my latter gaſpe. Oh tell me when my Lippes doe touch his Cheekes, That I may kindly giue one fainting Kiſſe. And now declare ſweet Stem from Yorkes great Stock, Why didſt thou ſay of late thou wert deſpis&#x27;d? That cauſe (faire Nephew) that impriſon&#x27;d me, And hath detayn&#x27;d me all my flowring Youth, Within a loathſome Dungeon, there to pyne, Was curſed Inſtrument of his deceaſe. I will, if that my fading breath permit, And Death approach not, ere my Tale be done. Henry the Fourth, Grandfather to this King, Depos&#x27;d his Nephew Richard, Edwards Sonne, The firſt begotten, and the lawfull Heire Of Edward King, the Third of that Deſcent. During whoſe Reigne, the Percies of the North, Finding his Vſurpation moſt vniuſt, Endeuour&#x27;d my aduancement to the Throne. The reaſon mou&#x27;d theſe Warlike Lords to this, Was, for that (young Richard thus remou&#x27;d, Leauing no Heire begotten of his Body) I was the next by Birth and Parentage: For by my Mother, I deriued am From Lionel Duke of Clarence, third Sonne To King Edward the Third; whereas hee, From Iohn of Gaunt doth bring his Pedigree, Being but fourth of that Heroick Lyne. But marke: as in this haughtie great attempt, They laboured, to plant the rightfull Heire, I loſt my Libertie, and they their Liues. Long after this, when Henry the Fift (Succeeding his Father Bullingbrooke ) did reigne: Thy Father, Earle of Cambridge, then deriu&#x27;d From famous Edmund Langley, Duke of Yorke, Marrying my Siſter, that thy Mother was; Againe, in pitty of my hard diſtreſſe, Leuied an Army, weening to redeeme, And haue inſtall&#x27;d me in the Diademe: But as the reſt, ſo fell that Noble Earle, And was beheaded. Thus the Mortimers, In whom the Title reſted, were ſuppreſt. True; and thou ſeeſt, that I no Iſſue haue, And that my fainting words doe warrant death: Thou art my Heire; the reſt, I wiſh thee gather: But yet be wary in thy ſtudious care. With ſilence, Nephew, be thou pollitick, Strong fixed is the Houſe of Lancaſter, And like a Mountaine, not to be remou&#x27;d. But now thy Vnckle is remouing hence, As Princes doe their Courts, when they are cloy&#x27;d With long continuance in a ſetled place. Thou do&#x27;ſt then wrong me, as y t ſlaughterer doth, Which giueth many Wounds, when one will kill. Mourne not, except thou ſorrow for my good, Onely giue order for my Funerall. And ſo farewell, and faire be all thy hopes, And proſperous be thy Life in Peace and Warre.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 1 Henry the Sixth</div><div class="body">King Henry Vis dead, and England&#x27;s French lands are lost. After a military setback, the French accept the offered aid of Joan Pucelle , who claims supernatural powers from the Virgin Mary; but they also release Talbot in an exchange of prisoners. With Joan &#x27;s help the French recapture the occupied town of Orleans, but the English take it back in a night attack led by Talbot. The Countess of Auvergne invites Talbot to visit her. intending treachery, but he second-guesses her and brings soldiers with him. In England, feuds brew between Gloucester and Winchester, and between Richard Plantagenet and the Duke of Somerset, whose supporters show their allegiance by picking different coloured roses. Richard , who has been deprived of his titles through the attainder of his father, learns from the imprisoned and dying Mortimer that he has a claim to the throne . King Henry restores him to his inheritance, creating him Duke of York. Joan takes Rouen by a ruse , but Talbot recaptures it the same day; she then persuades England&#x27;s ally Burgundy to join the French. After King Henry&#x27;s coronation in Paris, York is left in command of Prance, but personal tension between him and Somerset means that troop reinforcements arrive late; in consequence, Talbot is defeated, surviving only long enough to learn that his son has perished in battle. Joan conjures devils, but they will not help her: she is captured by York and burned at the stake. The French and English agree a peace which will entail King Henry making a diplomatic marriage, but this is pre-empted when Suffolk captures Margaret and (having fallen in love with her but being alr eady married) plans to install her as Queen of England . Henry agrees to marry her, and Suffolk goes to France to mili the arrangements.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

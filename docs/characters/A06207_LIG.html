@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LIG in A King and No King · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LIG</span>
+</nav>
+
+<h1>LIG</h1>
+<p class="lede">in <em>A King and No King</em> — Beaumont, FrancisFletcher, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1619</td></tr>
+<tr><th>Words</th><td>711</td></tr>
+<tr><th>Characters</th><td>3582</td></tr>
+<tr><th>BritDrama no.</th><td>1636</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">ſcorne will not helpe me thinkes: My daughter Might haue beene ſpar&#x27;d, there were enough beſide. Why is ſhe with you then? Can ſhe waite on you better then your men, <mark>Has</mark> ſhe a gift in plucking off your ſtockings, Can ſhe make Cawdles well, or cut your Cornes, VVhy doe you keepe her with you? For your Queene I know you doe contemne</div>
+<div class="excerpt">None Sir, all is as it was. All verie well. Madam I ſhould haue ſeene you. Forgiue you, why I am no kin to you, am I? Thou couldſt prate vnhappily Ere thou couldſt <mark>goe</mark>, would thou couldſt doe as well. And how does your cuſtome hold out here. Are you in priuate ſtill, or how? Doe you take money? are you come to ſell ſinne yet?</div>
+<div class="excerpt">your cuſtome hold out here. Are you in priuate ſtill, or how? Doe you take money? are you come to ſell ſinne yet? perhaps I can helpe you to liberall Clients: or <mark>has</mark> not the King caſt you off yet? O thou vild creature, whoſe beſt com mendation is, that thou art a young VVhore. I would thy Mother had liu&#x27;d to ſee this: or rather</div>
+<div class="excerpt">creature, whoſe beſt com mendation is, that thou art a young VVhore. I would thy Mother had liu&#x27;d to ſee this: or rather would I had dyed ere I had ſeene it: why <mark>did</mark>&#x27;ſt not make me acquainted when thou were firſt reſolu&#x27;d to be a Who e? I would haue ſeene thy hot luſt ſatisfied more priuately. I would haue kept a dancer, and</div>
+<div class="excerpt">owne houſe, onely to fiddle thee. If thou couldſt not ſay ſo much for thy ſelfe thou ſhouldſt be Carted. Well Sir I will: but I haue priuate buſines with you. How <mark>has</mark> my age deſeru&#x27;d ſo ill of you, That you can picke no ſtrumpets in the Land, But out of my breed. Yes, and I wiſh to haue you know, I ſcorne To get a Whore for any</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I thanke his Grace, and kiſſe his hanes. I haue another, but a worſe; I am aſham&#x27;d, it is a buſineſſe.— I am bound to your nobleneſſe. Sir, you ſhall know I haue loſt a fooliſh daughter, And with her all my patience; pilferd away, By a meane Captaine of your Kings. I grant all that too: but this wretched fellow Reaches no further then the emptie name, That ſerues to feede him; were he valiant, Or had but in him any noble nature, That might hereafter promiſe him a good man; My carcs were ſomething lighter, and my graue A ſpan yet from me. Tis ſuch a ſcuruy name as Beſſus, and now I thinke tis hee. My daughter is a Whore, I feele it now too ſencible; yet I will ſee her, Diſcharge my ſelfe of being Father to her, And then backe to my Countrie, and there die; Farewell Captaine. There he is indeed, And with him my diſloyall childe. Health to your Maieſtie. Seuerall Buſineſſes. My publique buſineſſe will appeare by this: I haue a meſſage to deliuer, which If it pleaſe you ſo to authoriſe, is An embaſſage from the Armenian ſtate; Vnto Arbaces for your libertie ▪ The offer&#x27;s there ſet downe, pleaſe you to read it. None Sir, all is as it was. All verie well. Madam I ſhould haue ſeene you. Forgiue you, why I am no kin to you, am I? Thou couldſt prate vnhappily Ere thou couldſt goe, would thou couldſt doe as well. And how does your cuſtome hold out here. Are you in priuate ſtill, or how? Doe you take money? are you come to ſell ſinne yet? perhaps I can helpe you to liberall Clients: or has not the King caſt you off yet? O thou vild creature, whoſe beſt com mendation is, that thou art a young VVhore. I would thy Mother had liu&#x27;d to ſee this: or rather would I had dyed ere I had ſeene it: why did&#x27;ſt not make me acquainted when thou were firſt reſolu&#x27;d to be a Who e? I would haue ſeene thy hot luſt ſatisfied more priuately. I would haue kept a dancer, and a whole conſort of Muſitions in mine owne houſe, onely to fiddle thee. If thou couldſt not ſay ſo much for thy ſelfe thou ſhouldſt be Carted. Well Sir I will: but I haue priuate buſines with you. How has my age deſeru&#x27;d ſo ill of you, That you can picke no ſtrumpets in the Land, But out of my breed. Yes, and I wiſh to haue you know, I ſcorne To get a Whore for any Prince aliue, And yet ſcorne will not helpe me thinkes: My daughter Might haue beene ſpar&#x27;d, there were enough beſide. Why is ſhe with you then? Can ſhe waite on you better then your men, Has ſhe a gift in plucking off your ſtockings, Can ſhe make Cawdles well, or cut your Cornes, VVhy doe you keepe her with you? For your Queene I know you doe contemne her, ſo ſhould I And euery Subiect elſe thinke much at it. Then haue I made a faire hand, I cald her Whore, If I ſhall ſpeake now as her Father, I cannot of uſe But greatly rejoyce that ſhe ſhall be a Queene: but if I ſhould ſpeake to you as a Stateſman ſhee were more fit To be your VVhore. Yes Sir, I will goe. And ſhall ſhe be a Queeue, ſhe had more wit Then her old Father when ſhe ranne away: Shall ſhee be a Queene, now by my troth tis fine, He dance out of all meaſure at her wedding: Shall I not Sir? I&#x27;e make theſe witherd Kexes beare my bodie Two h rest gether aboue ground. Good God preſerue you, you are an excellent King. Farewell ſweete vertuous Daughter; Ineuer was ſo Joyfull in my life, That I remember: ſhall ſhee be a Queene? Now I perceiue a man may weepe for ioy, I had thought they had lied that ſaid ſo. VVe muſt haue our King againe, and will. Tis Spaconia. She is my daughter. VVhy I ſhall be made For euer, they belied this King with vs And ſavd he was vnkind.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A King and No King</div><div class="body">Arbaces has been away from his kingdom for many years fighting a war with Armenia, which he has just won. He has received reports from his Lord Protector, Gobrias, about the virtue and accomplishments of his younger sister Panthea, whom he has not seen since she was nine years old. He offers her hand in marriage to Tigranes, the vanquished Armenian King, but Tigranes demurs. Arbaces takes him back to Iberia to see her for himself. Tigranes’ objection lies in the fact that he already has a girlfriend, Spaconia, and he bribes the cowardly Bessus to bring her along and place her in Panthea’s household. Once there, she begs Panthea not to marry Tigranes, and Panthea agrees. Arane, Arbaces’ mother, has been trying to assassinate him since he came to the throne. Another attempt is foiled, but he pardons her when he returns in triumph. She clearly has an ulterior motive which is known to Gobrias, but both are discreet about its precise nature. Arbaces’ first meeting with Panthea as an adult proves unsettling: he falls in love with her. So does Tigranes. Identifying a rival, Arbaces imprisons him. Torn between desire and conscience, he also imprisons Panthea. Panthea gives Spaconia a token authorizing her to visit Tigranes in prison. He rejects her, but Arbaces finds them together and assumes that she is a go-between. Gobrias importunes him to release Panthea, who persuades him that his suspicions are unfounded: she loves him, and would act upon that love if to do so were not incestuous. The Armenians send Spaconia’s father as an ambassador to negotiate for Tigranes’ release. He believes his daughter has eloped with Bessus, but his denunciations of her bring Tigranes to his senses: he will make Spaconia his Queen. When Arbaces decides to kill Gobrias for corrupting him to incest, the truth comes out. Arbaces is not of royal blood. The old King married Arane when he was old and impotent, and, fearful about the succession, Gobrias and Arane conspired to produce an heir: Gobrias gave Arane his new-born son, and she faked his birth. Later, it proved that the King was not so impotent after all, and he died leaving Arane pregnant with Panthea, but by the time this was known, the young Arbaces had already succeeded to the throne. Since then, Gobrias and Arane have both been trying to put matters to rights, Arane with her murder plots and Gobrias by encouraging Arbaces to marry his putative sister and so establish the legitimacy of his teign. Arbaces publicly announces…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

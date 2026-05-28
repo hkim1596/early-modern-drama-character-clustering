@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DISSIM in The Three Ladies of London · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_05.html">Cluster 5 — 5: conscience, lucre, lucar</a> ›
+  <span>DISSIM</span>
+</nav>
+
+<h1>DISSIM</h1>
+<p class="lede">in <em>The Three Ladies of London</em> — Wilson, Robert</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1592</td></tr>
+<tr><th>Words</th><td>1601</td></tr>
+<tr><th>Characters</th><td>8281</td></tr>
+<tr><th>BritDrama no.</th><td>700</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 5 (<em>conscience, lucre, lucar, usurie, fraud, dissimulation…</em>). Matches are highlighted.</p>
+<div class="excerpt">care to seeke yee. I marry Sir, these bribes haue welcome beene, Good saith I perceiue, <mark>Dissimulation</mark>, <mark>Fraud</mark>, Symonie and <mark>Usurie</mark> shal liue In spite of Loue and <mark>Conscience</mark>, though their hearts it doth greeue. Mas maisters, he that cannot lie, cog, dissemble and flatter now a dayes, Is not worthy to liue in the world, nor in the Court</div>
+<div class="excerpt">this, tis golde. And 〈◊〉 , carry lady Loues gowne backe againe, for my fel low <mark>Usurie</mark> Shall not haue her gowne, I am sure so much he will befriend me. Nay, let <mark>Conscience</mark> gowne and skin to <mark>Usurie</mark> go. If no body cared for <mark>Conscience</mark> more than I, They would hang her vp like bacon in a chimney to drie. Nay ile hie me after, that I may</div>
+<div class="excerpt">good skill to helpe men from the coffe, But we were arrantly flowted, yet I thought she had not knowne me, But I perceiue though Dissimulatio ̄ do disguise him, <mark>Conscience</mark> can see. What though <mark>Conscience</mark> perceiue it, all the world cannot beside? Tush there be a thousand places where we our selues may prouide: But looke sirs, here</div>
+<div class="excerpt">her vp like bacon in a chimney to drie. Nay ile hie me after, that I may send back lady Loues gown. For I would not haue Loue bought quite out of towne. Mary for <mark>Conscience</mark> tut, I care not two strawes, Why I should take care for her, I know no kind of cause. Who is that calles for helpe so hastily? Nay good lady ▪ send my fellow Simonie,</div>
+<div class="excerpt">But tell me haue you taken the names of the guestes? Let me heare after what fashion. Stay, Fornication &amp; Frissit false-measure are often familiar with my Lady <mark>Lucar</mark>, and one of them she accounts her friend: Therefore they shall sit with the bride in the middest, and the men a each ende: Let me see, there are sixteene, euen</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Nay no lesse than a farmer, a right honest man, but my to ng cannot stay me to tell what I am: Nay, who is it that knowes me not by my partie coloured head? They may well thinke that see me, my honestie is fled. Tush, a figge for honestie, tut let that go. Sith men, women, and children my name and doings do know. My name is Dissimulation, and no base mind I beare, For my outward effects my inward zeale do declare: For men do dissemble with their wiues, &amp; their wiues with them again, So that in the hearts of them I alwaies remaine: The child dissembles with his father, the sister with her brother, the mayden with her mistris, and the yongman with his louer, There is Dissimulation betweene neighbor and neighbor, friend and friend, one with another. Betweene the seruant and his maister, betweene brother and brother, then why make you it strange that euer you knew me, Seeing so often I raunge throughout euery degree? But forget my basenes, ile towards London as fast as I can, to get entertainment of one of the three Ladies, like an honest man. Whither away good fellow? I pray thee declare. What if I did, would it be better for thee? Agreed, there is a bargen, but what shall I call thee? A name agreeing to thy nature, but stay here comes more com pany. What Fraud well met, whither trauellest thou this way? Y say you go to London, in faith haue with you than. And for the selfe same matter euen thether we goe. Sirs, he was at vs erewhile too, it is no matter, it is a simple soule called Simplicitie. But here come two of the Ladies, therefore make readie. Mary let Symonie doo it, for he finely can flatter. Masse Fraud, thou hast a doughtie hart to make a hangman of, For thou hast good skill to helpe men from the coffe, But we were arrantly flowted, yet I thought she had not knowne me, But I perceiue though Dissimulatio ̄ do disguise him, Conscience can see. What though Conscience perceiue it, all the world cannot beside? Tush there be a thousand places where we our selues may prouide: But looke sirs, here commeth a lusty Lady towards vs in haste, But speake to her if you will, that we may be all plaste. Why then ile to it with a stomacke in hope of good speed, Faire Lady, all the Gods of good fellowship kisse ye (I would say blesse ye) Lady you tooke me at the worst, I beseech you therefore, To pardon my boldnesse offending no more. I am called Dissimulation, and my earnest request, Is to craue entertainment for me and the rest, Whose names are Fraud, Usurie, and Symonie, Great caters for your health, wealth ▪ and prosperitie. Yes sir, my selfe am he, and what would you withall? I commend you wit Sir, but here comes my Lady. Well sir I think you, I will go speake for you. Such a one Madam that vnto your state hath great care: And surely in my minde the Gentleman is worthie To be well thought on for his liberality, bounty, &amp; great care to seeke yee. I marry Sir, these bribes haue welcome beene, Good saith I perceiue, Dissimulation, Fraud, Symonie and Usurie shal liue In spite of Loue and Conscience, though their hearts it doth greeue. Mas maisters, he that cannot lie, cog, dissemble and flatter now a dayes, Is not worthy to liue in the world, nor in the Court to haue praise. What, consider me doest thou thinke that I am a bribe taker? Faith it lies not in me to further thy matter. Faith I cannot helpe thee, tis my fellow Fraud must pleasure thee Heere comes my fellow Fraud, speake to him, and ile do what I can. Good fellow Fraud do so much for I see he is very willing to liue And some peece of worke to thee for thy paines he will giue. Fellow Fraud, here comes a Cittizen as I deeme. Sir, vpon this condition that youle keepe men in law, Ten or twelue yeeres for matters not worth a straw: And that you will make an ill matter seeme good and firmable in deed, Faith I am content for me part that you shall speed. By my honestie well remembred, I had quite forgot, Tis about that, a fortnight ago sell cut the matter I wot. Mary I like him well, hee is a cunning Clarke, and one of our profession. But come sir, go with vs and we will prefer you. Thou art too importunate and greedy. Where hadst thou it tell me? Why I haue nothing to do in it, tis not to me thou should com I haue not to do with Sincerities matters, tis my fellow Symonies roome. Why, and I am not bound to thee so farre as knaue go, And therefore in despite of thee and thy coossen, there thy letters be, What, thinkst thou by captious words to make me do it? Let them deliuer your letters that hath a stomacke to it Madam, ile tell you what you may giue, Not hurting your selfe whereby he may liue, And without my fellow Symonies consent, Yf to follow my mind you are any whit bent. Why, haue not you the parsonage of S. Nihal to bestow? yf you giue him that, Symonie shall neuer know. Simplicitie, now of mine honestie very hartily well met, Pray thee leaue prating Simplicitie, and tell me what thou hast there? Alas poore lady Loue, art thou driuen so low? Some little pittance on thee ile bestow. Hold Simplicitie, carry her three or foure Duckats from me, And commend me to her euen very hartily. Tush thou knowest not what I meane, take this, tis golde. And 〈◊〉 , carry lady Loues gowne backe againe, for my fel low Usurie Shall not haue her gowne, I am sure so much he will befriend me. Nay, let Conscience gowne and skin to Usurie go. If no body cared for Conscience more than I, They would hang her vp like bacon in a chimney to drie. Nay ile hie me after, that I may send back lady Loues gown. For I would not haue Loue bought quite out of towne. Mary for Conscience tut, I care not two strawes, Why I should take care for her, I know no kind of cause. Who is that calles for helpe so hastily? Nay good lady ▪ send my fellow Simonie, For I haue an earnest suite to ye. Good lady graunt that Loue be your waiting maid, For I thinke beeing brought so low, she will be well apaid. Lady, though my name be Dissimulation, yet I speake bon side now, Yf it please you my petitions to allow. Thankes to you ladie, and I doubt not but she With a litle intreatie will thereto agree. Rich I am, but as for knaue keepe to thy selfe. Come giue me my Ladies gowne thou ass headed elfe. Packe hence away, acke Drum entertainment, she wil none of thee. Indeed thou saiest true, for Coggin is a kinsman to Dissimu lation. But tell me haue you taken the names of the guestes? Let me heare after what fashion. Stay, Fornication &amp; Frissit false-measure are often familiar with my Lady Lucar, and one of them she accounts her friend: Therefore they shall sit with the bride in the middest, and the men a each ende: Let me see, there are sixteene, euen as many as well neare is able: to dine in the sommer parlor at the playing table: Beside my fellow Fraud, and you fellow Symonie, But I shall haue a great misse of my fellow Usurie. Now of my troth it is a prettie iest, hath he made true friend ship hide his head? Sure if it be so, good neighborhood and liberalitie for feare are fled. Mary that shall an old frend of mine M. Doctor Hipocrisie. Indeed sir peter is a good Priest, but Doctor Hipocrisie is most auncient. But 〈◊〉 Eoggin, I pray you go to inuite the gesse, And tell them that they need not disturbe their quietnes: Desire them to come at dinner time, and it shall suffise. ecause I know they will be loth so early to rise. But at any hand will Doctor Hipocrisie, That he meet vs at the Church very early: For I would not haue all the world to wonder at our match. It is an olde prouerbe, tis good hauing a hatch before the doore, but ile haue a doore before the hatch. Tush tush, you are a mery man, I warrant I know what I 〈◊〉 And can yeeld a good reason for it I may say vnto you. What and if the world should chaunge, and runne all on her side? Then might I by her meanes still in good credite abide. Thou knowest Loue is auncient, and liues peaceably without any strifs, Then sure the people will thinke well of me because she is my wife. Then for to make them long inough I pray thee what did hee? Now 〈◊〉 I can him thanke, he could his occupation: My fellow Fraud would laugh to heare one drest of such a fashion, But fellow Symonie, I thanke you hartily for comparing the Taylor to me, As who should say his knauerie and my pollicy did agree.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Three Ladies of London</div><div class="body">Lady Love and Lady Conscience are concerned that Lady Lucre now rules in London, but Fame assures them that she and her adherents will meet their due punishment in the end. Four knaves and Simplicity, a penurious miller, go to London in the hope of employment by one of the ladies. Conscience rejects their applications, but Love agrees to take on Simplicity; the knaves find positions in Lucre’s household. Out of work because foreigners have taken all the jobs, Artifex also seeks a place with Lucre. Simplicity procures a testimonial from Conscience for his cousin Sincerity, who seeks a benefice; but he is unable to get anything from Simony because he has no bribe to offer. Dissimulation fobs him off with the parsonage of St Nihil — nothing - and an invitation to dine with Nemo — nobody — is likewise worthless (though Simplicity has _ difficulty understanding this). Simony employs Sir Peter Pleaseman, who can be either Protestant or Catholic as it suits his circumstances, as Lucre’s chaplain. Conscience is forced to sell her cottage to Lucre, but hopes to stay on as a sitting tenant. Usury threatens eviction; there is a proposal to pack the house with foreigners who will require less living space than English tenants. Eventually he relents and quadruples the rent instead. Love and Conscience are reduced to sending Usury their clothes in lieu of payment, but Dissimulation gives Simplicity money to redeem one of the gowns. He intended it to be Love’s, since he cares nothing for Conscience, but Simplicity returns Conscience’s clothes and delivers Love’s to Usury. Lucre enters an agreement with the Italian merchant Mercadore, whereby he will export essential materials and foodstuffs from England, and import foreign trinkets for gentlewomen. Mercadore goes to Turkey to procure knick-knacks, and encounters the Jew Gerontus. Two years ago, he borrowed a lot of money from Gerontus and avoided paying it back by skipping the country. Gerontus is happy to help in the supply of 1581 worthless tat to England, but eventually loses patience with Mercadore’s promises to pay his debt, and has him arrested. Mercadore proposes converting to Islam, which will legally void all his past obligations. Fearing that he might be blamed for a Christian’s apostasy, Gerontus cancels the debt, whereupon Mercadore’s Muslim convictions evaporate. Usury murders Hospitality and goes into hiding with a rich man, who protects him; his pardon is eventually procured by a courtier. Conscience and…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_05.html">Cluster 5 — 5: conscience, lucre, lucar</a> page.
+</div>
+</div></body></html>

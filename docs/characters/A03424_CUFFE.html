@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CUFFE in A Merry Dialogue between Band, Cuff, and Ruff · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>CUFFE</span>
+</nav>
+
+<h1>CUFFE</h1>
+<p class="lede">in <em>A Merry Dialogue between Band, Cuff, and Ruff</em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1615</td></tr>
+<tr><th>Words</th><td>929</td></tr>
+<tr><th>Characters</th><td>4698</td></tr>
+<tr><th>BritDrama no.</th><td>1759</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">ſhould <mark>goe</mark> together by the cares and hurt one another, Ruffe would be in a fine plight: would he not? If they talke of lacing, I were beſt looke about my ſelfe. <mark>Did</mark> you not <mark>heare</mark> of the great Bands went ouer of late? It may be ſo; for I am ſure he is a Hol land Band. Truely, his Landreſſe will beare him witneſſe thereof. Now</div>
+<div class="excerpt">in the Stocks once before, and if ſhee catch you againe, it is a hundreth to one, if ſhe hang you not both vp, for ſhe hath got ſtrings already. Since you will <mark>goe</mark>, <mark>goe</mark>; but <mark>heare</mark> me, if you <mark>goe</mark>, looke at me well; as little a fellow as I am, I will come and Cuffe you both out of the fields; if I doe not, ſay, Cuffe is no man</div>
+<div class="excerpt">you <mark>goe</mark>, looke at me well; as little a fellow as I am, I will come and Cuffe you both out of the fields; if I doe not, ſay, Cuffe is no man of his hands. If you <mark>goe</mark>, you ſhall neuer ſay that Cuffe came of a ſleeueleſſe errand, Ile binde your hands (I warrant you) for ſtriking. And you <mark>bee</mark> ſo chollericke, Ile euen pinne you</div>
+<div class="excerpt">you, there is no man more carefull of the time then he: for I am ſure hee hath alwaies at the leaſt a dozen Clocks about him. Nay, you ſhall not part ſo, you will <mark>goe</mark> into the fields, and know not what fighting meanes: a couple of white liuered fellowes, your Landreſſe will make you both as white as a clout it ſhee liſt; If you</div>
+<div class="excerpt">that this is a ſtiffe argument that he is his Maſter. But you ſhall not fight: haue you not Friends &amp; Neighbours enough to end this con trouerſie, but you muſt <mark>goe</mark> into the fields, and there cut the threed of your liues? wee&#x27;l haue none of that, come chooſe you an Vmpire, Band, for it ſhall be ſo. Ruffe, you ſhall be content.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Here at hand. Almoſt at your Elbow. Good Band, doe not fret ſo. Nay: if you bee ſo broad with him, Band, we ſhall haue a fray preſently. It was fit time for mee to ſtay you vp, for I am ſure you were a falling Band. Sfoot, if theſe two ſhould goe together by the cares and hurt one another, Ruffe would be in a fine plight: would he not? If they talke of lacing, I were beſt looke about my ſelfe. Did you not heare of the great Bands went ouer of late? It may be ſo; for I am ſure he is a Hol land Band. Truely, his Landreſſe will beare him witneſſe thereof. Now I perceiue, the Spaniard and the Hollander will to it roundly. No, I dare warrant you, there is no man more carefull of the time then he: for I am ſure hee hath alwaies at the leaſt a dozen Clocks about him. Nay, you ſhall not part ſo, you will goe into the fields, and know not what fighting meanes: a couple of white liuered fellowes, your Landreſſe will make you both as white as a clout it ſhee liſt; If you lack beating, ſhee&#x27;l beat you Ile warrant you, ſhee&#x27;l ſo clap your ſides toge ther, that they ſhall bee beaten out in once or twice ha ̄ dling; why? I haue known her leaue her marke behinde her a whole weeke after, ſheell quickly beate you Blacke and Blew, for I am ſure ſhee&#x27;ll ſcarce waſh white before ſhee ſtarch. Well, remember your ſclues and Mi ſteris Stichwell, one to whom you haue beene both beholding in your dayes. No, nor you neither. I thought ſo, why its the Semſter, one that both you had beene vndone had it not beene for her, but what talke you of vndoing? I ſay Miſter is Stichwell the Semſter was the very maker of you both, yet thus little doe you re gard her, but it is the common cuſtome of you all, when you come to bee ſo great as you are, you forget from what houſe you come. Well Band and Ruffe, you were beſt both of you to take heede of her, you knowe ſhee ſet you both in the Stocks once before, and if ſhee catch you againe, it is a hundreth to one, if ſhe hang you not both vp, for ſhe hath got ſtrings already. Since you will goe, goe; but heare me, if you goe, looke at me well; as little a fellow as I am, I will come and Cuffe you both out of the fields; if I doe not, ſay, Cuffe is no man of his hands. If you goe, you ſhall neuer ſay that Cuffe came of a ſleeueleſſe errand, Ile binde your hands (I warrant you) for ſtriking. And you bee ſo chollericke, Ile euen pinne you both in, as ſoone as I come home: can you not decide the quarrell betweene your ſelues without a field? I had thought you had beene a little more milde, Ruffe. You were a horrible Puritane the other day, a very preciſe Ruffe. Come, you ſhall be friends, Band. Nay, ſurely he is his Maſter, at leaſt his Maker: for Bands, make rags; Rags make Paper; Paper makes Paſt-board; and Paſt-board makes Collar; and I thinke that this is a ſtiffe argument that he is his Maſter. But you ſhall not fight: haue you not Friends &amp; Neighbours enough to end this con trouerſie, but you muſt goe into the fields, and there cut the threed of your liues? wee&#x27;l haue none of that, come chooſe you an Vmpire, Band, for it ſhall be ſo. Ruffe, you ſhall be content. Nay, ſtay there, he is a moſt filthy Sni veling fellow, and he will wipe your Noſe of all, if you put the caſe to him, but what ſay you to Shirt? Why, then goe to Maſter Cap, the head man of the Towne. Heer&#x27;s a doe with you, and my Lord Corpus, indeede I would you were both hanged about his neck for me, but I ſee, this ſtrife will ne uer be ended, till I bee Arbitrator my ſelfe, you know, I am equally allied to you both: ſhall I be Moderator betweene you? Well then, Ruffe ſhall bee moſt accoun ted of amongſt the Clergie, for he is the graue Fellow (although I know, the Puritans will not greatly care for him, he hath ſuch a deale of ſet ting, and they loue ſtanding very well.) As for you, Band, you ſhall bee moſt made of amongſt the young Gal ants, although ſometimes they ſhall vſe Ruffe, for a faſhion, but not otherwiſe; how euer, you neede not regard the gid die hea ded multitude, let them doe as they liſt, ſome times reſpecting one, ſometimes the other: but when you come to the Counſailor, and men of Law, which know right from wrong, acknow ledging Maſter Worths to bee equall, they ſhall preferre neither, but vſe the kindneſſe of you both, wearing both a Band and a Ruffe; how ſay you, are you both content? Then goe before me to the next town, and Ile follow after with a Band of your friend ſhip drawne, which I hope, theſe Gentlemen will ſeale with their hands. Claw me, and Ile claw thee, the prouerb goes, Let it be true in that our Muſe here ſhoes, Cuffe graceth hand, Cuffes debtors hands remaine, Let hands clap me, and Ile Cuffe them againe.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Merry Dialogue between Band, Cuff, and Ruff</div><div class="body">Ruff and Band quarrel over which of them is the more modish, and make a date to fight a duel the following day. Cuff tries to keep the peace, threatening them with a beating from the laundress and hanging by the seamster, but is unable to dissuade them. They disagree about who should umpire the fight, but finally agree to appoint Cuff moderator. Cuff defuses the situation by arguing that both are the height of fashion with different people: ruffs are favoured by clerics (other than Puritans) and bands by gallants.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

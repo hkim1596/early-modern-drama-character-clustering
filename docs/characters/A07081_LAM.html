@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LAM in 252 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LAM</span>
+</nav>
+
+<h1>LAM</h1>
+<p class="lede">in <em>252</em> — [94]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>1290</td></tr>
+<tr><th>Characters</th><td>7155</td></tr>
+<tr><th>BritDrama no.</th><td>252</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">doe not leaue these fopperies doe not lend me fortie shillings, &amp; ther&#x27;s my hand, I imbrace you, loue you, nay adore thee, for by the iuice of worm-woode, thou hast a bitter braine. Ile say amen if the Priest be mute. I relish not this mirth, my spirit is vntwist, My <mark>heart</mark> is raueld out in discontents, I am deepe thoughtfull,</div>
+<div class="excerpt">course persew? Your Maister Simplicius. <mark>Has</mark> sent to me to come. We come sweet gallants; and grumbling hate lye stil And turne Phantastique: he that climbes a hill <mark>Must</mark> wheele about, the ladder to account Is slie dissemblance, he that meanes to mount, <mark>Must</mark> lye all leuell in the prospectiue Of eager sighted greatnesse, thou wouldst</div>
+<div class="excerpt">rich in ignorance, makes faire vsance on&#x27;t And euery day augments his barbarisme So loue me Calmnes I do enuy him forts. I was a scholler: seauen vse-full springs <mark>Did</mark> I defloure in quotations Of crossd oppinions bout the soule of man The more I learnt the more I learnt to doubt Knowledge and wit faithes foes, turne fayth about</div>
+<div class="excerpt">slept. Whilst I wasted lampoile, bated my flesh Shrunk vp my veines, and still my spaniel slept. And still I held conuerse with Zabarell Aquinas Scotus, and the musty sawe Of antick Donate, still my spaniell slept Still on went I, first an sit anima Then and it were mortall, O hold hold At that they are at braine buffets fell</div>
+<div class="excerpt">fire, tother light, a third a spark of Star-like nature Hippo water, Anaximenes ayre, Aristoxenus Musicke; Critias I know not what, A company of odde phrenetici <mark>Did</mark> eate my youth, and when I crept abroad, Finding my numnesse in this nimble age, I fell a railing, but now soft and slow, I know, I know naught, but I naught do</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">God morrow Sinior. Sir I protest I not onely take distinct notice of your deere rarities of exterior presence, but also I protest I am most vehe mently inamor&#x27;d, and very passionately doate on your inward adornements and habilities of spirit, I protest I shall be proud to doe you most obsequious vassalage. I protest I shall bee proud to giue you proofe, I hold a most religious affiance with your loue. Let mee not liue els, I protest I will straine my vtmost sineus, in strengthning your pretious estimate, I protest, I will do all rights in all good offices that friendship can touch, or am plest vertue deserue. O in that last sute gentle Lauerdure, Visite my lodging: by Appollos front Do but inquire my name; O straight theile say Lampatho sutes him-selfe in such a hose. Consorts him-selfe with such a doublet. O Pallas! Quadratus, harke, harke, a most compleat phantasma, a most ridiculous humor, pree-thee shoote him through and through with a iest, make him lye by the lee, thou Basilisco of witte. Nay pre-thee, fut feare not he&#x27;s no edge toole, you may iest with him. Nay when, when? Obscure me, or— So Phoebus warme my braine, Ile rime thee dead, Looke for the Satyre, if all the sower iuice Of a tart braine, can sowse thy estimate, Ile pickle thee. By this hand I will. Antypathy. O Sir you are so square you skorne repoofe. I faile at none you well squar&#x27;d Syneor. Most Phantasticall protection of Phantasticknesse. I protest — Why content and I protest— Well and I doe not leaue these fopperies doe not lend me fortie shillings, &amp; ther&#x27;s my hand, I imbrace you, loue you, nay adore thee, for by the iuice of worm-woode, thou hast a bitter braine. Ile say amen if the Priest be mute. I relish not this mirth, my spirit is vntwist, My heart is raueld out in discontents, I am deepe thoughtfull, and I shoote my soule Through all creation of omnipotence. In heauens handiwork ther&#x27;s naught None more vile, accursed, reprobate to blisse Then man, and mong men a scholler most. Things onely fleshly sencitiue, an Oxe or Horse, They liue and eate, and sleepe, and drinke, and die And are not toucht with recollections Of things ore-past or staggerd infant doubtes Of things succeeding: but leaue the manly beastes, And giue but pence a peece to haue a sight: Of beastly man now. Dost thou heare that voice. Ile make a parrat now, As good a man as hee in foureteene nights I neuer heard him vent a sillable: Of his owne creating since I knew the vse Of eyes and eares? Well he&#x27;s perfect blest, Because a perfect beast. Ile gage my heart He knowes no difference essentiall Twixt my dog and him. The horeson sot is blest Is rich in ignorance, makes faire vsance on&#x27;t And euery day augments his barbarisme So loue me Calmnes I do enuy him forts. I was a scholler: seauen vse-full springs Did I defloure in quotations Of crossd oppinions bout the soule of man The more I learnt the more I learnt to doubt Knowledge and wit faithes foes, turne fayth about Honest Epicure. Nay marke list delight, delight my spaniell slept, whilst I bausd leaues. Tossd ore the dunces por&#x27;d on the old print Of titled wordes, and stil my spaniell slept. Whilst I wasted lampoile, bated my flesh Shrunk vp my veines, and still my spaniel slept. And still I held conuerse with Zabarell Aquinas Scotus, and the musty sawe Of antick Donate, still my spaniell slept Still on went I, first an sit anima Then and it were mortall, O hold hold At that they are at braine buffets fell by the eares, A maine pell mell togither, still my spaniell slept. Then whether twere Corporeall, Local, fixt, Extraduce, but whether&#x27;t had free will Or no, ho Philosophers Stood banding factions all so strongly propt, I staggerd, knew not which was firmer part. But thought, quoted, reade, obseru&#x27;d and pried, Stufft noting bookes, and still my spaniell slept. At length he wakt and yawnd and by yon sky, For aught I know he knew as much as I. How, twas created, how the soule exsistes One talkes of motes, the soule was made of motes, An other fire, tother light, a third a spark of Star-like nature Hippo water, Anaximenes ayre, Aristoxenus Musicke; Critias I know not what, A company of odde phrenetici Did eate my youth, and when I crept abroad, Finding my numnesse in this nimble age, I fell a railing, but now soft and slow, I know, I know naught, but I naught do know, What shall I doe, what plot, what course persew? Your Maister Simplicius. Has sent to me to come. We come sweet gallants; and grumbling hate lye stil And turne Phantastique: he that climbes a hill Must wheele about, the ladder to account Is slie dissemblance, he that meanes to mount, Must lye all leuell in the prospectiue Of eager sighted greatnesse, thou wouldst thriue, The Venice state is young, loose, and vnknit, Can rellish naught but lushious vanities Goe fit his tooth, O glauering flatterie, How potent art thou: front looke briske and sleeke, That such base durt as you should dare to reeke, In Princes nostrils. Well my sceane is long. Why what a babell arrogance is this? Men will put by the very stock of fate, Theyle thwart the destiny of marriage, Striue to disturbe the sway of prouidence, Theile do it? As if we had free-will in supernaturall Effects, and that our loue or hate Depended not on causes boue the reach Of humaine stature. Durt vpon durt, feare is beneath my shooe, Dreadlesse of rackes, strappados, or the sword, Mauger Informer and slie intelligence, Ile stand as confident as Hercules, And with a frightlesse resolution, Rip vp and launce our times impieties. Open a bounteous eare for Ile be free, Ample as Heauen, giue my speech more roome, Let me vnbrace my breasts, strip vp my sleeues, Stand like an executioner to vice, To strike his head off with the keener edge, Of my sharpe spirit. Now is my fury mounted, fix your eyes, Intend your sences, bend your listning vp, For Ile make greatnesse quake, Ile tawe the hide Of thick-skind Hugenes. Ile see you hang&#x27;d first, I thanke you Sir, Ile none, This is the straine that chokes the theaters: That makes them crack with full stufft audience, This is your humor onely in request Forsooth to raile, this brings your eares to bed ▪ This people gape for, for this some doe stare This some would heare, to crack the Authors neck, This admiration and applause persues, Who cannot raile, my humors chang&#x27;d &#x27;tis cleare, Pardon Ile none, I prise my ioynts more deare. Vds fut, I can liken them to nothing, but great mens great horse vpon great dayes, whose tailes are trust vp in silke and siluer. Blesse you faire Ladies, God make you all his seruants. Lamp oyle, watch Candles, Rug-gownes &amp; small iuice, Thin commons, foure a clock rising, I renounce you all, Now may I ternally abandon meat Rust fustie you which most imbrac&#x27;d disuse, You a made me an Asse, thus shapt my lot, I am a meere Scholler, that is a meere sot. Now by the front of Ioue me thinks her eye Shootes more spirit in me, O beautie feminine ! How powerfull art thou, what deepe magick lyes Within the circle of thy speaking eyes. I commend, commend my selfe to yee Lady. A Commedy, intitled Temperance. Beauty your heart. Shall I dispaire? neuer will I loue more.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 252</div><div class="body">The pageant dealt with one or more elements in the career of John the Baptist. 1553 The subject matter lacks the usual verbal connection to the name of the Lord Mayor (Sir Thomas White), but presumably reflected the same personal preferences that led VWVhite to commemorate the Baptist in the name of the Oxford college he founded in 1555.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

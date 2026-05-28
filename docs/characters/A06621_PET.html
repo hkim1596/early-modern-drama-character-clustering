@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PET in Midas · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PET</span>
+</nav>
+
+<h1>PET</h1>
+<p class="lede">in <em>Midas</em> — Lyly, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1592</td></tr>
+<tr><th>Words</th><td>1746</td></tr>
+<tr><th>Characters</th><td>8826</td></tr>
+<tr><th>BritDrama no.</th><td>835</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt"><mark>heart</mark>. Neither shalt thou Pipenetta, for first, they are too little for thy bodie, and then too faire to pull ouer so fowle askinne. Worse and worse. Wee are no chase (prettie mops,) for Decre we are not, neither red nor fallowe, because we are Batchelers, and haue not cornu copia, we want heads: Hares we cannot be, because</div>
+<div class="excerpt">respect no difference between an egge and golde, will you not then graunt gold to be an egge? Gold wilbe crackt: A common saying, a crackt crowne. Nay then I see thou hast a broken wit. So wil an eg. An egge is rosted in the fire. So is gold tried in the fire. An egge (as Physicions say) will make one lustie. And who knowes not that</div>
+<div class="excerpt">old wo mens medicins, and cunning mens charms, but interim my teeth ake. Licio, to make me merrie I pray thee go forward with the description of thy mistres: thou <mark>must</mark> beginne now at the paps. I haue pawnd it, for I durst not coyn it. Twelue pence in the pound for the moneth. It is not at herbage. O Motto, I am almost dead with</div>
+<div class="excerpt">ô torments, ô torments, ô teeth! My teeth: I wil not haue this paine, thats certain. I Motto. Doe Motto, and for thy labor I wil requite thee. Out rascal, what hast thou done? al my nether teeth are lose, and wag like the keyes of a paire of virginals. Doe Dello. They were the Iackes aboue, the keyes beneath were easie. O</div>
+<div class="excerpt">soyle. Why, a boy was beaten on the taile with a lea thern thong, bicause when he somde at the mouth with running, he went into the water. I, and eloquent, for you <mark>must</mark> tipple wine freely, &amp; foecundi calices quem non fecere disertum. Ile warrant hee hath by this started a couey of Bucks, or roused a scull of Phesants. Ile warrant</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">The Masculin gender is more worthy then the feminine, therfore Licio backare. What then? Pulchrè sanè. Gods blessing on thy blewe nose, but Licio, my mistres is a proper woman. I care not for her qualities, so I may embrace her quantitie. I and so expert, that I can aswel tel the thoughts of a womans heart by her eyes, as the change of the weather by an almanack. No, but faithful and seruiceable. I pray thee doe. Nothing els? Proceed. I would my bed were a hazard. Nothing, but that I would haue her head there among other balles. O that I were a partridge head. That she might tire with her eyes on my coun tenance. Scilicet. Thats a leaden dagger in a veluette iheath, to haue a black tongue in a faire mouth. Then will I mutter, a rope for Parrat, a rope. O monstrous mouth! I would then it had been a sheepes eye, and a neates tongue. Sweetly meant. Doth she want eares? Why then if one aske her a question, it is likely she wil hearken to it. Then belike there she weares her wedding ring. Let vs go farther Licio, she hath both vs in the wind. What, is she beetle browed? What lips hath she? What is then the chin? I perceiue you are driuen to the wall that stands behind the dore, for this is ridiculous: but now you can say no more of the head, begin with the purtenances, for that was your promise. Notes quoth you, I note one thing. That if euerie part require so much as the head, it wil make the richest husband in the world ake at the heart. Neither shalt thou Pipenetta, for first, they are too little for thy bodie, and then too faire to pull ouer so fowle askinne. Worse and worse. Wee are no chase (prettie mops,) for Decre we are not, neither red nor fallowe, because we are Batchelers, and haue not cornu copia, we want heads: Hares we cannot be, because they are male one yere, and the next female, we change not our sex: Badgers we are not, for our legs are one as long as ano ther: and who wil take vs to be Foxes, that stand so nere a goose, and bite not? Why, is it not on her head? No, except this be it, to haue ones haire lie all night out of the house from ones head. The deuil it is. I would he would geue me a good boxe on the eare, that I might haue a golden cheeke. What difference to be beaten with gold, and to be beaten gold? Tush Licio, thou art vnlettered, al the earth is an egge, the white, siluer, the yolk, gold. Blirt to you both, it was layd by the Sunne. I weep ouer both your wits, if I proue in euerie respect no difference between an egge and golde, will you not then graunt gold to be an egge? Gold wilbe crackt: A common saying, a crackt crowne. Nay then I see thou hast a broken wit. So wil an eg. An egge is rosted in the fire. So is gold tried in the fire. An egge (as Physicions say) will make one lustie. And who knowes not that gold will make one frolike? Egges potcht are for a weake stomach, &amp; golde boyld, for a consuming bodie. An egge is eaten at one sup, and a portague lost at one cast. Egs make custards, and gold makes spoones to eat them. Only this ods I finde betweene mony and egs, which makes me wonder, that being more pence in the world than egs, that one should haue three egges for a peny, and not three pence for an egge. Mops I pittie thee, gold hath egs, change an an gel into ten shillings, and all those peeces are the angels egges. We durst not go to Bacchus, for if I see a grape, my head akes. AH Licio, a bots on the Barbar, euer since I consened him of the golden beard I haue had the toothach. It is a deadlie paine. I beleeue it Licio, and thereof it is that they cal it a dogged paine. Thou knowest I haue tried all old wo mens medicins, and cunning mens charms, but interim my teeth ake. Licio, to make me merrie I pray thee go forward with the description of thy mistres: thou must beginne now at the paps. I haue pawnd it, for I durst not coyn it. Twelue pence in the pound for the moneth. It is not at herbage. O Motto, I am almost dead with the toothach, al my gummes are swollen, and my teeth stande in my head like thornes. Old foole, doest thou thinke haires will breede in my teeth? O teeth, ô torments, ô torments, ô teeth! My teeth: I wil not haue this paine, thats certain. I Motto. Doe Motto, and for thy labor I wil requite thee. Out rascal, what hast thou done? al my nether teeth are lose, and wag like the keyes of a paire of virginals. Doe Dello. They were the Iackes aboue, the keyes beneath were easie. O my teeth, good Motto what wil ease my pain? It is at pawne. Motto withdraw thy selfe, it may be thou shalt drawe my teeth; attend my resolution. A doubtfull dispute, whether I were best to loose my golden beard, or my bone tooth? Helpe me Lycio to determine. I but Lycio, if I part from my beard, my heart will ake. My heart is hollow too, and nothing can stop it but gold. Nor buy it without money. I but the golden beard will last me ten yeres in porredge, and then to what vse are teeth? Tis true, and if I lacke money my whole bodie may go naked. But Lycio, let the Barbar haue his beard, I will haue a deuice (by thy helpe) to get it againe, &amp; a cousenage beyond that, maugre his beard. Barber, eleuen of my teeth haue gone on a Iury, to trie whether the beard bee thine, they haue chosen my tongue for the foreman, which cryeth, guiltie. And I thy finger in my mouth to be sure of ease. Dello, sing a song to the tune of my teeth do ake. I and troublesome, for if you call a dog a dog, you are vndone. Tis the best Calamance in the world, as casilie deciphered, as the characters in a nutmeg. I will. There was a boy leasht on the single, because when he was imbost, he tooke soyle. Why, a boy was beaten on the taile with a lea thern thong, bicause when he somde at the mouth with running, he went into the water. I, and eloquent, for you must tipple wine freely, &amp; foecundi calices quem non fecere disertum. Ile warrant hee hath by this started a couey of Bucks, or roused a scull of Phesants. Ile warrant that was deuised by some Country swad, that seeing a hare skip vp, which made him start, he presently said, he started the hare. Remember all? nay then had we good memo ries, for there be more phrases than thou hast haires, but let me see, I pray thee whats this about thy neck? If it had stoode on thy head I should haue called it a horne. Wel, tis hard to haue ones browes imbroide red with bugle. No, twil make Boreas out of breath, to blow his hornes away. Well, tis a shrowd blow. And here I vow by my conceald beard, if euer it chaunce to be discouered to the worlde, that it maye make a pike deuant, I wil haue it so sharp poynted, that it shall stab Motto like a poynado. Nay I woulde I coulde come but to kisse my chinne, which is as yet the couer of my booke, but my word shall stand. Now let vs read the inuentorie, weele share it equally. An inuentorie of all Mottoes moueable baddes and goods, as also of such debts as are owing him, with such houshold stuffe as cannot be remoued. Inprimis, in the bed-chamber, one fowl wife, &amp; fiue smal children. I am content, take thou all. These be his moue able baddes. Item in the seruants chamber, two paire of curst queanes tongues. Nay they pinch worse than tongs. Item, one pair of hornes in the bridechamber, on the beds head. Noli me tangere, I refuse the executorship, be cause I wil not meddle with his desperate debts. Item, an hundred shrewd turnes owing me by the Pages in the Court, because I will not trust them for trimming. Wel, because Motto is poore, they shalbe paid him cum recumbentibus. All the Pages shall enter into re cognisance, but ecce, Pipenetta chaunts it. I know not whether thy fortune is to be a Dut ches, but sure I am thy face serues thee wel for a witch, whats the matter? And my heart is like a harth where Cupid is ma king a fire, for Sophronia shalbe my wife: me thinks Ve nus and Nature stande with each of them a paire of bel lowes, the one cooling my lowe birth, the other kind ling my loftie affections. All the Gods me, because I can lie, sing, sweare, and loue. But soft, here comes Motto, now shal we haue a fit time to be reuenged, if by deuise we can make him say, Mydas hath asses eares. Weele make him haue a tongue, that his teeth that looke lyke a combe shall bee the cizzars to cut it off. How now Motto, what all a mort? He meanes you are the last of the stocke aliue, the rest the wormes haue eaten. But tell vs Motto, why art thou sad? Belike it is the wennes. Ten to one Motto knowes of the asses eares. It will out, I feele him comming. O, Motto is modest; to mitigate the matter, hee calls his owne eares, asses eares. Then will I lead my maide by the hand. Yea Motto, hast thou Latin? A fine discourse: well Motto, we giue thee mer cie, but we will not loose the beard. Remember nowe our snuentorie. Item, wee will not let thee goe out of our hands, till we haue the beard in our hands.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Midas</div><div class="body">Offered anything he wishes by way of reward for entertaining Baéehus) KingiMidas seeks advice. Two of his lords suggest that he request love and empire respectively; the third proposes gold, which can buy both, so Midas asks that everything he touches should turn to gold. The gift proves to be an inconvenience, turning Midas’s food and even his beard to gold. (A BaBE steals the golden beard from the FSyalibarber, but the barber gets his own back by giving him toothache.) Regretting his folly and his imperialistic designs on other nations, Midas seeks a remedy from the oracle, and washes off the golden touch in a nearby river. On the way home, Midas goes hunting in the woods, gets lost, and encounters Ajpoll6 and Pan ‘The two gods are in dispute over which is the best musician; Midas is asked to judge, and, perversely, chooses Pan. Apollo gives him ass’s ears in reprisal, and he becomes reclusive while rumours spread; even the reeds whisper about his ears. Meanwhile his empire begins to disintegrate and he is unable to achieve his overriding objective, the conquest of Lesbos. Finally he seeks a remedy from the oracle of Apollo, and also proclaims that any further talk about his ass’s ears will cost the speaker his own. The pages inveigle Motto the barber into flouting the edict, and thereby force him to return the golden beard. Midas makes his obeisance at Apollo’s oracle, and is ordered to give up his imperial ambitions; in particular, his ears will only get longer if he continues to covet Lesbos. He agrees, and promises to make annual sacrifices at the oracle. The ass’s ears fall off, and the play ends with praise for Apollo.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

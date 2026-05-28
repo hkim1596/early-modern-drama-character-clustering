@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAM in 540 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SAM</span>
+</nav>
+
+<h1>SAM</h1>
+<p class="lede">in <em>540</em> — [173]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>1433</td></tr>
+<tr><th>Characters</th><td>8138</td></tr>
+<tr><th>BritDrama no.</th><td>540</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">resemblance She hath with one of mine. Meanes she in the mysticall sense of ill? Diogenes in dolio. Poxe on your Pandarising. My Sister turn&#x27;d a common prostitute? I <mark>must</mark> discover it. Now <mark>must</mark> I practise unaccustom&#x27;d impudence. By your leave gentle creatures: may I have my turne now for a little sport! Nay, nay, sweetheart, thou</div>
+<div class="excerpt">goodnesse Had built their mansion in her. Welcome faire one, I hope my pardon&#x27;s seal&#x27;d for thus presuming On what you might call rud enesse. Which are so glorious, I <mark>must</mark> admire the actions that expresse them. I hope your judgement doth not call it ill, That my intemperate anger being grownded On vertuous suspition, <mark>did</mark> transport</div>
+<div class="excerpt">sense: And under such a base subjection Ruine her noble parts. True estimation Is grounded on the actions of the minde: And to determine bravely, well as honestly, <mark>Must</mark> be the last, and most refin&#x27;d digestion Of a high flying nature. Such should hers be. She wanted not th&#x27;instruction, nor example Of worthy Parents, that honour</div>
+<div class="excerpt">wanted not th&#x27;instruction, nor example Of worthy Parents, that honour is the most Essentiall part of life, and valewd &#x27;bove it. Oh hypocrisie, Thy painted showes <mark>must</mark> likewise mock our judgments Into an apt credulitie, that makes Bad worse by the dissembling. Had shee wanted Or meanes of power or fortune to discover This inclination;</div>
+<div class="excerpt">None other circumstance, or paint a passion My reasons eye allowes: though first my sense Convey&#x27;d the knowledge of your outward forme, And full perfections, which <mark>must</mark> needs conteine A richer inside. Vertue seldome dwells But in a glorious frame. I love your goodnesse: For that your beauty. In my new borne wishes I have determin&#x27;d</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Let&#x27;s home to our studies and put cases. Time would be better spent in reading lawes, Teaching our knowledge how to argue doubts: For in our after-states such may arise That without policies helpe may ruine it. &#x27;Tis not to make it my profession, (Although in some it be most necessary) (For how can government and lawes subsist Without their ministers, whose skill and judgement Distinguish right from wrong) but to be able To man ge what&#x27;s mine owne, as time shall send it, You are likely to inherit faire possessions, G in&#x27;d by a fathers industry ; perhaps With some contention, and conveyances M y be defe tive: wer&#x27;t not better fa re Your selfe could u derstand it, then to trust The honesty or skill of a bought counsel? I had rather heare another resolution. If I avoid the excesse. Indeed sir, my affection Is better pleas&#x27;d with solitary studie: A sober mornings walke, is exercise Enough for me. You may command a resignation. &#x27;Tis surely she : they&#x27;r all her lineaments. Had I ne&#x27;re seene her ; had not knowing sense Power to distinguish, n turall instinct Would tell me &#x27;tis my sister. Why disguis&#x27;d? And why come hithe ? it hath wrapt my reason In mists of wonder. Yet I cannot feare She hath betray&#x27;d her honour to base wantonnesse. She had a guard of vertues; else hypocrisie Taught her to seeme a Saint, and paint that goodnes e With a false colour. Know you not my sweet heart? Is not your name Bellamuel? Deny&#x27;s her selfe. There&#x27;s something in&#x27;t above my reach of feare. Passion forbeare me, and I&#x27;le worke with policie, To find the scope of all. Is she your servant? I wou d have cal&#x27;d her kinswoman for resemblance She hath with one of mine. Meanes she in the mysticall sense of ill? Diogenes in dolio. Poxe on your Pandarising. My Sister turn&#x27;d a common prostitute? I must discover it. Now must I practise unaccustom&#x27;d impudence. By your leave gentle creatures: may I have my turne now for a little sport! Nay, nay, sweetheart, thou shalt serve: thy Mistris is too deare; and I am loth to pay over-much for repentance. &#x27;Tis but changing offices: let her hold the dore for thee. Good Lady light-heele; give your servant leave to practise the trade you have taught her. That such per fections as appeare in this woman should be sold to every base desire. Come wench, thy browne complexion plea seth mee better then thy Mistrisses: thou dost not paint, and art the likelier to be wholsome. He re&#x27;s halfe a crowne wench; me thinks &#x27;tis a faire rate. Ha! singer in the eye? Keepe thy teares for pennance in Bride well. Crye when money&#x27;s offer&#x27;d thee? Ha! are you my Sister? Why s ee&#x27;s in the Countrey at mine Vncles, Teaching her hand some neat industrious practice; Or painting with her needle the rare forme Of some choyce flower; to her busie servant Discoursing Moralls; or perhaps at prayers, Or meditation: these were her exercises; Not prostitution. What an impudence Is this imposture? Then you are my Sister? Noe. I&#x27;m deafe to all excuse. &#x27;Tis too apparant. Possesse me vertuous rage; make me the instrument Of a religious justice. Oh that the knowing soule, which can distinguish It selfe and powers; should yeeld her government To the lascivious appetite of sense: And under such a base subjection Ruine her noble parts. True estimation Is grounded on the actions of the minde: And to determine bravely, well as honestly, Must be the last, and most refin&#x27;d digestion Of a high flying nature. Such should hers be. She wanted not th&#x27;instruction, nor example Of worthy Parents, that honour is the most Essentiall part of life, and valewd &#x27;bove it. Oh hypocrisie, Thy painted showes must likewise mock our judgments Into an apt credulitie, that makes Bad worse by the dissembling. Had shee wanted Or meanes of power or fortune to discover This inclination; like the Serpent numb&#x27;d With a long rigidnesse, forbeare&#x27;s to sting His warmers bosome, not because he hath not A poyson; but because the force thereof Is feebled by the cold. Who&#x27;lever trust devotion, or believe That any zeale is earnest? I should rather Have call&#x27;d an Eremite hypocrite: or suspected Th&#x27;austerities of an Anchorite to be But for vaine-glory or a common fame, Then her appearing goodnesse. Fury prompts me To a black act. &#x27;Tis well I have no sword. But may she not survive her first repentance; Which shame or punishment shall teach her quickly. Lustfull insatiate whore. Could not a husband Have coold your bloud? If it be earnest, cur&#x27;d a wounded fame. My reputation would have bled a little, Had she liv&#x27;d longer infamous: her death May lose the memory of her dishonour. What are you sir, that seeme thus tender of her? &#x27;Tis not your complement Can win upon me. If your worth deserves My Sisters love (I hope my Vncles care Hath well examin&#x27;d it) freely enjoy What you desire: But my opinion is Scarce settled yet. You seeme a Gentleman. If Bellamie be vertuous, shee&#x27;s my Sister; And shall not lose that interest. But prethee tell me, what&#x27;s her condition? I meane her calling. Her profession then. Here&#x27;s money for thee. P et ee te l me how was she borne? This fellow trifles. Is the Keeper thy Master her own Fath r? Is she a Gentlewoman or not? Prithee no more. Mine eye nere saw with aptnesse to desire That beauty could enthrall m&#x27;unbounded thoughts With passionate affection. Yet this piece Is absolute, and uch as cannot choose But have a glorious mind. Love is a cement That joynes not earthly parts above, but workes Upon th&#x27;eternall substance ▪ making o e Of two agreeing soules. Were she borne nobly, (As surely such perfections cannot be The issue of base parents) so that infamie Might not succeed, here would I fixe my choyce. Besides she&#x27;s vertuous, and her education Beseeming reatnesse: her discourse; pure language; Iudgement, and full behaviour argue it. Shee&#x27;s come. How like an Angell, as if sent On some celestiall message to the soule Of a departing Saint. White innocence Is in each looke and feature, as all goodnesse Had built their mansion in her. Welcome faire one, I hope my pardon&#x27;s seal&#x27;d for thus presuming On what you might call rud enesse. Which are so glorious, I must admire the actions that expresse them. I hope your judgement doth not call it ill, That my intemperate anger being grownded On vertuous suspition, did transport me Beyond a moderate passion. I am satisfi&#x27;de. Your innocence hath cleer&#x27;d my jealousie; Which was I know instruction to my sister, And th&#x27;onely working meanes that kept her safe. The Gentleman she loves I finde is worthy: Though his estate through the improvidence Of a free minded Father, low enough. My Vncle may repaire it: she hath hopes T&#x27;inherite all. And trust me did I love Where I perceiv&#x27;d desert, no inequalitie Of fortunes blind additions, birth or state, Should interpose a let to my enjoying. How shee instructs me In resolution? Fairest I shall use None other circumstance, or paint a passion My reasons eye allowes: though first my sense Convey&#x27;d the knowledge of your outward forme, And full perfections, which must needs conteine A richer inside. Vertue seldome dwells But in a glorious frame. I love your goodnesse: For that your beauty. In my new borne wishes I have determin&#x27;d you the partner Of all that&#x27;s mine. My state&#x27;s not very meane: If&#x27;twere, zeale should supply; I&#x27;de strive to merit The free gift of your selfe, and in exchange Returne my selfe. How you doe blesse me As suddainly as my desires could shape A meanes to worke it? Instantly the Church Shall seale the bargaine. &#x27;Tis heavens providence That hath dispos&#x27;d it. Thus I seale my vowes My Vncle! what makes he here? new doubts arise. You are welcome to Totenham Court Uncle. Shee&#x27;s my Wife, Vncle. Is shee married Sir? Kinde Vncle, call not poverty a sin. Wealth&#x27;s but the glosse and outside of desert. And for my Sister, since she loves this Gentleman, Shee hath some portion left her; your estate Would be a faire addition: but the loves Of Vncles are uncertaine. The truth is, I love this maid: shee&#x27;s but this Keepers daughter; Yet I would marry her, please her good Father To be consenting. Shee&#x27;s richer then the Indies. As your Commodity: How did you like it Sir? Enter Host.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

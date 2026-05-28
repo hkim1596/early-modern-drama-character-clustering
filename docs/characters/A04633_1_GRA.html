@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GRA in Bartholomew Fair · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>GRA</span>
+</nav>
+
+<h1>GRA</h1>
+<p class="lede">in <em>Bartholomew Fair</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>880</td></tr>
+<tr><th>Characters</th><td>4503</td></tr>
+<tr><th>BritDrama no.</th><td>1757</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Though Subtilty would say to me, (I know) hee is a foole, and <mark>has</mark> an estate, and I might go uerne him, and enioy a friend, beside. But these are not my aymes, I <mark>must</mark> haue a husband I <mark>must</mark> loue, or I cannot liue with him. I shall ill make one of these politique wiues! Sure you thinke me a <mark>woman</mark> of an extreme leuity, Gen tlemen,</div>
+<div class="excerpt">write either of you, heere, a word, or a name, what you like best; but of <mark>two</mark>, or three syllables at most: and the next person that comes this way (because Destiny <mark>has</mark> a high hand in businesse of this nature) I&#x27;le demand, which of the <mark>two</mark> words, he, or she doth approue; and according to that sentence, fixe my resolution, and affection,</div>
+<div class="excerpt">dif ference, marke which you approue best. This man amazes mee! I pray you, like one of &#x27;hem, Sir. I, and strangely, as euer I saw! What fellow is this trow? Nay, <mark>did</mark> you not promise, not to enquire? See, heere&#x27;s our mad-man againe. What would you with it, Sir? Heere it is, Sir, this was it you mark&#x27;d. Yes faith, hee <mark>has</mark> discouer&#x27;d</div>
+<div class="excerpt">haire of him. Faith, through a common calamity, he bought me, Sir; and now he will marry me to his wiues brother, this wise Gentle man, that you see, or else I <mark>must</mark> pay value o&#x27;my land You&#x27;ld bring but little ayde, Sir. Sir, they that cannot worke their fetters off; <mark>must</mark> weare &#x27;hem. Faith the same they haue of themselues, Sir.</div>
+<div class="excerpt">you both loue mee, as you pretend, your owne reason will tell you, but one can enioy me; and to that point, there leads a directer line, then by my infamy, which <mark>must</mark> follow, if you fight. &#x27;Tis true, I haue profest it to you ingenuously, that rather then to be yoak&#x27;d with this Bridegroome is appointed me, I would take vp any</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">So would I, or any body else, so I might scape you, Truely, I haue no such fancy to the Fayre ; nor ambiti on to see it; there&#x27;s none goes thither of any quality or fashion. I doe not thinke on&#x27;t, Sir. I am beholden to you, Sir, and to your Bartholmew -wit. Nay, if you saw the Iustice her husband, my Guardian, you were fitted for the Messe, hee is such a wise one his way— O! hee is too serious for this place, and yet better sport then then the other three, I assure you, Gentlemen: where ere he is, though&#x27;t be o&#x27;the Bench. Then you would not chose, Sir, but loue my Guardian, Iustice Ouerdo , who is answerable to that description, in euery haire of him. Faith, through a common calamity, he bought me, Sir; and now he will marry me to his wiues brother, this wise Gentle man, that you see, or else I must pay value o&#x27;my land You&#x27;ld bring but little ayde, Sir. Sir, they that cannot worke their fetters off; must weare &#x27;hem. Faith the same they haue of themselues, Sir. I cannot greatly complaine, if this were all the plea I had against &#x27;hem. Sir, I will giue my selfe, no cause; I am so secure of mine owne manners, as I suspect not yours. If you both loue mee, as you pretend, your owne reason will tell you, but one can enioy me; and to that point, there leads a directer line, then by my infamy, which must follow, if you fight. &#x27;Tis true, I haue profest it to you ingenuously, that rather then to be yoak&#x27;d with this Bridegroome is appointed me, I would take vp any husband, almost vpon any trust. Though Subtilty would say to me, (I know) hee is a foole, and has an estate, and I might go uerne him, and enioy a friend, beside. But these are not my aymes, I must haue a husband I must loue, or I cannot liue with him. I shall ill make one of these politique wiues! Sure you thinke me a woman of an extreme leuity, Gen tlemen, or a strange fancy, that (meeting you by chance in such a place, as this, both at one instant, and not yet of two hours acquain tance, neither of you deseruing afore the other, of me) I should so forsake my modesty (though I might affect one more particularly) as to say, This is he, and name him. If you would not giue it to my modesty, allow it yet to my wit; giue me so much of woman, and cunning, as not to betray my selfe impertinently. How can I iudge of you, so farre as to a choyse, without knowing you more? you are both equall, and alike to mee, yet: and so indifferently affected by mee, as each of you might be the man, if the other were away. For you are rea sonable creatures, you haue vnderstanding, and discourse. And if fate send me an vnderstanding husband, I haue no feare at all, but mine owne manners shall make him a good one. It may be you are, you know not what&#x27;s toward you: will you consent to a motion of mine, Gentlemen? I saw one of you buy a paire of tables, e&#x27;en now. The fitter for what they may be imployed in. You shall write either of you, heere, a word, or a name, what you like best; but of two, or three syllables at most: and the next person that comes this way (because Destiny has a high hand in businesse of this nature) I&#x27;le demand, which of the two words, he, or she doth approue; and according to that sentence, fixe my resolution, and affection, without change. But you shall promise, Gentlemen, not to be curious to know, which of you it is, taken; but giue me leaue to conceale that till you haue brought me, either home, or where I may safely tender my selfe. Because I will bind both your indeauours to work toge ther, friendly, and ioyntly, each to the others fortune, and haue my selfe fitted with some meanes, to make him that is forsaken, a part of amends. You are content, then? Sir, heere are two names written— How, Sir? I pray you read &#x27;hem to your selfe, it is for a wager betweene these Gentlemen, and with a stroake or any dif ference, marke which you approue best. This man amazes mee! I pray you, like one of &#x27;hem, Sir. I, and strangely, as euer I saw! What fellow is this trow? Nay, did you not promise, not to enquire? See, heere&#x27;s our mad-man againe. What would you with it, Sir? Heere it is, Sir, this was it you mark&#x27;d. Yes faith, hee has discouer&#x27;d it to you, now, and there fore &#x27;twere vaine to disguise it longer, I am yours, Sir, by the be nefit of your fortune. I desire to put it to no danger of protestation. Let him alone, he is so busie, he will neuer spie vs. The place becomes him, me thinkes. Alas! would you haue him to expresse more then hee has? that were tyranny. My wise Guardian!</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Bartholomew Fair</div><div class="body">Bartholomew Cokes has two objectives in life: to visit the fair which shares his name, and to marry Grace Wellborn, who, as a ward, faces a financial penalty should she refuse. He sends his servant Wasp to Littlewit the proctor to obtain a marriage licence, but then, impatiently, comes himself. He brings Grace with him, and she attracts the interest of Winwife, present with his friend Quarlous as a suitor to Littlewit’s mother-in-law, Dame Purecraft. Littlewit is more interested in Cokes’s talk of the fair, having secretly written one of the puppet plays to be performed there. The only snag is that the puritanical Dame Purecraft will disapprove of their visit, thinking fairs profane. Busy, an elder of Purecraft’s church, advises the family that fairs may lawfully be visited for good reason, and comes along with them to partake of the pork. After some unfortunate experiences involving mistaken identity, Justice Overdo no longer trusts informers and has decided to do his spying personally. He visits the fair in disguise to seek out ‘enormities’ perpetrated by the fairground folk. He is impressed by one young man, Edgeworth, and decides to rescue him from the clutches of the cheaters; but he does not know that Edgeworth is a cutpurse. While Overdo is busy telling him about the wickedness of tobacco, Edgeworth steals Cokes’s purse; Overdo gets the blame. When it happens a second time, Overdo is arrested and put in the stocks. There he encounters the madman Trouble-All, who persistently demands Overdo’s warrant for any action; it transpires that he was a court official driven out of his mind by Overdo’s own actions. The watchmen, concerned to get better authority, release Overdo from the stocks for the time being. Meanwhile, the Littlewits arrive at the fair, but Busy becomes over-excited in his condemnation, attacks the fairground booths, and is arrested; Dame Purecraft goes after him, leaving Littlewit and Win free to enjoy themselves. Edgeworth tricks Wasp into making affidavit so that, at Quarlous’s instigation, he can steal Cokes’s marriage licence. Wasp too is arrested and put in the stocks, but escapes by a ruse when Overdo and Busy are put in beside him. The women visitors to the fair are separated from the men. Littlewit leaves Win in the care of two fairground bawds while he goes off to check the arrangements for his puppet show. Cokes abandons Grace and Mistress Overdo to try and get back his stolen property. Desperate for the toilet, Mistress…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

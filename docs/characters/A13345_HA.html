@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HA in The Hog Hath Lost His Pearl · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>HA</span>
+</nav>
+
+<h1>HA</h1>
+<p class="lede">in <em>The Hog Hath Lost His Pearl</em> — Tailor, Robert</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1614</td></tr>
+<tr><th>Words</th><td>1432</td></tr>
+<tr><th>Characters</th><td>7423</td></tr>
+<tr><th>BritDrama no.</th><td>1701</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">VVhy ſay ſhee were, nay more, maried to another, I would be neare the further of them effecting of my intents, no Coze, I partly know her inward diſpoſition, and <mark>did</mark> I but only know her to be <mark>woman</mark> kind, I thinke it were ſufficient. Nay pree thee doe not thinke ſo, if I doe not marry thee this inſtant night, may I neuer enioy</div>
+<div class="excerpt">obſcure a miſtery. O nere feare it, for what I haue writ is both witty to the wiſe, and pleaſing to the ignorant; for you ſhall haue theſe laugh at it farre more heartily that vnderſtand it not, then thoſe that doe. O no, ſing it but in tune, and I dare warrant you. Fie no, the diſmembring of a rime to bring in reaſon ſhewes the</div>
+<div class="excerpt">aduaunce my downe falne fortunes Atlas. No nor is it in man to coniecture rightly the thought by the tongue. I had not needed it. If I doe Atlas be it ſo, Ile ene <mark>goe</mark> write this rime ouer my beds head. Ʋ ndone by folly, fortune lend me more, Canſt thou, and wilt not, pox on ſuch a where, And ſo ile ſet vp my reſt, but ſee Atlas</div>
+<div class="excerpt">cheating, theft, and pandariſing, or may be flattery, I haue maintained ſome of them my ſelfe, but come haſt aught to breakefaſt. There ca ̄ not be a ſweeter diſh, it <mark>has</mark> Coſt mony the dreſ ſing. True, but in my opinion, pride might as well be por traied in any other ſhape, as to ſeeme to be an affector of gal lantry, being the cauſes</div>
+<div class="excerpt">but now I thinke out, whats to be done with your Fathers man Peter? Till when, let this outward ceremony, be the true pledge of our inward affections. So, this goes better forward then the Plantation in Virginia: but ſee here comes halfe the weſt Indies, whoſe rich mines this night I meane to be ranſacking Indeed by that wee</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Marry thus, Hogge the Vſurer hath one only daughter. Thankes good Coze, the meanes ſhall not be great, on ly that I may firſt be clad in a generous outſide, for that is the chiefe attraction, that drawes female affection; good parts without any abilements of gallantry, are no more ſet by in theſe times, then a good legge in a wollen ſtocken: No, tis a gliſtering preſence and audacity brings women into fooles felicity. O chiefely now ſir for) aurora muſis amicat ) You muſt then pardon me, good M. Chaunge-coate, for I proteſt vntee it is ſo much my often conuerſe, that if there be none but women in my company, yet cannot I forbeare it. A ſmall matter, youle finde it worth Megge of Weſt minſter, althouh it be but a bare Iigge. Garlicke ſtinkes to this, proue that you haue not more whores to ſee this, then ere Garlicke had. ſay I am a boaſter of mine owne workes, diſgrace me on the open ſtage, and bob me off with nere a penny. Marry that which is full as forceable as Garlicke, the name of it is who buyes my fowre ropes of hard Onions, by which fowre ropes is meant fowre ſeueral kind of liuers, by the onions hangers on, as at ſome conuenient time I wil more par ticularly informe you in ſo rare a hidden and obſcure a miſtery. O nere feare it, for what I haue writ is both witty to the wiſe, and pleaſing to the ignorant; for you ſhall haue theſe laugh at it farre more heartily that vnderſtand it not, then thoſe that doe. O no, ſing it but in tune, and I dare warrant you. Fie no, the diſmembring of a rime to bring in reaſon ſhewes the more efficacy in the writer. So I beleeue, Why M. Change-coate, I do not ſuppoſe we ſhall differ many pounds, pray make your offer, if you giue me too much, I will moſt Doctor of Phicke like reſtoare. How M. Change-coate a brace of angels beſides much drinke of free coſt if it be lik&#x27;t, I feare you haue learned it by heart, if you haue powdred vp my plot in your ſconce, you may home ſir and inſtruct your Poet ouer a pot of ale, the whole me thode on&#x27;t, but if you do ſo iuggle, looke too&#x27;t Shrouetuſeday is at hand, and I haue ſome acquaintance with Bricklayers and Playſterers. Nay before al others, and ſhotly expect a notable peece of matter ſuch a Iigge whoſe tune with the naturall whiſtle of a carman, ſhall be more rauiſhing to the eares of ſhopkeepers then a whole conſort of barbors at midnight. Well Maiſter chaunge coate you ſhal now leaue me, for Ile to my ſtudie, the morning houres are precious and my muſe meditates moſt vpon an empty ſtomacke. Ile ſooner forget to be a Iigge maker. So heres foure angels I little dreampt of Nay and there bee mony to be gotten by foolery, I hope fortune will not ſee me want. What was my country coſe here ſince. Ye and to aduaunce my downe falne fortunes Atlas. No nor is it in man to coniecture rightly the thought by the tongue. I had not needed it. If I doe Atlas be it ſo, Ile ene goe write this rime ouer my beds head. Ʋ ndone by folly, fortune lend me more, Canſt thou, and wilt not, pox on ſuch a where, And ſo ile ſet vp my reſt, but ſee Atlas heres a little of that that dambs Lawyers, take it in part of a further recompence. Why if you will you may, but the ſurmounting of my fortunes is as much to be doubted, as he whoſe eſtate lies in the lotterie, deſperate. Yes cheating, theft, and pandariſing, or may be flattery, I haue maintained ſome of them my ſelfe, but come haſt aught to breakefaſt. There ca ̄ not be a ſweeter diſh, it has Coſt mony the dreſ ſing. True, but in my opinion, pride might as well be por traied in any other ſhape, as to ſeeme to be an affector of gal lantry, being the cauſes thereof are ſo ſeuerall and diuers, as ſome are proud of their ſtrength, although that pride coſt them the loſſe of a limbe or two, by ouer-daring, likewiſe ſome are proud of their humor, although in that humor, they be often knockt for being ſo, ſome are proud of their drinke, although that liquid operation, cauſe them to weare a night cap 3. weeks after, ſome are proud of their good parts, although they neuer put them to better vſes, then the enioying of a common ſtrum pets company, and are only made proud by the fauor of a wai ting woman, others are proud — Why now preſently, and if I do not accompliſh my pro iects to a wiſhed end, I wiſh my fortunes may be like ſome ſcra ping tradeſman, that neuer embraceth true pleaſure, till he be threeſcore and ten. VVhy ſay ſhee were, nay more, maried to another, I would be neare the further of them effecting of my intents, no Coze, I partly know her inward diſpoſition, and did I but only know her to be woman kind, I thinke it were ſufficient. Nay pree thee doe not thinke ſo, if I doe not marry thee this inſtant night, may I neuer enioy breath a minute after; by heauen I reſpect not his pelfe, thus much, but onely that I may haue wherewith to maintaine thee. Thinke ill of thee, can the world pitty him, that nere pittied any, beſides ſince their is no end of his goods, nor begin ning of his goodneſſe; had not we as good ſhare his droſſe in his life time, as let Controuerſie and Lawyers deuowre it ats death? Why iuſt at mid-night, for then our apparition will will ſeeme moſt fearefull, youle make away that we may aſcend vp like ſpirits? Faith none, but my coſen Lightfoote and a plaier. Oh exceeding well, wele giue him a ſpeech a vnder ſtands not, but now I thinke out, whats to be done with your Fathers man Peter? Till when, let this outward ceremony, be the true pledge of our inward affections. So, this goes better forward then the Plantation in Virginia: but ſee here comes halfe the weſt Indies, whoſe rich mines this night I meane to be ranſacking Indeed by that wee may know what we ſteale without labour, for the telling ont ore; how now gent. are ye agreed v pon the price of this earth and clay. We ſhall be bold no doubt, and that olde penny-father youle confeſſe by to morrow morning. All which were beſtowed vpon you for beginning firſt Peter. Why then here the ſentence of your ſuffering, you ſhal both downe into Maſter Hogs ſeller Peter, and whereas you began firſt to him, ſo ſhall he there to you, and as he gaue you three cuffes, ſo ſhall you retort of in defiance of him, three blacke Iackes, which if he deny to pledge; then the glory is thine, and he accompted by the wiſe diſcretion of my Lord here a flincher. Were you ſo lately with any my Lord? O by no meanes, I pree thee friend, good-morrow. A moſt fine Vicar, there was no other meanes to be rid of him: but why are you ſo ſad Rebecka? My kinde acquaintance. Ioy to thy good ſucceſſe. What exclamations that? Rob&#x27;d, by whom or how? The feare of hell oretake them whatſoere they be: but wheres your daughter, I hope ſhe is ſafe. O heauy accident, but ſee you grieue too much, Being your daughter&#x27;s found, for th&#x27;other loſſe; Since tis the will of heauen to giue and take, Value it as nothing, you haue yet ſufficient To liue in bleſt content, had you no more But my ſmall mortgage for your daughter here; Whom I haue euer lov&#x27;d in deer&#x27;ſt affection, If ſo you pleaſe ſo much to fauour me, I will accept her ſpight of pouerty, And make her iointure of ſome ſtore of land, Which by the loſſe of a good aged friend Late fell to me, what iſt a match or no. We three are happy wee haue gain&#x27;d much wealth, And though we haue done it by a tricke of ſtealth, Yet all I truſt are pleas&#x27;d, and will our ill acquite, Since it hath ſau&#x27;d a ſoule was hells by right.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Hog Hath Lost His Pearl</div><div class="body">Haddit has spent all his money and mortgaged his lands to Hog the usurer, and now ekes out a living selling jigs to players. He aims to solve his financial problems by marrying Rebecca, Hog’s daughter, whose affections he had previously refused in the belief that she was too low-born for him. Hog intends Rebecca to marry young Lord Wealthy, but she refuses, and helps Haddit trick her father. Haddit’s uncle, Lightfoot, helps to get the servant Peter out of the way by picking a quarrel, to give him a pretext for making peace with a drinking contest; Peter imbibes himself insensible in the cellar. Rebecca steals Hog’s keys, giving Haddit and his accomplices access to his bedroom, where he keeps his gold. Lightfoot appears to Hog as the ghost of Croesus, come to make the usurer rich: a spirit will ===== PAGE 291 ===== 1613 take his gold and transform it into pearl, which is even more valuable; in reality, Haddit steals the money and retrieves his mortgage, then absconds with Rebecca and marries her. Hog goes to complain to old Lord Wealthy, but his supernatural experiences induce a conversion: he renounces avarice and gives the couple his blessing. In the sub-plot, Carracus plans to elope with young Lord Wealthy’s sister Maria, and entrusts his friend Albert with the arrangements. Albert visits Maria early, posing as Carracus, and has sex with her; she then leaves with Carracus as planned, and marries him: Albert suffers remorse and decides to leave human society. Some time later, Carracus notices that Maria is wearing Albert’s ring, which he gave her on the night of the elopement. Both realize what Albert did; Maria faints and Carracus is told that she has died of shame. In fact, she disguises herself as a page and flees to the woods, where Albert has carved penitential verses on every tree. Posing as a hermit, Albert finds her almost dead from starvation; he takes her to his cave; and feeds her. Carracus also goes to the woods, where an echo tells him that Maria is alive and innocent. They meet up, and revelations ensue: the page is chaste Maria and the hermit is penitent Albert. Carracus and Maria forgive him, and make their peace with Maria’s family.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

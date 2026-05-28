@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1 in A Trick to Catch the Old One · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>1</span>
+</nav>
+
+<h1>1</h1>
+<p class="lede">in <em>A Trick to Catch the Old One</em> — Middleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1608</td></tr>
+<tr><th>Words</th><td>1144</td></tr>
+<tr><th>Characters</th><td>6004</td></tr>
+<tr><th>BritDrama no.</th><td>1467</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">worth a haire now, then you would <mark>bee</mark> forward ynough? come, clap hands, a match. Twas well deuized. We&#x27;re engade ſir. Tis for our credits now to ſee&#x27;t well ended. <mark>Did</mark> not I vſe moſt art to win the widdow. I was the firſt that mou&#x27;d her. Come you roomes fitteſt: The widdow gon? No more good ſir, it is a wrong to vs, To ſee you</div>
+<div class="excerpt">the widdow? Withall our hearts, and wee ſhall ioye to ſee your enimy ſo mockt: Ile wayte theſe 7. howers but Ile ſee him caught, A my Troth ſhees the wiſer, ſhe <mark>has</mark> made the happier choyſe, and I wonder of what Stuffe thoſe widdowes hearts are made of, that wil marry vnfledgd Boies, before comely thrumb chind Gentlemen. What</div>
+<div class="excerpt">That keepes their age aliue: Faith about a purchaſe, fetching ouer a yong heire; Maiſter Hoord my brother hauing waſted much time in beating the bargayne, what <mark>did</mark> me old Lucre ▪ but as his conſcience mou&#x27;d him, knowing the poore Gentleman ▪ ſtept in betweene e&#x27;m and couzned him himſelfe. This was e&#x27;en it ſir, yet for all</div>
+<div class="excerpt">fitteſt: The widdow gon? No more good ſir, it is a wrong to vs, To ſee you iniur&#x27;d in a cauſe ſo iuſt: Weele ſpend our liues, but we will right our friends, Ioyne hearts, ioyne hands, In wedlocks bands, Neuer to part, till death cleaue your <mark>heart</mark>, You ſhall forſake all other women, You Lords, Knights, Gentlemen, and Yeomen. What</div>
+<div class="excerpt">Reaſonable time to vs? Thats our deſires ſir. Sir. Come hether Maiſter Wit-good come hether, be rulde by fooles once: Take hold of his offer pax on her, let her <mark>goe</mark>, if your debts were once diſcharg&#x27;d, I would helpe you to a widdow my ſelfe worth ten of her. Cuds mee, as pat as can be, there&#x27;s a widdow left for you, ten thouſand</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Whoſe that; I wonder how hee breathes, ha&#x27;s conſum&#x27;d all vpon that Curtizan? You have heard all truth, his Vncle and my Brother, haue beene theſe three yeares mortall Aduerſaries. Two old tough ſpirits, they ſeldome meete but fight, or quarrell when tis calmeſt; I thinke their anger bee the very fire That keepes their age aliue: Faith about a purchaſe, fetching ouer a yong heire; Maiſter Hoord my brother hauing waſted much time in beating the bargayne, what did me old Lucre ▪ but as his conſcience mou&#x27;d him, knowing the poore Gentleman ▪ ſtept in betweene e&#x27;m and couzned him himſelfe. This was e&#x27;en it ſir, yet for all this I know no reaſon but the match might go forward betwixt his wiues Sonne and my Neece, what tho there bee a diſſention betweene the two olde men, I ſee no reaſon it ſhould put a difference betweene the two yonger, tis as naturall for old folkes to fall out, as for yong to fall in? A ſcholler comes a wooing to my Neece, well, hee&#x27;s wiſe, but he&#x27;s poore, her Sonne comes a wooing to my Neece, well, hees a foole, but hees rich — Pray now is not a rich foole better then a poore Philo ſopher. She now remaines at London with my brother her ſecond Vncle, to learne faſhions, practiſe Muſicke, the voyce betweene her lips, and the violl betweene her legges, ſhee&#x27;le bee fitt for a conſort very ſpeedily, a thouſand good pound is her portion, if ſhe marry, weele ride vp and be merry,— I am glad of this newes. I promiſe you Maiſter Cock-pit ſhe&#x27;s a mighty rich widdow. Who widdow Medler, ſhee lies open to much rumour. Nay tak&#x27;t of my word if you beleeue that, you beleeue the leaſt. Oh ſir there&#x27;s policy in that to preuent better ſuiters. He little dreames of our comming, heele wonder to ſee his creditors vpon him. Maiſter Wit-good I haue forborne my money long. He ſaies true yfaith. I, if we could be content a ſhame take vs. No, good Maiſter Wit-good, Would twere as much as we dare truſt you with? Do you heare ſir, I may deſerue your cuſtome heereafter, pray let my money be accepted before a ſtrangers, here&#x27;s fortie pound I receiu&#x27;d as I came to you, if that may ſtand you in any ſtead make vſe on&#x27;t, nay pray ſir, tis at your ſeruice — Let none of them ſee it I beſeech you. I hope I ſhall be firſt in your remembrance after the mar riage rites. So, what do you walke ſirs? Wee doo ſir. The better firſt to worke you to beleife, Know neither of vs owe him flattery, Nor tother malice, but vnbribed cenſure, So helpe vs our beſt fortunes. That Wit-good is a riotous vndon man, Imperfect both in fame and in eſtate: His debts welthier then he, and executions In waite for his due body, we&#x27;ele maintayne With our beſt credit, and our deereſt bloud. What we ſpeake, Our liues and meanes are ready to make good. Nay beleeue it widdow, You had not onely matcht your ſelfe to wants, But in an euill and vnnaturall ſtocke. Then with a new and pure affection, Behold you Gentleman, graue, kinde and rich: A match worthy your ſelfe, eſteeming him, You do regard your ſtate. Hee can ioyne land to land, and will poſſeſſe you of what you can deſire. There tis deceitfull, Where flattery, want, and imperfection lies: But none of theſe in him? puſh — Come you widdowes are euer moſt back-ward, when you ſhould doe your ſelues moſt good, but were it to marry a chin not worth a haire now, then you would bee forward ynough? come, clap hands, a match. Twas well deuized. We&#x27;re engade ſir. Tis for our credits now to ſee&#x27;t well ended. Did not I vſe moſt art to win the widdow. I was the firſt that mou&#x27;d her. Come you roomes fitteſt: The widdow gon? No more good ſir, it is a wrong to vs, To ſee you iniur&#x27;d in a cauſe ſo iuſt: Weele ſpend our liues, but we will right our friends, Ioyne hearts, ioyne hands, In wedlocks bands, Neuer to part, till death cleaue your heart, You ſhall forſake all other women, You Lords, Knights, Gentlemen, and Yeomen. What my tongue ſlips, make vp with your lips. Weele pawne our credits widdow, what he ſpeakes ſhall be performde in fullneſſe. Weele do our beſt ſir?—ſee where he comes, E&#x27;en ioyleſſe and regardleſſe of all forme. Come fie? Sorrow of mee what a ſigh was there ſir, nine ſuch wid dowes are not worth it. That vengeance is your Vncles, being done More in deſpite to him, then wrong to you, But we bring comfort now,— Berlady and thats no toye ſir: Now you may certifye the widdow? Withall our hearts, and wee ſhall ioye to ſee your enimy ſo mockt: Ile wayte theſe 7. howers but Ile ſee him caught, A my Troth ſhees the wiſer, ſhe has made the happier choyſe, and I wonder of what Stuffe thoſe widdowes hearts are made of, that wil marry vnfledgd Boies, before comely thrumb chind Gentlemen. What boye? So, ſo, ſo, ſo, it warmes me at the heart, I loue a life to ſee Dogs vpon men; oh here hee comes. Oh wee may ſpeake with you now ſir, whats become of your rich widdow, I thinke you may caſt your cap at the wid dow, may you not ſir. Come, come ſir, what ſay you extempore now to your bill of a hundred pound: a ſweet debt, for froating your doublets. No ſir, wel&#x27;e keepe you out of breath ſtill, then we ſhall be ſure you will not run away from vs. Do you talke of Reaſonable time to vs? Thats our deſires ſir. Sir. Come hether Maiſter Wit-good come hether, be rulde by fooles once: Take hold of his offer pax on her, let her goe, if your debts were once diſcharg&#x27;d, I would helpe you to a widdow my ſelfe worth ten of her. Cuds mee, as pat as can be, there&#x27;s a widdow left for you, ten thouſand in mony, beſide Plate, Iewells et caetera I warrant it a match, wee can do all in all with her, prethee diſpatch weele carry thee to her preſently. With much a doe ſir, we haue got him to conſent. Some eight ſcore od pounds ſir. You muſt make it a marke ſir,— Tis ſomthing wanting ſir, yet it ſhall be ſufficient. Why do you thinke we were in earneſt yfaith? carry you to a rich widdow, wee ſhould get much credit by that; a noted Rioter a contemptible prodigall, twas a Trick we haue amongſt vs, to get in our mony, fare you well ſir.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Trick to Catch the Old One</div><div class="body">The spendthrift Witgood has mortgaged all his lands to his uncle, Lucre, but he is still in debt, and fear of his creditors keeps him away from London. Nevertheless he must go there if he is to make his fortune by marrying Joyce, the wealthy niece to Lucre’s enemy Walkadine Hoard. He conspires with Jane, a courtesan, to give the impression that he now has good prospects: she poses as a rich country widow who plans to marry him. Lucre’s attitude to his nephew is immediately transformed: hoping to acquire the widow’s lands too after the wedding, he denies the existence of the mortgage and lends Witgood money for new clothes. News of the widow also attracts Witgood’s creditors, but he persuades them that if they are over-attentive they will break his engagement, and thereby wreck their chances of repayment: the widow must continue to believe him to be financially secure. To that end, they eagerly agree to lend him even more money. Meanwhile Jane herself is a magnet for suitors, including the young men who were earlier trying to woo the reluctant Joyce, who is only interested in Witgood. Hoard throws his hat in the ring, bringing gentlemen to give Witgood a bad testimonial and discredit Lucre’s claims that there is no mortgage. Jane denies that she has any lands, but Hoard takes it for winsomeness and insists that her love is all that matters. They arrange an elopement; she absconds from Witgood at a tavern and marries Hoard. Lucre intervenes, not knowing he is too late, and gets her to promise that she will not change her marital status until he has made matters good by returning his nephew’s mortgage, which he duly does before witnesses. On discovering that he has been tricked, he initiates a law-suit, alleging that the widow’s marriage to Hoard is invalidated by a pre-contract to Witgood. Hearing that he has lost the widow, Witgood’s creditors have him arrested. Jane persuades Hoard to pay his debts and secure his release in exchange for his signature on a legal document renouncing any marital claim on her. Hoard drives a hard bargain with the creditors, but Witgood is duly freed. He secretly marries Joyce and delights his uncle with the truth that Hoard has married a whore. Hoard himself learns this when his brother comes from the country to attend the nuptial celebrations, and recognizes Jane. Jane points out that Hoard has only his own avarice to blame: she never misrepresented herself as having ===== PAGE 206 ===== 206 | 1467.A Trick to Catch the Old…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

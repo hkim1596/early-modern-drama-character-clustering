@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HUM in The Knight of the Burning Pestle · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>HUM</span>
+</nav>
+
+<h1>HUM</h1>
+<p class="lede">in <em>The Knight of the Burning Pestle</em> — Beaumont, Francis</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1613</td></tr>
+<tr><th>Words</th><td>608</td></tr>
+<tr><th>Characters</th><td>3125</td></tr>
+<tr><th>BritDrama no.</th><td>1562</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">for beleeue me To sleepe without a snatch would mickle grieue me. So I am, And haue bene euer merrie from my Dam. Faith it may <mark>bee</mark>, Vnlesse it were by chance I <mark>did</mark> beray mee. If it be so, my friend, you vse me fine, What do you thinke I am? A word of obloquie, now by Gods bodie, I&#x27;le tell thy maister for I know thee well.</div>
+<div class="excerpt">Yet none but my selfe within this Citty, Shall dare to say so, but a bold defiance Shall meete him, were he of the noble Science. And yet she sweare, and yet why <mark>did</mark> she sweare? Truely I cannot tell, vnlesse it were For her owne ease, for sure sometimes an oath, Being sworne thereafter is like cordiall broth. And this it was</div>
+<div class="excerpt">is like cordiall broth. And this it was shee swore, neuer to marry, But such a one, whose mighty arme could carry (As meaning me, for I am such a one) Her bodily <mark>away</mark> through sticke and stone, Till both of vs arriue, at her request, Some ten miles off, in the wilde Waltham Forrest. Good-night, twenty good-nights, &amp; twenty more.</div>
+<div class="excerpt">liue, I shall thinke of that meeting. Here comes the Broker hath purloin&#x27;d my treasure. Nay, and my noble Knight be downe so soone, Though I can scarely go I needs <mark>must</mark> runne. Father forgiue me, shall I tell you true, Looke on my shoulders they are blacke and blew. Whilst too and fro faire Luce and I were winding, Hee came and</div>
+<div class="excerpt">shoulders they are blacke and blew. Whilst too and fro faire Luce and I were winding, Hee came and basted me with a hedge binding. I know the place, where he my loines <mark>did</mark> swaddle, I&#x27;le get six horses, and to each a saddle. There, there he stands with sword like martial knight Drawne in his hand, therefore beware the fight You that</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Nothing. So it were beshrew me, Then ease me lusty Luce, and pitty shew me. The cause you seeme to aske, I thus declare, Helpe me ô Muses nine, your daughter sweare A foolish oath, the more it was the pitty, Yet none but my selfe within this Citty, Shall dare to say so, but a bold defiance Shall meete him, were he of the noble Science. And yet she sweare, and yet why did she sweare? Truely I cannot tell, vnlesse it were For her owne ease, for sure sometimes an oath, Being sworne thereafter is like cordiall broth. And this it was shee swore, neuer to marry, But such a one, whose mighty arme could carry (As meaning me, for I am such a one) Her bodily away through sticke and stone, Till both of vs arriue, at her request, Some ten miles off, in the wilde Waltham Forrest. Good-night, twenty good-nights, &amp; twenty more. And 20 more good-nights, that makes three-score. Good Mistresse Luce how euer I in fault am For your lame horse; you&#x27;re welcome vnto VValtham. But which way now to go or what to saie I know not truely till it be broad daie. Then vp and ride, Or if it please you walke for your repose, Or sit, or if you will go plucke a rose: Either of which shall be indifferent, To your good friend and Humphrey, whose consent Is so entangled euer to your will, As the poore harmelesse horse is to the Mill. &#x27;Tis better in the Towne, Where we may nap together, for beleeue me To sleepe without a snatch would mickle grieue me. So I am, And haue bene euer merrie from my Dam. Faith it may bee, Vnlesse it were by chance I did beray mee. If it be so, my friend, you vse me fine, What do you thinke I am? A word of obloquie, now by Gods bodie, I&#x27;le tell thy maister for I know thee well. O sir I haue it, And do confesse the paiement, praie be quiet. When I came hether, Would I had gone to Paris with Iohn Dorrie. Fare-well, The Diuels Dam was ne&#x27;re so bang&#x27;d in hell. Sir I am no Knight, But a poore Gentleman, that this same night, Had stolne from me on yonder Greene, My louelie wife, and suffered to be seene Yet extant on my shoulders such a greeting, That whilst I liue, I shall thinke of that meeting. Here comes the Broker hath purloin&#x27;d my treasure. Nay, and my noble Knight be downe so soone, Though I can scarely go I needs must runne. Father forgiue me, shall I tell you true, Looke on my shoulders they are blacke and blew. Whilst too and fro faire Luce and I were winding, Hee came and basted me with a hedge binding. I know the place, where he my loines did swaddle, I&#x27;le get six horses, and to each a saddle. There, there he stands with sword like martial knight Drawne in his hand, therefore beware the fight You that be wise: for were I good sir Beuis, I would not stay his comming, by your leaues. I see this loue you speake of, through your daughter, Although the hole be little; and hereafter Will yeeld the like in all I may, or can, Fitting a Christian, and a gentleman. I would you would i&#x27;saith, for be it knowne I euer was afraid to lie alone. Three daies, let me see, &#x27;Tis some-what of the most, yet I agree, Because I meane against the appointed day, To visite all my friends in new array.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Knight of the Burning Pestle</div><div class="body">At the theatre, a citizen and his wife object to the satirical subject matter of the play, The London Merchant: they insist on a more romantic offering starring their apprentice, Rafe, as a heroic grocer. The boy actors do their best to provide this within the play they have rehearsed. In the play, Luce prefers her father Venturewell’s apprentice Jasper to his chosen son-in-law, Humphrey; so Venturewell discharges Jasper, and he goes home to a family impoverished by the irresponsible merriment of his father, Old Merrythought. His mother, who 1607 favours his younger brother Michael, insists that he be paid his inheritance and sent out into the world. Several of the characters go to Waltham Forest. Luce elopes with Humphrey, intending to meet Jasper there. Rafe the grocer, a voluminous reader of chivalric romance, becomes the Knight of the Burning Pestle and leaves in search of heroic deeds. He scares Mistress Merrythought, who leaves behind her jewels. These are found and taken away by Jasper, who then meets the eloping couple, beats Humphrey, and takes Luce. In the audience, the citizen and his wife take Jasper to be the villain and Humphrey the hero; they demand that Rafe return to fight Jasper, but Jasper beats him. Notified by Humphrey, Venturewell confronts Jasper’s father, but is offended by his refusal to take the matter seriously. Jasper tests Luce’s love by threatening her with violence. She accepts her fate, but Humphrey and her father seize her before he can admit he was only pretending. Rafe stays at the Bell inn, but cannot understand that he must pay for its hospitality. (The citizen settles the bill for him.) The host sends him to fight the giant Barbaroso, better known as Nick the barber, who has imprisoned many knights and ladies — actually clients and venereal disease patients. Rafe defeats the ‘giant’ and releases the ‘knights’. The citizens then have a scene inserted in which he meets a foreign king’s daughter, but refuses her offer oflove. Later interpolated scenes show Rafe as the city’s May Lord, and mustering troops at Mile End. Venturewell incarcerates Luce in her room, but Jasper gains access by pretending to be dead: Venturewell accedes to a request that his body should be brought to Luce, and then has the coffin sent on to Old Merrythought, unaware that Luce has taken Jasper’s place inside. Left behind in Luce’s room, Jasper appears to Venturewell in ghostly guise and instructs him to repent, compensate Old Merrythought for his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

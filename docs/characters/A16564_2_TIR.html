@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TIR in Darius · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> ›
+  <span>TIR</span>
+</nav>
+
+<h1>TIR</h1>
+<p class="lede">in <em>Darius</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>576</td></tr>
+<tr><th>Characters</th><td>3167</td></tr>
+<tr><th>BritDrama no.</th><td>1404</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 25 (<em>did, whil, death, might, minde, fortune…</em>). Matches are highlighted.</p>
+<div class="excerpt">her <mark>death</mark> him grievouſly diſpleas&#x27;d, A woodrous thing which few or none would deeme, He wail&#x27;d it long, and could not be appeas&#x27;d. Even as my Soveraigne now, then <mark>did</mark> he ſmart, And when he came to calme your mothers griefe, As acting not his owne, but even your part, He ſeem&#x27;d to need, and not to give reliefe. Let not thoſe love-bred</div>
+<div class="excerpt">and as honourably us&#x27;d; When angry Iove ſubverted had our ſtate, And view&#x27;d our thundred troupes diſordered flight, Light <mark>fortune</mark> then who flattered us of late, <mark>Did</mark> make our ſtate a mirrour of her <mark>might</mark>, For, having found a Crowne foil&#x27;d on the ground. We ſtraight imagin&#x27;d that ſome cruell wound Had kill&#x27;d our Lord, and wail&#x27;d</div>
+<div class="excerpt">She was not wrong&#x27;d, as you have wrong conceiv&#x27;d; The Gods from harme <mark>did</mark> ſtudy to preſerve her; She from your foe ſuch favour hath receiv&#x27;d, As from her Subjects who were bound to ſerve her; But what a volly doth my voyce prepare Of</div>
+<div class="excerpt">kill&#x27;d our Lord, and wail&#x27;d it as aſſur&#x27;d. But Alexander having heard our cryes, Sent one to learne the cauſe that mov&#x27;d our woe; Who finding whence our errour <mark>did</mark> ariſe, Gave full aſſurance that it was not ſo. Then he himſelfe <mark>did</mark> to our Tent reſort, And with the mildeſt words he could conceive, Your Mother, Wife, and Children</div>
+<div class="excerpt">ariſe, Gave full aſſurance that it was not ſo. Then he himſelfe <mark>did</mark> to our Tent reſort, And with the mildeſt words he could conceive, Your Mother, Wife, and Children <mark>did</mark> exhort Such terrours vaine (ſince but ſurmiz&#x27;d) to leave; And he proteſted that they ſhould expect No harme of him their courage to appall, Then all things <mark>did</mark></div>
+
+<h2>Full speech</h2>
+<div class="full-speech">She was not wrong&#x27;d, as you have wrong conceiv&#x27;d; The Gods from harme did ſtudy to preſerve her; She from your foe ſuch favour hath receiv&#x27;d, As from her Subjects who were bound to ſerve her; But what a volly doth my voyce prepare Of woes to charge your cares? woes full of dread, Would God ere I my meſſage can declare, That I may dye in ſaying ſhe is dead. And was it not enough (poore wretch alas) That I beheld her dye, and would have dy&#x27;d? But that I muſt (arm&#x27;d with ſad tidings) paſſe To wound all them who heare what I have ſpy&#x27;d? See how he ſtands (mov&#x27;d with thoſe words of mine,) As if by griefe arreſted unto death. Thus of that Prince, you without cauſe eſteem, I know her death him grievouſly diſpleas&#x27;d, A woodrous thing which few or none would deeme, He wail&#x27;d it long, and could not be appeas&#x27;d. Even as my Soveraigne now, then did he ſmart, And when he came to calme your mothers griefe, As acting not his owne, but even your part, He ſeem&#x27;d to need, and not to give reliefe. Let not thoſe love-bred feares abuſe your thought; By all the world no fable I contrive; If partially I ſpeake, or lye in ought, Earth open wide, and ſwallow me alive: He whom your grace ſo wrongfully ſuſpects, Hath not in any ſort your Queene abus&#x27;d, But as his ſiſter ſtill (in all reſpects) As chaſtly and as honourably us&#x27;d; When angry Iove ſubverted had our ſtate, And view&#x27;d our thundred troupes diſordered flight, Light fortune then who flattered us of late, Did make our ſtate a mirrour of her might, For, having found a Crowne foil&#x27;d on the ground. We ſtraight imagin&#x27;d that ſome cruell wound Had kill&#x27;d our Lord, and wail&#x27;d it as aſſur&#x27;d. But Alexander having heard our cryes, Sent one to learne the cauſe that mov&#x27;d our woe; Who finding whence our errour did ariſe, Gave full aſſurance that it was not ſo. Then he himſelfe did to our Tent reſort, And with the mildeſt words he could conceive, Your Mother, Wife, and Children did exhort Such terrours vaine (ſince but ſurmiz&#x27;d) to leave; And he proteſted that they ſhould expect No harme of him their courage to appall, Then all things did with great regard direct, That no man might endammage them at all. Thus when they were againſt all dangers arm&#x27;d, (I thinke, for feare (for who would not have fear&#x27;d ▪ ) Leſt ſuch rare graces might his minde have charm&#x27;d) He never more before her face appear&#x27;d; Elſe generous vertue, jealous of each thing, Which (tempting reaſon) ſenſes might allure, (What rare reſtraint in a victorious King) He fled what fault, or ſcandall could procure. He doth his fame above all things preferre, And will not be where it may blemiſh finde, Nor give his eyes commodity to erre, Leſt thoughts impure might ſtrive to ſtaine his minde. He whil&#x27;ſt that ſhe was ſicke, did loath delight, And (gravely griey&#x27;d) all pompe and pleaſure left. When he beheld deaths triumph in that face, Which had triumph&#x27;d o&#x27;re ſuch a Monarchs heart, With witneſs&#x27;d woe, even paſſionate a ſpace, The lookers on did much commend his part; And when ſome time his dolour had o&#x27;re-come, Her funerall rites ſolemnly to decore, He us&#x27;d ſuch honour, as might well become The Perſian pompe in proſp&#x27;rous times before.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Darius</div><div class="body">Vanquished by Alexander, Darius fears for his mother, wife, and children, who have been taken captive. He offers a ransom for them, and Parmenio encourages Alexander to accept (the money can be used to finance future campaigns), but Alexander refuses. The women assume that Darius is dead and ask leave to bury him. Alexander gives them his personal assurance that Darius is alive and that they v.ill be treated honourably. Bessus and Narbazanes plan to betray Darius to Alexander in the hope of getting kingdoms for themselves. Darius learns that his wife has died, but is impressed by Alexander&#x27;s honourable treatment of her. Narbazanes encourages him to resign the crown to Bessus, while others advise him not to trust the two traitors, and to rely on his mercenary troops if necessary. Darius meditates on tl1e inevitable fall of princes and accepts the coming of death. The traitors spread a rumour that he has committed suicide, then take him prisoner and offer him to Alexander. Darius dies with a speech honouring Alexander for his magnanimity in victory. Alexander vows to hunt down and dismember the traitors.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RAPH in The Knight of the Burning Pestle · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>RAPH</span>
+</nav>
+
+<h1>RAPH</h1>
+<p class="lede">in <em>The Knight of the Burning Pestle</em> — Beaumont, Francis</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1613</td></tr>
+<tr><th>Words</th><td>1597</td></tr>
+<tr><th>Characters</th><td>8708</td></tr>
+<tr><th>BritDrama no.</th><td>1562</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">so defye him. Knight, thou art but dead, If thou thou recall not thy vncurteous tearmes. Take comfort gentle Dame, and you faire Squire, For in this Desart there <mark>must</mark> needs be plac&#x27;t, Many strong Castles, held by curteous Knights, And till I bring you safe to one of those, Is weare by this my Order nere to leaue you. Knocke at</div>
+<div class="excerpt">done To Knights and Ladies, now haue paid thee home By my stiffe arme, a Knight aduenturous, But say vile wretch, before I send thy soule To sad Auernus whether it <mark>must</mark> go, What captiues holdst thou in thy sable caue. Go Squire &amp; Dwarfe, search in this dreadfull Caue And free the wretched prisoners from their bonds. Thou showdst</div>
+<div class="excerpt">prolong, God saue our King, and send his Country peace And roote out Treason from the Land, and so, my friends I cease. When I was mortall, this my costiue corps <mark>Did</mark> lap vp Figs and Raisons in the Strand, Where sitting I espi&#x27;d a louely Dame, Whose Maister wrought with Lingell and with All, And vnder ground he vampied many a</div>
+<div class="excerpt">Raisons in the Strand, Where sitting I espi&#x27;d a louely Dame, Whose Maister wrought with Lingell and with All, And vnder ground he vampied many a boote, Straight <mark>did</mark> her loue pricke forth me, tender sprig To follow feats of Armes in warlike wise, Through VValtham Desert, where I <mark>did</mark> performe Many atchieuements, and <mark>did</mark> lay on</div>
+<div class="excerpt">and gaue her pinnes, And money for her fathers Officers. I then returned home, and thrust my selfe In action, and by all men chosen was Lord of the May, where I <mark>did</mark> flourish it, With Skarfes and Rings, and Posie in my hand, After this action, I preferred was, And chosen Citty Captaine at Mile-end, With hat and feather and with</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">My trusty Squire vnlace my Helme, giue mee my hat, where are we, or what Desart may this be? Comes not sir Squire againe? What Knight is that Squire, aske him if he keep The passage, bound by loue of Ladie faire, Or else but prickant. Go, Squire, and tell him I am here, An Errant Knight at Armes, to craue deliuery Of that faire Lady to her owne Knights armes. If he deny, bid him take choice of ground, And so defye him. Knight, thou art but dead, If thou thou recall not thy vncurteous tearmes. Take comfort gentle Dame, and you faire Squire, For in this Desart there must needs be plac&#x27;t, Many strong Castles, held by curteous Knights, And till I bring you safe to one of those, Is weare by this my Order nere to leaue you. Knocke at the Gates my Squire with stately launce. Faire Squire Tapstero, I a wandring Knight, Hight of the burning Pestle, in the quest Of this faire Ladies Casket, and wrought purse, Loosing my selfe in this vast Wildernesse Am to this Castle well by fortune brought, Where hearing of the goodly entertaine Your Knight of holy Order of the Bell Giues to all Damsels, and all errant Knights, I thought to knocke, and now am bold to enter. Fare-well faire Lady and your tender Squire, If, pricking through these Desarts, I do heare Of any traiterous Knight who through his guile, Hath light vpon your Casket and your Purse, I will despoile him of them and restore them. Dwarfe beare my shield, Squire eleuate my lance, And now fare-well you Knight of holy Bell. But yet before I go, speake worthy Knight, If ought you do of sad aduentures know, Where errant Knights may through his prowesse winne, Eternall fame and free some gentle soules, From endlesse bonds of steele and lingring paine. Speake on sir Knight, tell what he is, and where, For heere I vow vpon my blazing badge, Neuer to blaze a day in quietnesse; But bread and water will I onely eate, And the greene hearbe and rocke shall be my couch, Till I haue queld that man, or beast, or fiend, That workes such damage to all Errant Knights. In Gods name, I will fight him, kinde sir, Go but before me to this dismall Caue, Where this huge Gyant Barbaroso dwels, And by that vertue that braue Rosicleere, That damned brood of ougly Gyants slew, And Palmerin Frannarco ouerthrew: I doubt not but to curbe this Traitor foule, And to the Diuell send his guilty soule. Saint George set on before, march Squire and page. O faint not heart, Susan my Lady deere, The Coblers Maid in Milke-streete, for whose sake, I take these Armes, O let the thought of thee, Carry thy Knight through all aduenterous deeds, And in the honor of thy beauteous selfe, May I destroy this monster Barbaroso, Knocke Squire vpon the Bason till it breake. With the shrill stroakes, or till the Giant speake. I, traiterous Caitiffe, who am sent by fate To punish all the sad enormities Thou hast committed against Ladies Gent And errant Knights, traitor to God and men: Prepare thy selfe, this is the dismall houre Appointed for thee, to giue strickt account Of all thy beastly treacherous villanies. Saint George for me. Susan inspire me, now haue vp againe. Presumptuous man, see to what desperate end Thy treatchery hath brought thee, the iust Gods, Who neuer prosper those that do despise them, For all the villanies which thou hast done To Knights and Ladies, now haue paid thee home By my stiffe arme, a Knight aduenturous, But say vile wretch, before I send thy soule To sad Auernus whether it must go, What captiues holdst thou in thy sable caue. Go Squire &amp; Dwarfe, search in this dreadfull Caue And free the wretched prisoners from their bonds. Thou showdst no mercy, nor shalt thou haue any, Prepare thy selfe for thou shalt surely die. Speake what thou art, and how thou hast bene vs&#x27;d, That that I may giue condigne punishment, My trusty Squire conuey him to the Towne, Where he may finde releife, adiew faire Knight, Speake me thy name and eke thy place of birth, And what hath bene thy vsage in this Caue. Conuey him straight after the other Knight, Sir Pocke-hole fare you well. What gastly noise is this? speake Barbarose, Or by this blasing steele thy head goes off. Run Squire and Dwarfe, deliuer them with speed. Deliuer what you are, and how you came To this sad Caue, and what your vsage was? From this infernall monster you shall go, That vseth Knights and gentle Ladies so, Conuey them hence. London, to thee I do present the merry Month of May Let each true Subiect be content to heare me what I say: For from the top of Conduit head, as plainely may appeare, I will both tell my name to you and wherefore I came heere. My name is Raph, by due discent, though not ignoble I, Yet far inferior to the Flocke of gratious Grocery. And by the Common-councell, of my fellowes in the Strand, With guilded Staffe, and crossed Skarfe, the May-lord here I stand. Reioyce, ô English hearts, reioyce, reioyce ô Louers deere, Reioyce ô Citty, Towne, and Country, reioyce eke euery Shire; For now the fragrant Flowers do spring and sprout in seemely sort, The little Birds do sit and sing, the Lambes do make fine sport. And now the Burchin Tree doth bud that maks the Schoole boy cry The Morrice rings while Hobby-horse doth foote it feateously: The Lords and Ladies now abroad for their disport and play, Do kisse sometimes vpon the Grasse, and sometimes in the Hey. Now Butter with a leafe of Sage is good to Purge the bloud, Fly Venus and Phlebotomy for they are neither good. Now little fish on tender stone, beginne to cast their bellies, And sluggish snails, that erst were mute, do creep out of their shelies The rumbling Riuers now do warme for little boies to padle, The sturdy Steede, now goes to grasse, and vp they hang his saddle. The heauy Hart, the bellowing Bucke, the Rascal and the Pricket, Are now among the Yeomans Pease, and leaue the fearefull thicket. And be like them, ô you, I say, of this same noble Towne, And lift aloft your veluet heads, and slipping of your gowne: With bels on legs, and napkins cleane vnto your shoulders tide, With Scarfes &amp; Garters as you please, &amp; Hey for our Town cri&#x27;d March out and shew your willing minds by twenty and by twenty, To Hogsdon or to Newington, where Ale and Cakes are plenty: And let it nere be said, for shame, that we the youths of London, Lay thrumming of our Caps at home, and left our custome vndone. Vp then, I say, both yong and old, both man and maide a Maying With Drums and Guns that bounce alowd, &amp; mery Taber playing. VVhich to prolong, God saue our King, and send his Country peace And roote out Treason from the Land, and so, my friends I cease. When I was mortall, this my costiue corps Did lap vp Figs and Raisons in the Strand, Where sitting I espi&#x27;d a louely Dame, Whose Maister wrought with Lingell and with All, And vnder ground he vampied many a boote, Straight did her loue pricke forth me, tender sprig To follow feats of Armes in warlike wise, Through VValtham Desert, where I did performe Many atchieuements, and did lay on ground Huge Barbaroso that insulting Giant, And all his Captiues soone set at liberty. Then honour prickt me from my natiue soile, Into Meldauia, where I gain&#x27;d the loue Of Pompiana his beloued daughter: But yet prou&#x27;d constant to the blacke thum&#x27;d maide Susan, and skorn&#x27;d Pompianaes loue: Yet liberall I was and gaue her pinnes, And money for her fathers Officers. I then returned home, and thrust my selfe In action, and by all men chosen was Lord of the May, where I did flourish it, With Skarfes and Rings, and Posie in my hand, After this action, I preferred was, And chosen Citty Captaine at Mile-end, With hat and feather and with leading staffe, And train&#x27;d my men and brought them all off cleere, Saue one man that berai&#x27;d him with the noise. But all these things I Raph did vndertake, Onely for my beloued Susans sake. Then comming home, and sitting in my Shop With Apron blew, death came vnto my Stall To cheapen Aqua-vitae, but ere I Could take the bottle downe, and fill a taste, Death caught a pound of Pepper in his hand, And sprinkled all my face and body ore, And in an instant vanished away. Then tooke I vp my Bow and Shaft in hand, And walkt into Moore-fields to coole my selfe, But there grim cruell death met me againe, And shot this forked arrow through my head, And now I faint, therefore be warn&#x27;d by me, My fellowes euery one of forked heads. Fare-well all you good boies in merry London, Nere shall we more vpon Shroue-tuesday meete And plucke downe houses of iniquitie. My paine increaseth, I shall neuer more Hold open, whilst another pumpes both legs, Nor daube a Satten gowne with rotten egs: Set vp a stake, ô neuer more I shall, I die, flie, flie my soule to Grocers Hall. oh, oh, oh, &amp;c.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Knight of the Burning Pestle</div><div class="body">At the theatre, a citizen and his wife object to the satirical subject matter of the play, The London Merchant: they insist on a more romantic offering starring their apprentice, Rafe, as a heroic grocer. The boy actors do their best to provide this within the play they have rehearsed. In the play, Luce prefers her father Venturewell’s apprentice Jasper to his chosen son-in-law, Humphrey; so Venturewell discharges Jasper, and he goes home to a family impoverished by the irresponsible merriment of his father, Old Merrythought. His mother, who 1607 favours his younger brother Michael, insists that he be paid his inheritance and sent out into the world. Several of the characters go to Waltham Forest. Luce elopes with Humphrey, intending to meet Jasper there. Rafe the grocer, a voluminous reader of chivalric romance, becomes the Knight of the Burning Pestle and leaves in search of heroic deeds. He scares Mistress Merrythought, who leaves behind her jewels. These are found and taken away by Jasper, who then meets the eloping couple, beats Humphrey, and takes Luce. In the audience, the citizen and his wife take Jasper to be the villain and Humphrey the hero; they demand that Rafe return to fight Jasper, but Jasper beats him. Notified by Humphrey, Venturewell confronts Jasper’s father, but is offended by his refusal to take the matter seriously. Jasper tests Luce’s love by threatening her with violence. She accepts her fate, but Humphrey and her father seize her before he can admit he was only pretending. Rafe stays at the Bell inn, but cannot understand that he must pay for its hospitality. (The citizen settles the bill for him.) The host sends him to fight the giant Barbaroso, better known as Nick the barber, who has imprisoned many knights and ladies — actually clients and venereal disease patients. Rafe defeats the ‘giant’ and releases the ‘knights’. The citizens then have a scene inserted in which he meets a foreign king’s daughter, but refuses her offer oflove. Later interpolated scenes show Rafe as the city’s May Lord, and mustering troops at Mile End. Venturewell incarcerates Luce in her room, but Jasper gains access by pretending to be dead: Venturewell accedes to a request that his body should be brought to Luce, and then has the coffin sent on to Old Merrythought, unaware that Luce has taken Jasper’s place inside. Left behind in Luce’s room, Jasper appears to Venturewell in ghostly guise and instructs him to repent, compensate Old Merrythought for his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

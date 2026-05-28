@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CLYT in Orestes · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> ›
+  <span>CLYT</span>
+</nav>
+
+<h1>CLYT</h1>
+<p class="lede">in <em>Orestes</em> — Goffe, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>1268</td></tr>
+<tr><th>Characters</th><td>6738</td></tr>
+<tr><th>BritDrama no.</th><td>1929</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 18 (<em>death, thebes, did, myne, eke, wyth…</em>). Matches are highlighted.</p>
+<div class="excerpt">and prayers with mee, awake ye Gods, And send our vows, since we can send no wounds: They <mark>both</mark> kneel&#x27;. Come son, we women still know how to curse, Let him that <mark>did</mark> it be an Adulterer; But come my sonne, now let vs talke of graues, Of Epitaphs, and tombs, and&#x27;s soule being fled, Draw the curtaine, and carrie him away. Let&#x27;s</div>
+<div class="excerpt">turne thy bloody weapon on my brest ▪ &#x27;Twas this wombe that brought forth this Babe and thee ▪ If that be guilty, I haue made it so. Rip vp this place which first <mark>did</mark> bring thee forth ▪ &#x27;Tis I&#x27;intreat thee, &#x27;tis the <mark>mother</mark>, she Which gaue thee house-roome here within this brest, Vpon whose dugs thy infant lips <mark>did</mark> hang. O Nature,</div>
+<div class="excerpt">lawe infring&#x27;d A mothers prayers preuaile not with her sonne. O kill me quickly, time prolongs my woe, And since I must die, let me quickly goe. Why sonne, whose <mark>death</mark> is it thou dost reuenge? Thy fathers? but on whom? vpon thy <mark>mother</mark>! On her which brought thee forth, which took most care, To bring thee vp, from whom thou tookst</div>
+<div class="excerpt">of things wee loue, Thus intermixt, makes them the sweeter proue: That your departure pierc&#x27;d my tender soule, Witnesse those Christall floods which in my eyes <mark>Did</mark> make a sea, when you should goe to sea, Thos streames which then flow&#x27;d from the veines of griefe At your returne doe ouerflow the banks. But tis with ioy. But</div>
+<div class="excerpt">Had I a brazen bull, it should be heat, Hotter then for the Tyrant: Disobedient? More harsh then Adders hisses is thy voyce, Sir, you shall die, but with a liuing <mark>death</mark>, He still shall liue, but liue to know he dies; Who strait threats <mark>death</mark>, knowes not to Tyrannize. If in her heart there be but lodg&#x27;d a thought, Vnknowne to mee</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">O my deare Lord, absence of things wee loue, Thus intermixt, makes them the sweeter proue: That your departure pierc&#x27;d my tender soule, Witnesse those Christall floods which in my eyes Did make a sea, when you should goe to sea, Thos streames which then flow&#x27;d from the veines of griefe At your returne doe ouerflow the banks. But tis with ioy. But come my Lord, true loue still hates delayes, Let no eares first be blessed with your breath, Till on my brest resting your wearied head, You tell your warre, wh e that the field&#x27;s your bed. See, I&#x27;ll turne man too now, and to the hate Which women beare, I&#x27;ll adde a manly strength, My minde does tremble, what I meane to doe Breath forth your vapors, O ye stygian powers, And listen to hatefull womans prayers. Pluto stand by me, for to aide my hand ▪ I may strike home now, and performe an act May make Medea blush, she thought not of ▪ Could the old dry bon&#x27;d dotard euer dreame, Now he had drawn forth all his strength abroad, He could be welcome to lye bedred here And supple his numbe ioynts in my fresh armes? breath dotard, do? You shall haue gapes inough to let your soule Finde a free passage to his deserued flames. Now I am Clytemnestra right, now I deserue To adde one more to the three Furies, now Doe I count this more then my nuptiall night &#x27;Tis mine, tis thine Egystheus, and none else Shall share a minute of this right, but we. HOw now? what ayles our sonne, how now Orestes! O why let you not my soule, that whilst he liu&#x27;d, Was linkt to his, and would too now haue fled With wing&#x27;d desire to haue beene with him, What doe I liue for, Agamemnon slaine, My Lord, my King, my Husband, wake my Lord, What bloody Troian followed thee from thence To kill thee here, could he not one night Haue let me rested in thy sweet embraces? Must he for surenesse make so many holes For thy sweet soule to flye to be a God? O let my teares be balme to these thy wounds, Let my lips kisse, and warme thy gelid lips, Let my haire wipe these clots of blood away From thy age-honor&#x27;d side: O dry your teares, Ioyne knees and prayers with mee, awake ye Gods, And send our vows, since we can send no wounds: They both kneel&#x27;. Come son, we women still know how to curse, Let him that did it be an Adulterer; But come my sonne, now let vs talke of graues, Of Epitaphs, and tombs, and&#x27;s soule being fled, Draw the curtaine, and carrie him away. Let&#x27;s lap his Trunke vp in a sheet of lead. Looke as a hollow leafelesse failing oake, To whom for that he hath bin her weight too long, The earth denies to lend him moysture, so His sap failes, and he stands on a green Mongst sprouting Elms, that they may seem more fresh Whilst hee&#x27;s but held a monument of yeeres, Such one seem&#x27;d Agamemnon ; a drie tree: Thou like a sprouting elme, whom I embrace Like twining Iuy, with these now-blest armes, Blest whilst this treasure in them they holdlockt. No, trust me loue, I knew my teares would soon be at command, And faith the boy had almost made me weepe Really once: were not my curses rare? O but my loue, hee&#x27;s mine; nor can the rauen Dig her sharpe beake into her owne birds brest; He will forget his father: woe will breake, &#x27;Tis not the greatest griefe that most doth speake. Why my deare Loue, I that would set my hand To staine my marriage sheets with husbands blood Would let these hands instructed now in ill, Not leaue one arme of that vprooted tree; Could but Aegystheus giue me any hope, That from this top there should one spreading branch Grow vp and flourish. Our sonne&#x27;s too sawcie with his mother Queene: Why, Sir, shall you tell vs a time to weepe? Sir, curbe this lauish speech, or I&#x27;ll forget You are my sonne, and make you but a subiect. Aegistheus, canst thou still suffer thy dul sword i&#x27;th sheath? Take the ranke head from this o&#x27;r-growing weed. He is so, and I&#x27;ll learne him to be so: Had I a brazen bull, it should be heat, Hotter then for the Tyrant: Disobedient? More harsh then Adders hisses is thy voyce, Sir, you shall die, but with a liuing death, He still shall liue, but liue to know he dies; Who strait threats death, knowes not to Tyrannize. If in her heart there be but lodg&#x27;d a thought, Vnknowne to mee this hand shall rip her brest, And search her inparts: but I&#x27;ll finde it out. Mysander, call Electra: Why, how now Minion, what a blubbering still? Huswife, pray vvhere&#x27;s your brother, where&#x27;s my sonne? Why, the more dismall, the more vvelcome &#x27;tis, But as for you. Yes, life is worse to those that faine vvould die. But vvhere&#x27;s the messenger? WHat whirlewind rising from the wombe of earth Doth raise huge Pelion vnto Ossa&#x27;s top, That both being heapt, I stand vpon them both And with an hundred Stentor -drowning voyce, Relate vnto the world the saddest tale, That euer burdned the weake iawes of man: Relate it quickly, hold&#x27;s not in suspence. O Sir, the Fates needs must haue leaue to make Wayes for themselues to mannage what they doe: Had Agamemnon and Orestes liu&#x27;d, They could not then haue blest me with these gifts: Still when the heauens and Fates doe worke their will, They intend good, though sometimes there come ill. Daughter, your heart now with obedience strung, Makes a sweet musique sounding from your tongue. Nurse, bring the Babe, giue it Electra, so, You daughter shall haue ouersight of it. No, good Nurse, no, Electra with her care, you with your paines. Long may our father his opinion hold, And you, our daughter, let not sinister thoughts Wrong your suspicious minde, though this being young, It makes our Lord, and me to speake our ioyes, Yet our affection and our naturall loue, Is not a whit to you diminished. A mother can be mother vnto many, And as from one roote hid within the ground, Springs many flowers, that lends sap to all: So from a parents heart runne veines of loue; Which, though to many, they without doe flow, Yet from one heart, one root, they all doe grow. Why, my Lord, what is&#x27;t makes the busines thus? Surely hee meanes to worke rare Art vpon vs. O turne thy bloody weapon on my brest ▪ &#x27;Twas this wombe that brought forth this Babe and thee ▪ If that be guilty, I haue made it so. Rip vp this place which first did bring thee forth ▪ &#x27;Tis I&#x27;intreat thee, &#x27;tis the mother, she Which gaue thee house-roome here within this brest, Vpon whose dugs thy infant lips did hang. O Nature, see here all thy lawe infring&#x27;d A mothers prayers preuaile not with her sonne. O kill me quickly, time prolongs my woe, And since I must die, let me quickly goe. Why sonne, whose death is it thou dost reuenge? Thy fathers? but on whom? vpon thy mother! On her which brought thee forth, which took most care, To bring thee vp, from whom thou tookst thy selfe, Thou&#x27;rt sure thou art mine, but dost not know, Who twas begat thee.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Orestes</div><div class="body">Agamemnon returns home after ten years of war. When he takes his neglected wife Clytemnestra to bed, she and her lover Aegisthus murder him. Roused by bad dreams, his son Orestes finds the body in bed. Feigning innocence, Clytemnestra curses the murderer, while the surviving Trojan glories in the death of the enemy commander: Troy is avenged. Recognizing that he is in danger, Orestes goes into hiding with Pylades until the murderer is identified, and sends a report that, unhinged with grief, he threw himself off a cliff into the sea, and that Pylades also went over trying to stop him. Aegisthus, the next in line, ascends the throne and marries Clytemnestra. She bears him a son, establishing his dynasty, and in celebration he proclaims a general pardon for all crimes. Orestes and Pylades consult the witch Canidia, who shows them a vision of Clytemnestra and Aegisthus committing the murder. They return to court in disguise. Their plotting is overheard by Misander, and they kill him to preserve secrecy, but are immediately arrested. In judging the case, Aegisthus faces two problems: the crime is covered by the general pardon, and each defendant, seeking to save the other, claims that he alone was the murderer. Aegisthus decides not to pass a death sentence on either, and is further impressed when Pylades introduces Orestes as a doctor who has perfected the secret of rejuvenation. Aegisthus asks for a demonstration, using himself and Clytemnestra as the subjects. Agamemnon’s ghost appears to Orestes, urging him to get on with the revenge and take care not to spare his mother. Pylades obtains custody of Aegisthus’ son, who is in the care of Orestes’ sister Electra. When Orestes meets with the King and Queen for their ===== PAGE 235 ===== 1620 rejuvenation, he ties them up, kills their son in front of them, forces them to drink the blood, and finally kills them. He demands his restoration to the throne, but the lords are unwilling to crown a murderer, and instead enthrone Tyndarus, whose first act is to banish Orestes and his accomplices, further stipulating that nobody must give Orestes food. Pylades’ father Strophius dies and Electra kills herself. Orestes goes mad and thinks himself tormented by the Furies. He and Pylades kill one another in a suicide pact, and Tyndarus announces that they are to be buried together in a single tomb.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> page.
+</div>
+</div></body></html>

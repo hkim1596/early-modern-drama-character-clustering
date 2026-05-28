@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LASS in 226 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LASS</span>
+</nav>
+
+<h1>LASS</h1>
+<p class="lede">in <em>226</em> — [84]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1606</td></tr>
+<tr><th>Words</th><td>763</td></tr>
+<tr><th>Characters</th><td>4053</td></tr>
+<tr><th>BritDrama no.</th><td>226</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">house, And still vouchsafe our seruice further honour. I pray thee aske my Vsher; Come, dispatch, The duke is readie: are you readie there? 2 See master Vsher; <mark>must</mark> he weare this haire? What, are all furnish … well? More lights then here, and let lowd musicke sound. Vsher, cause other m … sicke; begin your shew. Now let it</div>
+<div class="excerpt">shew. Now let it please your Highnesse to accept A homely banquet, to close these rude sports. What … ane you sister? 〈◊〉 fister, v&#x27; 〈◊〉 too 〈◊〉 ; 〈◊〉 will you goet 〈◊〉 〈◊〉 〈◊〉 Whats the matter? I thinke so truly. Else I would not thinke so. I assure you then. I hope your Grace will pardon her my liege, For tis most strange;</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Saie now Bass … ; you on whom relies The generall disposition of my house, In this our preparation, for the Duke Are all our officers at large instructed, For fit discharge of their peculiar places? Are all our chambers hung? Thinke you our house amplie capacious to lodge all the traine? And that is yours. And will these waggish pages, hit their songs? O they are practising; good boyes, well done; But where is Pogio? there y&#x27;are ouershot. To lay a capitall part vpon his braine, Whose absence tells me plainely hee&#x27;le neglect him. O, tis well done, call all the Ladies in, Sister and daughter, come, for Gods sake come, Prepare your courtliest carriage for the Duke. Corte And Neece, in any case remember this, Praise the old man, and when you see him first, Looke me on none but him, smiling and louingly: And then, when he comes neere, make beisance low, With both your hands thus mouing, which not onely Is as t&#x27;were courtly, and most comely too, But speakes (as who should say) come hither Duke; And yet saies nothing, but you may denie. Well taught sister. Harke, does he come with musicke? what, and bound? An amorous deuice: daughter, obserue. Daughter, release the Duke: alas my Liege. … hat meant your Highnesse to indure this wrong? His Highnesse pleasure is to grace you so. T&#x27;was very well, Exceeding well performed on euery part, How say you Bass … alo? Now then wil&#x27;t please your Grace to grace our house, And still vouchsafe our seruice further honour. I pray thee aske my Vsher; Come, dispatch, The duke is readie: are you readie there? 2 See master Vsher; must he weare this haire? What, are all furnish … well? More lights then here, and let lowd musicke sound. Vsher, cause other m … sicke; begin your shew. Now let it please your Highnesse to accept A homely banquet, to close these rude sports. What … ane you sister? 〈◊〉 fister, v&#x27; 〈◊〉 too 〈◊〉 ; 〈◊〉 will you goet 〈◊〉 〈◊〉 〈◊〉 Whats the matter? I thinke so truly. Else I would not thinke so. I assure you then. I hope your Grace will pardon her my liege, For tis most strange; shees as discreete a dame As any in these countries, and as sober, But for this onely humour of the cup B … lo, attend you on my daughter. Tell me I pray you, what strange hopes they are That feed your coy conceits against the Duke, And are prefer&#x27;d before th&#x27;aslured greatnes His highness … graciously would make your for … nes? O you are verie temp&#x27;rate in your choice, Pleading a iudgement past your sexe, and yeares. But I beleeue some fancie&#x27; will be found, The forge of these gay Gloses: if it be, I shall descipher what close traitor tis That is your Agent in your secret plots. And him for whom you plot; and on you all I will reuenge thy disobedieuce, With such seuere correction, as shall fright All such deluders f … om the like attempts: But chiefly he shall smart that is your factor ▪ Meane time Ile cut Your poore craft short yfaith. Well Dame, if it be nothing but the iarre Of your vnfiued fancie; that procures Your wilfull coynesse to my Lord the Duke, No doubt but Time, and Iudge … nt will conforme it To such obedience, as so great desert Proposde to your acceptance doth require. To which end doe you co … saile her Bassio l … . And let me see Maid gainst the Duks returne, Another tincture set vpon your lookes Then here … ofore; For be assur&#x27;d at last Thou shalt con … nt, or else incurre my curse: Aduise her, you Bassiolo. I hope there is no such intent my Liege, For sad as death should I be to behold it. So siste … , so, because he praises you. Stay thou vngracious girle. And take my Vsher. Impudent Damzell, wouldst thou follow him? Wretch, thou speakest treason to my Lord the Duke. You shall I sweare: sister, take you her close Into your chamber, locke her fast alone, And let her stirre nor speake with any one. High heauen vouchsafe no such eff … ct succeede Those wretched ca … es that from my house flow, But that in h … elesse loue all acts may end. Vince does he call him? O Foole, dost thou call The Prince Vince, like his equall? I know not what this meanes.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 226</div><div class="body">The swords and daggers ordered for the masque suggest that the action included fighting, which presumably arose from the supposed drunkenness of the masquers.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

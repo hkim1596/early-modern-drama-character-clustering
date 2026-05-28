@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAN in The Isle of Gulls · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MAN</span>
+</nav>
+
+<h1>MAN</h1>
+<p class="lede">in <em>The Isle of Gulls</em> — Day, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1606</td></tr>
+<tr><th>Words</th><td>1237</td></tr>
+<tr><th>Characters</th><td>6549</td></tr>
+<tr><th>BritDrama no.</th><td>1491</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">doe in this? That I haue: I haue tane order for the making <mark>away</mark> of a hundred Maidenheads in my time, and not ſo few: but I am in in the minde of you now, theſe <mark>two</mark> Beagles, Dorus and Mopſ , haue run themſelues breathleſſe in the chaſe of loue, you would ha me couple&#x27;m vp in the leaſes of Matrimonie. Oh ſir! though my M. hath</div>
+<div class="excerpt">heere: So Ladie, now betwixt earneſt and ieſt, if your Will be readie drawne, be fore your friend deliuer&#x27;d as your deed, and put me in truſt to ex ecute it. Man, an <mark>woman</mark> perhaps; but not man and wife: for though moſt women haue a wil to be Ladies, like my Lords wife; yet euerie Ladie haue not witte to be a wife, as my Lordes Daughter.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Meaning the gold. Boy, ſee the fellowes entertaind? I muſt waite of my lord. Pardon mee Madame, I learned of my Lord, to lende nothing without ſecuritie and pawnes. Good counſell is worth good monie, Madame. Nay Madame, this hand&#x27;s like a fellow, it takes euerie thing in ieſt; if you be in earneſt, let me feele it heere: So Ladie, now betwixt earneſt and ieſt, if your Will be readie drawne, be fore your friend deliuer&#x27;d as your deed, and put me in truſt to ex ecute it. Man, an woman perhaps; but not man and wife: for though moſt women haue a wil to be Ladies, like my Lords wife; yet euerie Ladie haue not witte to be a wife, as my Lordes Daughter. But what good can I doe in this? That I haue: I haue tane order for the making away of a hundred Maidenheads in my time, and not ſo few: but I am in in the minde of you now, theſe two Beagles, Dorus and Mopſ , haue run themſelues breathleſſe in the chaſe of loue, you would ha me couple&#x27;m vp in the leaſes of Matrimonie. Oh ſir! though my M. hath but bad eyes, he hath excee ding long eares: and though a Forrayner may play with a Citi zens wooden Dagger, I would not wiſh any to ieſt with a Cour tiers ſteeld Sword; tis ſeldome drawne but it drawes blood. I ſhould ha more ground then halfe the Kinges in Chri ſtendom: here&#x27;s my hand, Ile do&#x27;t: my M. is my M. &amp; I loue him; but my gold&#x27;s my God, and I honor it: Ile do&#x27;t; the time &amp; place? Verie good breeding Sir: My great Graundfather was a Rat-catcher, my Grandſier a Hangman, my Father a Promooter, and my ſelfe an Informer. And by education too: but Bawdie Informations gro wing ſtale, I gaue vp my cloake to a Broker, and crept into credite for a Gowne, and of Manaſſes a penurious Informer, I turned Coppie, &amp; became Manaſses, a moſt, preciſe, &amp; illiterate expoſitor. And a Writer too Bullie; I ſet ſome of my Pariſhioners Wiues ſuch Coppies, as their Husbands might caſt their cappes at it, but could neuer come neare. Tuſh I could faſhion the bodie, of my diſcourſe fit to the eare of my auditorre: for to caſt Eloquence amongſt a companie of Stinctards, is all one as if a man ſhould ſcatter Pearle amongſt the hoggiſh animals ecliped Swine: no I had paraphraſticall ad monitions of all ſortes; Some againſt couetous Landlordes, and that would I ſquirt awongſt beggerlie Tennants: Some againſt Vſurers, and that would I throw in at Priſon Grates amongſt prodigall Banqeoutes: Some againſt the pride of the Court, and that honies the eare of the Citizen: Some againſt the fraude of the Citie, and that&#x27;s Cake and Cheeſe to the Countrie: Some againſt Proteſtants, and that&#x27;s plumpes the laſie Catholicke a gainſt Papiſt and Proteſtant, and that fattens the rancke witted Puritand, againſt Papiſt, Puritand, and Proteſtant; and that tickles the eare of the luxur ous Atheiſt. Oh verie manie. In the verie booſome of the Citie: and by your leaue, heere and there one in the Court too: But wee fi t &#x27;em all; for in deed wee wandering Lightes, haue (as other tradeſmen haue) Commodities of all ſortes, and priſes. As manie doe by Offices, ſteale into them ere the Duke be aware of &#x27;em. One to another, to no bodie elſe: a proud Poet is for all the world like a Puncke in requeſt, couetous of manie Cliantes, when ſhe hath more then ſhe can handſomely play off: You ſhall haue ſome Poet (Apolloes Vicar, eſpecially) write you a comi call, Paſtorall, Tragicall, Muſicall hiſtorie in proſe, will make the auditors eyes runne a water like ſo many waterſpouts: I had one of them my ſelfe, and your eares be in caſe, Ile giue you a taſte on&#x27;t; his argument was fet out of the Poem called, The loſt ſheepe: and thus it is. Nay peace, and it were in place where you might wake, the beſt men in the parish, for commonlie they ſleepe the begin ning, becauſe they loue not deuiſion: but to the loſt Sheepe. Beloud, you muſt imagine this Sheepe was a Sheepe, a loſt Sheepe; a Sheepe out a the way: but my deare flocke and louing Sheepe, whom like a carefull Shepheard, I haue gathered together with the whiſtle or pipe, as it were of mine eloquence, into this ſold of peacefull Communitie; Doe not you ſtray doe not you flie out, doe not you wander, doe not you looſe your ſelues; but like kinde Sheepe, and valiant Rams: I ſpeake to you the better part and head of my flocke. As I ſay, you ſhall ſee the valiant Rammes turne all their hornes together, and appoſe themſelues againſt the Woolfe, the hungrie Woolfe, the gredie Woolfe, the Lams-de uowring Woolfe, the Woolfe of all Woolfes, to defende their Eawes and young ones. Durſt you ſay all your heades together, and with the hornes of your Manhood defende your families, your owne wiues, and your neighbours children: Was not this ſtinging geere? The fitter for my Audience: while you liue, haue a eare to fitte your Audience. How manie ſouer I make vſe of, Ile anſwere with Piauano Orllotto the Italian: I profeſſe the Dukes onely. A very ſound reaſon: for ſayes hee, I came Raw into the world, and I would not willinglie go roſted out, ſo cloſe vp the ſtomacke of your Diſcourſe with that dry anſwere, and euey man about his buſineſſe. As your Lawyer of the Tearme, or your Landlord of the Quarter day. This is Adonis chappell, I wonder they come not, tho I beare a little learning about me, and a few good clothes, I wold not wiſham to make Balams aſſe a me: for though many fooles take no felicity but in wearing good clothes (tho they be none of their own) I haue a further reach in me. Who woulde ha thought the cold had bene ſo good a muſition: howe it plaies vpon my chappes, and maketh my teeth skippe vp and downe my mouth like a company of virginall Iackes, but I find ſmall muſicke in it, and Mopſa ſhould come now I could doe her little good, yet and ſhe were here, ſhe and I would haue about at cob-nut or at che ri-pit or ſomewhat to keep our ſelues from idlenes, tho ſhe be but a foole, the bables good enough to make ſport with all in the darke and that very word hath ſtarted her. yes Mopſa. why becauſe he wil not be ſaide to make too much haſt to a bad bargaine, he is not come yet, would you haue him mend Gods wormanship? no matter wench, I can dote wel inough without booke, Madam, Zelmane, no Gods my iudge my liege, I am Manaſſes, mi ſerable Manaſſes, your husbands ſcribe-ma or madam. and whilſt I came to Adonis chappel to be toſt in my mari age blankets with Dorus, I left my little dog pearl plucking dazies: They that I feare haue made guls of vs all, Zelmane, and dorus: I am 〈…〉 ch a foole, I loue my lord, I am no knight, I am Manaſſes, they made a plaine foole.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Isle of Gulls</div><div class="body">Three members of the audience ask the Prologue about the play they are to see, The Isle of Gulls. They prove to have irreconcilable tastes in drama: one wants satire, one bawdy, and one bombast, but all eventually agree to give the play a chance. Concerned about his daughters’ unsuitable suitors, Basilius retires with them for a year to an uninhabited, fortified island, leaving his brother to rule Arcadia in his stead. A proclamation challenges royal would-be suitors to win the princesses by stealth. This attracts Julio and Amintor to the island, alerted by Basilius’ unworthy favourite Dametas; and also Lysander and Demetrius, respectively disguised as Zelmane, an Amazon, and Dorus, a woodman. ‘Zelmane’ becomes Violetta’s companion, and Demetrius enters Dametas’ service. Dametas arranges an opportunity for Julio and Amintor to rape the princesses by isolating them during a hunt. They kidnap the girls, but ‘Zelmane’ and ‘Dorus’ rescue them. ‘Dorus’ is rewarded with an appointment as Hippolita’s attendant, but the incident also casts doubt on ‘Zelmane’s’ gender, so Lysander loses his access to Violetta. Basilius and Gynecia are both enamoured of Lysander (each believing him to be a different sex), and each persuades him to accept the other’s advances for sport. Meanwhile Dametas’ daughter Mopsa falls in love with ‘Dorus’. Amintor and Julio continue to have ill success: they pose as envoys from Basilius’ brother, appealing for him to deal with an outbreak of abuses, corruption, and crime, but they are denied their promised reward by the avaricious Dametas. ‘Dorus’ gets rid of Dametas and his family by sending each of them on a wild-goose chase: Dametas to find buried treasure, his jealous wife Miso to Dametas’ supposed mistress, and Mopsa to the chapel in Adonis’ bower where a priest will marry them. ‘Zelmane’ similarly disposes of Basilius and Gynecia by arranging assignations with each at the same chapel, with the priest Manasses standing in for the Amazon. This frees Lysander and Demetrius to elope with the princesses; but their plans are overheard by Amintor and Julio, whom they then employ to smuggle the girls off the island. Digging for the gold, Dametas finds only a scornful poem directing him to Adonis’ bower, and he curses 1606 poets. Everyone meets up at the bower, and the knot of identity confusion is unravelled. Lysander and Demetrius present themselves to Basilius as his new sons-in-law; but Amintor and Julio have double- crossed them and kept…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAES in Antony and Cleopatra · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> ›
+  <span>CAES</span>
+</nav>
+
+<h1>CAES</h1>
+<p class="lede">in <em>Antony and Cleopatra</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1294</td></tr>
+<tr><th>Characters</th><td>6970</td></tr>
+<tr><th>BritDrama no.</th><td>1517</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 29 (<em>brutus, did, rome, antonius, anthony, cleopatra…</em>). Matches are highlighted.</p>
+<div class="excerpt">ſhould Once name you derogately: when to ſound your name It not concern&#x27;d me. No more then my reciding heere at <mark>Rome</mark> <mark>Might</mark> be to you in Egypt: yet if you there <mark>Did</mark> practiſe on my State, your being in Egypt <mark>Might</mark> be my queſtion. You may be pleas&#x27;d to catch at mine intent, By what <mark>did</mark> heere befall me. Your Wife and Brother Made</div>
+<div class="excerpt">Flagge vpon the Streame, Goes too, and backe, lacking the varrying tyde To rot it ſelfe with motion. Let his ſhames quickely Driue him to <mark>Rome</mark>, &#x27;tis time we twaine <mark>Did</mark> ſhew our ſelues i&#x27; th&#x27; Field, and to that end ▪ Aſſemble me immediate counſell, Pompey Thriues in our Idleneſſe. Til which encounter, it is my buſines too. Farwell.</div>
+<div class="excerpt">i&#x27; th&#x27; Field, and to that end ▪ Aſſemble me immediate counſell, Pompey Thriues in our Idleneſſe. Til which encounter, it is my buſines too. Farwell. Welcome to <mark>Rome</mark>. Sit. Nay then. I muſt be laught at, if or for nothing, or a little, I Should ſay my ſelfe offended, and with you Chiefely i&#x27; th&#x27; <mark>world</mark>. More laught at, that I</div>
+<div class="excerpt">vs thus? you come not Like Caeſars Siſter, The wife of <mark>Anthony</mark> Should haue an Army for an Vſher, and The neighes of Horſe to tell of her approach, Long ere ſhe <mark>did</mark> appeare. The trees by&#x27; th&#x27; way Should haue borne men, and expectation fainted, Longing for what it had not. Nay, the duſt Should haue aſcended to the Roofe of Heauen,</div>
+<div class="excerpt">granted, Being an abſtract &#x27;tweene his Luſt, and him. I haue eyes vpon him, And his affaires come to me on the wind: wher is he now? Welcom hither: your Letters <mark>did</mark> with-holde our breaking forth Till we perceiu&#x27;d both how you were wrong led, And we in negligent danger: cheere your heart, Be you not troubled with the time, which</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">You may ſee Lepidus, and henceforth know, It is not Caeſars Naturall vice, to hate One great Competitor. From Alexandria This is the newes: He fiſhes, drinkes, and waſtes The Lampes of night in reuell: Is not more manlike Then Cleopatra : nor the Queene of Ptolomy More Womanly then he. Hardly gaue audience Or vouchſafe to thinke he had Partners. You Shall finde there a man, who is th&#x27; abſtracts of all faults, That all men follow. You are too indulgent. Let&#x27;s graunt it is not Amiſſe to tumble on the bed of Ptolomy, To giue a Kingdome for a Mirth, to ſit And keepe the turne of Tipling with a Slaue, To reele the ſtreets at noone, and ſtand the Buffet With knaues that ſmels of ſweate: Say this becom him (As his compoſure muſt be rare indeed, Whom theſe things cannot blemiſh) yet muſt Anthony No way excuſe his foyles, when we do beare So great waight in his lightneſſe. If he fill&#x27;d His vacancie with his Voluptuouſneſſe, Full ſurfets, and the drineſſe of his bones, Call on him for&#x27;t. But to confound ſuch time, That drummes him from his ſport, and ſpeakes as lowd As his owne State, and ours, &#x27;tis to be chid: As we rate Boyes, who being mature in knowledge, Pawne their experience to their preſent pleaſure, And ſo rebell to iudgement. I ſhould haue knowne no leſſe, It hath bin taught vs from the primall ſtate That he which is was wiſht, vntill he were: And the ebb&#x27;d man, Ne&#x27;re lou&#x27;d, till ne&#x27;re worth loue, Comes fear&#x27;d, by being lack&#x27;d. This common bodie, Like to a Vagabond Flagge vpon the Streame, Goes too, and backe, lacking the varrying tyde To rot it ſelfe with motion. Let his ſhames quickely Driue him to Rome, &#x27;tis time we twaine Did ſhew our ſelues i&#x27; th&#x27; Field, and to that end ▪ Aſſemble me immediate counſell, Pompey Thriues in our Idleneſſe. Til which encounter, it is my buſines too. Farwell. Welcome to Rome. Sit. Nay then. I muſt be laught at, if or for nothing, or a little, I Should ſay my ſelfe offended, and with you Chiefely i&#x27; th&#x27; world. More laught at, that I ſhould Once name you derogately: when to ſound your name It not concern&#x27;d me. No more then my reciding heere at Rome Might be to you in Egypt: yet if you there Did practiſe on my State, your being in Egypt Might be my queſtion. You may be pleas&#x27;d to catch at mine intent, By what did heere befall me. Your Wife and Brother Made warres vpon me, and their conteſtation Was Theame for you, you were the word of warre. You praiſe your ſelfe, by laying defects of iudge ment to me: but you patcht vp your excuſes. Contemning Rome he ha&#x27;s done all this, &amp; more In Alexandria: heere&#x27;s the manner of&#x27;t: I&#x27; th&#x27; Market place on a Tribunall ſiluer&#x27;d, Cleopatra and himſelfe in Chaires of Gold Were publikely enthron&#x27;d: at the feet ſat Caeſarion whom they call my Fathers Sonne, And all the vnlawfull iſſue, that their Luſt ▪ Since then hath made betweene them. Vnto her, He gaue the ſtabliſhment of Egypt, made her Of lower Syria, Cyprus, Lydia, abſolute Queene. Nor muſt not then be yeelded to in this. Why haue you ▪ ſtoln vpon vs thus? you come not Like Caeſars Siſter, The wife of Anthony Should haue an Army for an Vſher, and The neighes of Horſe to tell of her approach, Long ere ſhe did appeare. The trees by&#x27; th&#x27; way Should haue borne men, and expectation fainted, Longing for what it had not. Nay, the duſt Should haue aſcended to the Roofe of Heauen, Rais&#x27;d by your populous Troopes: But you are come A Market-maid to Rome, and haue preuented The oſtentation of our loue; which left vnſhewne, Is often left vnlou&#x27;d: we ſhould haue met you By Sea, and Land, ſupplying euery Stage With an augmented greeting. Which ſoone he granted, Being an abſtract &#x27;tweene his Luſt, and him. I haue eyes vpon him, And his affaires come to me on the wind: wher is he now? Welcom hither: your Letters did with-holde our breaking forth Till we perceiu&#x27;d both how you were wrong led, And we in negligent danger: cheere your heart, Be you not troubled with the time, which driues O&#x27;re your content, theſe ſtrong neceſſities, But let determin d things to deſtinie Hold vnbewayl&#x27;d their way. Welcome to Rome, Nothing more deere to me: You are abus&#x27;d Beyond the marke of thought: and the high Gods To do you Iuſtice, makes his Miniſters Of vs, and thoſe that loue you. Beſt of comfort, And euer welcom to vs. Moſt certaine: Siſter welcome: pray you Be euer knowne to patience. My deer&#x27;ſt Siſter. Towrus? Strike not by Land, Keepe whole, prouoke not Battaile Till we haue done at Sea. Do not exceede The Preſcript of this Scroule: Our fortune lyes Vpon this iumpe. Let him appeare that&#x27;s come from Anthony. Know you him. Bee&#x27;t ſo, declare thine office. For Anthony, I haue no eares to his requeſt. The Queene, Of Audience, nor Deſire ſhall faile, ſo ſhee From Egypt driue her all-diſgraced Friend, Or take his life there. This if ſhee performe, She ſhall not ſue vnheard. So to them both. Bring him through the Bands: To try thy Eloquence, now &#x27;tis time, diſpatch, From Anthony winne Cleopatra, promiſe And in our Name, what ſhe requires, adde more From thine inuention, offers. Women are not In their beſt Fortunes ſtrong; but want will periure The ne&#x27;re touch&#x27;d Veſtall. Try thy cunning Thidias, Make thine owne Edict for thy paines, which we Will anſwer as a Law. He calles me Boy, and chides as he had power To beate me out of Egypt. My Meſſenger He hath whipt with Rods, dares me to perſonal Combat. Caeſar to Anthony: let the old Ruſſian know, I haue many other wayes to dye: meane time] Laugh at his Challenge. Let our beſt heads know, That to morrow, the laſt of many Battailes We meane to fight. Within our Files there are, Of thoſe that ſeru&#x27;d Marke Anthony but late, Enough to fetch him in. See it done, And Feaſt the Army, we haue ſtore to doo&#x27;t, And they haue earn&#x27;d the waſte. Poore Anthony. Go forth Agrippa, and begin the fight: Our will is Anthony e tooke aliue: Make it ſo knowne. Go charge Agrippa, Plant thoſe that haue reuolted in the Vant, That Anthony may ſeeme to ſpend his Fury Vpon himſelfe. But being charg&#x27;d, we will be ſtill by Land, Which as I tak&#x27;t we ſhall, for his beſt force Is forth to Man his Gallies. To the Vales, And hold our beſt aduantage. Wherefore is that? And what art thou that dar&#x27;ſt Appeare thus to vs? Looke you ſad Friends, The Gods rebuke me, but it is Tydings To waſh the eyes of Kings. Come hither Proculeius. Go and ſay We purpoſe her no ſhame: giue her what comforts The quality of her paſſion ſhall require; Leaſt in her greatneſſe, by ſome mortall ſtroke She do defeate vs. For her life in Rome, Would be eternall in our Triumph: Go, And with your ſpeedieſt bring vs what ſhe ſayes, And how you finde of her. Gallus, go you along: where&#x27;s Dolabella, to ſe cond Proculeius ? Let him alone: for I remember now How hee&#x27;s imployd: he ſhall in time be ready. Go with me to my Tent, where you ſhall ſee How hardly I was drawne into this Warre, How calme and gentle I proceeded ſtill In all my Writings. Go with me, and ſee What I can ſhew in this.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Antony and Cleopatra</div><div class="body">Antony dallies with Cleopatra in Egypt while the Roman world collapses into faction. His wife and brother make war on Caesar, and Pompey takes advantage of his absence to foment a sea war with the state and avenge his murdered father. At first Antony ignores Caesar’s messages, but his wife’s death draws him back to Rome, where he and Caesar are reconciled; to seal the league, Antony marries Caesar’s sister, Octavia. A soothsayer, who has told the fortunes of members of Cleopatra’s court, warns him that, although he is a better man than Caesar, Caesar will always prove the more successful of the two. Antony, Caesar, and Lepidus meet Pompey with an army, but war is averted. Lepidus gets egregiously drunk at the feast on Pompey’s galley to celebrate the treaty. Pompey refuses his ally Menas’ dishonourable proposal to kill the triumvirate and make him master of the world. Antony’s lieutenant Ventidius defeats the Parthians in battle, but is cautious about taking too much of the credit for himself. Meanwhile, news of Antony’s marriage reaches Cleopatra; she does not take it well. Antony leaves Rome with his new wife, but absence breeds suspicion between him and Caesar. Caesar breaks the truce with Pompey and deposes Lepidus on a pretext. Antony, in turn, sends Octavia home and returns to Egypt, where he creates Cleopatra queen of several dominions. War between east and west follows. Antony perversely chooses to fight by sea, and Cleopatra insists on being present at the battle. They are routed when Cleopatra flees and Antony follows her. Antony’s followers begin to defect to Caesar, but Enobarbus remains loyal. Caesar attempts to divide the lovers by offering Cleopatra security if she will banish or kill Antony. Antony has the messenger whipped for over-familiarity with Cleopatra, and determines to fight to the bitter end. Enobarbus decides finally to go over to Caesar, but leaves behind his treasure; Antony sends it after him, and the guilt-stricken Enobarbus dies. Antony defeats Caesar in a land battle, but loses the next day at sea. Spurned by Antony, Cleopatra takes refuge in her monument and sends him false news of her death. He stabs himself and is pulled up, dying, to join Cleopatra in the monument. Caesar hopes to display Cleopatra in his triumph at Rome, but she frustrates him by smuggling an asp past her guard and committing suicide.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> page.
+</div>
+</div></body></html>

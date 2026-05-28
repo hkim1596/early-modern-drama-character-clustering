@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PHI in The Heir · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>PHI</span>
+</nav>
+
+<h1>PHI</h1>
+<p class="lede">in <em>The Heir</em> — May, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1622</td></tr>
+<tr><th>Words</th><td>1488</td></tr>
+<tr><th>Characters</th><td>7859</td></tr>
+<tr><th>BritDrama no.</th><td>1943</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">atchieuement: what if I ſhould <mark>goe</mark> And boldly wooe her in her fathers houſe In ſpite enmity, what could they ſay? She would not hate a man for louing her, Or if ſhe <mark>did</mark>, better be once deemed Then liue for euer hapleſſe. What a queſtion&#x27;s that, ſeeſt thou this ſtone. Hard by her. But prethee tell mee what doeſt thinke this Letter</div>
+<div class="excerpt">ſee what man it comes from. Mocke me not fortune, She kiſt it, ſaweſt thou her, by heauen ſhe kiſt it. He muſt not if I liue, But yet her father brings him that <mark>has</mark> the meanes That I ſhould euer want. Thou ieſts that feeles it not, prithee lets <mark>goe</mark>, Beſt of Ladies, It is ſo well, ſo excellently well, Comming from your wiſht</div>
+<div class="excerpt">Eugenios ſiſter then is the rich heire By his deceaſe. Tis very well, but how <mark>did</mark> your worſhip ſcape Youe haue ſeene her. When I haue need on&#x27;t Ile deſire it. What beaſt? Doe. Prithee come to the matter. I would thou wouldeſt paſſe ouer this</div>
+<div class="excerpt">the middeſt of his ſleepe. How dareſt thou venture man, what ſtrange medi cine haſt thou found, Ouid neere taught it thee, I doubt I gueſſe thy remedy, for loue, <mark>goe</mark> to a bawdy houſe or ſo, iſt not? Well I haue found you Sir, and prithee tell me, how got&#x27;ſt thou Wenches? And there you may whoore by authority, But Clerimont,</div>
+<div class="excerpt">Farewell my deareſt loue, liue thou ſtill happy, And may ſome one of more deſert then I, Be bleſt in the enioying what I looſe, I neede not wiſh him happineſſe that <mark>has</mark> thee, For 〈…〉 bring it may hee proue as good 〈…〉 worthy. deareſt Philocles, 〈…〉 for any man but thee 〈…〉 good my Lords 〈…〉 both together 〈…〉 alike, why ſhould the</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Eugenios ſiſter then is the rich heire By his deceaſe. Tis very well, but how did your worſhip ſcape Youe haue ſeene her. When I haue need on&#x27;t Ile deſire it. What beaſt? Doe. Prithee come to the matter. I would thou wouldeſt paſſe ouer this paſſing o uer of Authors, and ſpeake thine owne iudgement. I can deſcribe him better then ſo my ſelfe, he lookes like a man that had ſitten vp at Cards all night, or a ſtale Drunkard wakened in the middeſt of his ſleepe. How dareſt thou venture man, what ſtrange medi cine haſt thou found, Ouid neere taught it thee, I doubt I gueſſe thy remedy, for loue, goe to a bawdy houſe or ſo, iſt not? Well I haue found you Sir, and prithee tell me, how got&#x27;ſt thou Wenches? And there you may whoore by authority, But Clerimont, I doubt this Parragon That thou ſo praiſeſt, is ſome il fauoured Wench Whom thou wouldſt haue me laugh at for commending. How canſt thou doe it? Thou know&#x27;ſt this Ladies father is to mine A deadly enemy, nor is his houſe, Open to any of our kindred. Well I will ſee her the ▪ Exeunt. Tis happineſſe enough for me to ſee The motion of her lips. Ah Cleremont too well, Too well I ſee what I ſhall neuer taſte, You Ladies beautie: ſhe muſt needs be cruell (Though her faire ſhape deny it) to the ſonne Of him that is her fathers enemy, That, Cleremont, that fatall difference Checkes my deſire, and ſinkes my riſing hopes, But loue&#x27;s a torrent violent if ſtopt, And I am deſperately mad: I muſt muſt be hers, or elſe I muſt not be. May, nay I will in ſpite of deſtinie, 〈◊〉 women and faint hearted fooles complaine In languiſhing diſpayre, a manly loue Dares ſhew it ſelfe and preſſe to his deſires Through thickeſt troopes of horid oppoſites, Were there a thouſand waking Dragons ſet To keepe that golden fruit: I would attempt To plucke and taſte it, tis the danger crownes A braue atchieuement: what if I ſhould goe And boldly wooe her in her fathers houſe In ſpite enmity, what could they ſay? She would not hate a man for louing her, Or if ſhe did, better be once deemed Then liue for euer hapleſſe. What a queſtion&#x27;s that, ſeeſt thou this ſtone. Hard by her. But prethee tell mee what doeſt thinke this Letter may doe. Cupid guide my arme, Oh be as iuſt blind God as thou art great, And with that powerfull hand, that golden ſhaft That I was wounded, wound you tender breſt, There is no ſalue ̄ but that, no cure for me, Sheele wonder more to ſee what man it comes from. Mocke me not fortune, She kiſt it, ſaweſt thou her, by heauen ſhe kiſt it. He muſt not if I liue, But yet her father brings him that has the meanes That I ſhould euer want. Thou ieſts that feeles it not, prithee lets goe, Beſt of Ladies, It is ſo well, ſo excellently well, Comming from your wiſht loue, my barren thanke Wants language for&#x27;t, there lies in your faire lookes More entertainement then in all the pompe That the vaine Perſian euer taught the world, Your preſence is the welcome I expected, That makes it perfect. Tis my ambition euer to be yours. Oh my Starres Twas your kind influence, that whiſt I ſlept In dulleſt ignorance, contriu&#x27;d for me The way to crowne me with felicity. But ſweet, &#x27;mongſt all theſe Roſes ther&#x27;s one thorne That prickes and galls me, our parents enmity Will croſſe our loues, I doe aſſure my ſonne This father neuer will giue his conſent. Oh thou haſt ſpoke my wiſhes, and hath ſhewd Thy ſelfe in loue as true as beautifull; Then let&#x27;s away deareſt Leucothoe, My fortunes are not poore, then feare no want, This conſtant loue of ours may proue ſo happy, To reconcile our parents enmity. Why deareſt, is thy loue ſo quickly cold? Oh feare not that, had I a thouſand liues, They were too ſmall a venture for ſuch priſe, I tell thee ſweete, a face not halfe ſo faire As thine, hath arm&#x27;d whole actions in the field, And brought a thouſand ſhips to Tenedos, To ſacke lamented Troy, and ſhould I feare To venture one poore life, and ſuch a life As would be loſt in nor poſſeſſing thee: Come come, make that no ſcruple, when ſhall we goe. Where deareſt. Nere ſweeter comfort came from Angels lips I know the place, and will be ready there Before the houre: Ile bring a friend with me As true as mine owne heart, one Clerimont, That may doe vs good if danger happen. Deareſt farewell, Houres will ſeeme yeeres till we are met againe. exeunt. This Clerimont this is the happy place Where I ſhall meet the ſumme of all my ioyes, And be poſſeſt of ſuch a treaſury As would inrich a Monarch. My life, my ſoule, what here before me, Oh thou doſt ſtill out goe me, and doſt make All my endeauours poore in the requitall Of thy large fauours, but I forget my ſelfe. Sweete bid my friend here welcome, this is he That I dare truſt next mine owne hearth with ſecrets. But why art thou diſguiſed thus. Euen now me thinkes I ſtand as I would wiſh With all my wealth about me, ſuch a loue And ſuch a friend, what can be added more To make a man liue happy, thou darke groue That haſt beene cald the ſeat of Melancholy, And ſhelter for the diſcontented ſpirits; Sure thou art wrong, thou ſeemſt to me a place Of ſolace and content, a Paradiſe That giueſt me more then euer Court could doe Or richeſt Palace, bleſt be thy faire ſhades, Let birds of muſicke euer chant it heere, No croking Rauen, or ill booding Owle Make heere their balefull hahitation Frighting thy walkes, but mayſt thou be a groue Where loues faire Queene may take delight to ſport: For vnder thee two faithfull Louers meet, Why is my faire Leucothoe ſo ſad. Whether ſweete. Then lets remoue, but prithee be not ſad. What noiſe is that. Oh feare not Loue. draw. Theeues, Villaines. Firſt take my life. Oh where will ſorrow ſtay, Is there no end in griefe or in my death Not puniſhment enough for my offence, But muſt her griefe be added to afflict me; Dry vp thoſe Pearles deareſt Leucothoe, Or thou wilt make me doubly miſerable, Preſerue that life, that I may after death Liue in my better part, take comfort deare, People would curſe me, if ſuch beauty ſhould For me miſcarry, no, liue happy thou, And let me ſuffer what the law inflicts. Spare that labour, I do confeſſe the fact that I am charg&#x27;d with, And ſpeake as much as my accuſers can, As much as all the witneſſes can proue, Twas I that ſtole away the Daughter and Heire Of the Lord Polimetes, which wert to doe againe Rather then loſe her, I againe would venture, This was the fact, your ſentence honour&#x27;d fathers. Which I embrace with willingneſſe, now my Lord, to Pol. Is your hate glutted yet, or is my life Too poore a ſacrifice to appeaſe the rancor Of your inueterate malice, if it be to Inuent ſome ſcandall that may after blot My reputation, father dry your teares, Weepe not for me, my death ſhall leaue no ſtaine Vpon your bloud, nor blot on your faire name ▪ The honour&#x27;d aſhes of my anceſtors May ſtill reſt quiet in their teare wet Vrnes For any fact of mine, I might haue liu&#x27;d If heauen had not preuented it, and found Death for ſome foule diſhonourable act. Brother farewell, no ſooner haue I found to Franciſco But I muſt leaue thy wiſht for company. Farewell my deareſt loue, liue thou ſtill happy, And may ſome one of more deſert then I, Be bleſt in the enioying what I looſe, I neede not wiſh him happineſſe that has thee, For 〈…〉 bring it may hee proue as good 〈…〉 worthy. deareſt Philocles, 〈…〉 for any man but thee 〈…〉 good my Lords 〈…〉 both together 〈…〉 alike, why ſhould the law 〈…〉 and lay it all on him, 〈…〉 would we could as lawfully 〈…〉 hee ſhould not dye for this, 〈…〉 , whoſe that you haue brought there? 〈…〉 A benefactor, if it pleaſe your Lordſhips, 〈…〉 him in my watch laſt night. 〈1 line〉 Wha &#x27;s his offence? And I, Now comes my que, my Lord Polimetes, 〈…〉 correction let me aske one queſtion. What queſtion? ſpeake. I thanke your Lordſhip. Thankes good my Lord. A life my Leige, That ſhall be euer ready to be ſpent Vpon your ſeruice.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Heir</div><div class="body">In order to facilitate a marriage between his daughter Leucothoe and the wealthy Count Virro, Polymetes has the rumour put about that his son Eugenio has died during a trip overseas, which means that Leucothoe is now his heir. Among her many other admirers is Philocles, the son of Polymetes’ enemy, Euphues; he is barred from direct access to her, but is able to see her through the window of his friend Clerimont’s lodgings, next door to Polymetes’ house. He overhears her admitting that she does not love Virro, who is too old for her, but has fallen in love with a young man she saw riding in the street: Philocles. He throws a letter to her, and she plans an assignation with him in her father’s absence. Eugenio returns home disguised as the scholar Irus, but Polymetes seems less interested in the news of his son’s survival than that the rumour of his death should not be contradicted. Polymetes learns of Philocles’ assignation with Leucothoe; he and ‘Irus’ eavesdrop on it and hear the lovers plan to elope, even though stealing an heiress is a capital crime. Approving of his sister’s choice, Eugenio tells Virro that he will be marrying Leucothoe under false pretences, since the true heir is still alive; but Virro’s response is to hire ‘Irus’ to poison Eugenio. Polymetes catches Philocles and Leucothoe in the act of elopement, and Euphues’ attempts to secure a pardon are fruitless. Leucothoe’s pleading has more effect on the King, but only because he is attracted to her: he swears not to issue a pardon unless she has sex with him. When she adamantly refuses, the King tries to find a way out of his oath, but the papal price list for exemptions disgusts him and there is no legal loophole. At the trial, Philocles pleads guilty and is sentenced to death; Leucothoe declares her determination to die with him. ‘Irus’ is produced in court, having contrived to get himself arrested for murdering Eugenio; both he and Virro are also sentenced to death. ‘Irus’ gets Polymetes to declare in open court that, as things stand, he would allow Leucothoe to marry Philocles after all, if he were available. Then he reveals himself to be Eugenio: no murder has been committed, and no heiress stolen, so the death sentences are all quashed. In the sub-plot, Francisco has got Luce pregnant, and offers to make amends by marrying her; but her father Franklin intends her instead for the rich, foolish Shallow. Shallow is persuaded that he himself is responsible for her condition, and that,…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

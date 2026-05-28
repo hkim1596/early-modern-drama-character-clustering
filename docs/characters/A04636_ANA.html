@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ANA in The Alchemist · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_07.html">Cluster 7 — 7: thu, lorde, did</a> ›
+  <span>ANA</span>
+</nav>
+
+<h1>ANA</h1>
+<p class="lede">in <em>The Alchemist</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1612</td></tr>
+<tr><th>Words</th><td>776</td></tr>
+<tr><th>Characters</th><td>4390</td></tr>
+<tr><th>BritDrama no.</th><td>1621</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 7 (<em>thu, lorde, did, holy, christ, tyme…</em>). Matches are highlighted.</p>
+<div class="excerpt">acediae, Turris circulatorius, Lembeke, Bolts-head, Retort, and Pellicane Had all beene cinders. Wicked Ananias! Art thou return&#x27;d? Nay then it goes downe, yet. <mark>Christ</mark>-tide, I pray you. I haue done. Bells are prophane, a tune may be religious. It is indeed an Idoll I hate Traditions. I doe not trust &#x27;hem. They are Popish, all.</div>
+<div class="excerpt">godly. I may not. About the second day, of the third weeke, In the ninth Month? It will be ioyfull tidings to the Brethren. Lawfull? We know no Magistrate Or, if we <mark>did</mark>, This&#x27;s forraine coyne. &#x27;Tis, Sir. The Brethren shall approue it lawfull, doubt not. Where shall&#x27;t be done? Peace to the Houshold. Casting of Dollers is concluded</div>
+<div class="excerpt">neck, betrayes thee: &#x27;and is the same With that, which the vncleane Birds, in seuenty-seuen, Were seene to pranke it with, on diuers coasts. Thou look&#x27;st like Antichrist, in that leud hat. Depart, proud Spanish Fiend. Child of perdition. Sir, I know The Spaniard hates the Brethren, and hath Spies Vpon their Actions: And that this</div>
+<div class="excerpt">Spanish Fiend. Child of perdition. Sir, I know The Spaniard hates the Brethren, and hath Spies Vpon their Actions: And that this was one I make no scruple. But the <mark>holy</mark> Synode Haue beene in prayer, and meditation, for it. And &#x27;tis reueald no lesse, to them, then mee, That casting of Money is most lawfull. I will tell This to the</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">A faithfull Brother, if it please you. I vnderstand no Heathen language, truely. Heathen Greeke, I take it. All&#x27;s Heathen, but the Hebrew. Please you, a Seruant of the exilde Brethren, That deale with Widdowes, and with Orphanes goods; And make a iust account, vnto the Saints: A Deacon. From Tribulation Wholsome, Our very zealous Pastor. Of what kind, Sir? Were the Orphanes Parents Sincere professors? Because We then are to deale iustly, and giue (in truth) Their vtmost valew. No surely. The Brethren bid me ay vnto you, Sir. Surely, they will not venter any more, Till they may see proiection. Yo&#x27; haue had, For the Instruments, as bricks, and ome, and glasses, Already thirty pound; and, for Materialls, They say, some ninety more: And, they haue heard, since, That one, at Hiedelberg, made it, of an Egge And a small paper of Pinne-dust. My name is Ananias. In pure zeale, I doe not like the man: He is a Heathen. And speakes the language of Canaan, truely. He beares The visible marke of the beast, in his forehead. And for his Stone, it is a worke of darknesse, And, with Philosophie, blinds the eyes of man. Which his cannot: The sanctified cause Should haue a sanctified course. I haue not aedified more, truely, by man; Not, since the beautifull light, first, shone on mee: And I am sad my zeale hath so offended. The motion&#x27;s good. And of the Spirit; I will knock first: Peace be within. O Are you come? &#x27;Twas time. Your threescore minutes Were at the last thred, you see, And, downe had gone Furnus acediae, Turris circulatorius, Lembeke, Bolts-head, Retort, and Pellicane Had all beene cinders. Wicked Ananias! Art thou return&#x27;d? Nay then it goes downe, yet. Christ-tide, I pray you. I haue done. Bells are prophane, a tune may be religious. It is indeed an Idoll I hate Traditions. I doe not trust &#x27;hem. They are Popish, all. I will not peace. I will not— Please the prophane, to greeue the godly. I may not. About the second day, of the third weeke, In the ninth Month? It will be ioyfull tidings to the Brethren. Lawfull? We know no Magistrate Or, if we did, This&#x27;s forraine coyne. &#x27;Tis, Sir. The Brethren shall approue it lawfull, doubt not. Where shall&#x27;t be done? Peace to the Houshold. Casting of Dollers is concluded lawfull. What is the Motiue. They are profane, Leud, superstitious, and idolatrous Breeches. Auoid Sathan, Thou art not of the light. That Ruffe of pride, About thy neck, betrayes thee: &#x27;and is the same With that, which the vncleane Birds, in seuenty-seuen, Were seene to pranke it with, on diuers coasts. Thou look&#x27;st like Antichrist, in that leud hat. Depart, proud Spanish Fiend. Child of perdition. Sir, I know The Spaniard hates the Brethren, and hath Spies Vpon their Actions: And that this was one I make no scruple. But the holy Synode Haue beene in prayer, and meditation, for it. And &#x27;tis reueald no lesse, to them, then mee, That casting of Money is most lawfull. I will tell This to the Elders, and the weaker Brethren, That the whole Company of the Separation May ioyne in humble prayer againe, Yea, for some fitter place. The Peace of minde Rest with these walles. Come forth, you Seed of Vipers, Sonnes of Belial, Your wickednesse is broke forth: Abhomination Is in the House. The place, It is become a Cage of vncleane birds. Wee&#x27;ll ioyne, to weede them out. Call her not Sister. She is a Harlot, verily. Sathan, auoide, and hinder not our zeale. Locusts Of the foule pit Worsethen the Grasse-hoppers, or the Lice of Aegypt. Scorpions, And Caterpillers. They are the vessels Of shame, and of dishonour. To beare away the portion of the Righteous, Out of this denne of Theeues. The goods, sometimes the Orphanes, that the Brethren Bought with their Siluer pence. I doe defie The wicked Mammon, so doe all the Brethren, Thou prophane Man. I aske thee, with what conscience Thou canst aduance that Nemrod, against vs, That haue the seale? Were not the Shillings numbred, That made the Pounds? were not the Pounds told out, Vpon the second day of the fourth weeke, In the eight month, vpon the table dormant, The yeare, of the last patience of the Saints, Sixe hundred and tenne. Sir. I am strong, And will stand vp, well girt, against an Host, That threaten Gad in exile. I will pray there Against thy House: May Dogges defile thy walles, And Waspes and Hornets breed beneath thy roofe, This seat of falsehood, and this caue of cos&#x27;nage.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Alchemist</div><div class="body">With his master absent to avoid the plague in London, Face has set up an occult consultancy in his house in association with the formerly itinerant rogues Subtle and Doll Common: Face fetches in the clients and Subtle poses as the alchemist. They quarrel over the relative merits of their contributions to the enterprise, but resolve to collaborate competitively in the day’s ===== PAGE 80 ===== business. They are visited by successive clients: Dapper, who wants a familiar to help him win at gambling; Drugger, who wants advice on the most auspicious layout for his shop; Sir Epicure Mammon, who seeks the philosopher’s stone to fulfil his fantasies of wealth, luxury, and voluptuousness, and who brings along with him the sceptic Surly; and the religious sectarians Ananias and Tribulation, who want both the stone and Subtle’s claimed expertise in counterfeiting foreign coins. Dapper is persuaded that he is the Fairy Queen’s nephew and heir, and is promised an introduction to her. Mammon brings various domestic articles for aurification, which Subtle then sells on to Ananias and Tribulation, saying they belong to orphans. Clients come thick and fast. Drugger introduces his neighbours, Kastril (who wants te learn how to quarrel) and the wealthy widow Pliant (who wants her fortune told and whom Face and Subtle both want to marry). They are sent away so that the tricksters can deal with Dapper, who in his turn is secreted in the privy while they attend to Mammon. The knight courts Doll, who is presented to him as a lord’s sister prone to religious mania, which he activates by ill-chosen words; but he is then told that his lust has caused a setback in the alchemical process, which demands moral purity. Meanwhile, Surly returns, disguised as a Spanish count seeking sexual favours; but, since Doll is busy with Mammon, he is foisted on Dame Pliant, who is tempted with the chance of becoming a Spanish countess. His attempt to tell her the truth is outmanoeuvred when Face and Subtle convince her that he is an impostor and that the real Count is on his way; Drugger is persuaded to impersonate him and sent off to borrow a Spanish suit for the role. Lovewit, the master of the house, returns to hear Tumours of strange goings-on. Face’s explanation is confuted by the cries of Dapper, forgotten in the privy, so he confesses everything. Dapper is presented to the Fairy Queen (impersonated by Doll) and goes away the owner of an imaginary magical fly, with instructions not to look…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_07.html">Cluster 7 — 7: thu, lorde, did</a> page.
+</div>
+</div></body></html>

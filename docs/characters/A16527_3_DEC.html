@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DEC in Julius Caesar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> ›
+  <span>DEC</span>
+</nav>
+
+<h1>DEC</h1>
+<p class="lede">in <em>Julius Caesar</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>1469</td></tr>
+<tr><th>Characters</th><td>8472</td></tr>
+<tr><th>BritDrama no.</th><td>1553</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 29 (<em>brutus, did, rome, antonius, anthony, cleopatra…</em>). Matches are highlighted.</p>
+<div class="excerpt">multitude turmoilde. As whilſt t&#x27;one ſickeneſſe diuerſe drugges are vſde, Whoſe powres repugnant in digeſtion iarre: Th&#x27;impatient patients fancies reſt confuſde, So <mark>did</mark> we long diſtreſſd with ciuill warre. But now great Caeſar from tempeſtuous windes, Romes ſcattred ruines recollects of late: A Pilote meete to calme tumultuous</div>
+<div class="excerpt">thing which it hunts, Still waſting moſt, when moſt it mindes to winne. And yet I thinke auoyding threatned harmes, He was conſtraind t&#x27;imbarke in ciuill broiles: <mark>Did</mark> he not couenant to quit his armes, As not deſirous of his countries ſpoiles? That Ceaſars part <mark>might</mark> iuſtly be excuſde, Loe, with the cauſe alleadgd his courſe</div>
+<div class="excerpt">liberall of their life, But pardond them ſtill to take Pompeys part. Euen at th&#x27;infortunate Pharſalian field, When he ſecurely <mark>might</mark> haue vſde the ſword: He both <mark>did</mark> ſpare all th&#x27;enemies that would yeeld, And them to rents and dignities reſtord. Then when th&#x27;Aegyptians ſo t&#x27;obtaine reliefe, Brought to his ſight pale Pompeys</div>
+<div class="excerpt">wit that no ſuch courſes ſcand, Till by being barrd from vſing of requeſts, Not lookt for meanes were offred to command. All to mount high his haughtie thoughts <mark>did</mark> tempt, True worth diſdaines to ſuffer open wrong: And a great courage kindled by contempt, Muſt by reuenge be quencht whilſt rage makes ſtrong. Theſe be the means</div>
+<div class="excerpt">a poyſnous peſt, T&#x27;orethrow the ſoule delights the ſight, Eaſe comes with eaſe where all by paine buy paine: Reſt we in peace, by warre let others raigne. NOw, <mark>Brutus</mark> now, we need no more to doubt, Nor with blind hopes our iudgement to ſuſpend: Lo, all our exſpectations are worne out, For now it&#x27;s time t&#x27;attempt, and not t&#x27;attend.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Though innouations at the firſt ſeeme ſtrange, Yet oft experience approbation brings: And if with vpright thoughts we weigh this change, On it the ſafetie of our cittie hings. As in the depths daſht with redoubling waues, A ſhip by different mindes reſts more imbroilde, So was our cittie plag&#x27;d with diuerſe lawes, By th&#x27;all-confounding multitude turmoilde. As whilſt t&#x27;one ſickeneſſe diuerſe drugges are vſde, Whoſe powres repugnant in digeſtion iarre: Th&#x27;impatient patients fancies reſt confuſde, So did we long diſtreſſd with ciuill warre. But now great Caeſar from tempeſtuous windes, Romes ſcattred ruines recollects of late: A Pilote meete to calme tumultuous mindes, A doctor fit for a diſtemperd ſtate. Though what you burden Caeſar with were true, Him of all crime Neceſſitie hath clear&#x27;d: That was foes force t&#x27;eſchew, forcde to purſue, Whilſt by contempt t&#x27;attempt gret things being cheerd: To th&#x27;enemies enuie more oblig&#x27;d he reſts, Then t&#x27;his owne wit that no ſuch courſes ſcand, Till by being barrd from vſing of requeſts, Not lookt for meanes were offred to command. All to mount high his haughtie thoughts did tempt, True worth diſdaines to ſuffer open wrong: And a great courage kindled by contempt, Muſt by reuenge be quencht whilſt rage makes ſtrong. Theſe be the means by which ambition mounts, Without moſt humble, when moſt high within: And as it fled from that thing which it hunts, Still waſting moſt, when moſt it mindes to winne. And yet I thinke auoyding threatned harmes, He was conſtraind t&#x27;imbarke in ciuill broiles: Did he not couenant to quit his armes, As not deſirous of his countries ſpoiles? That Ceaſars part might iuſtly be excuſde, Loe, with the cauſe alleadgd his courſe accords: Of which th&#x27;humanitie that he hath vſde, A teſtimonie to the world affords. Though forcde to fight, he alwayes had great care, To ſaue our Cittizens as each man knowes; And bade his captaines ſtill all Romans ſpare, But on Barbarians bodies ſpend their blowes. Of th&#x27;aduerſaries after bloudie ſtrife, When of the might haue made ſome captiues ſmart: Not onelie was he liberall of their life, But pardond them ſtill to take Pompeys part. Euen at th&#x27;infortunate Pharſalian field, When he ſecurely might haue vſde the ſword: He both did ſpare all th&#x27;enemies that would yeeld, And them to rents and dignities reſtord. Then when th&#x27;Aegyptians ſo t&#x27;obtaine reliefe, Brought to his ſight pale Pompeys bloodleſſe head; He teſtified with teares his inward griefe, And gracde his ſtatues after he was dead. Thoſe his proceedings might appeare t&#x27;approue, That he againſt his will maintain&#x27;d this warre; And to his countrie beares a tender loue, That could comport to reine his rage ſo farre. Had Caeſar willingly reſignd his armes, And rendred Rome her libertie at laſt, When as from foes he feard no further harmes, But had repaird his iuſt diſpleaſures paſt. More then for all the loue thats ſhewd to me, He ſhould haue had an Altar in my breaſt: As worthy for his vertuous decdes to be Feard by the bad, and honourd by the beſt. But ſince though conq&#x27;ring all the world by might, He to himſelfe a ſlaue would make Rome thrall; His benefits are loathſome in my ſight, And I am grieu&#x27;d that he deſerues to fall. My fancies moue not in ſo lowe a ſpheare, But I diſdaine that one ouer Rome impires; Yet it is beſt, that with the time we beare, And with our powre proportion our deſires. Though I diſſembled firſt your minde to trie, And tolde what Fame to Caeſars praiſe relates; Yet was I pleaſde that moe were grieu&#x27;d than I, All miſ-contented men are glad of mates. Well, Cicero let all meanes be entertaind, That may imbarke vs in his boſomes depths, Till either willingly or then conſtrain&#x27;d, He iuſtly quite what he vniuſtly keepes. This life of ours is like a Roſe, Which whilſt it beauties rare array, Doth then enioy the leaſt repoſe When virgin-like it bluſh we ſee: Then is&#x27;t euery hand the prey, And by each wind is blowne away: Yea though from violence ſcap&#x27;d free, (Whilſt time triumphs, it leads all thralles) Yet doth it languiſh and decay. O Whilſt the courage hotteſt boiles, And that our life ſeemes beſt to be, It is with dangers compaſt ſtill, Whilſt it each little change appalles, The body force without whiles foiles, It th&#x27;owne diſtemprature whiles ſpoiles: Of which, though none it chance to kill: As nature failes the bodie falles, Of which, ſaue death, nought bounds the toyles. What is this moouing tower in which we truſt? A little winde cloſd in a cloud of duſt. And yet ſome ſpirits though here being pent, In this fraile priſons narrow bounds, With what might ſuffice not content, Do alwayes bend their thoughts too hie, And aime at all the peopled grounds, Then whilſt their breaſts ambition wounds, Though feeding as bent ſtraight to die. They build as they might alwayes liue, Being famiſhd for fames empie ſounds: Of ſuch no end the trauels ends, But a beginning giues whereby They may b&#x27;imbroild worſe then before, For whilſt they ſtill new hopes contriue, Th&#x27;exſpected good more anguiſh ſends Then the poſſeſſde contentment lends, Like beaſts that taſte not, but deuoure. They ſwallow much, and for more ſtriue, Whilſt ſtill their hope new hap attends: And how can ſueh but ſtill themſelues annoy, That know to conquere, but not how t&#x27;enioy? Since as a ſhip amidſt the depthes, Or as an Eagle through the aire, Of which their way no impreſsion keepes, Moſt ſwift when ſeeming leaſt to moue: This breath of which we take ſuch care, Doth toſſe the bodie euery where, That it may hence with haſte remoue: Life ſlippes and ſleepes alwayes away, Then whence, and as it came goes bare, Whoſe ſteps behinde no trace doth leaue. Why ſhould heauen-baniſh&#x27;d ſoules thus loue The cauſe, and bounds of their exile, Where they as reſtleſſe ſtrangers ſtray, And with ſuch pain why ſhould they reaue That which they haue no right to haue: Which with them ſelues within ſhort while, As ſommers beauties muſt decay, And can giue nought except the graue, Though all things doe to harme him what they can, No greater enemie then himſelfe to man: Whilſt oft enuiron&#x27;d with his foes That threatned death on euery ſide, Great Caeſar parted from repoſe, As Atlas vnderneath the ſtarres Did of a world the weight abide. But ſince a prey t&#x27;exceſsiue pride, More then by all the former warres, He now by it doth harmde remaine And of his fortune doth defide Made rich by many a Nations wrack, He breaking through the liquid barres, In Neptunes armes his minion forc&#x27;d, Yet ſtill purſude new hopes in vaine. Ah, would th&#x27;ambitious looking backe, Of their inferiours knowledge take, They from huge cares might be deuorc&#x27;d, Whilſt veiwing few more wealth attaine, And many more than they to lacke. Lo, th&#x27;only plague from men that reſt doth reaue, Is valuing what they want, not what they haue. Since thus the great themſelues inuolue In ſuch a laborinth of cares, Whence none to ſcape can well reſolue, But by degrees is forward led Through waues of hopes, rockes of diſpaires: Let vs anoyd ambitions ſnares, And farre from ſtormes by enuie bred, Still ſeeke ſecurely a humble reſt, With mindes where no prowd thought repaires, That in vaine ſhadowes doth delight: Thus may our fancies ſtill be fed With that which Nature freely giues. Let vs iniquitie deteſt, And hold but what we owe of right, Th&#x27;eyes treaſure is th&#x27;al-circling light: Not that vaine pompe for which th&#x27;earth ſtriues, Whoſe glory but a poyſnous peſt, T&#x27;orethrow the ſoule delights the ſight, Eaſe comes with eaſe where all by paine buy paine: Reſt we in peace, by warre let others raigne. NOw, Brutus now, we need no more to doubt, Nor with blind hopes our iudgement to ſuſpend: Lo, all our exſpectations are worne out, For now it&#x27;s time t&#x27;attempt, and not t&#x27;attend. Th&#x27;imperious people that did th&#x27;earth appall, Ah vanquiſhde by their victories at laſt, Are by their too much libertie made thrall, Since all their ſtrength but ſerues themſelues to caſt. And we that once ſeemd borne t&#x27;aime at great things, Of the worlds miſtreſſe mightie minions once, That might haue labor&#x27;d to giue lawes to kings, Lawes from a king, muſt looke for now with grones. For ſuch of Caeſar is the monſtrous pride, That though he domineers elſe at this houre, And to his clients kingdomes doth diuide, With an vnlimitd tyrranicke power. Yet of Dictator he diſdaines the name, And ſeekes a tyrants title with the place: Not for his honour, no, but for our ſhame, As onely bent to bragge of our diſgrace.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Julius Caesar</div><div class="body">Juno remains angry that a Trojan adjudged Venus the most beautiful goddess. Through the centuries, she has sought to avenge herself by harrying the Trojans’ 1607 descendants, the Romans, most recently by fomenting a civil war. But the victor of that war was Caesar, who traces his descent from Venus; he has conquered much of the world and established his ascendancy in Rome, but Juno now intends to work his overthrow. Caesar explains to Antonius that he wants to be a king not for personal ambition but to comply with a Sibylline prophecy which makes monarchy a precondition for a Roman victory in the east. Antonius warns him that there are Romans who desire his death. Cicero laments the loss of Rome’s liberty, and Decius Brutus agrees that, though Caesar’s past actions have been honourable, he should have demobilized his armies now that there is no further external threat. Brutus and Cassius agree that they will not participate in any ceremony aimed at making Caesar a king. Brutus is Caesar’s friend, but reasons that he must assassinate the tyrant for the public good. His wife Portia wrings the secret of the conspiracy out of him. Brutus and Cassius recruit conspirators, both patriots and men who have a personal grudge against Caesar. However, they exclude Cicero and agree not to kill Antonius. Caesar’s wife Calpurnia tries to persuade him not to go to the Senate on the Ides of March — an astrologer has foretold his death, and she herself has had bad dreams - but Decius Brutus induces him to change his mind. The conspirators assassinate Caesar. Antonius makes a show of friendship with them, but is obviously planning reprisals. A messenger brings Caesar’s wife Calpurnia a full account of the circumstances of the murder.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> page.
+</div>
+</div></body></html>

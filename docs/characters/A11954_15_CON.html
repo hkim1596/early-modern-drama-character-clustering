@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CON in King John · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>CON</span>
+</nav>
+
+<h1>CON</h1>
+<p class="lede">in <em>King John</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1612</td></tr>
+<tr><th>Characters</th><td>8540</td></tr>
+<tr><th>BritDrama no.</th><td>1043</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">beleefe, and life encounter ſo, As doth the furie of two deſperate men, Which in the very meeting fall, and dye. Lewes marry Blaunch ? O boy, then where art thou? <mark>France</mark> friend with <mark>England</mark>, what becomes of me? Fellow be gone: I cannot brooke thy ſight, This newes hath made thee a moſt vgly man. Which harme within it ſelfe ſo heynous</div>
+<div class="excerpt">Oppreſt with wrongs, and therefore full of feares, A widdow, husbandles, ſubiect to feares, A woman naturally borne to feares; And though thou now confeſſe thou didſt but ieſt With my vext ſpirits, I cannot take a Truce, But they will quake and tremble all this day. What doſt thou meane by ſhaking of thy head? Why doſt thou</div>
+<div class="excerpt">Roſe. But Fortune, oh, She is corrupted, chang&#x27;d, and wonne from thee ▪ Sh&#x27; adulterates hourely with thine Vnckle Iohn, And with her golden hand hath pluckt on <mark>France</mark> To tread downe faire reſpect of Soueraigntie, And made his Maieſtie the bawd to theirs. <mark>France</mark> is a Bawd to Fortune, and king Iohn, That ſtrumpet Fortune, that</div>
+<div class="excerpt">Soueraigntie, And made his Maieſtie the bawd to theirs. <mark>France</mark> is a Bawd to Fortune, and king Iohn, That ſtrumpet Fortune, that vſurping Iohn : Tell me thou fellow, is not <mark>France</mark> forſworne? Euvenom him with words, or get thee gone, And leaue thoſe woes alone, which I alone Am bound to vnder-beare. Thou maiſt, thou ſhalt, I will not go with</div>
+<div class="excerpt">Good Father Cardinall, cry thou Amen To my keene curſes; for without my wrong There is no tongue hath power to curſe him right. Looke to that Deuill, leſt that <mark>France</mark> repent, And by diſioyning hands hell loſe a ſoule. What ſhould he ſay, but as the Cardinall? O Lewis, ſtand faſt, the deuill tempts thee heere In likeneſſe of a</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Stay for an anſwer to your Embaſſie, Leſt vnaduis&#x27;d you ſtaine your ſwords with bloud, My Lord Chattilion may from England bring That right in peace which heere we vrge in warre, And then we ſhall repent each drop of bloud, That hot raſh haſte ſo indirectly ſhedde. My bed was euer to thy ſonne as true As thine was to thy husband, and this boy Liker in feature to his father Geffrey Then thou and Iohn, in manners being as like, As raine to water, or deuill to his damme; My boy a baſtard? by my ſoule I thinke His father neuer was ſo true begot, It cannot be, and if thou wert his mother. Now ſhame vpon you where ſhe does or no, His gran ames wrongs, and not his mothers ſhames Drawes thoſe heauen-mouing pearles fro ̄ his poor eies, Which heauen ſhall take in nature of a fee: I, with theſe Chriſtall beads heauen ſhall be brib&#x27;d To doe him Iuſtice, and reuenge on you. Thou monſtrous of Iniurer of heauen and earth, Call not me ſlanderer, thou and thine vſurpe The Dominations, Royalties, and rights Of this oppreſſed boy; this is thy eldeſt ſonnes ſonne, Infortunate in nothing but in thee: Thy ſinnes are viſited in this poore childe, The Canon of the Law is laide on him, Being but the ſecond generation Remoued from thy ſinne-conceiuing wombe. I haue but this to ſay, That he is not onely plagued for her ſin, But God hath made her ſinne and her, the plague On this remoued iſſue, plagued for her, And with her plague her ſinne: his iniury Her iniurie the Beadle to her ſinne, All puniſh&#x27;d 〈◊〉 the perſon of this childe, And all for her, a plague vpon her. I who doubts that, a Will: a wicked will, A womans will, a cankred Grandams will. Gone to be married? Gone to ſweare a peace? Falſe blood to falſe blood ioyn&#x27;d. Gone to be freinds? Shall Lewis haue Blaunch, and Blaunch thoſe Prouinces? It is not ſo, thou haſt miſpoke, miſheard, Be well aduiſ&#x27;d, tell ore thy tale againe. It cannot be, thou do&#x27;ſt but ſay &#x27;tis ſo. I truſt I may not truſt thee, for thy word Is but the vaine breath of a common man: Beleeue me, I doe not beleeue thee man, I haue a Kings oath to the contrarie. Thou ſhalt be puniſh&#x27;d for thus frighting me, For I am ſicke, and capeable of feares, Oppreſt with wrongs, and therefore full of feares, A widdow, husbandles, ſubiect to feares, A woman naturally borne to feares; And though thou now confeſſe thou didſt but ieſt With my vext ſpirits, I cannot take a Truce, But they will quake and tremble all this day. What doſt thou meane by ſhaking of thy head? Why doſt thou looke ſo ſadly on my ſonne? What meanes that hand vpon that breaſt of thine? Why holdes thine eie that lamentable rhewme, Like a proud riuer peering ore his bounds? Be theſe ſad ſignes confirmers of thy words? Then ſpeake againe, not all thy former tale, But this one word, whether thy tale be true. Oh if thou teach me to beleeue this ſorrow, Teach thou this ſorrow, how to make me dye, And let beleefe, and life encounter ſo, As doth the furie of two deſperate men, Which in the very meeting fall, and dye. Lewes marry Blaunch ? O boy, then where art thou? France friend with England, what becomes of me? Fellow be gone: I cannot brooke thy ſight, This newes hath made thee a moſt vgly man. Which harme within it ſelfe ſo heynous is, As it makes harmefull all that ſpeake of it. If thou that bidſt me be content, wert grim Vgly, and ſlandrous to thy Mothers wombe, Full of vnpleaſing blots, and ſightleſſe ſtaines, Lame, fooliſh, crooked, ſwart, prodigious, Patch&#x27;d with foule Moles, and eye-offending markes, I would not care, I then would be content, For then I ſhould not loue thee: no, nor thou Become thy great birth, nor deſerue a Crowne. But thou art faire, and at thy birth (deere boy) Nature and Fortune ioyn&#x27;d to make thee great. Of Natures guifts, thou mayſt with Lillies boaſt, And with the halfe-blowne Roſe. But Fortune, oh, She is corrupted, chang&#x27;d, and wonne from thee ▪ Sh&#x27; adulterates hourely with thine Vnckle Iohn, And with her golden hand hath pluckt on France To tread downe faire reſpect of Soueraigntie, And made his Maieſtie the bawd to theirs. France is a Bawd to Fortune, and king Iohn, That ſtrumpet Fortune, that vſurping Iohn : Tell me thou fellow, is not France forſworne? Euvenom him with words, or get thee gone, And leaue thoſe woes alone, which I alone Am bound to vnder-beare. Thou maiſt, thou ſhalt, I will not go with thee, I will inſtruct my ſorrowes to bee proud, For greefe is proud, and makes his owner ſtoope, To me and to the ſtate of my great greefe, Let kings aſſemble: for my greefe&#x27;s ſo great, That no ſupporter but the huge firme earth Can hold it vp: here I and ſorrowes ſit, Heere is my Throne, bid kings come bow to it. O lawfull let it be That I haue roome with Rome to curſe a while, Good Father Cardinall, cry thou Amen To my keene curſes; for without my wrong There is no tongue hath power to curſe him right. Looke to that Deuill, leſt that France repent, And by diſioyning hands hell loſe a ſoule. What ſhould he ſay, but as the Cardinall? O Lewis, ſtand faſt, the deuill tempts thee heere In likeneſſe of a new vntrimmed Bride. Oh, if thou grant my need, Which onely liues but by the death of faith, That need, muſt needs inferre this principle, That faith would liue againe by death of need: O then tread downe my need, and faith mounts vp, Keepe my need vp, and faith is trodden downe. O be remou&#x27;d from him, and anſwere well. That which vpholdeth him, that thee vpholds, His Honor, Oh thine Honor, Lewis thine Honor. Lo; now: now ſee the iſſue of your peace. No, I defie all Counſell, all redreſſe, But that which ends all counſell, true Redreſſe: Death, death, O amiable, louely death, Thou odoriferous ſtench: ſound rottenneſſe, Ariſe forth from the couch of laſting night, Thou hate and terror to proſperitie, And I will kiſſe thy deteſtable bones, And put my eye-balls in thy vaultie browes, And ring theſe fingers with thy houſhold wormes, And ſtop this gap of breath with fulſome duſt, And be a Carrion Monſter like thy ſelfe; Come, grin on me, and I will thinke thou ſmil&#x27;ſt, And buſſe thee as thy wife: Miſeries Loue, O come to me. No, no, I will not, hauing breath to cry: O that my tongue were in the thunders mouth, Then with a paſſion would I ſhake the world, And rowze from ſleepe that fell Anatomy Which cannot heare a Ladies feeble voyce, Which ſcornes a moderne Inuocation. Thou art holy to belye me ſo, I am not mad: this haire I teare is mine, My name is Conſtance, I was G ffreyes wife, Yong Arthur is my ſonne, and he is loſt: I am not mad, I would to heauen I were, For then &#x27;tis like I ſhould forget my ſelfe: O, if I could, what griefe ſhould I forget? Preach ſome Philoſophy to make me mad, And thou ſhalt be Canoniz&#x27;d (Cardinall.) For, being not mad, but ſenſible of greefe, My reaſonable part produces reaſon How I may be deliuer&#x27;d of theſe woes, And teaches mee to kill or hang my ſelfe: If I were mad, I ſhould forget my ſonne, Or madly thinke a babe of clowes were he: I am not mad: too well, too well I feele The different plague of each calamitie. To England, if you will. Yes that I will: and wherefore will I do it? I tore them from their bonds, and cride aloud, O, that theſe hands could ſo redeeme my ſonne, As they haue giuen theſe hayres their libertie: But now I enuie at their libertie, And will againe commit them to their bonds, Becauſe my poore childe is a priſoner. And Father Cardinall, I haue heard you ſay That we ſhall ſee and know our friends in heauen: If that be true, I ſhall ſee my boy againe; For ſince the birth of Caine, the firſt male-childe To him that did but yeſterday ſuſpire, There was not ſuch a gracious creature borne: But now will Canker-ſorrow eat my bud, And chaſe the natiue beauty from his cheeke, And he will looke as hollow as a Ghoſt, As dim and meager as an Agues fitte, And ſo hee&#x27;ll dye: and riſing ſo againe, When I ſhall meet him in the Court of heauen I ſhall not know him: therefore neuer, neuer Muſt I behold my pretty Arthur more. Greefe fils the roome vp of my abſent childe: Lies in his bed, walkes vp and downe with me, Puts on his pretty lookes, repeats his words, Remembets me of all his gracious parts, Stuffes out his vacant garments with his forme; Then, haue I reaſon to be fond of griefe? Fareyouwell: had you ſuch a loſſe as I, I could giue better comfort then you doe. I will not keepe this forme vpon my head, When there is ſuch diſorder in my witte: O Lord, my boy, my Arthur, my faire ſonne, My life, my ioy, my food, my all the world: My widow-comfort, and my ſorrowes cure.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — King John</div><div class="body">The Plantagenets have a dynastic dispute: J@lih is de facto King of England, but Alptiillir, the young son of his dead elder brother, has a better claim in primogeniture; France takes Arthur’s side. John is asked to adjudicate in another case of . disputed inheritance: Robert Falé@nbridge claims that his elder brother BHiliip is a bastard, begotten in his father’s absence by the dead King Richard. John rules for Philip’s legitimacy irrespective of parentage, since he was conceived in wedlock; but Philip decides to be a king’s son rather than a knight’s heir, cedes his brother the family lands, and joins John’s court. John meets the Kinglofibrance outside the town of Angers, which claims loyalty to the English crown but is holding out against both claimants until the issue is decided. England and France decide to defer their differences until they have subjugated Angers, but the citizens save themselves by suggesting an Anglo- French marriage between DOUISNEHEMDapHin and John’s niece BI@HEHE; France expediently transfers its support from Arthur to John. After the wedding, the papal legate Pandulph excommunicates John for his interference in ecclesiastical affairs, and declares his assassination legitimate. The French revert to support for Arthur, leaving Blanche with a conflict of interests. Arthur is captured in battle and taken back to England ===== PAGE 337 ===== 1596 in MWbert’s custody; John instructs Hubert to arrange the boy’s death. Anticipating this outcome, Pandulph .encourages Louis to prepare a claim to the English throne through his new wife’s right of succession. Hubert makes arrangements to blind Arthur, but cannot bring himself to go through with it. John’s lords demand Arthur’s release, but Hubert untruthfully reports that he is dead as ordered. The lords infer John’s responsibility and plan rebellion. Setbacks build up: John’s mother, left behind to govern his French possessions, dies, and the Dauphin lands his invasion force in England. Faced with internal rebellion and an external threat, John tries to disclaim responsibility for Arthur’s murder, only to be.told by Hubert that the boy is alive after all. But not for long: Arthur falls to his death while trying to escape from prison, and the rebel lords find the body and accept the Dauphin’s overtures. John submits to papal authority, fulfilling a prophecy that he would lose his crown. Pandulph tries to intervene with the Dauphin, only to find that he has started something he cannot…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

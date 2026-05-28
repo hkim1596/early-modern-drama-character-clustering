@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FUL in 555 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FUL</span>
+</nav>
+
+<h1>FUL</h1>
+<p class="lede">in <em>555</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1639</td></tr>
+<tr><th>Words</th><td>1289</td></tr>
+<tr><th>Characters</th><td>6780</td></tr>
+<tr><th>BritDrama no.</th><td>555</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Into a ſleeping Carpenter or Taylor, Which goes for halfe a man—whats he? beare up? Bleſſe us, a monſter patcht of dagger bumbaſt, His eyes like Copper-baſons, a&#x27; <mark>has</mark> chang&#x27;d Haire with a ſhagge dogge. I d. fie him. It gabbles like I know not what, believe it, The fellowes a ſhrewd fellow at a pink. Why ſave thee too, if thou</div>
+<div class="excerpt">Or we ſhall come too late. Waite cloſe my ragged new-come. She ſeemes in my firſt entrance to admire me, Proteſt ſhe eyes me round; Fulg ▪ ſhees is thine owne. <mark>Did</mark> you <mark>heare</mark> the muſique? Twas I that brought it, was&#x27;t not tickling? ah ha Prince, no Prince but we, We ſet the ditty and compoſd the ſong, Theresnos a note or foote</div>
+<div class="excerpt">money from my lands. Hang ſharkes, I am no ſhifter. <mark>Heare</mark>? I may whiſtle. I wonot hould, his man, tis time to ſpeake Before my time, oh ſcurvy, I his man? That <mark>has</mark> no meanes for meat or ragges, and ſeame-rents. The puppit heads. Thou lyeſt thou haſt not, And ile mayn&#x27;t. An arrant, arrant theefe leader, pray mocke it. Ile not</div>
+<div class="excerpt">ſcorne to flinch man. The great affaires I ſhall employ thee moſt in wilbe newes, And telling whats a clocke, for ought I know yet. I doe not aske thee now, or if I <mark>did</mark> We are not much the wiſer, and for newes— Thats well remembred, brother Don let&#x27;s trudge, Or we ſhall come too late. Waite cloſe my ragged new-come. She ſeemes</div>
+<div class="excerpt">mother (In right of whoſe blood I muſt ever honor The lower Germany) was a Harlekine. Her father was Grave Hansvan Herne, the ſon Of Hogen Mogen, dat de droates <mark>did</mark> ſneighen Of veirteen hundred Spaniards in one neict. Ten thouſand Divels, nor Diabolos Shall fright me from my pedigree, my uncle Yacob van Flagon drought, with</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">What is loſt is loſt, Money is traſh, and Ladies are et caetera&#x27;s, Play&#x27;s play; luck&#x27;s lucke, fortunes an I know what, You ſee the worſt of me, and whats all this now? Bare threeſcore duckets, Thirty a peece, we neede not care who know it She plaid, I went her halfe walkd by and whiſtled After my uſuall manner thus—unmoved Whiſtles. As no ſuch thing had ever beene as it were, Altho I ſaw the winners ſhare my money His lordſhip, and an honeſt gentleman Purſ&#x27;d it, but not ſo merrily as I Whiſtled it off—whiſtles I can forgoe things neerer then my gold, Allyd to my affections, and my bloud; Yea honour, as it were, with the ſame kinde. Of careleſſe confidence, and come off fairely Too as it were. No, ſhees inherent, and mine owne paſt looſing. Broke my lance. I meane ſo as it were And laid flat on her backe, both horſe and woman. What elſe man, as it were. protelt a fine conceit, A very fine conceite, and thus I tould her, That for mine owne part, if ſhee lik&#x27;d me, ſo, If not, not; for my ducke or do ſaid I, It is no fault of mine, that I am noble, Grant it; another may be noble too, And then wee&#x27;r both one noble better ſtil Habs-nabs good wincke and chooſe, if one muſt have her, The other goes without her, beſt of all, My ſpirit is too high, to fight for woman, I am too full of mercy to be angrie, A fooliſh generous quality, from which No might of man can beat I&#x27;me, ime reſolvd. What does he talke? my weapon ſpeakes no language, Tis a dutch iron trunchion. And it need be, Twill maule one&#x27;s hide, in ſpight of who ſaies nay Hold mee too Sirrah if th&#x27;art my frind, for I love no fighting, Yet hold me leaſt in pitty I flie off, It I muſt fight, I muſt; in a ſcutvie quarrell I de fie hees and ſhees, twit me with dutch? Hang dutch and french, hang ſpaniſh and Italians, Chriſtians and Turkes pew-waw; all&#x27;s one to me, I know whats what, I know on which ſide My bread is butterd. Front mee no fronts, if thou beeſtangrie ſquable Heeres my defence, and thy deſtruction—whiſtles a charge If friends ſhake hands, and goe with me to dinner. I vow a match: Ile feaſt the Don to day And faſt with him to morrow. Whats that? I ſaw a ſound. It nam&#x27;d a Lord. Gulls or Mogulls, Tag, rag, or other, Hoger-Mogen vanden Skip-Iacks, or Chouſes. Whoo! the brace are flincht, The paire of ſhavers are ſneakt from us, Don. Why? what are we? So ſay I, we will eate and drink, and ſquander, Till all doe ſplit againe. So am I too. Can as occaſion ſerves, if ſhe turne ſcurvie, Vnſweare my ſelfe again, and nere change colours. Piſh man, the beſt, though call em, ladies, madames, Faires, fines, and honies, are but fleſh and bloud, And now and then too, when the fi s come on &#x27;em, Will prove themſelves but flirts, and tirliry pufkins. Doſt long for a beating? Shalls try a ſlaſh, heres that ſhall do&#x27;t: Ile tap A gallon of thy braines, and fill thy hogſhead With two of wine for&#x27;t. Or whiſtle thee into an ague; hang&#x27;t, Be ſociable: drinke till we rore and ſcratch; Then drinke our ſelves aſleepe agen. The faſhion! Thou doſt not know the faſhion. Hey day, what&#x27;s this? All: Hold there, I barre play under boord, My part yet lies therein; you never ſaw The things you wier-draw thus. Oh rare, And all this in a dreame. My waking brother Souldier is tumd Into a ſleeping Carpenter or Taylor, Which goes for halfe a man—whats he? beare up? Bleſſe us, a monſter patcht of dagger bumbaſt, His eyes like Copper-baſons, a&#x27; has chang&#x27;d Haire with a ſhagge dogge. I d. fie him. It gabbles like I know not what, believe it, The fellowes a ſhrewd fellow at a pink. Why ſave thee too, if thou beeſt of heavens making: What art?—Feare nothing Don, we have our blades, Are mettall men our ſelves, try us who dare. What man? tirteen? is&#x27;t poſſible thoulyeſt not? A ſhaver of all trades; what courſe o f life Doeſt meane to follow next? ha? ſpeake thy minde. Hoy d , a purſe in troath wh o dropt, ſtay, ſtay, Vmh; have we gipſies here? oh mine is ſafe Iſt your purſe, brother Don? Haſt any money in it, honeſt blade? A bots on empty purſes. All theſe thy followers, miſerable pigmies Prate ſence and don&#x27;t be mad, I like thy humour, Tis pretty odde, and ſo as one might ſay, I care not greatly if I entertaine thee, Doſt want a maſter? if thou doſt I am for thee Elſe chooſe, and ſneake up; piſh I ſcorne to flinch man. The great affaires I ſhall employ thee moſt in wilbe newes, And telling whats a clocke, for ought I know yet. I doe not aske thee now, or if I did We are not much the wiſer, and for newes— Thats well remembred, brother Don let&#x27;s trudge, Or we ſhall come too late. Waite cloſe my ragged new-come. She ſeemes in my firſt entrance to admire me, Proteſt ſhe eyes me round; Fulg ▪ ſhees is thine owne. Did you heare the muſique? Twas I that brought it, was&#x27;t not tickling? ah ha Prince, no Prince but we, We ſet the ditty and compoſd the ſong, Theresnos a note or foote in&#x27;t, but our owne, And the pure trodden morter of this braine, We can doe things and things. Nay, nay, I could never ſing More then a gib cat, or a very howler, But you ſhall heareme whiſtle it. I doe heare you, And thanke ye heartily for your good wills, In ſetting forth my parts, but what I live on, Is ſimple trade of money from my lands. Hang ſharkes, I am no ſhifter. Heare? I may whiſtle. I wonot hould, his man, tis time to ſpeake Before my time, oh ſcurvy, I his man? That has no meanes for meat or ragges, and ſeame-rents. The puppit heads. Thou lyeſt thou haſt not, And ile mayn&#x27;t. An arrant, arrant theefe leader, pray mocke it. Ile not endure it, To heare a canting mungrell—Heare me lady, I care not faire or foule, I from a King derive my pedigree, King Oberon by name, from whom my father The mightie and couragious Mounti-banco, Was lineally deſcended, and my mother (In right of whoſe blood I muſt ever honor The lower Germany) was a Harlekine. Her father was Grave Hansvan Herne, the ſon Of Hogen Mogen, dat de droates did ſneighen Of veirteen hundred Spaniards in one neict. Ten thouſand Divels, nor Diabolos Shall fright me from my pedigree, my uncle Yacob van Flagon drought, with Abraham Snorten fert And yongſter Brogen foh with fourſcore hargubuſh, Manag&#x27;d by well-lin&#x27;d Butter-boxes, tooke A thouſand Spaniſh Iobber-nowles by ſurpriſe, And beat a ſconce about their eares. My fortunes bid me to be wiſe in duels, Elſe hang&#x27;t, who cares? Pheugh, is it were. Pheugh. Ile lead the van then. Ile follow. The Ladies, play at cards, make ſport and whiſtle, My purſe ſhall beare me out, a lazie life, Is ſcirvy, and deboſhd; fight you abroad, And weele be game whiles you fight at home, Runne high, runne low, here is a braine can doo , But for my martiall brother Don, prithee make him A what dee callt, a ſetting dog, a centinell Ile mend his weekely pay. Marry. The Dons a generous Don.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 555</div><div class="body">Since the customary number of sages is seven (as in Ausonius&#x27; Ludus septern sapientum), it is possible that the six masquing sages 1574 were complemented by a seventh in the audience — who else but the Queen? Compare 557.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

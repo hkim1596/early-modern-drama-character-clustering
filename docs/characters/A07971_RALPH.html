@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RALPH in 542 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>RALPH</span>
+</nav>
+
+<h1>RALPH</h1>
+<p class="lede">in <em>542</em> — [173]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>2016</td></tr>
+<tr><th>Characters</th><td>10845</td></tr>
+<tr><th>BritDrama no.</th><td>542</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">What&#x27;s his profession? His word may be taken in the terme for a gown-facing or so: but to doe any man good, is worth a double fee, if he performe it. Mistris, if you <mark>must</mark> know my Ma sters name, <mark>goe</mark> to Carterton in the Countie of Sussex, and there in the Church-Register you shall finde, that Roger the sonne of Rowland Dungworth of</div>
+<div class="excerpt">may <mark>bee</mark> brought to a composition. But should we be pittifull, could you be content, since you cannot fight in your owne defence, to lye in our defence. That we <mark>did</mark> beat you? Depart then, and praise us. Sirrah, you Raskall. Then thou abuser of wit and good cloathes, be mannerly, and uncover to thy betters. We will be satisfied</div>
+<div class="excerpt">the Sister-hood. Pray Master, know you hereabouts any conve nient Lodgings? Which is not usuall backwards. What if it be not in my Commission to tell you? But I <mark>must</mark> not tell you, till I have a mind to 〈◊〉 . You may be the agent to an Informer: doe you not cor respond with the Summer and Apparitour, to keepe your selfe off some</div>
+<div class="excerpt">punishment. Not unlikely, I have heard there are many such in Covent-Garden. If a downe-right ▪ Countrey thing will please you. This interest then, and— Why then you <mark>must</mark> seeke you a more proporti on&#x27;d Schoole-master to enter you farther, and teach you my Masters name. The Wine stayes, and I want it. What agen! Fare you well, I have</div>
+<div class="excerpt">have them, then the hangman both them and us for them. Come Dobson, we have got the money yet; and a little sack will animate us againe. My soul&#x27;s under foot; I <mark>must</mark> raise it: But if ever I quarrell againe by Moone shine unlesse I am drunk, valour forsake me. &#x27;Tis a fine Chamber, it shines like a Gold-smiths shop in Cheap-side.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Why, Dobson; he may doe what he will, and wee will doe what we list. A little instruction and practice will make us wicked enough, I dare warrant thee. Sha, Dobson; thy mind&#x27;s upon nothing but dirt. It should be COVENT-GARDEN; but &#x27;tis much alter&#x27;d since I was here last. I cou&#x27;d be content to have the tother sm cke at o r Gillian the Dayry-Maids sugar-candy— Kill me fi st, and then challenge me! for a kisse or two! nay, good Dobsox; she has lips big enough to serve us both. Prethee lets not fall o t and beat one another: these people would but laugh at us for&#x27;t. I scarce thinke they are all of one Parish, neither doe they goe to one Church. They come onely for an eve ning recreation o s e COVENT-GARDEN. And a god y one too if rumour lie not. I thinke mewes for hawkes, or ayrings for gen tles. Other hawkes are not here in any request. I hope so: we shall then be n ere the Cock-p t, and see a Play now and then. No, Dobson; they are men of credit, whose acti ons are beheld by every one, and allow&#x27;d for the most part with commendations. They make no yearely Progresse with the Anatomy of a S mpter-horse, laden with the sweepings of Long-lane in a dead Vacation, and purchas&#x27;d at the exchange of their owne whole Wardrobes. They buy not their Ordinary for the Copie of a Prologue; nor insinuate themselves into the acquaintance of an admiring Ningle, who for his free comming in, is at the expence of a Taverne Supper, and rinses their bawling throats with Canarye. The duller Asse tho . Nay, prethee fellow Dobson; if we abuse our selves sometimes, &#x27;twill be the better taken when wee a b se others. You wish an impossibility, unlesse the Pillory were more terrible. But &#x27;tis a dangerous way through a Scriveners conscience. Had he but cares then, hee might make a very good Puritan horse. But their doing sometimes, begets a hotter zeale in the Sister-hood. Pray Master, know you hereabouts any conve nient Lodgings? Which is not usuall backwards. What if it be not in my Commission to tell you? But I must not tell you, till I have a mind to 〈◊〉 . You may be the agent to an Informer: doe you not cor respond with the Summer and Apparitour, to keepe your selfe off some deserv&#x27;d punishment. Not unlikely, I have heard there are many such in Covent-Garden. If a downe-right ▪ Countrey thing will please you. This interest then, and— Why then you must seeke you a more proporti on&#x27;d Schoole-master to enter you farther, and teach you my Masters name. The Wine stayes, and I want it. What agen! Fare you well, I have forgot it. I rather thinke hee shall have her that pleaseth her best, else I shall doubt her for a woman. But how can s e concerne our goods? your instance. A Womans word! &#x27;tis not worth an ounce of feathers. Besides, you may be under covert barne. Have you not a Husband? What&#x27;s his profession? His word may be taken in the terme for a gown-facing or so: but to doe any man good, is worth a double fee, if he performe it. Mistris, if you must know my Ma sters name, goe to Carterton in the Countie of Sussex, and there in the Church-Register you shall finde, that Roger the sonne of Rowland Dungworth of Dirtall Farme in the Parish of Carterton aforesaid, was baptised—But stay, I&#x27;le know first if he be resolved to continue a Christian; &#x27;tis ordinary to change names with religion. Besides, hee means to be a Knight; and Dungworth will stink in the de licate nostrils of a Lady: it may make the heraul s give him a mock-coate with three kennell-rakers. Farewell sweet Mistris, and if my Master chance to lie at your house, I should be glad if I might lie over your Daughter. This is the vertue of Sack boy. Who would toile in durt for whay and butter-milke, or the windie juice of Pome-waters upon Sundayes? Now could I be as valiant as—nothing. I could take the wall of three times three Tay lors, though in the morning, and at a Bakers stall. If I should throw downe three or foure postes. What then! why, I would not stay to take them up. Give me an armour of Sack; I am shot-free. What say you pretty paire of Wag-tailes? doe you want Play-mates? Within dores, or without? Wee see somthing, but they may as well be flockes. How are we sure they are Cowards? To kill them and not hurt them? Call upon Sacke, Dobson: I begin to be affraid. I can perceive his sword; he shakes it fearefully. Sirrah, thou man of feare and trembling. Call upon Sacke, Dobson. Not so gentle neither. Wee are fiery furious, and command thee in the name of Sack, resigne thy wea pon, and submit to be corrected by our valour. A handsome beating shall asswage our fury. Our mercy may bee brought to a composition. But should we be pittifull, could you be content, since you cannot fight in your owne defence, to lye in our defence. That we did beat you? Depart then, and praise us. Sirrah, you Raskall. Then thou abuser of wit and good cloathes, be mannerly, and uncover to thy betters. We will be satisfied with a small diminution of your plentifull Wardrobe. Wee know you have more Cloakes and Beavers at home. Why then thanke our mercy and depart, whilst we like honest theeves share our booty. And many a one is hang&#x27;d for it. Not much of the gallowes without a hangman. For women and children let me alone: if I fall upon the one, Ile soone get the other. Without his staffe of authoritie, or a fortifica tion of Sack. A Constable may be valiant when hee com mands others what he cannot doe himselfe. Hee hath never a sword. Sirrah, thou man of presumption, that hast profan&#x27;d our incomparable valour, redeeme thy forfeited life of our mercie with some gold or silver pictures out of thy silken pockets. He lookes terribly Dobson. Call upon Sack. Meere Country Animals. Wee have valour to steale a May-pole, or rob the Parso s Hens-nest: but to kill a man as far from our intents or daring, as pittie from an Executioner, or bashfulnesse from a Jingo. With all our hearts: wee had rather any body should have them, then the hangman both them and us for them. Come Dobson, we have got the money yet; and a little sack will animate us againe. My soul&#x27;s under foot; I must raise it: But if ever I quarrell againe by Moone shine unlesse I am drunk, valour forsake me. &#x27;Tis a fine Chamber, it shines like a Gold-smiths shop in Cheap-side. Yes; for we ridd like mad men. No Dobson, they be of all tribes. Some are Iewes, and some are Gentiles. Some are noble both in blood and condition, and some in neither. Some studie Arts of use; some of delight; some conceive well, but talke wickedly. Some weare Plush that others pay for. Some love Sacke, and some love wenches. Few will dye of the Aldermans Gout, and some will never bee cur&#x27;d of their owne— Tut man; I liv&#x27;d in London before now; was servant to one that converst much with the wits, and kept an Academie of Musicke. I tell thee Dobson, I have pickt up mo e learning among the crummes of a broken bisket, after one of their meetings at a Taverne, then would make twenty Ballad-makers commence Po tasters; and with the over-plus indoctrinate ten Iustices Clerks, and an under-Sheriffe. And make a legg. This Vintener sure hath had very mannerly breeding. he came not from the Bankes side, where the surly Watermen live. Mr. Littleword and Mris Tongall! very good. Sure this woman had a French-man to her Father. Mistris, you said I should have your daughter. Who then shall my Master have? A right woman: so her tongue goe, no mat ter what she sayes. Else we lose both our share of the Sack, and our hopes of her daughter Iinny. &#x27;Tis for us, Dobson. You are welcome Sir, and I pray be gone. I tell you Constable, there are none heere, but can breake the peace, as well as you that are a Con stable. But they may suffer us, and that&#x27;s a word for hanging. Well, &#x27;tis a rare thing to bee a Justice. Were I but swel&#x27;d with a little authoritie, mee thinks I could crye, you Rogue, you Rascall, or you Constable, most gravely. Then if I fit you not for a Justice. Can you write and read young gentleman? Then you shall be my Worships Clerke. And so I assume authoritie. (hem, hem) (hem, hem,) what are you sirrah? You were the Constable; but your dignitie is justly taken from you, and conferr&#x27;d upon honest Iohn Dobson. Thou hast beene a raskall sirrah, a corrupt Con stable. Thou hast converst with deeds of darknesse, ha ting the all light, but wenches and a lanthorne: which a married Constable can never want at midnight. Thou hast watch&#x27;t little and pray&#x27;d lesse: thou shalt therefore fast thy selfe into amendement. And so I commit thee with thy guard of Bill-men to the mercie of a Shrove-Tuesdayes rebellion. (hem, hem.) N w Sir, what are you? Oh, I know you sirrah. You write true Latine, not to be understood by the Wor shipfull bench. Make his Mittimus and send him to schoole; (hem, hem,) what are you Sir? You are a Malki of mock-Gentry; made up of silke and vaine-glory. You begin to grow out of fa shion. I will therefore have you stitcht into a case of com plements, and commended to some thrifty house-keeping Ladie in the Countrey, where you may save her Ladiship the charge of a Taylour; and if you can read, serve for a house-Chaplaine in rainy weather. (hem, hem.) Bring that Countrey Gentleman before me. You are a Countrey Gentleman; a Gallant out of fashion all the yeare; but especially at Se sions, and upon high Holi-dayes, when your sattin doublet drawes away the eyes of the simple, aud distracts their devoti on almost into Idolatry: giving it more worship then the Heraulds ever gave your Auncestors. You intend as I understand to come forth in a new Edition: and whe the Mercers and Tailors have new printed you; and that some gentile wit may be read in your Character to marry a Wife in the City. You shall then have a passe sealed up on her by a Courtier; be ship&#x27;t at Cuckolds haven, and so transported into Cornwall. (Hem, hem.) Now Sir, what are you? never a wise word to answere a Ju stice? There is a tempest in her tongue able to shake the foundation of the wisest Justice-ship. Madame, I have heard complaints of your La diship, that you rise early every morning before noone, and are readie before night, unlesse there bee a maske at Court. You are likewise a great frequenter of the balls, meerely out of charitie to the poore Fidlers. Stop your eares Gentlewomen, here&#x27;s a foule businesse towards. But you may tell the man, the time and place, though not the manner. Give it me; I&#x27;le keepe it. Many a Justi in the City keepes children are none of his owne. (Drinks.) And now for you Gentlemen. You are of the wits that give Poets Sack and old Bevers, and vent their conceits in Tavernes for your owne. How&#x27;s that! a Justice take bribes! the exam ple is too frequent, and I will have it mended. Bribes have purchas&#x27;d more then the whole race of A dermen since Luds time. &#x27;Tis time indeed, when I will not take bribes to be a Justice Quondam.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 542</div><div class="body">The Queen is greeted on her arrival by the Genius of the House. The house is transformed into the semblance of a ship, and a mock sea-fight ensues.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

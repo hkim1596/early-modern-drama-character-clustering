@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BRUT in Julius Caesar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> ›
+  <span>BRUT</span>
+</nav>
+
+<h1>BRUT</h1>
+<p class="lede">in <em>Julius Caesar</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1203</td></tr>
+<tr><th>Characters</th><td>6470</td></tr>
+<tr><th>BritDrama no.</th><td>1198</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 29 (<em>brutus, did, rome, antonius, anthony, cleopatra…</em>). Matches are highlighted.</p>
+<div class="excerpt">ſtrike, redreſſe. Am I entreated To ſpeake, and ſtrike? O <mark>Rome</mark>, I make thee promiſe, If the redreſſe will follow, thou receiueſt Thy full Petition at the hand of <mark>Brutus</mark>. &#x27;Tis good. Go to the Gate, ſome body knocks: Since Caſſius firſt <mark>did</mark> whet me againſt Caeſar, I haue not ſlept. Betweene the acting of a dreadfull thing ▪ And the</div>
+<div class="excerpt">morrow (Boy) the firſt of March? Looke in the Calender, and bring me word. The exhalations, whizzing in the ayre, Giue ſo much light, that I may reade by them. <mark>Brutus</mark> thou ſleep&#x27;ſt; awake, and ſee thy ſelfe: Shall <mark>Rome</mark>, &amp;c. ſpeake, ſtrike, redreſſe. <mark>Brutus</mark>, thou ſleep&#x27;ſt: awake. Such inſtigations haue beene often dropt, Where</div>
+<div class="excerpt">inſtigations haue beene often dropt, Where I haue tooke them vp: Shall <mark>Rome</mark>, &amp;c. Thus muſt I piece it out: Shall <mark>Rome</mark> ſtand vnder one mans awe? What <mark>Rome</mark>? My Anceſtors <mark>did</mark> from the ſtreetes of <mark>Rome</mark> The Tarquin driue, when he was call&#x27;d a King. Speake, ſtrike, redreſſe. Am I entreated To ſpeake, and ſtrike? O <mark>Rome</mark>, I make thee promiſe,</div>
+<div class="excerpt">turnes his Face: But when he once attaines the vpmoſt Round, He then vnto the Ladder turnes his Backe, Lookes in the Clouds, ſcorning the baſe degrees By which he <mark>did</mark> aſcend: ſo Caeſar may; Then leaſt he may, preuent. And ſince the Quarrell Will beare no colour, for the thing he is, Faſhion it thus; that what he is, augmented,</div>
+<div class="excerpt">as men doubt; but do not ſtaine The euen vertue of our Enterprize, Nor th&#x27; inſuppreſſiue Mettle of our Spirits, To thinke, that or our Cauſe, or our Performance <mark>Did</mark> neede an Oath. When euery drop of blood That euery Roman beares, and Nobly beares Is guilty of a ſeuerall Baſtordie, If he do breake the ſmalleſt Particle Of any</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Not I. I am not Gameſom: I do lacke ſome part Of that quicke Spirit that is in Antony : Let me not hinder Caſſius your deſires; Ile leaue you. &#x27;Tis very like he hath the Falling ſickneſſe. What ſaid he, when he came vnto himſelfe? And after that, he came thus ſad away. What a blunt fellow is this growne to be? He was quick Mettle, when he went to Schoole. And ſo it is: For this time I will leaue you: To morrow, if you pleaſe to ſpeake with me, I will come home to you or if you will, Come home to me, and I will wait for you. What Lucius, hoe? I cannot, by the progreſſe of the Starres, Giue gueſſe how neere to day— Lucius, I ſay? I would it were my fault to ſleepe ſo ſoundly. When Lucius, when? awake, I ſay: what Lucius ? Get me a Tapor in my Study, Lucius: When it is lighted, come and call me here. It muſt be by his death: and for my part, I know no perſonall cauſe, to ſpurne at him, But for the generall. He would be crown&#x27;d: How that might change his nature, there&#x27;s the queſtion? It is the bright day, that brings forth the Adder, And that craues warie walking: Crowne him that, And then I graunt we put a Sting in him, That at his will he may doe danger with. Th&#x27; abuſe of Greatneſſe, is, when it dis-ioynes Remorſe from Power: And to ſpeake truth of Caeſar, I haue not knowne, when his Affections ſway&#x27;d More then his Reaſon. But &#x27;tis a common proofe, That Lowlyneſſe is young Ambitions Ladder, Whereto the Climber vpward turnes his Face: But when he once attaines the vpmoſt Round, He then vnto the Ladder turnes his Backe, Lookes in the Clouds, ſcorning the baſe degrees By which he did aſcend: ſo Caeſar may; Then leaſt he may, preuent. And ſince the Quarrell Will beare no colour, for the thing he is, Faſhion it thus; that what he is, augmented, Would runne to theſe, and theſe extremities: And therefore thinke him as a Serpents egge, Which hatch&#x27;d, would as his kinde grow miſchieuous; And kill him in the ſhell. Get you to Bed againe, it is not day: Is not to morrow (Boy) the firſt of March? Looke in the Calender, and bring me word. The exhalations, whizzing in the ayre, Giue ſo much light, that I may reade by them. Brutus thou ſleep&#x27;ſt; awake, and ſee thy ſelfe: Shall Rome, &amp;c. ſpeake, ſtrike, redreſſe. Brutus, thou ſleep&#x27;ſt: awake. Such inſtigations haue beene often dropt, Where I haue tooke them vp: Shall Rome, &amp;c. Thus muſt I piece it out: Shall Rome ſtand vnder one mans awe? What Rome? My Anceſtors did from the ſtreetes of Rome The Tarquin driue, when he was call&#x27;d a King. Speake, ſtrike, redreſſe. Am I entreated To ſpeake, and ſtrike? O Rome, I make thee promiſe, If the redreſſe will follow, thou receiueſt Thy full Petition at the hand of Brutus. &#x27;Tis good. Go to the Gate, ſome body knocks: Since Caſſius firſt did whet me againſt Caeſar, I haue not ſlept. Betweene the acting of a dreadfull thing ▪ And the firſt motion, all the Interim is Like a Phantaſma, or a hideous Dreame: The Genius, and the mortall Inſtruments Are then in councell; and the ſtate of a man, Like to a little Kingdome, ſuffers then The nature of an Inſurrection. Is he alone? Doe you know them? Let &#x27;em enter: They are the Faction. O Conſpiracie, Sham&#x27;ſt thou to ſhew thy dang&#x27;rous Brow by Night, When euills are moſt free? O then, by day Where wilt thou finde a Cauerne darke enough, To maske thy monſtrous Viſage? Seek none Conſpiracie, Hide it in Smiles, and Affabilitie: For if thou path thy natiue ſemblance on, Not Erebus it ſelfe were dimme enough, To hide thee from preuention. I haue beene vp this howre, awake all Night: Know I theſe men, that come along with you? He is welcome hither. He is welcome too. They are all welcome. What watchfull Cares doe interpoſe themſelues Betwixt your Eyes, and Night? No, not an Oath: if not the Face of men, The ſufferance of our Soules, the times Abuſe; If theſe be Motiues weake, breake off betimes, And euery man hence, to his idle bed: So let high-ſighted-Tyranny range on, Till each man drop by Lottery. But if theſe (As I am ſure they do) beare fire enough To kindle Cowards, and to ſteele with valour The melting Spirits of women. Then Countrymen, What neede we any ſpurre, but our owne cauſe, To pricke vs to redreſſe? What other Bond, Then ſecret Romans, that haue ſpoke the word, And will not palter? And what other Oath, Then Honeſty to Honeſty ingag&#x27;d, That this ſhall be, or we will fall for it. Sweare Prieſts and Cowards, and men Cautelous Old feeble Carrions, and ſuch ſuffering Soules That welcome wrongs: Vnto bad cauſes, ſweare Such Creatures as men doubt; but do not ſtaine The euen vertue of our Enterprize, Nor th&#x27; inſuppreſſiue Mettle of our Spirits, To thinke, that or our Cauſe, or our Performance Did neede an Oath. When euery drop of blood That euery Roman beares, and Nobly beares Is guilty of a ſeuerall Baſtordie, If he do breake the ſmalleſt Particle Of any promiſe that hath paſt from him. Caſſius, be content, Speake your greefes ſoftly, I do know you well. Before the eyes of both our Armies heere (Which ſhould perceiue nothing but Loue from vs) Let vs not wrangle. Bid them moue away: Then in my Tent Caſſius enlarge your Greefes, And I will giue you Audience. Peace, peace, you durſt not ſo haue tempted him. Ile know his humor, when he knowes his time: What ſhould the Warres do with theſe ligging Fooles? Companion, hence. I ſhould not vrge thy duty paſt thy might, I know yong bloods looke for a time of reſt. Well: then I ſhall ſee thee againe? Why I will ſee thee at Philippi then: Now I haue taken heart, thou vaniſheſt. Ill Spirit, I would hold more talke with thee. Boy, Lucius, Varrus, Claudio, Sirs: Awake: Claudio. Caeſar, thou canſt not dye by Traitors hands, Vnleſſe thou bring&#x27;ſt them with thee. Come poore remaines of friends, reſt on this Rocke. Sit thee downe, Clitus: ſlaying is the word, It is a deed in faſhion. Hearke thee, Clitus. Peace then, no words. Hearke thee, Dardanius. Come hither, good Ʋ olumnius, liſt a word. Why this, Volumnius: The Ghoſt of Caeſar hath appear&#x27;d to me Two ſeuerall times by Night: at Sardis, once; And this laſt Night, here in Philippi fields: I know my houre is come. Nay, I am ſure it is, Volumnius. Thou ſeeſt the World, Volumnius, how it goes, Our Enemies haue beat vs to the Pit: It is more worthy, to leape in our ſelues, Then tarry till they puſh vs. Good Volumnius, Thou know&#x27;ſt, that we two went to Schoole together: Euen for that our loue of old, I prethee Hold thou my Sword Hilts, whileſt I runne on it.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TAST in 514 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>TAST</span>
+</nav>
+
+<h1>TAST</h1>
+<p class="lede">in <em>514</em> — [173]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>492</td></tr>
+<tr><th>Characters</th><td>2657</td></tr>
+<tr><th>BritDrama no.</th><td>514</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">And Choller shall not want his Brawne whilst Cookery and Winter feasts last. I <mark>must</mark> in and looke to my roste, of which at dinner you shall most plentifully taste. Exit. Now my icen iate murderer, what say you to a dish of gluttony will bread the</div>
+<div class="excerpt">profession. Good brother Choller he pacified. Nay brother Choller, thou art so crosse. Excellent amorist. He e&#x27;s to thee Melancholy. Very fine Law now: Melancholy hath been some neglected Courtier: hee&#x27;s perfect in she-flattery. If he mistake me for the idoll of his passion, Ile abuse him. 〈◊〉 and spare not. Bite not the cherry stones</div>
+<div class="excerpt">spare not. Bite not the cherry stones and eate, I care not. As for my gumms you &#x27;l find Sweeter here. I have no rotten teeth behind. I know it. &#x27;Tis my left. Take beed that I fo te not you. My cinque passe cleanly! A cooke defyes it. Some Souldier perhaps that want&#x27;s his Pay. &#x27;Tis some Chamber-maide sick of a Midwifes timpany.</div>
+<div class="excerpt">cooke defyes it. Some Souldier perhaps that want&#x27;s his Pay. &#x27;Tis some Chamber-maide sick of a Midwifes timpany. &#x27;Tis a Lovers that: or some misers that dranke small beere in the Dog-dayes at his own charges. Perhaps &#x27;tis a Fencers, or some Shopkeepers, whose wife sells underhand by retayle. Is it thereabouts? Ile play the state</div>
+<div class="excerpt">could shoot the poyson of a asiliske From my inflam&#x27;d eyes ▪ or infect the ayre With my last breath to kill her. No: Fear&#x27;s an ill orator; hee&#x27;l be out. I have been the most notorious theef, that ever rob&#x27;d by privilege of his office. I have converted more butter into kitchin-stuffe, then would have victualled a flemish garrison.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">And Choller shall not want his Brawne whilst Cookery and Winter feasts last. I must in and looke to my roste, of which at dinner you shall most plentifully taste. Exit. Now my icen iate murderer, what say you to a dish of gluttony will bread the gout in a Lord before a begger can break his fast with it? Are not we cookes good instruments? who together with an Hospitall of sinne cause diseases faster then you can cure them? The other health my boyes. Indeed health agrees not with your profession. Good brother Choller he pacified. Nay brother Choller, thou art so crosse. Excellent amorist. He e&#x27;s to thee Melancholy. Very fine Law now: Melancholy hath been some neglected Courtier: hee&#x27;s perfect in she-flattery. If he mistake me for the idoll of his passion, Ile abuse him. 〈◊〉 and spare not. Bite not the cherry stones and eate, I care not. As for my gumms you &#x27;l find Sweeter here. I have no rotten teeth behind. I know it. &#x27;Tis my left. Take beed that I fo te not you. My cinque passe cleanly! A cooke defyes it. Some Souldier perhaps that want&#x27;s his Pay. &#x27;Tis some Chamber-maide sick of a Midwifes timpany. &#x27;Tis a Lovers that: or some misers that dranke small beere in the Dog-dayes at his own charges. Perhaps &#x27;tis a Fencers, or some Shopkeepers, whose wife sells underhand by retayle. Is it thereabouts? Ile play the state knave, and informe presently. Exit. Please you, Ile carry the Calfe into my Slaugh terhouse. But I feare hee&#x27;l hardly be drest for your Lady ships too h: he hath bled too much to be sweet flesh. Sick Sir farewell. By that time you are dead ▪ Will have made you a cawdle. Exit. I sure have dream&#x27;t; all past was but illusion. Hould out ye bloodlesse Organes untill I Have rayl&#x27;d upon this strumpet, then I&#x27;le dye. How my distraction swells my tongue with curses? That I could shoot the poyson of a asiliske From my inflam&#x27;d eyes ▪ or infect the ayre With my last breath to kill her. No: Fear&#x27;s an ill orator; hee&#x27;l be out. I have been the most notorious theef, that ever rob&#x27;d by privilege of his office. I have converted more butter into kitchin-stuffe, then would have victualled a flemish garrison. I have cheated butchers; gone on their scores, and payd them with hornes: helping to undo my Lady with the greatnesse of mine own credit. I have coney-catcht ma ny a poulterers wife, and she hath pluckt my feathers: what I got by the back I spent on the belly. But now short commons serve, licking my fingers and the halfe-cold dripping pan. Since my Ladyes decay I am degra ded from a cooke, and I feare the divell himself will en tertaine me but for one of his black guard; and he shall be sure to have his roast burnt.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

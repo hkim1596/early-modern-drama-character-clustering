@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PO in Darius · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> ›
+  <span>PO</span>
+</nav>
+
+<h1>PO</h1>
+<p class="lede">in <em>Darius</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>797</td></tr>
+<tr><th>Characters</th><td>4307</td></tr>
+<tr><th>BritDrama no.</th><td>1404</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 25 (<em>did, whil, death, might, minde, fortune…</em>). Matches are highlighted.</p>
+<div class="excerpt">Majeſtie triumphing o&#x27;re miſhap, Hee ſeem&#x27;d to bragge both <mark>fortune</mark> and the fates, And to ſo baſe a ſtate as firſt not borne, Then whilſt his bloode aboundantly <mark>did</mark> fall, He burſted forth thoſe words in fortunes ſcorne, As one whoſe courage nothing could appall: You gaze to ſee (and have good cauſe wherefore) A man no man,</div>
+<div class="excerpt"><mark>world</mark> admires. Now none hath <mark>pow</mark>&#x27;r his pleaſure to controule, But if he uſe them well whom he retaines, It will procure contentment to my ſoule, And make him famous whilſt the <mark>world</mark> remaines. When breath abandon&#x27;d hath this brittle clay, Then cauſe ſome friend defray my funerall coſt, That churliſh Charon force me not to ſtray Where</div>
+<div class="excerpt">Darius be redeem&#x27;d againe. Now he enjoyes a libertie at laſt; But ranſom&#x27;d is by offering up his breath. The boiling ardor of the riſing Sunne (All moiſture gone) <mark>did</mark> breede ſo great a drouth, That from the way I had a little runne, To finde ſome fountaine to refreſh my mouth; There, by the borders of a ryſing brooke, Which ſhadow&#x27;d</div>
+<div class="excerpt">ſtreames: When (loe) I ſaw (a lamentable ſight) Two wounded horſes draw a bloody Coach, Which clad with skinnes, ſhew horrour at the height; And it to ſpie when as I <mark>did</mark> approach, One was within, who could not long time ſcape, The fatall paſſage of th&#x27;infernall gates; Yet Majeſtie triumphing o&#x27;re miſhap, Hee ſeem&#x27;d to bragge both</div>
+<div class="excerpt">That this laſt comfort doth forgoe my end. I ſpeake to one who can conceave my voice, And not in vaine my dying ſpeeches ſpend; I am, but how? in name, and not in <mark>pow</mark>&#x27;r, That wretched Darius (which I ſhould ſuppreſſe) Once happie (as was thought) but at this hower, A lively patterne of extreame diſtreſſe. Then having paus&#x27;d (he</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Sir, now your comming cannot doe him good. Yet can not Darius be redeem&#x27;d againe. Now he enjoyes a libertie at laſt; But ranſom&#x27;d is by offering up his breath. The boiling ardor of the riſing Sunne (All moiſture gone) did breede ſo great a drouth, That from the way I had a little runne, To finde ſome fountaine to refreſh my mouth; There, by the borders of a ryſing brooke, Which ſhadow&#x27;d was from Titans ryſing beames, From liquid cryſtalls I a tribute tooke, Which ſeem&#x27;d to murmure, that I forc&#x27;d their ſtreames: When (loe) I ſaw (a lamentable ſight) Two wounded horſes draw a bloody Coach, Which clad with skinnes, ſhew horrour at the height; And it to ſpie when as I did approach, One was within, who could not long time ſcape, The fatall paſſage of th&#x27;infernall gates; Yet Majeſtie triumphing o&#x27;re miſhap, Hee ſeem&#x27;d to bragge both fortune and the fates, And to ſo baſe a ſtate as firſt not borne, Then whilſt his bloode aboundantly did fall, He burſted forth thoſe words in fortunes ſcorne, As one whoſe courage nothing could appall: You gaze to ſee (and have good cauſe wherefore) A man no man, a king no king: what change? Now leſſe then nought who once was both, and more; This would ſeeme wond&#x27;rous; but no ſtate is ſtrange; And yet a midſt my evils I muſt rejoyce, That this laſt comfort doth forgoe my end. I ſpeake to one who can conceave my voice, And not in vaine my dying ſpeeches ſpend; I am, but how? in name, and not in pow&#x27;r, That wretched Darius (which I ſhould ſuppreſſe) Once happie (as was thought) but at this hower, A lively patterne of extreame diſtreſſe. Then having paus&#x27;d (he ſaid) my griefe is great, Tell Alexander (as the world may ſpie) That though of me he never had but hate, Yet am I forc&#x27;d farre in his debt to die: The favour paſt extended to my Queene, And that poore remnant my ſurviving reſt, (When weighing well what I to him have beene) I wiſh continu&#x27;d, but can ſcarſe requeſt; They to his foe belong, and yet he ſtrives To have them honour&#x27;d now, as in times paſt; But thoſe who held of me both ſtates, and lives, Of ſtate and life have me depriv&#x27;d at laſt. Entreat him too that unreveng&#x27;d below I wander not as hapleſſe in all things: Let men his juſtice, and their treaſon know; This (as a common cauſe) doth touch all kings. Beſide the honour which he ſhall acquire In plaguing them who have betrai&#x27;d my truſt, His magnanimity men ſhall admire, And feare to grieve him whom they finde ſo juſt. &quot;As watrie rounds which riſe and reele in raine, &quot;Do ſwell, and flote, yet when they breake (though bright) &quot;Laſt, leave (when fall&#x27;n) no token ſave a ſtayne, Pompe quickly thus both courts and ſcornes the ſight: And ſince my glaſſe is runne, my glory gone, I dead unto the world, the world to me, I wiſh (ſave his) that th&#x27;earth adore no throne: For, from his raigne what ſubject would be free? Then drowping downe, faint, bloodleſſe, and halfe dead, He prai&#x27;d me for ſome water that ranne by, (A ſmall requeſt by ſuch a monarch made) Which when that he had got: yet, eare I die This croſſe muſt come (ſaid he) to kill me quite; Though Nations once to mee as Soveraigne ſought, I have not now the pow&#x27;r but to requite This little benefit, that thou haſt brought: But Alexander ſhall reward thee well, And him the Heavens, ſtill yeelding his deſires, Since that his foes (though envie burſt) muſt tell That courteſie which all the world admires. Now none hath pow&#x27;r his pleaſure to controule, But if he uſe them well whom he retaines, It will procure contentment to my ſoule, And make him famous whilſt the world remaines. When breath abandon&#x27;d hath this brittle clay, Then cauſe ſome friend defray my funerall coſt, That churliſh Charon force me not to ſtray Where darkeneſſe dwells, an unregarded Ghoſt. Laſt, give my corpes to her who brought it forth, Who may it with my Anceſtours entombe, And ſince ſhe lov&#x27;d me much, though little worth, May waile this burden which once grac&#x27;d her wombe; And to that Prince whoſe ſtate I wiſh to ſtand, In ſigne of love which all my thoughts doe ſend, My ſoule gives him my heart, it thee my hand: Thus though I liv&#x27;d his foe, I die his friend. I had but held his hand a little ſpace, When dying like a Torch whoſe waxe is ſpent, In ſpite of payne, even with a princely grace, His hands ſtill ſeem&#x27;d directing as he went.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Darius</div><div class="body">Vanquished by Alexander, Darius fears for his mother, wife, and children, who have been taken captive. He offers a ransom for them, and Parmenio encourages Alexander to accept (the money can be used to finance future campaigns), but Alexander refuses. The women assume that Darius is dead and ask leave to bury him. Alexander gives them his personal assurance that Darius is alive and that they v.ill be treated honourably. Bessus and Narbazanes plan to betray Darius to Alexander in the hope of getting kingdoms for themselves. Darius learns that his wife has died, but is impressed by Alexander&#x27;s honourable treatment of her. Narbazanes encourages him to resign the crown to Bessus, while others advise him not to trust the two traitors, and to rely on his mercenary troops if necessary. Darius meditates on tl1e inevitable fall of princes and accepts the coming of death. The traitors spread a rumour that he has committed suicide, then take him prisoner and offer him to Alexander. Darius dies with a speech honouring Alexander for his magnanimity in victory. Alexander vows to hunt down and dismember the traitors.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> page.
+</div>
+</div></body></html>

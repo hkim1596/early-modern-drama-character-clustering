@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DA in The Love of King David and Fair Bathsheba · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_19.html">Cluster 19 — 19: dauids, israel, dauid</a> ›
+  <span>DA</span>
+</nav>
+
+<h1>DA</h1>
+<p class="lede">in <em>The Love of King David and Fair Bathsheba</em> — Peele, George</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1599</td></tr>
+<tr><th>Words</th><td>1783</td></tr>
+<tr><th>Characters</th><td>9679</td></tr>
+<tr><th>BritDrama no.</th><td>870</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 19 (<em>dauids, israel, dauid, vrias, ioab, absolon…</em>). Matches are highlighted.</p>
+<div class="excerpt">flowring tops, Droope, drowne, and drench in Hebrons fearefull streames. The babe must die that was to <mark>Dauid</mark> borne, His mothers sin his kingly fathers scorne. Yea <mark>Dauids</mark> <mark>heart</mark> will not be comforted, What murmure ye the seruants of the King, What tidings telleth Cusay to the King? Say Cusay, liues the child, or is he dead? <mark>Vrias</mark></div>
+<div class="excerpt">seruants of the King, What tidings telleth Cusay to the King? Say Cusay, liues the child, or is he dead? <mark>Vrias</mark> wife saiest thou? The child is dead, then ceaseth <mark>Dauids</mark> shame, Fetch me to eat, and giue me Wine to drinke, Water to wash, and Oyle to cleere my lookes, Bring downe your Shalmes, your Cymbals, and your Pipes, Let <mark>Dauids</mark></div>
+<div class="excerpt"><mark>Dauids</mark> shame, Fetch me to eat, and giue me Wine to drinke, Water to wash, and Oyle to cleere my lookes, Bring downe your Shalmes, your Cymbals, and your Pipes, Let <mark>Dauids</mark> Harpe and Lute, his hand and voice, Giue laud to him that loueth <mark>Israel</mark>, And sing his praise, that shendeth <mark>Dauids</mark> fame, That put away his sinne from out his sight,</div>
+<div class="excerpt">force must <mark>Dauid</mark> goe, But neuer may he come where <mark>Dauid</mark> is. Faire Bersabe, sit thou, and sigh no more, And sing and play you seruants of the King, Now sleepeth <mark>Dauids</mark> sorrow with the dead, And Bersabe liueth to <mark>Israel</mark>. Harke to me Hannon, and remember well, As sure as he doth liue that kept my host, What time our young men by</div>
+<div class="excerpt">selfe, Till they returne from you some certaine newes. No Cusay no, thy presence vnto me, Will be a burthen since I tender thee, And cannot breake thy sighs for <mark>Dauids</mark> sake: But if thou turne to faire Ierusalem, And say to Absalon, as thou hast been A trusty friend vnto his fathers seat, So thou wilt be to him, and call him King,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">What tunes, what words, what looks, what wonders pierce My soule, incensed with a suddain fire, What tree, what shade, what spring, what paradise Enioyes the beautie of so faire a dame? Faite Eua plac&#x27;d in perfect happinesse, Lending her praise-notes to the liberall heauens, Strooke with the accents of Arch-angels tunes, Wrought not more pleasure to her husbands thoughts, Then this faire womans words and notes to mine. May that sweet plaine that beares her pleasant weight, Be still enameld with discoloured flowers, That precious fount, beare sand of purest gold, And for the Peble, let the siluer streames That pierce earths bowels to mainteine the sorce, Play vpon Rubies, Saphires, Chrisolites, The brims let be imbrac&#x27;d with golden curles Of mosse that sleepes with sound the waters make, For ioy to feed the fount with their recourse, Let all the grasse that beautifies her bower, Beare Manna euery morne in steed of dew, Or let the dew be sweeter far then that That hangs like chaines of pearle on Hermon hill, Or balme which trickled from old Arons beard. Cusay, come vp and serue thy lord the King. Enter Cus. Nay my faire sonne, my selfe with all my lords Will bring thee too much charge, yet some shall goe. Vrias hath a beauteous sober wife, Yet yong, and framd of tempting flesh and bloud, Then when the King hath summond thee from armes, If thou vnkindly shouldst refraine her bed, Sinne might be laid vpon Vrias soule, If Bethsabe by frailtie hurt her fame: Then goe Vrias, 〈◊〉 in her loue, Whom God hath knit to thee, tremble to lose. Well done my good Vrias, drinke thy fill, That in thy fulnesse Dauid may reioice. How iust is Iacobs God in all his workes! But must it die that Dauid loueth so? O that the mighty one of Israel Nill change his dome, and sayes the babe must die, Mourne Israel and weepe in Syon gates, Wither ye Caedar trees of Libanon, Ye sprouting Almons with your flowring tops, Droope, drowne, and drench in Hebrons fearefull streames. The babe must die that was to Dauid borne, His mothers sin his kingly fathers scorne. Yea Dauids heart will not be comforted, What murmure ye the seruants of the King, What tidings telleth Cusay to the King? Say Cusay, liues the child, or is he dead? Vrias wife saiest thou? The child is dead, then ceaseth Dauids shame, Fetch me to eat, and giue me Wine to drinke, Water to wash, and Oyle to cleere my lookes, Bring downe your Shalmes, your Cymbals, and your Pipes, Let Dauids Harpe and Lute, his hand and voice, Giue laud to him that loueth Israel, And sing his praise, that shendeth Dauids fame, That put away his sinne from out his sight, And sent his shame into the streets of Gath, Bring ye to me the mother of the babe, That I may wipe the teares from off her face, And giue her comfort with this hand of mine, And decke faire Bersabe with ornaments, That she may beare to me another sonne, That may be loued of the Lord of hosts: For where he is, of force must Dauid goe, But neuer may he come where Dauid is. Faire Bersabe, sit thou, and sigh no more, And sing and play you seruants of the King, Now sleepeth Dauids sorrow with the dead, And Bersabe liueth to Israel. Harke to me Hannon, and remember well, As sure as he doth liue that kept my host, What time our young men by the poole of Gibeon, Went forth against the strength of Isboseth, And twelue to twelue did with their weapons play, So sure art thou, and thy men of war To feele the sword of Israel this day, Because thou hast defied Iacobs God, And suffered Rabba with the Philislime To raile vpon the tribe of Beniamin. Welcome my sonnes, deeret to me you are Then is this golden crowne, or Hannons spoile. O tell me then, tell me my sonnes I say, How commeth it to passe, that Absolon Hath slaine his brother Ammon with the sword? Thou woman of Thecoa answere me, Answere me one thing I shall aske of thee, Is not the hand of Ioab in this worke? Tell me is not his finger in this fact? Sadoc high priest, preseruer of the arke, Whose sacred vertue keepes the chosen crowne, I know my God is spotlesse in his vowes, And that these haires shall greet my graue in peace: But that my sonne should wrong his tendred soule, And fight against his fathers happinesse, Turnes all my hopes into despaire of him, And that despaire, feeds all my veines with greefe. Me thinkes the voice of Ithay fils mine eares. Then gentle Ithay be thou still with vs, A ioy to Dauid, and a grace to Israel. Goe Sadoc now, and beare the arke of God Into the great Ierusalem againe, If I find fauour in his gratious eyes, Then will he lay his hand vpon my heart Yet once againe before I visit death, Giuing it strength and vertue to mine eies, To tast the comforts, and behold the forme Of his faire arke, and holy tabernacle, But if he say my wonted loue is worne, And I haue no delight in Dauid now, Here lie I armed with an humble heart, T imbrace the paines that anger shall impose, And kisse the sword my lord shall kill me with, Then Sadoc take Ahimaas thy sonne, With Ionathan sonne to Abiathar, And in these fields will I repose my selfe, Till they returne from you some certaine newes. No Cusay no, thy presence vnto me, Will be a burthen since I tender thee, And cannot breake thy sighs for Dauids sake: But if thou turne to faire Ierusalem, And say to Absalon, as thou hast been A trusty friend vnto his fathers seat, So thou wilt be to him, and call him King, Achitophels counsell may be brought to naught. Then hauing Sadoc and Abiathar, All three may learne the secrets of my sonne, Sending the message by Ahimaas, And friendly Ionathan, who both are there, Then rise, referring the successe to heauen. Cusay I rise, though with vnweldie bones, I carrie armes against my Absalon. Exeunt. Why medleth thus the son of Zeruia To interrupt the action of our God? Semei vseth me with this reproch, Because the Lord hath sent him to reproue The sinnes of Dauid, printed in his browes, With bloud that blusheth for his conscience guilt, Who dares then aske him why he curseth me? I am not desperate Semei like thy selfe, But trust vnto the couenant of my God, Founded on mercie with repentance built, And finisht with the glorie of my soule. Welcome Ahimaas and Ionathan, What newes sends Cusay to thy lord the King. What seewes them best, then that will Dauid doe, But now my lords and captaines heare his voice That neuer yet pierst pittious heauen in vaine, Then let it not slip lightly through your eares, For my sake spare the young man Absalon. Ioab thy selfe didst once vse friendly words To reconcile my heart incenst to him, If then thy loue be to thy kinsman sound, And thou wilt proue a perfit Israelite, Friend him with deeds, and touch no haire of him, Not that fair haire with which the wanton winds Delight to play, and loues to make 〈◊〉 curle, Wherein the Nightingales would build their nests, And make sweet bowers in euery golden tresse, To sing their louer euery night asleepe. O spoile not Ioab, Ioues faire ornaments, Which he hath sent to solace Dauids soule. The best ye see (my lords) are swift to sinne, To sinne our feet are washt with milke of Roes, And dried againe with coales of lightening. O Lord thou seest the prowdest sinnes, poore slaue, And with his bridle, pulst him to the graue, For my sake then spare louely Absalon. Faire Bersabe, thou mightst increase the strength, Of these thy arguments drawne from my skill, By vrging thy sweet sight to my conceits, Whose vertue euer serud for sacred baulme To cheere my pinings past all earthly ioies, But Bethsabe, the daughter of the highest, Whose beautie builds the towers of Israel, Shee that in chaines of pearle and vnicorne, Leads at her traine the ancient golden world, The world that Adam held in Paradise, Whose breath refineth all infectious aires, And makes the meddowes smile at her repaire. Shee, Shee my dearest Bethsabe, Faire peace, the goddesse of our graces here, Is fled the streets of faire Ierusalem, The fields of Israel, and the heart of Dauid, Leading my comforts in her golden chaines, Linckt to the life and soule of Absalon. Tell me my Salomon, wilt thou imbrace Thy fathers precepts graued in thy heart, And satisfie my zeale to thy renowne, With practise of such sacred principles As shall concerne the state of Israel? Wade not too farre my boy in waues too deepe, The feeble eyes of our aspiring thoughts Behold things present, and record things past: But things to come, exceed our humane reach, And are not painted yet in angels eyes: For those, submit thy sence, and say, Thou power That now art framing of the future world, Knowest all to come, not by the course of heauen, By fraile coniectures of inferiour signes, By monstrous flouds, by flights and flockes of birds, By bowels of a sacrificed beast; Or by the figures of some hidden art: But by a true and naturall presage, Laying the ground and perfect architect Of all our actions now before thine eyes, From Adam to the end of Adams seed, O heauen protect my weakenesse with thy strength, So looke on me that I may view thy face, And see these secrets written in thy browes. O sun come dart thy raies vpon my moone, That now mine eyes eclipsed to the earth, May brightly be refin&#x27;d and shine to heauen. Transforme me from this flesh, that I may liue Before my death, regenerate with thee. O thou great God, rauish my earthly sprite, That for the time a more then humane skill May feed the Organons of all my sence, That when I thinke, thy thoughts may be my guide, And when I speake, I may be made by choice The perfect eccho of thy heauenly voice. Thus say my sonne, and thou shalt learne them all. He is a good man, and good tidings brings. Tell me Ahimaas, liues my Absalon?</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_19.html">Cluster 19 — 19: dauids, israel, dauid</a> page.
+</div>
+</div></body></html>

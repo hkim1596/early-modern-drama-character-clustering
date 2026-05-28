@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RUFF in The Fleer · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>RUFF</span>
+</nav>
+
+<h1>RUFF</h1>
+<p class="lede">in <em>The Fleer</em> — Sharpham, Edward</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>754</td></tr>
+<tr><th>Characters</th><td>3964</td></tr>
+<tr><th>BritDrama no.</th><td>1495</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">thinke thou feldome faist thy prayers, since thou hast almost forgot thy Pater-noster. I <mark>did</mark> pray oftner when I was an Englishman, but I haue not praid often, I <mark>must</mark> confesse since I was a Brittaine: but doost <mark>heare</mark> Fleire? canst tell me if an Englishman were in debt, whether a Brittaine <mark>must</mark> pay it or no? I&#x27;me glad of that,</div>
+<div class="excerpt">the Citti zens no more Cuckolds. Rich? Why man why? Fleire I <mark>did</mark> but to trie thee, the tide of the floud is turn&#x27;d man. For what? No, but I meane the Cittizens <mark>must</mark> cuckold the courtiers What, like your weauers shuttle? make cloath forward and backward, but how I prithe? but harke you Fleire, are you capable of a secret? Then</div>
+<div class="excerpt">Gentleman money Gratis, but I came in an excellent time. In a gossipping time, for Proserpina was newllie brought a bed of <mark>two</mark> twins. A Sergeant and a Yeoman, but shee <mark>has</mark> put them out to nurse. Faith at the Counter in Wood-street, and the slaues will sucke alreadie like little Horsleaches. Faith shee&#x27;s an vnnaturall Mother, shee</div>
+<div class="excerpt">cuckold the courtiers What, like your weauers shuttle? make cloath forward and backward, but how I prithe? but harke you Fleire, are you capable of a secret? Then I <mark>must</mark> intreat, I may trust thee. Sirra, they say your Ladies are a couple of com mon Punckes, I hope I may trust you with a secret? VVorse! why can they be worse? But</div>
+<div class="excerpt">when I doe, ile pay so due a debt without imprisonment. No. Saue you Fleire. O no, his Father&#x27;s a Iustice. What, a Coward Signior? fye, a coward? Come, come, we <mark>must</mark> needes haue you friendes, &amp; thou&#x27;st doe him some good offices. Thou shalt commend his loue to Mada ̄ Fromaga. They say the Lord Piso, hath bin a good Clyent to</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Best fortunes your attendants. Wee all of vs your seruants. Yes indeede Lady, brought to bed of a Moone-calfe. Nay you were an arrant asse. Harke you sig you were best to aske her forgiue nes on your knees, ther&#x27;s no way to get her friendship else. Good Lady will you forgiue this signeur? you see his penitent, griefe hath brought him verie low, for hees on&#x27;s knees; besides he weepes; speake signeur speake for your selfe. Come, a shall be sworne on&#x27;s owne Tobacco pipe. you shall take his oath, and Ile minister&#x27;t. Come signeur, put your hand to the pipe. Let it be your nose then good Signior in any case: Its a good soile, a whole some ayre, a pretty Towne, hand some sleight buildings, well proportioned people, verie faire women. Would you speake with any man heere? Dost meane to liue in this towne? Who art towards? Faith at Court Fleire, when wert thou there? What, I thinke thou feldome faist thy prayers, since thou hast almost forgot thy Pater-noster. I did pray oftner when I was an Englishman, but I haue not praid often, I must confesse since I was a Brittaine: but doost heare Fleire? canst tell me if an Englishman were in debt, whether a Brittaine must pay it or no? I&#x27;me glad of that, I hope some honest statute will come shortlie, and wipe out all my scores. Why they say the Courtiers shall make the Citti zens no more Cuckolds. Rich? Why man why? Fleire I did but to trie thee, the tide of the floud is turn&#x27;d man. For what? No, but I meane the Cittizens must cuckold the courtiers What, like your weauers shuttle? make cloath forward and backward, but how I prithe? but harke you Fleire, are you capable of a secret? Then I must intreat, I may trust thee. Sirra, they say your Ladies are a couple of com mon Punckes, I hope I may trust you with a secret? VVorse! why can they be worse? But hark you Fleire hark you, tis suppos&#x27;d I can tell you they are a couple of priuate Puncks. Yea, how Fleire how? VVhat a cogging fleiring Rogue is this, nothing will anger him: but doy&#x27; heare Fleire; art thou a procurer, or a knaue? for one of them I am sure thou art. One that procures meanes for procreation, vul garly cald a Pander. Nay, then thou art a Knaue too thats certaine, for there is such a simpathie between a Procurer and a knaue, as there is betwixt an Alcumist and a Begger. VVhats that? By this light now a comes neere mee too, why I am a whoremaster. Then we are enemies to the Iewes. Lady, in all the honest offices that friendship may commaund, commaund me still, but yet I haue not seene the face to which I owe so much of loue, as may iustly ar rest my affections, and when I doe, ile pay so due a debt without imprisonment. No. Saue you Fleire. O no, his Father&#x27;s a Iustice. What, a Coward Signior? fye, a coward? Come, come, we must needes haue you friendes, &amp; thou&#x27;st doe him some good offices. Thou shalt commend his loue to Mada ̄ Fromaga. They say the Lord Piso, hath bin a good Clyent to thy elder Ladie of late. What Gallants vse to come to your house? And shall wee dine with this Honorable Lord, &amp; Knight to day? Signior will you goe? Thats all one, shalt be my guest. Nay then I knowe the Iet of her complexion will draw the straw of his loue thither. True Signior, though it bee but on a Scab, but come shall we goe? And so was I too, Ile be sworne. O, I sawe a Scriuener damb&#x27;d for procuring a Gentleman money Gratis, but I came in an excellent time. In a gossipping time, for Proserpina was newllie brought a bed of two twins. A Sergeant and a Yeoman, but shee has put them out to nurse. Faith at the Counter in Wood-street, and the slaues will sucke alreadie like little Horsleaches. Faith shee&#x27;s an vnnaturall Mother, shee cares not greatlie if they neuer come home, but the deuill their Fa ther hee loues am well, heele haue am home againe ere long. O the Sergeant, the Deuill allowes him the bet ter maintenance, for hee has more to the dressing of his meate. Come lets goe, weele onely follow your directi ons.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Fleer</div><div class="body">Before the start of the action, Piso deposed Antifront, whose daughters thereupon fled from Florence. Antifront now travels in search of his missing children. He arrives in London under the alias Fleer, and meets some gentlemen. One of them, Spark, gets him a job with two of his countrywomen, a pair of Florentine courtesans working in London. Antifront is dismayed to discover that they are his missing daughters. Two sisters, Susan and Nan, are interested in Spark and his friend Ruffle, who are among the courtesans’ many clients. They dress up as boys and try to get the gentlemen to employ them as pages; Spark and Ruffle refuse, and the ‘pages’ end up working for two other clients, Sir John Havelittle and Piso junior, the son of the Florentine usurper. ‘Fleer’ wants to engineer a marriage for his daughters, selecting Havelittle and Piso as the eligible bachelors. The daughters prefer Spark and Ruffle, but are refused; taking offence, they ask Piso and Havelittle to kill the gentlemen, and suggest poison as the safest method. The plot is overheard by ‘Fleer’ and the ‘pages’. ‘Fleer’ gets himself another job looking after an apothecary’s shop, and sells Piso and Havelittle a poison which is really a sleeping potion. Spark and Ruffle dine with Piso and Havelittle and apparently die. The hosts are at once arrested on suspicion of poisoning and are committed for trial. Fleer is sent on an errand to the senior judge, who is unable to attend through illness, and sends word back for the other two judges to proceed without him. Given a ring to authenticate the message, Fleer instead uses it to get himself deputized as the third judge. He produces a letter which establishes that the guilt extends to the daughters as well as the poisoners, and all four are sentenced to death. News arrives that Piso’s father has died, making him the new Duke of Florence; but-he tells the Florentines to recall the deposed Antifront instead, and offers to make amends for his father’s treason by marrying Antifront’s elder daughter. Antifront reveals his identity and says Piso can do just 1606 that; his younger daughter will marry Havelittle. He produces the murder victims, still alive, and bestows them on Nan and Susan.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

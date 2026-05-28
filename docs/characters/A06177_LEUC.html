@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LEUC in Cupid&#x27;s Revenge · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LEUC</span>
+</nav>
+
+<h1>LEUC</h1>
+<p class="lede">in <em>Cupid&#x27;s Revenge</em> — Beaumont, FrancisFletcher, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1615</td></tr>
+<tr><th>Words</th><td>764</td></tr>
+<tr><th>Characters</th><td>3846</td></tr>
+<tr><th>BritDrama no.</th><td>1533</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">thinke mee so base to tell? These limmes of mine shall part From one another on a wracke, Ere I disclose; But thou doest vtter words That much asflict mee: you <mark>did</mark> seeme as ready Sweete Bacha as my selfe. Alas good Bacha, take one, I pray thee where thou wilt. Fare thee well mine owne good Bacha; I will make all haste. You</div>
+<div class="excerpt">meanes to ease my griefe As they <mark>did</mark> now to bring it. Pray leaue this wicked talke, You doe not knowe to what my Fathers wrong May vrge mee. They that can answere <mark>must</mark> be lesse amazde, Then I am now: you see my teares deliuer My meaning to you. You are a strumpet. I appeale to you still, and for euer, that are And cannot be other,</div>
+<div class="excerpt">The vsage I haue had, I know would make Wisedome her selfe run frantick through the streetes. And Patience quarrell with her shaddow. Sir, this sword — What? what <mark>did</mark> you tell him? <mark>Away</mark>, the whole Court calles her vertuous; for they say, she is vnlike her mother and if so she can haue no vice. Sister, how doe you. Fye, fye, Ismenus</div>
+<div class="excerpt">whisperd with mee Of some Friends death, but I will beare my selfe, To you, with all the due obedience A sonne owes to a Mother: more then this, Is not in mee, but I <mark>must</mark> leaue the rest to the Iust gods: who in their blessed time, When they haue giuen me punishment enough, For my rash sinne, will mercifully finde As vnexpected meanes</div>
+<div class="excerpt">power To worke your will on him: And I desire you To lay what traines you will for my wished death, But suffer him to finde his quiet graue In peace; Alas he neuer <mark>did</mark> you wrong, And further I beseech you pardon mee, For the ill word I gaue you, for how euer You may deserue, it became not mee To call you so, but passion vrges</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Drie thine eyes again, Ile kisse thy teares away, This is but follic, tis past all helpe. Why, I could doe thee farther wrong. I could tell the world what thou hast done. Why doest thou thinke mee so base to tell? These limmes of mine shall part From one another on a wracke, Ere I disclose; But thou doest vtter words That much asflict mee: you did seeme as ready Sweete Bacha as my selfe. Alas good Bacha, take one, I pray thee where thou wilt. Fare thee well mine owne good Bacha; I will make all haste. You doe her wrong Sir. stay here so long? If I can vrge ought from me but a truth, hell Take me. Pinch harder. Tis a truth: that takes my sleepe away, but Woud to Heauen, if it had so beene pleasde, you had Refusde him, though I had gratifide that courtesie With hauing you my selfe: But since tis thus, I doe beseech you that you will bee honest From henceforth, and not abuse his credulous Age, Which you may easily doe. As for my selfe What I can say you know alas too well Is tyde within me, here it will sit like lead, But shall offend no other, it will plucke mee Backe from my entrance into any myrth, As if a seruant came, and whisperd with mee Of some Friends death, but I will beare my selfe, To you, with all the due obedience A sonne owes to a Mother: more then this, Is not in mee, but I must leaue the rest to the Iust gods: who in their blessed time, When they haue giuen me punishment enough, For my rash sinne, will mercifully finde As vnexpected meanes to ease my griefe As they did now to bring it. Pray leaue this wicked talke, You doe not knowe to what my Fathers wrong May vrge mee. They that can answere must be lesse amazde, Then I am now: you see my teares deliuer My meaning to you. You are a strumpet. I appeale to you still, and for euer, that are And cannot be other, Madame I see tis in your power To worke your will on him: And I desire you To lay what traines you will for my wished death, But suffer him to finde his quiet graue In peace; Alas he neuer did you wrong, And further I beseech you pardon mee, For the ill word I gaue you, for how euer You may deserue, it became not mee To call you so, but passion vrges mee I know not whether my heart breake now, &amp; ease mee euer. Trust mee, so am I of my selfe too: Madame, Ile take my leaue; gods set all right. The Gods forbid it. But tis not reason directs thee thus. What is the matter! O strange carriages! Sir, As I haue hope that there is any thing To reward doing well, my vsages Which hane beene (but tis no matter what) Haue put me so farre from the thought of Greatnes, That I should welcome it like a disease That grew vpon me, and I could not cure. They are my enemies that gaue you this, And yet they call me friend, and are themselues I feare abus&#x27;d. I am weary of my life, For Gods sake take it from me: it creates More mischiefe in the State then it is worth. The vsage I haue had, I know would make Wisedome her selfe run frantick through the streetes. And Patience quarrell with her shaddow. Sir, this sword — What? what did you tell him? Away, the whole Court calles her vertuous; for they say, she is vnlike her mother and if so she can haue no vice. Sister, how doe you. Fye, fye, Ismenus for shame, mocke such an innocent soule as this. I should hate my selfe Ismenus; If I should thinke of her simplicity, Ought but extreamely well. Well speake on. Whats your busines? Why shouldst thou thinke so? Now Ismenus, what thinke you of this fellow? This was a lying knaue, a flatterer, Does not this loue still shew him so. Syr heare mee. What euer Fortune comes, I bid it welcome, My innocencie is my Armor: Gods preserue you. All that loue me depart: I thanke you, and will serue you for your loues: But I will thanke you more to suffer me To gouerne em once: more, I doe beg yee, For my sake to your houses. Thow&#x27;t bee dead by that time.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Cupid&#x27;s Revenge</div><div class="body">Leontius, King of Lycia, promises his daughter Hydaspes anything she asks for on her birthday. She wants him to ban the cult of Cupid in Lycia: the god’s naked statues are to be taken down and burnt, and Cupid-worship to be made a capital offence. Leontius agrees, persuaded that the religion is the cause of national immorality. His nephew Ismenus demurs: he will promulgate the Duke’s orders, but will himself take no hand in obeying them. As his temples are dismantled, Cupid declares vengeance on the kingdom. The Lycian royal family begins to behave with inappropriate amorousness. Hydaspes fixates on Zoilus, a deformed dwarf, and asks to be allowed to marry him; her father’s response is to have him beheaded, and she pines to death. Prince Leucippus falls for Bacha, a strumpet only interested in his wealth and power, but, questioned by his father, denies sexual misbehaviour and praises her virtue and chastity. Leontius is so impressed that he sends Leucippus away ===== PAGE 378 ===== and woos Bacha for himself, affecting youthful clothing and behaviour. Bacha becomes Queen of Lycia. When Leucippus returns to court, Bacha tries to seduce him again. He refuses to cuckold his father, and, annoyed at his refusal, she plots his death; this will leave her daughter Urania as the only heir to the throne. She makes Leontius jealous of his son’s popularity with the people and courtiers, and persuades him that Leucippus is plotting his assassination. The court parasite Timantus tells Leucippus that the King is to discuss his arrest at a council, and arranges to place him where he can eavesdrop and be forewarned of the charges. It is a ruse: Leucippus is arrested and sentenced to death, and Urania is proclaimed heir to the throne. At the execution, the citizens rise in rebellion and rescue the Prince from the scaffold. As Leontius sickens, Bacha schemes to marry Urania to a foreign prince; but she is in love with Leucippus, locates him through the good offices of Ismenus, and follows him posing as a page. Bacha engages Timantus to murder Leucippus. He finds the Prince by intercepting a letter from Ismenus; but his attack fails when Urania interposes her own body and is mortally wounded. Timantus is killed, but reveals her true identity before he dies. Ismenus brings Leucippus news that Leontius is dead. He declares that he will leave Bacha to heaven’s justice, but she stabs him. He dies, bequeathing the throne to Ismenus and enjoining him to reinstate the cult and…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

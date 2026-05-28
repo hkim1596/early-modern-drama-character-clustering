@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ANT in 184 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ANT</span>
+</nav>
+
+<h1>ANT</h1>
+<p class="lede">in <em>184</em> — [94]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1602</td></tr>
+<tr><th>Words</th><td>1256</td></tr>
+<tr><th>Characters</th><td>6963</td></tr>
+<tr><th>BritDrama no.</th><td>184</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">lights vpon our heads, That thus the world, and fortune casts vs out, As loathed obiects, ruines branded slaues. Ile follow you. Boy, pree thee stay a little. Thou hast had a good voice, if this colde marshe, Wherein we lurke, haue not corrupted it. I pree thee sing, but sirra (marke you me) Let each nore breath the <mark>heart</mark> of passion,</div>
+<div class="excerpt">Dammi vn baccio da quella bocca beata, Bassiammi, coglier l&#x27; aur a odorata Che in sua neggia in quello dolce labra. Dul clod, no man but such sweeet fauour clips. I <mark>goe</mark>, and yet my panting blood perswades me stay. Turne coward in her sight? <mark>away</mark>, <mark>away</mark>. I thinke confusion of Babell is falne vpon these louers, that they change their</div>
+<div class="excerpt">that hath no end, I may begin to playne, but pree thee sing. Wherefore? Art thou infected with misery, Sear&#x27;d with the anguish of calamitie? Art thou true sorrow, hearty griefe, canst weepe? I am not for thee if thou canst not raue, Fall flat on the ground, and thus exclaime on heauen; O trifling Nature, why enspiredst thou breath</div>
+<div class="excerpt">am not for thee if thou canst not raue, Fall flat on the ground, and thus exclaime on heauen; O trifling Nature, why enspiredst thou breath Know&#x27;st thou Mellida? Hast thou seene Mellida? Then hast thou seene the glory of her sex, The musick of Nature, the vnequall&#x27;d lustre Of vnmatched excellence, the vnited sweete Of heauens</div>
+<div class="excerpt">excellence, the vnited sweete Of heauens graces, the most adored beautie, That euer strooke amazement in the world. With my very soule. O heauen, that I should <mark>heare</mark> such blasphemie. Boy, rogue, thou liest, and Spauento dell mio core dolce Mellida, Di graua morte restor vero dolce Mellida, Celesta saluatrice sovrana Mellida</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I was neuer worse fitted since the natiuitie of my Actorshippe: I shalt be hist at, on my life now. Faith, I know not what: an Hermaphrodite; two parts in one: my true person being Antonio, son to the Duke of Genoa; though for the loue of Mellida, Pieros daughter, I take this fained presence of an Amazon, cal ling my selfe Florizell, and I know not what. I a voice to play a lady! I shall nere doe it. Alas, the flintie rocks groand at his plaints. Tell her (quoth he) that her obdurate sire Hath crackt his bosome; therewithall he wept, And thus sigh&#x27;t on. The sea is merciful; Looke how it gapes to bury all my griefe Well, thou shalt haue it, thou shalt be his toumbe: My faith in my loue liue; in thee, dy woe, Dye vnmatcht anguish, dye Antonio: With that he totterd from the reeling decke, And downe he sunke. Ladie our fashion is not curious. Most willingly: but this same court is vast, And publike to the staring multitude. Sheele not credit thee. Wilt needs haue it so? why then Antonio, Viue esperanza, in despetto dell fato. Stoppe Antonio, keepe, keepe Antonio. Here, here: let me me pursue him downe the marsh. STOP, stop Antonio, stay Antonio. Vaine breath, vaine breath, Antonio&#x27;s lost; He can not finde himselfe, not seize himselfe. Alas, this that you see, is not Antonio, His spirit houers in Piero&#x27;s Court, Hurling about his agill faculties, To apprehend the sight of Mellida: But poore, poore soule, wanting apt instruments To speake or see, stands dumbe and blinde, sad spirit, Roul&#x27;d vp in gloomie clouds as black as ayer, Through which the rustie coach of Night is drawne: Tis so, ile giue you instance that tis so. Conceipt you me. As hauing clasp&#x27;t a rose Within my palme, the rose being tane away, My hand retaines a little breath of sweete: So may mans trunke; his spirit slipt awaie, Holds still a faint perfume of his sweet ghest. Tis so; for when discursiue powers fl e out, And rome in progresse, through the bou ̄ ds of heauen, The soule it selfe gallops along with them, As chiefetaine of this winged troope of thought, Whilst the dull lodge of spirit standeth waste, Vntill the soule returne from What wast I said? O, this is naught, but speckling melancholie. I haue beene That Morpheus tender skinp Cosen germane Beare with me good Mellida: clod vpon clod thus fall. Hell is beneath; yet heauen is ouer all. Antonio? Antonio, who meanes Antonio? Where art? what art? know&#x27;st thou Antonio? Yes. No. Here. Here. I thinke I am. He is a foole that thinks he knowes himselfe. I were not worthy of Andrugio&#x27;s blood, If I denied my name&#x27;s Antonio. Blesse not the bodie with your twining armes, Which is accurst of heauen. O, what black sinne Hath bin committed by our auntient house, Whose scalding vengeance lights vpon our heads, That thus the world, and fortune casts vs out, As loathed obiects, ruines branded slaues. Ile follow you. Boy, pree thee stay a little. Thou hast had a good voice, if this colde marshe, Wherein we lurke, haue not corrupted it. I pree thee sing, but sirra (marke you me) Let each nore breath the heart of passion, The sad extracture of extreamest griefe. Make me a straine; speake, groning like a bell, That towles departing soules. Breath me a point that may inforce me weepe, To wring my hands, to breake my cursed breast, Raue, and exclaime, lie groueling on the earth, Straight start vp frantick, crying, Mellida. Sing but, Antonio hath lost Mellida, And thou shalt see mee (like a man possest) Howle out such passion, that euen this brinish marsh Will squease out teares, from out his spungy cheekes, The rocks euen groane, and Pree thee, pree thee sing: Or I shall nere ha done when I am in. Tis harder for me end, then to begin. For looke thee boy, my griefe that hath no end, I may begin to playne, but pree thee sing. Wherefore? Art thou infected with misery, Sear&#x27;d with the anguish of calamitie? Art thou true sorrow, hearty griefe, canst weepe? I am not for thee if thou canst not raue, Fall flat on the ground, and thus exclaime on heauen; O trifling Nature, why enspiredst thou breath Know&#x27;st thou Mellida? Hast thou seene Mellida? Then hast thou seene the glory of her sex, The musick of Nature, the vnequall&#x27;d lustre Of vnmatched excellence, the vnited sweete Of heauens graces, the most adored beautie, That euer strooke amazement in the world. With my very soule. O heauen, that I should heare such blasphemie. Boy, rogue, thou liest, and Spauento dell mio core dolce Mellida, Di graua morte restor vero dolce Mellida, Celesta saluatrice sovrana Mellida Del mio sperar; trofeo vero Mellida. O suamisce il cor in vn soaue baccio, Nel Cielo puo lesser belta pia chiara. Dammi vn baccio da quella bocca beata, Bassiammi, coglier l&#x27; aur a odorata Che in sua neggia in quello dolce labra. Dul clod, no man but such sweeet fauour clips. I goe, and yet my panting blood perswades me stay. Turne coward in her sight? away, away. I thinke confusion of Babell is falne vpon these louers, that they change their language, but I feare mee, my master hauing but fained the person of a woman, hath got their vnfained imperfection, and is growne double tongu&#x27;d: as for Mellida, she were no woman, if shee could not yeelde strange language. But howsoeuer, if I should sit in iudgement, tis an errour easier to be par doned by the auditors, then excused by the authours; and yet some priuate respect may rebate the edge of the keener censure. Father, now I haue an antidote, Gainst all the poyson that the world can breath. My Mellida, my Mellida doth blesse This bleak waste with her presence. How now boy, Why dost thou weepe? alas, where&#x27;s Mellida? Ay me, my Lord. I seize that breath. Sta ̄ d not amaz&#x27;d, great states: I rise from death, that neuer liu&#x27;d till now. Piero, keepe thy vowe, and I enioy More vnexpressed height of happinesse, Then power of thought can reach: if not, loe here There stands my toumbe, and here a pleasing stage: Most wisht spectators of my Tragedie, To this end haue I fain&#x27;d, that her faire eye, For whome I liu&#x27;d, might blesse me ere I die. Mell, Can breath depaint my vnco ̄ ceiued thoughts? Can words describe my infinite delight, Of seeing thee, my Lord Antonio? O no; conceipt, breath, passion, words be dumbe, Whil&#x27;st I instill the deawe of my sweete blisse, In the soft pressure of a melting kisse; Sic, sic iuuat ire sub vmbras. Here ends the comick crosses of true loue: Oh may the passage most succesfull proue. GEntlemen, though I remaine an armed Epilogue, I stand not as a peremptory chalenger of desert, either for him that composed the Comedy, or for vs that acted it: but a most submissiue supplyant for both. What imperfection you haue seene in vs, leaue with vs, &amp; weele amend it; what hath pleased you, take with you, &amp; cherish it. You shall not be more ready to embrace any thing co ̄ mendable, then we will endea uour to amend all things reproueable. What we are, is by your fauour. What we shall be, rests all in your applausiue incou ragements.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 184</div><div class="body">Mistress Missa is under attack from Protestants: they want to replace the Mass with a simple Lord’s Supper involving none of her magical powers. Knowledge persuades Freemouth that she is guilty of heresy and blasphemy, and he cites her before Justice. Initially Justice tries to have Freemouth himself arrested, but Knowledge informs him of a recent change in the crown’s religious policy: Protestants are no longer to be persecuted. Justice agrees to allow Freemouth to proceed against Missa, and he accuses her in Palemon’s court. She admits everything except claiming to be more powerful than God. Porphyry and Philargury undertake Missa’s defence. Porphyry denies the right of Knowledge and Freemouth, lay persons, to question ecclesiastical matters, and attempts to have the charges thrown out, or at least referred to a spiritual court; but Palemon insists that he is competent to try the case even though he is not a priest. Missa’s defence turns on the claim that the mass was ordained by Christ at the Last Supper; but Knowledge demonstrates that the scriptural passages cited contain no mention of it, and that it is not coextensive with the Lord’s Supper, which requires no vestments, can be administered by anyone rather than only a priest, and claims no power to control the weather, work magic, or save souls. 1548 Porphyry tries to argue on the principle of obedience of authority, but Knowledge retorts that authority cannot command things contrary to scripture (such as the mass). Transubstantiation is invoked and rebutted, and Knowledge argues that all sacrifices are superseded by the atonement at the crucifixion; thus the mass is unnecessary. Palemon finds against Mistress Missa. Though she deserves death, he commutes the penalty to banishment, and she goes home to her father, the Pope.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

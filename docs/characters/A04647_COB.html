@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COB in Every Man in His Humor · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>COB</span>
+</nav>
+
+<h1>COB</h1>
+<p class="lede">in <em>Every Man in His Humor</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1601</td></tr>
+<tr><th>Words</th><td>1977</td></tr>
+<tr><th>Characters</th><td>9926</td></tr>
+<tr><th>BritDrama no.</th><td>1143</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Nay I haue my rewme, and I be angrie as well as ano ther, sir. Humor? macke, I thinke it <mark>bee</mark> so indeed: what is this humor? it&#x27;s some rare hing I warrant. How? <mark>must</mark> be 〈◊〉 Ile none on it: humor, auaunt, I know you not, be gon. Let who will make hungry meales for you, it shall not <mark>bee</mark> I: Feed you quoth 〈◊〉 blood I haue much</div>
+<div class="excerpt">Keepe close thy doore, I aske no more. W y vvhats the matter? vvhats here to doe? Slid in my house? vvho vvrongd you in my house? Doe you here? Cob beates his wife. <mark>did</mark> I not charge you keepe your do es shut here, and do you let them lieopen for all co ̄ mers, do you scratch. I, come, you sha l <mark>goe</mark> afore the Do t r.</div>
+<div class="excerpt">pedegree and name from the first redde herring that was eaten in Adam, &amp; Eues kitchin: his Cob was my great, great, mighty great grandfather. Oh its a mightie while agoe sir, and it was a mightie great Cob. How know I? why his ghost comes to me euery night. I, why not the ghost of a herring Cob, as well as the ghost of Rashero Baccono,</div>
+<div class="excerpt">supperlesse to bed. Nay and this were all, &#x27;twere something, but they are the onely knowne enemies to my generation. A fasting day no sooner comes, but my lineage goes to racke, poore Cobbes they smoake for it, they melt in passion, and your maides too know this, and yet would haue me turne Hannibal, and eat my owne fish &amp; blood:</div>
+<div class="excerpt">hath wrong&#x27;d me sir: his armes are at too much li bertie, I would faine haue them bound to a treatie of peace, and I could by any meanes compasse it. No sir; but I <mark>goe</mark> in danger of my death euery hour by his meanes; and I die within a twelue-moneth and a day, I may sweare, by the lawes of the land, that he kil&#x27;d me. Mary sir:</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Who&#x27;s there? oh Signior Matheo. God giue you good morrow sir. I sir, I and my lineage haue kept a poore house in our daies. Why sir, an ancient lineage, and a princely: mine an cetri came from a kings loynes, no worse man; and yet no man neither, but Herring the king of fish, one of the monarches of the world I assure you. I doe fetch my pedegree and name from the first redde herring that was eaten in Adam, &amp; Eues kitchin: his Cob was my great, great, mighty great grandfather. Oh its a mightie while agoe sir, and it was a mightie great Cob. How know I? why his ghost comes to me euery night. I, why not the ghost of a herring Cob, as well as the ghost of Rashero Baccono, they were both broild on the coales: you are a scholler, vpsolue me that now. Oh my guest sir, you meane? Why do you laugh sir? do you not meane signior Boba dilla? I will not giue it him. Masse I thought (somewhat was in it) we could not get him to bed all night. Well sir, though he lie not on my bed, he lies on my bench, and&#x27;t please you to go vp sir, you shall find him with two cushions vnder his head, and his cloake wrapt about him, as though he had neither won nor lost, and yet I warrant hee ne&#x27;re cast better in his life then hee hath done to night. Drunk sir? you heare not me say so; perhaps he swallow&#x27;d a tauerne token, or some such deuise sir; I haue nothing to doe withal: I deale with water and not with wine. Giue me my tan kard there, ho. God be with you sir, its sixe a clocke: I should haue caried two turnes by this, what ho? my stopple come. What Tib, shew this gentleman vp to Signior Boba dilla: oh and my house were the Brazen head now, faith it would eene crie moe fooles yet: you should haue some now, would take him to be a gentleman at the least; alas God helpe the simple, his father&#x27;s an honest man, a good fishmonger, and so forth: and now doth he creep and wriggle into acquaintance with all the braue gallants about the towne, such as my guest is, (oh my guest is a fine man) and they lout him inuinciblie. He vseth euery day to a Marcha ̄ ts house (where I serue water) one M. Thorellos; and here&#x27;s the iest, he is in loue with my masters sister, and cals her mistres: and there he sits a whole afternoone sometimes, reading of these same abhominable, vile, (a poxe on them, I cannot abide them) rascally verses, Poetrie, poetrie, and speaking of E terludes, t&#x27;will make a man burst to heare him: and the wenches, they doe so geere and ti e at him; well, should they do as much to me, Ild forsweare them all, by the life of Pharoah, there&#x27;s an oath: how many waterbearers shall you heare sweare such an oath? oh I haue a guest (he teacheth me) he doth sweare the best of any man christned: By Phoebus, By the life of Pharaoh, By the body of me, As I am gentleman, and a soldier: such daintie oathes; &amp; withall he doth take this same filthie roaguish Tabacco the finest, and cleanliest; it wold do a man good to see the fume come forth at his nostrils: well, he owes me fortie shillings (my wife lent him out of her purse; by sixpence a time) besides his lodging; I would I had it: I shall haue it he saith next Action ▪ Helter skelter, hang sorrow, care will kill a cat, vptailes all, and a poxe on the hangman. Bobadilla discouers himselfe: on a bench; to him Tib. Perhaps so sir, take heede some body haue not the ▪ by the belly for walking so late in the euening. Fasting dayes: what tell you me of your fasting dayes ▪ would they were all on a light fire for mee: they say the world shall be consum&#x27;d with fire and brimstone in the latter day: but I would we had these ember weekes, and these villanous fri daies burnt in the meane time, and then— Coller fir swounds I scorn your coller, I sir am no colliers horse sir, neuer ride me with your coller, and you doe, ile shew you a iades tricke. Nay I haue my rewme, and I be angrie as well as ano ther, sir. Humor? macke, I thinke it bee so indeed: what is this humor? it&#x27;s some rare hing I warrant. How? must be 〈◊〉 Ile none on it: humor, auaunt, I know you not, be gon. Let who will make hungry meales for you, it shall not bee I: Feed you quoth 〈◊〉 blood I haue much adoe to feed my self, especially on these 〈…〉 daies oo, and&#x27;t had beene any other day but a fasting day ▪ 〈…〉 on them all for mee: by this light one might haue done God good seruice and haue drown&#x27;d them 〈◊〉 in the floud two or three hundred thousand year ago, oh I do stomacke them hugely: I haue a mawe now, and&#x27;t were for 〈◊〉 Be isses horse. Marrie that, that will make any man out of loue with them, I thinke: their bad conditions and you wil needs know: First, they are of a Flemmish breed I am sure on&#x27;t, for they rau ̄ e vp more butter then all the daies of the weeke beside: next, they stinke of fish miserably: Thirdly, they&#x27;le keep a man de uoutly hungry all day, &amp; at night send him supperlesse to bed. Nay and this were all, &#x27;twere something, but they are the onely knowne enemies to my generation. A fasting day no sooner comes, but my lineage goes to racke, poore Cobbes they smoake for it, they melt in passion, and your maides too know this, and yet would haue me turne Hannibal, and eat my owne fish &amp; blood: Pul so ▪ a red Herri my princely couze, feare nothing; I haue not the heart to deuoure you, and I might bee made as rich as Golias: oh that I had roome for my teares, I could weep salt water enough now to preserue the liues of ten thousand of my kin: but I may curse none but these filthy Almanacks; for and&#x27;t were not for them, these daies of persecution would ne&#x27;re bee knowne. Ile be hang&#x27;d and some Fishmongers sonne doe not make on&#x27;them, and puts in more fasting daies then hee should doe, because he would vtter his fathers dried stockfish. Oh, Oh. By gods dey es: I marle what pleasure of felicitie they haue in taking this rogish Tabacco: it&#x27;s good for nothing but to choake a man, and fill him full of smoake, and imbers: there were foure died out of one house last weeke with taking of it, and two more the bell went for yester-night, one of them (they say) will ne&#x27;re scape it, he voyded a bushell of oote ye ster-day, vpward and downeward. By the stockes; and there were no wiser men then I, I&#x27;ld haue it present death, man or woman, that should but deale with a Tabacco pipe; why, it will sti le them all in the&#x27;nd as many as vse it; it&#x27;s little better then rats bane. Nay he wil not meddle with his match I warrant you: well it shall be a deere beating, and I liue. Marry sir, your brother, Signior Prosp r . Strangers? let me see, one, two; masse I know not well there&#x27;s so many. I, there&#x27;s some fiue or sixe of them at the most. But a little while sir. No sir. Like ynough: yet I heard not a word of welcome. By my troth sir, will you haue the truth of it? God&#x27;s my iudge, I saw no body to be kist, vnlesse they would haue kist the post, in the middle of the warehouse; for there I left them all, at their Tabacco with a poxe. Oh no sir. Nay, soft and faire, I haue egges on the spit; I cannot go yet sir: now am I for some diuers reasons hammering, ham mering reuenge: oh for three or foure gallons of vineger, to sharpen my wits: Reuenge, vineger reuenge, russet reuenge; nay, and hee had not lyne in my house, t&#x27;would neuer haue greeu&#x27;d me; but being my guest, one that ile bee sworne, my wife ha&#x27;s lent him her smocke off her backe, while his owne shirt ha beene at washing: pawnd her neckerchers for cleane bands for him: sold almost all my platters to buy him Tabac co; and yet to see an ingratitude wretch: strike his host; well I hope to raise vp an host of furies for&#x27;t: here comes M. Doctor. And&#x27;t please your worship, I am a poore neighbour of your worships. I sir, at the signe of the water-tankerd, hard by the greene lattice: I haue p ide scot and lott there any time this eighteene yeares. No sir: to the parish: mary I haue seldome scap&#x27;t scot ▪ free at the lattice. And&#x27;t like your worship, I am come to craue the peace of your worship. No god&#x27;s my comfort, I meane your worships warrant, for one that hath wrong&#x27;d me sir: his armes are at too much li bertie, I would faine haue them bound to a treatie of peace, and I could by any meanes compasse it. No sir; but I goe in danger of my death euery hour by his meanes; and I die within a twelue-moneth and a day, I may sweare, by the lawes of the land, that he kil&#x27;d me. Mary sir: both blacke and blew, colour ynough, I warrant you I haue it here to shew your worship. A Gentleman in the citie sir. Signior Bobadilla. Marry sir, because I spake against their vagrant Ta bacco, as I came by them: for nothing else. Oliuer C b, sir set Oli er Cob, sir. Oh I beseech your worship for gods loue, deare ma ster Doctor. Oh good master Doctor, sweete Gentleman. Deare master Doctor. O diuine Doctor, thankes noble Doctor, most dainty Doctor, delicious Doctor. What Tib, Tib, I say. May I? swoundes Tib you are a whore: How the lye? and in my throte too? do you long to be stabd, ha? Oh he hath basted me rarely, sumptiously: but I haue it heare vvill s use him, oh the doctor, the honestest old Tro ian in all Italy, I do honour the very lea of his dog: a plague on him he 〈◊〉 me once in a villanous filthy feare: marry it vanisht away 〈…〉 smook of To cco: but I vvas smookt soundly first, I thanke the Diuell, and his good Angell my guest: vvell vvife: or Tib (vvhich you vvill) get you in, and locke the doore I charge you, let no body into you: not Bob badilla himselfe; nor the di ell in his likenesse; you are a vvo man; you haue flesh and blood enough in you; therefore be not tempted; keepe the doore shut vpon all cummers. How? Tut 〈…〉 soure, thou art a flower, Keepe close thy doore, I aske no more. W y vvhats the matter? vvhats here to doe? Slid in my house? vvho vvrongd you in my house? Doe you here? Cob beates his wife. did I not charge you keepe your do es shut here, and do you let them lieopen for all co ̄ mers, do you scratch. I, come, you sha l goe afore the Do t r.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Every Man in His Humor</div><div class="body">Prospero invites DOrenzo—jinior to visit him in Florence and see two gulls, Mathes and Bobadilla; Lorenzo decides to bring along his cousin St@pHAHG as a third. His father has intercepted the letter and, concerned to wean him away from poetry and towards more profitable studies, follows him to the city. The servant Misco follows EGFEHZOISEHIOF and insinuates himself into his master’s service under a new identity, disguised as a soldier. MGFENG is concerned that Prospero has become dissolute, and that the bad company which visits him will corrupt his sister M@Sperida and cuckold him; consequently he is anxious about leaving his house to do business. Matheo, who has been threatened with a cudgelling by GiliaiG, visits Bobadilla at his lodgings and they practice fighting. Later, Bobadilla assaults @6B for speaking against tobacco, and Cob procures a warrant from the city magistrate, DGGtGPIGIEMERL, to prevent ===== PAGE 52 ===== him fighting. Matheo woos Hesperida, using plagiarized verses. Giuliano provokes a fight with Matheo, but Bobadilla cannot participate because he is bound over by Cob’s warrant (and also because he is a coward); Giuliano later gives him a beating, which again he cannot resist. Thorello and his wife are lured away on false errands while Lorenzo Junior marries Hesperida. A series of ‘mistaken identities and tricks by Musco leads all the major characters to Doctor Clement’s house, either as litigants or prisoners. Lorenzo Junior pronounces on the current state of poetry. Matheo’s verses are destroyed, and he is sentenced to do public penance; Bobadilla is imprisoned. Doctor Clement requires the others to abandon their humours and dine with him, awarding Musco the place of honour. B-Text</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

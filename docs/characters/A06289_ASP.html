@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASP in The Maid&#x27;s Tragedy · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> ›
+  <span>ASP</span>
+</nav>
+
+<h1>ASP</h1>
+<p class="lede">in <em>The Maid&#x27;s Tragedy</em> — Beaumont, FrancisFletcher, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1619</td></tr>
+<tr><th>Words</th><td>994</td></tr>
+<tr><th>Characters</th><td>5139</td></tr>
+<tr><th>BritDrama no.</th><td>1650</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 12 (<em>amyntas, phillis, did, must, endimion, death…</em>). Matches are highlighted.</p>
+<div class="excerpt">I should leaue the cause. Thou thinkst thy <mark>heart</mark> hard, but if thou beest caught remember me; thou shalt perceiue a fire shot suddenly vnto thee. Well wench thou <mark>must</mark> be taken. Madame good night, may all the mariage ioyes That longing maides imagine in their beds Proue so vnto you, may not discontent Grow twixt your loue and</div>
+<div class="excerpt">as we are now, For you pardon Euadne, would my worth Were great as yours, or that the King or he Or both thought so, perhaps he found me worthlesse, But till he <mark>did</mark> so, in these eares of mine, These credulons eares, he powred the sweetest words That art or loue could frame, if he were false Pardon it heauen, and if I <mark>did</mark> want</div>
+<div class="excerpt">And teach you an artificiall way to grieue, To keepe your sorrow waking, loue your Lord No worse then I, but if you loue so well, Alas you may displease him, so <mark>did</mark> I, This is the last time you shall looke on me: Ladies farewell, as soone as I am dead, Come all and watch one night about my hearse. Bring each a mournefull sto</div>
+<div class="excerpt">selfe Into this willow garland, and am prouder That I was once your loue, (though now refus&#x27;d) Then to haue had another true to me. So with praiers I leaue you, and <mark>must</mark> trie Some yet vnpractis&#x27;d way to grieue and die, Away you are not, force it no further, Good, good, how well you looke, such a full colour Young bashfull brides</div>
+<div class="excerpt">you are new maried. Alas poore wentches Goe learne to loue irst, learne to lose your selues, Learne to be flattered, and beleeue and blesse The double tongue that <mark>did</mark> it, <mark>Did</mark> you ere loue yet wenches, speake Olimpas, Thou hast a metled temper, fit for stamp. Nor you Antiphila. Then my good girles be more then women wi e At least,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">My hard fortunes Deserue not scorne, for I was neuer proud When they were good. Exit Aspatia. It were a timelesse smile should proue my cheeke, It were a fitter houre for me to laugh, When at the Alter the religious Priest, Were passifying the offended powers, With sacrifice, then now, this should haue beene My right, and all your hands haue bin imployd, In giuing me a spotlesse offering To young Amintors bed, as we are now, For you pardon Euadne, would my worth Were great as yours, or that the King or he Or both thought so, perhaps he found me worthlesse, But till he did so, in these eares of mine, These credulons eares, he powred the sweetest words That art or loue could frame, if he were false Pardon it heauen, and if I did want Vertue, you safely may forgiue that too, For I haue lost none that I had from you. Would I could, then I should leaue the cause. Thou thinkst thy heart hard, but if thou beest caught remember me; thou shalt perceiue a fire shot suddenly vnto thee. Well wench thou must be taken. Madame good night, may all the mariage ioyes That longing maides imagine in their beds Proue so vnto you, may not discontent Grow twixt your loue and you, but if there doe, Enquire of me and I will guide your mone, And teach you an artificiall way to grieue, To keepe your sorrow waking, loue your Lord No worse then I, but if you loue so well, Alas you may displease him, so did I, This is the last time you shall looke on me: Ladies farewell, as soone as I am dead, Come all and watch one night about my hearse. Bring each a mournefull sto ie and a teare, To offer at it when I goe to earth; With flattering Iuy claspe my coffin round, Write on my brow my fortune, let my beere Be borne by Virgins that shall sing by course, The truth of maides, and periuries of men. Goe and be happy in your Ladyes loue, May all the wrongs that you haue done to me, Be vtterly forgotten in my death, Ile trouble you no more, yet I will take A parting kisse, and will not be denied, You&#x27;le come my Lord and see the virgins weepe, When I am laid in earth; though you your selfe Can know no pittie, thus I winde my selfe Into this willow garland, and am prouder That I was once your loue, (though now refus&#x27;d) Then to haue had another true to me. So with praiers I leaue you, and must trie Some yet vnpractis&#x27;d way to grieue and die, Away you are not, force it no further, Good, good, how well you looke, such a full colour Young bashfull brides put on, sure you are new maried. Alas poore wentches Goe learne to loue irst, learne to lose your selues, Learne to be flattered, and beleeue and blesse The double tongue that did it, Did you ere loue yet wenches, speake Olimpas, Thou hast a metled temper, fit for stamp. Nor you Antiphila. Then my good girles be more then women wi e At least, be more then I was, come le s be sad my girles, That downe cast of thine eye Olimpias, Showes a faind sorrow; marke Antiphila, Iust such another was the Nymph Oenes, When Paris brought home Hellen, now a teare, And then thou art a peece expressing fu ie, The Carthage Queene when from a cold Sea rock, Full with her sorrow, she tyed fast her eyes, To the faire Troian ships, hauing lost them, Iust as thine does, downe stole a teare! Antiphila, What would this wench doe if she were Aspatia, Here she would stand, till some more, pittying god Turnd her to Marble, tis enough my wench, Show me the peece of needl worke you wrought. Yes that peece, This should be Theseus, has a cousening face, You ment him for a man. Why then tis well enough, neuer looke black, You haue a full winde, and a false heart Theseus, Does not the story say, his Keele was split, Or his masts spent, or some kind rock or other Met with his vessell. It should ha been so, could the Gods know this, And none of all their number raise a storme, But they are all as ill, this false smile was exprest well, Iust such another caught me, you shall not goe so Antiphila, in this place worke a quick-sand, And ouer it a shallow smiling water, And ouer it a shallow smiling water, And his ship plowing it, and then a feare, Doe that feare brauely wench. Twill make the story, wrong&#x27;d by wanton Poets, Liue long and be beleeu&#x27;d, but wheres the Lady. Fie, you haue mist it there Antipila, You are much mistaken wench: These colours are not dull and pale enough, To show a soule so full of miserie As this poore Ladies was, doe it by me, Doe it againe, by me the lost Aspatia, And you will find all true but the wilde Iland, Suppose I stand vpon the Sea, breach now Mine armes thus, and mine haire blowne with the wind, Wilde as the place she was in, let all about me Be teares of my story, doe my face, If thou hadst euer feeling of a sorrow, Thus, thus, Antiphila make me looke good gi le Like sorrowes mount, and the trees about me Let them be dry and leauelesse, let the rocks Groane with contiunall urges, and behind me Make all a desolation, see, see wenches, A miserable life of this poore picture. I haue done, sit downe, and let v Vpon hat point fixe all our eyes, hat point there Make a dumbe silence till you feele a sudden sadnesse Giue vs new soules. Enter Calaina .</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Maid&#x27;s Tragedy</div><div class="body">At: the King’s request, Al@minf6f breaks off his engagement to his fiancée AlSpatia and instead marries Evadne) sister of his friend Melantius. After a wedding masque, Evadne prepares for bed. When Amintor arrives, however, she refuses him sex and explains that she is the King’s mistress: the marriage has been arranged as a cover for their continuing relationship, and to provide a nominal father for any bastards that may result; it will never be consummated. Amintor is unable to satisfy his impulse to take revenge, because his wronger is the King, but on learning the truth, Melantius has no similar scruples. A successful rebellion depends upon control of the city’s: defensive fort, but this is in the hands of Melantius’ enemy, ASpatia’sifathier Caliana who partly blames Melantius for the way Aspatia has been treated. Melantius asks Calianax to hand over the fort, knowing this will be reported to the King; but when the King confronts him with the accusation, his bare-faced denial. discredits Calianax and makes the accusation look like senile malice. Calianax is sent away from court and sees no option but to give Melantius the fort after all. M@@lantivis]? threat of violence secures a confession from Bya@méj and she agrees to join the conspiracy. Summoned by the King that night, Evadne ties him to the bed and kills him when he wakes. Melantius retreats to the fort and agrees to come out only once the mew King has granted him a pardon on his own terms. The despairing AlSpatia dresses as a man, visits Amintor, and provokes a fight in which she allows him to give her a fatal wound. Evadne comes to tell Amintor what she has done, but kills herself when he rejects her. On learning that he has killed AlSpatia, the grieving AIMEE takes his own life. Finding him dying, MGIEHTUS too tries to kill himself; he is prevented, but declares his intention to starve himself to death.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> page.
+</div>
+</div></body></html>

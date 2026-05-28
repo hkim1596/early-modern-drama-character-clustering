@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OLIN in Sicelides (The Sicilians) · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> ›
+  <span>OLIN</span>
+</nav>
+
+<h1>OLIN</h1>
+<p class="lede">in <em>Sicelides (The Sicilians)</em> — Fletcher, Phineas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>1168</td></tr>
+<tr><th>Characters</th><td>6244</td></tr>
+<tr><th>BritDrama no.</th><td>1771</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 12 (<em>amyntas, phillis, did, must, endimion, death…</em>). Matches are highlighted.</p>
+<div class="excerpt">mee thou wilt not, trust thy sence, thy eyes. Credit thy touch. Thou flyest, thou art the shadow loue not I: Thalander, take this, tis thine for euer, Nothing but <mark>death</mark>, nor <mark>death</mark> this knot shall seuer. What says Thalander ? does he yet beleeue mee? Thalander, <mark>heart</mark> and hand had now beene cold but for, Glaucilla, she preuenting</div>
+<div class="excerpt">Thalander ? does he yet beleeue mee? Thalander, <mark>heart</mark> and hand had now beene cold but for, Glaucilla, she preuenting Cosma, temperd the poysonous viall, changing <mark>death</mark> for sleepe, so gaue mee life, thee loue. Tell mee, my loue, canst thou such wrongs forgiue mee? I neuer more will grieue you. Canst thou forget my hate, my former</div>
+<div class="excerpt">Sicely affords me. Glaucilla if there were but fit occasion That I might shew thee this tormented <mark>heart</mark> It would affright thee friend to heare me tell How many deaths liue in so narrow Hell. Prethee Glaucilla Doe not thus search my soules deepe ranckling wound Which thou canst neuer helpe when thou hast found. Th&#x27;art such a</div>
+<div class="excerpt">helpe when thou hast found. Th&#x27;art such a mistris in thy louing art That all in vaine I hide my oue sicke <mark>heart</mark> And yet as vaine to open&#x27;t now tis hid. I would he <mark>did</mark>. Yes and with him I. Heare then and who so ere maiyst be a bride Learne this of me to hate thy maiden pride. Atyches tho knowest? The same Almost a yeare since</div>
+<div class="excerpt">heare I bring thee newes which well deserues thine eare He which most loues thee and thou hatest most Thalander (at his name my guiltie <mark>heart</mark> Ashamed of it selfe <mark>did</mark> in me start) He thus went on: Thalander&#x27;s dead and dying By oath and all his loue swo e me to see thee With these few words: Thalander quite forsaken Would send</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Glaucus ; to thee I frendlesse maide, In these last gifts my vowes haue payd: These once Olindas, now are thine, This net, and hooke, this rod, and line: Thou knowst, why here my sports I giue thee, Hence came my ioyes, and here they leaue me. The lesse I need to pay: Gladucilla I cannot mourne, when I am married. Peace peace my Cosma, thou wouldst Haue me mad with reason! Thinkst thou me sence lesse friend? Why my Glaucilla I see thy drowned eyes, I feele thy kinde imbracements, and which thou seest not, Nor feelst, I feele and see, more mirth and ioy Spring in my heart; then if I now were leading To the best bed that Sicely affords me. Glaucilla if there were but fit occasion That I might shew thee this tormented heart It would affright thee friend to heare me tell How many deaths liue in so narrow Hell. Prethee Glaucilla Doe not thus search my soules deepe ranckling wound Which thou canst neuer helpe when thou hast found. Th&#x27;art such a mistris in thy louing art That all in vaine I hide my oue sicke heart And yet as vaine to open&#x27;t now tis hid. I would he did. Yes and with him I. Heare then and who so ere maiyst be a bride Learne this of me to hate thy maiden pride. Atyches tho knowest? The same Almost a yeare since he came to this towne When finding mee fishing along the shore Silent he angles by mee, till at length Seeing mee take a sta fish, and fling&#x27;t away He straight demands why I refus&#x27;d that pray The cause I said was hate, he thus replied Alas poore fish how wretch&#x27;ed is your fate When you are kild for loue sau&#x27;d but for hate; Yet then that fish much worse the fisher swaine Who for his loue by hate is causeles slaine, But soone as loue he nam&#x27;d, I straight was parting He holding mee thus speaks; stay Nymph and heare I bring thee newes which well deserues thine eare He which most loues thee and thou hatest most Thalander (at his name my guiltie heart Ashamed of it selfe did in me start) He thus went on: Thalander&#x27;s dead and dying By oath and all his loue swo e me to see thee With these few words: Thalander quite forsaken Would send to thee what thou from him hast taken All life and health, and ne&#x27;re his loue re oouing Wishes thee a freind more happie and as louing And with this prayer these legacies he sends thee This pipe his mother Cir es gift, to bind With this soft whistle the loud whistling wind And with this pipe he left this precious ring Whose vertues cuers a venemous tooth or sting Glaucilla why should I lie I tooke them as spoiles from a slaine enemio, And or these gifts (sayes he) his last demand Was thi , that I might kisse thy hand: The last, the only gift thou canst impart To such, so louing, and now dying heart I grant; be gone, vpon the Ring spie A Rubie cut most artificially, Wherein was fram&#x27;d a youth in fire consuming, And ound within it as the Ring I turne, I found these words, Aliue or dead, I burne. But oh those fained flames, such strange desires, Such true, such lasting, neuer-quenched fires Haue kindled in my brest, that all the Art Of Triphons selfe cannot allay my smart: Ah Glaucilla, tha scornefull proud Olinda ; Which at so sweete a loue a mockery made, Who scornd the true Thalander, loues his shade, Whose thousand graces liuing could not turne mee, His ashes now hee&#x27;s dead to ashes, burne mee. My hand he married there, my heart ah neuer. Glaucilla, I loue him for his loue to mee, For such his venture, for such his victorie, But most, because in loue he is my riuall, Because hee&#x27;s like and loue, my Loue Thalander. Ah, if my life will please him, let him take it, He gaue it mee and I would faine forsake it. Had it beene mine to giue, my wretched heart, Not worth his dangerous fight, I would impart But that is thine, Thalander thine for euer With mee tis buried and arise shall neuer. And wherefore serues this glasse? This is a dessamour Cosma lately gaue mee. Tis beyond art, who there can giue reliefe. Where patients hate the cure, more then the griefe? Thou worthie t daughter of the greatest light, Most powerfull Circe, and thon honour&#x27;d Glaucus, What dutie a poore fisher maid may giue you, In thankes, and vowes, and holy offerings, Shall still be ready at your sacred altars. Thalander, now to thee, what sacrifice? What offerings may appease thy wronged loue? What haue I but my selfe? ah worthlesse prize Of such, so tryed, and so vnmou&#x27;d a faith. Ah, could I spend my body, weare my soule, And then resume another soule and body, And then consume that soule and body for thee, All would not pay the vse of halfe my debt. How pale he lookes, how strangely alter&#x27;d! Is he not dead? no, no, his pulse is quicke, His heart is strong, and rising, in his heate, Threatens with strokes, my churlish hand to beate: Nature, how couldst in one so firmely tie Perpetuall motion to fixt constancy? How can this wonder fall in Notion, A heart vnmou&#x27;d, yet still in motion! Alas he weepes, I hope his griefe and feares Swimme fast away in those sad streaming teares. Th&#x27;ast mourn&#x27;d enough, more iustly may I weepe, Leaue me thy teares, rest thou and sweetely sleepe. Nay whither flies Thalander ? here&#x27;s Olinda : Tell mee why wak&#x27;d the substance thou eschewest Whose shadowe in a dreame thou gladly viewest. Thou dreamest still Thalander ! I liue. So would not I: beleeue me friend, I liue. If mee thou wilt not, trust thy sence, thy eyes. Credit thy touch. Thou flyest, thou art the shadow loue not I: Thalander, take this, tis thine for euer, Nothing but death, nor death this knot shall seuer. What says Thalander ? does he yet beleeue mee? Thalander, heart and hand had now beene cold but for, Glaucilla, she preuenting Cosma, temperd the poysonous viall, changing death for sleepe, so gaue mee life, thee loue. Tell mee, my loue, canst thou such wrongs forgiue mee? I neuer more will grieue you. Canst thou forget my hate, my former blindnes? If not, boldly reuenge my rash vnkindnes. Pierce this vile heart my soules vngratefull center, Pierce with thy dart where loues dart could not enter. True, true my loue, tis vow&#x27;d a temple now, Where euer shall be worshipt loue and thou. What my Thalander, euer With thee to life or death, but from thee neuer. For vs, we iudge not of your hard intent, But reckon your ioyes fatall instrument.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Sicelides (The Sicilians)</div><div class="body">A year before the start of the action, Olinda rejected the love of Thalander, a friend of her brother Perindus. Thalander pined away, but sent Atyches to her with a final message and gift. Since then, Atyches has wooed her with equal lack of success. Now an enchanter has framed her for the crime of picking fruit from Neptune’s tree, and she is to be sacrificed to a sea-monster, the Orca, unless a champion comes forward to fight it on her behalf. Atyches does so, and kills the monster. In accordance with custom, she is - obliged to marry him. Atyches reveals to Perindus that he is really Thalander in disguise. Perindus once loved Glaucilla, but now refuses her after an oracle foretold trouble associated with both his and Olinda’s marriages: Olinda would die when married, and either Perindus or his bride would be cast from a rock. Cosma has come from the city to the seaside, where she attracts a number of lovers, including the foolish Pas, the ancient Fredocaldo, and the local Cyclops Rimbombo. She in turn is interested in Perindus, who does not reciprocate. She gives Glaucilla a medicine to cure the pangs of love, which Glaucilla gives to Olinda, who is secretly grieving for Thalander’s death; the medicine is poisoned, and Olinda dies. Glaucilla is condemned to be thrown from a rock for the murder. The long-lost father of Perindus and Olinda returns home to learn that his daughter is dead. Moreover, Perindus chooses to sacrifice his own life to save Glaucilla’s, and is thrown off the rock in her place. Some mariners fish him out of the sea still alive, but his servants, who helped, are condemned to death for it and sent to be eaten by Rimbombo. The truth eventually emerges: Olinda is still alive, because Glaucilla substituted a sleeping potion for the poison, and Cosma is identified as the cause of all the trouble. The servants are pardoned and Cosma is sentenced to a lifetime of unrequited love, and to be loved only by fools.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> page.
+</div>
+</div></body></html>

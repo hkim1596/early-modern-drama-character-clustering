@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SLY in The Malcontent · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SLY</span>
+</nav>
+
+<h1>SLY</h1>
+<p class="lede">in <em>The Malcontent</em> — Marston, JohnWebster, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1604</td></tr>
+<tr><th>Words</th><td>564</td></tr>
+<tr><th>Characters</th><td>2852</td></tr>
+<tr><th>BritDrama no.</th><td>1391</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">this play often, &amp; can give them intellegence for their action: I have most of the ieasts heere in my table-booke. O Coosin, come you shall sit betweene my legges <mark>heare</mark>. Nay, her that I worke vpon you coose. The Plaiers. God save you. I pray you know this Gentleman my coosin, t&#x27;is Master Doomesdaies sonne the vserer. No in good</div>
+<div class="excerpt">my coosin, t&#x27;is Master Doomesdaies sonne the vserer. No in good faith for mine ease, looke you my hat&#x27;s the handle to this fanne: Gods so, what a beast was I, I <mark>did</mark> not leave my father at home. Well, but Ile take an order with you. Why? do you thinke Ile have ieasts broken vpon me in the play to be laught at: this play hath</div>
+<div class="excerpt">play to be laught at: this play hath beaten all your gallants out of the feathers: Blacke friars hath almost spoild blacke friars for feathers. Why coose? Do you <mark>heare</mark> sir, this play is a bitter play. I will not go so farre with you, but I say, any man that hath wit, may censure (if he sit in the twelve-penny roome:) and I say</div>
+<div class="excerpt">pound Ile walke but once downe by the gold-smiths row in Cheape, take notice of the signes, and tell you them with a breath instantly. They beginne as the world <mark>did</mark>, with Adam and Eue. Theres in all iust five and fiftie. I do vse to meditate much when I come to plaies too. What do you thinke might come into a mans head now,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Why? we may sit vpon the stage at the private house: thou doest not take me for a country gentleman, doest? doest thinke I feare hissing? Ile holde my life thou took&#x27;st me for one of the plaiers. By gods slid if you had, I would have given you but six pence for your stoole: Let them that have stale suites, sit in the galleries, hisse at mee: he that will be laught out of a Taverne or an Ordinarie, shall seldome feede well or be drunke in good company. Where&#x27;s Harry Cundale, D: Burbidge, and W: Sly, let me speake with some of them. I tell you no; I am one that hath seene this play often, &amp; can give them intellegence for their action: I have most of the ieasts heere in my table-booke. O Coosin, come you shall sit betweene my legges heare. Nay, her that I worke vpon you coose. The Plaiers. God save you. I pray you know this Gentleman my coosin, t&#x27;is Master Doomesdaies sonne the vserer. No in good faith for mine ease, looke you my hat&#x27;s the handle to this fanne: Gods so, what a beast was I, I did not leave my father at home. Well, but Ile take an order with you. Why? do you thinke Ile have ieasts broken vpon me in the play to be laught at: this play hath beaten all your gallants out of the feathers: Blacke friars hath almost spoild blacke friars for feathers. Why coose? Do you heare sir, this play is a bitter play. I will not go so farre with you, but I say, any man that hath wit, may censure (if he sit in the twelve-penny roome:) and I say againe, the play is bitter. I marry woud I. I would know how you came by this play? I wonder you would play it, another company having interest in it? What are your additions? Who I? Ile tell you a strange thing of my selfe, and I can tell you for one that never studied the art of memory, tis very ange too. Why Ile lay a hundred pound Ile walke but once downe by the gold-smiths row in Cheape, take notice of the signes, and tell you them with a breath instantly. They beginne as the world did, with Adam and Eue. Theres in all iust five and fiftie. I do vse to meditate much when I come to plaies too. What do you thinke might come into a mans head now, seeing all this company? I have an excellent thought: if some fiftie of the Grecians that were cramd in the horse belly had eaten garlike, do you not thinke the Troians might have smelt out their knavery. By God I would he had, for I love Hector horribly. Alexander was an asse to speake so well of a filthy cullion. Come coose, lets take some Tobacco. Have you never a prologue? Let me see, I will make one extempore. Come to them and fencing of a congey with armes and legges. Be round with them. Gentlemen, I could wish for the womens s kes you had all s ft 〈◊〉 : and Gentlewomen, I could wish that for the mens sakes you had all more easie standings. What would they wish more but the play now, and that they shall have instantly.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Malcontent</div><div class="body">AltSffont, Duke of Genoa, has been deposed in a coup backed by the Great DukelofiFlorence, and replaced by Pi2tf5) the husband of Florence’s daughter Alurelial Though banished, Altofront has remained in Genoa disguised as the court malcontent Malevolg) his identity known only to his ally @@lS. He tells Pietro that (Mendez, who brokered his marriage to Aurelia, is cuckolding him. So he is, but Femniezé replaces him in Aurelia’s affections when he claims that Mendoza 1603 prefers another woman. Pietro confronts Mendoza, who names Ferneze as the true adulterer, and they lay a plot to surprise the couple in bed: Ferneze flees by a back entrance, but Mendoza lies in wait and attacks him as he leaves, then, when Aurelia comes out, pretends that he was protecting Ferneze. Pietro believes that his objective is to gain Aurelia’s confidence so that he can position himself to spy on her, and rewards his supposed fidelity by adopting him as his successor; but Mendoza’s real motive is to avenge himself on Pietro for suspecting him, on Aurelia for rejecting him, and on Ferneze for supplanting him. Ferneze is left for dead, but Malevole finds him still alive and takes him to safety. Bili6SG is sent as an ambassador to inform Florence of his daughter’s misbehaviour. Aurelia conspires with Mendoza to assassinate Pietro; she will then install him as Duke, with Florentine support. Mendoza engages Malevole, recently banished from court, to murder Pietro during a hunt, and explains his future plans to the malcontent. Malevole finds Pietro sleeping but does not take the opportunity to kill the usurper: instead he discloses Mendoza’s plot and helps Pietro to disguise himself as a hermit. He then brings ‘the hermit’ to court with an eye-witness account of Pietro’s suicide. Mendoza assumes power, banishes Aurelia, retains ‘the hermit’ as his confessor, and sends Malevole to Altofront’s imprisoned Duchess, Mafia} with a message of love. He engages Malevole and ‘the hermit’ to poison one another, intending that the blame shall fall on Maria and serve as a lever to force her into accepting him. Bilioso returns from Florence with the Great Duke’s orders: Aurelia is to be executed, Pietro banished, and Altofront reinstated. Upon seeing the changed political scene, however, Bilioso supports Mendoza. Pietro repents his usurpation of the dukedom, whereupon Malevole reveals his true identity. Together with Celso and Ferneze, they will now conspire to bring down Mendoza. When Malevole…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

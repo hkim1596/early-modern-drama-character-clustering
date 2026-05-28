@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MALEF in The Unnatural Combat · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MALEF</span>
+</nav>
+
+<h1>MALEF</h1>
+<p class="lede">in <em>The Unnatural Combat</em> — Massinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1639</td></tr>
+<tr><th>Words</th><td>1576</td></tr>
+<tr><th>Characters</th><td>8376</td></tr>
+<tr><th>BritDrama no.</th><td>2185</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">can but dote on this humility That sweetens, lovely in her teares? the fetters That seem&#x27;d to lessen in their waight; but now By this grow heavier on me. Peace, I <mark>must</mark> not <mark>heare</mark> thee. No, thy lookes and words are charmes. O that my <mark>heart</mark> were rent in sunder, that I might ex pire, The cause in my death buried: yet I know not With</div>
+<div class="excerpt">dare justifie. Would you could finde out some other theame to treat of. No more. And so perhaps they are. And therefore be not curious to learne that Which knowne <mark>must</mark> make you hate me. Oh presse me no farther. None of these, And yet what <mark>must</mark> increase the wonder in you Being Innocent in her selfe, she hath wounded me, But where</div>
+<div class="excerpt">comfort you can give me, Where are your promisd a d , your charm , your herbs? Your deepe read scholler, spels, and magicke rites? Can all these disenchau me? no, I <mark>must</mark> be My owne Physitian, and upon my selfe Practice a desperate cure. All I could thinke on, But to no purpose, and yet sometimes absence Does yeeld a kinde of intermission</div>
+<div class="excerpt">that the sight of her may not againe Nourish those flames, which I feele something lessend, By all the ties of friendship I conjure you And by a solemne oath you <mark>must</mark> confirme it, That though my now calmd passions should rage higher Then ever heretofore, and so compell me Once more to wish to see her; though I use Perswasions</div>
+<div class="excerpt">held up thus Kneele at your feet, and bathe them with my te te , Prayers or curses, vowes or imprecations Onely to looke upon her though at distance, You still <mark>must</mark> be obdurate. You <mark>must</mark> sweare to be Inexorable as you would prevent The greatest mischiefe to your friend, that fate Could throw upon him. Leave that to me. 〈◊〉</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I looke no sooner on her, But all my boasted power of reason leaves me, And passion againe usurpes her Empire, does none else wait me? This is worse then disobedience, leave me. O my stars! who can but dote on this humility That sweetens, lovely in her teares? the fetters That seem&#x27;d to lessen in their waight; but now By this grow heavier on me. Peace, I must not heare thee. No, thy lookes and words are charmes. O that my heart were rent in sunder, that I might ex pire, The cause in my death buried: yet I know not With such prevailing Oratory &#x27;tis beg&#x27;d from me That to deny thee would convince me to Have suck&#x27;d the milke of Tigers, rise, and I But in a perplexd, and misterious method. Will make relation that which all the world Admires and cries up in thee for perfections, Are to unhappy me foule blemishes, And mulcts in nature. If thou hadst beene borne Deformd and crooked, in the features of Thy body, as the manners of thy mind, Moore lip&#x27;d, flat not&#x27;d, 〈◊〉 ey&#x27;d, and beetle brow&#x27;d With a dwarfes 〈◊〉 to a gyant was e, Sower breath&#x27;d, with clawes for fingers on thy hands, Splay footed, gouty leg&#x27;d, and over all A loathsome leprosie had spread it selfe, And made thee flaun&#x27;d of humane fellowships: I had beene blest. Rather then a now, Though I had drow d thee for it in the sea Appearing as thou do a new Pando , With Iunos faire cow eyes, Minerva&#x27;s brow Aurora&#x27;s blushing cheekes, Hebes fresh youth, Venus soft paps, with Thetis silver feet. And in that cup I drank the poison I now feele dispersd Through every vaine and artery, wherefore art thou So cruell to me? This thy outward shape Brought a fierce warre against me, not to be By flesh and blood resisted: but to leave me No hope of freedome from the Magazine Of thy minds forces, treacherously thou drewst up Auxiliary helpes to strengthen that Which was already in it selfe too potent, Thy beauty gave the first charge, but thy d ty Seconded with thy care, and watchfull studies To please, and serve my will in all that might Raise up content in me, like thunder brake through All opposition, and my rankes of reason Disbanded, my victorious passions fell To bloody execution, and compeld me With willing hands to tis on my owne chaines, And with a kinde of flattering joy to glory in my captivity. Hal who disturbes me? Montrevile? your pardon, Would I had no greater cause to mourne Then their displeasure, for I dare justifie. Would you could finde out some other theame to treat of. No more. And so perhaps they are. And therefore be not curious to learne that Which knowne must make you hate me. Oh presse me no farther. None of these, And yet what must increase the wonder in you Being Innocent in her selfe, she hath wounded me, But where enquire not. Yet I know not how I am perswaded from my confidence Of your vowd love to me, to trust you with My dearest secret, pray you chide me for it, But with a kind of pity, not insulting On my calamity. This same daughter. She is too faire to me. And I have lookd upon her More than a father should, and languish to Enjoy her as a husband. And this is all the comfort you can give me, Where are your promisd a d , your charm , your herbs? Your deepe read scholler, spels, and magicke rites? Can all these disenchau me? no, I must be My owne Physitian, and upon my selfe Practice a desperate cure. All I could thinke on, But to no purpose, and yet sometimes absence Does yeeld a kinde of intermission to The fury of the fit. Tis my last refuge, and twas my intent And still tis, to desire your helpe. Thus then, you have a fort of which you are The absolute Lord, whither I pray you beare her: And that the sight of her may not againe Nourish those flames, which I feele something lessend, By all the ties of friendship I conjure you And by a solemne oath you must confirme it, That though my now calmd passions should rage higher Then ever heretofore, and so compell me Once more to wish to see her; though I use Perswasions mixd with threatnings; nay adde to it That I this fayling should with hands held up thus Kneele at your feet, and bathe them with my te te , Prayers or curses, vowes or imprecations Onely to looke upon her though at distance, You still must be obdurate. You must sweare to be Inexorable as you would prevent The greatest mischiefe to your friend, that fate Could throw upon him. Leave that to me. 〈◊〉 presently give order How you shall surprize her, be not frighted with Her exclamations. Be ever blessed for&#x27;t. I have playd the foole, the grosse foole, to believe The bosome of a friend will hold a secret, Mine owne could not containe, and my industry In taking liberty from my innocent daughter, Out of false hopes of freedome to my selfe, Is in the little helpe it yeelds me, punish&#x27;d. Shee&#x27;s absent, but I have her figure here, And every grace, and rarity about her, Are by the pencill of my memory In living colours paynted on my heart. My fires too, a short interim closd up Breake out with greater fury. Why was I Since &#x27;twas my fate, and not to be declin&#x27;d In this so tender consciened? Say I had Injoyd what I desir&#x27;d, what had it beene But incest? and there&#x27;s something here that tels me I stand accomptable for greater sinnes, I never checkd at: neither had the crime Wanted a praesident. I have read in story Those first great Heroes that for their brave deeds Were in the worlds first infancie stil&#x27;d gods, Freely enjoyd what I deny my selfe. Old Saturne in the golden age embraced His sister Ops and in the same degree The thunderer Iuno, Neptune, Thetis, and By their example after the first deluge Deucalion Pirrhae. Universall nature As every day tis evident allowes it To creatures of all kinds. The gallant horse Covers the Mare to which he was the fire, The bird with fertile seed gives new encrease To her that hatchd him. Why should envious man then Brand that close act which adds proximity To whats most neere him, with the abhorred title Of incest? or our later lawes forbid What by the first was granced? let old men That are not capeable of these delight And solemne superstitions fooles prescribe Rules to themselves, I will not curbe my freedome But constantly go on, with this assurance, I but walke in a path which greater men Have trod before me, h this is the fort, Open the gate. Within there. Heaven pardon all, How many thousands in our heate of wine, Quarrels and play, and in our younger daies (In private, I may say) betweene our selves In points of love, have we to answer for, Should we be scrupulous that way. No more of that. Yet this you seem&#x27;d Freely to pardon. Montrevile I doe confesse all that you charge me with To be strong truth, and that I bring a cause Most miserably guilty, and acknowledge That though your goodnesse made me mine owne judge I should not shew the least compassion, Or mercy to my selfe. O let not yet My foulenesse int your pur esse, or my falshood Divert the torrent of your loyall faith. My ills, if not return&#x27;d by you, will adde Lustre to your much good, and to or come With noble sufferance will expresse your strength, And triumph ore my weakenesse. If you please to My blacke deeds being onely knowne to you, And in surrendring up my daughter buried: You not alone make me your ve (for I At no part doe deserve the name of friend) But in your owne brest raise a monument Of ty to a wretch on whom with justice You may expresse all cruelty. Take not thy flight so soone immaculate spirit. Tis fled already, how the innocent As in a gentle slumber passe away, But to cut off the knotty thred of life In guilty men, must force sterne Atropos To use her sharpe knife often. I would helpe The edge of hers with the sharpe point of mine But that I dare not die, till I have rent This dogs heart peecemeale. O that I had wings To scale these walls, or that my hands were Canons To bore their flinty sides, that I might bring The villaine in the reach of my good sword, The Turkish Empire offer&#x27;d for his ransome Should not redeeme his life. O that my voice Were loud as thunder and with horrid sounds Might force a dreadfull passage to his eares, And through them reach his soule, libidinous monster Foule ravisher, as thou du st doe a deed Which forc&#x27;d the Sun to hide his glorious face Behinde a sable Masque of clouds appeare, And as a man defend it, or like me Shew some compunction for it. Is this an object to raise mirth? My daughter&#x27;s dead.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Unnatural Combat</div><div class="body">Malefort Junior, son of the Admiral, has committed treason by allying himself with pirates and threatening the ruin of Marseilles. The Admiral is suspected of complicity and imprisoned. Theocrine, his daughter, reluctantly offers herself to Beaufort Junior, son of the Governor of Marseilles, if he will only persuade his father to allow hers a hearing. Beaufort Senior can refuse his son nothing, so the Admiral gets his opportunity to protest his innocence. Malefort Junior ‘challenges his father to a duel over a wrongdoing which he will not specify. The Admiral refuses to be held accountable by his son, and accepts the challenge. Malefort Junior is killed: the threat to Marseilles is over, and Admiral Malefort is lauded a hero. Malefort suggests that Theocrine should marry Beaufort Junior; Beaufort Senior half-heartedly agrees and invites them to a nuptial feast. The Governor&#x27;s table is open to any former soldier who needs a free ~ meal, a custom regularly invoked by Belgarde, who is unemployed in peacetime and angry at being denied - his -back pay. Fearing embarrassment at the feast, Beaufort Senior has his steward discourage Belyarde with the suggestion that he is underdressed for the ===== PAGE 200 ===== occasion; but the upshot is that Belgarde turns up in a suit of armour and declares his worthiness. His plain- speaking wins him respect and a gift of money from the Governor. He spends it all on new clothes, but the signs of prosperity attract his creditors, and he is still unable to pay them. People are noticing Malefort’s excessive solicitude towards his daughter. This comes to a head when Beaufort Junior takes her off to woo her in private, with a priest ready to perform the marriage. Malefort reacts by calling off the marriage and taking Theocrine home. He harbours an incestuous passion for his daughter, who is very like his dead second wife. Struggling to conquer the urge, he confesses to his friend Montreville and asks him to abduct her: he cannot be tempted if he never sees her again. Beaufort Junior realizes something is wrong and has Belgarde muster troops to besiege Montreville’s fort. Montreville demands sexual favours from Theocrine, and reveals her father’s secret. Meanwhile Malefort reasons from classical precedent that incest is not wicked after all, and goes to fetch his daughter back. Montreville denies him access and reveals that he has.a long-standing grudge: Theocrine’s mother was his mistress before Malefort stole her, poisoning his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

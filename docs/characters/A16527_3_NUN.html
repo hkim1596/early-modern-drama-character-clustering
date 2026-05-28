@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NUN in Julius Caesar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> ›
+  <span>NUN</span>
+</nav>
+
+<h1>NUN</h1>
+<p class="lede">in <em>Julius Caesar</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>942</td></tr>
+<tr><th>Characters</th><td>5431</td></tr>
+<tr><th>BritDrama no.</th><td>1553</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 29 (<em>brutus, did, rome, antonius, anthony, cleopatra…</em>). Matches are highlighted.</p>
+<div class="excerpt">breath <mark>Did</mark> Fortunes frailties monument remaine, That all <mark>might</mark> haue like intereſt in his <mark>death</mark>; And guilty alike, looke for like praiſe or paine. Then Caſsius, <mark>Brutus</mark>, and the reſt began With that great Emperours blood t&#x27;imbrue their hands: What beaſt in th&#x27;earth more cruell is than man, When ouer his reaſon paſſion once commands?</div>
+<div class="excerpt">ſtrugling ſtill ſo long as he hath ſtrength; So Caeſar, as he had their powre diſpiſde, <mark>Did</mark> with great rage reſiſt; till at the length He thus cry&#x27;d out (when ſpying <mark>Brutus</mark> come) And thou mya ſonne? then griefe <mark>did</mark> backe rebound, Nought but vnkindneſſe Caeſar could ore-come, That of all things doth giue the deepeſt wound. Ah, taking</div>
+<div class="excerpt">nations ſubiect to the Romane ſtate; Him fraude harm&#x27;d more then force, friends more then, foes Ah, muſt this ſad diſcourſe by mee be made? What fatall warnings <mark>did</mark> fore-go his end, Which by his ſtay to fruſtrate ſome <mark>did</mark> try? But he that ſcorn&#x27;d excuſes to pretend, Was by the Deſtinies drawne forth to die. Whilſt by the way</div>
+<div class="excerpt">March be com&#x27;d, but yet not gone, Straight tho&#x27;other anſwerd, and ſtill conſtant ſtaide. Another brought a letter with great ſpeed, Which the conſpiracie at length <mark>did</mark> touch, And gaue it Caeſar in his hand to reade, Proteſting that it <mark>did</mark> import him much. Yet <mark>did</mark> he lay it vp where ſtill it reſts, As do the great whom happy th&#x27;earth</div>
+<div class="excerpt">ore-come, That of all things doth giue the deepeſt wound. Ah, taking then no more delight in light, As which would then his life haue bitter fram&#x27;d: Or then from <mark>Brutus</mark> blow t&#x27;abſent his ſight, As of ſo great ingratitude aſham&#x27;d. He with his gowne being couer&#x27;d firſt ouer all, As one that neither ſought, nor wiſht reliefe; Not</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">The man of whom the world in doubt remain&#x27;d, If that his minde, or fortune was more great, Whoſe valour conquer&#x27;d, clemencie retain&#x27;d All nations ſubiect to the Romane ſtate; Him fraude harm&#x27;d more then force, friends more then, foes Ah, muſt this ſad diſcourſe by mee be made? What fatall warnings did fore-go his end, Which by his ſtay to fruſtrate ſome did try? But he that ſcorn&#x27;d excuſes to pretend, Was by the Deſtinies drawne forth to die. Whilſt by the way he chanc&#x27;d t&#x27;encounter one That had his deaths-day nam&#x27;d, he to him ſaid; Now th&#x27;Ides of March be com&#x27;d, but yet not gone, Straight tho&#x27;other anſwerd, and ſtill conſtant ſtaide. Another brought a letter with great ſpeed, Which the conſpiracie at length did touch, And gaue it Caeſar in his hand to reade, Proteſting that it did import him much. Yet did he lay it vp where ſtill it reſts, As do the great whom happy th&#x27;earth reputes, That grieu&#x27;d to be importun&#x27;d by requeſts, Of ſimple ſupplicants neglect the ſutes: Or he of it the reading did deferre, Still troubled by attendanrs at the gate, Whilſt ſome to ſhew their credite did conferre To flatter ſome, for ſomething ſome t&#x27;entreat. Not only did the gods by diuers ſignes Giue Caeſar warning of his threatned harmes, But did diſturbe all th&#x27;aduerſaries deſignes, And to their troubled thoughts gaue ſtrange alarmes. A Senator that by ſome words we finde, To the conſpiratours (though none of theirs) Had ſhowne himſelfe familiar with their minde, Then chanc&#x27;d to deale with Caeſar in affaires. That ſight their ſoules did with confuſion fill, For thinking that he told their purpoſde deeds; They ſtraight themſelues, or Caeſar thought to kill A guiltie conſcience no accuſer needes. But marking that he vſde (when taking leaue) The geſture of a ſuter that gaue thankes, They of their courſe did greater hopes conceiue, And rang&#x27;d themſelues according to their rankes. Then Caeſar march&#x27;d forth to the fatall place, Neere Pompyes theater where the Senate was, Where when he had remain&#x27;d a little ſpace, All the confederates flock&#x27;d about. Calph. Alas. Firſt for the forme Metellus Cimber crau&#x27;d, To haue his brother from exile reſtor&#x27;d; Yet with the reſt a rude repulſe receiu&#x27;d, Whilſt it they all too erneſtly implor&#x27;d. Then Cimber that in ſtrife with him did ſtand, Did draw the gowne ouer Caeſars ſacred head: But the firſt blow was giuen by Caſcaes hand, Which on his necke a little wound but made. Then Caeſar ſtarting whilſt the ſtroke he ſpi&#x27;d, By ſtrength from further ſtriking Caſca ſtayde: Whilſt both the two burſt out at once and cry&#x27;d, Th&#x27;one traitor Caſca, th&#x27;other brother ayde. Then all the reſt againſt him did ariſe Like deſperate men, whoſe furie force affords, That Caeſar on no ſide could ſet his eyes, But euery looke r&#x27;encountred with ſome ſwordes. Yet as a Lyon when by nets ſurpriſde, Stands ſtrugling ſtill ſo long as he hath ſtrength; So Caeſar, as he had their powre diſpiſde, Did with great rage reſiſt; till at the length He thus cry&#x27;d out (when ſpying Brutus come) And thou mya ſonne? then griefe did backe rebound, Nought but vnkindneſſe Caeſar could ore-come, That of all things doth giue the deepeſt wound. Ah, taking then no more delight in light, As which would then his life haue bitter fram&#x27;d: Or then from Brutus blow t&#x27;abſent his ſight, As of ſo great ingratitude aſham&#x27;d. He with his gowne being couer&#x27;d firſt ouer all, As one that neither ſought, nor wiſht reliefe; Not wronging maieſtie in ſtate did fall, No ſigh conſenting to betray his griefe. Yet (if by chaunce or force I cannot tell,) Euen at the place whereas his ſtatue ſtood, As crauing Pompcy pardon Caeſar fell, That in reuenge it might exhauſt his blood. But when his corps abandond quite by breath Did Fortunes frailties monument remaine, That all might haue like intereſt in his death; And guilty alike, looke for like praiſe or paine. Then Caſsius, Brutus, and the reſt began With that great Emperours blood t&#x27;imbrue their hands: What beaſt in th&#x27;earth more cruell is than man, When ouer his reaſon paſſion once commands? The whole conſpirators remainde in doubt, Had he and Caeſar ioyn&#x27;d, to be vndone; And ſo cauſde one him t&#x27;entertaine without, Who fain&#x27;d a conference till the fact was done. Then knowing well in ſuch tumultuous broyles, That the firſt danger alwayes is the worſt, He fled in haſte, diſguiſde with vnknowne ſpoiles, For rage and for diſdaine being like to burſt. Of thoſe that in the Senate-houſe did ſit, As greeu&#x27;d ſo ſad an obiect to behold: Or feard what further murdrers might commit, Each towards his houſe a ſeuerall way did hold. This act with horror did confound their ſight, And vnawares their iudgement did ſurpriſe, When any haſtie harmes vnlook&#x27;d for light, The reſolution hath not time to riſe. That man on whome the world did once rely, By all being reuerenc&#x27;d, and ador&#x27;d by ſome, Had none t&#x27;attend him left, but two and I. Ther&#x27;s none of vs but muſt remember ſtill, How that the gods by many a wondrous ſigne, Did ſhew as &#x27;twere how that againſt their will, The deſtinies would Caeſars dayes confine. A monſtrous ſtarre amidſt the heauen hath beene, Stil ſince they firſt againſt him did conſpire, The ſolitary birds at noone were ſeene, And men to walke enuirond all with fire. What woonder though the heauens at ſuch a time, Vpbraide the earth with apparitions ſtrange, Then whilſt intending ſuch a monſtrous crime, Vnnaturall men make natures courſe to change.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Julius Caesar</div><div class="body">Juno remains angry that a Trojan adjudged Venus the most beautiful goddess. Through the centuries, she has sought to avenge herself by harrying the Trojans’ 1607 descendants, the Romans, most recently by fomenting a civil war. But the victor of that war was Caesar, who traces his descent from Venus; he has conquered much of the world and established his ascendancy in Rome, but Juno now intends to work his overthrow. Caesar explains to Antonius that he wants to be a king not for personal ambition but to comply with a Sibylline prophecy which makes monarchy a precondition for a Roman victory in the east. Antonius warns him that there are Romans who desire his death. Cicero laments the loss of Rome’s liberty, and Decius Brutus agrees that, though Caesar’s past actions have been honourable, he should have demobilized his armies now that there is no further external threat. Brutus and Cassius agree that they will not participate in any ceremony aimed at making Caesar a king. Brutus is Caesar’s friend, but reasons that he must assassinate the tyrant for the public good. His wife Portia wrings the secret of the conspiracy out of him. Brutus and Cassius recruit conspirators, both patriots and men who have a personal grudge against Caesar. However, they exclude Cicero and agree not to kill Antonius. Caesar’s wife Calpurnia tries to persuade him not to go to the Senate on the Ides of March — an astrologer has foretold his death, and she herself has had bad dreams - but Decius Brutus induces him to change his mind. The conspirators assassinate Caesar. Antonius makes a show of friendship with them, but is obviously planning reprisals. A messenger brings Caesar’s wife Calpurnia a full account of the circumstances of the murder.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> page.
+</div>
+</div></body></html>

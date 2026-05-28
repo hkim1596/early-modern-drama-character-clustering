@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COM in 246 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>COM</span>
+</nav>
+
+<h1>COM</h1>
+<p class="lede">in <em>246</em> — [84]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>948</td></tr>
+<tr><th>Characters</th><td>5316</td></tr>
+<tr><th>BritDrama no.</th><td>246</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">esteeme her peace thus wrought, Nothing lesse deare, than if your selfe had sought: And (with another colour, which my Art Shall teach you to lay on) your selfe <mark>must</mark> seeme The only agent, and the first Orbe Moue, In this our set, and cunning world of Loue. Tis this, good sonne; Lord Barrisor (whom you slew) <mark>Did</mark> loue her dearely,</div>
+<div class="excerpt">Barrisor (whom you slew) <mark>Did</mark> loue her dearely, and with all fit meanes Hath vrg&#x27;d his acceptation, of all which She keepes one letter written in his blood: You <mark>must</mark> say thus then, That you heard from mee How much her selfe was toucht in conscience With a Report (which is in truth disperst) That your maine quarrell grew about</div>
+<div class="excerpt">you the confirmation in his blood, Lest you should thinke report and she <mark>did</mark> faine, That you shall so haue circumstantiall meanes, To come to the direct, which <mark>must</mark> be vsed: For the direct is crooked; Loue comes flying; The height of loue is still wonne with denying. Madam. You will pardon me, I hope, That, so beyond your expectation,</div>
+<div class="excerpt">man a knowledge: You know besides, that our affections storme, Rais&#x27;d in our blood, no Reason can reforme. Though she seeke then their satisfaction, (Which she <mark>must</mark> needes, or rest vnsatisfied) Your iudgement will esteeme her peace thus wrought, Nothing lesse deare, than if your selfe had sought: And (with another colour, which</div>
+<div class="excerpt">Twixt you &amp; them: (how neere so e&#x27;re they seeme) For any man to interrupt their secrets. What shall become of vs? He will: be sure. MY Lord remember that your soule <mark>must</mark> seeke Her peace, as well as your reuengefull bloud: You euer, to this houre haue prou&#x27;d your selfe A noble, zealous, and obedient sonne, T&#x27;our holy mother: be not</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Come worthiest sonne, I am past measure glad, That you (whose worth I haue approou&#x27;d so long) Should be the Obiect of her fearefull loue; Since both your wit and spirit can adapt Their full force to supplie her vtmost weakenesse: You know her worths and vertues, for Report Of all that know, is to a man a knowledge: You know besides, that our affections storme, Rais&#x27;d in our blood, no Reason can reforme. Though she seeke then their satisfaction, (Which she must needes, or rest vnsatisfied) Your iudgement will esteeme her peace thus wrought, Nothing lesse deare, than if your selfe had sought: And (with another colour, which my Art Shall teach you to lay on) your selfe must seeme The only agent, and the first Orbe Moue, In this our set, and cunning world of Loue. Tis this, good sonne; Lord Barrisor (whom you slew) Did loue her dearely, and with all fit meanes Hath vrg&#x27;d his acceptation, of all which She keepes one letter written in his blood: You must say thus then, That you heard from mee How much her selfe was toucht in conscience With a Report (which is in truth disperst) That your maine quarrell grew about her loue, Lord Barrisor, imagining your Courtship Of the great Guises Duchesse in the Presence, Was by you made to his elected mistresse: And so made me your meane now to resolue her, Chosing (by my direction) this nights depth, For the more cleere auoiding of all note, Of your presumed presence, and with this (To cleere her hands of such a louers blood) She will so kindely thanke and entertaine you, (Me thinkes I see how) I, and ten to one, Shew you the confirmation in his blood, Lest you should thinke report and she did faine, That you shall so haue circumstantiall meanes, To come to the direct, which must be vsed: For the direct is crooked; Loue comes flying; The height of loue is still wonne with denying. Madam. You will pardon me, I hope, That, so beyond your expectation, (And at a time for visitants so vnfit) I (with my noble friend heere) visit you: You know that my accesse at any time Hath euer beene admitted; and that friend That my care will presume to bring with mee, Shall haue all circumstance of worth in him, To merit as free welcome as my selfe. May it be worth it to you honour&#x27;d daughter. Wee soone will take the darkenesse from his face That did that deede of darkenesse; wee will know What now the Monsieur and your husband doe; What is contain&#x27;d within the secret paper Offerd by Monsieur, and your loues euents: To which ends (honour&#x27;d daughter) at your motion, I haue put on these exorcising Rites, And, by my power of learned holinesse Vouchsaft me from aboue, I will command Our resolution of a raised spirit. Stand sure together then, what ere ye see, And stirre not, as ye tender all our liues. Occidentalium legionum spiritalium imperator (magnus ille Be hemoth) veni, veni, comitatus cum Asaroth locotenente inui cto. Adiuro te per stygis inscrutabilia arcana, per ipsos irre meabiles anfractus auerni: adesto ô Behemoth, tu cui peruia sunt Magnatum scrinia; veni, per Noctis &amp; tenebrarum ab dita profundissima; Thunder. per labentia sydera; per ipsos motus ho rarum furtiuos, Hecates que altum silentium: Appare in forma spiritali, lucente splendida &amp; amabili. Ascendit. I would see What now the Monsieur and Mountsurrie doe; And see the secret paper that the Monsieur Offer&#x27;d to Count Montsurry, longing much To know on what euents the secret loues Of these two honor&#x27;d persons shall arriue. From the last nights black depth, I cald vp one Of the inferior ablest ministers, And he could not resolue mee; send one then Out of thine owne command, to fetch the paper That Monsieur hath to shew to Count Montsurry. Till he returnes (great prince of darknesse) Tell me, if Monsieur and the Count Montsurry Are yet encounterd. Shew vs all their persons, And represent the place, with all their actions. Do not stir: Ther&#x27;s too much distance and too many lockes Twixt you &amp; them: (how neere so e&#x27;re they seeme) For any man to interrupt their secrets. What shall become of vs? He will: be sure. MY Lord remember that your soule must seeke Her peace, as well as your reuengefull bloud: You euer, to this houre haue prou&#x27;d your selfe A noble, zealous, and obedient sonne, T&#x27;our holy mother: be not an apostate: Your wiues offence serues not, (were it the woorst You can imagine, without greater proofes) To seuer your eternall bonds, and harts; Much lesse to touch her with a bloudy hand: Nor is it manly (much lesse husbandly) To expiate any frailty in your wife, With churlish strokes, or beastly ods of strength: The stony birth of clowds, will touch no lawrell: Nor any sleeper; your wife is your lawrell: And sweetest sleeper; do not touch her then Be not more rude than the wild seed of vapor, To her that is more gentle than it rude; In whom kind nature sufferd one offence But to set of, her other excellence. It is a damn&#x27;d worke to pursue those secrets, That would ope more sinne, and prooue springs of slaughter; Nor is&#x27;t a path for Christian feete to touch; But out of all way to the health of soules, A sinne impossible to be forgiuen: Which he that dares commit; Then God inspire ye both with thoughts and deedes Worthie his high respect, and your owne soules. Exit Com. Ascendit Comolet. What rape of honour and religion? O wracke of nature.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

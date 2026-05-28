@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CLO in All&#x27;s Well That Ends Well · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>CLO</span>
+</nav>
+
+<h1>CLO</h1>
+<p class="lede">in <em>All&#x27;s Well That Ends Well</em> — Shakespeare, WilliamMiddleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1717</td></tr>
+<tr><th>Characters</th><td>8661</td></tr>
+<tr><th>BritDrama no.</th><td>1461</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">which is within a verie little of nothing. You ſhould haue ſaid ſir before a knaue, th&#x27; art a knaue, that&#x27;s before me th&#x27; art a knaue: this had beene truth ſir. <mark>Did</mark> you finde me in your ſelfe ſir, or were you taught to finde me? The ſearch ſir was profitable, and much Foole may you find in you, euen to the worlds pleaſure,</div>
+<div class="excerpt">Madam, if God haue lent a man any man ners, hee may eaſilie put it off at Court: hee that cannot make a legge, put off&#x27;s cap, kiſſe his hand, and ſay no thing, <mark>has</mark> neither legge, hands, lippe, nor cap; and in deed ſuch a fellow, to ſay preciſely, were not for the Court, But for me, I haue an anſwere will ſerue all men. It</div>
+<div class="excerpt">ſerue euer. O Lord ſir, why there&#x27;t ſerues well agen. Not much commendation to them. Moſt fruitfully, I am there, before my legegs. She is not well, but yet ſhe <mark>has</mark> her health, ſhe&#x27;s very merrie, but yet ſhe is not well: but thankes be gi uen ſhe&#x27;s very well, and wants nothing i&#x27; th world: but yet ſhe is not well. Truly ſhe&#x27;s</div>
+<div class="excerpt">heauen, whether God ſend her quickly: the other, that ſhe&#x27;s in earth, from whence God ſend her quickly. So that you had her wrinkles, and I her money, I would ſhe <mark>did</mark> as you ſay. Marry you are the wiſer man: for many a mans tongue ſhakes out his maſters vndoing: to ſay nothing, to do nothing, to know nothing, and to haue nothing,</div>
+<div class="excerpt">And I would giue his wife my bauble ſir to doe her ſeruice. At your ſeruice. Why ſir, if I cannot ſerue you, I can ſerue as great a prince as you are. Faith ſir a <mark>has</mark> an Engliſh maine, but his fiſno mie is more hotter in France then there. The blacke prince ſir, alias the prince of darke neſſe, alias the diuell. I am a woodland</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">&#x27;Tis not vnknown to you Madam, I am a poore fellow. No maddam, &#x27;Tis not ſo well that I am poore, though manie of the rich are damn&#x27;d, but if I may haue your Ladiſhips good will to goe to the world, Isbell the woman and w will doe as we may. I doe beg your good will in this caſe. In Isbels caſe and mine owne: ſeruice is no heri tage, and I thinke I ſhall neuer haue the bleſſing of God, till I haue iſſue a my bodie: for they ſay barnes are bleſ ſings. My poore bodie Madam requires it, I am driuen onby the fleſh, and hee muſt needes goe that the diuell driues. Faith Madam I haue other holie reaſons, ſuch as they are. I haue beene Madam a wicked creature, as you and all fleſh and blood are, and indeede I doe marrie that I may repent. I am out a friends Madam, and I hope to haue friends for my wiues ſake. Y&#x27; are ſhallow Madam in great friends, for the knaues come to doe that for me which I am a wearie of: he that eres my Land, ſpares my teame, and giues mee leaue to Inne the crop: if I be his cuckold hee&#x27;s my drudge; he that comforts my wife, is the cheriſher of my fleſh and blood; hee that cheriſhes my fleſh and blood, loues my fleſh and blood; he that loues my fleſh and blood is my friend: ergo, he that kiſſes my wife is my friend: if men could be contented to be what they are, there were no feare in marriage, for yong Charbon the Puritan, and old Poyſam the Papiſt, how ſomere their hearts are ſeuer&#x27;d in Religion, their heads are both one, they may ioule horns together like any Deare i&#x27; th Herd. A Prophet I Madam, and I ſpeake the truth the next waie, for I the Ballad will repeate, which men full true ſhall finde, your marriage comes by deſtinie, your Cuckow ſings by kinde. Was this faire face the cauſe, quoth ſhe, Why the Grecians ſacked Troy, Fond done, done, fond was this King Priams ioy, With that ſhe ſighed as ſhe ſtood, bis And gaue this ſentence then, among nine bad if one be good, among nine bad if one be good, there&#x27;s yet one good in ten. One good woman in ten Madam, which is a pu rifying ath&#x27; ſong: would God would ſerue the world ſo all the yeere, weed finde no fault with the tithe woman if I were the Parſon, one in ten quoth a? and wee might haue a good woman borne but ore euerie blazing ſtarre, or at an earthquake, &#x27;twould mend the Lotterie well, a man may draw his heart out ere a plucke one. That man ſhould be at womans command, and yet no hurt done, though honeſtie be no Puritan, yet it will doe no hurt, it will weare the Surplis of humilitie ouer the blacke-Gowne of a bigge heart: I am go ing forſooth, the buſineſſe is for Helen to come hither. Truly Madam, if God haue lent a man any man ners, hee may eaſilie put it off at Court: hee that cannot make a legge, put off&#x27;s cap, kiſſe his hand, and ſay no thing, has neither legge, hands, lippe, nor cap; and in deed ſuch a fellow, to ſay preciſely, were not for the Court, But for me, I haue an anſwere will ſerue all men. It is like a Barbers chaire that fits all buttockes, the pin buttocke, the quatch-buttocke, the brawn but tocke, or any buttocke. As fit as ten groats is for the hand of an Attur ney, as your French Crowne for your taffety punke, as Tibs ruſh for Toms fore-finger, as a pancake for Shroue-tueſday, a Morris for May-day, as the naile to his hole, the Cuckold to his horne, as a ſcolding queane to a wrangling knaue, as the Nuns lip to the Friers mouth, nay as the pudding to his skin. From below your Duke, to beneath your Con ſtable, it will fit any queſtion. But a triflle neither in good faith, if the learned ſhould ſpeake truth of it: heere it is, and all that belongs to&#x27;t. Aske mee if I am a Courtier, it ſhall doe you no harme to learne. O Lord ſir theres a ſimple putting off: more, more, a hundred of them. O Lord ſir, thicke, thicke, ſpare not me. O Lord ſir; nay put me too&#x27;t, I warrant you. O Lord ſir, ſpare not me. I nere had worſe lucke in my life in my O Lord ſir: I ſee things may ſerue long, but not ſerue euer. O Lord ſir, why there&#x27;t ſerues well agen. Not much commendation to them. Moſt fruitfully, I am there, before my legegs. She is not well, but yet ſhe has her health, ſhe&#x27;s very merrie, but yet ſhe is not well: but thankes be gi uen ſhe&#x27;s very well, and wants nothing i&#x27; th world: but yet ſhe is not well. Truly ſhe&#x27;s very well indeed, but for two things One, that ſhe&#x27;s not in heauen, whether God ſend her quickly: the other, that ſhe&#x27;s in earth, from whence God ſend her quickly. So that you had her wrinkles, and I her money, I would ſhe did as you ſay. Marry you are the wiſer man: for many a mans tongue ſhakes out his maſters vndoing: to ſay nothing, to do nothing, to know nothing, and to haue nothing, is to be a great part of your title, which is within a verie little of nothing. You ſhould haue ſaid ſir before a knaue, th&#x27; art a knaue, that&#x27;s before me th&#x27; art a knaue: this had beene truth ſir. Did you finde me in your ſelfe ſir, or were you taught to finde me? The ſearch ſir was profitable, and much Foole may you find in you, euen to the worlds pleaſure, and the encreaſe of laughter. By my troth I take my young Lord to be a ve rie melancholly man. Why he will looke vppon his boote, and ſing: mend the Ruffe and ſing, aske queſtions and ſing, picke his teeth, and ſing: I know a man that had this tricke of melancholy hold a goodly Mannor for a ſong. In that you haue there. A Letter. I haue ſent you a daughter-in-Law, ſhee hath recouered the King, and vndone me: I haue wedded her, not bedded her, and ſworne to make the not eternall. You ſhall heare I am runne away, know it before the report come. If there bee bredth enough in the world, I will hold a long diſtance. My duty to you. Your vnfortunate ſonne, Bertram. I haue ſent you a daughter-in-Law, ſhee hath recouered the King, and vndone me: I haue wedded her, not bedded her, and ſworne to make the not eternall. You ſhall heare I am runne away, know it before the report come. If there bee bredth enough in the world, I will hold a long diſtance. My duty to you. This is not well raſh and vnbridled boy, To flye the fauours of ſo good a King, To plucke his indignation on thy head, By the miſpriſing of a Maide too vertuous For the contempt of Empire. Nay there is ſome comfort in the newes, ſome comfort, your ſonne will not be kild ſo ſoone as I thoght he would. So ſay I Madame, if he runne away, as I heare he does, the danger is in ſtanding too&#x27;t, that&#x27;s the loſſe of men, though it be the getting of children. Heere they come will tell you more. For my part I onely heare your ſonne was run away. Indeed ſir ſhe was the ſweete Margerom of the ſallet, or rather the hearbe of grace. A foole ſir at a womans ſeruice, and a knaue at a mans. I would couſen the man of his wife, and do his ſeruice. And I would giue his wife my bauble ſir to doe her ſeruice. At your ſeruice. Why ſir, if I cannot ſerue you, I can ſerue as great a prince as you are. Faith ſir a has an Engliſh maine, but his fiſno mie is more hotter in France then there. The blacke prince ſir, alias the prince of darke neſſe, alias the diuell. I am a woodland fellow ſir, that alwaies loued a great fire, and the maſter I ſpeak of euer keeps a good fire, but ſure he is the Prince of the world, let his No bilitie remaine in&#x27;s Court. I am for the houſe with the narrow gate, which I take to be too little for pompe to enter: ſome that humble themſelues may, but the ma nie will be too chill and tender, and theyle bee for the flowrie way that leads to the broad gate, and the great fire. If I put any trickes vpon em ſir, they ſhall bee Iades trickes, which are their owne right by the law of Nature. O Madam, yonders my Lord your ſonne with a patch of veluet on&#x27;s face, whether there bee a ſcar vn der&#x27;t or no, the Veluet knowes, but &#x27;tis a goodly patch of Veluet, his left cheeke is a cheeke of two pile and a halfe, but his right cheeke is worne bare. But it is your carbinado&#x27;d face. Truely, Fortunes diſpleaſure is but ſluttiſh if it ſmell ſo ſtrongly as thou ſpeak&#x27;ſt of: I will hencefoorth eate no Fiſh of Fortunes butt&#x27;ring. Pre thee alow the winde. Indeed ſir, if your Metaphor ſtinke, I will ſtop my noſe, or againſt any mans Metaphor. Prethe get thee further. Foh, prethee ſtand away: a paper from fortunes cloſe-ſtoole, to giue to a Nobleman. Looke heere he comes himſelfe. Heere is a purre of Fortunes ſir, or of Fortunes Cat, but not a Muſcat, that ha&#x27;s falne into the vncleane fiſh-pond of her diſpleaſure, and as he ſayes is muddied withall. Pray you ſir, vſe the Carpe as you may, for he lookes like a poore decayed, ingenious, fooliſh, raſcally knaue. I doe pittie his diſtreſſe in my ſmiles of comfort, and leaue him to your Lordſhip.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — All&#x27;s Well That Ends Well</div><div class="body">When Béftrami’s father dies, he becomes a royal ward, and is summoned to court. H@léfhi loves him and is sad to see him go, but knows she can never have him because of the disparity in their rank. Phe@uDowager (@GuntEesS learns of her love and permits her to go to court and use her father’s medical knowledge, passed on to her on his deathbed, to cure the King of the fistula which afflicts him. ‘The Kimig has been advised to remain neutral in the war between Florence and Siena, but allows his lords to join on either side; Bertram, however, is deemed too young and required to stay at court. Helen wagers her life on the efficacy of her cure, and asks as her reward to be allowed her own choice of husband. She successfully heals the fistula and selects Bertram. He protests vehemently, but the King browbeats him into marriage. Rather than consummate the union, however, he runs away to the war and sends Helen word that he will only acknowledge her as his wife if she gets the ring from his finger and presents him with a child which he has lawfully begotten on her. She takes herself off, leaving word that she is going on a pilgrimage. Bertram acquits himself well in battle, but his companion Paroles allows the company’s drum to be captured by the Sienese. Passing through Florence, Helen encounters a widow whose daughter, Diama, is being solicited by Bertram for sex. She arranges for the widow to agree, on condition that Bertram gives up his ring; Helen then takes Diana’s place in bed, has sex with her husband, and exchanges rings with him. Meanwhile Paroles insists on trying to recover the lost drum, intending to return with no drum and a heroic story of insurmountable obstacles. He is ambushed by Florentine soldiers posing as the enemy, blindfolded, and put in fear of his life; under interrogation, he betrays the Florentine army’s military secrets and makes some uncomplimentary remarks about Bertram, only to find when the blindfold is removed that his captors are Florentines and that Bertram is present. With the war coming to an end, Bertram returns to France. Since Helen is presumed dead, he makes preparations to marry again, and sends his proposed fiancée his ring. The King identifies it as the ring he himself gave to Helen. Diana arrives, claiming the right to marry him after their supposed night together in Florence, and produces his own ring as proof. Bertram attempts to lie his way out of the situation, but is repeatedly caught out. Diana introduces Helen,…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

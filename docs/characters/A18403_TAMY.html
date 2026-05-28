@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TAMY in 246 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>TAMY</span>
+</nav>
+
+<h1>TAMY</h1>
+<p class="lede">in <em>246</em> — [84]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>970</td></tr>
+<tr><th>Characters</th><td>5116</td></tr>
+<tr><th>BritDrama no.</th><td>246</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">engines, to his insolent fury: So, of a sudden, my licentious fancy Riots within me: not my name and house Nor my religion to this houre obseru&#x27;d Can stand aboue it: I <mark>must</mark> vtter that That will in parting breake more strings in me, Than death when life parts: and that holy man That, from my cradle, counseld for my soule: I now <mark>must</mark></div>
+<div class="excerpt"><mark>must</mark> vtter that That will in parting breake more strings in me, Than death when life parts: and that holy man That, from my cradle, counseld for my soule: I now <mark>must</mark> make an agent for my bloud. Yet vnanswered? Thats not my study: one way I am sure You shall not pull downe me: my husbands height Is crowne to all my hopes: and</div>
+<div class="excerpt">the King Your occupation of dishonouring Ladies And of his Court: a Lady cannot liue As she was borne; and with that sort of pleasure That fits her state: but she <mark>must</mark> be defam&#x27;d With an infamous Lords detraction: Who would endure the Court if these attempts, Of open and profest lust <mark>must</mark> be borne? Whose there? come on Dame, your</div>
+<div class="excerpt">Comes my staine from him? It is my beautie, and that innocence prooues, That slew Chymaera, rescu&#x27;d Peleus From all the sauage beasts in Peleon; And rais&#x27;d the chaste Athenian prince from Hell: All suffering with me; they for womens lusts, I for a mans; that the Egean stable Of his foule sinne would emptie in my lappe: How</div>
+<div class="excerpt">but in my bloud that he may see, These lines come from my wounds and not from me. O wretched piety, that art so distract In thine owne constancy; and in thy right <mark>Must</mark> be vnrighteous: if I right my friend I wrong my husband: if his wrong I shunne, The duty of my friend I leaue vndone; Ill plays on both sides; heere and there,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Would that would please me. I cannot cloake it: but; as when a fume, Hot, drie and grosse: within the wombe of earth Or in her superficies begot: When extreame cold hath stroke it to her heart, The more it is comprest, the more it rageth; Exceeds his prisons strength that should containe it, And then it tosseth Temples in the aire; All barres made engines, to his insolent fury: So, of a sudden, my licentious fancy Riots within me: not my name and house Nor my religion to this houre obseru&#x27;d Can stand aboue it: I must vtter that That will in parting breake more strings in me, Than death when life parts: and that holy man That, from my cradle, counseld for my soule: I now must make an agent for my bloud. Yet vnanswered? Thats not my study: one way I am sure You shall not pull downe me: my husbands height Is crowne to all my hopes: and his retiring To any meane state, shalbe my aspiring: Mine honour&#x27;s in mine owne hands, spite of kings. Wise wiues they are that on such strings depend, With a firme husband, weighing a dissolute friend. Then I pray be answer&#x27;d: For in good faith my Lord I do not like you In that sort you like. Now it comes So ill prepar&#x27;d, that I may take a poison, Vnder a medicine as good cheape as it: I will not haue it were it worth the world. By this light my Lord Y&#x27;are a vile fellow: and Ile tell the King Your occupation of dishonouring Ladies And of his Court: a Lady cannot liue As she was borne; and with that sort of pleasure That fits her state: but she must be defam&#x27;d With an infamous Lords detraction: Who would endure the Court if these attempts, Of open and profest lust must be borne? Whose there? come on Dame, your are at your booke When men are at your mistresse; haue I taught you Any such waiting womans qualitie? Ah. O father, but at this suspicious houre You know how apt best men are to suspect vs, In any cause, that makes suspicious shadow No greater than the shadow of a haire: And y&#x27;are to blame: what though my Lord and husband Lie foorth to night? and since I cannot sleepe When he is absent, I sit vp to night, Though all the doores are sure, &amp; all our seruants As sure bound with their sleepes; yet there is one That sits aboue, whose eie no sleepe can binde: He sees through doores, and darkenesse, and our thoughts; And therefore as we should auoid with feare, To thinke amisse our selues before his search; So should we be as curious to shunne All cause that other thinke not ill of vs. Me thinks the man hath answerd for vs well. Man is a name of honour for a King: Additions take away from each chiefe thing: The Schoole of Modesty, not to learne, learnes Dames: They sit in high formes there, that know mens names. Knew all my Lord? what meane you? That you know? speake it. By him my Lord, I haue admir&#x27;d You could all this time be at concord with him, That still hath plaid such discords on your honour. O happie woman! Comes my staine from him? It is my beautie, and that innocence prooues, That slew Chymaera, rescu&#x27;d Peleus From all the sauage beasts in Peleon; And rais&#x27;d the chaste Athenian prince from Hell: All suffering with me; they for womens lusts, I for a mans; that the Egean stable Of his foule sinne would emptie in my lappe: How his guilt shunn&#x27;d me? sacred innocence That where thou fear&#x27;st, art dreadfull; and his face Turn&#x27;d in flight from thee, that had thee in chace: Come, bring me to him: I will tell the serpent Euen to his teeth (whence, in mine honors soile, A pitcht field starts vp twixt my Lord and mee) That his throat lies, and he shall curse his fingers, For being so gouern&#x27;d by his filthie soule. Good father raise him in some beauteous forme, That with least terror I may brooke his sight. My Lord, my fault (as you may censure it With too strong arguments) is past your pardon: But how the circumstances may excuse mee God knowes, and your more temperate minde heereafter May let my penitent miseries make you know. O who is turn&#x27;d into my Lord and husband? Husband? My Lord? None but my Lord and husband. Heauen, I aske thee remission of my sinnes, Not of my paines: husband, ô helpe me husband. I will, I will. Ile write, but in my bloud that he may see, These lines come from my wounds and not from me. O wretched piety, that art so distract In thine owne constancy; and in thy right Must be vnrighteous: if I right my friend I wrong my husband: if his wrong I shunne, The duty of my friend I leaue vndone; Ill plays on both sides; heere and there, it riseth; No place: no good so good, but ill compriseth; My soule more scruple breeds, than my bloud, sinne, Vertue imposeth more than any stepdame: O had I neuer married but for forme, Neuer vowd faith but purposd to deceiue: Neuer made conscience of any sinne, But clok&#x27;t it priuately and made it common: Nor neuer honord beene, in blood, or mind, Happy had I beene then, as others are Of the like licence; I had then beene honord: Liu&#x27;d without enuy: custome had benumbd All sense of scruple, and all note of frailty: My fame had beene vntoucht, my heart vnbroken: But (shunning all) I strike on all offence, O husband? deare friend? O my conscience?</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

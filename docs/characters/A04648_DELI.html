@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DELI in Every Man Out of His Humor · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>DELI</span>
+</nav>
+
+<h1>DELI</h1>
+<p class="lede">in <em>Every Man Out of His Humor</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>1614</td></tr>
+<tr><th>Characters</th><td>8283</td></tr>
+<tr><th>BritDrama no.</th><td>1216</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">please her. Behold she comes. VVhy (gentle wife) is now thy VValke too sweet? Thou said&#x27;st of late it had sower aires about it, And found&#x27;st much fault, that I <mark>did</mark> not correct it. Nay deere wife; I know thou hast said thou hast lou&#x27;d perfumes, No <mark>woman</mark> better. But yesterday, I saw thee at our garden Smelling on Roses and on</div>
+<div class="excerpt">his grace at the Court am I sure to be visited; I was a beast to giue him any hope. VVel, would I were in that I am out with him once, and—Come Signior lente, I <mark>must</mark> co ̄ ferre with you as wee <mark>goe</mark>. Nay de re wife, I beseech the for sake these moods: looke not like winter thus. Here take my keres, open my counting houses, spread</div>
+<div class="excerpt">not. Nay gentle friend be merrie, raise your lookes Out of your bosome, I protest (by heauen) You are the man most welcome in the world. Here good Fido: VVhat? she <mark>did</mark> not see thee? That&#x27;s well: Strew, strew, good Fido, the freshest flowers, so. Cast in more Frankincence, yet more, well said. O Macilente, I haue such a wife, So</div>
+<div class="excerpt">As though this dull grosse tongue of mine could vtter The rare, the true, the pure, the infinite Rights That sit (as high as I can looke) within her. VVell, this <mark>must</mark> needs be granted. Nay Macilente; doe not so discredit The goodnesse of your judgement to denie it, For I doe speake the very least of her. And I would craue and</div>
+<div class="excerpt">so precise, so froward, That no obseruance I can doe to her, Can make her kind to me: if she find fault, I mend that fault, and then she saies I faulted That I <mark>did</mark> mend it. Now good Friend aduise me How I may temper this strange Splene in her. Beleeue me Macilente, this is Gospell. O that a man were his owne man so much, To</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Dispatch, take heed your mistresse see you not. Nay gentle friend be merrie, raise your lookes Out of your bosome, I protest (by heauen) You are the man most welcome in the world. Here good Fido: VVhat? she did not see thee? That&#x27;s well: Strew, strew, good Fido, the freshest flowers, so. Cast in more Frankincence, yet more, well said. O Macilente, I haue such a wife, So passing faire, so passing faire vnkind, And of such worth and right to be vnkind, (Since no man can be worthie of her kindnesse.) No, that is sure as death, No man aliue: I doe not say is not, But cannot possibly be worth her kindness . Nay that is certaine, let me doe her Right: How said I? do her Right? as though I could, As though this dull grosse tongue of mine could vtter The rare, the true, the pure, the infinite Rights That sit (as high as I can looke) within her. VVell, this must needs be granted. Nay Macilente; doe not so discredit The goodnesse of your judgement to denie it, For I doe speake the very least of her. And I would craue and beg no more of heauen For all my fortunes here, but to be able To vtter first in fit tearmes, what she is, And then the true joies I conceiue in her. I, and she knowes so well Her owne deserts that (when I striue t&#x27;enjoy them) She waies the things I doe, with what she merits: And (seeing my worth outwai&#x27;d so in her graces) She is so solemne, so precise, so froward, That no obseruance I can doe to her, Can make her kind to me: if she find fault, I mend that fault, and then she saies I faulted That I did mend it. Now good Friend aduise me How I may temper this strange Splene in her. Beleeue me Macilente, this is Gospell. O that a man were his owne man so much, To rule himselfe thus; I will striue i&#x27; faith To be more strange and carelesse: yet I hope I haue now taken such a perfect course, To make her kind to me, and liue contented, That I shall find my kindnesse well return&#x27;d, And haue no need to fight with my affections. She (late) hath found much fault with euery roome VVithin my house; One was too big (she said) Another was not furnisht to her mind, And so through all: All which I haue alter&#x27;d. Then here she hath a place (on my backeside) VVherein shee loues to walke; and that (shee said) Had some ill smels about it. Now this walke Haue I (before she knowes it) thus perfum&#x27;d VVith herbes and flowers, and laid in diuerse places (As &#x27;twere on Altars consecrate to her) Perfumed Gloues, and delicate chaines of Amber, To keepe the aire in awe of her sweet nosthrils: This haue I done, and this I thinke will please her. Behold she comes. VVhy (gentle wife) is now thy VValke too sweet? Thou said&#x27;st of late it had sower aires about it, And found&#x27;st much fault, that I did not correct it. Nay deere wife; I know thou hast said thou hast lou&#x27;d perfumes, No woman better. But yesterday, I saw thee at our garden Smelling on Roses and on purple flowers, And since I hope the Humor of thy Sence Is nothing chang&#x27;d. But yet they haue one sent. VVhat shall I doe? oh I shall neuer please her. VVhy, my sweet heart? Be they my bane then: VVhat sirra, Fido, bring in those Gloues againe You tooke from hence. Ay me, most wretched; how am I misconstru&#x27;d? You haue a faire suit Brother, God giue you joy on&#x27;t. Pray you good Brother; trie if you can cha ̄ ge her mood. And how do&#x27;s Maister Fastidius Briske? VVhen you please Sir. Is&#x27;t possible? A friend of mine, sir. VVhy sir? Sir I will assure you (how euer you esteeme of him) hee&#x27;s a man worthie of regard. Marry he is a Scholler Sir. And he is well trauail&#x27;d. Sir, such a benefit should bind me to you for euer (in my friends right) and I doubt not but his desert shall more than answere my praise. Hee shall not want for those Sir, if Gold and the whole Cittie will furnish him. VVith all my heart Sir, what summe will serue you? Troth Sir I haue promist to meet a Gentleman this morning in Paules, but vpon my returne I&#x27;le dispatch you. As you please Sir; but I goe not thither directly. I were as good haue a Quartane feauer follow me now, for I shall ne&#x27;re bee rid of him: (bring me a Cloke there one) Still vpon his grace at the Court am I sure to be visited; I was a beast to giue him any hope. VVel, would I were in that I am out with him once, and—Come Signior lente, I must co ̄ ferre with you as wee goe. Nay de re wife, I beseech the for sake these moods: looke not like winter thus. Here take my keres, open my counting houses, spread all my wealth before thee, choose any object that delights thee: If thou wilt eate the spirit of Gold, and drinke dissolu&#x27;d Pearle in wine, &#x27;tis for thee. Nay my sweet wife. Come Gentlemen. His name is Macilente sir. And my cousin Sogliardo me thinkes. Let &#x27;hem alone, obscrue &#x27;hem not. Good sir Puntarvolo. See yonder shee is Gentlemen, now (as euer you&#x27;le beare the name of Musitians) touch your instruments sweetly, shee has a delicate eare, I tell you, play not a false note I be seech you. O begin, begin, some sprightly thing; Lord, how my imagination labours with the successe of it: well said, good yfaith, heauen graunt it please her, I&#x27;le not bee seene, for then shee&#x27;le be sure to dislike it. Anger thee, sweet wife? why didst thou not send for Musitians to supper last night thy selfe? Be pleas&#x27;d sweet wife, and they shall ha&#x27; done: &amp; would to Christ my life were done, if I can neuer please thee. Here, Master Macilente: you&#x27;r welcome from the Court Sir; no doubt you haue been grac&#x27;t exceedingly of Master Briskes Mistresse, and the rest of the Ladies for his sake? Is he no more grac&#x27;t amongst&#x27;hem then? say you? VVell, I repent mee I e&#x27;re credited him so much: but (now I see what he is, and that his masking viz or is of) I&#x27;le for bear him no longer: all his lands are morgag&#x27;d to me, and for feited: besides, I haue Bonds of his in my hand for the receit of now xx pound, now xxx, now xxv: still as hee has had a Fan but wagg&#x27;d at him, he would be in a new Sute. VVel, I&#x27;le salute him by a Sergeant, the next time I see him yfaith, I&#x27;le Suit him. Deare wife, haue patience. O good Macilente, let&#x27;s follow and appease her, or the Peace of my life is at an end. Nay, heare me sweet wife, vnlesse thou wilt haue mec goe, I will not goe. O, on my Soule you wrong her, 〈◊〉 , Though she be froward, yet I know she is honest. If you loue me, forbeare; all the Arguments i&#x27;the world shall neuer wrest my heart to beleeue it. Saue you good Sir Puntarvolo. Pray you sir, did you see Master Fastidius Briske? I heard he was to meet your VVorship here. In good time sir. Troth (now I think on&#x27;t) I&#x27;le defer it til some other time. Yes faith Macilente, &#x27;tis best. For looke you sir, I shall so exceedingly offend my wife in&#x27;t, that— O but Signior, had you such a wife as mine is, you wold— VVell sir (how euer you please to forget your selfe) I haue not deseru&#x27;d to be thus plai&#x27;d vpon, but henceforth, pray you forbear my house, for I can but faintly endure the sauor of his breath at my table, that shal thus jade me for my courtesies. Good Sir. VVhy I thanke you Signior, but what&#x27;s that you tell me may concerne my peace so much? Now by heauen Macilente, I acknowledge my selfe ex ceedingly indebted to you, by this kind tender of your loue; and I am sorry to remember that I was euer so rude to neglect a friend of your worth, bring me shoes and a cloke there, I was going to bed if you had not come, what Tauerne is it? O; why Fido, my shoes. Good faith it cannot but please her exceedingly. O sweet wife speak lower, I would not he should heare thee for a world— No whether with him deare wife, I goe alone to a place, from whence I will returne instantly. Good Macilente acquaint not her with it by any meanes, it may come so much the more accepted, frame some other answere, I&#x27;le come backe immedi ately. Come Brother, be not discourag&#x27;d for this man, what? You say well. This is all i&#x27; the bill here? is&#x27;t not? There&#x27;s your money, tell it: and Brother, I am glad I met with so good occasion to shew my loue to you. VVhat is&#x27;t right? Here Macilente. I marry haue I. I&#x27; the Counter? &#x27;Tis very true, she cannot indeed, I thinke. I will doe it. Brother pray you go home afore, this Gent. and I haue some priuate businesse; and tell my sweet wife, I&#x27;le come presently. I? is&#x27;t thus! Some Planet strike me dead. Out lasciuious Strumpet.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Every Man Out of His Humor</div><div class="body">Cordatus and Mitis are brought by Asper to watch a satirical play, in which he is to be an actor, playing malicious Macilente. They keep up a running commentary between, and sometimes during, the scenes. Each character in the play has a ‘humour’ or obsession to be purged. Sogliardo wants to be a gentleman: he takes instruction from Carlo Buffone and purchases himself a coat of arms; he is eventually used to humiliate the conceited court lady Saviolina by showing that she cannot tell true gentility from false. The farmer Sordido is hoarding grain, and resists a court order to sell it because he is gambling on the price going up after a bad harvest; when this does not happen, he tries to hang himself, and repents on hearing the comments of the rustics who cut him down. Puntarvolo plays chivalric wooing games of mock- adultery with his wife, and plans to travel to Constantinople with his wife and dog, venturing money on their safe return; but he loses the inclination when Macilente poisons the dog. Fungoso tries to imitate the courtier Brisk’s fashionable suit, but is continually frustrated because Brisk keeps changing his clothes. The uxorious Deliro seeks advice on how best to please his contrary wife, Fungoso’s sister. Shift, wanting to be known for a machismo he doesn’t really have, represents himself as a robber, but the threat of hanging forces him to admit the truth. Carlo Buffone has a humour of talking: at a tavern, he performs a comic dialogue between two cups, playing both parts himself, and Puntarvolo seals his mouth with wax. The affray brings the Constable, who is minded to arrest them all but is content tv take only Brisk. Fungoso, penniless from his clothing purchases, is left to pay the tavern bill, and has to be rescued by bis brother-in-law, who also calls in the mortgage on ===== PAGE 162 ===== Brisk’s lands; the courtier is left in prison for debts totalling £13,000, curing him of his humour. Macilente is purged of his malign humour by the sight of the Queen.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

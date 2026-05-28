@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LA in All&#x27;s Well That Ends Well · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LA</span>
+</nav>
+
+<h1>LA</h1>
+<p class="lede">in <em>All&#x27;s Well That Ends Well</em> — Shakespeare, WilliamMiddleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>702</td></tr>
+<tr><th>Characters</th><td>3706</td></tr>
+<tr><th>BritDrama no.</th><td>1461</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">ſpeede her foote againe, Led hither by pure loue: which of them both Is deereſt to me, I haue no skill in ſence To make diſtinction: prouide this Meſſenger: My <mark>heart</mark> is heauie, and mine age is weake, Greefe would haue teares, and ſorrow bids me ſpeake. I would I had not knowne him, it was the death of the moſt vertuous gentlewoman,</div>
+<div class="excerpt">Why ſhould he be kill&#x27;d? Thinke vpon patience, pray you Gentlemen, I haue felt ſo many quirkes of ioy and greefe, That the firſt face of neither on the ſtart Can <mark>woman</mark> me vntoo&#x27;t. Where is my ſonne I pray you? Brought you this Letter Gentlemen? And to be a ſouldier. Returne you thither. Finde you that there? Parolles was it not?</div>
+<div class="excerpt">to beare along. Not ſo, but as we change our courteſies, Will you draw neere? Alas! and would you take the letter of her: Might you not know ſhe would do, as ſhe <mark>has</mark> done, By ſending me a Letter. Reade it agen. I am S. Iaques Pilgrim, thither gone: Ambitious loue hath ſo in me offended, That bare-foot plod I the cold ground</div>
+<div class="excerpt">heeles of worth. He is too good and faire for death, and mee, Whom I my ſelfe embrace, to ſet him free. Ah what ſharpe ſtings are in her mildeſt words? Rynaldo, you <mark>did</mark> neuer lacke aduice ſo much, As letting her paſſe ſo: had I ſpoke with her, I could haue well diuerted her intents, Which thus ſhe hath preuented. What Angell ſhall</div>
+<div class="excerpt">That he does waigh too light: my greateſt greefe, Though little he do feele it, ſet downe ſharpely. Diſpatch the moſt conuenient meſſenger, When haply he ſhall <mark>heare</mark> that ſhe is gone, He will returne, and hope I may that ſhee Hearing ſo much, will ſpeede her foote againe, Led hither by pure loue: which of them both Is deereſt</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I pray you ſir, are you a Courtier? Sir I am a poore freind of yours, that loues you. I thinke ſir, you can eate none of this homely meate. You were lately whipt ſir as I thinke. Doe you crie O Lord ſir at your whipping, and ſpare not me? Indeed your O Lord ſir, is very ſequent to your whipping: you would anſwere very well to a whipping if you were but bound too&#x27;t. I play the noble huſwife with the time, to enter taine it ſo merrily with a foole. And end ſir to your buſineſſe: giue Hellen this, And vrge her to a preſent anſwer backe, Commend me to my kinſmen, and my ſonne, This is not much. Not much imployement for you, you vnder ſtand me. Haſt you agen. You are too young, too happie, and too good To make your ſelfe a ſonne out of my blood. What is the matter. Why ſhould he be kill&#x27;d? Thinke vpon patience, pray you Gentlemen, I haue felt ſo many quirkes of ioy and greefe, That the firſt face of neither on the ſtart Can woman me vntoo&#x27;t. Where is my ſonne I pray you? Brought you this Letter Gentlemen? And to be a ſouldier. Returne you thither. Finde you that there? Parolles was it not? A verie tainted fellow, and full of wickedneſſe, My ſonne corrupts a well deriued nature With his inducement. Y&#x27; are welcome Gentlemen, I will intreate you when you ſee my ſonne, to tell him that his ſword can neuer winne the honor that he looſes: more Ile intreate you written to beare along. Not ſo, but as we change our courteſies, Will you draw neere? Alas! and would you take the letter of her: Might you not know ſhe would do, as ſhe has done, By ſending me a Letter. Reade it agen. I am S. Iaques Pilgrim, thither gone: Ambitious loue hath ſo in me offended, That bare-foot plod I the cold ground vpon With ſainted vow my faults to haue amended. Write, write, that from the bloodie courſe of warre, My deereſt Maſter your deare ſonne, may hie, Bleſſe him at home in peace. Whilst I from farre, His name with zealous feruour ſanctifie: His taken labours bid him me forgiue: I his deſpightfull Iuno ſent him forth, From Courtly friends, with Camping foes to liue, Where death and danger dogges the heeles of worth. He is too good and faire for death, and mee, Whom I my ſelfe embrace, to ſet him free. Ah what ſharpe ſtings are in her mildeſt words? Rynaldo, you did neuer lacke aduice ſo much, As letting her paſſe ſo: had I ſpoke with her, I could haue well diuerted her intents, Which thus ſhe hath preuented. What Angell ſhall Bleſſe this vnworthy husband, he cannot thriue, Vnleſſe her prayers, whom heauen delights to beare And loues to grant, repreeue him from the wrath Of greateſt Iuſtice. Write, write Rynaldo, To this vnworthy husband of his wife, Let euerie word waigh heauie of her worth, That he does waigh too light: my greateſt greefe, Though little he do feele it, ſet downe ſharpely. Diſpatch the moſt conuenient meſſenger, When haply he ſhall heare that ſhe is gone, He will returne, and hope I may that ſhee Hearing ſo much, will ſpeede her foote againe, Led hither by pure loue: which of them both Is deereſt to me, I haue no skill in ſence To make diſtinction: prouide this Meſſenger: My heart is heauie, and mine age is weake, Greefe would haue teares, and ſorrow bids me ſpeake. I would I had not knowne him, it was the death of the moſt vertuous gentlewoman, that euer Nature had praiſe for creating. If ſhe had pertaken of my fleſh and coſt mee the deereſt groanes of a mother, I could not haue owed her a more rooted loue. With verie much content my Lord, and I wiſh it happily effected. Ir reioyces me, that I hope I ſhall ſee him ere I die. I haue letters that my ſonne will be heere to night: I ſhall beſeech your Lordſhip to remaine with mee, till they meete together.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — All&#x27;s Well That Ends Well</div><div class="body">When Béftrami’s father dies, he becomes a royal ward, and is summoned to court. H@léfhi loves him and is sad to see him go, but knows she can never have him because of the disparity in their rank. Phe@uDowager (@GuntEesS learns of her love and permits her to go to court and use her father’s medical knowledge, passed on to her on his deathbed, to cure the King of the fistula which afflicts him. ‘The Kimig has been advised to remain neutral in the war between Florence and Siena, but allows his lords to join on either side; Bertram, however, is deemed too young and required to stay at court. Helen wagers her life on the efficacy of her cure, and asks as her reward to be allowed her own choice of husband. She successfully heals the fistula and selects Bertram. He protests vehemently, but the King browbeats him into marriage. Rather than consummate the union, however, he runs away to the war and sends Helen word that he will only acknowledge her as his wife if she gets the ring from his finger and presents him with a child which he has lawfully begotten on her. She takes herself off, leaving word that she is going on a pilgrimage. Bertram acquits himself well in battle, but his companion Paroles allows the company’s drum to be captured by the Sienese. Passing through Florence, Helen encounters a widow whose daughter, Diama, is being solicited by Bertram for sex. She arranges for the widow to agree, on condition that Bertram gives up his ring; Helen then takes Diana’s place in bed, has sex with her husband, and exchanges rings with him. Meanwhile Paroles insists on trying to recover the lost drum, intending to return with no drum and a heroic story of insurmountable obstacles. He is ambushed by Florentine soldiers posing as the enemy, blindfolded, and put in fear of his life; under interrogation, he betrays the Florentine army’s military secrets and makes some uncomplimentary remarks about Bertram, only to find when the blindfold is removed that his captors are Florentines and that Bertram is present. With the war coming to an end, Bertram returns to France. Since Helen is presumed dead, he makes preparations to marry again, and sends his proposed fiancée his ring. The King identifies it as the ring he himself gave to Helen. Diana arrives, claiming the right to marry him after their supposed night together in Florence, and produces his own ring as proof. Bertram attempts to lie his way out of the situation, but is repeatedly caught out. Diana introduces Helen,…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

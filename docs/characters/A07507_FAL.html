@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FAL in The Phoenix · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FAL</span>
+</nav>
+
+<h1>FAL</h1>
+<p class="lede">in <em>The Phoenix</em> — Middleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>572</td></tr>
+<tr><th>Characters</th><td>2909</td></tr>
+<tr><th>BritDrama no.</th><td>1420</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">fit, <mark>away</mark> with handkirchers, drie vp eies, at funeral we muſt cry: now let&#x27;s be wiſe. It fals ſweetly. You muſt thanke your good friendes then ſir. Theeues, my <mark>two</mark> hand ſword, ime rob&#x27;d &#x27;ith Hal, Latronello, Knaues, come down, my <mark>two</mark> hand ſword I A pox on him for a lazie knaue, would hee <mark>bee</mark> taken? Pittie hee&#x27;s theefe yfaith,</div>
+<div class="excerpt">yfayth, for we are all full of cor ruption here,—hearke you my friends. By my troth if you were no crueller then I, I could find in my hart to let him <mark>goe</mark>. Nay I <mark>did</mark> but to trie you, if you haue no pittie, Ile ha none, <mark>away</mark> hee&#x27;s a Theefe, to priſon with him. Are you content, bring him backe, nay then you ſhall not <mark>goe</mark>. Ile</div>
+<div class="excerpt">chuſe for her, like of it, nor con ſent too&#x27;t. Thy husbands brother: ſpeak certainly prethee. Ile ſwear then he is his brother indeed, &amp; by the ſurer ſide: I craue heartie pardon ſweete kinſman that thou haſt ſtood ſo long vnſaluted in the way of kinred. Welcome to my boord: I haue a bed for thee, My daughters husbands brother ſhall</div>
+<div class="excerpt">will be cruell. You deſire that ▪ —Ile truſt no priſon with you, Ile make you lye in mine own houſe, or Ile know why I ſhal not. You ſhall be hang&#x27;d out a&#x27;th way, <mark>away</mark> with him Latronello, and Fucato,—Officers I diſcharge you my houſe, I like not your companie. Report me as you ſee me, fire and fuell, If men be Iewes, Iuſtices</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Why ſir? How ſir? Would hee die ſo like a Polititian, &amp; not once write his minde to me? I make my brother (ſaies he) full and whole Ex ecutor, honeſtly done of him yfaith, ſeldome can a man get ſuch a brother: and here again ſaies he, very vertu ouſly, I bequeath all to him and his diſpoſing: an excel lent fellow a my troth, would you might all die no worſe, Gentlemen. If ſhe marry by your conſent, choyce and liking make her dowrie fiue thouſand crowns: hum, fiue thou ſand crownes? therefore by my conſent ſhee ſhall nere marry, I will neither chuſe for her, like of it, nor con ſent too&#x27;t. Thy husbands brother: ſpeak certainly prethee. Ile ſwear then he is his brother indeed, &amp; by the ſurer ſide: I craue heartie pardon ſweete kinſman that thou haſt ſtood ſo long vnſaluted in the way of kinred. Welcome to my boord: I haue a bed for thee, My daughters husbands brother ſhall commaund, Keyes of my Cheſts and Chambers.— I haue ſtable for thy horſe, chamber for thy ſelfe, and a loft abou for thy lowzie lackie, all fit, away with handkirchers, drie vp eies, at funeral we muſt cry: now let&#x27;s be wiſe. It fals ſweetly. You muſt thanke your good friendes then ſir. Theeues, my two hand ſword, ime rob&#x27;d &#x27;ith Hal, Latronello, Knaues, come down, my two hand ſword I A pox on him for a lazie knaue, would hee bee taken? Pittie hee&#x27;s theefe yfaith, I ſhould entertaine him elſe. A my troth, a fine knaue, &amp; ha&#x27;s anſwered me glo riouſly, what wages wilt thou take after thou art ha ̄ g&#x27;d? He ſayes true too yfayth, for we are all full of cor ruption here,—hearke you my friends. By my troth if you were no crueller then I, I could find in my hart to let him goe. Nay I did but to trie you, if you haue no pittie, Ile ha none, away hee&#x27;s a Theefe, to priſon with him. Are you content, bring him backe, nay then you ſhall not goe. Ile be as cruel as you can wiſh: y&#x27;are content, be like you haue a tricke to breake priſon, or a bribe for the Officers. For you ſir? what colour&#x27;s ſiluer I pray, you nere ſaw mony in your life:—Ile not truſt you with him, La tronello and Fucato, lay hold vpon him, to your charge I commit him. Nay if I muſt be cruell, I will be cruell. You deſire that ▪ —Ile truſt no priſon with you, Ile make you lye in mine own houſe, or Ile know why I ſhal not. You ſhall be hang&#x27;d out a&#x27;th way, away with him Latronello, and Fucato,—Officers I diſcharge you my houſe, I like not your companie. Report me as you ſee me, fire and fuell, If men be Iewes, Iuſtices muſt be cruell. Iuſtice my Lord, I haue my Neece ſtolne from me Sh&#x27;as left her Dowrie with me, but ſhee&#x27;s gone, Ide rather haue had her loue then her money I, This, this, is one of them, Iuſtice my Lord: I know him by his face, this is the Theefe. Ile be her warrant my Lord. S&#x27;foot, worſe then I was before I kneeld, I am no Iuſtice now, I know I ſhall be ſome Inne-keeper at laſt. I&#x27;me a begger now, worſe then an Inne-keeper.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Phoenix</div><div class="body">The old Duke of Ferrara has reigned 45 years, and is now near death. He accepts his nobles’ advice that his son, ===== PAGE 76 ===== Prince Phoenix, should travel to other nations in order to prepare himself for government. Phoenix suspects a stratagem to have him out of the country at the time his father dies, jeopardizing the succession, so he decides instead to travel incognito within Ferrara itself, witnessing abuses which require reformation, but which would be concealed from a visitor known to be of high rank; he will be attended only by his servant Fidelio. Fidelio has a new stepfather, a sea-captain: against all advice, his mother Castiza has remarried, only to find herself tied to an abusive bully. The captain also regrets the marriage and is looking for a way out of it; so he agrees to sell his wife to the courtier Proditor. Phoenix and Fidelio hear of this and infiltrate the sales meeting in disguise: Fidelio poses as the scrivener who has.drawn up the contract, and Phoenix as a potential investor in the captain’s next voyage. Once the contract is signed and the money handed over, they confront the captain and force him to go into exile, giving the money to Castiza. Fidelio’s girlfriend has just lost her father, whose will leaves her in the custody of her uncle, the corrupt Justice Falso. He proposes to marry her, threatening to withhold payment of her dowry if she should marry anyone else (such as Fidelio). Fidelio goes to see her in disguise, bringing a letter and gift from himself, but on the way he and Phoenix are attacked by robbers and the token is stolen. The thieves are in fact Falso’s servants in disguise, seeking to supplement the meagre wage he pays them. Phoenix captures one of them and has him brought before a judge; but this happens to be Falso himself, and he commits the prisoner to the custody of the other servants, his accomplices. The niece explains to Phoenix what has happened and absconds with him and Fidelio. Falso also abets his own daughter’s adultery with her husband’s brother, a knight. She sets up an assignation, promising to give him money: he is gently to disturb the door-knocker after her jeweller husband has gone to bed, whereupon the maid will let him in. Phoenix accidentally gives the signal and is admitted by mistake. Meeting him in darkness, the wife does not notice the error, and gives him the money. Meanwhile the knight is arrested for debt. He takes the officers to his lover’s house, expecting to receive the…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

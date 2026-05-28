@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BER in The Maid of Honor · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BER</span>
+</nav>
+
+<h1>BER</h1>
+<p class="lede">in <em>The Maid of Honor</em> — Massinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1632</td></tr>
+<tr><th>Words</th><td>1572</td></tr>
+<tr><th>Characters</th><td>8345</td></tr>
+<tr><th>BritDrama no.</th><td>2291</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">With this Iewell Presented to Camiola, prepare This night a uisit for me. I shall have Your company Gallants I perceive, if that The King will <mark>heare</mark> of war. And such may <mark>bee</mark> usefull To run <mark>away</mark> with, should we be defeated. You are well provided Signior By no meanes backe &#x27;em. Vnlesse you know your courage sympathize</div>
+<div class="excerpt">Resolve me, if thou look&#x27;st for Bent knees in adoration? If he <mark>has</mark> a name, Assoone as spoken, &#x27;tis writ on my <mark>heart</mark>, I am his bond man. The whole sex For her s ke <mark>must</mark> be deifi&#x27;d. How I wander In my imagination, yet cannot Ghesse who this Phoenix should be! Pray you sp ake&#x27;t againe, there&#x27;s musicke in her name Once more I pray</div>
+<div class="excerpt">neighbour village; you will not finde there Your Masters of Dependencies to take up A drunken brawle, or to get you the names Of valiant Cheivaleirs, fellowes that will <mark>bee</mark> For a clo ke with thrice died veluet, and a cast suite Kick&#x27;d down the stairs. A knave with halfe a britch there, And no shirt (being a thing superfluous, And worne</div>
+<div class="excerpt">that are the essence of my being, The anchor of my hopes; the reall substance Of my felicity, in your disdaine Turne all to fading and deceiving shaddowes? You <mark>must</mark> confesse it. But answer love with love, and seale the contract In the vniting of our soules, how gladly (though now I were in action, and assur&#x27;d, Following my</div>
+<div class="excerpt">obligation! To marry her! &#x27;twas my uil ultra ever! The end of my ambition! O that now The holy man, she present, were prepar&#x27;d To joyne our hands, but with that speed, my <mark>heart</mark> Wishes, mine eyes might see her. Swear it? Collect all oaths, and imprecations Whose least breach is damnation, and those Ministred to me in a forme more dreadfull,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">With this Iewell Presented to Camiola, prepare This night a uisit for me. I shall have Your company Gallants I perceive, if that The King will heare of war. And such may bee usefull To run away with, should we be defeated. You are well provided Signior By no meanes backe &#x27;em. Vnlesse you know your courage sympathize With the daring of your horse. You will not leape then Ore an out-worke in your shirt You had rather stand A marke to try their muskets on? &#x27;Tis somewhat more Then roaring in a t verne, or a brothell, Or to steale a Constable from a sleeping watch; Then burne their halberds; or safe guarded by Your tenants sonnes, to carry away a Maypole From a neighbour village; you will not finde there Your Masters of Dependencies to take up A drunken brawle, or to get you the names Of valiant Cheivaleirs, fellowes that will bee For a clo ke with thrice died veluet, and a cast suite Kick&#x27;d down the stairs. A knave with halfe a britch there, And no shirt (being a thing superfluous, And worne ou of his memorie) if you beare not Your selves both in, and upright with a provant sword Will slash your skarlets, and your plush a new way; Or with the hilts thunder about your eares Such musicke as will make your worships dance To the dolefull tune of La yr ma, You are courteous. If forcing this sweet favour from your lips Faire Madam, argue me of too much boldnesse When you are pleas&#x27;d to understand, I take A parting kisse, if not excuse, at least &#x27;Twill qualifie the offence. Doe you alone, And with an unexampl&#x27;d cruelty, Inforce my absence, and deprive me of Those blessings, which you with a polish&#x27;d phrase Seeme to insinuate, that I doe possesse, And yet tax me as being guilty of My wilfull exile? what are Titles to me? Or popular suffrage? or my neerenesse to The King in blood? or fruitfull Sicilie, Though it confess&#x27;d no Soveraigne but my selfe, When you that are the essence of my being, The anchor of my hopes; the reall substance Of my felicity, in your disdaine Turne all to fading and deceiving shaddowes? You must confesse it. But answer love with love, and seale the contract In the vniting of our soules, how gladly (though now I were in action, and assur&#x27;d, Following my fortune; that plum&#x27;d victory Would make her glorious stand upon my tent) Would I put off my armour, in my heate Of conquest, and like Anthonie pursue My Cleopatra! will you yet looke on me With an eye of Favour? If so, what diverts Your Favour from me? What then? A dispensation Lady Will easiely absolve me. Is there no hope left me? And this is your Determinate sentence? Far well then fairest cruell. All thoughts in me Of Women perish. Let the glorious light Of noble war extinguish loves dimne taper That onely lends me light to see my follie; Honor, be thou my everliving Mistresse, And sond affection as thy bond-slave serve thee. Exit Ber: O that mountaines Were heap&#x27;d upon me, that I might expire A wretch no more remembred. When you know me better, You will make void this promise: Can you call me Into your memory. Let me dye with it, Vpon my breast. This is no time, nor place for flaterry Sir, Pray you stile me as I am, a wretch forsaken Of the world, as my selfe. I if that you want power Sir, Lip comfort cannot cure me, pray you leave mee To mine owne private thoughts. Have you Excun Roderig. Iaco. Anthon . Gaspar . Authority to loose their bonds, yet leave The brother of your King, whose worth disdaines Comparison with such as these, in irons? If ransome may redeeme them, I have landes, A patrimony of mine owne assign&#x27;d me, By my deceased sire to satisfie What ere can be demanded for my freedome. I finde it now That misery nere comes alone. But grant The King is yet inexorable, time May worke him to a feeling of my sufferings. I have friends, that swore their lives and fortunes were At my devotion, and among the rest Your selfe my lord, when forfeited to the Law For a foule murther, and in cold blood done, I made your life my gift, and reconcil&#x27;d you To this incensed king, and got your pardon. Beware ingratitude. I know you are rich And may pay downe the Sum. And will Astutio prove then To please a passionate man, the kings no more, False to his maker and his reason? which Commandes more then I aske? ô summer friendship, Whose flattering leaves that shaddowed us in Our prosperity, with the least gust drop off In th&#x27;Autumne of adversity! How like A prison is to a grave! when dead we are With solemne Pompe brought thither, and our heires, (Masking their joy in false dissembled teares) Weepe ore the hearse, but earth no sooner covers The earth brought thither, but they turne away With inward smiles, the dead no more remembred. So enter&#x27;d in a prison. Pray you leave me, doe; And tell the cruell king, that I will weare The e etters &#x27;till my flesh, and they are one Incorporated substance. In my selfe, As in a glasse, I&#x27;ll looke on humane frailty, And curse the height of Royall blood: since I In being borne neare to Iove, am neare his thunder. Cedars once shaken with a storme, their owne Exit Astutio. Waight gr b their rootes out. Le d me where you please; I am his, not fortunes martyr, and will dye The great example of his cruelty. The relation Will not I feare deserve your thankes. Ministers of mercy Mocke not calamitie. Ha! &#x27;tis no vision! Or if it be, the happiest that ever Appear&#x27;d to sinfull flesh! who&#x27;s here! His face Speakes him Adorni ! but some glorious Angell Concealing its divinity in his shape, Hath done this miracle, it being not an act For wolvish man. Resolve me, if thou look&#x27;st for Bent knees in adoration? If he has a name, Assoone as spoken, &#x27;tis writ on my heart, I am his bond man. The whole sex For her s ke must be deifi&#x27;d. How I wander In my imagination, yet cannot Ghesse who this Phoenix should be! Pray you sp ake&#x27;t againe, there&#x27;s musicke in her name Once more I pray you Sir. Curs&#x27;d Atheist that I was, Onely to doubt it could be any other, Since she alone in the abstract of her selfe, Tha small, but ravishing substance comprehends What ever 〈◊〉 , or can be wished, in the I dea of a woman. O what service, Or sacrifice of duty can I pay her! I not to live, and dye her charities slave, Which is resolv&#x27;d already. This does ingage me further, A payment! an increase of obligation! To marry her! &#x27;twas my uil ultra ever! The end of my ambition! O that now The holy man, she present, were prepar&#x27;d To joyne our hands, but with that speed, my heart Wishes, mine eyes might see her. Swear it? Collect all oaths, and imprecations Whose least breach is damnation, and those Ministred to me in a forme more dreadfull, Set heaven, and hell before me, I will take &#x27;em: False to Camiola ? Never. Shall I now Begin my vowes to you? I know him. So much Sir As I am ever your&#x27;s for&#x27;t, now me thinkes I walke in ayre! divine Camiola, But words cannot expresse thee. I&#x27;ll build to thee An altar in my soule, on which I&#x27;ll offer A still increasing sacrifice of duty. Exit Ber No, no, it cannot be, yet but Ca i la, There is no stop betweene me and a crowne, Then my ingratitude! a sinne in which All sinnes are comprehended! Aide me vertue, Or I am lost. Then m so horrid oathes, And hell. deepe i precations made against it. Walkes she on woollen fee e! It is confess&#x27;d, yet why should I to winne From you, that hazzard all to my poore nothing, By false play send you o f a looser from me? I&#x27;am already too too much ingag&#x27;d To the king my brothers anger; and who knowes But that his doubts, and politick feares, should you Make me his equall, may draw war upon Your rritories, were that breach made up I should with joy embrace, what now I feare To touch but with due reverence. I am wholly yours. Indisposed, but I attend you. Exeunt I dare not entertaine An ill one of your goodnesse. O I am blasted! In your pittie My cruelty shewes more monstrous, yet I am not, Though most ingratfull, grown to such a height Of impudence, as in my wishes onely To aske your pardon. If as now I fall Prostrate before your feete, you will vouchsafe To act your owne revenge, treading upon me As a viper eating through the bowels of Your benefits, to whom with libertie I owe my being, &#x27;twill take from the burthen That now is insupportable. I will doe it, And what&#x27;s more, in despite of sorrow, live To see my selfe vndone, beyond all hope To be made up againe. I&#x27;ll live and die so.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Maid of Honor</div><div class="body">Before the start of the action, Aurelia, Duchess of Siena, refused a marriage proposal by Ferdinand, Duke of Urbino. In reprisal, Ferdinand attacked Siena, conquered it, but then found himself trapped inside the city by the regrouped Sienese troops. To raise the siege, he invokes a defensive treaty with Sicily, but King Roberto refuses to honour it because Ferdinand was the aggressor and has brought his troubles on himself. However, he allows his bastard half-brother Bertoldo to go to war with a volunteer army. The court favourite Fulgentio takes advantage of Bertoldu: absence to woo his fiancée, Camiola. But she misses Bertoldo and refuses Fulgentio; his mpaste 1s to produce Roberto’s ring and make it a reval order that she accept him. She wishes Bertoldo were present to defend her honour: another suitor. Adurni. steps in. fights a duel, and wounds Fulgentio, which gets him into trouble with the King. Far trom raising the siege. Bertolde is routed by Gonzaga, Aurelia’s general. Both men are kKrughts «1 Malta, and Gonzaga is affronted to find Bertalds: unmindtul of chivalry as to be leading an ara searnst a lady’s interests. Roberta seuds Astutio te ransens: the Sicilian prisoners of war, but Bertoldo from the payment of his ransam by any private cen © aiid, expressly crcbeudhe + a &#x27; torbnds ihe arrangement and ignores the order and sends Adurnt Go pay the ratsern Bertoldy is released. abligation to marry Camtola: bat Aurelia asks 1) him, falls in love with huni. arranges a dispersaticn redoubling his ctstrae tee ered toe release him from his vow to marry © cate to Sicily with him to arrange Chere ortreniss wetunal intervenes, apparently to stop the weddtap. but tars: out that she has taken helv orders aed ab safer nunnery.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

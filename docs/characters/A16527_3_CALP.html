@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CALP in Julius Caesar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> ›
+  <span>CALP</span>
+</nav>
+
+<h1>CALP</h1>
+<p class="lede">in <em>Julius Caesar</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>887</td></tr>
+<tr><th>Characters</th><td>5094</td></tr>
+<tr><th>BritDrama no.</th><td>1553</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 25 (<em>did, whil, death, might, minde, fortune…</em>). Matches are highlighted.</p>
+<div class="excerpt">brings, To ſcorne our confidence in worldly things. And chancde there euer accidents more ſtrange, Than in this ſtormie bounds where we remaine? A ſhepheardes Staffe <mark>did</mark> here t&#x27;a Scepter change, The nurceling of a woolfe ouer men to raigne: A little village grew a mightie towne, Which whilſt it had no king, held many a crowne. Then</div>
+<div class="excerpt"><mark>fortune</mark> bent to mocke vain worldlings eares Doth change diſpaires in hopes, hopes in diſpaires. That gallant Graecian, whoſe great wit ſo ſoone Th&#x27;innumerable army <mark>did</mark> orecome, Were not he was vndone, had bin vndone, And if not baniſht had not had a home: To him feare corage gaue (what wondrous change,) And many doubts a reſolution</div>
+<div class="excerpt">armes, That repreſented had his ſire to me. Yet doth that idoll which my <mark>thoughts</mark> adore, With me of late moſt ſtrictly match remaine, For where my armes but held him whiles before, Now in my heart I ſhall him ſtill retaine. That (though I haue no pretious things t&#x27;impart) Thy deity may by me b&#x27;acknowledgde oft, Still offring vp my</div>
+<div class="excerpt">conſtraind the laſt diſtreſſe to trie. What warnings large were in a time ſo ſhort, Of that darke courſe which by his <mark>death</mark> now ſhines? It ſpeechleſſe wonders plainely <mark>did</mark> report, It men reueald by words, and gods by ſignes: Yet by the chaines of deſtinies being bound, He ſaw the ſword, but could not ſcape the wound. O what a curtine</div>
+<div class="excerpt">ſtate bin rulde? though now by none, Which firſt obeyd but one, then two, then ten, Then by degrees returnd to two, and t&#x27;one, Of which three ſtates their ruine <mark>did</mark> abide, Two by twoes luſts, and one by two mens pride. What reuolutions huge haue hapned thus, All by a ſecret violence being led, Though ſeeming but by accident</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">But nought in th&#x27;earth dooth more inconſtant proue. I onely waile my life, and not his death, That now amongſt th&#x27;immortalls doth repoſe, And ſhall ſo long as I haue blood or breath, To furniſh forth thoſe elements of woes. I care not who reioyce, ſo I lament, That do to darkenes dedicate my daies, And ſince the light of my delight is ſpent, Shall haue in horror all Apolloes raies. I will retire my ſelfe to waile alone, As do the truſtie Turtles for their mates, And my misfortune alwayes bent to mone, Will ſpurne at pleaſures, as empoiſond baites. No ſecond gueſt ſhall preſſe great Caeſars bed, Warmd by the flames to which he firſt gaue life, I thinke there may be greater honour had, Being Caeſars widow, than anothers wife. This had afforded comfort for my harmes, If I (ere chancde abandond thus to be,) Had had a little Caeſar in mine armes, That repreſented had his ſire to me. Yet doth that idoll which my thoughts adore, With me of late moſt ſtrictly match remaine, For where my armes but held him whiles before, Now in my heart I ſhall him ſtill retaine. That (though I haue no pretious things t&#x27;impart) Thy deity may by me b&#x27;acknowledgde oft, Still offring vp my thoughts vpon my hart, My ſacred flame ſhall alwayes mount aloft. WHat fooles are thoſe that do repoſe their truſt, On what this maſſe of miſerie affords? And bragging but of th&#x27;excrements of duſt, Of lifeleſſe treaſures labour to be lords: Which like the Syrens ſongs, or Circes charmes, With ſhadows of delight hide certaine harmes. Ah whilſt they ſport on pleaſures icie ground, Oft poiſond by proſperitie with pride, A ſodaine fall doth floating ioyes confound, Of thoſe that ſtumble after th&#x27;eieleſſe guide, That ſo inconſtantly her ſelfe doth beare, To hope th&#x27;vnhappy, happy haue cauſe to feare. The fortunate that bathe in flouds of ioyes, To periſh whiles amidſt their pleaſures chaunce, And mirthleſſe wretches wallowing in annoyes, Oft by aduerſitie themſelues aduance: Whilſt fortune bent to mocke vain worldlings eares Doth change diſpaires in hopes, hopes in diſpaires. That gallant Graecian, whoſe great wit ſo ſoone Th&#x27;innumerable army did orecome, Were not he was vndone, had bin vndone, And if not baniſht had not had a home: To him feare corage gaue (what wondrous change,) And many doubts a reſolution ſtrange. He that tolde one that then was fortunes childe, As if with horror to congeale his blood, That Caius Marius being from Rome exilde: Wretch&#x27;d on the ruines of great Carthage ſtood: Thogh both being plag&#x27;d by griefe, and by diſgrace The conſulſhip regain&#x27;d, and di&#x27;d in peace. And that great Pompey (all the worlds delight,) Whom of his theater then th&#x27;applauſes pleaſd, Whilſt praiſe-tranſported eies endeerd his ſight, That by youths toiles ſhould haue his age then eaſde: He by one blow of fortune loſt farre more, Then many a battell conquerd had before. Such ſodaine changes ſo diſturbe the ſoule, That ſtill the iudgement ballancde is by doubt, But on around, what wonder though things roule, And ſince within a circle turne about? Whilſt heauen on earth ſtrange alterations brings, To ſcorne our confidence in worldly things. And chancde there euer accidents more ſtrange, Than in this ſtormie bounds where we remaine? A ſhepheardes Staffe did here t&#x27;a Scepter change, The nurceling of a woolfe ouer men to raigne: A little village grew a mightie towne, Which whilſt it had no king, held many a crowne. Then by how many ſundry ſortes of men, Hath this great ſtate bin rulde? though now by none, Which firſt obeyd but one, then two, then ten, Then by degrees returnd to two, and t&#x27;one, Of which three ſtates their ruine did abide, Two by twoes luſts, and one by two mens pride. What reuolutions huge haue hapned thus, All by a ſecret violence being led, Though ſeeming but by accident to vs, Yet in the depths of heauenly breaſts firſt bred; As arguments demonſtratiue to proue, That weakneſſe dwells below, and powre aboue. Lo Caeſar, though being burdend in ſhort ſpace, Both with ſtrange nations, and his countries ſpoiles, Euen when he ſeemd by warre t&#x27;haue purchaſde peace, And roſes of ſweete reſt from thornes of toiles: Then whilſt his minde and fortune raiſe moſt hie, Hath bin conſtraind the laſt diſtreſſe to trie. What warnings large were in a time ſo ſhort, Of that darke courſe which by his death now ſhines? It ſpeechleſſe wonders plainely did report, It men reueald by words, and gods by ſignes: Yet by the chaines of deſtinies being bound, He ſaw the ſword, but could not ſcape the wound. O what a curtine ouer our knowledge hings! Whiles cloſde, whiles op&#x27;ned by th&#x27;aetheriall hoſte, Which makes vs ſometime ſharpe to ſee ſmall things, And yet quite blinde when as we ſhould ſee moſt: That curious braines may reſt amazde at it, Whoſe ignorance makes them preſume of it. Then let vs liue, ſince all things change below, When raiſde moſt high as thoſe that once may fall, And hold when by diſaſters brought more lowe, The minde ſtill free what euer elſe be thrall: Thoſe Lordes of Fortune ſweeten euery ſtate, That can command the ̄ ſelues, thogh not their fate.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Julius Caesar</div><div class="body">Juno remains angry that a Trojan adjudged Venus the most beautiful goddess. Through the centuries, she has sought to avenge herself by harrying the Trojans’ 1607 descendants, the Romans, most recently by fomenting a civil war. But the victor of that war was Caesar, who traces his descent from Venus; he has conquered much of the world and established his ascendancy in Rome, but Juno now intends to work his overthrow. Caesar explains to Antonius that he wants to be a king not for personal ambition but to comply with a Sibylline prophecy which makes monarchy a precondition for a Roman victory in the east. Antonius warns him that there are Romans who desire his death. Cicero laments the loss of Rome’s liberty, and Decius Brutus agrees that, though Caesar’s past actions have been honourable, he should have demobilized his armies now that there is no further external threat. Brutus and Cassius agree that they will not participate in any ceremony aimed at making Caesar a king. Brutus is Caesar’s friend, but reasons that he must assassinate the tyrant for the public good. His wife Portia wrings the secret of the conspiracy out of him. Brutus and Cassius recruit conspirators, both patriots and men who have a personal grudge against Caesar. However, they exclude Cicero and agree not to kill Antonius. Caesar’s wife Calpurnia tries to persuade him not to go to the Senate on the Ides of March — an astrologer has foretold his death, and she herself has had bad dreams - but Decius Brutus induces him to change his mind. The conspirators assassinate Caesar. Antonius makes a show of friendship with them, but is obviously planning reprisals. A messenger brings Caesar’s wife Calpurnia a full account of the circumstances of the murder.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> page.
+</div>
+</div></body></html>

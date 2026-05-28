@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WA in The Valiant Scot · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_00.html">Cluster 0 — 0: wallace, selby, clifford</a> ›
+  <span>WA</span>
+</nav>
+
+<h1>WA</h1>
+<p class="lede">in <em>The Valiant Scot</em> — W., J.</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>959</td></tr>
+<tr><th>Characters</th><td>4953</td></tr>
+<tr><th>BritDrama no.</th><td>2189</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 0 (<em>wallace, selby, clifford, bloud, own, scot…</em>). Matches are highlighted.</p>
+<div class="excerpt">do your worſt, Torture, I ſpit defiance in thy face, And death, embrace thee with as kinde a narme As if thou wert. All joyne hands, Thus like a mountaine Cedar <mark>Wallace</mark> ſtands Amongſt a grove of friends, not to remove For Edwards thunder, nor the frowne of Jove, I&#x27;le hew the yoke from off my countries necke, Or never houſe, this</div>
+<div class="excerpt">as yours is, I&#x27;ze a pure Scotch ſouldier out at heeles, and am glad to beſtirr my ſtumps, guide theſe gude men y&#x27;are wranged Countrymen, wha that fawſe traytor <mark>Wallace</mark> has miſuſand in ſike wiſe. By my ſawle ſir wad I might come To&#x27;th making of ſike a match. What ſen ye man? Exeunt Moun. and Glaſ. Wa ho ro ſol fa, ſol fa. Sol la,</div>
+<div class="excerpt">rais&#x27;d ſo high Towards heaven, then when hee&#x27;s toſſ&#x27;d upon the waves It muſt be a hand omnipotent there that ſaves, But how came you ſir hither? Ha? Elbowe? idle: <mark>Selby</mark> my fathers murderer? Thinke not upon it, ſit eat heartily Thy laſt, ſit downe, I ſay, never to riſe, Drinke wine, drinke deepe, let thy ſoule reele to hell. I&#x27;le</div>
+<div class="excerpt">O that phyſicke had the power to make thee yong, I&#x27;de fetch thee drugs from th&#x27;utmoſt of the world, And then would arme thee, or, into thy veines Halfe my owne <mark>bloud</mark> I&#x27;de power, to lend thee ſtrength, That I might kill thee nobly. How now? I&#x27;le ſeeke for fire. Not I, eate and get ſtrength, I&#x27;le ſeek for fire, Vnleſſe I be a</div>
+<div class="excerpt">countries necke, Or never houſe, this religious Fryer Is a full witneſſe to the ſacred bond Twixt heaven and me, which on my part I&#x27;le keep, Or pay the forfeit with my <mark>bloud</mark>. Are they turn&#x27;d hangmen? They are welcome, let not one ſullen browe Be ſeene in all this fiery firmament. Then we begin, And to a tyrant thus ſayes a loyall ſubject,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Butchers do your worſt, Torture, I ſpit defiance in thy face, And death, embrace thee with as kinde a narme As if thou wert. All joyne hands, Thus like a mountaine Cedar Wallace ſtands Amongſt a grove of friends, not to remove For Edwards thunder, nor the frowne of Jove, I&#x27;le hew the yoke from off my countries necke, Or never houſe, this religious Fryer Is a full witneſſe to the ſacred bond Twixt heaven and me, which on my part I&#x27;le keep, Or pay the forfeit with my bloud. Are they turn&#x27;d hangmen? They are welcome, let not one ſullen browe Be ſeene in all this fiery firmament. Then we begin, And to a tyrant thus ſayes a loyall ſubject, If Edward will confeſſe himſelfe a tyrant, And kingly fellon, and make good ſuch theft As he and his have practis&#x27;d, ſue his peace By yeelding up his and himſelfe to VVallace, There&#x27;s hope of life, this if he ſhall deny Rape, murther, ruine, all the brood of warre Shalbe let flie, and never be lur&#x27;d of Till they be gorg&#x27;d, and bated with the heart Of the proud King himſelfe. Mountfort and Glaſcott, what third fellow&#x27;s that? Blyncke at ſmaw faults then, make me the thrid man, and here&#x27;s a bunny noyſe of Fidlers to gang fra winehouſe to winehouſe, a blind harper, a mute Cornet, and an old Scotch bagpipe worne toth&#x27; ſtumps. Ye marry am I, boddy and ſawle a true Scotch man borne, but a true liegeman, hang him that does not luife your King, and your Countryman, what gude vi ctales is that which thilke bonny man that haz glazen windows to his lindging has tyed up in his wallet there? Ne marry? na law ſa cruell, fay man fay, I luick&#x27;d upon a man a lawe not lang ſince that ſent an awde man and his wife, and many barnes a begging, he had better a ſlizand theire weazond pipes, and cut theire heads off, but whay was a ſa bludy mynded thinke ye? Marry man, to get poſſeſſion of the pure mans houſe, but there was a cat ganged beyond the man a lawe. I&#x27;le tell you how, the man a lawe being got in, the Cat outreach&#x27;d him, and leaped to th&#x27; top oth lindg ing, and ſtandand on the tyles, the man a lawe ſcoarning any ane to be abuife him, offer to fling and dingand downe the poore puſcatt, but ſhe meawed at him, and cryed hawd thou foule lowne hawd, as thou thruſts out this poore man and his barnes, ſa there is ane abuife ſall thruſt out thee, ſtay blind man, here comes ſouldiers. Ize a Scotch man ſir, ye ſhall neere find me in twa tales. My leg ſir is not in my galligaskin and flop as yours is, I&#x27;ze a pure Scotch ſouldier out at heeles, and am glad to beſtirr my ſtumps, guide theſe gude men y&#x27;are wranged Countrymen, wha that fawſe traytor Wallace has miſuſand in ſike wiſe. By my ſawle ſir wad I might come To&#x27;th making of ſike a match. What ſen ye man? Exeunt Moun. and Glaſ. Wa ho ro ſol fa, ſol fa. Sol la, ſol la ſol la ſol la. Here boy, wa ha ho ho, All haile to you two. I&#x27;ha met more then my match, Neptune and I, Wraſtling for fals, he got the maſterie, I&#x27;me with his beating bruis&#x27;d, weary, cold, weak, Liquor&#x27;d ſoundly. Would I had this trunk full of &#x27;em. Caſt up by the Sea, I was ſhipwrack&#x27;d and loſt all my company. Looke up, be not afraid, there raignes no tyrant, Wud thou hadſt beene with me at ſea. Hadſt thou an Atheiſt been, and God not known, Th&#x27;adſt found him in the deepe, there hee&#x27;s beſt ſhowne, He that at Sea is ſhipwrackt, and denyes A Deity (being there ſav&#x27;d) damn&#x27;d lives and dyes, Man no where in the twinckling of an eye Is throwne ſo neare to hell, or rais&#x27;d ſo high Towards heaven, then when hee&#x27;s toſſ&#x27;d upon the waves It muſt be a hand omnipotent there that ſaves, But how came you ſir hither? Ha? Elbowe? idle: Selby my fathers murderer? Thinke not upon it, ſit eat heartily Thy laſt, ſit downe, I ſay, never to riſe, Drinke wine, drinke deepe, let thy ſoule reele to hell. I&#x27;le fetch dry ſticks, And with two flints kindle fire, beat out his braines: O that phyſicke had the power to make thee yong, I&#x27;de fetch thee drugs from th&#x27;utmoſt of the world, And then would arme thee, or, into thy veines Halfe my owne bloud I&#x27;de power, to lend thee ſtrength, That I might kill thee nobly. How now? I&#x27;le ſeeke for fire. Not I, eate and get ſtrength, I&#x27;le ſeek for fire, Vnleſſe I be a devill (tho I have cauſe To kill thee) yet my quicke hand ſhall eſchew it, Thy careleſſe confidence does bind me to it, This mercy which I ſhow now is for Gods ſake, In part of payment of his ſhowne to me, If I ſhould kill thee now, thou oweſt me nothing, Live, and be ſtill my debter, I ſhall do thee More harme to give thee life, then take it from thee, Heaven in my fathers bloud who is chiefe ſharer, Shall ſtrike for me a revenge more juſt and fairer. As I am, both come alone, no words to any. Ha, if what thou ſeem&#x27;ſt thou art, ſtep forward, ſpeake, I have fac&#x27;d more horrid terror. Saw ye nothing? Twas my braines weakneſſe then, I have ſeene ſtrange ſights, that anon I&#x27;le tell; If Grimsbie we meete never more, farewell. Exit. My foot-boy onely, who is tying up my horſe.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Valiant Scot</div><div class="body">PLOT Scotland is under English rule. An attempt is made to dispossess Old Wallace of his office and lands; but Old Wallace partially circumvents it by transferring ownership of the land to his son. King Edward plans to make war on France, and appoints Bruce his general. Scotland is left in the charge of Queen Elinor and a panel of commissioners. Young Selby, son of one of the commissioners, abducts Peggy Graham, intending to marry her by force. Wallace intervenes and kills Young Selby in a duel. Commissioner Selby arrests Peggy and threatens her with execution for the murder. Wallace gives himself up, and Peggy is released. His own execution is forestalled when the Queen orders him brought to court for interrogation. He escapes en route, marries Peggy, and becomes a rebel. Friar Gertrid prophesies that he will be victorious until betrayed by his own blood. The English capture Peggy, Gertrid, and Old Wallace, and Selby has them killed. King Edward sends Wallace an ultimatum: if he will surrender and beg for mercy, he may be spared. Wallace sends an alternative ultimatum back: if Edward will admit himself to be a tyrant, he may be spared. Upon discovering that one of the ambassadors, the Queen’s nephew, has no diplomatic accreditation, he puts the young man to death. He then cuts out an ambassador’s tongue and blinds another, and accompanies them back to King Edward disguised as a lame soldier. The English plan to entice Wallace into a trap, and send another messenger to invite him to a parley; but the stratagem fails because the man appointed to escort the messenger to the Scottish camp is the lame soldier — Wallace himself. Wallace sails to seek help from France, but his ship is wrecked. On the shore, he meets first Bolt, from whom he forcibly takes possession of a washed-up chest of provisions, then Selby, who is now banished from England and penurious, and regrets the execution of Old Wallace. Wallace decides not to take revenge, but while he is away fetching food, another of the fallen commissioners turns up and kills Selby in an argument. Bolt returns and kills the murderer, taking him for Wallace. He is presented to King Edward and rewarded, but later discredited when Wallace turns out to be alive. The Scots prepare to fight, but Wallace is offended to be placed in the rearguard, and withdraws his services. He watches the battle from a hill, and finally intervenes after the Scottish general is killed. On the battlefield he meets Bruce, the rightful…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_00.html">Cluster 0 — 0: wallace, selby, clifford</a> page.
+</div>
+</div></body></html>

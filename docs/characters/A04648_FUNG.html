@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FUNG in Every Man Out of His Humor · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FUNG</span>
+</nav>
+
+<h1>FUNG</h1>
+<p class="lede">in <em>Every Man Out of His Humor</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>1486</td></tr>
+<tr><th>Characters</th><td>7375</td></tr>
+<tr><th>BritDrama no.</th><td>1216</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">cost; and I thinke for some twelue pound or twentie marke, I could <mark>goe</mark> neere to redeeme &#x27;hem: there&#x27;s Plowden, Diar, Brooke, and Fitz-Herbert; diuers such as I <mark>must</mark> haue ere long: and you know I were as good saue fiue or sixe pound as not, Vncle: I pray you mooue it for me. O I, I pray you good Vncle: God send me good luck;</div>
+<div class="excerpt">Gentleman: and yet when he <mark>has</mark> cut &#x27;hem, hee will see his sonnes throat cut too, ere he make him a true Gentle man indeed, before Death cut his owne throat ▪ I <mark>must</mark> be the first Head of our house, and yet he will not giue mee the head, till I be made so. Is any man tearm&#x27;d a Gentleman that is not alwaies i&#x27;the fashion? I would</div>
+<div class="excerpt">extremities, my Masters, then would this Pot, Cup, and all were in my belly, if I haue a crosse about me. By Iesu the Taylour had all my money this morning, and yet I <mark>must</mark> be faine to alter my Sute too: good sirs, let me <mark>goe</mark>, &#x27;tis Friday night; and in good truth I haue no stomack in the world to eat any thing. Pay? Gods light, with</div>
+<div class="excerpt">my Sute:) mine Vncle Soghardo is in towne; Sister, me thinkes you are Melancholly: why are you so sad? I thinke you tooke me for Master Fastidius Briske (Sister) <mark>did</mark> you not? Nay nothing, I was lately in Maister Fastidius his com panie, and me thinkes we are very like. Faith good ynough to ride in Brother, I made it to ride</div>
+<div class="excerpt">money as I haue, and sweare my selfe into Credit with my Taylor for the rest. Gramercie good Shoe-maker, I&#x27;le put too strings my selfe. Now Sir, let mee see, what <mark>must</mark> you haue for this Hat? How doest become me, well? Do&#x27;s it apply well to my sute? How lik&#x27;st thou my suit Haberdasher? Here Haberdasher tell this same. Nay (beleeue</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">By Iesu, it&#x27;s a very fine sute of cloathes. Troth wee heare none: in good faith I was neuer so pleas&#x27;d with a fashion daies of my life; O ( nd I might haue but my wish) I&#x27;ld aske no more of God no but such a Suit, such a Hat, such a Band, such a Doublet, such a Hose, such a Boot, and such a— Here&#x27;s such a world of question with him now: Yes, I thinke there be such a thing, I saw the picture: would hee would once be satisfi&#x27;d. Let me see, the Doublet, say fiftie shil lings the Doublet, &amp; betwene three or four pound the Hose; then Bootes, the Hat, and Band: some ten or eleuen pound would do it all, and suit me for the heauens. Gods s&#x27;lid, and I could compasse it, &#x27;twere rare: harke you Vncle. Faith Vncle, I&#x27;ld ha&#x27; desir&#x27;d you to haue made a mo tion for me to my father in a thing, that; walke aside and I&#x27;le tell you sir, no more but this: there&#x27;s a parcell of Law books, (some twentie pounds worth) that lie in a place for little more than halfe the money they cost; and I thinke for some twelue pound or twentie marke, I could goe neere to redeeme &#x27;hem: there&#x27;s Plowden, Diar, Brooke, and Fitz-Herbert; diuers such as I must haue ere long: and you know I were as good saue fiue or sixe pound as not, Vncle: I pray you mooue it for me. O I, I pray you good Vncle: God send me good luck; Lord (and&#x27;t be thy will) prosper it: O Iesu; now, now, if it take (O Christ) I am made for euer. I, I haue seene this Gentleman there, often. God saue you Brother, and Sister, God saue you sir; I haue commendations for you out i&#x27;the countrey: (I wonder they take no knowledge of my Sute:) mine Vncle Soghardo is in towne; Sister, me thinkes you are Melancholly: why are you so sad? I thinke you tooke me for Master Fastidius Briske (Sister) did you not? Nay nothing, I was lately in Maister Fastidius his com panie, and me thinkes we are very like. Faith good ynough to ride in Brother, I made it to ride in. I warrant you, let mee alone. I&#x27;le put her out of her dumpes. Sister, how like you my suit? Faith, how like you the fashion? it&#x27;s the last Edition I assure you. Troth sister, I was faine to borrow these Spurres, I ha&#x27; left my gowne in gage for &#x27;hem, pray you lend me an angell. Good truth I&#x27;le pay you againe at my next exhibiti or: I had but bare tenne pound of my father, and it would not reach to put me wholly into the fashion. I had Spurres of mine owne before, but they were no Ginglers. Monsieur Fastidius will be here anone Sister. Neuer lend me penny more (while you liue then) and that I&#x27;ld be loth to say, in truth. Yesterday, I came acquainted with him at Sir Puntar olo&#x27;s: nay sweet Sister. O God Sister. How? a new sute? Ay mee. S&#x27;lid all this money is cast away now. Tis but my hard fortune: wel, I&#x27;le haue my sute cha ̄ g&#x27;d, I&#x27;le goe fetch my tailor presently, but first I&#x27;le deuise a letter to my father. Ha&#x27; you any pen and inke Sister? I would vse it. S&#x27;light and it had come but foure daies sooner the Fashion. 〈◊〉 is here, look you sir, that&#x27;s the Gentleman: Doe you marke how it hangs at the knee there? For Gods sake do, note all: do you see the Coller sir ▪ I, goe with me to my chamber you shall haue it, but make hast of it, for the loue of Christ, for I&#x27;le sit my old sute, or else lie a bed and read the Arcadia, till you haue done. Faith, I cannot tell Sister, but if a man had any true Melancholie in him, it would make him melancholie, to see his yeomanly father cut his neighbours throats to make his sonne a Gentleman: and yet when he has cut &#x27;hem, hee will see his sonnes throat cut too, ere he make him a true Gentle man indeed, before Death cut his owne throat ▪ I must be the first Head of our house, and yet he will not giue mee the head, till I be made so. Is any man tearm&#x27;d a Gentleman that is not alwaies i&#x27;the fashion? I would know but that. But a while since Sister, I thinke, I know not well in truth. By Gods lid I could sight with all my heart me thinkes. I sent him a letter, and hee writes mee no answere neither. Let me see; these foure Angels: and then fortie shil lings more I can borrow on my Gowne in Fetter-lane: well, I will goe presently, say on my Sute, pay as much money as I haue, and sweare my selfe into Credit with my Taylor for the rest. Gramercie good Shoe-maker, I&#x27;le put too strings my selfe. Now Sir, let mee see, what must you haue for this Hat? How doest become me, well? Do&#x27;s it apply well to my sute? How lik&#x27;st thou my suit Haberdasher? Here Haberdasher tell this same. Nay (beleeue me) I thinke I haue as good a bodie in cloths as another. I&#x27;le haue points anone: how now? is&#x27;t right? Farewell good Haberdasher, well now maister Smp let me see your bill. This Bill is very reasonable in faith, harke you mai ster Snip. Troth sir I am not altogether so well furnisht at this present, as I could wish I were: but—If you&#x27;le doe me the fa uour to take part in hand, you shall haue all I haue by Iesu. And but giue me credite for the rest, till the begin ning of the next Tearme. &#x27;Fore God and by this light I&#x27;le pay you to the vt most, and acknowledge my selfe very deepely engag&#x27;d to you by this hand. Marry I haue here foure Angels, and fifteene shil lings of White money, it&#x27;s all I haue as&#x27;hope to be sau&#x27;d. No and I doe, pray God I bee hang&#x27;d. Let me neuer breath againe vpon this mortall Stage, as the Philosopher cals it. By this aire, and (as I am a Gentleman) I&#x27;le hold. I sir, and I giue you thankes in good faith, O God how happie am I made in this good fortune. VVell, now I&#x27;le goe seeke out Mounsieur Briske. Gods so, I haue forgot Ribband for my shoes; and points. S&#x27;lid what lucke&#x27;s this? how shall I doe? Maister Snippe, pray let me reduct some two or three shil lings for points and Ribband, by Iesu I haue vtterly disfurnisht my selfe in the default of memorie, pray, le&#x27; mee bee beholding to you, it shall come home i&#x27;the bill beleeue mee. VVhat you shall thinke meet i&#x27;your judgement Sir to my sute. And points too sir? Good Lord how shall I studie to deserue this kindnes of you sir. Pray let your youth make hast, for I should haue done a businesse an hower since, that I doubt I shall come too late. Now in good truth I am exceeding prowd of my fute. Another Sute! By Gods lid I think no man in Christendome has that rescally fortune that I haue. Indeed I thinke I haue seene your Ladiship at our Re uels. Shee&#x27;s out of her Humor yfaith. O sir Puntarvolo, your Dog lies giuing vp the ghost in the wood-yard. O no, that comes too late. I hope all be quiet now; if I can get but forth of this street, I care not. Masters, I pray you tell me, is the Constable gone? I pay? S&#x27;light, I eate not a bit since I came into the house yet. Bespoken? not by me, I hope? Nay, if you will grow to extremities, my Masters, then would this Pot, Cup, and all were in my belly, if I haue a crosse about me. By Iesu the Taylour had all my money this morning, and yet I must be faine to alter my Sute too: good sirs, let me goe, &#x27;tis Friday night; and in good truth I haue no stomack in the world to eat any thing. Pay? Gods light, with what conscience can you aske me to pay that I neuer dranke for? By this Cup (which is siluer ) but you did not, you doe mee infinite wrong, I look&#x27;t in the pot once indeed, but I did not drinke. I will studie to deserue it in good truth, and I liue. Let me haue a Capons legge sau&#x27;d, now the reckoning is paid. I will Brother. Nay I am out of those Humors now.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Every Man Out of His Humor</div><div class="body">Cordatus and Mitis are brought by Asper to watch a satirical play, in which he is to be an actor, playing malicious Macilente. They keep up a running commentary between, and sometimes during, the scenes. Each character in the play has a ‘humour’ or obsession to be purged. Sogliardo wants to be a gentleman: he takes instruction from Carlo Buffone and purchases himself a coat of arms; he is eventually used to humiliate the conceited court lady Saviolina by showing that she cannot tell true gentility from false. The farmer Sordido is hoarding grain, and resists a court order to sell it because he is gambling on the price going up after a bad harvest; when this does not happen, he tries to hang himself, and repents on hearing the comments of the rustics who cut him down. Puntarvolo plays chivalric wooing games of mock- adultery with his wife, and plans to travel to Constantinople with his wife and dog, venturing money on their safe return; but he loses the inclination when Macilente poisons the dog. Fungoso tries to imitate the courtier Brisk’s fashionable suit, but is continually frustrated because Brisk keeps changing his clothes. The uxorious Deliro seeks advice on how best to please his contrary wife, Fungoso’s sister. Shift, wanting to be known for a machismo he doesn’t really have, represents himself as a robber, but the threat of hanging forces him to admit the truth. Carlo Buffone has a humour of talking: at a tavern, he performs a comic dialogue between two cups, playing both parts himself, and Puntarvolo seals his mouth with wax. The affray brings the Constable, who is minded to arrest them all but is content tv take only Brisk. Fungoso, penniless from his clothing purchases, is left to pay the tavern bill, and has to be rescued by bis brother-in-law, who also calls in the mortgage on ===== PAGE 162 ===== Brisk’s lands; the courtier is left in prison for debts totalling £13,000, curing him of his humour. Macilente is purged of his malign humour by the sight of the Queen.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

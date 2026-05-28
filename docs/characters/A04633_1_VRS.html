@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VRS in Bartholomew Fair · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>VRS</span>
+</nav>
+
+<h1>VRS</h1>
+<p class="lede">in <em>Bartholomew Fair</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>1674</td></tr>
+<tr><th>Characters</th><td>8863</td></tr>
+<tr><th>BritDrama no.</th><td>1757</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">glasse, euer, and drinke with all companies, though you be sure to be drunke; you&#x27;ll mis-reckon the better, and be lesse asham&#x27;d on&#x27;t. But your true tricke, Rascall, <mark>must</mark> be, to be euer busie, and mis-take <mark>away</mark> the bottles and cannes, in hast, be fore they be halfe drunke off, and neuer <mark>heare</mark> any body call, (if they should chance</div>
+<div class="excerpt">you, and your play-fellow there, i&#x27;the garded coat, an&#x27; you sunder not the sooner. Why, you thinne leane Polcat you, and they haue a minde to be i&#x27;their vapours, <mark>must</mark> you hinder&#x27;hem? what <mark>did</mark> you know Vermine, if they would ha&#x27; lost a cloake, or such a triflle? She comes out with a fire-brand. <mark>must</mark> you be drawing the ayre of</div>
+<div class="excerpt">&#x27;hem. Are you sure they are such? How now Rascall? what roare you for? old Pimpe. S&#x27;lid call your Captaine Iordan to her, can you not? I bring her, hang her: <mark>heart</mark> <mark>must</mark> I find a common pot for euery punque i&#x27;your purlews? Let her sell her hood, and buy a spunge, with a poxe to her, my vessell, employed Sir. I haue but one, and</div>
+<div class="excerpt">promis&#x27;d to be heere this morning, I remember. Best take your mornings dew in your belly, Nightingale, come, Moon-calfe brings in the Chaire. Sir, set it heere, <mark>did</mark> not I bid you should get this chayre let out o&#x27;the sides, for me, that my hips might play? you&#x27;ll neuer thinke of any thing, till your dame be rumpgall&#x27;d; &#x27;tis</div>
+<div class="excerpt">(Leaue the bottle behinde you, and be curst a while.) I, I, Gamesters, mocke a plaine plumpe soft wench o&#x27; the Suburbs, doe, because she&#x27;s iuicy and wholesome: you <mark>must</mark> ha&#x27; your thinne pinch&#x27;d ware, pent vp i&#x27;the compasse of a dogge-collar, (or &#x27;twill not do) that lookes like a long lac&#x27;d Conger, set vp right, and a greene feather,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Fye vpon&#x27;t: who would weare out their youth, and prime thus, in roasting of pigges, that had any cooler vocation? Hell&#x27;s a kind of cold cellar to t, a very fine vault, o&#x27;my conscience! what Moone-calfe. My chayre, you false faucet you; and my mornings draught, quickly, a botle of Ale, to quench mee, Rascall. I am all sire, and fat, Nightingale, I shall e&#x27;en melt away to the first woman, a ribbe againe, I am afraid. I doe water the ground in knots, as I goe, like a great Garden-pot, you may follow me by the S.S. s. I make. Zekiel? what Zekiel? He promis&#x27;d to be heere this morning, I remember. Best take your mornings dew in your belly, Nightingale, come, Moon-calfe brings in the Chaire. Sir, set it heere, did not I bid you should get this chayre let out o&#x27;the sides, for me, that my hips might play? you&#x27;ll neuer thinke of any thing, till your dame be rumpgall&#x27;d; &#x27;tis well, Changeling: because it can take in your Grasse-hoppers thighes, you care for no more. Now, you looke as you had been i&#x27; the cor ner o&#x27;the Booth, fleaing your breech, with a candles end, and set fire o&#x27;the Fayre. Fill, Stote : fill. Fill againe, you vnlucky vermine. No, no, I shall e&#x27;en dwindle away to&#x27;t, ere the Fayre be done, you thinke, now you ha&#x27; heated me? A poore vex&#x27;d thing I am, I feele my selfe dropping already, as fast as I can: two stone a sewet aday is my proportion: I can but hold life &amp; soule together, with this (heere&#x27;s to you, Nightingale ) and a whiffe of tobacco, at most. Where&#x27;s my pipe now? not fill&#x27;d? thou errant Incubee. How can I hope, that euer hee&#x27;ll discharge his place of trust, Tapster, a man of reckoning vnder me, that remembers no thing I say to him? but looke too&#x27;t, sirrah, you were best, three pence a pipe full, I will ha&#x27; made, of all my whole halfe pound of tabacco, and a quarter of a pound of Coltsfoot, mixt with it too, to itch it out. I that haue dealt so long in the fire, will not be to seek in smoak, now. Then 6. and 20. shillings a barrell I will aduance o&#x27;my Beere; and fifty shillings a hundred o&#x27;my bottle-ale, I ha&#x27;told you the waies how to raise it. Froth your cannes well i&#x27;the filling, at length Rogue, and iogge your bottles o&#x27; the buttocke, Sirrah, then skinke out the first glasse, euer, and drinke with all companies, though you be sure to be drunke; you&#x27;ll mis-reckon the better, and be lesse asham&#x27;d on&#x27;t. But your true tricke, Rascall, must be, to be euer busie, and mis-take away the bottles and cannes, in hast, be fore they be halfe drunke off, and neuer heare any body call, (if they should chance to marke you) till you ha&#x27; brought fresh, and be able to forsweare &#x27;hem. Giue me a drinke of Ale. Looke, who&#x27;s there, Sirrah? One knocks. fiue shillings a Pigge is my price, at least; if it be a sow-pig, six pence more ▪ if she be a great bellied wife, and long for&#x27;t, six pence more for that. What new Roarer is this? Why dost thou not fetch him drinke? and offer him to sit? Bring him a sixe penny bottle of Ale; they say, a fooles handsell is lucky. Yes, and to amble afoote, when the Fayre is done, to heare you groane out of a cart, vp the heauy hill. For cutting halfe-penny purses: or stealing little penny dogges, out o&#x27;the Fayre. You are one of those horsleaches, that gaue out I was dead, in Turne-bull streete, of a surfet of botle ale, and tripes? Well, I shall be meet with your mumbling mouth one day. Hang your selfe, Hacney-man. Vapours? Neuer tuske, nor twirle your dibble, good Iordane, I know what you&#x27;ll take to a very drop. Though you be Captaine o&#x27;the Roarers, and fight well at the case of pis-pots, you shall not fright me with your Lyon-chap, Sir, nor your tuskes, you angry? you are hungry: come, a pigs head will stop your mouth, and stay your stomacke, at all times. I, neere the fullest passages; and shift&#x27;hem often. Enough, talke no more on&#x27;t: your friendship (Masters) is not now to beginne. Drinke your draught of Indenture, your sup of Couenant, and away, the Fayre fils apace, company begins to come in, and I ha&#x27; ne&#x27;er a Pigge ready, yet. Come, you are i&#x27;your bawdy vaine! the best the Fayre will afford, Zekiel, if Bawd Whit keepe his word; how doe the Pigges, Moone-calfe ? What Moonecalfe? you Rogue. She calls within. I&#x27;le part you, and your play-fellow there, i&#x27;the garded coat, an&#x27; you sunder not the sooner. Why, you thinne leane Polcat you, and they haue a minde to be i&#x27;their vapours, must you hinder&#x27;hem? what did you know Vermine, if they would ha&#x27; lost a cloake, or such a triflle? She comes out with a fire-brand. must you be drawing the ayre of pacification heere? while I am tormented, within, i&#x27;the fire, you Weasell? Why? would my Booth ha&#x27; broake, if they had fal&#x27;ne out in&#x27;t? Sir? or would their heate ha&#x27; fit&#x27;d it? in, you Rogue, and wipe the pigges, and mend the fire, that they fall not, or I&#x27;le both baste and roast you, till your eyes drop out, like &#x27;hem. (Leaue the bottle behinde you, and be curst a while.) I, I, Gamesters, mocke a plaine plumpe soft wench o&#x27; the Suburbs, doe, because she&#x27;s iuicy and wholesome: you must ha&#x27; your thinne pinch&#x27;d ware, pent vp i&#x27;the compasse of a dogge-collar, (or &#x27;twill not do) that lookes like a long lac&#x27;d Conger, set vp right, and a greene feather, like fennell i&#x27;the Ioll on&#x27;t. Hang &#x27;hem, rotten, roguy Cheaters, I hope to see &#x27;hem plagu&#x27;d one day (pox&#x27;d they are already, I am sure) with leane play house poultry, that has the boany rumpe, sticking out like the Ace of Spades, or the point of a Partizan, that euery rib of&#x27;hem is like the tooth of a Saw: and will so grate &#x27;hem with their hips, &amp; shoul ders, as (take &#x27;hem altogether) they were as good lye with a hurdle. Mary looke off, with a patch o&#x27;your face; and a dosen i&#x27;your breech, though they be o&#x27;scarlet, Sir. I ha&#x27; seene as fine out sides, as either o&#x27;yours, bring lowsie linings to the Brokers, ere now, twice a weeke? For your mother, you Rascall, out you Rogue, you hedge bird, you Pimpe, you pannier-mans bastard, you. Doe you sneere, you dogs-head, you Trendle tayle ! you looke as you were begotten a&#x27;top of a Cart in haruest-time, when the whelp was hot and eager. Go, snuffe after your brothers bitch, M rs Commodity, that&#x27;s the Liuory you weare, &#x27;twill be out at the el bows, shortly. It&#x27;s time you went to&#x27;t, for the to&#x27;ther remnant. I&#x27;le see &#x27;hem pox&#x27;d first, and pil&#x27;d, and double pil&#x27;d. Dos&#x27;t so, snotty nose? good Lord! are you sniueling? you were engendred on a she-begger, in a barne, when the bald Thrasher, your Sire, was scarce warme. Do&#x27;s shee so? I&#x27;le set you gone. Gi&#x27; mee my Pig-pan hi ther a little. I&#x27;le scald you hence, and you will not goe. Oh. Curse of hell, that euer I saw these Feinds, oh! I ha&#x27; scal ded my leg, my leg, my leg, my leg. I ha&#x27; lost a limb in the seruice! run for some creame and sallad oyle, quickly. Are you vnder-pee ring, you Baboun? rip off my hose, an&#x27; you be men, men, men. Oh! the poxe, why doe you put me in minde o&#x27;my leg, thus, to make it prick, and shoot? would you ha&#x27; me i&#x27;the Hospi tall, afore my time? Is this the good seruice, Iordan, you&#x27;ld doe me? Hang your vapours, they are stale, and stinke like you, are these the guests o&#x27;the game, you promis&#x27;d to fill my pit with all, to day? Aile they? they are all sippers, sippers o&#x27;the City, they looke as they would not drinke off two penn&#x27;orth of bottle-ale a mongst &#x27;hem. Are you sure they are such? How now Rascall? what roare you for? old Pimpe. S&#x27;lid call your Captaine Iordan to her, can you not? I bring her, hang her: heart must I find a common pot for euery punque i&#x27;your purlews? Let her sell her hood, and buy a spunge, with a poxe to her, my vessell, employed Sir. I haue but one, and &#x27;tis the bottome of an old bottle. An honest Proctor, and his wife, are at it, with in, if shee&#x27;ll stay her time, so. Come, will you bring her in now? and let her talke her turne? What&#x27;s her husband gone? An&#x27; you be right Bartholmew -birds, now shew your selues so: we are vndone for want of fowle i&#x27;the Fayre, here. Here will be Zekiell Edgworth, and three or foure gallants, with him at night, and I ha&#x27; neither Plouer nor Quaile for &#x27;hem: perswade this be tweene you two, to become a Bird o&#x27;the game, while I worke the veluet woman, within, (as you call her.) Helpe, helpe here. O, you are a sweet Ranger ! and looke well to your walks. Yonder is your Punque of Turnbull, Ramping Ales, has falne v pon the poore Gentlewoman within, and pull&#x27;d her hood ouer her eares, Alice en ers, beating he Iustice&#x27;s wife. and her hayre through it. Peace you foule ramping Iade, you— Thou tripe of Turnebull. You know where you were taw&#x27;d lately, both lash&#x27;d, and slash&#x27;d you were in Bridewell. O stay him, stay him, helpe to cry, Nightingale ; my pan, Enter Trou ble-all. my panne. An&#x27; please your worship, I am in no fault: A Gentleman stripp&#x27;d him in my Booth, and borrow&#x27;d his gown, and his hat; and hee ranne away with my goods, here, for it.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Bartholomew Fair</div><div class="body">Bartholomew Cokes has two objectives in life: to visit the fair which shares his name, and to marry Grace Wellborn, who, as a ward, faces a financial penalty should she refuse. He sends his servant Wasp to Littlewit the proctor to obtain a marriage licence, but then, impatiently, comes himself. He brings Grace with him, and she attracts the interest of Winwife, present with his friend Quarlous as a suitor to Littlewit’s mother-in-law, Dame Purecraft. Littlewit is more interested in Cokes’s talk of the fair, having secretly written one of the puppet plays to be performed there. The only snag is that the puritanical Dame Purecraft will disapprove of their visit, thinking fairs profane. Busy, an elder of Purecraft’s church, advises the family that fairs may lawfully be visited for good reason, and comes along with them to partake of the pork. After some unfortunate experiences involving mistaken identity, Justice Overdo no longer trusts informers and has decided to do his spying personally. He visits the fair in disguise to seek out ‘enormities’ perpetrated by the fairground folk. He is impressed by one young man, Edgeworth, and decides to rescue him from the clutches of the cheaters; but he does not know that Edgeworth is a cutpurse. While Overdo is busy telling him about the wickedness of tobacco, Edgeworth steals Cokes’s purse; Overdo gets the blame. When it happens a second time, Overdo is arrested and put in the stocks. There he encounters the madman Trouble-All, who persistently demands Overdo’s warrant for any action; it transpires that he was a court official driven out of his mind by Overdo’s own actions. The watchmen, concerned to get better authority, release Overdo from the stocks for the time being. Meanwhile, the Littlewits arrive at the fair, but Busy becomes over-excited in his condemnation, attacks the fairground booths, and is arrested; Dame Purecraft goes after him, leaving Littlewit and Win free to enjoy themselves. Edgeworth tricks Wasp into making affidavit so that, at Quarlous’s instigation, he can steal Cokes’s marriage licence. Wasp too is arrested and put in the stocks, but escapes by a ruse when Overdo and Busy are put in beside him. The women visitors to the fair are separated from the men. Littlewit leaves Win in the care of two fairground bawds while he goes off to check the arrangements for his puppet show. Cokes abandons Grace and Mistress Overdo to try and get back his stolen property. Desperate for the toilet, Mistress…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

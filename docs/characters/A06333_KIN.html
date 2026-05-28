@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KIN in Look About You · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>KIN</span>
+</nav>
+
+<h1>KIN</h1>
+<p class="lede">in <em>Look About You</em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>630</td></tr>
+<tr><th>Characters</th><td>3563</td></tr>
+<tr><th>BritDrama no.</th><td>1184</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">Keep your State <mark>Lords</mark>, we will by water goe, Making the freſh Thames, ſalt with teares of woe. O Lancaſter bid <mark>Henry</mark> yeeld ſome reaſon Why he deſires ſo much the <mark>death</mark> of Gloſter, Fie, fie vpon thee hatefull Elinor. I thought thou hadſt been long ſince ſcarlet dyde, I will my Sonne. I hope he be eſcaped. Richard and Faukenbridge</div>
+<div class="excerpt">Tower, Warden of th&#x27;Fleete take you the charge of Gloſter. Farewell good Gloſter, you ſhall heare from vs. Seaſe theſe contentions, forward to the Tower, Releaſe <mark>Queene</mark> Elinor, and leaue me there Your priſoner I am ſure, if yee had power, Ther&#x27;s nothing lets you but the Commons feare: Keep your State <mark>Lords</mark>, we will by water goe,</div>
+<div class="excerpt">new borne, I am new crowned, new ſettled in my ſeate. Lets&#x27; all to the Chappell, there giue thankes and praiſe, Beſeeching <mark>grace</mark> from Heauens eternal Throne, That <mark>England</mark> neuer know more Prince then one. Exeunt</div>
+<div class="excerpt">Soueraigne, Can no more beare, but from a bleeding hart Deliuer all my loue, for all your hate: Will this content thee cruell Elinor? Your ſauage mother, my vnciuill <mark>Queene</mark>; The Tygreſſe that hath drunke the purple bloud, Of three times twenty thouſand valiant men; Waſhing her red chaps, in the weeping teares, Of widdows, virgins,</div>
+<div class="excerpt">her damn&#x27;d conſorts, Entred alaborinth to murther loue. Will this content you? ſhe ſhall be releaſt, That ſhe may next ſeaze me ſhe moſt enuyes. What elſe would <mark>Henry</mark> haue? Peruſe this byll, draw neere let vs conferre. What would content you John? What you ſonne Richard? Thou ſhalt haue thy deſire Heroyicke Sonne, As ſoone as</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Thou wrongſt her Leiſter. Will this content you? I that haue ſat ſtill, Amaz&#x27;d to ſee my ſonnes deuoyde of ſhame; To heare my ſubiects with rebellious tongues, Wound the kinde boſome of their Soueraigne, Can no more beare, but from a bleeding hart Deliuer all my loue, for all your hate: Will this content thee cruell Elinor? Your ſauage mother, my vnciuill Queene; The Tygreſſe that hath drunke the purple bloud, Of three times twenty thouſand valiant men; Waſhing her red chaps, in the weeping teares, Of widdows, virgins, nurſes, ſucking babes. And laſtly ſorted with her damn&#x27;d conſorts, Entred alaborinth to murther loue. Will this content you? ſhe ſhall be releaſt, That ſhe may next ſeaze me ſhe moſt enuyes. What elſe would Henry haue? Peruſe this byll, draw neere let vs conferre. What would content you John? What you ſonne Richard? Thou ſhalt haue thy deſire Heroyicke Sonne, As ſoone as other home-bred brawles are done. Let him not enter, his infectious breath Will poyſon the aſſembly. Content thee Gloſter. Be ſure thou haſt not, murderous bloud-ſucker, To iealious enuy executioner. Holde that murtherous Skinke. Will Gloſter not be bridled? Wher&#x27;s that knaue Skinke? I charge you ſee him ſtayd. Follow that Skinke, let priuy ſearch be made, Let not one paſſe except he be well knowne, Let poaſtes be euery way ſent ſpeedily, For ten miles compaſſe round about the Citty. I will not yeeld he ſhall vnto the Tower, Warden of th&#x27;Fleete take you the charge of Gloſter. Farewell good Gloſter, you ſhall heare from vs. Seaſe theſe contentions, forward to the Tower, Releaſe Queene Elinor, and leaue me there Your priſoner I am ſure, if yee had power, Ther&#x27;s nothing lets you but the Commons feare: Keep your State Lords, we will by water goe, Making the freſh Thames, ſalt with teares of woe. O Lancaſter bid Henry yeeld ſome reaſon Why he deſires ſo much the death of Gloſter, Fie, fie vpon thee hatefull Elinor. I thought thou hadſt been long ſince ſcarlet dyde, I will my Sonne. I hope he be eſcaped. Richard and Faukenbridge follow the ſearch, You may preuent miſchaunce by meeting Gloſter, If ye finde Skinke ſee that you apprehend him, I heare there is a wizard at blacke heath, Let ſome enquire of him where Skinke remaynes, Although I truſt not to thoſe fallacies, Yet now and then ſuch men prooue Soothſayers. Will you be gone? Call in a Purſeuant. There is a Porter likely to be hangd, For letting Gloſter ſcape, ſirra attend, You ſhall haue a repreiue to bring him vs, Theſe boys are to to ſtubborne Lancaſter, But tis theyr mothers fault, if thus ſhe moue me, Ile haue her head though all the world reproue me. Exeuntt. You wrong the honour of Nobilitie, To place a robber in a Barons ſtead, Had I miſtearmed him? Who made you a Iuſtice? You had none then. Sonne Henry ſee thy fathers palzie hands, Ioyn&#x27;d like two ſupplyants, preſſing to thy throwne? Looke how the furrowes of his aged cheeke, Fild with the reuolets of wet eyde mone, Begs mercy for Earle Gloſter? weigh his gilt, Why for a ſlaue, ſhould Royall blood be ſpilt? Its iniuſt Iuſtice I muſt tell thee Sonne. I am ſtrucke dombe with wonder. My heart ſurfets with ioy in hearing this. And deare Sonne ile bleſſe thee with a kiſſe. Sonne? Peace to vs all, let&#x27;s all for peace giue prayſe, Vnlookt for peace, vnlookt for happy dayes. Loue Henries birth day, he hath bin new borne, I am new crowned, new ſettled in my ſeate. Lets&#x27; all to the Chappell, there giue thankes and praiſe, Beſeeching grace from Heauens eternal Throne, That England neuer know more Prince then one. Exeunt</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Look About You</div><div class="body">Before the start of the action, Queen Eleanor had her rival, Rosamund, poisoned by Skink, and was imprisoned for it; Skink escaped and has taken the identity of a fortune-telling hermit. Her son Henry and his brothers attempted a coup, and there are now two kings in England, father and son. At a parliament, the younger King Henry offers to split the kingdom with the elder, but alienates his supporters by his readiness to seize their lands. Skink, summoned to the parliament by Prince Richard, is rewarded with Gloucester’s lands, and Gloucester imprisoned when he protests and strikes Skink. Richard, who has an interest in Gloucester’s sister, Lady Falconbridge, promises to free him. Eavesdropping on a meeting between them, Sir Richard Falconbridge sees his wife reject the Prince’s advances. Pursued by the watch, Skink evades arrest by swapping clothes with Redcap, but is taken to the Fleet prison for identification by Redcap’s father, the porter. Gloucester swaps clothes with him in turn and escapes, and finally Skink too gets away by purloining Prince John’s clothes. Lady Falconbridge disguises Gloucester as her husband, fooling the watch sent to search for him. The substitutions cause misunderstandings when Skink (as John) is given a chain by Falconbridge and Gloucester (as Falconbridge) is given John’s sword; in each case the real man denies what his doppelganger has done. The porter of the Fleet is to be hanged for Gloucester’s escape, but the old King is persuaded to reprieve him. Gloucester intercepts the pursuivant, gets him drunk, steals the pardon, and ensures that it reaches its destination. Skink evades capture at the tavern by swapping clothes with the drawer and pretending to have been assaulted by the escaped Skink. John and Falconbridge consult the hermit: John wants to locate Gloucester, and Falconbridge to know for sure whether his wife is committing adultery. Lady Falconbridge also goes there in disguise, leaving Robin Hood standing in for her at home, cross-dressed. She too wants to locate Gloucester, to save him from the malice of John and his mother; John and Falconbridge both arrange assignations with her. Skink resumes the hermit’s identity, tells them how Gloucester escaped, and predicts that they will be able to catch Skink committing a robbery nearby; he then changes his disguise, induces them to fall in a hole, and steals their purses. While he is away, Gloucester finds his hermit costume and puts it on, convincing the robbed…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

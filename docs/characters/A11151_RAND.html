@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RAND in A Match at Midnight · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>RAND</span>
+</nav>
+
+<h1>RAND</h1>
+<p class="lede">in <em>A Match at Midnight</em> — R., W.</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>1257</td></tr>
+<tr><th>Characters</th><td>6903</td></tr>
+<tr><th>BritDrama no.</th><td>2027</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">plesse us, and yonder was Parnes and upon left hands too, now here was questions, &amp; demands to be made, why Randals should not rob them would rob Randals, her will <mark>goe</mark> to parnes, plucke <mark>away</mark> pords, pull out paggs, and shew her cozen a round paire of heeles, with aule her round sillings, marke her now. Exit. Her have got her pag</div>
+<div class="excerpt">Drake walke in Shange, weele run packe, mas Maryes haue saued her labours, and vvas come after Randalls, Maryes vvas Randall that loues her mightily Maryes. How <mark>did</mark> Watch let her <mark>goe</mark> at Graces street? Well now, her vnderstands Maryes loues Ran dalls so mighty deale. Maryes shall <mark>goe</mark> vvith Randalls to lodgings, and that her</div>
+<div class="excerpt"><mark>Did</mark> her not see her true Loves, As her came from London, Oh, if her saw not her fine prave Loves, Randall is quite undone, Well, was neuer mortall man in Wales, coo&#x27;d</div>
+<div class="excerpt">stand against too, which shall her take if they take Randalls, will rippe Randals cutts out, and then Ran dals shall see Pawles steeples no more, therefore her will <mark>goe</mark> di rectly vnder the pridge, here was but standing to knees in little fine coole faire waters, and becat if her have Randalls out, her shall come and fetch Randalls</div>
+<div class="excerpt">fine coole faire waters, and becat if her have Randalls out, her shall come and fetch Randalls and her will, were her nineteene Nicholas Clearkes. Exit. Spurre <mark>did</mark> her call her, have made Randals stand without pootes, in ferry pittifull pickles, but her will run as nimbles to Londons, as Creyhound after Rabbits, and yet now</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Did her not see her true Loves, As her came from London, Oh, if her saw not her fine prave Loves, Randall is quite undone, Well, was neuer mortall man in Wales, coo&#x27;d have wagd pra ver, finers, and nimblers, then Randals have done, to get service in Londons: whoope, vvhere vvas her novv, just upon a pridge of stone, between the legs of a couple of pretty hils, but no more nere mountaines in Wales, then Clim of the Cloughes bowe, to her Cozen Davids Harpe, and now her prattle of Davie, I thinke yonder come prancing down the hils from Kingstone a coupl of her tother cozens Saint Nicholas Clarks. the morning was so red as an egge, and the place ferry full of dangers, perills, and bloody busi nesses by reports: augh her swords was trawne, God plesse us and her cozen Hercules was not stand against too, which shall her take if they take Randalls, will rippe Randals cutts out, and then Ran dals shall see Pawles steeples no more, therefore her will goe di rectly vnder the pridge, here was but standing to knees in little fine coole faire waters, and becat if her have Randalls out, her shall come and fetch Randalls and her will, were her nineteene Nicholas Clearkes. Exit. Spurre did her call her, have made Randals stand without pootes, in ferry pittifull pickles, but her will run as nimbles to Londons, as Creyhound after Rabbits, and yet now her remember what her Cozens talkt, was some wiser and some too, Randals heard talke of Parne upon left hand, and a prave bag with hundred pounds in round shil lings Cod plesse us, and yonder was Parnes and upon left hands too, now here was questions, &amp; demands to be made, why Randals should not rob them would rob Randals, her will goe to parnes, plucke away pords, pull out paggs, and shew her cozen a round paire of heeles, with aule her round sillings, marke her now. Exit. Her have got her pag and aule by the hand, and her had ferrily thought in conscience, had not bin so ma ny round sillings in whole worlds but in Wales, twas time to supply her store, her had but thirteene pence halfe penny in awle the worlds, and that her have left in her little vvhite purse, with a rope her sound py the parne, just in the place her had this: Randals will bee no serving mans now, her will buy er prave Parrells, prave Swords, prave Taggers, and praue eathers, and goe a wooing to prave comely pretty ma ds, r b Randalls, becat and her were ten dozens of coz ns, Randals rob her, marke her now. Exit. Her loved her once, her loved her no more, Saint Tauis so well as her loved her then. What doe her keepe open house, had her heard her was Widdovves that dwelt here, are you Widdowes good wo ns? Augle Randalls comes in very good times, you keep Ordinaries her thinke, what have you set a cat before gallants there? Is her so, I pray bid her Mistresse observe Ran dals for valours, and prave adventures? Sounds some Metheglings here. Well, because her will make a great deales of ne cessities of vertues, marke with what a grace Randals will drinke to her Mistresse. O noble Widdowes, her heart was full of woes. &#x27;Sounds, was that her manners to take away Randalls cups? A payre of a hundred of seepes, thirtie prave Cowes, and twelue dozen of Runts. When high King Henry, second rul&#x27;d this land, the couple of her name, Besides her Queene, was teerely lou&#x27;d, a faire and Princely—Widdowes, Harke you Widdowes, Randals was disturb&#x27;d in cogitati ens, about Lands, Ploughs, and Cheese presses in Wales, and becat her have forgot where her, and her meete soone at pright darke Evenings. Oh haw, have her—but Randals was talke no Ducth, pray meete her in the Welch walke, was no Welch walke there? Can her make wedding pedd pravely for Randals, and Widdowes? Was ferry good woords. Augh, S. Tauie, Owen Morgan, and aule her Co sins, was Widdow her selfe ay so? Sounds, her vvas kill novv, gog, and gogmagog, a whole dozen of shiants, make oole of Randals, Randalls vvas vvisht to as prave match as widows vvas, know one Mary Bloodhound, was ha aule, when her father kicke up heeles, and becat though her never saw her, her will send her Love letters presently, get her good wills, and goe to shurch and marry, and her were eight and thirtie, two hundred and nine and fifty widdowes, marke her novv. Augh, her vvas very clad her vvas mad. Becat her vvill goe and prepare Priests presently, looke yee Simkins, there is a great deale of round sillings for her, her vvas very lucky sillings, for came to Randalls shust for all the World as Fortune vvas come to Foole, tell Maryes, her vvill meete her, her vvarrant her, make many puppy Fooles of Ancients, and loue her very mon strously. Exit. Mary. Lands, and livings? Her meanes the scurvy Ancient. Cats streete was call her, sure Randalls was wrapt in mothers smocke. Exit. Zounes was another Fyer Drake walke in Shange, weele run packe, mas Maryes haue saued her labours, and vvas come after Randalls, Maryes vvas Randall that loues her mightily Maryes. How did Watch let her goe at Graces street? Well now, her vnderstands Maryes loues Ran dalls so mighty deale. Maryes shall goe vvith Randalls to lodgings, and that her Father vvorke no diuorcements, hee vvill lye vvith her aule t&#x27;night, and marry her betimes next mor ning, meane time her vvill make Lands and Livings fast. If Randall false to Maryes proue, Then let not Maryes Randalls loue: For Randalls was so true as Io e, And Maryes was her ioy. If Randalls was not Pritaine borne, Let Maryes Randalls prowe adorne. And let her giue a foule great horne to Randalls, Her will loue her cret deale of much her warrant her. And Maryes now vvas won, and all her pusinesse done, and Randalls now was runne, her haue made all sure I her warant her. Cot plesse her Father Ploodhounds, Randals have rob&#x27;d Ancients her warrant her. Augh was her so, will heare an Noble Prittaine, hovv her gull an English Flag? Oh noble Randalls, as her meete by Nags- head with Mayres Plood, prave. Hearke in her tother eare, her will not deliver her, and her were nine and forty Ancients, and five and fourescore Flaggs. Nay let her come with her packe of needles, Ran dalls can poxe and bob, as well as her, her warrant her. Her will not restore her, &#x27;twas Mary Ploodhounds gave her the box, Randals have married Mary Ploodhounds and gul&#x27;d Ancients, marke her now. Zoun&#x27;s, make Tog of Randalls? come out here Maries. Looke here was Mary Ploodhounds. Enter Maid &amp; Hugh. now, I pray tumble downe of her Mary-po es, and aske her father plessing? Her waile in woe, her plunge in paine. And yet becat her doe not neither, Randalls will prove her selfe Prittaines borne, and because her understands Ancients was prave fellowes, and great Travailers, there is her boxe for her. And because was no remedies, before her aule, here vvill Randals embrace Maries, and take a pusse— kisses. Beca her looke ferry blacke indeed, Becat was as well spoke as Randall her selfe cood talke.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Match at Midnight</div><div class="body">Old Bloodhound is training his younger son Tim in the family pawnbroking business, since Alexander, the elder son, is a drunken wastrel. He intends to marry his daughter Mary to the informer Earlack, even though she prefers Ensign Young, while he himself will marry the young widow Wag. The widow has other suitors, including her servant Jarvis, but wants to get rid of them. She arranges a midnight assignation with Old Bloodhound, intending not to turn up. Jarvis arranges a substitute, and tells Bloodhound that his mistress has come incognito and must be addressed as Mistress Coot; in fact it really is a Mistress Coot, an old bawd, whom Bloodhound takes home that night in preparation for a wedding the next morning. Meanwhile, Mary plans to elope with Young that &#x27; night, retrieving his mortgage from her father’s papers. 1622 The widow&#x27;s Welsh suitor, Randall, hears about Mary and, though he has never met her, decides he prefers her to Wag. The servant Sim fixes Randall up with an assignation that night, but he ends up encountering Wag&#x27;s maid, who is returning from a late errand and who also happens to be named Mary. Tim visits the tavern to give Alexander some pawn- money, and becomes enamoured of Sue Shortheels, thinking her a lady of noble descent. In fact, she is a prostitute. Alexander gets into the widow’s bedroom and hides under her bed, then forces her to agree to marry him by threatening to undress just as neighbours appear to be arriving. The various wedding plans unravel in the morning. Earlack has sneaked the opportunity to sleep with the widow — who is really Coot the bawd and a somewhat less desirable prospect in bed once seen in daylight. Meanwhile, Tim has married Sue, not knowing her true profession until it is too late, and Mary has married Young, to the dismay of Randall, who finds that he has accidentally married a servant. Only Alexander seems on course for the wedding he wants, until the widow points out that Jarvis has a prior claim: when he tried to seduce her months ago, she demanded that he should prove himself by living in her household as her servant. Now, however, she intends to honour her dead husband by never remarrying. Jarvis reveals his true identity: he is Wag himself, the widow’s husband, still alive, and satisfied that his ruse has proven his wife’s fidelity.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

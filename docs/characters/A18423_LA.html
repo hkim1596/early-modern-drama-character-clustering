@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LA in Two Wise Men and All the Rest Fools · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_07.html">Cluster 7 — 7: thu, lorde, did</a> ›
+  <span>LA</span>
+</nav>
+
+<h1>LA</h1>
+<p class="lede">in <em>Two Wise Men and All the Rest Fools</em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1619</td></tr>
+<tr><th>Words</th><td>658</td></tr>
+<tr><th>Characters</th><td>3480</td></tr>
+<tr><th>BritDrama no.</th><td>1891</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 7 (<em>thu, lorde, did, holy, christ, tyme…</em>). Matches are highlighted.</p>
+<div class="excerpt">in these deepe contemplations. Alas man, why should you trouble your selfe with these matters which be so farre out of your reach? was it not enough if my spirit <mark>did</mark> wishe you present? or that in conceite you were with me? what if you were asleepe at that instant, and so it were revealed to me by the spirit? or if you had beene</div>
+<div class="excerpt">chambers, and men are tyed to heare vs. Iump. And so womnn instruct women, and none of them shall come to other. And how shall there then be pro creation of the <mark>holy</mark> ones, and the Israell of God bee multi plied? With all my heart. And I professe vnto you that hee shall neuer know otherwise by me: but I doubt his gene rous spirit</div>
+<div class="excerpt">full speed to beare it downe. And yet his mother ex treame honest for all this. No husband. You shall not sweare so rashlie. I thanke you as much as though you <mark>did</mark>. Your saith shall saue you without swearing.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I came hither to seeke a kinde of husband that I haue. He wants gouerment and discipline (I am sure) ere this time: for I haue not seene him these three dayes past: the poore man wilbe vndone, if I light not on him shortly. Why should you aske so foolish a question? you knowe that I must frequent my contemplation: in which I cannot be lesse then two or three daies: the fervour of spi rit is such among the elect that they may not depart in short time from their meditations, especially having such learned Teachers among vs, that are never wearied, and willing to accompanie and conduct vs in the darkest dangers. O the delights, pleasures, and sweet delectations that we feele du ring the time of these contemplations, that wee thinke no time contentedly spent but when we are imployed in these exercises. I thinke verily my goodly boy Iacke was begot ten and conceiued in these deepe contemplations. Alas man, why should you trouble your selfe with these matters which be so farre out of your reach? was it not enough if my spirit did wishe you present? or that in conceite you were with me? what if you were asleepe at that instant, and so it were revealed to me by the spirit? or if you had beene present, and my spirit should inwardly te stifie vnto me that a teaching Saint must be preferred, ought not you to giue place? I pray you husband giue over to mu e on these hidden secrets, for otherwise these thoughts ma make you orne-mad. What doe you talke of reason? it is beyond reason. It is matter of predestination, and preordination. Where is now your obedience and pati nce so often inculked vn vnto you? I perceiue it is readie to flie out by your exteri our parts, but I will chastise this rebellious flesh, and make it subie to the spirit. It is lawfull &amp; possible for me to extract teares from his f nty hart with this rod of discipline, correcting him as the spirit moueth me. That appertaines not to him to examine. It is suffi cient that his wife hath that inward testimonie which ena b eth and emboldeneth her to doe her function, and to mi nister disciplinary documents. And this hee is firmely to hold, or els he loseth his election. You are not to informe me when I shall strike. It is the liuely spirit which directeth me: and now it telleth me you neede not at this time more to bee humbled. Goe in peace, and be patient. Loe now Hortano the vertue of this rod, which bringeth so plentifull teares from this Rock stomacke of his. Who els I pray you ▪ shall beasts doe it? Although women may not speake in the Church (which is great pity) yet we may preach in chambers, and men are tyed to heare vs. Iump. And so womnn instruct women, and none of them shall come to other. And how shall there then be pro creation of the holy ones, and the Israell of God bee multi plied? With all my heart. And I professe vnto you that hee shall neuer know otherwise by me: but I doubt his gene rous spirit will not suffer him (after a few yeares of discre tion) to tarrie long in that errour, but that he will heroical lie disdaine to haue you otherwise accompted of then his reputed father: and that he is rather the sonne of some zea lous brother, who neuer sees the Relikes of Charing-crosse, but wisheth hee were on horse-backe with a launce in his hand, in full speed to beare it downe. And yet his mother ex treame honest for all this. No husband. You shall not sweare so rashlie. I thanke you as much as though you did. Your saith shall saue you without swearing.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Two Wise Men and All the Rest Fools</div><div class="body">Proberio returns to England from his overseas travels, bringing with him the Italianated Antonio. Aton sets up in business, giving Proberio employment an house-room in return for an investment in the business. Simplo asks to enter his service as an apprentice in order to learn his tricks, and is ies ar provided that Antonio is granted the use of his lan and money. ” Securus asks Hermito to.advise him on a series © issues. They sit down to watch the debates, and witness the rest of the play’s action. Several rustics argue over whether holy days should be abolished: because no work gets done, weeds grow in the gardens and os in the fields. They appeal to Hermito, who rules in favour of Sunday observance. Sperato and Spurco disagree over whether hawking or hunting is the better sport, while Gulato avers that drinking is better than both. The husband Rustico and the bachelor Hortano debate the virtues of marriage: Hortano is afraid of marrying a shrew, whereas Rustico has already done so. His wife Lamia has conceived her son in his absence, and now ===== PAGE 161 ===== 1619 spoils the boy whilst beating Rustico, who reflects that at least he will go straight to heaven when he dies, having endured purgatory on earth. A lawyer, a merchant, and a farmer debate the relative merits and vices of their professions; asked for an opinion, Securus rules in the farmer’s favour, but Hermito argues that all three have their place in society and all three are open to abuse. They also adjudicate in a similar argument between a soldier, an intelligencer, and a musician, declaring each to be as bad as the other: they could do useful service, but have degenerated of late. Antonio’s business dealings prove unethical. He misappropriates borrowed goods, reneges on contracts, and dishonours debts, tearing his authenticating seal off a bill when it is presented to him by a poor widow. He and Noverindo plan to set up a livery company of usurers, in order to make it easier for them to charge exorbitant rates of interest. They employ Proberio to procure them a coat of arms, but since Proberio has been cheated by Antonio, he refuses to hand over the design before receiving his fee; it turns out to show Judas being hanged by the Devil, which Noverindo thinks might not be as good for business as they hoped. &#x27; Insatiato the courtier is in financial difficulties. His brother offers him a partnership in a commodity of rags, which are in heavy demand by the paper industry. Insatiato feigns…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_07.html">Cluster 7 — 7: thu, lorde, did</a> page.
+</div>
+</div></body></html>

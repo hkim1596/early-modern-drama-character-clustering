@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CHO in Julius Caesar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> ›
+  <span>CHO</span>
+</nav>
+
+<h1>CHO</h1>
+<p class="lede">in <em>Julius Caesar</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>587</td></tr>
+<tr><th>Characters</th><td>3462</td></tr>
+<tr><th>BritDrama no.</th><td>1553</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 29 (<em>brutus, did, rome, antonius, anthony, cleopatra…</em>). Matches are highlighted.</p>
+<div class="excerpt">but one tyrant haue, where as there raigne, A thouſand Tyrants in one tyrants breaſt. What though that Caeſar once commanded kings, Whoſe only name whole nations <mark>did</mark> appall? Yet now (let no man truſt in worldly things) A little earth holdes him that held it all. Thogh all ſuch things ſeem wonderful to ſome, They may by reaſon</div>
+<div class="excerpt">All viſite ſhould their neighbours in diſtreſſe, To giue ſome comfort, or to get ſome griefe. WHen darkneſſe laſt impriſond had mine eies, Such monſtrous viſions <mark>did</mark> my ſoule affright, That my deiected ſprite ſtill ſtupid dyes, Through terrors then contracted in the night. A melancholious cloud ſo dimmes my breaſt, That it my</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">O how thoſe great men friendſhip can pretend, By ſoothing others thus with painted windes, And ſeeme to truſt, where treaſon they attend, Whilſt loue their mouth, and malice filles their mindes. Thoſe but to them poore ſimple ſoules appeare, Whoſe countnance doth diſcouer what they thinke, That make their words as is their meaning cleare, And from themſelues can neuer ſeeme to ſhrinke. Lo how Anthonius faines to quench all iarres, And kindly the conſpirators t&#x27;imbrace, Yet as he further&#x27;d firſt the former warres, It&#x27;s fear&#x27;d he now be enemie to peace. Now where Calphurnia ſtayes our ſteps adreſſe, By this laſt ſodaine chance her loſſe was chiefe: All viſite ſhould their neighbours in diſtreſſe, To giue ſome comfort, or to get ſome griefe. WHen darkneſſe laſt impriſond had mine eies, Such monſtrous viſions did my ſoule affright, That my deiected ſprite ſtill ſtupid dyes, Through terrors then contracted in the night. A melancholious cloud ſo dimmes my breaſt, That it my mind fit for miſfortune makes, A lodging well diſpoſde for ſuch a gueſt, Where nought of ſorrow but th&#x27;impreſsion lackes. And I imagine euery man I ſee (My ſenſes ſo corrupted are by feares) A Herauld to denounce miſhaps to me, That ſhould infuſe confuſion in mine cares. O there he comes to violate my peace, In whom the obiect of my thoughts I ſee: Thy meſſage is charecter&#x27;d in thy face, Which by thy lookes directed is to me: Thy troubled eyes reſt rouling for releife, As lately frighted by ſome ougly ſight, Thy breath doth pant as if being big with griefe, And fear&#x27;d to bring ſome monſtrous birth to light. Though apprehending horrors in her minde, Now ſince ſhe hath a certaintie receiu&#x27;d, She by experience greater griefe doth finde, Till borne, the paſſions cannot be conceiu&#x27;d. When as a high diſaſter force affords, O how that tyrant whom affliction beares, Barres theares from comfort, &amp; the mouth from words. And being obdur&#x27;d cannot diſſolue in teares. Ah, when vnkindnes is where loue was thought, A tender paſſion breakes the ſtrongeſt heart, For of all thoſe that giue offence in ought, Men others hate, but for th&#x27;vnkinde they ſmart. To what an ebbe may fortunes full whiles come ▪ Why ſhould men following on the ſmoake of pride, Leaue certaine eaſe to ſeeke a dream&#x27;d delight, Which when they haue by many dangers tride, They neither can with ſafetie keepe, nor quite? The people that by force ſubdude remaine, May pittie thoſe by whome oppreſſd they reſt. They but one tyrant haue, where as there raigne, A thouſand Tyrants in one tyrants breaſt. What though that Caeſar once commanded kings, Whoſe only name whole nations did appall? Yet now (let no man truſt in worldly things) A little earth holdes him that held it all. Thogh all ſuch things ſeem wonderful to ſome, They may by reaſon comprehended be, Yet if ought more than common cuſtome come, It th&#x27;ignorant with wondring eies muſt ſee. Thoſe baſtard ſtarres not heritours of th&#x27;aire, Are firſt conceiu&#x27;d below, then borne aboue, And when fore-knowing things ſprites take moſt care, And by illuſions ſuperſtition moue. Yet this no doubt a great regard ſhould breed, When Nature hath brought forth a monſtrous birth, Where men in ſecret characters may reade, The wrath of heauen, and wickedneſſe of earth. The Naturaliſts, and th&#x27;Aſtrologians skill, May whiles r&#x27;encountring manifeſt like care, Since th&#x27;one lookes backe, and th&#x27;other forward ſtill, Th&#x27;one may tell what, and th&#x27;other why things are.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Julius Caesar</div><div class="body">Juno remains angry that a Trojan adjudged Venus the most beautiful goddess. Through the centuries, she has sought to avenge herself by harrying the Trojans’ 1607 descendants, the Romans, most recently by fomenting a civil war. But the victor of that war was Caesar, who traces his descent from Venus; he has conquered much of the world and established his ascendancy in Rome, but Juno now intends to work his overthrow. Caesar explains to Antonius that he wants to be a king not for personal ambition but to comply with a Sibylline prophecy which makes monarchy a precondition for a Roman victory in the east. Antonius warns him that there are Romans who desire his death. Cicero laments the loss of Rome’s liberty, and Decius Brutus agrees that, though Caesar’s past actions have been honourable, he should have demobilized his armies now that there is no further external threat. Brutus and Cassius agree that they will not participate in any ceremony aimed at making Caesar a king. Brutus is Caesar’s friend, but reasons that he must assassinate the tyrant for the public good. His wife Portia wrings the secret of the conspiracy out of him. Brutus and Cassius recruit conspirators, both patriots and men who have a personal grudge against Caesar. However, they exclude Cicero and agree not to kill Antonius. Caesar’s wife Calpurnia tries to persuade him not to go to the Senate on the Ides of March — an astrologer has foretold his death, and she herself has had bad dreams - but Decius Brutus induces him to change his mind. The conspirators assassinate Caesar. Antonius makes a show of friendship with them, but is obviously planning reprisals. A messenger brings Caesar’s wife Calpurnia a full account of the circumstances of the murder.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> page.
+</div>
+</div></body></html>

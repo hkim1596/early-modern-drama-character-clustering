@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MO in The Scornful Lady · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MO</span>
+</nav>
+
+<h1>MO</h1>
+<p class="lede">in <em>The Scornful Lady</em> — Beaumont, FrancisFletcher, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1616</td></tr>
+<tr><th>Words</th><td>971</td></tr>
+<tr><th>Characters</th><td>5036</td></tr>
+<tr><th>BritDrama no.</th><td>1626</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">an angel for thee. Yes faith K … ight. Ile follow thy example: thou hadst land and thousands, thou spendst, and flungst <mark>away</mark>, and yet it flowes in double: I purchasde, wrung, and wierdraw&#x27;d for my wealth, lost, and was cozend: for which I make a vowe, to trie all the waies aboue ground. but Ile finde a constant meane … to riches</div>
+<div class="excerpt">you, and good morrow to you all. Prethee good fellow helpe me to a cup of Beere. And here&#x27;s for you an angell: Pray buy no Land, twill neuer prosper Sir. Sir I <mark>must</mark> keepe you company. As many as you will Sir, I am for vm. I shal looke for&#x27;t in good faith sir. She shall not loose her longing Sir: what is she? She <mark>must</mark> be then</div>
+<div class="excerpt">(my friend) for you to buy whips, And for you sir, and you sir. What shall we play, or drinke? what shall we doe? Who will hunt with me for a hundred pound? Sir I <mark>must</mark> haue you grant me. To euery Bride I dedicate this day: Six healths a peece, and it shall <mark>goe</mark> hard, But euery one a Iewell: Come be mad Boyes.</div>
+<div class="excerpt">Barron, but a bare one: and how or when you shall be saued, let the clarke o&#x27;th com pany (you haue commanded) haue a iust care of. Heere&#x27;s e&#x27;ne to him. This money <mark>must</mark> be paid againe Sir? A … Iouer-reacht? if there be law, Ile hamper yee. A poxe vpon your house. Come VViddow, I shall yet hamper this young gamester. Yes, I will</div>
+<div class="excerpt">many as you will Sir, I am for vm. I shal looke for&#x27;t in good faith sir. She shall not loose her longing Sir: what is she? She <mark>must</mark> be then my Mistres. And you <mark>must</mark> take this ring, a poore pawne, Of some fifty pound. I shall be proud on&#x27;t: what fellow&#x27;s that: Ther&#x27;s something. (my friend) for you to buy whips, And for you sir,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">And Widdow, as I say be your owne friend: your husband left you wealthy, I and wise, continue so sweet duck, continue so. Take heede of young smooth varlets, younger brothers, they are wormes that will eate through your bags: they are very lightning, that with a slash or two will melt your money, and neuer singe your purse strings: they are colts, wench, colts, headdy and dangerous, till we take vm vp, and make vm fit for bonds; looke vpon mee, I haue had, and haue yet matter of moment gyrle, matter of moment; you may meete with a worse backe, Ile not commend it. Yet thus farre by your fauour vviddow, &#x27;tis tuffe. Sweet widdow leaue your frumps, and bee edified: you know my state, I sell no Perspectiues, Scarses, Gloues, nor Hangers, nor put my trust in Shoo-ties: and where your hus band in an age was rising by burnt figs, dreg&#x27;d with meale and powdered sugar, saunders and graines, wormeseed and rotten reasons, and such vile tobacco, that made the foot-men man gie; I in a yeere haue put vp hundreds incios&#x27;d, my widdow, those pleasant meadowes, by a forfeit morgage: for which the poore Knight takes a lone chamber, owes for his Ale, and dare nor beat his Hostesse: nay more — Not with the head, sweet widdow. Now sir, from whom come you? whose man are you Sir? Be silent sir, I haue no money, not a penny for you, hee&#x27;s sunke, your Master&#x27;s sunke, a perisht man sir. How saidst thou, good my friend, his brother drown&#x27;d? And thy young Master left sole heire? And he wants money? Widdow, be vvise, there&#x27;s more land comming, wid dow be very wise, and giue thanks for me vviddow. I say, he may haue money if he please. A thousand Sir, prouided any wise Sir, his land lye for the payment, otherwise — My notable deare friend, and worthy M r Louelesse, and now right worshipfull, all ioy and welcome. Dead? Dead? Now by the faith of my body it mooues me much. O, ha&#x27;s he so? Will you sell Sir? I haue no money Sir for morgage; If you will sell, and all or none, I … e worke a new Mine for you. Sixe thousand pound Sir. There&#x27;s a Gods penny for thee. Ile haue all in or none. Come widdow, come, neuer stand vpon a knighthood, &#x27;tis a meere paper honour, and not proofe enough for a Ser geant. Come, come, Ile make thee — Farewell sweet widdow, and thinke of it. Shee&#x27;s rich and sober, if this itch were from her: and say I bee at charge to pay the Footmen, and the Tru … pett, I and the Horsmen too, and be a Knight, and she refuse me then: then am I hoyst into the Subsidy, and so by consequence should proue a Coxcombe: Ile haue a care of that. Sixe thou sand pound, and then the Land is mine, there&#x27;s some refresh ing yet. Captaine I shall deserue some of your loue too. Pardon me Captaine, y&#x27;are beside my meaning. I thanke you worthy Captain for your counsell. You keep your chimneys smoking there, your nostrels, and when you can, you feede a man of war: this makes not you a Barron, but a bare one: and how or when you shall be saued, let the clarke o&#x27;th com pany (you haue commanded) haue a iust care of. Heere&#x27;s e&#x27;ne to him. This money must be paid againe Sir? A … Iouer-reacht? if there be law, Ile hamper yee. A poxe vpon your house. Come VViddow, I shall yet hamper this young gamester. Yes, I will goe, but &#x27;tis no matter whither: But when I trust a wilde foole, and a woman, May I lend gratis, and build Hospitals. Saue you gent. saue you. Come, pre thee bee familiar Knight. Thou art wide yet: Ile keepe thee companie. Thou art cozen&#x27;d now, I am no vsurer: VVhat poore fellow&#x27;s this? Giue him money Knight. There pore fellow, heer&#x27;s an angel for thee. Yes faith K … ight. Ile follow thy example: thou hadst land and thousands, thou spendst, and flungst away, and yet it flowes in double: I purchasde, wrung, and wierdraw&#x27;d for my wealth, lost, and was cozend: for which I make a vowe, to trie all the waies aboue ground. but Ile finde a constant meane … to riches without curses. Come, we are all gallants now, Ile keepe thee company; Heere honest fellow, for this gentlemans sake, theres two angels more for thee. Til I haue a penny. I haue braue clothes a making, and two horses; canst thou not h … lpe me to a Match Knight, Ile lay a a thousand pound vpon my crop-eare. Shall we goe noble Knight? I would faine be acquainted. God saue you, and good morrow to you all. Prethee good fellow helpe me to a cup of Beere. And here&#x27;s for you an angell: Pray buy no Land, twill neuer prosper Sir. Sir I must keepe you company. As many as you will Sir, I am for vm. I shal looke for&#x27;t in good faith sir. She shall not loose her longing Sir: what is she? She must be then my Mistres. And you must take this ring, a poore pawne, Of some fifty pound. I shall be proud on&#x27;t: what fellow&#x27;s that: Ther&#x27;s something. (my friend) for you to buy whips, And for you sir, and you sir. What shall we play, or drinke? what shall we doe? Who will hunt with me for a hundred pound? Sir I must haue you grant me. To euery Bride I dedicate this day: Six healths a peece, and it shall goe hard, But euery one a Iewell: Come be mad Boyes.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Scornful Lady</div><div class="body">The Loveless brothers are in trouble. The younger owes money to Morecraft and stands to lose his land, while the elder has been ordered by his lady-love to go into exile for a year as penance for his over-eagerness. He leaves his brother in charge of his house during his absence, with an allowance for his maintenance, and the steward Saville to restrain him, but the young man associates with rogues. Together they reinterpret his brother’s written instructions in order to license his prodigal behaviour. While they are drinking and wenching, the elder Loveless returns in disguise bringing news of his own death: young Loveless inherits his brother’s land, and promptly mortgages it to Morecraft. The elder Loveless also reports his death to the Lady, who consoles herself by chatting up another lover, Welford. When Loveless reveals his true identity, she retorts that she knew it was him and sends him on his way, but also disappoints Welford. Loveless returns and abuses her, pretending to be out of love. She faints and he relents: it was a trick to test her; but, she says, she knew that all along, and Loveless is sent away again. The elder Loveless dismisses Saville for negligence and reclaims his mortgaged property, but his younger brother not only keeps the money but also steals Morecraft’s intended fiancée, a rich, socially ambitious widow. She objects to his low-life friends, but he persuades her that they are cheaper than servants. The Lady’s affections begin to turn: she sends the elder Loveless a love letter. He conspires with Welford to get their own back: Welford cross-dresses as his new fiancée, and Loveless graciously gives in to the Lady’s pleas that he should jilt ‘her’. Loveless marries the Lady (who is angry when she learns how she has been tricked), and Welford sleeps with her sister. Young Loveless arrives with his new wife, and persuades his brother to reinstate Saville.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

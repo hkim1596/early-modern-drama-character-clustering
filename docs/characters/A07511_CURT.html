@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CURT in A Trick to Catch the Old One · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>CURT</span>
+</nav>
+
+<h1>CURT</h1>
+<p class="lede">in <em>A Trick to Catch the Old One</em> — Middleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1608</td></tr>
+<tr><th>Words</th><td>579</td></tr>
+<tr><th>Characters</th><td>2992</td></tr>
+<tr><th>BritDrama no.</th><td>1467</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt"><mark>heare</mark> me but a word. Let him in peaceably, you know we&#x27;re ſure, from any act of his. Was it not cauſe too much? Send to enquire his ſtate, moſt part of it, Lay <mark>two</mark> yeares morgag&#x27;d in his Vncles hands: ut y&#x27;aue beene euer full of golden peech, If wordes were lands, your Nephew would <mark>bee</mark> rich. I do proteſt before theſe Gentlemen,</div>
+<div class="excerpt">part, If in diſgrace you ſhare, I ſought not you: You purſued me, nay forc&#x27;ſt me, Had I friends would follow it, Leſſe then your action <mark>has</mark> beene prou&#x27;d a rape. Nor <mark>did</mark> I euer boaſt of lands vnto you, Money or goods: I tooke a playner courſe: And told you true ide nothing, If error were committed twas by you. thanke your owne folly,</div>
+<div class="excerpt">forgot. I ſlipt my wedding Ring off when I waſht, and left it at my lodging, prethee run, I ſhall be ſad without it, ſo, hee&#x27;s gon!—boye? Husband and Gentlemen, <mark>heare</mark> me but a word. Let him in peaceably, you know we&#x27;re ſure, from any act of his. Was it not cauſe too much? Send to enquire his ſtate, moſt part of it, Lay <mark>two</mark> yeares</div>
+<div class="excerpt">wordes were lands, your Nephew would <mark>bee</mark> rich. I do proteſt before theſe Gentlemen, I will be as cleere then, as I am now. Sir? would you with me. Hum? faith ſir twould like me better here, here you were married, here let all rites be ended. Alaſſe his creditors ſo mercileſſe, my ſtate beeing yet vncertaine, I deeme it not vnconſcionable</div>
+<div class="excerpt">boaſt of lands vnto you, Money or goods: I tooke a playner courſe: And told you true ide nothing, If error were committed twas by you. thanke your owne folly, nor <mark>has</mark> my ſinne beene ſo odious but worſe <mark>has</mark> bin for giuen, nor am I ſo deformd but I may challing the vtmoſt power of any old mans loue, ſhee that taſts not ſin before,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">My loue. I begin to applaud thee, our States beeing both deſpe rate, they&#x27; are ſoone reſolute, but how for horſes? Arme your wittes then ſpeedily, there ſhall want no thing in mee, eyther in behauiour, diſcourſe or faſhion, that ſhall diſcredit your entended purpoſe. I will ſo art-fully diſguiſe my wants, And ſet ſo good a courage on my ſtate, That I will be beleeued. Tis right the world, for in theſe dayes an olde mans loue to his kindred, is like his kindneſſe to his wife, &#x27;tis alwayes done before hee comes at it. Is he ſo ſir? I thinke ſo? Maiſter Wit-good? where are you? Nor land, nor liuing ſay you, pray take heede you do not wrong the Gentleman? Is my loue ſo deceau&#x27;d, before you all I do renounce him, on my knees I vow He nere ſhall marry mee,— The world is ſo deceitfull? Pray ſir. Vp ſtaires! troth I am weary Maiſter Wit-good Nay I commend your care, tis donne well of you? aſſe what haue I forgot. I ſlipt my wedding Ring off when I waſht, and left it at my lodging, prethee run, I ſhall be ſad without it, ſo, hee&#x27;s gon!—boye? Husband and Gentlemen, heare me but a word. Let him in peaceably, you know we&#x27;re ſure, from any act of his. Was it not cauſe too much? Send to enquire his ſtate, moſt part of it, Lay two yeares morgag&#x27;d in his Vncles hands: ut y&#x27;aue beene euer full of golden peech, If wordes were lands, your Nephew would bee rich. I do proteſt before theſe Gentlemen, I will be as cleere then, as I am now. Sir? would you with me. Hum? faith ſir twould like me better here, here you were married, here let all rites be ended. Alaſſe his creditors ſo mercileſſe, my ſtate beeing yet vncertaine, I deeme it not vnconſcionable to furder him. Curſt be my raſh and vnaduiſed words, Ile ſet my foote vpon my tongue, And tread my inconſiderate grant to duſt. No ſir, ide haue it done ſome Nobler way Of your ſide; ide haue you come off with honor, Let baſeneſſe keepe with them: why haue you not the meanes ſir, the occaſions offerd you. No more,—why do your worſt for that, I defie you. Call vp thy wits for thou haſt beene deuoted to follies a long time. Deſpiſe me, publiſh me I am your wife, What ſhame can I haue now but youle haue part, If in diſgrace you ſhare, I ſought not you: You purſued me, nay forc&#x27;ſt me, Had I friends would follow it, Leſſe then your action has beene prou&#x27;d a rape. Nor did I euer boaſt of lands vnto you, Money or goods: I tooke a playner courſe: And told you true ide nothing, If error were committed twas by you. thanke your owne folly, nor has my ſinne beene ſo odious but worſe has bin for giuen, nor am I ſo deformd but I may challing the vtmoſt power of any old mans loue, ſhee that taſts not ſin before, twenty to one but ſheele taſt it after: moſt of you ould men are content to mary yong Virgins and take that which followes, where marrying one of vs, you both ſaue a ſinner, and are quit from a cuckold for euer, &quot;And more in breife let this your beſt thoughts winne, &quot;She that knowes ſinne, knowes beſt how to hate ſinne.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Trick to Catch the Old One</div><div class="body">The spendthrift Witgood has mortgaged all his lands to his uncle, Lucre, but he is still in debt, and fear of his creditors keeps him away from London. Nevertheless he must go there if he is to make his fortune by marrying Joyce, the wealthy niece to Lucre’s enemy Walkadine Hoard. He conspires with Jane, a courtesan, to give the impression that he now has good prospects: she poses as a rich country widow who plans to marry him. Lucre’s attitude to his nephew is immediately transformed: hoping to acquire the widow’s lands too after the wedding, he denies the existence of the mortgage and lends Witgood money for new clothes. News of the widow also attracts Witgood’s creditors, but he persuades them that if they are over-attentive they will break his engagement, and thereby wreck their chances of repayment: the widow must continue to believe him to be financially secure. To that end, they eagerly agree to lend him even more money. Meanwhile Jane herself is a magnet for suitors, including the young men who were earlier trying to woo the reluctant Joyce, who is only interested in Witgood. Hoard throws his hat in the ring, bringing gentlemen to give Witgood a bad testimonial and discredit Lucre’s claims that there is no mortgage. Jane denies that she has any lands, but Hoard takes it for winsomeness and insists that her love is all that matters. They arrange an elopement; she absconds from Witgood at a tavern and marries Hoard. Lucre intervenes, not knowing he is too late, and gets her to promise that she will not change her marital status until he has made matters good by returning his nephew’s mortgage, which he duly does before witnesses. On discovering that he has been tricked, he initiates a law-suit, alleging that the widow’s marriage to Hoard is invalidated by a pre-contract to Witgood. Hearing that he has lost the widow, Witgood’s creditors have him arrested. Jane persuades Hoard to pay his debts and secure his release in exchange for his signature on a legal document renouncing any marital claim on her. Hoard drives a hard bargain with the creditors, but Witgood is duly freed. He secretly marries Joyce and delights his uncle with the truth that Hoard has married a whore. Hoard himself learns this when his brother comes from the country to attend the nuptial celebrations, and recognizes Jane. Jane points out that Hoard has only his own avarice to blame: she never misrepresented herself as having ===== PAGE 206 ===== 206 | 1467.A Trick to Catch the Old…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

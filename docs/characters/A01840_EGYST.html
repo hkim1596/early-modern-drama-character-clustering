@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EGYST in Orestes · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> ›
+  <span>EGYST</span>
+</nav>
+
+<h1>EGYST</h1>
+<p class="lede">in <em>Orestes</em> — Goffe, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>694</td></tr>
+<tr><th>Characters</th><td>3640</td></tr>
+<tr><th>BritDrama no.</th><td>1929</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 18 (<em>death, thebes, did, myne, eke, wyth…</em>). Matches are highlighted.</p>
+<div class="excerpt">Hatefull Achilles for his wronged loue Comes in with Briseis, and they two let forth Streames of fresh blood from out his aged side, With that his Eccho&#x27;d schrieke <mark>did</mark> make me wake; But I remembred then he was come home, And yet I&#x27;ll see him, still me thinks I quake, Doe I still dreame? are not mine eyes vnclos&#x27;d? he drawes the</div>
+<div class="excerpt">face more blacke; Let horrid murder take thee by the hand And come along: I haue a prodigie Equall to all the murders, all the blood That hath been shed in all Troyes ten yeeres seige He draws the curtaine. So, snore returned King; good Morpheus hang Thy leaden weights vpon his drowsie eyes Let him not wake till he shall see</div>
+<div class="excerpt">trunke, now let it shine And light my ignorant eyes to reade the names Of these night vultures, whose deuouring bills Haue made a Titius of thy royall corps: Who <mark>did</mark> not feare great Agamemnons sleepe? Arme, arme your selues all you, all potent Gods You which we terme Iust ministers of Heauen, Shoote forked lightning from the</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Night, now onely spred thy sable wings Ouer this climate, gather all thy fogs That they may meet, and make thy face more blacke; Let horrid murder take thee by the hand And come along: I haue a prodigie Equall to all the murders, all the blood That hath been shed in all Troyes ten yeeres seige He draws the curtaine. So, snore returned King; good Morpheus hang Thy leaden weights vpon his drowsie eyes Let him not wake till he shall see himselfe, Drencht in a sea of his vermilian goare: Thou doest no Troian, now no Hector feare, But yet I&#x27;ll shew thee a new Hector here. Me thinks I now goe equall with the starres And my proud head toucheth the highest pole, Harke, Hell applauds me, and me thinkes I heare A noyse. Thyestes tell me I haue done enough: And now I kisse my hands, whilst yet they beare This tincture on them, and embrace my Queene, Now made my loue; lets in, this night the Fates Haue amply fed vs with reuengefull cates. Exeunt, WHat horrid dreams affright me? I see naught That I should feare, and yet me thinks I feare. Mine eyes scarce clos&#x27;d, my busie fancy saw A sight that dasht all comforts of the day: Me thought my Father lying in his tent, Hatefull Achilles for his wronged loue Comes in with Briseis, and they two let forth Streames of fresh blood from out his aged side, With that his Eccho&#x27;d schrieke did make me wake; But I remembred then he was come home, And yet I&#x27;ll see him, still me thinks I quake, Doe I still dreame? are not mine eyes vnclos&#x27;d? he drawes the curtaine. Is this a torch? yes, &#x27;tis, it burnes, I see I am awake, doe not delude me night! Now stand on tiptoes Atlas, lift heauen higher, I may haue ayre inough to breath my woes, O let me yet recall thy posting soule If Charon haue not hurried thee too fast If yet thou hast not drunk on lethes poole, Come backe, and tell mee who it is this night, Hath don this deed farre blacker then the night? Ha! art thou fled past call? why thou wert old Me thinkes thou shouldst not haste so fast away: Was it for this thou swe&#x27;rst so oft in Armes! Was it for this that the froth swelling foame When thy ships top toucht Heauen, and deepe plac&#x27;d hell, That thou must yet escape curl&#x27;d Neptune&#x27;s waues To be a Palinurus in thy shoare There drowne thy aged locks in crimson goare. O if one sparke yet of thy Princely Soule Remaine within this trunke, now let it shine And light my ignorant eyes to reade the names Of these night vultures, whose deuouring bills Haue made a Titius of thy royall corps: Who did not feare great Agamemnons sleepe? Arme, arme your selues all you, all potent Gods You which we terme Iust ministers of Heauen, Shoote forked lightning from the marble poale Let the all-seeing eye of heauen shoote flames Which may parch vp the marrow from their bones Should they lye coucht i&#x27;th brest a&#x27;th Thunderer, Or be entrencht with guards of Furies, Heauen, earth, nor hell should keepe them from my sword Dost thou sleepe Ioue ? O couldst thou snore so fast, And let thy great vicegerent thus be torne? Some of th&#x27;immortall powers haue had fathers, And know what&#x27;tis to haue them murdered thus. But I turne woman now, O I raue out My passions; doe griefe, poure out thy selfe, That thou mayst make roome in my empty heart To fill it with reuenge. O but hee&#x27;ll beare a still suspitious eye ▪ And who in bloudy Scenes doth act a part, Thinks euery eye doth penetrate his heart. Nor can we ere be free, or I inioy True pleasures, we must be but theeues at most, Close in delights, and haue a Pander still To be a Factor, &#x27;twixt thy bed and mine This we could haue before, what now we doe The world should see done, and applaud it too.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Orestes</div><div class="body">Agamemnon returns home after ten years of war. When he takes his neglected wife Clytemnestra to bed, she and her lover Aegisthus murder him. Roused by bad dreams, his son Orestes finds the body in bed. Feigning innocence, Clytemnestra curses the murderer, while the surviving Trojan glories in the death of the enemy commander: Troy is avenged. Recognizing that he is in danger, Orestes goes into hiding with Pylades until the murderer is identified, and sends a report that, unhinged with grief, he threw himself off a cliff into the sea, and that Pylades also went over trying to stop him. Aegisthus, the next in line, ascends the throne and marries Clytemnestra. She bears him a son, establishing his dynasty, and in celebration he proclaims a general pardon for all crimes. Orestes and Pylades consult the witch Canidia, who shows them a vision of Clytemnestra and Aegisthus committing the murder. They return to court in disguise. Their plotting is overheard by Misander, and they kill him to preserve secrecy, but are immediately arrested. In judging the case, Aegisthus faces two problems: the crime is covered by the general pardon, and each defendant, seeking to save the other, claims that he alone was the murderer. Aegisthus decides not to pass a death sentence on either, and is further impressed when Pylades introduces Orestes as a doctor who has perfected the secret of rejuvenation. Aegisthus asks for a demonstration, using himself and Clytemnestra as the subjects. Agamemnon’s ghost appears to Orestes, urging him to get on with the revenge and take care not to spare his mother. Pylades obtains custody of Aegisthus’ son, who is in the care of Orestes’ sister Electra. When Orestes meets with the King and Queen for their ===== PAGE 235 ===== 1620 rejuvenation, he ties them up, kills their son in front of them, forces them to drink the blood, and finally kills them. He demands his restoration to the throne, but the lords are unwilling to crown a murderer, and instead enthrone Tyndarus, whose first act is to banish Orestes and his accomplices, further stipulating that nobody must give Orestes food. Pylades’ father Strophius dies and Electra kills herself. Orestes goes mad and thinks himself tormented by the Furies. He and Pylades kill one another in a suicide pact, and Tyndarus announces that they are to be buried together in a single tomb.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> page.
+</div>
+</div></body></html>

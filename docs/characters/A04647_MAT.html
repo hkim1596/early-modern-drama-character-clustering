@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAT in Every Man in His Humor · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MAT</span>
+</nav>
+
+<h1>MAT</h1>
+<p class="lede">in <em>Every Man in His Humor</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1601</td></tr>
+<tr><th>Words</th><td>1283</td></tr>
+<tr><th>Characters</th><td>6408</td></tr>
+<tr><th>BritDrama no.</th><td>1143</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">yonder is the varlet. God saue you friend, are not you here by the appoynt ment of doctor Clemants man. It is honestly done of you both, and see where hee coms you <mark>must</mark> arest, vppon him for Gods sake before hee beware. Weele be euen with you sir, come signior Bobadilla ▪ weele <mark>goe</mark> before and prepare the doctor: varlet looke to</div>
+<div class="excerpt">mind. Signior Bobadilla. God saue you sir, God saue you. I thanke you good Signior, you may see, I am some what audacious. Vouchsafe me by whom good Signior. No haste sir, it is very well. Faith some halfe houre to seuen: now trust me you haue an exceeding fine lodging here, very neat, and priuate. Who I sir? no. True Signior,</div>
+<div class="excerpt">to seuen: now trust me you haue an exceeding fine lodging here, very neat, and priuate. Who I sir? no. True Signior, I conceiue you. O Lord sir I resolue so. I, <mark>did</mark> you euer see it acted? is&#x27;t not well pend? Indeede, here are a number of fine speeches in this booke: Oh eyes, no eyes but fountaines fraught with teares; there&#x27;s</div>
+<div class="excerpt">refined essence heauen couers, Send I these lines, wherein I do commence The happie state of true deseruing louers. If they proue rough, vnpolish&#x27;t, harsh and rude, Haste made that waste; thus mildly I conclude. This sir, a toy of mine owne in my nonage: but when will you come and see my studie? good faith I can shew you some verie</div>
+<div class="excerpt">be indeed. Signior will you any? By this ayre the most diuine Tabacco as euer I drunke. You say well, you say well. Mistresse Ile re de it if you please. Fayth I <mark>did</mark> it in an h mor: I know not how it is, b t please you come neare signior: this gentleman hath i dge ment, he knowes how to cens re of a ▪ —I pray you ir ▪ you can</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I thinke this be the house: what howgh? What? Cob? how doest thou good Cob? doest thou inhabite here Cob? Thy lineage monsieur Cob? what lineage, what lineage? Why mightie? why mightie? How knowest thou that? Oh vnsauorie iest: the ghost of a herring Cob. Oh rude ignorance. Cob canst thou shew me, of a ge ̄ tleman, one Signior Bobadilla, where his lodging is? Thy guest, alas? ha, ha. Cob I pray thee aduise thy selfe well: do not wrong the gentleman, and thy selfe too. I dare be sworne hee scornes thy house hee. He lodge in such a base obscure place as thy house? Tut, I know his disposition so well, he would not lie in thy bed if hould&#x27;st giue it him. Why was he drunke? Lie in a waterbearers house, a gentleman of his note? well ile tell him my mind. Signior Bobadilla. God saue you sir, God saue you. I thanke you good Signior, you may see, I am some what audacious. Vouchsafe me by whom good Signior. No haste sir, it is very well. Faith some halfe houre to seuen: now trust me you haue an exceeding fine lodging here, very neat, and priuate. Who I sir? no. True Signior, I conceiue you. O Lord sir I resolue so. I, did you euer see it acted? is&#x27;t not well pend? Indeede, here are a number of fine speeches in this booke: Oh eyes, no eyes but fountaines fraught with teares; there&#x27;s a conceit: Fountaines fraught with teares. Oh life, no life, but liuely forme of death: is&#x27;t not excellent? Oh world, no world, but masse of publique wrongs; O Gods mee: confusde and fild with murther and misdeeds. Is&#x27;t not simply the best that euer you heard? Ha, how do you like it? To thee the purest obiect to my senc , The most refined essence heauen couers, Send I these lines, wherein I do commence The happie state of true deseruing louers. If they proue rough, vnpolish&#x27;t, harsh and rude, Haste made that waste; thus mildly I conclude. This sir, a toy of mine owne in my nonage: but when will you come and see my studie? good faith I can shew you some verie good thinges I haue done of late: that boote be comes your legge passing well sir, me thinks. Masse sir, and now you speake of the fashion, Signior Prosperos elder brother and I are fallen out exceedingly: this o ther day I hapned to enter into some discourse of a hanger, which I assure you, both for fashion &amp; workmanship was most beautifull and gentlemanlike; yet hee condemned it for the most pide and ridiculous that euer he saw. I sir, he. I, and he thinkes to carrie it away with his manhood still where he comes: he brags he will giue mee the bastinado, as I heare. Nay indeed he said cudgill me; I tearmd it so for the more grace. Faith yesterday they say, a young gallant a friend of mine told me so. Indeed you haue absolute knowledge in the mistery, I haue heard sir. Faith I haue heard it spoken of diuers, that you haue verie rare skill sir. How is the bearing of it now sir? How meane you passe vpon me? Well, come sir. But one ve y sir. Faith I haue not past two shillings, or so. I will speake to him. Yes faith sir, we were at your lodging to seeke you too. Troth nor I, he is of a rusticall cut, I know not how: he doth not carrie himselfe like a gentleman. I vnderstand you sir. Oh Lord sir, it&#x27;s your only best humor sir, your true melancholy, breedes your perfect fine wit sir: I am melancho lie my selfe diuers times sir, and then do I no more but take your pen and paper presently, and write you your halfe score or your dozen of sonnets at a sitting. Why I pray you signior, make vse of my studie, it&#x27;s at your seruice. Faith sir, I haue some papers there, toyes of mine owne doing at idle houres, that you&#x27;le say there&#x27;s some sparkes of wit in them, when you shall see them. Masse I thinke it be indeed. Signior will you any? By this ayre the most diuine Tabacco as euer I drunke. You say well, you say well. Mistresse Ile re de it if you please. Fayth I did it in an h mor: I know not how it is, b t please you come neare signior: this gentleman hath i dge ment, he knowes how to cens re of a ▪ —I pray you ir ▪ you can iudge. I shall sir: well, Incip r dulce. Rare creature let me speake without offence, Would God y rude woo ds ad the influence: To rule thy thoughts, as 〈◊〉 f yr lookes do mine, Then shouldst thou be his prisoner, who is thine. Be not vnkinde and fayre mish en st ffe ▪ Is of beh ur boysterous and rough: How like you that signior, 〈◊〉 he shakes his head like a bo tle, to feele and there be any brayne in it. But obserue the Catastroph now, And I in dutie will exceede all other. As you in bewtie do excell lo s ther. Oh God sir, its your pleasure to say so sir. Fayth I mad them 〈◊〉 this morning. I vvould I might be damnd els: aske signior Bo adill . He sawe me vvrite them, 〈◊〉 the: (pox on it) the Miter yonder. Oh I sir, he threatned me with the bastinado. Indeede it is a most excellent tricke. Oh rare. Oh good sir. Fayth and ile haue a fling 〈◊〉 him. Ile be hangd then if that vvere he. I vvonder signior vvhat they vvill say of my going a way: ha? Why so, but what can they say of your beating? I but would any man haue offered it in Venice? Do you heare ist not best to get a warrant and haue him arested, and brought before doctor Clement. Why here comes his man, lets speake to him. God saue you sir. Sir there is one Giulliano hath abusd this gentleman and me, and we determine to make our amendes by law, now if you would do vs the fauour to procure vs a warrant for his arest of your maister, you shall be well considered I assure, I fayth sir. How is that? Oh Lo d, an, le awne this iewell in my are, and you may pawne your silke sto kins, and pull vp your bootes, they will neare be mi t. A tall bigge man sir, he goes in a cloake most com monly of silke rus et: layd about with russet lace. Here sir, heres my iewell? Very good sir I vvish no better. See I thinke yonder is the varlet. God saue you friend, are not you here by the appoynt ment of doctor Clemants man. It is honestly done of you both, and see where hee coms you must arest, vppon him for Gods sake before hee beware. Weele be euen with you sir, come signior Bobadilla ▪ weele goe before and prepare the doctor: varlet looke to hi . Andt pleas your worship he 〈◊〉 bound to the peace. No sir ▪ I translated that o t of a booke, called Delia. Sir; heres the beginning of a sonnet I made to my mistresse. Fayth sir ▪ I had most of the conceite of it 〈◊〉 of a bal lad i deede. Fayth so should I be, and I had slept on it.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Every Man in His Humor</div><div class="body">Prospero invites DOrenzo—jinior to visit him in Florence and see two gulls, Mathes and Bobadilla; Lorenzo decides to bring along his cousin St@pHAHG as a third. His father has intercepted the letter and, concerned to wean him away from poetry and towards more profitable studies, follows him to the city. The servant Misco follows EGFEHZOISEHIOF and insinuates himself into his master’s service under a new identity, disguised as a soldier. MGFENG is concerned that Prospero has become dissolute, and that the bad company which visits him will corrupt his sister M@Sperida and cuckold him; consequently he is anxious about leaving his house to do business. Matheo, who has been threatened with a cudgelling by GiliaiG, visits Bobadilla at his lodgings and they practice fighting. Later, Bobadilla assaults @6B for speaking against tobacco, and Cob procures a warrant from the city magistrate, DGGtGPIGIEMERL, to prevent ===== PAGE 52 ===== him fighting. Matheo woos Hesperida, using plagiarized verses. Giuliano provokes a fight with Matheo, but Bobadilla cannot participate because he is bound over by Cob’s warrant (and also because he is a coward); Giuliano later gives him a beating, which again he cannot resist. Thorello and his wife are lured away on false errands while Lorenzo Junior marries Hesperida. A series of ‘mistaken identities and tricks by Musco leads all the major characters to Doctor Clement’s house, either as litigants or prisoners. Lorenzo Junior pronounces on the current state of poetry. Matheo’s verses are destroyed, and he is sentenced to do public penance; Bobadilla is imprisoned. Doctor Clement requires the others to abandon their humours and dine with him, awarding Musco the place of honour. B-Text</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

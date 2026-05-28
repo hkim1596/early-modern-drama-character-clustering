@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CALPH in Julius Caesar · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> ›
+  <span>CALPH</span>
+</nav>
+
+<h1>CALPH</h1>
+<p class="lede">in <em>Julius Caesar</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>464</td></tr>
+<tr><th>Characters</th><td>2629</td></tr>
+<tr><th>BritDrama no.</th><td>1553</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 29 (<em>brutus, did, rome, antonius, anthony, cleopatra…</em>). Matches are highlighted.</p>
+<div class="excerpt">my laſt <mark>might</mark> be, Which are deepe ſunke within a melted heart, Of my liues <mark>death</mark> report each point to me, That I for euery circumſtance may ſmart. Whilſt brutiſh <mark>Brutus</mark>, and prowde Caſsius thus Romes greateſt Captaine vnder truſt deceiu&#x27;d, Where was Anthonius (ſince a friend to vs,) That he not loſt himſelfe, or Caeſar ſau&#x27;d? The</div>
+<div class="excerpt">within his houſe this day would waſte, As I by dreames aduertis&#x27;d was before, Which ſhew&#x27;d that was to come, which now is paſt: Whilſt the ſooth-ſayers ſacrifiz&#x27;d <mark>did</mark> finde, A beaſt without a heart their altars ſtaine: By that preſage my ſoule <mark>might</mark> haue diuin&#x27;d That I without my heart would ſoone remaine. But all thoſe terrors</div>
+<div class="excerpt">beleeu&#x27;d my faithfull cares, That t&#x27;haue his ſtate eſtabliſh&#x27;d alwayes ſtriu&#x27;d: Then ſcaping this conſpiracie of theirs, He honorde ſtill, and I had happie liu&#x27;d. <mark>Did</mark> I not ſpend of ſupplications ſtore, That he within his houſe this day would waſte, As I by dreames aduertis&#x27;d was before, Which ſhew&#x27;d that was to come, which now</div>
+<div class="excerpt">without my heart would ſoone remaine. But all thoſe terrors could not terrors giue, To that great mind whoſe thoghts could not be tam&#x27;d; But by his fortune confident <mark>did</mark> liue, As him t&#x27;obey the heauens had all things fram&#x27;d. Yet though he ended haue his fatall race, T&#x27;inſult for this let not his murdrers ſtriue, For, O I hope to</div>
+<div class="excerpt">now his name the multitude reſpects, Since murdering one that had held him ſo deare, Whilſt th&#x27;inward thoughts ech outward thing reflects, Some monſtrous ſhape to <mark>Brutus</mark> muſt appeare. Iuſt Nemeſis muſt plague prowde Caſſius ſoone, And make him kill himſelfe from hopes eſtrang&#x27;d; Once all the wrongs by foes to Caeſar done, May by</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Stay; ere thou further goe defray my woes, How doth my loue? wher is my life? Nu ̄ . Dead. Cal. dead. Ah, ſince the lights of that great light are ſet, Why doth not darkneſſe ſpread it ſelfe ouer all? At leaſt what further comfort can I get Whoſe pleaſures had no period but his fall. O would the gods I alwayes might confine Aetna&#x27; in my breaſt, and th&#x27;Ocean in mine eyes, That t&#x27;entertaine ſo great a griefe as mine, Thence might ſufficient furniture ariſe. Yet I diſdaine though by diſtreſſe ore-throwne, By ſuch externall meanes to ſeeke reliefe: The greateſt ſorrowes are by ſilence ſhowne, Whilſt all the ſences are ſhut vp with griefe: But miſerie doth ſo tyrannicke grow, That it of ſighes and teares a tribute claimes: Ah, when the cup is full it muſt ore-flow, And fires that burne muſt offer vp ſome flames. Yet though that thy laſt words my laſt might be, Which are deepe ſunke within a melted heart, Of my liues death report each point to me, That I for euery circumſtance may ſmart. Whilſt brutiſh Brutus, and prowde Caſsius thus Romes greateſt Captaine vnder truſt deceiu&#x27;d, Where was Anthonius (ſince a friend to vs,) That he not loſt himſelfe, or Caeſar ſau&#x27;d? The Senators that were aſſembled there, When they beheld that great man brought t&#x27;an end, What was their part? to what inclin&#x27;d their care? I feare affliction could not find a friend. Ah, had he but beleeu&#x27;d my faithfull cares, That t&#x27;haue his ſtate eſtabliſh&#x27;d alwayes ſtriu&#x27;d: Then ſcaping this conſpiracie of theirs, He honorde ſtill, and I had happie liu&#x27;d. Did I not ſpend of ſupplications ſtore, That he within his houſe this day would waſte, As I by dreames aduertis&#x27;d was before, Which ſhew&#x27;d that was to come, which now is paſt: Whilſt the ſooth-ſayers ſacrifiz&#x27;d did finde, A beaſt without a heart their altars ſtaine: By that preſage my ſoule might haue diuin&#x27;d That I without my heart would ſoone remaine. But all thoſe terrors could not terrors giue, To that great mind whoſe thoghts could not be tam&#x27;d; But by his fortune confident did liue, As him t&#x27;obey the heauens had all things fram&#x27;d. Yet though he ended haue his fatall race, T&#x27;inſult for this let not his murdrers ſtriue, For, O I hope to ſee within ſhort ſpace, Him dead ador&#x27;d, and them abhor&#x27;d aliue. Though now his name the multitude reſpects, Since murdering one that had held him ſo deare, Whilſt th&#x27;inward thoughts ech outward thing reflects, Some monſtrous ſhape to Brutus muſt appeare. Iuſt Nemeſis muſt plague prowde Caſſius ſoone, And make him kill himſelfe from hopes eſtrang&#x27;d; Once all the wrongs by foes to Caeſar done, May by themſelues be on themſelues reueng&#x27;d.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Julius Caesar</div><div class="body">Juno remains angry that a Trojan adjudged Venus the most beautiful goddess. Through the centuries, she has sought to avenge herself by harrying the Trojans’ 1607 descendants, the Romans, most recently by fomenting a civil war. But the victor of that war was Caesar, who traces his descent from Venus; he has conquered much of the world and established his ascendancy in Rome, but Juno now intends to work his overthrow. Caesar explains to Antonius that he wants to be a king not for personal ambition but to comply with a Sibylline prophecy which makes monarchy a precondition for a Roman victory in the east. Antonius warns him that there are Romans who desire his death. Cicero laments the loss of Rome’s liberty, and Decius Brutus agrees that, though Caesar’s past actions have been honourable, he should have demobilized his armies now that there is no further external threat. Brutus and Cassius agree that they will not participate in any ceremony aimed at making Caesar a king. Brutus is Caesar’s friend, but reasons that he must assassinate the tyrant for the public good. His wife Portia wrings the secret of the conspiracy out of him. Brutus and Cassius recruit conspirators, both patriots and men who have a personal grudge against Caesar. However, they exclude Cicero and agree not to kill Antonius. Caesar’s wife Calpurnia tries to persuade him not to go to the Senate on the Ides of March — an astrologer has foretold his death, and she herself has had bad dreams - but Decius Brutus induces him to change his mind. The conspirators assassinate Caesar. Antonius makes a show of friendship with them, but is obviously planning reprisals. A messenger brings Caesar’s wife Calpurnia a full account of the circumstances of the murder.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_29.html">Cluster 29 — 29: brutus, did, rome</a> page.
+</div>
+</div></body></html>

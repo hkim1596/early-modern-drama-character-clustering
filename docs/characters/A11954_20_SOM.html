@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SOM in 1 Henry the Sixth · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>SOM</span>
+</nav>
+
+<h1>SOM</h1>
+<p class="lede">in <em>1 Henry the Sixth</em> — AnonymousMarlowe, ChristopherShakespeare, WilliamNashe, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>518</td></tr>
+<tr><th>Characters</th><td>2798</td></tr>
+<tr><th>BritDrama no.</th><td>919</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">ouer-borne: Me thinkes my Lord ſhould be Religious, And know the Office that belongs to ſuch. Yes, when his holy State is toucht ſo neere. Periſh baſe Prince, ignoble <mark>Duke</mark> of Yorke. And this is mine (ſweet <mark>Henry</mark> ) fauour him. Your priuate grudge my Lord of York, wil out, Though ne&#x27;re ſo cunningly you ſmother it. The quarrell toucheth</div>
+<div class="excerpt">friends to weare my bleeding Roſes, That ſhall maintaine what I haue ſaid is true, Where falſe Plantagenet dare not be ſeene. Away, away, good William de la Poole, We <mark>grace</mark> the Yeoman, by conuerſing with him. By him that made me, Ile maintaine my words On any Plot of Ground in Chriſtendome. Was not thy Father Richard, Earle of Cambridge,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Iudge you, my Lord of Warwicke, then be tweene vs. And on my ſide it is ſo well apparrell&#x27;d, So cleare, ſo ſhining, and ſo euident, That it will glimmer through a blind-mans eye. Let him that is no Coward, nor no Flatterer, But dare maintaine the partie of the truth, Pluck a red Roſe from off this Thorne with me. Good Maſter Vernon, it is well obiected: If I haue feweſt, I ſubſcribe in ſilence. Prick not your finger as you pluck it off, Leaſt bleeding, you doe paint the white Roſe red, And fall on my ſide ſo againſt your will. Well, well, come on, who elſe? Here in my Scabbard, meditating, that Shall dye your white Roſe in a bloody red. No Plantagenet: &#x27;Tis not for ſcare, but anger, that thy cheekes Bluſh for pure ſhame, to counterfeit our Roſes, And yet thy tongue will not confeſſe thy error. Hath not thy Roſe a Thorne, Plantagenet ? Well, Ile find friends to weare my bleeding Roſes, That ſhall maintaine what I haue ſaid is true, Where falſe Plantagenet dare not be ſeene. Away, away, good William de la Poole, We grace the Yeoman, by conuerſing with him. By him that made me, Ile maintaine my words On any Plot of Ground in Chriſtendome. Was not thy Father Richard, Earle of Cambridge, For Treaſon executed in our late Kings dayes? And by his Treaſon, ſtand&#x27;ſt not thou attainted, Corrupted, and exempt from ancient Gentry? His Treſpas yet liues guiltie in thy blood, And till thou be reſtor&#x27;d, thou art a Yeoman. Ah, thou ſhalt finde vs ready for thee ſtill: And know vs by theſe Colours for thy Foes, For theſe my friends in ſpight of thee ſhall weare. Haue with thee Poole: Farwell ambitious Ri chard. I, ſee the Biſhop be not ouer-borne: Me thinkes my Lord ſhould be Religious, And know the Office that belongs to ſuch. Yes, when his holy State is toucht ſo neere. Periſh baſe Prince, ignoble Duke of Yorke. And this is mine (ſweet Henry ) fauour him. Your priuate grudge my Lord of York, wil out, Though ne&#x27;re ſo cunningly you ſmother it. The quarrell toucheth none but vs alone, Betwixt our ſelues let vs decide it then. It is too late, I cannot ſend them now: This expedition was by Yorke and Talbot, Too raſhly plotted. All our generall force, Might with a ſally of the very Towne Be buckled with: the ouer-daring Talbot Hath ſullied all his gloſſe of former Honor By this vnheedfull, deſperate, wilde aduenture: Yorke ſet him on to fight, and dye in ſhame, That Talbot dead, great Yorke might beare the name. How now Sir William, whether were you ſent? Yorke ſet him on, Yorke ſhould haue ſent him ayde. York lyes: He might haue ſent, &amp; had the Horſe: I owe him little Dutie, and leſſe Loue, And take foule ſcorne to fawne on him by ſending. Come go, I will diſpatch the Horſemen ſtrait: Within ſixe houres, they will be at his ayde. If he be dead, braue Talbot then adieu.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 1 Henry the Sixth</div><div class="body">King Henry Vis dead, and England&#x27;s French lands are lost. After a military setback, the French accept the offered aid of Joan Pucelle , who claims supernatural powers from the Virgin Mary; but they also release Talbot in an exchange of prisoners. With Joan &#x27;s help the French recapture the occupied town of Orleans, but the English take it back in a night attack led by Talbot. The Countess of Auvergne invites Talbot to visit her. intending treachery, but he second-guesses her and brings soldiers with him. In England, feuds brew between Gloucester and Winchester, and between Richard Plantagenet and the Duke of Somerset, whose supporters show their allegiance by picking different coloured roses. Richard , who has been deprived of his titles through the attainder of his father, learns from the imprisoned and dying Mortimer that he has a claim to the throne . King Henry restores him to his inheritance, creating him Duke of York. Joan takes Rouen by a ruse , but Talbot recaptures it the same day; she then persuades England&#x27;s ally Burgundy to join the French. After King Henry&#x27;s coronation in Paris, York is left in command of Prance, but personal tension between him and Somerset means that troop reinforcements arrive late; in consequence, Talbot is defeated, surviving only long enough to learn that his son has perished in battle. Joan conjures devils, but they will not help her: she is captured by York and burned at the stake. The French and English agree a peace which will entail King Henry making a diplomatic marriage, but this is pre-empted when Suffolk captures Margaret and (having fallen in love with her but being alr eady married) plans to install her as Queen of England . Henry agrees to marry her, and Suffolk goes to France to mili the arrangements.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

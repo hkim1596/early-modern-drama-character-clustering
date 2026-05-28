@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HON in A Knack to Know a Knave · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>HON</span>
+</nav>
+
+<h1>HON</h1>
+<p class="lede">in <em>A Knack to Know a Knave</em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1594</td></tr>
+<tr><th>Words</th><td>1345</td></tr>
+<tr><th>Characters</th><td>6851</td></tr>
+<tr><th>BritDrama no.</th><td>930</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">thy iudgment is to be but hanged, But where? euen at Tyborne in a good <mark>two</mark>-peny hal er, And though you could neuer abide the seas, Yet now against your wil, you <mark>must</mark> bear your saile, namely your sheer, And in a cart be towde vp Holburne hill, Would all men liuing lyke these in this land, Might be iudged so at Honesties hand.</div>
+<div class="excerpt">If thou wert but hanged first, Why we are as neere kin together, As the Cats of Banbery be to the hels of Lincolne. Why man, we are all birds of a feather, And whasoeuer saies nay, we wil hold together. C me you mad slaue, thou doest not know me, Tush, I haue done many better trickes than this. Farewel, nay, you will scant</div>
+<div class="excerpt">me you mad slaue, thou doest not know me, Tush, I haue done many better trickes than this. Farewel, nay, you will scant farewel By that tyme I haue done, but I <mark>must</mark> about my busines, To fynd some knacke to know this knaue at large. This is the place, and this the appointed tyme, I know heel keep his word, for he thinks me his</div>
+<div class="excerpt">than you wil be commended for, The Courtier resembleth the Iay, that decketh her self with the feathers of other birds, to make her self glorious: So the Courtier <mark>must</mark> be braue, tho he be hangd at the gallous. See how the Farmer feares my name, What wold he doe if he knew my nature? But hear you (maister Courtier) shall I dine</div>
+<div class="excerpt">ignorant into errours, You (I say) as you were shamlesse in your shamefull dealing, Shal to your shame, &amp; the vtter shame of al bad minded men, That liue as thou hast done, Stand in Finsburie fields, neere London, And there (as a dissembling Hypocrit) be shot to death. Trulie no, the spirit doth not mooue me therunto, But who</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">True, but many an honest man knowes a knaue to his cost, And is neither Uisitia ̄ , Uisognomer, palmester, nor astronomer But a plaine man of the country, lyke me. That knowes a knaue, if he doe but see his cap. I beleeue you wel, for offenders neuer bewray their offences Til the Law fynd them, and punish them: But you would faine tell how to know a knaue, Then thus, the first man you meet in the morning, If he salute you, drawe neere him, And smell to his hat, and after smell to your owne, And my cap to a noble, if his smel lyke yours, he is a knaue, I thinke I spoke with you now. Honesty is plaine my Lord, but no good fellow, For good fellowes be purse-takers now a daies: And there be so manie of such good f ll wes, That Honesty may walke the stre tes without company, Not that there wants company, but honest company I mean, And yet Honesty ▪ can clap a knaue on the shoulder for al his brauerie. Why Cutbert, wilt thou neuer leaue thy old knauery&#x27; Why, we should gree together lyke belles, If thou wert but hanged first, Why we are as neere kin together, As the Cats of Banbery be to the hels of Lincolne. Why man, we are all birds of a feather, And whasoeuer saies nay, we wil hold together. C me you mad slaue, thou doest not know me, Tush, I haue done many better trickes than this. Farewel, nay, you will scant farewel By that tyme I haue done, but I must about my busines, To fynd some knacke to know this knaue at large. This is the place, and this the appointed tyme, I know heel keep his word, for he thinks me his friend, Tush fear not you, for you neuer knew honest man dis semble with his friend, Though many friends dissemble with honest men: But, my Lord, the cards be shufled, and here comes a knaue. I, but he gaue nothing for Gods sake, except it were hard words or blowes, and they had bene better kept that giuen: But husht, here comes the Iudge. I beleeue you wil do more than you wil be commended for, The Courtier resembleth the Iay, that decketh her self with the feathers of other birds, to make her self glorious: So the Courtier must be braue, tho he be hangd at the gallous. See how the Farmer feares my name, What wold he doe if he knew my nature? But hear you (maister Courtier) shall I dine with you? I promise you sir, I am very hungrie, See how he can vse my name and not me, But I perceiue I may goe dine with Duke Humfrie, God bwy Gentlemen, for none here hath occasion to vse Honesty Mary and I thank you to, for now the world may say, That Honesty dines with Hospitality to day, Is this your honest friend? the deuill a is (my Lord) This is he: if you doubt my word to be true, call in Clarke of the Assyses, now shall your Grace see, How Honesty can shake out a knaue in this company: Sirra, tell me who hath most poore men in suit at this Syses? And yet he wil sell all a poore man hath to his shirt, for one quarters rent. Why, I think I haue taken in hand an endles taske, To smell a Knaue, tis more than a Dog can doe: I haue disguised my self of purpose to finde A couple of Knaues, which are yet behind, The next Knaue is a Priest, calde Iohn the precise, That with counterfeit holinesse blinds the peoples eyes, This is one of them that wil say it is a shame, For men to swear and blaspheme Gods holie name: Yet if a make a good Sermon but once in a yeare, A will be fourtie tymes in a Tauerne making good cheere, Yet in the Church he will read with such sobrietie, That you would thinke him verie precise, and of great honesty. I shal doe anon, I haue them in sent, but I wil be gone. On me? nay, on him: Priest, I gaue your petition to the King, And I wil speake to him you may be but hanged, For if you should liue till the King granted your petition, The verie Rauens would picke out thine cies liuing: And therefore twere better you were hanged to saue the birds a labour. Why no, for he is false to himself, look in his pocket &amp; see, This is but a false writ that he hath vsed, Unknowne to your Maiestie, and leuied great summes of money, And bribed vpon your poore Commons extreamlie, How say you my Lord, is this true or no? I, but your Grace sees you are deceiued. But will your Grace grant me one boone? That I may haue the punishing of them, Whom I haue so laboured to fynde. I thank your Grace: go fetch the other two: Now to you Cutbert Cutpurse the Conicatcher, Thy iudgment is to stand at the Market crosse, And haue thy cursed tongue pind to thy breast, And there to staud for men to woonder at: Til Owles and night-Rauens picke out thy cursed eies. You know my mind: O Walter that wold haue more, And you shall haue iudgement I meane, which is, To be caried into a corne field, and th r haue your legs and hands cut off, because you loued corn so wel, and there rest til the crowes thereunto, pick out thine eies. Bnt now to you that wil do nothing except the spirit mooue you You shall for abusing the blessed word of God, And mocking the diuine order of Ministery, Whereby you haue led the ignorant into errours, You (I say) as you were shamlesse in your shamefull dealing, Shal to your shame, &amp; the vtter shame of al bad minded men, That liue as thou hast done, Stand in Finsburie fields, neere London, And there (as a dissembling Hypocrit) be shot to death. Trulie no, the spirit doth not mooue me therunto, But who is next, what Perin, a Courtier, and a Cosoner to, I haue a iudgment yet in store for thee, And for because I will vse thee fauourablie, Yfaith thy iudgment is to be but hanged, But where? euen at Tyborne in a good two-peny hal er, And though you could neuer abide the seas, Yet now against your wil, you must bear your saile, namely your sheer, And in a cart be towde vp Holburne hill, Would all men liuing lyke these in this land, Might be iudged so at Honesties hand. I thank your Grace: you that wil damne your selues for lucres sake And make no conscience to deceiue the poore: You that be enemies of the common wealth: To send corne ouer to inrich the enemie: And you that doe abuse the word of God, And send ouer woolle and Tin, broad cloath and lead, And you that counterfeyt Kings priuie seales, And thereby rob the willing minded Communaltie, I warne you all that vse such subtill villanie, Beware least you lyke these be found by Honestie, Take heed I say, for if I catch you once, Your bodies shall be meat for Crowes, And the Deuill shall haue your bones, And thus though long at last we make an end, Desiring you to pardon whats amisse, And way the worke, though it be grossy pend, Laugh at the faults, and weigh it as it is, And Honestie wil pray vpon his knee, God cut then off that wrong the Prince or Communaltie. And may her dayes of blesse neuer haue end, Upon whose lyfe so many lyues depend. Imprinted at London, by Richard Ihones, and are to be sould, at the signe of the Rose and Crowne, nere to S. Andrewes Church in Holborne. 1594.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Knack to Know a Knave</div><div class="body">. . Concerned for the good order of his kingdom, King Edgar commissions Honesty to seek out and expose knaves. The dying Bailiff of Hexham advises his four sons to live by fraud and deceit in their various: professions, and to enrich themselves at the expense of the commonweal and the poor..He dies and is carried off by the devil. While Edgar deals with the case of 1592 Philarchus, a courtier who has abused his father, Honesty observes the corrupt dealings of the Bailiff’s sons: Cuthbert, a cony-catcher, who bears false witness in an attempt to take possession of a farm; Walter, a farmer, who oppresses his neighbours and exports corn to feed the enemy; John, a priest, who refuses to give to charity; and Perin, a courtier, who misuses the royal seal and sells Walter an export licence for his corn under pretext of raising revenues for the crown. Meanwhile honest members of the state, from knight to ploughman, complain of their economic decline. Edgar sends Ethenwald to woo Alfrida by proxy, but Ethenwald falls in love with her himself and marries her. The King forgives him and visits the couple (receiving a petition from the mad men of Gotham on the way), but the jealous Ethenwald is convinced that Edgar plans to cuckold him, and has Alfrida and the kitchen maid swap identities during the royal visit. An outraged Edgar sees through the subterfuge and plans to take revenge, but Bishop Dunstan, with the help of the devil, persuades him to pardon Ethenwald instead. Honesty exposes the various knaves he has observed, and, with royal permission, sentences them all to gruesome and unusual punishments.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

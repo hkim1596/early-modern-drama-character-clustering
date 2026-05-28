@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ALEX in A Match at Midnight · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ALEX</span>
+</nav>
+
+<h1>ALEX</h1>
+<p class="lede">in <em>A Match at Midnight</em> — R., W.</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>1961</td></tr>
+<tr><th>Characters</th><td>10444</td></tr>
+<tr><th>BritDrama no.</th><td>2027</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">onely wish well to a fayre vvise all night. And discredit himselfe al night in your company. oars, &#x27;tis my house. Even since I was begotten, I was borne to 〈…〉 , I <mark>must</mark> have thee, and I will havethee, and this house is mine, and none of thine. I ha beene under thy bedde by this hand this three houres. No, no, no; I will not <mark>goe</mark></div>
+<div class="excerpt">hundred pi ces, A han some halter, and the Hangmans wages pop&#x27; in the place, what an acute vvitnesse we have in vvickednesse. Send him up prithee, remember hovv it <mark>must</mark> <mark>bee</mark> carryed? And pray remember that you doe not mump as if you were ch vving Bacon, and spoile all. And harke. Oh hee tramples upon the bosome of a Taverne vvith</div>
+<div class="excerpt">Pray Father, pray to God to blesse me. Yes, umph—for a coxecombe. Ile give you an old saw for&#x27;t. <mark>Must</mark> you be my Mother in Law? You see the worst of your eldest sonne, I abuse no body. I will tell ye an old sawe. An old man is a bed full of bones, and who can it</div>
+<div class="excerpt">pat as a fat Heire to a leane Sharke, wee shall hunger for&#x27;t, honest Iarvis, I am thy bed-fellow to night, and to morrow thy Master. Pish, Come, come, fine men <mark>must</mark> use fine VVo men thus, tis fit, plaine trueth takes Maids, VViddovves, are wonne with vvit. By this light &#x27;twas strange. Be maskt, and with-draw a while, heere</div>
+<div class="excerpt">thus, tis fit, plaine trueth takes Maids, VViddovves, are wonne with vvit. By this light &#x27;twas strange. Be maskt, and with-draw a while, heere comes our Dad. You <mark>must</mark> pardon the meritable rudenesse of the Gentlewomen Sir, in not vnmasking, they entreated mee to informe you: there are some ith house to whom they wood by no meanes</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Pray Father, pray to God to blesse me. Yes, umph—for a coxecombe. Ile give you an old saw for&#x27;t. Must you be my Mother in Law? You see the worst of your eldest sonne, I abuse no body. I will tell ye an old sawe. An old man is a bed full of bones, and who can it denie, By whom (vmph) a yong wench lyes and greanes, for better companie. White, twill runne boy. Niggers naggers thou shalt not, there&#x27;s thine owne oath for thee, thou shalt eate nothing and thou woo&#x27;t, but a poacht spider, and driue it downe with sirrup of Toads. Exit. And how does my little handsome daintie, deli cate, welfavoured, streight, and comely delicious bewitch ing Widdow. Tis pudding time wench, pudding time, and a daintie time, dinner time my nimble eyd witty one, woot be married to morrovv sirrah. sets to table. What, art thou a fortune teller. Good foole, give me a cup of coole Beere. Pish, I spoke to the foole. Foole, &#x27;tis my man, shalt sit i&#x27;faith wench, Strange, mine&#x27;s a good face ifaith, prithee Busse. Sirrah, woot have the old fellow? I tell thee thou shalt not, no, no, I have such— Thy Iester sure shall have a coate. Nay, nay, nay, two to one is extremitie—but as 〈◊〉 was telling thee, I have such a husband for thee, so knowing, so discreete, so sprightly, fill a Cup of Claret, so; Admira bly, in desires so excellently, Admirably deserving, that an old man, fie, fie, prethe—ha to thee. Some Wine. Here VVidow. No noble Welchman, her heart was in her hose. Tak&#x27;t you at worst then. Ancient Young, how false our memories have plaid through long discontinuance, but why met here man, is Mars so bad a pay-master, that our Ancients fight under Cupids Banner? He has the morgage still, and I have a handsome sister, doe but meet at the Fountaine in Fleetestreete after dinner, ô I will reade thee a History of happines, and thou shalt thanke me. A word Iarvis? Ile follow yee, woo&#x27;t thinke on&#x27;t soone at night, or not at all? Can, do&#x27;st conclude me a&#x27;satt in cheate? Enough, drinke that, fare el, Widdovv, Fate, the Destinies, and the three ill favoured Sisters, have concluded the meanes, and vvhen I am thy Husband? Doe but remember these crosse Capers, then yee pitter sweete one? Some rich Canarie boy. Possible us cheated of a hundred pi ces, A han some halter, and the Hangmans wages pop&#x27; in the place, what an acute vvitnesse we have in vvickednesse. Send him up prithee, remember hovv it must bee carryed? And pray remember that you doe not mump as if you were ch vving Bacon, and spoile all. And harke. Oh hee tramples upon the bosome of a Taverne vvith that dexterity, as your Lavvyers Clearkes doe to VVestminster Hal upon a durty day vvith a paire of vvhite silke stockings, Brother Tim, vvhy novv y&#x27;are a man of your vvord I see. Gallants of note and qualitie, hee that fits taking Tobacco is a Captaine, Captaine Carve-gut. Are you not my brother? Hee that powres out that sparkling sprightly Claret, is a Lieutenant vnder him, Lieutenant B 〈…〉 . He was a S rg ant first. Of the Poultry, of a Woodcock: A Serg nt in the Field, a man of blood. That delicate sweet young Gentlewoman. That beares the b sh of 〈…〉 ing vpon her cheekes, whoseeyes are like a payre of 〈…〉 ing Twi es. I thinke you are in hast. Whose lips are beds of Roses, betwixt which There steales a breath sweeter th n Indian Spices. But then to touch th se lips—you stay too long sure. But &#x27;tis descended from the 〈…〉 cian steeme, the great tributie L 〈…〉 her 〈…〉 e, th ci t on is her reuerent Granham. Co they shall know you. I say they shall. oure or sixe, &#x27;tis rich Canary, it came from be yond the Sea . Did I not tell yee. More wine there Drawer. Againe ye Witch? drinke to the young Gentle wom n. My worthy friend, thou art Master of thy word, Gentlemen &#x27;tis Auntient Young, y&#x27;are Souldiers, come come, saue cap, complement in cup. Prithee sit downe. Prithee. Now, you Mistresse fig- aile, s he Wind come about yet, I ha brought the Gentleman, doe not you t ll him now, you had rather have his roome then his compa ny, and so shew your breeding. Sfoote thou shalt stay longer, we&#x27;le stay her heart her guts out. Prithee Moll doe, doe but looke upon him? What canst thou see in him thou unhansome 〈…〉 ous thing, that merrits not above thee? Has hee not a hansome body, streight leg&#x27;d, a good face. Why, doe you it? Doe b t stay a i t e Moll, prithe Moll, thou knowest 〈…〉 y Father has wrong&#x27;d him; make him amen s and marry him. And is not he a wise man? Why? Why, you are now i &#x27;s company. Why you young witch, call your elder brother oole; but goe thy wayes, and keepe thy may denhead till it grow more deseruedly de pi ed, then are the olde base bootes of a halfe stewed Pander: Leade a Welch Morris with the Apes in hell amongst the little deuills,—or when thou sha t lye sighing, by the side of some rich foole,—remember thou thing of threed and needles, not worth three pence halfe penny. I ha&#x27;thought of such Musitians for thee. I, I haue prouided a husband for thee Moll. I haue such a stripling for thee, he wants one eye, and is crooked leg&#x27;d, but that was broke at Footbale. Hee&#x27;s rich, hee&#x27;s rich Moll. In earnest; why, doe yee thinke men marry as Fencers sometimes fight, in iest? Shall I shew her Mistresse Elizabeths Letter I snatcht from thee? No in eed, you shall not s e&#x27;t, sweet sister, dainty ister, hony sister. The tide turnes. Thinke of Besse; thinke of Besse, &#x27;tis the better match. Is&#x27;t possible? And now th&#x27;art my sweete Sister, I know the old man&#x27;s gone to meete with an old wench that will meet vvith him, r Iarvis has no juice in&#x27;s brains, and vvhile I i&#x27;th meane time, set another wheele a going at the Widowes, doe thou soone about ten, for &#x27;tis to bee very conveniently darke, meete this Gentleman at the Nags head corner, iust against Leaden-hill, wee lie in Lime-streete, thither he shall carry thee, Accomodate thee daintily, all night with Mistris Dorothy, and marry thee i&#x27;th morning very Methodically. A wl te devil with a red fox taile, in a black box. Why, fine have thy Maidenhead and that into the bargaine, thy c arge is perform&#x27;d, away, get thee in, forget not the houre, and you had better fight under Ancient Yongs colours, then the old Mans standard of sixty and ten. Exit. As Citizens wives doe into Maskes, whe ther I woo&#x27;d or no nay, nay, doe not doubt the discre tion of my constitution: I have brought nere a groat in my bosome, and by this hand, I lay under thy d, with a heart as houest, and a blood as cold, as had my sister lay near top—will ye have me yet? Vnc uill, and lay so tame while you set up your foote upon the bed, to u ie your shooe, such another word, I will uncivillize that injured civilitie which you so scurvily slander, and reward you with an undecencie proportionable to your understandings, will yee have mee, will you mar ry mee? What, to sixtie, and I know not hovv many, that will lie by your side, and divide the houres with cou hes, as Cockes doe the night by instinct of Nature. And onely wish well to a fayre vvise all night. And discredit himselfe al night in your company. oars, &#x27;tis my house. Even since I was begotten, I was borne to 〈…〉 , I must have thee, and I will havethee, and this house is mine, and none of thine. I ha beene under thy bedde by this hand this three houres. No, no, no; I will not goe downe novv I thinke on&#x27;t. makes himselfe vnready. By these Buckles I will, and what they will thinke on&#x27;t— No, no, I will undoe my selfe looke ye. Have a care on&#x27;t thy selfe Woman, and marry mee then. Breeches and all by this flesh. As naked as Grantham steeple, or the Strand May-pole by this spurre, and what your grave Parishio ners will thinke on&#x27;t? Will you have me? This is the last time of asking, they come up, and downe goe my breeches, will you have me? VVhy then kisse mee upon&#x27;t, and yet there&#x27;s no cracking your credite, Iarvis is come in, Iarvis. As pat as a fat Heire to a leane Sharke, wee shall hunger for&#x27;t, honest Iarvis, I am thy bed-fellow to night, and to morrow thy Master. Pish, Come, come, fine men must use fine VVo men thus, tis fit, plaine trueth takes Maids, VViddovves, are wonne with vvit. By this light &#x27;twas strange. Be maskt, and with-draw a while, heere comes our Dad. You must pardon the meritable rudenesse of the Gentlewomen Sir, in not vnmasking, they entreated mee to informe you: there are some ith house to whom they wood by no meanes be layd open. But for my selfe, I am now your most obedient vertuous Alexander. Two Chests of siluer, and two Vtropian Trunks, full of gold and Iewels. Yes, he will sweat by and by. Well said Rascall. our faire young daughter is wife to this Anti ent, who is come likewise to witnesse it. We haue clapt hands on&#x27;t Sir, and the Priest that shood haue married you to her, is to marry her to me, so sister, talke for your selfe. Good Sir be satisfied, the Widdow and my sister sung both one song, and what was&#x27;t, but Crabbed age and youth cannot liue together. Now wee perswaded them, and they coo&#x27;d not live together, they wood never indure to lie together, this consequently descended, there was the Antecedent, wee clapt hands, sealed lippes, and so fell unto the relative, Who&#x27;s this? poxe on&#x27;t, what vnmasks her. makes that Bawd yonder? Harke ye brother, where lyes her living? In grease. This is a common whore, and you a cheated Cox combe, come hither, you rotten Hospitall, hung round with greasie Sattin, doe not you know this Vermine? And here is Mary Ploo hound, my chollericke shredde of Cadwallader, married to this Gentleman, who has a hundred a yeere dangling at your girdle there. Doe ye heare, sir Bartholomew Bayard, that leape before ye looke, it will hansomly become you, to restore the Boxe to that Gentleman, and the Magnitude of your desiree, upon this daintie, that is so amoro slie taken vvith your ditties. Do&#x27;st thou know the Gentleman that whisper&#x27;d to thee? Some witty tricke I warrant thee, prithee dis patch him presently, that vve vvere at Church. How Woman? But shall the pyes be spoyl&#x27;d then? My Pitchers broke iust at the Well head, but giue me leaue to tell you Sir, that you haue a noble Wife, and indeed such a one as wood worthily feast the very dis cretion of a wise mans desire, her wit ingeniously waytes vpon her vertue, and her vertue aduisedly giues freedome to her wit, but because my marriage shall seriously pro ceede, I wed my selfe Sir to Obedience, and filiall regu larity, and vow to redeeme in the duty of a sonne, the affe ction of a father.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Match at Midnight</div><div class="body">Old Bloodhound is training his younger son Tim in the family pawnbroking business, since Alexander, the elder son, is a drunken wastrel. He intends to marry his daughter Mary to the informer Earlack, even though she prefers Ensign Young, while he himself will marry the young widow Wag. The widow has other suitors, including her servant Jarvis, but wants to get rid of them. She arranges a midnight assignation with Old Bloodhound, intending not to turn up. Jarvis arranges a substitute, and tells Bloodhound that his mistress has come incognito and must be addressed as Mistress Coot; in fact it really is a Mistress Coot, an old bawd, whom Bloodhound takes home that night in preparation for a wedding the next morning. Meanwhile, Mary plans to elope with Young that &#x27; night, retrieving his mortgage from her father’s papers. 1622 The widow&#x27;s Welsh suitor, Randall, hears about Mary and, though he has never met her, decides he prefers her to Wag. The servant Sim fixes Randall up with an assignation that night, but he ends up encountering Wag&#x27;s maid, who is returning from a late errand and who also happens to be named Mary. Tim visits the tavern to give Alexander some pawn- money, and becomes enamoured of Sue Shortheels, thinking her a lady of noble descent. In fact, she is a prostitute. Alexander gets into the widow’s bedroom and hides under her bed, then forces her to agree to marry him by threatening to undress just as neighbours appear to be arriving. The various wedding plans unravel in the morning. Earlack has sneaked the opportunity to sleep with the widow — who is really Coot the bawd and a somewhat less desirable prospect in bed once seen in daylight. Meanwhile, Tim has married Sue, not knowing her true profession until it is too late, and Mary has married Young, to the dismay of Randall, who finds that he has accidentally married a servant. Only Alexander seems on course for the wedding he wants, until the widow points out that Jarvis has a prior claim: when he tried to seduce her months ago, she demanded that he should prove himself by living in her household as her servant. Now, however, she intends to honour her dead husband by never remarrying. Jarvis reveals his true identity: he is Wag himself, the widow’s husband, still alive, and satisfied that his ruse has proven his wife’s fidelity.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

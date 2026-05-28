@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BIAN in 478 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BIAN</span>
+</nav>
+
+<h1>BIAN</h1>
+<p class="lede">in <em>478</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>1999</td></tr>
+<tr><th>Characters</th><td>10361</td></tr>
+<tr><th>BritDrama no.</th><td>478</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">nights are short, and I haue much to say. &#x27;Tis possible; Why doe you thinke I come? &#x27;Tis true, you guesse aright; sit vp and listen. With shame and passion now I <mark>must</mark> confesse, Since first mine eyes beheld you, in my <mark>heart</mark> You haue beene onely King; if there can be A violence in loue, then I haue felt That tyranny; be record</div>
+<div class="excerpt">and your sist … er True, my Lord, there&#x27;s many Who thinke themselues most wise, that are most fooles. My Lord the Duke. My Lord we haue a 〈◊〉 our friend and I. <mark>Must</mark> ioyne. My Lord! That you will please to set Maurucio At liberty: this Gentle <mark>woman</mark> here, Hath by agreement made betwixt them <mark>two</mark>, Obtain&#x27;d him for her husband;</div>
+<div class="excerpt">on To marry me, led me to loue your friend: O hee&#x27;s a gallant man! if euer yet Mine eyes beheld a miracle, compos&#x27;d Of flesh and blood, Fernando <mark>has</mark> my voyce. I <mark>must</mark> confesse, my Lord, that for a Prince, Handsome enough you are, and no more: But to compare your selfe with him, trust me You are too much in fault: shall I aduise</div>
+<div class="excerpt">laughter worthy our presence; I will not lose him so.—— To me, my Lord! My Lord, the time—— Forbeare, or I shall— No more; I spare To tell you what you are; and <mark>must</mark> confesse, Doe almost hate my judgement, that it once Thought goodnesse dwelt in you: remember now It is the third time since your treacherous tongue Hath pleaded</div>
+<div class="excerpt">follow. Colona, attend our sister to her chamber. Play. My Clergy helpe me; My Queene! and nothing for it but a pawne? Why then the game&#x27;s lost too; but play. You <mark>must</mark> needs play well, You are so studious.— Fie vpon&#x27;t, you study past patience:— What d&#x27;ee dreame on? here&#x27;s demurring Would weary out a statue.—Good now play. What</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I shall, in best of Loue, Regard the bosome-partner of my Lord. Sister, I should too much bewray my weaknesse, To giue a resolution on a passion I neuer felt nor fear&#x27;d. My Lord Fernando you encounter fitly, I haue a suit t&#x27;ee. Since my Lord the Duke Is now dispos&#x27;d to mirth, the time serues well For mediation, that he would be pleas&#x27;d To take the Lord Roseilli to his grace, He is a Noble Gentleman: I dare Ingage my credit, loyall to the state: And, Sister, one that euer stroue (me thought) By speciall seruice, and obsequious care, To win respect from you; it were a part Of gracious fauour, if you pleas&#x27;d to ioyne With vs, in being sutors to the Duke For his returne to Court. Not need it, sister? why? I hope you thinke &#x27;Tis no necessity in me to moue it, More then respect of honour. Sister, these words I vnderstand not. I hope so too. If it be so, I am the sorrier, Sir: I&#x27;me loth to moue my Lord vnto offence, Yet I&#x27;le aduenture chiding. I said as much, my Lord. Good Sir be not so mou&#x27;d. That&#x27;s your musicke. O, but you are too generall. You still mistake me. My sister&#x27;s gone in anger. I&#x27;le see the jolly louer and his glasse Take leaue of one another. Now, as I liue, Here&#x27;s laughter worthy our presence; I will not lose him so.—— To me, my Lord! My Lord, the time—— Forbeare, or I shall— No more; I spare To tell you what you are; and must confesse, Doe almost hate my judgement, that it once Thought goodnesse dwelt in you: remember now It is the third time since your treacherous tongue Hath pleaded treason to my care and fame; Yet for the friendship &#x27;twixt my Lord and you, I haue not voye&#x27;d your follies; if you dare To speake a fourth time, you shall rue your lust: Tis all no better; learne, and loue your selfe. &#x27;Tis yet but early night, too soone to sleepe: Sister, shall&#x27;s haue a mate at Chesse? He&#x27;s a well practiz&#x27;d gamester: Well, I care not, how cunning so er&#x27;e he be, To passe an houre; I&#x27;le try your skill, my Lord; Reach here the Chesse-board. Well, well, I feare you not, let&#x27;s too&#x27;t. Lights for our sister, sirs: Good rest t&#x27;ee; I&#x27;le but end my game and follow. Colona, attend our sister to her chamber. Play. My Clergy helpe me; My Queene! and nothing for it but a pawne? Why then the game&#x27;s lost too; but play. You must needs play well, You are so studious.— Fie vpon&#x27;t, you study past patience:— What d&#x27;ee dreame on? here&#x27;s demurring Would weary out a statue.—Good now play. What meanes the man? Am I againe betray&#x27;d?—bad man. Rise vp, we charge you, rise; looke on our face. What see you there that may perswade a hope Of lawlesse loue? Know, most vnworthy man, So much we ha … e the basenesse of thy lust, As were none liuing of thy sexe but thee, We had much rather prostitute our blood To some inuenom&#x27;d Serpent, then admit Thy bestiall dalliance: couldst thou dare to speake Againe, when we forbad? no, wretched thing, Take this for answer; If thou henceforth ope Thy leprous mouth to tempt our eare againe, We shall not onely certifie our Lord Of thy disease in friendship, but reuenge Thy boldnesse with the forfeit of thy life. Thinke on&#x27;t. Good night: Rest in your goodnesse; lights there; Sir good night. Resolue, and doe; &#x27;tis done, What, are those eyes Which lately were so ouerdrown&#x27;d in teares, So easie to take rest? Oh happy man! How sweetly sleepe hath seal&#x27;d vp sorrowes here? But I will call him: What? My Lord, my Lord, My Lord Fernando. My Lord, Sleeping or waking? &#x27;Tis I: Haue you forgot my voyce? or is your eare But vsefull to your eye? Shee, &#x27;tis she; sit vp, Sit vp and wonder, whiles my sorrowes swell: The nights are short, and I haue much to say. &#x27;Tis possible; Why doe you thinke I come? &#x27;Tis true, you guesse aright; sit vp and listen. With shame and passion now I must confesse, Since first mine eyes beheld you, in my heart You haue beene onely King; if there can be A violence in loue, then I haue felt That tyranny; be record to my soule, The Iustice which I for this folly feare: Fernando, in short words, how e&#x27;re my tongue Did often chide thy loue, each word thou spak … st Was musicke to my eare; was neuer poore Poore wretched woman liu&#x27;d, that lou&#x27;d like me; So truly, so vnfainedly. To witnesse that I speake is truth,—looke here, Thus singly I aduenture to thy bed, And doe confesse my weaknesse; if thou tempt&#x27;st My bosome to thy pleasures, I will yeeld. Now heare me out: When first Caraffa, Pauy&#x27;s Duke, my Lord, Saw me, he lou&#x27;d me; and without respect Of dower, tooke me to his bed and bosome, Aduanc&#x27;d me to the title … possesse; Not mou&#x27;d by Counsell, or remou&#x27;d by greatnesse, Which to requite, betwixt my soule and heauen, I vow&#x27;d a vow to liue a constant wife; I haue done so: nor was there in the world A man created, could haue broke that truth For all the glories of the earth, but thou; But thou, Fernando: Doe I loue thee now? True, I doe, Beyond imagination: if no pledge Of loue can instance what I speake is true, But losse of my best ioyes, here, here, Fernando, Be satisfied, and ruine me. To giue my body vp to thy embraces, A pleasure that I neuer wish&#x27;d to thriue in, Before this fatall minute: marke me now; If thou dost spoyle me of this robe of … ame, By my best comforts, here I vow agen, To thee, to heauen, to the world, to time, E&#x27;re yet the morning shall new christen day, I&#x27;le kill my selfe. I will: Doe what thou wilt, &#x27;tis in thy choyce; what say yee? Yes, take it; that, Or what thy heart can wish: I am all thine. Fernando; Iest not at my calamity: I kneele:— By these disheauel&#x27;d hayres, these wretched teares, By all that&#x27;s good, if what I speake, my heart Vowes not eternally, then thinke, my Lord, Was neuer man su&#x27;d to me I deny&#x27;d, Thinke me a common and most cunning whore, And let my sinnes be written on my graue, My name rest in reproofe.—Doe as you list No by the faith I owe my Bridall vowes: But euer hold thee much much dearer farre Then all my ioyes on earth, by this chast kisse. Nay, be thine: Command my power, my bosome; and I&#x27;le write This loue within the tables of my heart. The latter I new vow—but day comes on, What now we leaue vnfinish&#x27;d of content, Each houre shall perfect vp: Sweet, let&#x27;s part. All mine to thee. Remember this, and thinke I speake thy words: When I am dead, rip vp my heart and read With constant eyes, what now my tongue defines, Fernando&#x27;s name caru&#x27;d out in bloody lines. Once more good rest, Sweet. Now good my Lord Fernando further this In any wise, it cannot but content. Your lip, my Lord! Perhaps your teeth haue bled, wip&#x27;t with my hand kercher; giue me, I&#x27;le doo&#x27;t my selfe.—Speake, shall I steale a kisse? beleeue me, my Lord, I long. My Lord, you were best to try a set at Maw; I and your friend, to passe away the time, Will vndertake your Highnesse and your sist … er True, my Lord, there&#x27;s many Who thinke themselues most wise, that are most fooles. My Lord the Duke. My Lord we haue a 〈◊〉 our friend and I. Must ioyne. My Lord! That you will please to set Maurucio At liberty: this Gentle woman here, Hath by agreement made betwixt them two, Obtain&#x27;d him for her husband; good my Lord Let me intreat, I dare ingage mine honour He&#x27;s … nnocent in any wilfull fault. Yes, doe my Lord, bring you the Bridegroom hither, I&#x27;le giue the Bride my selfe. Speakes your loue, Or … eare, my Lord? Mercy protect me, will ye murder me? &#x27;Twas, my Lord; Yet but a vision; for did such a guilt Hang on mine honour, &#x27;twere no blame in you If you did stab me to the heart. Alas, what doe you meane, Sir? You shall not sweare, take off that oath againe, Or thus I will inforce it.——— Death; I wish no lesse: You told me you had dreamt; and, gentle Duke, Vnlesse you be mistooke, you are now awak&#x27;d. For what? to see a weake Faint trembl … ng arme aduance a leaden blade? Alas good man, put vp, put vp; thine eyes Are likelier much to weepe, then armes to strike: What wud you doe now, pray? I tell yee, if you needs would be resolu&#x27;d, I held Fernando much the properer man. What ayles you? Can you imagine, Sir, the name of Duke Could make a crooked leg, a scambling foot. A tolerable face, a wearish hand, A bloodlesse lip, or such an vntrimm&#x27;d beard As yours, fit for a Ladies pleasure, no: I wonder you could thinke &#x27;twere possible, When I had once but look&#x27;d on your Fernando, I euer could loue you againe? Fye, fie, Now by my life, I thought that long agoe 〈◊〉 had knowne it; and beene glad you had a friend: Your wife did thinke so well of. Dare? yes faith, You see I dare: I know what you would say now; You would faine tell me how exceeding much I am beholding to you, that vouchsaf&#x27;d Me, from a simple Gentlewomans place, The honour of your bed: &#x27;tis true, you did; But why? &#x27;twas but because you thought I had A sparke of beauty more then you had seene. To answer this, my reason is the like, The selfe same appetite which led you on To marry me, led me to loue your friend: O hee&#x27;s a gallant man! if euer yet Mine eyes beheld a miracle, compos&#x27;d Of flesh and blood, Fernando has my voyce. I must confesse, my Lord, that for a Prince, Handsome enough you are, and no more: But to compare your selfe with him, trust me You are too much in fault: shall I aduise you? Harke in your eare; thanke heauen he was so slow As not to wrong your sheets; for as I liue, The fault was his, not mine. Looke what I said, &#x27;tis true. For know it now, I must confesse I mist no meanes, no time, To winne him to my bosome; but so much, So holily, with such Religion, He kept the lawes of friendship, that my sute Was held but, in comparison, a iest; Nor did I ofter vrge the violence Of my aflection, but as oft he vrg&#x27;d The sacred vowes of faith &#x27;twixt friend and friend: Yet be assured, my Lord, if euer language Of cunning seruile flatteries, intreaties, Or what in me is, could procure his loue, I would not blush to speake it. Phew—and you be in these tunes, Sir, I&#x27;le leaue: You know the best, and worst, and all. I, doe; and to the point Of thy sharpe sword, with open brest I&#x27;le runne Halfe way thus naked: doe not shrinke, Caraffa, This dants not me: but in the latter act. Of thy R … uenge, &#x27;tis all the sute I aske At my last gaspe, to spare thy noble friend; For life to me, without him, were a death. Here. &#x27;Tis brauely done; thou hast strucke home at once: Liue to repent too late: Commend my loue To thy true friend, my loue to him that owes it, Ny Tragedy to thee, my hart to—to— Fernand. oo oh.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 478</div><div class="body">Eteocles and Polynices are elected co-kings of Thebes, ruling in alternate years. At the end of the first year, Eteocles refuses to stand down and banishes Polynices. Six champions join Polynices to besiege Thebes, but, after heavy losses, Polynices offers to settle the case by single combat. He and Eteocles kill one another, and Creon takes the crown. Tiresias prophesies that the walls of Thebes will stand only as long as the last of the seven champions remains alive. After Adrastus’ death, the Argive troops sack the city. 1569</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

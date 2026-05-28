@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TAF in Ram Alley, or Merry Tricks · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>TAF</span>
+</nav>
+
+<h1>TAF</h1>
+<p class="lede">in <em>Ram Alley, or Merry Tricks</em> — Barry, Lording</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1611</td></tr>
+<tr><th>Words</th><td>1644</td></tr>
+<tr><th>Characters</th><td>8608</td></tr>
+<tr><th>BritDrama no.</th><td>1572</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">now sir sawce, Would you be capring in your fathers saddle, <mark>Away</mark> you casheerd yonger brother, begon, Doe not I know the fashions of you all, When a poore <mark>woman</mark> <mark>has</mark> laide open all Her thoughts to you, then you grow proud and coy, But when wise maides dissemble and keepe close, Then you poore snakes come creeping on your bellyes,</div>
+<div class="excerpt">disolued, or shund, Then giue thy loue free scope imbrace and kisse, And to the distafe sisters leaue th&#x27;euent, Choose what you will of time, There lyes your way. <mark>Did</mark> you call sir. Then fare you well. Adriana, makes a no stay. I prythee see if hee haue left the house, Peepe close, see, but be not seene: is a gon. What does he</div>
+<div class="excerpt">left the house, Peepe close, see, but be not seene: is a gon. What does he now? Blowes the wind there. What does he now? Gon Adriana. Sure he&#x27;s taken. Come, thou <mark>must</mark> helpe me now, I haue a trick To second this beginning, and in the nick, To strike it dead ifaith, women <mark>must</mark> woe, When men forget what Nature leads them too. What</div>
+<div class="excerpt">farthingale: A standing coller to keepe his neate band cleane, The whilst his shirt does stinke, and is more foule, Then an in of chancery table cloth, His breeches <mark>must</mark> be pleyted as if a had Some thirty pockets, when one poore halpeny purse, Will carry all his treasure, his knees all points, As if his legs and hammes were tyde</div>
+<div class="excerpt">Some thirty pockets, when one poore halpeny purse, Will carry all his treasure, his knees all points, As if his legs and hammes were tyde together, A fellow that <mark>has</mark> noe inside, but prates By roate, as players, and parrotts vse to doe, And to define a compleat gallant right, A mercer form&#x27;d him, a taylor ma him, And a player</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Come lou&#x27;d Adriana heere let vs sit, And marke who passes; now for a wager, What colourd bear&#x27;d comes next by the window? I thinke not so, I thinke a redde, for that is most in fashion, Lord how scarce is the world of propper men And gallants; sure wee neuer more shall see A good legge worne in a long silke stocking, With a long cod-peece, of all fashions That carried it ifaith, what&#x27;s he goes by? I know him not, a lookes iust like a foole. Ah how light a treads For durting his silke stockings, Ile tell thee what, A witty woman may with ease distinguish, All men by their noses, as thus: your nose Tuscan is louely, large and brawde, Much like a Goose, your valiant generous nose. A croked smoth and a great puffing nose, Your schollers nose is very fresh and raw For want of fire in winter, and quickly smells, His choppes of mutton, in his dish of porrage. Your Puritan nose is very sharpe and long, And much like your widdows, and with ease can smell, An edefying capon some fiue streets off, He wilbe gone if we neglect to stay him. Noe I ha&#x27;t stand a side, Aye me my handkertcher Adriand, Fabia. Runne, runne I haue let my handkertcher fall, Gentleman shall I intreate a curtesie, Sir most hearty thankes: please you come in Your welcome shall transcend your expectation. And why? Belike you thinke it base and seruant-like, To feed vpon reuersion, you hold vs widdowes, But as a pie thrust to the lower end That hath had many fingers int before, And is reseru&#x27;d for grose and hungry stomackes. A triuiall Idle ieast, Tis for a man, of your repute, and note, To credit fortunetellers, a petty rogue, That neuer saw fiue shillings, in a heape Will take vpon him to diuine mens fate, Yet neuer knowes himselfe, shall die a begger, Or be hanged vp for pilfering tablecloaths, Shirts and smocks, hanged out to dry on hedges, Tis meerely base, to trust them, or if there be, A man in whome the Delphicke, God hath breathed, His true diuining fire, that can foretell, The fixt decree of fate, he likewise knowes, What is within the euerlasting booke, Of Desteny decreed cannot by wit, Or mans Inuention be disolued, or shund, Then giue thy loue free scope imbrace and kisse, And to the distafe sisters leaue th&#x27;euent, Choose what you will of time, There lyes your way. Did you call sir. Then fare you well. Adriana, makes a no stay. I prythee see if hee haue left the house, Peepe close, see, but be not seene: is a gon. What does he now? Blowes the wind there. What does he now? Gon Adriana. Sure he&#x27;s taken. Come, thou must helpe me now, I haue a trick To second this beginning, and in the nick, To strike it dead ifaith, women must woe, When men forget what Nature leads them too. What saist thou then to Nimble Sir Oliu. Smal-shanck Tis true he is the man, Yet will I beare some dozen more in hand, And make them all my gulls. Why sir, With what audatious front can you intreat To inioy my loue, which yet not two houres since, You scornfully refusd. Which I shall put to tryall, lend me thy eare. Will you performe so much. Make him subscribe it, and then I vow, By sacred Vestaes euer hallowed fier, To take thee to my bed. Hee&#x27;s worthy loue, whose vertues most excell. I haue set the foole in hope, ha&#x27;s vnder-tooke To rid me of that fleshy Captaine Face, Which sweares in Tauernes, and all Ordinaries, I am his lawfull wife: hee shall allay, The fury of the Captaine, and I secure, Will laugh at the disgrace they both indure. Ex: Then good sir do it, Widdowes are sildome slow to put men to it. Yet search him well, And wee shall find no pithe or hearty Timber To vnderlay a building. But shall I not be ouer-cloyde with loue? Will you nor be too busie shall I keepe My chamber by the moneth, if I bee pleas&#x27;d To take Physick, to send for Visitants, To haue my maide read Amadis de Gaule, Or Donzel del Phoebo to me? shall I haue A Carotch of the last edition, The Coatch-mans seate a good way from the Coatch, That if some other Ladies and my selfe Chance to talke bawdy, he may not ouer-heare vs. Shall we haue two chambers? And will you not presume vnto my bed, Till I shall call you by my waiting maide. And when I send her, Will you not intice her to your lust, Nor tumble her before you come to me. What noyse is that, goe see Adriana, And bring me word: I am so haunted With a swaggering Captaine, that sweares God blesse vs Like a very Tarmagant, a Raskall knaue, Enter Adr. That saies he will kill all men which seekes to wed me. What are you afraid Sir Oliuer? None Sir. Sir get you gon. Leaue my house, or I will haue you coniur&#x27;d With such a spell, you neuer yet haue heard of, Haue you no other place to vent your froth, But in my house, is this the fittest place, Your Captaineship can find to puff in: ha! How now you slaue, one call the Constable. Captaine Face, for my last husbands sake, With whom you were familiarly acquainted, I am content to winke at these rude tricks, But hence, trouble me no more, if you doe, I shall lay you fast, where you shall see No Sunne or Moone. Sir, get you gon, You swaggering, cheating, Turne-bul-streete roague, Or I will hale you to the common-Iayle, Where Lyce shall eate you. Runne to the Counter, Fetch me a red-bearded Sargeant, Ile make You Captaine thinke the Deuill of hell is come To fetch you, if hee once fasten on you. Call vp my men, Enter 2. or 3. with clubs. Where be these knaues, haue they no ears or hearts, Beate hence this rascall, some other fetch a warrant, Ile teach him know himselfe. Gentlemen I am sorry you should be thus disturbed Within my house, but now all feare is past, You are most welcome: supper ended, Ile giue a gratious answer to your sute, Meane while let nought dismay, or keepe you mute. Ex. Sir you are merry, Your supper sir was light. But I hope you thinke you welcome. Thats not alowed. Vnlesse you were sonne to a welch Curate: But faith sir Knight I haue a kind of itching, To be a Lady, that I can tell you woes, And can perswade with better rethorick, Then oathes, wit, welth, valour, lands, or person, I haue some debts at court, and marrying you, I hope the Courtier will not sticke to pay me, Yes faith Adriana, How a compleat gallant? what? a fellow, With a hat tuck&#x27;t vp behind, and what we vse, About our hips to keepe our coates from dabling, He weares about his neeke, a farthingale: A standing coller to keepe his neate band cleane, The whilst his shirt does stinke, and is more foule, Then an in of chancery table cloth, His breeches must be pleyted as if a had Some thirty pockets, when one poore halpeny purse, Will carry all his treasure, his knees all points, As if his legs and hammes were tyde together, A fellow that has noe inside, but prates By roate, as players, and parrotts vse to doe, And to define a compleat gallant right, A mercer form&#x27;d him, a taylor ma him, And a player giues him spright, I hope sir what ere our husbands be, We may be honest. Come not neere me, I forbid the my house, my out-houses, My Garden, Orchard, and my backe-side, Thou shalt not harbor neere me. What would you sir with vs, That on the suddaine, and so late you come. It shall not need, I hope I haue not brought her vp so ill, But that she knowes how to containe your secrets, As well as I her Mistresse: Therefore on. Now sir, what&#x27;s your will? Are these your secrets? I am none of those, Stand vp, I more desire a man should stand, Then cringe and creepe that meanes to winne my loue, I say stand vp, and let me goe ye&#x27;ad best. How now sir sawce, Would you be capring in your fathers saddle, Away you casheerd yonger brother, begon, Doe not I know the fashions of you all, When a poore woman has laide open all Her thoughts to you, then you grow proud and coy, But when wise maides dissemble and keepe close, Then you poore snakes come creeping on your bellyes, And with all oyled lookes prostrate your selues, Before our beauties sunne, where once but warme, Like hatefull snakes you strike vs with your stings, And then forsake vs, I know your tricks begon. Here me but speake. Where be these lazie knaues? some raise the house, What ment the cry of murther? where&#x27;s my loue? I finde no fault, and I protest Sir Oliuer. I&#x27;d not haue lost the last two houres sleepe, I had by him, for all the wealth you haue. That oath doth shew you are a Northen Knight, And of all men aliue, Ile neuer trust, A Northen man in loue. Because the first word he speakes is the Diuell Take his soule, and who will giue him trust, That once has giuen his soule vnto the Diueil. And ifaith If the best part of a man be once gone, The rest of the body is not worth a rush, Though it be nere so handsome.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Ram Alley, or Merry Tricks</div><div class="body">The rich heiress Constantia Somerfield disguises herself as a page and enters the employ of her beloved, Boucher, intending to keep an eye on his fidelity. The rich widow Taffeta drops a handkerchief to get Boucher’s attention, and invites him into her house. Despite a prophecy that a widow will endanger his life, soul, lands, and reputation, Boucher is attracted to her. He has several rivals, including the old knight Sir Oliver Smallshank and Captain Puff, who claims marital rights in Taffeta and threatens to attack anyone who shows any sexual interest in her. Sir Oliver comes to woo Taffeta, but hides under her farthingale when Puff arrives. Puff assaults her, and Sir Oliver is forced out of his hiding place. Seeing the advantages of being a courtier’s wife, Taffeta agrees to marry him. Sir Oliver’s younger son, Will, is in debt, and his lands are mortgaged to Throat the lawyer. He pretends to have eloped with Constantia, but the woman he introduces to his family is actually his whore, Frances. He leaves her with Throat while he goes to arrange the wedding, asking Throat to confirm his cover story: that he has expectations of becoming a lord. Throat tells her the truth, that Will is a penniless fortune-hunter, and woos the lady for himself. When Will takes her, ostensibly to a nocturnal marriage ceremony, Throat has them attacked in the darkened streets. They are separated from Frances, whom Throat then marries himself. Will arranges to have himself arrested for debt when he comes looking for his putative fiancée; Throat is initially unwilling to help him, but, encouraged by Frances, agrees to pay the debt and return Will’s mortgage if he will sign a legal document renouncing all prior claims to Constantia Somerfield. Will agrees, and gets his lands back and some of his debts paid. Constantia’s mother, Lady Somerfield, comes to town, and is told that Will has abducted her daughter. Throat introduces himself as her son-in-law, and is arrested. Meanwhile Frances steals away with her new husband’s jewels. She is arrested at a tavern, and thinks it a ruse to get her away from Throat’s man; when the debt turns out to be real, she tries to sweet-talk the sergeant into releasing her. She is redeemed by her accomplice, Beard, only to be ‘rescued’ from him by Will&#x27;s elder brother, who still thinks her Constantia and intends to marry her himself. Will goes to see Taffeta, not realizing that Sir Oliver is hiding behind the hangings; he tries to dissuade her from…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

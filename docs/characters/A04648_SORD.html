@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SORD in Every Man Out of His Humor · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SORD</span>
+</nav>
+
+<h1>SORD</h1>
+<p class="lede">in <em>Every Man Out of His Humor</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>1963</td></tr>
+<tr><th>Characters</th><td>10513</td></tr>
+<tr><th>BritDrama no.</th><td>1216</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">eighteenth, raine, good still; nineteenth and twentieth, Good still, good still, good still, good still, good still; one and twentieth, some raine; some raine? well, wee <mark>must</mark> <mark>bee</mark> patient, and attend the heauens pleasure, would it were more though: the one and twentith, <mark>two</mark> and twentith, three and twentith, great tempest of raine, thunder,</div>
+<div class="excerpt">halter? Aye me, I am vndone, I am vn done. You thredbare horse-bread eating rascals, if you would needs haue been medling, could you not haue vntied it, but you <mark>must</mark> cut it? and in the midst too? Aye me. VVhat curses breath these men? how haue my deeds Made my lookes differ from another mans, That they should thus detest, and</div>
+<div class="excerpt">tempest of raine, thunder, and lightning. O good againe, past expectation good: I thanke my blessed angell; neuer, neuer, Laid I penny better out than this, To purchase this deare booke: not deare for price, And yet of me as dearely priz&#x27;d as life, Since in it is contain&#x27;d the very life, Bloud, strength, and sinewes of my happinesse:</div>
+<div class="excerpt">appl d my selfe, To sit and clap my hands, and laugh and leape, Knocking my head against my roofe, with joy To see how plumpe my bags are, and my barnes. Sirah, <mark>goe</mark>, hie you home, and bid your fellowes Get all their flailes readie againe I come. I&#x27;le instantly set all my hinds to thrashing Of a whole Reeke of corne, which I</div>
+<div class="excerpt">first. O I shall make my prizes as I list, My House and I can feed on Pease and Barley, VVhat though a world of VVretches sterue the while? &quot;He that will thriue, <mark>must</mark> thinke no courses vile. Yonder&#x27;s your godfather; do your dutie to him sonne. I hope he will grow great one day, sir. Brother, I hunger not for such acquaintance:</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">O rare, good, good, good, good, good, I thanke my Christ, I thanke my Christ for it. Ha, ha, ha, I will not sow my grounds this yeere, Let me see, what haruest shall we haue? Iune, Iulie? The xx.xxi.xxij. daies, raine and wind, O good, good; the xxiij. and xxiiij. raine and some wind, good; the xxv. rain, good still; xxvj.xxvij.xxviij, wind and some raine; would it had been raine and some wind: well &#x27;tis good (when it can bee no better) xxix. inclining to raine: in clining to raine that&#x27;s not so good now. xxx. and xxxj. wind and no raine: no raine? S&#x27;lid stay; this is worse and worse: what saies he of S. Swithins? turne backe, looke, S. Swithins: no raine? O here, S. Swithins, the xv. day, variable weather, for the most part raine, good; for the most part raine: VVhy it should raine fortie daies after now, more or lesse, it was a rule held afore I was able to hold a plough, and yet here are two daies, no rain; ha? it makes me muse. VVeele see how the next month begins, if that be better. August: August, first, second, third, and fourth daies, rainie, and blustering; this is well now: fift, sixt, seventh, eight, and ninth, raine, with some thunder; I marry, this is excellent; the other was false printed sure: the tenth and eleuenth, great store of raine; O good, good, good, good, good; the twelft, thirteenth, and fourteenth daies, rain; good still: fifteenth and sixteenth, raine; good still: seuenteenth and eighteenth, raine, good still; nineteenth and twentieth, Good still, good still, good still, good still, good still; one and twentieth, some raine; some raine? well, wee must bee patient, and attend the heauens pleasure, would it were more though: the one and twentith, two and twentith, three and twentith, great tempest of raine, thunder, and lightning. O good againe, past expectation good: I thanke my blessed angell; neuer, neuer, Laid I penny better out than this, To purchase this deare booke: not deare for price, And yet of me as dearely priz&#x27;d as life, Since in it is contain&#x27;d the very life, Bloud, strength, and sinewes of my happinesse: Blest be the houre wherein I bought this booke, His studies happy that compos&#x27;d the booke, And the man fortunate that sold the booke: Sleepe with this charme, and be as true to me As I am joy&#x27;d and confident in thee. VVho brought this same sir ha? I, and the prints of them sticke in my flesh Deeper than i&#x27; their letters: They haue sent me Pils wrapt in paper here, that should I take &#x27;hem, VVould poison all the sweetnesse of my Booke, And turne my Honey into Hemlocke juice: But I am wiser than to serue their precepts, Or follow their prescriptions: Here&#x27;s a deuise, To charge me bring my Graine vnto the markets: I, much, when I haue neither Barne nor Garner, Nor Earth to hide it in, I&#x27;le bring it; but till then, Ech corne I send shall be as big as Paules. O, but (say some) the poore are like to sterue. VVhy let &#x27;hem sterue, what&#x27;s that to me? are Bees Bound to keepe life in Drones and idle Moaths? no: VVhy such are these (that tearme themselues the poore ▪ Only because they would be pittied) But are indeed a sort of lazie Beggers, Licencious Rogues and sturdie Vagabonds, Bred (by the sloth of a fat plenteous yeare) Like snakes in heat of summer out of dung, And this is all that these cheape times are good for: VVhereas a holsome and penurious Dearth Purges the soile of such vile excrements, And kils the Vipers vp. VVhy so? I, their exclaimes Moue me as much, as thy breath moues a Mountaine; Poore wormes, they hisse at me, whilst I at home Can be contented to appl d my selfe, To sit and clap my hands, and laugh and leape, Knocking my head against my roofe, with joy To see how plumpe my bags are, and my barnes. Sirah, goe, hie you home, and bid your fellowes Get all their flailes readie againe I come. I&#x27;le instantly set all my hinds to thrashing Of a whole Reeke of corne, which I will hide Vnder the ground; and with the straw thereof I&#x27;le stuffe the outsides of my other Mowes: That done, I&#x27;le haue &#x27;hem emptie all my Garners, And i&#x27; the friendly Earth bury my store, That when the Searchers come they may suppose All&#x27;s spent, and that my fortunes were belied. And to lend more opinion to my want, And stop that many-mouthed vulgar Dog, (VVhich else would still be baying at my dore) Each market day, I will be seene to buy Part of the purest VVheat, as for my houshold: VVhere when it comes, it shall encrease my heapes, Twill yeeld me treble gaine at this deare time, Promisd in this deere Booke: I haue cast all, Till then I will not sell an care, I&#x27;le hang first. O I shall make my prizes as I list, My House and I can feed on Pease and Barley, VVhat though a world of VVretches sterue the while? &quot;He that will thriue, must thinke no courses vile. Yonder&#x27;s your godfather; do your dutie to him sonne. I hope he will grow great one day, sir. Brother, I hunger not for such acquaintance: Do you take heed, least:— VVell, if ten pound will fetch &#x27;hem, you shall haue it, but I&#x27;le part with no more. Doe so: and when you haue &#x27;hem, studie hard. I wonder it raines not! the Almanack sayes we should haue store of raine to daie. Doe you know her sir? Nay Gods-pretious, if the weather and the Season be so respectlesse, that Beggers shall liue as well as their betters; and that my hunger and thirst for Riches, shall not make them hunger and thirst with Pouertie; that my sleepes shall be bro ken, and their hearts not broken; that my coffers shall be full, and yet care; theirs emptie, and yet merry: Tis time that a Crosse should beare flesh and bloud, since flesh and bloud can not beare this crosse. Tut, these star-monger knaues, who would trust &#x27;hem? one saies, darke and rainie, when &#x27;tis as cleare as Christall; ano ther saies, tempestuous blasts, and stormes, and &#x27;twas as calme as a Milke bowle; here be sweet rascals for a man to credite his whole fortunes with: You skie-staring Cocks combes you: you fat braines, out upon you; you are good for nothing but to sweat night-caps and make rug-gownes deare: you learned men, and haue not a Legion of Deuils, a vostr seruice: a vostre ser uice? By heauen I thinke I shall die a better scholler than they, but soft, how now sirah. From my Sonne sir? what would my Sonne sir? some good newes no doubt. The letter. Sweet and deare father, (desiring you first to send mee your blessing, which is more worth to me than Gold or Siluer) I desire you likewise to bee aduertised, that this Shrouctide (contrarie to custome) wee vse alwaies to haue Reuels; which is indeed Dauncing, and makes an excellent shew in truth; especially if wee Gentlemen bee well attir&#x27;d, which our Seniors note, and thinke the better of our fathers, the better wee are maintain&#x27;d, and that they shall know if they come vp, and haue any thing to doe in the Law: therefore good Father, these are (for your owne sake as well as mine) to re-desire you, that you let me not want that which is fit for the setting vp of our name in the honourable volume of Gentilitie, that I may say to our Calumnators with Tullie, EGO SVM ORTVS DOMVS MEAE, TV OCCASVSTVAE. And thus (not doubting of your fatherly Beneuolence) umbly ask you blessing, and pray God to blesse you. Yours, if his owne. How&#x27;s this; Yours, if his owne? is he not my Sonne, except he be his owne Sonne. Belike this is some new kind of subscription the Gallants vse. VVell, wherefore doest thou stay knaue? Away: goe. Sweet and deare father, (desiring you first to send mee your blessing, which is more worth to me than Gold or Siluer) I desire you likewise to bee aduertised, that this Shrouctide (contrarie to custome) wee vse alwaies to haue Reuels; which is indeed Dauncing, and makes an excellent shew in truth; especially if wee Gentlemen bee well attir&#x27;d, which our Seniors note, and thinke the better of our fathers, the better wee are maintain&#x27;d, and that they shall know if they come vp, and haue any thing to doe in the Law: therefore good Father, these are (for your owne sake as well as mine) to re-desire you, that you let me not want that which is fit for the setting vp of our name in the honourable volume of Gentilitie, that I may say to our Calumnators with Tullie, EGO SVM ORTVS DOMVS MEAE, TV OCCASVSTVAE. And thus (not doubting of your fatherly Beneuolence) umbly ask you blessing, and pray God to blesse you. Here&#x27;s a letter indeed; Reu ls? and benevolence? is this a weather to send be neuolence? or is this a season to reuell in? Slid the Deuill and all takes part to vexe me I thinke: this letter would neuer haue come now else, now, now, when the sunne shines, and the aire thus cleare. Soule if this hold, we shall shortly haue an excel lent crop of Corne spring out of the high waies, the Streets, and Houses of the towne will be hid with the rankenesse of the fruits that grow there in spight of good Husbandrie. Goe to I&#x27;le preuent the sight of it, come as quickly as it can, I will pre uent the sight of it. I haue this remedie Heauen: stay; I&#x27;le trie the paine thus a little, O, nothing, nothing. VVell now: shall my sonne gaine a beneuolence by my death ▪ or any bodie be the better for my Gold or so forth: No Aliue, I kept it fro ̄ &#x27;hem, and (dead) my ghost shall walke about it and preserue it, my Sonne and Daughter shalsterue ere they touch it, I haue hid it as deepe as Hell from the ight of Heauen, and to it I go now. Oh. How? cut the halter? Aye me, I am vndone, I am vn done. You thredbare horse-bread eating rascals, if you would needs haue been medling, could you not haue vntied it, but you must cut it? and in the midst too? Aye me. VVhat curses breath these men? how haue my deeds Made my lookes differ from another mans, That they should thus detest, and loth my life? Out on my wretched Humor, it is that Makes me thus monstrous in true humane eies. Pardon me (gentle friends) I&#x27;le make faire mends For my foule errors past and twentie-fold Restore to all men, what with wrong I rob&#x27;d them: My Barnes and Garners shall stand open still To all the poore that come, and my best graine Be made almes-bread to feed halfe-famisht mouths. Though hetherto amongst you I haue liu&#x27;d Like an vnsauorie Muck hill to my selfe, Yet now my gather&#x27;d heapes being spread abroad, Shall turne to better, and more fruitfull vses. Bles e then this man, curse him no more for sauing My life and soule together. O how deepely The bitter curses or the poore do pierce! I am by wonder chang&#x27;d; come in with me And witnesse my repentance: now I proue, &quot;No life is blest, that is not grac&#x27;t with Loue.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Every Man Out of His Humor</div><div class="body">Cordatus and Mitis are brought by Asper to watch a satirical play, in which he is to be an actor, playing malicious Macilente. They keep up a running commentary between, and sometimes during, the scenes. Each character in the play has a ‘humour’ or obsession to be purged. Sogliardo wants to be a gentleman: he takes instruction from Carlo Buffone and purchases himself a coat of arms; he is eventually used to humiliate the conceited court lady Saviolina by showing that she cannot tell true gentility from false. The farmer Sordido is hoarding grain, and resists a court order to sell it because he is gambling on the price going up after a bad harvest; when this does not happen, he tries to hang himself, and repents on hearing the comments of the rustics who cut him down. Puntarvolo plays chivalric wooing games of mock- adultery with his wife, and plans to travel to Constantinople with his wife and dog, venturing money on their safe return; but he loses the inclination when Macilente poisons the dog. Fungoso tries to imitate the courtier Brisk’s fashionable suit, but is continually frustrated because Brisk keeps changing his clothes. The uxorious Deliro seeks advice on how best to please his contrary wife, Fungoso’s sister. Shift, wanting to be known for a machismo he doesn’t really have, represents himself as a robber, but the threat of hanging forces him to admit the truth. Carlo Buffone has a humour of talking: at a tavern, he performs a comic dialogue between two cups, playing both parts himself, and Puntarvolo seals his mouth with wax. The affray brings the Constable, who is minded to arrest them all but is content tv take only Brisk. Fungoso, penniless from his clothing purchases, is left to pay the tavern bill, and has to be rescued by bis brother-in-law, who also calls in the mortgage on ===== PAGE 162 ===== Brisk’s lands; the courtier is left in prison for debts totalling £13,000, curing him of his humour. Macilente is purged of his malign humour by the sight of the Queen.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

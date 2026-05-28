@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GUI in Cymbeline, King of Britain · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>GUI</span>
+</nav>
+
+<h1>GUI</h1>
+<p class="lede">in <em>Cymbeline, King of Britain</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1008</td></tr>
+<tr><th>Characters</th><td>5264</td></tr>
+<tr><th>BritDrama no.</th><td>1623</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">both, Mingle their ſpurres together. He is but one: you, and my Brother ſearch What Companies are neere: pray you <mark>away</mark>, Let me alone with him. A thing. More ſlauiſh <mark>did</mark> I ne&#x27;re, then anſwering A Slaue without a knocke. To who? to thee? What art thou? Haue not I An arme as bigge as thine? A <mark>heart</mark>, as bigge: Thy words I grant are</div>
+<div class="excerpt">Thou art ſome Foole, I am loath to beate thee. What&#x27;s thy name? Cloten, thou double Villaine be thy name, I cannot tremble at it, were it Toad, or Adder, Spider, &#x27;Twould moue me ſooner. I am ſorry for &#x27;t: not ſeeming So worthy as thy Birth. Thoſe that I reuerence, thoſe I feare: the Wiſe: At Fooles I laugh: not feare them. This</div>
+<div class="excerpt">arrogant peece of fleſh threat vs? Play Iudge, and Executioner, all himſelfe? For we do feare the Law. What company Diſcouer you abroad? With his owne Sword, Which he <mark>did</mark> waue againſt my throat, I haue tane His head from him: Ile throw &#x27;t into the Creeke Behinde our Rocke, and let it to the Sea, And tell the Fiſhes, hee&#x27;s the Queenes</div>
+<div class="excerpt">Clot-pole downe the ſtreame, In Embaſſie to his Mother; his Bodie&#x27;s hoſtage For his returne. Is he at home? What does he meane? Since death of my deer&#x27;ſt Mother It <mark>did</mark> not ſpeake before. All ſolemne things Should anſwer ſolemne Accidents. The matter? Triumphes for nothing, and lamenting Toyes, Is iollity for Apes, and greefe for</div>
+<div class="excerpt">me, by The hands of Romaines. The ſame dead thing aliue. But we ſee him dead. This is ſure Fidele. Let me end the Story: I ſlew him there. I haue ſpoke it, and I <mark>did</mark> it. A moſt inciuill one. The wrongs he <mark>did</mark> mee Were nothing Prince-like; for he <mark>did</mark> prouoke me With Language that would make me ſpurne the Sea, If it could ſo roare</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Out of your proofe you ſpeak: we poore vnfledg&#x27;d Haue neuer wing&#x27;d from view o&#x27; th&#x27; neſt; nor knowes not What Ayre&#x27;s from home. Hap&#x27;ly this life is beſt, (If quiet life be beſt) ſweeter to you That haue a ſharper knowne. Well correſponding With your ſtiffe Age; but vnto vs, it is A Cell of Ignorance: trauailing a bed, A Priſon, or a Debtor, that not dares To ſtride a limit. Vncertaine fauour. I am throughly weary. There is cold meat i&#x27; th&#x27; Caue, we&#x27;l brouz on that Whil&#x27;ſt what we haue kill&#x27;d, be Cook&#x27;d. What&#x27;s the matter, Sir? Money? Youth. Were you a woman, youth, I ſhould woo hard, but be your Groome in honeſty: I bid for you, as I do buy. Would I could free&#x27;t. Pray draw neere. Go you to Hunting, Ile abide with him. I loue thee: I haue ſpoke it, How much the quantity, the waight as much, As I do loue my Father. I could not ſtirre him: He ſaid he was gentle, but vnfortunate; Diſhoneſtly afflicted, but yet honeſt. But his neate Cookerie? I do note, That greefe and patience rooted in them both, Mingle their ſpurres together. He is but one: you, and my Brother ſearch What Companies are neere: pray you away, Let me alone with him. A thing. More ſlauiſh did I ne&#x27;re, then anſwering A Slaue without a knocke. To who? to thee? What art thou? Haue not I An arme as bigge as thine? A heart, as bigge: Thy words I grant are bigger: for I weare not My Dagger in my mouth. Say what thou art: Why I ſhould yeeld to thee? No, nor thy Taylor, Raſcall: Who is thy Grandfather? He made thoſe cloathes, Which (as it ſeemes) make thee. Hence then, and thanke The man that gaue them thee. Thou art ſome Foole, I am loath to beate thee. What&#x27;s thy name? Cloten, thou double Villaine be thy name, I cannot tremble at it, were it Toad, or Adder, Spider, &#x27;Twould moue me ſooner. I am ſorry for &#x27;t: not ſeeming So worthy as thy Birth. Thoſe that I reuerence, thoſe I feare: the Wiſe: At Fooles I laugh: not feare them. This Cloten was a Foole, an empty purſe, There was no money in&#x27;t: Not Hercules Could haue knock&#x27;d out his Braines, for he had none: Yet I not doing this, the Foole had borne My head, as I do his. I am perfect what: cut off one Clotens head, Sonne to the Queene (after his owne report) Who call&#x27;d me Traitor, Mountaineer, and ſwore With his owne ſingle hand heel&#x27;d take vs in, Diſplace our heads, where (thanks the Gods) they grow And ſet them on Luds-Towne. Why, worthy Father, what haue we to looſe, But that he ſwore to take, our Liues? the Law Protects not vs, then why ſhould we be tender, To let an arrogant peece of fleſh threat vs? Play Iudge, and Executioner, all himſelfe? For we do feare the Law. What company Diſcouer you abroad? With his owne Sword, Which he did waue againſt my throat, I haue tane His head from him: Ile throw &#x27;t into the Creeke Behinde our Rocke, and let it to the Sea, And tell the Fiſhes, hee&#x27;s the Queenes Sonne, Cloten, That&#x27;s all I reake. Where&#x27;s my Brother? I haue ſent Clotens Clot-pole downe the ſtreame, In Embaſſie to his Mother; his Bodie&#x27;s hoſtage For his returne. Is he at home? What does he meane? Since death of my deer&#x27;ſt Mother It did not ſpeake before. All ſolemne things Should anſwer ſolemne Accidents. The matter? Triumphes for nothing, and lamenting Toyes, Is iollity for Apes, and greefe for Boyes. Is Cadwall mad? Oh ſweeteſt, fayreſt Lilly: My Brother weares thee not the one halfe ſo well, As when thou grew&#x27;ſt thy ſelfe. Where? Why, he but ſleepes: If he be gone, hee&#x27;l make his Graue, a Bed: With female Fayries will his Tombe be haunted, And Wormes will not come to thee. Prythee haue done ▪ And do not play in Wench-like words with that Which is ſo ſerious. Let vs bury him, And not protract with admiration, what Is now due debt. To&#x27; th&#x27; graue. By good Euriphile, our Mother. Cadwall, I cannot ſing: Ile weepe, and word it with thee; For Notes of ſorrow, out of tune, are worſe Then Prieſts, and Phanes that lye. Pray you fetch him hither, Therſites body is as good as Aiax, When neyther are aliue. Nay Cadwall, we muſt lay his head to&#x27; th&#x27; Eaſt, My Father hath a reaſon for &#x27;t. Come on then, and remoue him. Feare not Slander, Cenſure raſh. We haue done our obſequies: Come lay him downe. The noyſe is round about vs. Nay, what hope Haue we in hiding vs? This way the Romaines Muſt, or for Britaines ſlay vs or receiue vs For barbarous and vnnaturall Reuolts During their vſe, and ſlay vs after. This is (Sir) a doubt In ſuch a time, nothing becomming you, Nor ſatisfying vs. Then be ſo, Better to ceaſe to be. Pray Sir, to&#x27; th&#x27; Army: I, and my Brother are not knowne; your ſelfe So out of thought, and thereto ſo ore-growne, Cannot be queſtion&#x27;d. By heauens Ile go, If you will bleſſe me Sir, and giue me leaue, Ile take the better care: but if you will not, The hazard therefore due fall on me, by The hands of Romaines. The ſame dead thing aliue. But we ſee him dead. This is ſure Fidele. Let me end the Story: I ſlew him there. I haue ſpoke it, and I did it. A moſt inciuill one. The wrongs he did mee Were nothing Prince-like; for he did prouoke me With Language that would make me ſpurne the Sea, If it could ſo roare to me. I cut off&#x27;s head, And am right glad he is not ſtanding heere To tell this tale of mine. And at firſt meeting lou&#x27;d, Continew&#x27;d ſo, vntill we thought he dyed.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Cymbeline, King of Britain</div><div class="body">Imogen has been the heir to Cymbeline’s kingdom since the disappearance of her infant brothers twenty years ago. Now her father intends her to marry her foolish stepbrother Cloten; but she pre-empts this by marrying Posthumus instead. Cymbeline objects to Posthumus, whom he took in as an orphan and brought up at court, and banishes him. The Queen pretends support for the couple, but is really the source of Cymbeline’s hostility; her objective is to bring the succession into her own family line, if necessary by destroying Imogen. Claiming to be studying toxicology, she asks Cornelius to give her some poison for experimental purposes. He mistrusts her motives: the ‘poison’ he supplies is really only a sleeping potion. She then gives it to Posthumus’ servant, Pisanio, claiming it to be a powerful medicine. Posthumus goes to Rome, leaving his bracelet behind with Imogen as a love-token, and taking her ring. There he boasts of his wife’s beauty and chastity, and bets Iachimo the ring that she will never succumb to his seduction. Iachimo comes to Britain, tells Imogen that Posthumus is behaving adulterously in Rome, and tries to persuade her to do the same. When she refuses, he claims he was only testing her, and asks her to take charge of a chest of valuables, partly paid for by Posthumus, and lodge them for the night in a safe place, her bedroom. He hides in the chest and emerges when she is asleep, giving him the opportunity to inspect the room, look at her in bed, and take Posthumus’ bracelet from her arm. Back in Rome, he claims to have enjoyed Imogen sexually, and the bracelet convinces Posthumus that he is telling the truth. Iachimo takes the ring and Posthumus sends two letters home: one to Imogen asking her to meet him at Milford Haven, the other to Pisanio ordering him to kill her on arrival there. Pisanio escorts her as planned, but then gives her boy’s clothes to enable her to escape from Britain; he also passes on the ‘medicine’ he had from the Queen, then writes to tell Posthumus that she has been killed as ordered. Cymbeline has neglected to pay the tribute to Rome agreed by his predecessors. Caius Lucius comes to demand it, but gets a dusty answer. Rome prepares its 1610 forces for an invasion. Imogen is found to be absent from court, and, stung by her contemptuous rejection, Cloten follows her wearing a suit of Posthumus’ clothes, intending to rape her and bring her back humiliated to court. The hungry, cross-dressed Imogen finds herself in a…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

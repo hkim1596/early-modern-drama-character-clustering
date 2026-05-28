@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BEAUF. SEN in The Unnatural Combat · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BEAUF. SEN</span>
+</nav>
+
+<h1>BEAUF. SEN</h1>
+<p class="lede">in <em>The Unnatural Combat</em> — Massinger, Philip</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1639</td></tr>
+<tr><th>Words</th><td>1761</td></tr>
+<tr><th>Characters</th><td>9549</td></tr>
+<tr><th>BritDrama no.</th><td>2185</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">I am sorrie, Lady, your fathers guilt compels your innocence 〈◊〉 aske what I in justice <mark>must</mark> denie. Thou foolish boy, I can deny thee nothing. Well, &#x27;tis granted. Monsieur Chamont, Montaigne, Lanour, assistants by a Commission from the most Christian King</div>
+<div class="excerpt">occasion v&#x27;d you would 〈◊〉 y with &#x27;em to the ruine of Marcellis? What you have done is granted, and applauded, but yet know this glorious relation of your actions <mark>must</mark> not so blinde our judgements, as to suffer this most unnaturall crime you stand accus&#x27;d of, to passe unquestion&#x27;d. Speake the motives That brings thee hither. Speake</div>
+<div class="excerpt">if it were mine owne, And have the honour with the armes of love, To emb ce the great performer of a deed, Transcending all this Countrey ere could boast of. It <mark>must</mark> be something Of a strange nature, if it finde from me Deniall or delay. Be not rap&#x27;d so: Though I dislike not what is motion&#x27;d, yet In what so neere concernes me,</div>
+<div class="excerpt">have my house a common Inne, For some men that come rather to devoure me, Than to present their service. At this time too It being a serious and solemne meeting, I <mark>must</mark> not haue my boord pester&#x27;d with shadowes, That under other mens protection breake in Without invitement. What is hee? O Belgarde! The more their miserie, yet if</div>
+<div class="excerpt">invitement. What is hee? O Belgarde! The more their miserie, yet if you can For this day put him off. No: say this onely, And as from me; you apprehend me? But it <mark>must</mark> be done gravely. Wee&#x27;ll dine in the great roome, but let the musick And banquet be prepar&#x27;d here. Tis a strange fondnesse. I have knowne him from his first youth,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I am sorrie, Lady, your fathers guilt compels your innocence 〈◊〉 aske what I in justice must denie. Thou foolish boy, I can deny thee nothing. Well, &#x27;tis granted. Monsieur Chamont, Montaigne, Lanour, assistants by a Commission from the most Christian King in punishing, or reeing Malefort our late great Admirall: though I know you need not instructions from me, how to dispose of your selves in this mans triall (that exacts your cleerest judgements) give me leave with favour to offer my opinion: we are to heare him, a little looking backe on his faire actions, loyall, and true demeanour, not as now by the generall voyce, already he&#x27;s condemn&#x27;d. But if we finde (as most beleeve) he hath held intelligence with his accursed sonne, fal e off from all allegeance, and turn&#x27;d (but for what cause we know not) the most bloudy and fatall enemie, this Countrey ever repented to have brought forth, all compassion of what he was, or may be, if now pardon&#x27;d, we sit ingag&#x27;d to censure him with all extremitie and rigour. He comes, but with a strange distracted looke. Monsieur Malefort et not your passion so farre transport you 〈◊〉 to believe from any private malice, r envie to your person you are question&#x27;d, or doe the suppositions want waight, That doe invite us to a strong assurance, Your sonne. Pray you heare with patience, ever Without assistance, or sure aids from you, Could with the pirates of Argers and Tun , ev&#x27;n those that you had almost twice defeated, acquire such credit, as with them to be made absolute commander? (p y you observe me) if there had not some 〈◊〉 pas &#x27;d betweene you, that when occasion v&#x27;d you would 〈◊〉 y with &#x27;em to the ruine of Marcellis? What you have done is granted, and applauded, but yet know this glorious relation of your actions must not so blinde our judgements, as to suffer this most unnaturall crime you stand accus&#x27;d of, to passe unquestion&#x27;d. Speake the motives That brings thee hither. Speake to the man, (If in this presence he appeare to you) To whom you bring this challenge. His father We are sory Monsieur Malefort for our errour And are much taken with your resolution But the disparity of yeares, and strength Between you, and your sonne, duely considerd We would not so expose you You shall orebeare me, And since you are so confident in your cause, Prepare you for the combate. All honours we can give you and rewards Though all that&#x27;s rich, or precious in Marsellis Were layd downe at your feet, can hold no waight With your deservings, let me glory in Your action as if it were mine owne, And have the honour with the armes of love, To emb ce the great performer of a deed, Transcending all this Countrey ere could boast of. It must be something Of a strange nature, if it finde from me Deniall or delay. Be not rap&#x27;d so: Though I dislike not what is motion&#x27;d, yet In what so neere concernes me, it is fit I should proceed with judgement. You are Master Of your owne will but fayle not i&#x27;ll expect you. Tis well. I love a table furnishe with full plentie, And store of friends to eat it, but with this caution, I would not have my house a common Inne, For some men that come rather to devoure me, Than to present their service. At this time too It being a serious and solemne meeting, I must not haue my boord pester&#x27;d with shadowes, That under other mens protection breake in Without invitement. What is hee? O Belgarde! The more their miserie, yet if you can For this day put him off. No: say this onely, And as from me; you apprehend me? But it must be done gravely. Wee&#x27;ll dine in the great roome, but let the musick And banquet be prepar&#x27;d here. Tis a strange fondnesse. I have knowne him from his first youth, but never yet observ&#x27;d In all the passages of his life, and fortunes, Vertues so mix&#x27;d with vices, valiant the world speakes him, But with that bloody; liberall in his gi ts too. But to maintaine his prodigall expence, A fierce extortioner, an impotent lover Of women for a flash, but his fires quench&#x27;d, Hating as deadly, the truth is I am not Ambitious of this match: nor will I crosse you in your affections. You are most welcome, And what I speake to you, does from My heart disperse it selfe to all. Rather Sir increase of honour, When you are pleas&#x27;d to grace my house. Being her selfe She cannot but be excellent, these rich And curious dressing , which in others might Cover deformities, from her take lustre Nor can adde to her. There needes not Sir The least excuse for this, nay I must have Your arme, you being the master of the feast, And this the mistris. Quicke, quicke irs, See all things perfit. And as I said when we are at the banquet, And high in our cups, for tis no feast without it, Especially among souldiers: Theocrine Being retir&#x27;d, as that&#x27;s no place for her, Take you occasion to rise from the table, And lose no opportunity. Nay dispatch there fellowes. Pray you take your place, It matters not. Lets pause here if you please, And entertaine the time with something else, Musicke there in some lofty straine, the song too That I gave order for; the new one cald The souldiers delight? The song ended: enter Belgarde in armor a case of C rbi es by his side. Tis acknowledg&#x27;d, And this a grace done to me unexpected. I commend This wholsome sharpnesse in you, and prefer it B fore obsequious tamenesse, it shewes lovely: No shall the raine of your good counsell fall Upon the barren sands, but spring p fruit Such as you long have wisht for. And the rest Of your profession like you discontented For want of meanes, shall in the r present payment Be b und to pra se your b ldnesse: and hereafter I will take order you sh ll have no cause, For want of change to put your armour on But in the face of an enemie; not as now Among your friends. To that which is due to you, To furnish you like your selfe, of mine owne bountle I&#x27;ll adde five hundred crownes. You are dull, Sir, And seeme not to be taken with the passage You saw presented. You amaze me Your Daughter&#x27; sake, and now exchanging 〈◊〉 With my sonne her servant, why doe you heare this With such distracted lookes? since to that end You brought her hither? Tis so determind. Come I will bring you Where you, with th se if they so please, may see The love-s aene acted. Yonder they are. Theres nothing wanting But your consent. I&#x27;ll not court A grant from you, nor doe I wrong your Daughter, Though I say my sonne deserves her. Whither tend this? Take comfort, H shall walke in clouds, but I&#x27;ll discover him: And he shall finde, and feele, if he excuse not, And with strong reasons this grosse injurie, I can make use of my authoritie. WHat flames are these my wild desires fan in me? The torch that feeds them, was not lighted at Thy altars, Cupid: vindicate thy selfe, And doe not own it: and confirme it rather, That this infernall brand that turnes me cyndars, Was by the snake-hair&#x27;d Sisters throwne into My guiltie bosome. O that I was ever Accurs&#x27;d in having issue: my sonnes bloud, (That like the poyson&#x27;d shirt of Hercules Growes to each part about me) which my hate Forc&#x27;d from him with much willingnesse, may admit Some weake defence; but my most impious love To my faire daughter Theocrine, none. Since my affection (rather wicked lust) That does pursue her, is a greater crime Than any detestation, with which I should afflict her innocence. With what cunning I have betray&#x27;d my selfe, and did not feele The scorching heat that now with furie rage Why was I tender of her? cover&#x27;d with That fond disguise, this mischiefe stole upon me. I hought it no offence to kisse her often, O twine mine armes about her softer neck, And by false shadowes of a fathers kindnesse I long deceiv&#x27;d my selfe: but now the effect Is too apparent. How I strove to be In her opinion held the worthiest man In courtship, forme, and feature, envying him That was preferd before me, and yet then My wishes to my selfe were not discover&#x27;d. But still my fires increas&#x27;d, and with delight I would call her mistresse, wilfully forgetting The name of daughter choosing rather she Should stile me servant, then with reverence father, Yet mocking I nere cherish&#x27;d obscene hopes, But in my troubled slumbers often thought Shee was too neere to me, and then sleeping blush&#x27;d At my imagination which pass&#x27;d My eyes being open, not condemning it, I was ravish&#x27;d with the pleasure of the dreame, Yet spight of these temptations I have reason That pleades against&#x27;em, and commands me to Extinguish these abhominable fires, And I will doe it, I will send her backe To him that loves her lawfully, Within there? Why, In this heat, Belgarde Who, I? Wee at better leasure Will learne the cause of this. None, his daughter is remov&#x27;d To the sort of Montrevile, and he himselfe In person fled, but where is not discover&#x27;d, I could tell you wonders, but the time denies mee Fit libertie. In a word, let it suffice The power of our great master is contemn&#x27;d, The sacred lawes of God and man prophan&#x27;d, And if I sit downe with this injury, I am unworthy of my place, and thou Of my acknowledgement: draw up all the troopes, As I goe, I will instruct you to what purpose. Such as have power to punish, and yet spare From feare, or from co nivence, others ill Though not in act assist them in their w ll Take you the charge Of the fort Belgarde, your dangers have deserv&#x27;d it. Tis in vaine to mourne For whats past helpe. We will refer bad ma Your sentence to the King: may we make use of This great example, and learne from it, that There cannot be a want of power above To punish murther, and unlawfull love. Imprimatur.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Unnatural Combat</div><div class="body">Malefort Junior, son of the Admiral, has committed treason by allying himself with pirates and threatening the ruin of Marseilles. The Admiral is suspected of complicity and imprisoned. Theocrine, his daughter, reluctantly offers herself to Beaufort Junior, son of the Governor of Marseilles, if he will only persuade his father to allow hers a hearing. Beaufort Senior can refuse his son nothing, so the Admiral gets his opportunity to protest his innocence. Malefort Junior ‘challenges his father to a duel over a wrongdoing which he will not specify. The Admiral refuses to be held accountable by his son, and accepts the challenge. Malefort Junior is killed: the threat to Marseilles is over, and Admiral Malefort is lauded a hero. Malefort suggests that Theocrine should marry Beaufort Junior; Beaufort Senior half-heartedly agrees and invites them to a nuptial feast. The Governor&#x27;s table is open to any former soldier who needs a free ~ meal, a custom regularly invoked by Belgarde, who is unemployed in peacetime and angry at being denied - his -back pay. Fearing embarrassment at the feast, Beaufort Senior has his steward discourage Belyarde with the suggestion that he is underdressed for the ===== PAGE 200 ===== occasion; but the upshot is that Belgarde turns up in a suit of armour and declares his worthiness. His plain- speaking wins him respect and a gift of money from the Governor. He spends it all on new clothes, but the signs of prosperity attract his creditors, and he is still unable to pay them. People are noticing Malefort’s excessive solicitude towards his daughter. This comes to a head when Beaufort Junior takes her off to woo her in private, with a priest ready to perform the marriage. Malefort reacts by calling off the marriage and taking Theocrine home. He harbours an incestuous passion for his daughter, who is very like his dead second wife. Struggling to conquer the urge, he confesses to his friend Montreville and asks him to abduct her: he cannot be tempted if he never sees her again. Beaufort Junior realizes something is wrong and has Belgarde muster troops to besiege Montreville’s fort. Montreville demands sexual favours from Theocrine, and reveals her father’s secret. Meanwhile Malefort reasons from classical precedent that incest is not wicked after all, and goes to fetch his daughter back. Montreville denies him access and reveals that he has.a long-standing grudge: Theocrine’s mother was his mistress before Malefort stole her, poisoning his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

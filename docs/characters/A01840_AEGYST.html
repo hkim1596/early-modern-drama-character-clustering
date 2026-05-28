@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AEGYST in Orestes · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> ›
+  <span>AEGYST</span>
+</nav>
+
+<h1>AEGYST</h1>
+<p class="lede">in <em>Orestes</em> — Goffe, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>1791</td></tr>
+<tr><th>Characters</th><td>9714</td></tr>
+<tr><th>BritDrama no.</th><td>1929</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 18 (<em>death, thebes, did, myne, eke, wyth…</em>). Matches are highlighted.</p>
+<div class="excerpt">selfe thus speake it; vntill then all&#x27;s free, Kings win their subiects by immunity. Exeunt omnes. What is the matter, speake, how came he dead? They shall die two deaths, that <mark>did</mark> cause him one. Are you the men which thus abus&#x27;d our state, Was&#x27;t one or <mark>both</mark>, if <mark>both</mark>, you <mark>both</mark> shall die, If one, that one, we are iust in our decree.</div>
+<div class="excerpt">O my boy, my boy. Bathe not thy hands in a poore infants blood, Nor in thy mothers, I deserue to die: And yet remember how my doome sau&#x27;d thee, How easily mercy <mark>did</mark> obtaine her suit. O, I am wounded, O when do&#x27;st thou end? O, my heart feeles it,</div>
+<div class="excerpt">poysonous arrow to the length, That it may hit the marke and fly with-strength. Exit. Spoke like a queene, spoke like Aegysteus loue, Now great Thyestes Genias, which didst prompt Mee to this act, come, be spectator now, And see reuenge for Athens bloody feast. And thou wrong&#x27;d Clytemnestra call to minde How his vnsatiate, lustfull,</div>
+<div class="excerpt">our doome is past, one needs must die, Blood still for blood vnto the gods will cry. This doth amaze vs, I ne&#x27;re yet saw two Turns Rhetoricians so to plead for <mark>death</mark>. Would not the pardon of this odious fact, Like a foule stench, or an vnwholesome ayre, Send an infectious vapour through the land, And choake vp Iustice; this</div>
+<div class="excerpt">expiation, The greatest crime that Nature doth abhorre, Not being, is abominable to her, And when we be, make others not to be, &#x27;Tis worse then bestiall, and we <mark>did</mark> not so, When onely we by natures ayd <mark>did</mark> liue, A Heterogenious kinde, as semibeasts, When reason challeng&#x27;d scarce a part in vs, But now doth manhood and ciuility</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">ANd that shall be ere long, tush (shall be&#x27;s) slow, My vengefull thoughts tell mee thou now art dead. Fie saint Apollo, weakling infant-God, Why wouldst thou let lame Vulcan&#x27;s hammers beat Downe those braue Turrets which thou help&#x27;dst to build? Venus, I see thou art a woman now, Which here are like to take a double foyle, For me, that whilome reueld in thy campe In the sweet pleasures of incestuous sheets Must leaue our lou&#x27;d vnsatiate desires: But now begin, thou blacke Eumenides, You hand-mayds of great Dis, let such a flame Of anger burne mee, as doth Etna&#x27;s forge, On fury, on, our hate shall not die thus: I&#x27;ll draw my poysonous arrow to the length, That it may hit the marke and fly with-strength. Exit. Spoke like a queene, spoke like Aegysteus loue, Now great Thyestes Genias, which didst prompt Mee to this act, come, be spectator now, And see reuenge for Athens bloody feast. And thou wrong&#x27;d Clytemnestra call to minde How his vnsatiate, lustfull, loath&#x27;d desire Doted on euery female face he saw, Rap&#x27;t the Priests daughter, and so brought a plague On all the Grecian host: Calst thou vs friends? Stabs him againe. Is your hot blood yet cold! Help my Lords the Queen. Faith she begins well, sure she knows the man: Yes, hee&#x27;ll remember how you curse him now, Now hands I thanke you, now my soule: grows glad, Had not he greiu&#x27;d thus, I had lost reuenge. FAire morning to my Queene, nay more, my loue, How likes my sweet her change of bedfellow? O who&#x27;ld not doe a murder for a woman! Heauen had but two things for the Gods reseru&#x27;d Fire, and women, when with Giant thought Promotheus had tane one, Ioue in his rage Threw him the to&#x27;ther, bad him keepe &#x27;em both, O th&#x27;are rare creatures, they haue such Maeanders, Their teares will come and goe with such Art, Come now my Queene, one sweet Ambrosian kisse; O Nectar ! prethe hadst thou taught thy teares How they should flow before: Yes, all was woman like, but yet that boy He tooke it deepely, would he were with his father, So gon, it skills not how, were he away We would act freely all our lustfull play: Now thou art thy selfe, Yes, yes my loue, there shall one spring from vs Shall be a lofty Pine, let this be cropt, Murder must murder guard, guilt adde to guilt, After one drop whole streams of blood be spilt. walks away. DEare friend, what mean you, to o&#x27;rwhelme your selfe, In such a sea of griefe? Good Cousin adde not disobedience Vnto your mothers griefes. WHat, is Orestes fled? sure there&#x27;s some plot, If you deare Queen, but search Elect. well, You&#x27;ll finde she knowes whither her brothers gone, O, were that moat tane from our comforts beams, No cloud could euer then o&#x27;rshade our ioyes, His life must be cut off without delay, Mischiefe by mischiefe findes the safest vvay; But here&#x27;s Electra : Why, what portentuous newes? Amaze vs not, Tell vs what e&#x27;r it be. Why, then if Agamemnon and his sonne Haue brought their leafe of life to the full end; I am Thyestes sonne, and the next heyre, To sit in Argos Throne of Maiesty. Thanks to our Alpheus sea, who as&#x27;t&#x27;ad striu&#x27;d To gratifie Aegystheus, rais&#x27;d his force, And gathered all his waters to one place, They might be deepe inough to drowne Orestes : But come my Queene, let vs command a feast. To get a kingdome, who&#x27;ld not thinke it good, To swim vnto it through a sea of blood. Thanks to my Fathers subiects: Now Argos swell vp to the brim with ioy, And streams of gladnes flow on Tyndarus, Now made our Father; see old King, see here&#x27;s My Queene doth meane to make thee a grandfather, See how thy royall blood shall propagate, Whose Kingly drops like heauen distilling dew Shall adde fresh life vnto thy withered roote. Nay but good Father let passe elegies, Clyt. seems to weep You draw fresh tears now from your daughters eies, Who shed enough before at&#x27;s funerall, Let&#x27;s talke who are to liue, not who are dead; And thinke what progeny shall spring from vs May beare your Image stampt vpon the face, This we must talke of now, not what griefs past But of the ioy to come: My Queen not well? Now good Electra looke vnto your mother, Clyt. riseth from the table. Lucina be propitious to the birth; Why, will not now a young Aegystheus be, As gratefull as an old Orestes was? Thou times good lengthener, age, posterity, Spread thy selfe still vpon Aegistheus line, Helpe me to treasure vp antiquity, And from Thyestes loyns let spring an heire, Shall euer sit in great Thyestes chaire. Exeunt. NEuer but when a royall off-spring comes From a Kings loynes, can hee be truly King, Then doth he sit firme, rooted in his state, Then is he truly man, and then the Gods He knowes doe loue him, which when Kings doe want, The curse of nature doth deny them fruit, And brands their bed with loath&#x27;d sterility. Tush father, now not without griefe I speake All brookes which from the Princely Ocean ranne, Are quite dry&#x27;d vp, onely Electra here, Our deare Electra, whose great weight of loue Is in our ballance equally so poys&#x27;d, That shee shall euer thinke her father liues, Our heart shall be so parallell with hers. Looke here good father, looke my nobles here, Vpon this Babe scarce crept yet out of earth, For you shall grow an Autumn of ripe yeeres, When time hath brought it to maturity, Looke on thy Grandchilde, Tyndarus, see, &#x27;tis thine, This came from thee, old man, see how it smiles Vpon the Grandsire, as if wise nature had Taught him his kindreds names fore he came forth. We thanke our daughter, come Lord Strophius, come, Griefe still sits heauy on your sighing heart, Be frolike, learne of vs, in all the grace, And pleasure our Court extends, you shall haue place. We thanke old Strophius, and if honour can Keepe thee still young, our Princely hand is wide, And freely shall extend all graces on thee, And you all our subiects, which beare part Thus in our ioy; and here I doe proclaime, And personally from my owne mouth pronounce, Sealing it with the signet of my State, A generall immunity to all Murders, rapes, treasons, thefts, conueyances, Which haue beene from the birth of our deare childe, In all the confines of our Empire done; Nor shall your licence date be quite expired, Till the slow yeere seuen times runnes out his course. Our selfe thus speake it; vntill then all&#x27;s free, Kings win their subiects by immunity. Exeunt omnes. What is the matter, speake, how came he dead? They shall die two deaths, that did cause him one. Are you the men which thus abus&#x27;d our state, Was&#x27;t one or both, if both, you both shall die, If one, that one, we are iust in our decree. WHat, is my Queene come here, to heare the cause,? Wee&#x27;ll then ascend, and iudge them instantly As cends the throne Father, Lord Strophius sit and heare the cause. My queene shall strait way know, bring them away, Although it is not fallen out of our minde, Of a free act or pardon of all faults, Committed in the date of such a time, Our hand of mercy must not be so soft, To couer or&#x27;e with gentle lenity, Such vlcerous sores as these; there is no place For mercy left; murder must not find grace: Therefore our doome is past, one needs must die, Blood still for blood vnto the gods will cry. This doth amaze vs, I ne&#x27;re yet saw two Turns Rhetoricians so to plead for death. Would not the pardon of this odious fact, Like a foule stench, or an vnwholesome ayre, Send an infectious vapour through the land, And choake vp Iustice; this fidelity Should for this one time set two murderers free. My loue, thou knowst I neuer looke too sterne, Vpon a fault that could aske lenity. But this is so transcendant, and so great, It must not be slipt without impunity, To doe a haynous murder, and i&#x27;th court, I&#x27;th place of Iustice, where the King might heare, Vpon a chiefe attendant of the Kings, Murder it selfe is past all expiation, The greatest crime that Nature doth abhorre, Not being, is abominable to her, And when we be, make others not to be, &#x27;Tis worse then bestiall, and we did not so, When onely we by natures ayd did liue, A Heterogenious kinde, as semibeasts, When reason challeng&#x27;d scarce a part in vs, But now doth manhood and ciuility Stand at the bar of iustice, and there plead, How much the&#x27;r wronged, and how much defac&#x27;t When man doth die his hands in blood of man, Iudgement it selfe would scarce a law enact Against the murderer, thinking it a fact, That man &#x27;gainst man would neuer dare commit, Since the worst things of nature doe not it. In troth this make my doome it cannot fall: Will none of you confesse? Strophius weeps. How now Lord Strophius, what affect you so, That makes your teares be wrayers of some passion. Ha, prethee let me speake with thee apart. Thou strik&#x27;st on tunes now, make me glad to heare, We will commit our secresie to thee, Cans&#x27;t water barren wombs with such a dew, Shall make&#x27;em florish and wax green with fruit? Although we cannot altogether blame, That Nature hath been too vnkind to vs, Yet we would plant each corner of our Realme, With springing branches of our royall selfe, To compasse in our selues, and we stand in the midst: Kings in their children doe great blessing finde, And great men loue to propagate their kind. We like thy temper well, and we will trust, Therefore this night we will appoint it so, Thou shalt be guided to our secretst roome, And there shalt vse thy skill; which if it take, Or loue shall honour thee for Physicks sake. O Doctor, you are busie for our comming: Ore. looking on the cups. Yes, must wee sit, sit there my Queene. Think&#x27;st thou so Doctor? O my boy, my boy. Bathe not thy hands in a poore infants blood, Nor in thy mothers, I deserue to die: And yet remember how my doome sau&#x27;d thee, How easily mercy did obtaine her suit. O, I am wounded, O when do&#x27;st thou end? O, my heart feeles it,</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Orestes</div><div class="body">Agamemnon returns home after ten years of war. When he takes his neglected wife Clytemnestra to bed, she and her lover Aegisthus murder him. Roused by bad dreams, his son Orestes finds the body in bed. Feigning innocence, Clytemnestra curses the murderer, while the surviving Trojan glories in the death of the enemy commander: Troy is avenged. Recognizing that he is in danger, Orestes goes into hiding with Pylades until the murderer is identified, and sends a report that, unhinged with grief, he threw himself off a cliff into the sea, and that Pylades also went over trying to stop him. Aegisthus, the next in line, ascends the throne and marries Clytemnestra. She bears him a son, establishing his dynasty, and in celebration he proclaims a general pardon for all crimes. Orestes and Pylades consult the witch Canidia, who shows them a vision of Clytemnestra and Aegisthus committing the murder. They return to court in disguise. Their plotting is overheard by Misander, and they kill him to preserve secrecy, but are immediately arrested. In judging the case, Aegisthus faces two problems: the crime is covered by the general pardon, and each defendant, seeking to save the other, claims that he alone was the murderer. Aegisthus decides not to pass a death sentence on either, and is further impressed when Pylades introduces Orestes as a doctor who has perfected the secret of rejuvenation. Aegisthus asks for a demonstration, using himself and Clytemnestra as the subjects. Agamemnon’s ghost appears to Orestes, urging him to get on with the revenge and take care not to spare his mother. Pylades obtains custody of Aegisthus’ son, who is in the care of Orestes’ sister Electra. When Orestes meets with the King and Queen for their ===== PAGE 235 ===== 1620 rejuvenation, he ties them up, kills their son in front of them, forces them to drink the blood, and finally kills them. He demands his restoration to the throne, but the lords are unwilling to crown a murderer, and instead enthrone Tyndarus, whose first act is to banish Orestes and his accomplices, further stipulating that nobody must give Orestes food. Pylades’ father Strophius dies and Electra kills herself. Orestes goes mad and thinks himself tormented by the Furies. He and Pylades kill one another in a suicide pact, and Tyndarus announces that they are to be buried together in a single tomb.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> page.
+</div>
+</div></body></html>

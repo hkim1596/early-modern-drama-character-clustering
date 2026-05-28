@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BASIL in The Isle of Gulls · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BASIL</span>
+</nav>
+
+<h1>BASIL</h1>
+<p class="lede">in <em>The Isle of Gulls</em> — Day, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1606</td></tr>
+<tr><th>Words</th><td>719</td></tr>
+<tr><th>Characters</th><td>3970</td></tr>
+<tr><th>BritDrama no.</th><td>1491</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">that ſhedule, onely thus much for publique ſatisfaction: Tis not ſtrange to you, that the choiſeſt treaſure Nature indow&#x27;d vs with, is mynde vp in the vaines of my <mark>two</mark> daughters: howe much their quiet, and the ſmothe ſtreame of our gouernment in Arcadia, was troubled by the impetuous concourſe of vnruly ſuters, is familiar with</div>
+<div class="excerpt">and our gallants wits ſweating in the fielde of Inuention, and it be houes vs not to reſt vnexerciſed. So to our lodge, in the meane time be it knowne, Our breath <mark>has</mark> power to raiſe, or caſt men downe. Dametas, were thine eares euer at a more muſicall banquet? how the hounds mouthes like bells are tuned one vnder another like</div>
+<div class="excerpt">mouthes like bells are tuned one vnder another like a ſlothfulnes, the ſpeed of the cry out-ran my ſence of hearing. Tell me Dametas, was not the Deare a prodigall, <mark>did</mark> he not ſpend his breath freely amongſt vs? It pleaſe your modeſty to lesſon it. But it ſhall ſtill liue great in our regard. What woodmans that? VVhat ere he be,</div>
+<div class="excerpt">attendant, To garde the life and ſafetie of our daughter. Truce to this ayrie warre, theſe paper bullets Better become a Cloſſet then a Parke, The Forreſt muſick is to <mark>heare</mark> the hounds Rend the thin ayre, and with a luſtie cry Awake the drowſie Eccho, and confound Their perfect language in a mingled ſound, Then ſo the Court, our Forreſt</div>
+<div class="excerpt">Rend the thin ayre, and with a luſtie cry Awake the drowſie Eccho, and confound Their perfect language in a mingled ſound, Then ſo the Court, our Forreſt ſport beeing done, A ſecond chace o louelier ſport&#x27;s begunne. Zehnane. My thoughts come like a ſaile afore the wind, ſwolne big with newes and thine eares the midwife muſt</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Welcom gallants, welcom honord bloods; the reaſon that we haue vncloth&#x27;d vs of our princely gouernment in Arcadia, and haue to doe with this priuate retirement heere in this defart Ile, you ſhall find in that ſhedule, onely thus much for publique ſatisfaction: Tis not ſtrange to you, that the choiſeſt treaſure Nature indow&#x27;d vs with, is mynde vp in the vaines of my two daughters: howe much their quiet, and the ſmothe ſtreame of our gouernment in Arcadia, was troubled by the impetuous concourſe of vnruly ſuters, is familiar with your knowledge; this to auoide, I haue for my Image there in my abſence appointed my brother, and vndertooke this priuate re tirement. To that intent our Iland is fenc&#x27;t in By ſea and Land, and at each corner built A Caſtle for defence, which like great men Doe ouer-looke Archadea: ouer which, We haue appointed Captaines. More to deſire, Is more then we are willing to diſcouer. An ague? what ague? If you retaine the loue of children, or the dutie of ſubiects, expreſſe it in your obedience, we know Dametas loues vs. In ſigne whereof we make him. In my free thoughts you wrong him, therefore to expreſſe our loue, and to giue the world publique note of his loyaltie, we cre ate him your Gardian. I mynion, yours. Well ſaid Haggart, Ile make your proud hart ſtoope to the lure of obedience. But come, by this time our challenge is publiſht, and our gallants wits ſweating in the fielde of Inuention, and it be houes vs not to reſt vnexerciſed. So to our lodge, in the meane time be it knowne, Our breath has power to raiſe, or caſt men downe. Dametas, were thine eares euer at a more muſicall banquet? how the hounds mouthes like bells are tuned one vnder another like a ſlothfulnes, the ſpeed of the cry out-ran my ſence of hearing. Tell me Dametas, was not the Deare a prodigall, did he not ſpend his breath freely amongſt vs? It pleaſe your modeſty to lesſon it. But it ſhall ſtill liue great in our regard. What woodmans that? VVhat ere he be, he hath deſeru&#x27;d our loue. Fellow be neere vs, and for this deſert, Performd againſt thoſe Traytors to our blood, Vnder thy maiſter we giue thee an attendant, To garde the life and ſafetie of our daughter. Truce to this ayrie warre, theſe paper bullets Better become a Cloſſet then a Parke, The Forreſt muſick is to heare the hounds Rend the thin ayre, and with a luſtie cry Awake the drowſie Eccho, and confound Their perfect language in a mingled ſound, Then ſo the Court, our Forreſt ſport beeing done, A ſecond chace o louelier ſport&#x27;s begunne. Zehnane. My thoughts come like a ſaile afore the wind, ſwolne big with newes and thine eares the midwife muſt deliuer me of this bur then, my Dutches is ſick, hart ſicke for thee Zelmane. With thee my Lady: her amorous glances are her accuſers, her very lookes write Sonnets in thy co ̄ mendations, ſhee carues thee at boord, and cannot ſleepe for dreaming on thee in bedde, ſhee&#x27;s turnd ſunne-riſer, haunts priuate walkes, &amp; like a diſgraſt Courtier, ſtudies the Art of melancholy. Nay neuer pitty her, ſhe deſerues none, rather lets bend our indeuors to intangle her more. To ſee the kindnes of Fortune, who fearing we ſhould be acquainted with ſollitude in this our 12 month retirement, hath begot a domeſticall merriment, and made our own thoughts actors int, and as bad a Poet as I am, Ile ha one ſceane int of mine owne inuention. Tis ready plotted already, and that the Dutches may not find thee vnprouided when ſhe comes to court thee VVhy thats the very happineſſe of the ieſt, but in any caſe confeſſe thy ſelfe a man. Tuſh Ile furniſh thee, ſay thou art ſome Prince, no matter who, &amp; haſt to do with this diſguiſe of purpoſe to court my daugh ter Violetta, Forget not to perſonate ſome Prince in any caſe. Abſolute Poet, Penelope was a ballet-maker to her. Thanke you good wife, nay &amp; a Dutches long to giue her husbands the horning, let it neuer greeue butchers to doe homage at Cuekolds hauen. Excellent vertues in a woman.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Isle of Gulls</div><div class="body">Three members of the audience ask the Prologue about the play they are to see, The Isle of Gulls. They prove to have irreconcilable tastes in drama: one wants satire, one bawdy, and one bombast, but all eventually agree to give the play a chance. Concerned about his daughters’ unsuitable suitors, Basilius retires with them for a year to an uninhabited, fortified island, leaving his brother to rule Arcadia in his stead. A proclamation challenges royal would-be suitors to win the princesses by stealth. This attracts Julio and Amintor to the island, alerted by Basilius’ unworthy favourite Dametas; and also Lysander and Demetrius, respectively disguised as Zelmane, an Amazon, and Dorus, a woodman. ‘Zelmane’ becomes Violetta’s companion, and Demetrius enters Dametas’ service. Dametas arranges an opportunity for Julio and Amintor to rape the princesses by isolating them during a hunt. They kidnap the girls, but ‘Zelmane’ and ‘Dorus’ rescue them. ‘Dorus’ is rewarded with an appointment as Hippolita’s attendant, but the incident also casts doubt on ‘Zelmane’s’ gender, so Lysander loses his access to Violetta. Basilius and Gynecia are both enamoured of Lysander (each believing him to be a different sex), and each persuades him to accept the other’s advances for sport. Meanwhile Dametas’ daughter Mopsa falls in love with ‘Dorus’. Amintor and Julio continue to have ill success: they pose as envoys from Basilius’ brother, appealing for him to deal with an outbreak of abuses, corruption, and crime, but they are denied their promised reward by the avaricious Dametas. ‘Dorus’ gets rid of Dametas and his family by sending each of them on a wild-goose chase: Dametas to find buried treasure, his jealous wife Miso to Dametas’ supposed mistress, and Mopsa to the chapel in Adonis’ bower where a priest will marry them. ‘Zelmane’ similarly disposes of Basilius and Gynecia by arranging assignations with each at the same chapel, with the priest Manasses standing in for the Amazon. This frees Lysander and Demetrius to elope with the princesses; but their plans are overheard by Amintor and Julio, whom they then employ to smuggle the girls off the island. Digging for the gold, Dametas finds only a scornful poem directing him to Adonis’ bower, and he curses 1606 poets. Everyone meets up at the bower, and the knot of identity confusion is unravelled. Lysander and Demetrius present themselves to Basilius as his new sons-in-law; but Amintor and Julio have double- crossed them and kept…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

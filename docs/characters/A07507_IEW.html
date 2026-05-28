@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IEW in The Phoenix · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>IEW</span>
+</nav>
+
+<h1>IEW</h1>
+<p class="lede">in <em>The Phoenix</em> — Middleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>702</td></tr>
+<tr><th>Characters</th><td>3541</td></tr>
+<tr><th>BritDrama no.</th><td>1420</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">in. Your worſhip is to great for me to know: I&#x27;me but a ſmall timbred-<mark>woman</mark> when I&#x27;me out of my apparell, and dare not venture vpon greatnes. That purſe? O death <mark>has</mark> the Knight ſeru&#x27;d me ſo? giuen <mark>away</mark> my Fauours? Tis long of thoſe, an&#x27;t like your grace, that come in vpon vs, &amp; wil neuer leaue marrying of our widdows till they</div>
+<div class="excerpt">whether I haue a cauſe to be a Curtezan or no? to doe as I doe, an elderly fellow as hee is, if hee were marryed to a young Virgin, hee were able to breake her <mark>heart</mark>, tho he could breake nothing elſe: here, here, there&#x27;s iuſt a hundred and fiftie, but I ſtole e&#x27;m ſo hardlye from him, twold ee&#x27;ne haue grieud you to haue ſeene</div>
+<div class="excerpt">maske, my maske. My pleaſure welcome: I haue got ſingle, none but you ſhall accompany mee to the Iuſtice of peace my Fathers. Weeping coozen? Newes as cold to the <mark>heart</mark> as an old mans kind neſſe: my vncle dead? No Gentleman ſir, hee&#x27;s a Knight. Hee&#x27;s my husbands owne brother, I can tel you (ſir: I can aſſure you father, my husband</div>
+<div class="excerpt">mans kind neſſe: my vncle dead? No Gentleman ſir, hee&#x27;s a Knight. Hee&#x27;s my husbands owne brother, I can tel you (ſir: I can aſſure you father, my husband and hee <mark>has</mark> laine both in one bellie. I told you his affection. But here I bar you from all plots to night, The time is yet too heauie to be light. Well we ſhall ſee your temper.</div>
+<div class="excerpt">paid for you Now out vpon the Marmoſet, haſt thou ſeru&#x27;d me ſo long, and offer to bring in a Candle? How hapned it you came ſo ſoone, I lookt not for you theſe <mark>two</mark> howers: yet as the ſweete chance is, you came as well as a thing coulde come, for my huſ: band&#x27;s newly brought a bed. Hee nere ſent him any thing ſince I knewe</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">A Barbers ſhop, O hee&#x27;s a trim Knight, would hee venture his body into a Barbers ſhop, when hee knowes tis as dangerous as a peece of Ireland: O yonder, yonder, hee comes, get you backe agen, and looke you ſay as I aduiz&#x27;de you. My maske, my maske. My pleaſure welcome: I haue got ſingle, none but you ſhall accompany mee to the Iuſtice of peace my Fathers. Weeping coozen? Newes as cold to the heart as an old mans kind neſſe: my vncle dead? No Gentleman ſir, hee&#x27;s a Knight. Hee&#x27;s my husbands owne brother, I can tel you (ſir: I can aſſure you father, my husband and hee has laine both in one bellie. I told you his affection. But here I bar you from all plots to night, The time is yet too heauie to be light. Well we ſhall ſee your temper. Ile do my beſt endeuour to multiply, I aſſure you. No by my faith.— And doe but whirle the Ring a&#x27;th doore once a bout, my maid-ſeruant ſhal be taught to vnderſtand the language. Good reſt my effectuall pleaſure. Where art thou, O my Knight! I ſay you&#x27;r my knight, for I&#x27;me ſure I paid for you Now out vpon the Marmoſet, haſt thou ſeru&#x27;d me ſo long, and offer to bring in a Candle? How hapned it you came ſo ſoone, I lookt not for you theſe two howers: yet as the ſweete chance is, you came as well as a thing coulde come, for my huſ: band&#x27;s newly brought a bed. Hee nere ſent him any thing ſince I knewe him, hee&#x27;s a man of a bad nature to his wife, none but his Maides can thriue vnder him. I, iudge whether I haue a cauſe to be a Curtezan or no? to doe as I doe, an elderly fellow as hee is, if hee were marryed to a young Virgin, hee were able to breake her heart, tho he could breake nothing elſe: here, here, there&#x27;s iuſt a hundred and fiftie, but I ſtole e&#x27;m ſo hardlye from him, twold ee&#x27;ne haue grieud you to haue ſeene it. Therefore prethee my ſweete pleaſure, doe not keepe company ſo much, how doe you thinke I am a ble to maintaine you? though I bee a Iewellers wife, Iewells are like women, they riſe &amp; fal, we muſt be con tent to looſe ſometimes, to gaine often, but you&#x27;r content alwaies to looſe, and neuer to gaine: what need you ride with a Footeman before you? No, I would not haue you ſo baſe neither: but now and then, when you keep your Chamber, you might let your Footeman out for eighteen pence a day, a great releefe at yeares end I can tell you. Nay, I&#x27;ue a greater quarrell to you yet. Nay more, you ſwore to me, that you were the firſt that taught him to ride a greate horſe, and tread the Ring with agilitie. You maintaine? you ſeene it court? Oh take heede, you cannot haue that, tis alwaies in the eye of my huſband. Giue me thy hand, ile leade thee foorth. Who would not loue a friend at Court? what fine Galleries and roomes am I brought through? I had thoght my knight durſt not haue ſhown his face here, I. Ah me! This is the worſt roome that euer I came in. Your worſhip is to great for me to know: I&#x27;me but a ſmall timbred-woman when I&#x27;me out of my apparell, and dare not venture vpon greatnes. That purſe? O death has the Knight ſeru&#x27;d me ſo? giuen away my Fauours? Tis long of thoſe, an&#x27;t like your grace, that come in vpon vs, &amp; wil neuer leaue marrying of our widdows till they make &#x27;em all as free as their firſt husbands. Let me haue pardon I beſeech your grace, and Ile peach &#x27;em all, all the cloſe women that are, and vpon my knowledge there&#x27;s aboue fiue thouſand within the walls and the liberties. I will hereafter liue ſo modeſtly, I will not lie with mine owne husband, nor come neere a man in the way of honeſtie. My father! tis mine owne father.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Phoenix</div><div class="body">The old Duke of Ferrara has reigned 45 years, and is now near death. He accepts his nobles’ advice that his son, ===== PAGE 76 ===== Prince Phoenix, should travel to other nations in order to prepare himself for government. Phoenix suspects a stratagem to have him out of the country at the time his father dies, jeopardizing the succession, so he decides instead to travel incognito within Ferrara itself, witnessing abuses which require reformation, but which would be concealed from a visitor known to be of high rank; he will be attended only by his servant Fidelio. Fidelio has a new stepfather, a sea-captain: against all advice, his mother Castiza has remarried, only to find herself tied to an abusive bully. The captain also regrets the marriage and is looking for a way out of it; so he agrees to sell his wife to the courtier Proditor. Phoenix and Fidelio hear of this and infiltrate the sales meeting in disguise: Fidelio poses as the scrivener who has.drawn up the contract, and Phoenix as a potential investor in the captain’s next voyage. Once the contract is signed and the money handed over, they confront the captain and force him to go into exile, giving the money to Castiza. Fidelio’s girlfriend has just lost her father, whose will leaves her in the custody of her uncle, the corrupt Justice Falso. He proposes to marry her, threatening to withhold payment of her dowry if she should marry anyone else (such as Fidelio). Fidelio goes to see her in disguise, bringing a letter and gift from himself, but on the way he and Phoenix are attacked by robbers and the token is stolen. The thieves are in fact Falso’s servants in disguise, seeking to supplement the meagre wage he pays them. Phoenix captures one of them and has him brought before a judge; but this happens to be Falso himself, and he commits the prisoner to the custody of the other servants, his accomplices. The niece explains to Phoenix what has happened and absconds with him and Fidelio. Falso also abets his own daughter’s adultery with her husband’s brother, a knight. She sets up an assignation, promising to give him money: he is gently to disturb the door-knocker after her jeweller husband has gone to bed, whereupon the maid will let him in. Phoenix accidentally gives the signal and is admitted by mistake. Meeting him in darkness, the wife does not notice the error, and gives him the money. Meanwhile the knight is arrested for debt. He takes the officers to his lover’s house, expecting to receive the…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

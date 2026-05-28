@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SBIRRI in Fedele and Fortunia (Two Italian Gentlemen) · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SBIRRI</span>
+</nav>
+
+<h1>SBIRRI</h1>
+<p class="lede">in <em>Fedele and Fortunia (Two Italian Gentlemen)</em> — Pasqualigo, LuigiMunday, Anthony</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1585</td></tr>
+<tr><th>Words</th><td>288</td></tr>
+<tr><th>Characters</th><td>1524</td></tr>
+<tr><th>BritDrama no.</th><td>747</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">bodie I sée, ¶Softe not to fast, but stay I charge you in the Princes name, ¶Nay Sir, we will know your name, and eke the place where you haue beene, Whether you <mark>goe</mark>, night-walkers heer are very seldom séene. ¶Is this your mayde? ¶Lay hold on her with spéede, Let vs sée what Uagabonde is hid within this wéede. Crack-stone ?</div>
+<div class="excerpt">good as yours, make vp the match with speede, ¶Mistresse Victoria, now I see this onely rests to knowe, What shall be done vnto your mayde, or shall we let her <mark>goe</mark>? ¶Soft there Crack-stone, be not too rash to proffer fight, You and this mayde together in the darke were tane this night. The matter is suspitious, sith he forsaketh</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">¶Mistresse Victoria I will, but some bodie I sée, ¶Softe not to fast, but stay I charge you in the Princes name, ¶Nay Sir, we will know your name, and eke the place where you haue beene, Whether you goe, night-walkers heer are very seldom séene. ¶Is this your mayde? ¶Lay hold on her with spéede, Let vs sée what Uagabonde is hid within this wéede. Crack-stone ? Whowe? ¶Sorrie I am good Captaine, you in such a case to sée. Heer you are taken with this mayde, which is like to be tachte Offellonie, and accessarie you with her are cachte. ¶What meaneth this? come bende your weapons at them all, Whome shall we stoppe? and what&#x27;s the cause that makes you thus to call? ¶ Ottauiano, what&#x27;s the cause of your lamenting crye? Let&#x27;s knowe, hath Sir Fortunio done you any iniurie? ¶Quiet your selfe Ottauiano, sith it is so past, The brute will not be called backe so long as life dooth last. His punishment makes not your daughter as she was before, But giue her vnto him to wife, and talke of it no more. His liuing is as good as yours, make vp the match with speede, ¶Mistresse Victoria, now I see this onely rests to knowe, What shall be done vnto your mayde, or shall we let her goe? ¶Soft there Crack-stone, be not too rash to proffer fight, You and this mayde together in the darke were tane this night. The matter is suspitious, sith he forsaketh her, To take her to your wife no time you should deferre. We cannot force her vpon him, sith she was tane with you. And howsoeuer you cloke it, none your méeting can allowe.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Fedele and Fortunia (Two Italian Gentlemen)</div><div class="body">Bedelé and Bortunid, rivals for the affections of WWictoria, are both melancholy for love. Victoria once favoured Fedele, who still loves her; but he has been away, and she now loves Fortunio instead. A third would-be suitor is @aptain§@rmekstenée, whom Fortunio has asked for help. Fedele in turn is loved by Mirginia, his original love whom he jilted when he fell for Victoria. Victoria seeks M@@USA’s magical help to compel Fortunio’s love. Both Fedele and Crackstone see her going to raise spirits at night. They throw candles into a tomb, but Crackstone has hidden inside it; his emergence convinces them that they have raised the devil, and they run away, leaving behind a wax image which was to be used in the spell. Crackstone sends the incriminating image to Fedele, who confronts Victoria and tells Fortunio everything. Victoria engages Crackstone to kill Fedele. Meanwhile P@danté has been promoting Fedele’s cause through Victoria’s maid, Alttilia, and has fallen in love with her. He visits Victoria’s house disguised as a beggar. Fedele shows this to Fortunio, convincing him that Victoria has a lover. Attilia leaks the murder plot to Pedante, who tells Fedele. Crackstone pretends to kill Fedele, fighting with the air, with the intention of telling Victoria that he is dead and marrying her before she discovers the truth. However, Fedele catches him in a net, and Victoria mocks him and pours urine over him. Crackstone swears revenge, and Pedante offers to help; but for his part Fedele accepts that Victoria’s behaviour towards him is just retribution for his mistreatment of Virginia, with whom he now seeks to make his peace. However, Fortunio too now turns his attentions to Virginia, and enlists Medusa’s assistance: she arranges for him to be caught in her room half-naked, so that he will have to marry her to silence scandal. Fedele is content, not wanting a second-hand wife; and Medusa explains that there has been no sexual misconduct. Pedante arranges an assignation between Attilia and Crackstone, who expects to meet the mistress in the maid’s clothes, and wears the beggar’s disguise so that Attilia will take him for Pedante. The scheme goes wrong when Victoria has Attilia arrested on suspicion of theft, and the couple’s true identities are revealed. Crackstone tries to force Pedante to marry Attilia, but has to take her to wife himself. Victoria decides to accept Fedele after all, and he bestows Pedante on Medusa.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

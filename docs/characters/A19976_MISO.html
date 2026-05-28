@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MISO in The Isle of Gulls · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MISO</span>
+</nav>
+
+<h1>MISO</h1>
+<p class="lede">in <em>The Isle of Gulls</em> — Day, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1606</td></tr>
+<tr><th>Words</th><td>905</td></tr>
+<tr><th>Characters</th><td>4628</td></tr>
+<tr><th>BritDrama no.</th><td>1491</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">mee, and why? tis the Court fa ſhion. I muſt not come neere him at his downe lying, nor his vpriſing, ctc. And this be the Court faſhion, would I were an ho neſt <mark>woman</mark> of the Countrie againe, be Courtiers who liſt. I, I, Dorus, I tell thee in teares, hee hath not done by mee, as a Huſ band ſhould doe. Manaſſes wife? marie fire</div>
+<div class="excerpt">butter-whore, yes I thanke ye fort: horn mad, wheres your companion whetes the old leacherous goat my husband, open the doore I ſay. what do I want, the chiefe implement a <mark>woman</mark> ſhold haue I want that as a <mark>woman</mark> cannot be without, I mean my husband, I want. Not know him thou lieſt in euery vaine ith hart thou lyeſt, thou knoweſt him, and</div>
+<div class="excerpt">weare, And my rude tonge ſtriuing to blaze her forth, Like a bad art ſeman doth diſgrace her worth, but heeres the place, vpon this chriſtall ſtreame: Where Citherea <mark>did</mark> vnyoake her teame Of ſiluer doues, to interchange a kiſſe With young Adones ſhall I meete my bliſſe: The gentle minits crownd with chriſtall flowers, Looſing there</div>
+<div class="excerpt">vp perfect howers, To haſten my delight, the baſhfull moone that ſince her dalliance with Endimior, Durſt neuer walke by day is vnder ſaile, In ſteede of ſheetes <mark>has</mark> ſpred her ſiluer vaile, Each gliding brooke and euery buſhy tree Being tipt with ſiluer were her liuery, And the dim night to grace our amorous wars, Hath ſtuck</div>
+<div class="excerpt">her ſiluer vaile, Each gliding brooke and euery buſhy tree Being tipt with ſiluer were her liuery, And the dim night to grace our amorous wars, Hath ſtuck nine ſpheares full of immortall ſtars, Inſted of pearles the way on which ſhe treads Is ſtrawd with Chriſtall deu and ſiluer beades. She comes, her feete makes muſicke with</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Why how now madam, Ladies gadding, is this the obe dience of your fathers charge. But the Dutches w l like neither the Dukes doings nor yours neither in this caſe I can tell you. The Duke ſtaies your comming &amp; yet the dutches is very deſirous ont, my husbands is in the next Ar bor to man you. For you Lady, my preſence be your priuiledge. Speake ſoftly in the Lobby there, for waking my Ladies foiſting hound. Dorus, how now Dorus &#x27; What time a day is&#x27;t with you? How, a diſh of Creuices? nay and that be the worſt, good enough: I am glad a falles to Fiſh, for he was giuen to Fleſh a late too too bad. I hold my Ladiſhip to ſome ſtrumpet. Nay I thought as much: he was wont to kiſſe mee, and doe all kindnes a man could doe, till he came to the Court; and nowe hee will not lie with mee forſooth: and why? tis the Court faſhion. He will not loue mee, and why? tis the Court fa ſhion. I muſt not come neere him at his downe lying, nor his vpriſing, ctc. And this be the Court faſhion, would I were an ho neſt woman of the Countrie againe, be Courtiers who liſt. I, I, Dorus, I tell thee in teares, hee hath not done by mee, as a Huſ band ſhould doe. Manaſſes wife? marie fire Maiſter gunner; a Putitane turnd Puncke: Gods my precious. Ile ſlit her noſe, as I am a Ladie will I: is shee the partie you wot on? Looke well to mine Aſſe ther, lord how I ſweat with anger; this ſames the houſe ſure, and now like a wiſe Lady let me count my hurts, and ſee how I ſhal be reuengd: it ſhalbe ſo, ile haue em both carted, and manaſſes ſhal go afore like a whifler and make way with his horns, where be theſe whores: open the dore, wher be theſe pan ders: O that I were not a lady: I could ſcold like a butter-whore, yes I thanke ye fort: horn mad, wheres your companion whetes the old leacherous goat my husband, open the doore I ſay. what do I want, the chiefe implement a woman ſhold haue I want that as a woman cannot be without, I mean my husband, I want. Not know him thou lieſt in euery vaine ith hart thou lyeſt, thou knoweſt him, and as Adam knew Eue thou knoweſt him, hee hath bene as inward with thee, as euer he was with me, he hath by his own confeſſion he hath, &amp; thou denieſt it, thou lieſt in thy throat like a Puritanicall whore as thou art, O that I were a butter-whore for an houre I might ſcold alittle. No more words ſweet woman I confeſſe I was in the wronge, there is not the hole the Foxe hides his head in: and therefore for the loue of womanhood conceale mine errors, for howſoeuer I complaind tis thy forhed aks, thy temples ha the terrible blow as the ſay, thy husband is a bad man. I, I, good woman thy husband: he is as I ſay a fleſhly member and I fear he hath ouercome the fooliſh thing my daugh ter. I do good woman tel em ont, &amp; ſpare not but in any caſe do not ſcold. I know not what a gentlewoman do in a good caſe, but a lady muſt not in any caſe: that may you do lawe, withall my hart miſtris, what Dorus hath giuen me, ile giue my friend, no foole to company. Farewell bright ſunne thou lightner of all eies thou falſt to giue a brighter beame to riſe. Each tree and ſhrub were tramels of thy haire, But theſe are wier, for none but kings to weare, And my rude tonge ſtriuing to blaze her forth, Like a bad art ſeman doth diſgrace her worth, but heeres the place, vpon this chriſtall ſtreame: Where Citherea did vnyoake her teame Of ſiluer doues, to interchange a kiſſe With young Adones ſhall I meete my bliſſe: The gentle minits crownd with chriſtall flowers, Looſing there youthes, are growne vp perfect howers, To haſten my delight, the baſhfull moone that ſince her dalliance with Endimior, Durſt neuer walke by day is vnder ſaile, In ſteede of ſheetes has ſpred her ſiluer vaile, Each gliding brooke and euery buſhy tree Being tipt with ſiluer were her liuery, And the dim night to grace our amorous wars, Hath ſtuck nine ſpheares full of immortall ſtars, Inſted of pearles the way on which ſhe treads Is ſtrawd with Chriſtall deu and ſiluer beades. She comes, her feete makes muſicke with the ground, And the chaſt ayre is rauiſht with the ſound, My ſoule flyes forth to meete her: hell my wife, Her preſence like a murtherer driues the life Out of my pleaſure breaſt, her ielous cie Enuyes the heauen of my felicity. Mopſa, O inſufferable wrong, make thine own natural child thy bawd, What miſtres Amaſon, ha you ſuch a cocking ſpirit, honeſt Women cannot keepe their husbands at home for you: tis not for nothing now I ſee, that the Dutches lookes yellow on you, but ile teare that painted whores face of yours (by this light) and yet I wil not ſcold neither. ile mad you with a vengeance.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Isle of Gulls</div><div class="body">Three members of the audience ask the Prologue about the play they are to see, The Isle of Gulls. They prove to have irreconcilable tastes in drama: one wants satire, one bawdy, and one bombast, but all eventually agree to give the play a chance. Concerned about his daughters’ unsuitable suitors, Basilius retires with them for a year to an uninhabited, fortified island, leaving his brother to rule Arcadia in his stead. A proclamation challenges royal would-be suitors to win the princesses by stealth. This attracts Julio and Amintor to the island, alerted by Basilius’ unworthy favourite Dametas; and also Lysander and Demetrius, respectively disguised as Zelmane, an Amazon, and Dorus, a woodman. ‘Zelmane’ becomes Violetta’s companion, and Demetrius enters Dametas’ service. Dametas arranges an opportunity for Julio and Amintor to rape the princesses by isolating them during a hunt. They kidnap the girls, but ‘Zelmane’ and ‘Dorus’ rescue them. ‘Dorus’ is rewarded with an appointment as Hippolita’s attendant, but the incident also casts doubt on ‘Zelmane’s’ gender, so Lysander loses his access to Violetta. Basilius and Gynecia are both enamoured of Lysander (each believing him to be a different sex), and each persuades him to accept the other’s advances for sport. Meanwhile Dametas’ daughter Mopsa falls in love with ‘Dorus’. Amintor and Julio continue to have ill success: they pose as envoys from Basilius’ brother, appealing for him to deal with an outbreak of abuses, corruption, and crime, but they are denied their promised reward by the avaricious Dametas. ‘Dorus’ gets rid of Dametas and his family by sending each of them on a wild-goose chase: Dametas to find buried treasure, his jealous wife Miso to Dametas’ supposed mistress, and Mopsa to the chapel in Adonis’ bower where a priest will marry them. ‘Zelmane’ similarly disposes of Basilius and Gynecia by arranging assignations with each at the same chapel, with the priest Manasses standing in for the Amazon. This frees Lysander and Demetrius to elope with the princesses; but their plans are overheard by Amintor and Julio, whom they then employ to smuggle the girls off the island. Digging for the gold, Dametas finds only a scornful poem directing him to Adonis’ bower, and he curses 1606 poets. Everyone meets up at the bower, and the knot of identity confusion is unravelled. Lysander and Demetrius present themselves to Basilius as his new sons-in-law; but Amintor and Julio have double- crossed them and kept…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

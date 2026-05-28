@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DAL in The English Traveller · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>DAL</span>
+</nav>
+
+<h1>DAL</h1>
+<p class="lede">in <em>The English Traveller</em> — Heywood, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>1449</td></tr>
+<tr><th>Characters</th><td>7947</td></tr>
+<tr><th>BritDrama no.</th><td>2098</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Almanackes? And why in times and seasons? A pleasant knaue. And shee a Lady. For Beauty and for Vertue vnparraleld, Nor can you name that thing to grace a <mark>woman</mark> Shee <mark>has</mark> not in a full perfection, Though in their yeeres might seeme disparity. And therefore at the first, a match vnsit; Imagine but his age and gouernement, Withall,</div>
+<div class="excerpt">perfection, Though in their yeeres might seeme disparity. And therefore at the first, a match vnsit; Imagine but his age and gouernement, Withall, her modesty, and chaste respect; Betwixt them, there&#x27;s so sweet a simpathie, As crownes a noble marriage. Oh you are modest. This approues you, To be most nobly propertied, that from</div>
+<div class="excerpt">disturbance; wee methinks, Should desire later houres; when Married Wines, That in their amorus armes, hug their delights; To often wakings subiect; their more hast, May better be excused. There&#x27;s Lady, an instinct innate in man, Which prompts vs to the apprehensions Of th &#x27;vses wee were borne to; Such we are Aptest to learne;</div>
+<div class="excerpt">which my voice is least; For I alasse, Beare but a meane part in the common quier, When with much lowder accents of his praise, So all the world reports him. Yet <mark>must</mark> I hold him happie aboue others, As one that Solie to himselfe inioyes What many others aime at; But in vaine. So Beautifull a Mistresse. Yes Sir, or a Friend, Whether</div>
+<div class="excerpt">this I am more wretched, Then all the sweet fruition of her loue Before could make me happy. See Sir, your Wife in these my armes expiring. The storme&#x27;s comming, I <mark>must</mark> prouide for harbour.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">OH friend, that I to mine owne Notion Had ioyned but your experience; I haue the Theoricke, But you the Practicke. There&#x27;s your happinesse. A Scholler in his study knowes the starres, Their motion and their influence, which are fixt, And which are wandering, can decipher Seas, And giue each seuerall Land his proper bounds; But set him to the Compasse, hee&#x27;s to secke, When a plaine Pilot can, direct his course From hence vnto both th&#x27;Indies; can bring backe His ship and charge, with profits quintuple. I haue read Ierusalem, and studied Rome, Can tell in what degree each City stands, Describe the distance of this place from that, All this the Scale in euery Map can teach, Nay, for a neede could punctually recite The Monuments in either; but what I Haue by relation onely, knowledge by trauell Which still makes vp a compleat Gentleman, Prooues eminent in you. I see thou still remember&#x27;st vs. I doe not thinke but this fellow in time may for his wit and vnderstanding make Almanackes? And why in times and seasons? A pleasant knaue. And shee a Lady. For Beauty and for Vertue vnparraleld, Nor can you name that thing to grace a woman Shee has not in a full perfection, Though in their yeeres might seeme disparity. And therefore at the first, a match vnsit; Imagine but his age and gouernement, Withall, her modesty, and chaste respect; Betwixt them, there&#x27;s so sweet a simpathie, As crownes a noble marriage. Oh you are modest. This approues you, To be most nobly propertied, that from one So exquisite in Iudgement, can Attract So affectionate an eye. Would I had in mee, That which he hath, to haue clam d it for mine owne, How euer, I much thanke you. Who shall relate it. Bee&#x27;t his then. What saies faire Prudentilla? Maids and Widdows, And wee young Batchelors, such as indeed Are fore&#x27;d to lie in Solitary beds, And sleepe without disturbance; wee methinks, Should desire later houres; when Married Wines, That in their amorus armes, hug their delights; To often wakings subiect; their more hast, May better be excused. There&#x27;s Lady, an instinct innate in man, Which prompts vs to the apprehensions Of th &#x27;vses wee were borne to; Such we are Aptest to learne; Ambitious most to know, Of which our chiefe is Marriage. When dreame Maids most? When you lie vpon your Backs, come come, your Eare. What strange felicitie these Rich men take, To talke of borrowing, lending, and of vse; The vsurers language right. &#x27;Tis not fit That wee should leaue our Noble host alone, Be you my Friends charge, and this old man mine. You to your Prospects, b t there&#x27;s proiect heere That&#x27;s of another Nature; Worthy Sir, I cannot but approue your happinesse, To be the Father of so braue a Sonne, So euery way accomplish&#x27;t and made vp, In which my voice is least; For I alasse, Beare but a meane part in the common quier, When with much lowder accents of his praise, So all the world reports him. Yet must I hold him happie aboue others, As one that Solie to himselfe inioyes What many others aime at; But in vaine. So Beautifull a Mistresse. Yes Sir, or a Friend, Whether you please to stile her. And indeed, Who can blame him to absent himselfe from home, And make his Fathers house but as a grange, For a Beautie so Attractiue? Or blame her, Huging so weake an old Man in her armes, To make a new choice, of an equall youth, Being in him so Perfect? yet introath, I thinke they both are honest. For my part, How can I loue the person of your Sonne, And not his reputation? His repaire So often to the House, is voyct by all, And frequent in the mouthes of the whole Countrey, Some equally addicted, praise his happinesse; But others, more Censorious and Austere, Blame and reprooue a course so disolute; Each one in generall, pittie the good man, As one vnfriendly dealt with, yet in my conscience, I thinke them truely Honest. True Sir, at best; But what when scandalons tongues Will make the worst? and what good in it selfe, Sullie and staine by fabulous mis-report; For let men liue as charie as they can, Their liues are often questioned, Then no wonder, If such as giue occasion of suspition, Be subiect to this scandall: What I speake, Is as a Noble Friend vnto your Sonne; And therefore, as I glory in his Fame, I suffer in his wrong; for as I liue, I thinke, they both are honest. Some course might be deuis&#x27;d, To stop this clamor ere it grow too wrancke; Lest that which yet but inconuenience seemes, May turne to greater mischiefe; This I speake In Zeale to both, in soueraine care of him As of a Friend; And tender of her Honour, As one to whom I hope to be allyed, By Marriage with her Sister. &#x27;Tis my Loue, And therefore I intreat you, make not mee To be the first reporter. Remember your last promise, At th&#x27; Ordinarie. I see Sir, you are but a stranger heere; This Barnet, is a place of great resort; And commonly vpon the Market dayes, Heere all the Countrey Gentlemen Appoint, A friendly meeting; Some about affaires Of Consequence and Profit; Bargaine, Sale, And to conferre with Chap-men, some for pleasure, To match their Horses; Wager in their Dogs, Or trie their Hawkes; Some to no other end, But onely meet good Company, discourse, Dine, drinke, and spend their Money. &#x27;Tis a Commoditie, that will be easily vented: What my worthy Friend, You are happily encounter&#x27;d; Oh, y&#x27;are growne strange, To one that much respects you; Troath the House Hath all this time seem&#x27;d naked without you; The good Old Man doth neuer sit to meat, But next his giuing Thankes, hee speakes of you; There&#x27;s scarce a bit, that he at Table tastes, That can digest without a Geraldine, You are in his mouth so frequent: Hee and Shee Both wondering, what distaste from one, or either, So suddenly, should alianate a Guest, To them, so deerely welcome. I am satisfied, And I would they were so too, but I hope Sir, In this restraint, you haue not vs&#x27;d my name Y&#x27;are Noble—Who had thought To haue met with such good Company; Y&#x27;are it seeme But new alighted; Father and Sonne, ere part, I vow weele drinke a cup of Sacke together: Phisicians say, It doth prepare the appetite And stomacke against dinner. What say you Friend? &#x27;Tis enough. A happy Morning now 〈◊〉 your Lady, To equall the content of a sweet Night. It hath bin wisely carried. What&#x27;s that my Dearest? No, on my Soule, For therein hath my braine 〈◊〉 yours; I studdying to engrosse you to my selfe, Of his continued absence haue bin 〈◊〉 Yet hee of your affection no way iealous, Or of my Friendship—How the plot was cast, You at our better leasure shall pertake; The aire growes cold, haue care vnto your health, Suspitious eyes are ore us, that yet sleepe, But with the dawne, will open; Sweet 〈◊〉 you To your warme Sheets; I now to fill my owne, That haue this Night bin empty. Doubt it not I pray, Whilest Day frights Night, and Night pursues the day: Good morrow. Methinks friend, You should expect greene rushes to be strow&#x27;d, After such discontinuance. Not speake to me? nor once vouchsafe an answere, But sleight me with a poore and base neglect? No, nor so much as cast an eye on her, Or least regard, though in a seeming shew Shee courted a reply? &#x27;twixt him and her, Nay him and mee, this was not wont to be; If she haue braine to apprehend as much As I haue done, sheele quickly find it out: Now as I liue, as our affections meete, So our conceits, and shee hath singled him To some such purpose: I&#x27;le retire my selfe. Not interrupt their conference. Why how now, what&#x27;s the businesse? That was no language from a Friend, It had too harsh an accent; But how&#x27;s this? My Mistresse thus low cast vpon the earth Grauelling and breathlesse, Mistresse, Lady, Sweet— View me well, I am no such man; See, I am Dalauill. Faint againe, Some helpe within there, no attendant neere? Thus to expire, in this I am more wretched, Then all the sweet fruition of her loue Before could make me happy. See Sir, your Wife in these my armes expiring. The storme&#x27;s comming, I must prouide for harbour.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The English Traveller</div><div class="body">Geraldine has recently returned from foreign travels, to find that, during his absence, a childhood friend, whom he was expected to marry, married old Wincott instead; she did not seek the marriage, but has no complaints. Having no children of his own, Wincott treats Geraldine as a close friend, and is trusting enough to leave the young man alone with his wife. Geraldine agrees with her that, should they both survive Wincott, he will be her second husband, and he agrees to remain single until then. Dalavill spreads rumours that Geraldine and Mistress Wincott are lovers. Concerned at the possible scandal, Old Geraldine tests his son by proposing that he should marry; Geraldine’s refusal is taken as confirmation of the affair. Geraldine protests his innocence, but to prove it, and silence the gossip, his father insists that he should never again visit the Wincotts. His absence grieves Wincott, and Geraldine agrees to explain himself at a secret midnight meeting. He is pressed by Wincott to stay the night but, unable to sleep, decides to pass the time looking innocently at Mistress Wincott in her bed. Outside her room he overhears her talking to Dalavill: they are lovers. Disillusioned, Geraldine plans to leave England. Wincott lays on a feast to mark his departure, and everyone is invited. At the party, Geraldine confronts Mistress Wincott with what he knows. She is mortified, rejects Dalavill, faints, and dies, having written to her husband a confession. Dalavill flees the house. Wincott confirms Geraldine as his heir. In the other plot, Young Lionel lives with riotous prodigality while his father is away, abetted by some of the servants, and fills the house with whores and drunken gallants. When Old Lionel returns unexpectedly, intending to stay at home in future, Young Lionel and his associates panic and hide inside the house - leaving themselves with the problem of how to get out before Old Lionel finds them. The steward Reignald takes matters in hand, and tells them to make no sound, and pretend the house is deserted. Old Lionel finds his house apparently shut up, and Reignald explains that it has been abandoned: a previous owner committed a murder there, and now the house is haunted. When the former owner denies this, Old Lionel attempts to have him arrested. Meanwhile, Reignald is harried by a usurer to whom Young Lionel owes money. Old Lionel overhears this, and Reignald explains that the money was borrowed to 1624 buy alternative accommodation.…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

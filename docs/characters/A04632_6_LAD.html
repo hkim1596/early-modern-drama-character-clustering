@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LAD in Volpone, or The Fox · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LAD</span>
+</nav>
+
+<h1>LAD</h1>
+<p class="lede">in <em>Volpone, or The Fox</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1640</td></tr>
+<tr><th>Words</th><td>1488</td></tr>
+<tr><th>Characters</th><td>8248</td></tr>
+<tr><th>BritDrama no.</th><td>1493</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">&#x27;hem, To all the world, no aristocracie. Why, the callet, You told me of, here I haue tane disguis&#x27;d. Where? Is&#x27;t possible! how <mark>has</mark> my iudgement wander&#x27;d! Sir, I <mark>must</mark>, blushing, say to you, I haue err&#x27;d: And plead your pardon. I hope, yo&#x27; ha&#x27; not the malice to remember A gentlewomans passion. If you stay, In Venice , here, please</div>
+<div class="excerpt">recouer&#x27;d? and wrought out of error, Into our way? to see our path, before vs? Is our trade free, once more? MOSCA? Is his thred spunne? Do you <mark>heare</mark>, sir? How! Sir, I <mark>must</mark> haue a fayrer answer.</div>
+<div class="excerpt">hard, and few can vnderstand him. But, for a desperate wit, there&#x27;s ARETINE! Onely, his pictures are a little obscene— You marke me not? Why, in such cases, we <mark>must</mark> cure our selues, Make vse of our philosophie— And, as we find our passions doe rebell, Encounter &#x27;hem with reason; or diuert &#x27;hem, By giuing scope vnto some other</div>
+<div class="excerpt">things, into that part, Which we call mentall, leaues some certaine faeces , That stop the organs, and, as PLATO sayes, Assassinates our knowledge. Come, in faith, I <mark>must</mark> Visit you more, a dayes; and make you well: Laugh, and be lusty. There was but one sole man, in all the world, With whom I ere could sympathize; and he Would lie</div>
+<div class="excerpt">publike, Caue , whil&#x27;st I breathe. &#x27;Fore god, my left legge &#x27;gan to haue the crampe; And I apprehended, straight, some power had strooke me With a dead palsey: well, I <mark>must</mark> be merry, And shake it off. A many of these feares Would put me into some villanous disease, Should they come thick vpon me: I&#x27;le preuent &#x27;hem. Giue me a boule</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Come neerer: is this curle In his right place? or this? why is this higher Then all the rest? you ha&#x27; not wash&#x27;d your eies, yet? Or do they not stand euen i&#x27;your head? Where&#x27;s your fellow? call her. I pray you, view This tire, forsooth: are all things apt, or no? Do&#x27;s &#x27;t so forsooth? and where was your deare sight When it did so, forsooth? what now? bird-ey&#x27;d? And you, too? &#x27;pray you both approch, and mend it. Now (by that light) I muse, yo&#x27;are not asham&#x27;d! I, that haue preach&#x27;d these things, so oft, vnto you, Read you the principles, argu&#x27;d all the grounds, Disputed euery fitnesse, euery grace, Call&#x27;d you to counsell of so frequent dressings— Made you acquainted, what an ample dowrie The knowledge of these things would be vnto you, Able, alone, to get you noble husbands At your returne: and you, thus, to neglect it? Besides, you seeing what a curious nation Th&#x27; Italians are, what will they say of me? The English lady cannot dresse her selfe; Here&#x27;s a fine imputation, to our countrie! Well, goe your wayes, and stay, i&#x27;the next roome. This fucus was too course too, it&#x27;s no matter. Good-sir, you&#x27;ll giue&#x27;hem entertaynement? How do&#x27;s my VOLP? Beleeue me, and I Had the most fearefull dreame, could I remember&#x27;t— Me thought, the golden mediocritie Polite, and delicate— Alas, good soule! the passion of the heart. Seed-pearle were good now, boild with syrrope of apples, Tincture of gold, and corrall, citron-pills, Your elicampane roote, mirobalanes — Burnt silke, and amber, you haue muscadell Good i&#x27;the house— No, feare not that. I doubt, we shall not get Some english saffron (halfe a dram would serue) Your sixteene cloues, a little muske, dri&#x27;d mints. Buglosse, and barley-meale— And these appli&#x27;d, with a right scarlet-cloth— Shall I, sir, make you a poultise? I haue, a little, studied physick; but, now, I&#x27;am all for musique: saue, i&#x27;the fore-noones, An houre, or two, for painting. I would haue A lady, indeed, t&#x27;haue all, letters, and artes, Be able to discourse, to write, to paint, But principall (as PLATO holds) your musique (And, so do&#x27;s wise PYTHAGORAS, I take it) Is your true rapture; when there is concent In face, in voyce, and clothes: and is, indeed, Our sexes chiefest ornament. Which o&#x27;your Poets? PETRARCH? or TASSO? or DANTE? GVERRINI? ARIOSTO? ARETINE? CIECO di Hadria ? I haue read them all. I thinke, I ha&#x27;two or three of&#x27;hem, about me. Here&#x27;s PASTOR FIDO— All our English writers, I meane such, as are happy in th&#x27; Italian , Will deigne to steale out of this author, mainely; Almost as much, as from MONTAGNIE: He has so moderne, and facile a veine, Fitting the time, and catching the court-eare. Your PETRARCH is more passionate, yet he, In dayes of sonetting, trusted &#x27;hem, with much: DANTE is hard, and few can vnderstand him. But, for a desperate wit, there&#x27;s ARETINE! Onely, his pictures are a little obscene— You marke me not? Why, in such cases, we must cure our selues, Make vse of our philosophie— And, as we find our passions doe rebell, Encounter &#x27;hem with reason; or diuert &#x27;hem, By giuing scope vnto some other humour Of lesser danger: as, in politique bodies, There&#x27;s nothing, more, doth ouer-whelme the iudgement, And clouds the vnderstanding, then too much Settling, and fixing, and (as&#x27;t were) subsiding Vpon one obiect. For the incorporating Of these same outward things, into that part, Which we call mentall, leaues some certaine faeces , That stop the organs, and, as PLATO sayes, Assassinates our knowledge. Come, in faith, I must Visit you more, a dayes; and make you well: Laugh, and be lusty. There was but one sole man, in all the world, With whom I ere could sympathize; and he Would lie you often, three, foure houres together, To heare me speake: and be (sometime) so rap&#x27;t, As he would answere me, quite from the purpose, Like you, and you are like him, iust. I&#x27;le discourse (And &#x27;t be but only, sir, to bring you a-sleepe How we did spend our time, and loues, together, For some sixe yeeres. For we were coaetanci , and brought vp— Good sir. I ha&#x27; brought your patron A toy, a cap here, of mine owne worke— Where? Is&#x27;t true? But doe you heare, sir?— Which way Row&#x27;d they together? I pray you lend me your dwarfe. I, he plaies both, with me: I pray you, stay. This heate will doe more harme To my complexion, then his heart is worth. (I do not care to hinder, but to take him) How it comes of! Where? That same&#x27;s the party! In mans apparell. &#x27;Pray you, sir, iog my knight: I will be tender to his reputation, How euer he demerit. None? You meane, as earely? but to day? Why in this habit, sir, you apprehend me. Well, master WOVLD-BEE, this doth not become you; I had thought, the odour, sir, of your good name, Had beene more precious to you; that you would not Haue done this dire massacre, on your honour; One of your grauity, and ranke, besides! But, knights, I see, care little for the oath They make to ladies: chiefely, their owne ladies. Right, sir, your politie May beare it through, thus. Sir, a word with you. I would be loth, to contest publikely, With any gentlewoman; or to seeme Froward, or violent (as the courtier sayes) It comes too neere rusticity, in a lady, Which I would shun, by all meanes: and, how-euer I may deserue from master WOVLD-BEE, yet, T&#x27;haue one faire gentlewoman, thus, be made Th&#x27;vnkind instrument, to wrong another, And one she knowes not, I, and to perseuer; In my poore iudgement, is not warranted From being a soloecisme in our sexe, If not in manners. Mary, and will, sir. Since you prouoke me, with your impudence, And laughter of your light land- siren , here, Your SPORVS, your hermaphrodite — I, your white-Friers nation? Come, I blush for you, master WOVLD-BEE, I; And am asham&#x27;d, you should ha&#x27; no more forehead, Then, thus, to be the patron, or S t . GEORGE To a lewd harlot, a base fricatrice, A female deuill, in a male out-side. I, you may carry&#x27;t cleare, with your state-face! But, for your carniuale concupiscence, Who here is fled for liberty of conscience, From furious persecution of the Marshall, Her will I disc&#x27;ple. Go to, sir. This cannot work you, Out of my snare. This cannot be endur&#x27;d, by any patience. WHat&#x27;s the matter, madame? If the Senate Right not my quest, in this; I will protest &#x27;hem, To all the world, no aristocracie. Why, the callet, You told me of, here I haue tane disguis&#x27;d. Where? Is&#x27;t possible! how has my iudgement wander&#x27;d! Sir, I must, blushing, say to you, I haue err&#x27;d: And plead your pardon. I hope, yo&#x27; ha&#x27; not the malice to remember A gentlewomans passion. If you stay, In Venice , here, please you to vse me, sir— &#x27;Pray you, sir, vse mee. In faith, The more you see me, the more I shall conceiue, You haue forgot our quarrell. I, this same is shee. Out, thou chameleon harlot; now, thine eies Vie teares with the hyaena : dar&#x27;st thou looke Vpon my wronged face? I cry your pardons. I feare, I haue (forgettingly) transgrest Against the dignitie of the court— And beene exorbitant— Surely, I had no purpose: To scandalize your honours, or my sexes. Surely, you may beleeue it. Indeede, you may; my breeding Is not so course— To offend VVith pertinacy— Such a presence: No, surely. You may thinke it. No, I&#x27;le goe see your patron. You shall sway me. WEll, I am here; and all this brunt is past: I ne&#x27;re was in dislike with my disguise, Till this fled moment; here, &#x27;twas good, in priuate, But, in your publike, Caue , whil&#x27;st I breathe. &#x27;Fore god, my left legge &#x27;gan to haue the crampe; And I apprehended, straight, some power had strooke me With a dead palsey: well, I must be merry, And shake it off. A many of these feares Would put me into some villanous disease, Should they come thick vpon me: I&#x27;le preuent &#x27;hem. Giue me a boule of lustie wine, to fright This humor from my heart; (hum, hum, hum) &#x27;Tis almost gone, already: I shall conquer. Any deuice, now, of rare, ingenious knauery, That would possesse me with a violent laughter, Would make me vp, againe! So, so, so, so. This heate is life; &#x27;tis bloud, by this time: MOSCA! HOw now, sir? do&#x27;s the day looke cleare againe? Are we recouer&#x27;d? and wrought out of error, Into our way? to see our path, before vs? Is our trade free, once more? MOSCA? Is his thred spunne? Do you heare, sir? How! Sir, I must haue a fayrer answer.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Volpone, or The Fox</div><div class="body">The wealthy Welpone has no family to inherit his gold. Seeking to augment his riches, he pretends to be mortally ill, and receives visitors bringing gifts and false solicitude in the hope of being named his heir. His servant Mosea encourages one of them, SlG@IGGrbaccio} to make a will in Volpone’s favour in hope of reciprocation, temporarily disinheriting his own son Bonario. He also engages Volpone’s interest in @éliaj the wife of @Grvinid) another visitor. Eager to see her, Volpone poses as a mountebank selling potions; Celia watches from a window and expresses her interest by dropping her handkerchief before the jealous Corvino intervenes and locks her away. The sight of Celia has inflamed Volpone’s sexual desire, so Mosca makes the necessary arrangements. He tells Corvino that the mountebank’s medicine, bought by his rivals, has wrought an improvement in Volpone’s condition, and that physicians have prescribed a cure: Volpone must sleep beside a healthy, vigorous young woman. @6rviniG decides to proffer Gélid for the purpose, getting himself back into favour; even if the cure works, Volpone can always be murdered later once he has made his will. On the way back to Volpone’s house, Mosca meets BOnari6, tells him of Corbaccio’s plans to make a new will, and counters Bonario’s scepticism by offering to place him where he can watch it happen. He then returns in time to free Volpone from the unwelcome company of the loquacious Dady§WoOulasBe: on being told that her husband has been seen in a gondola with a courtesan, she rushes away, pausing only to borrow a dwarf. Moses conceals BOfariG in Volpone’s room, but Corbaccio is late. @6RViHG, however, arrives early with Celia and leaves her with Volpone, who proves less decrepit than he seemed. Bonario intervenes to prevent a rape, and leaves the house with Celia. This gives the tardy Corbaccio a good reason to disinherit him. Wolteré the lawyer, another would-be heir, arrives in time to witness the new will being made, but MG@sea persuades him that the plan is to augment his own wealth: BOnano will angrily kill his father, whose wealth will pass to Volpone and so on to Voltore, the true heir. When the case comes to court, Voltore alleges adultery between Bonario and Celia, justifying Corbaccio’s actions and presenting @OFVinG as a patient, forgiving husband. The court is convinced when Volpone is produced from his sick-bed, an unlikely rapist. Celia and Bonario are imprisoned pending sentence. Lady Would-Be…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CIT in The Knight of the Burning Pestle · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>CIT</span>
+</nav>
+
+<h1>CIT</h1>
+<p class="lede">in <em>The Knight of the Burning Pestle</em> — Beaumont, Francis</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1613</td></tr>
+<tr><th>Words</th><td>1920</td></tr>
+<tr><th>Characters</th><td>9737</td></tr>
+<tr><th>BritDrama no.</th><td>1562</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">wife and I wil sit downe. What stately mucsike haue you? you haue shawmes. No? Im&#x27;e a thiefe if my minde <mark>did</mark> not giue me so. Rafe playes a stately part, and he <mark>must</mark> needs haue shawnes: Il&#x27;e be at the charge of them my selfe, rather then wee&#x27;l be with out them. Why and so I will be: ther&#x27;s <mark>two</mark> shillings, let&#x27;s haue the waits</div>
+<div class="excerpt">Captaines: Saint George, quoth the pike men; and withall here they lay, and there they lay: And yet for all this I am heere wench. Nell, the boy <mark>has</mark> deceiued me much, I <mark>did</mark> not thinke it had beene in him: he <mark>has</mark> performed such a matter wench, that if I liue, next yeare Il&#x27;e haue him Captaine of the Gally foist, or Il&#x27;e want my will.</div>
+<div class="excerpt">Host i&#x27;faith. How lik&#x27;st thou this wench? Here&#x27;s Raph, here&#x27;s Raph. Peace a little bird, hee shall kill them all and they were twentie more on &#x27;em then there are. <mark>Did</mark> not I tell you Nel what your man would doe? by the saith of my bodie wench, for cleane action and good deliuerie they may all cast their caps at him. You&#x27;re too</div>
+<div class="excerpt">I&#x27;le haue a ring to discouer all inchant ments, and Raph shall beate him yet: be no more vext for it shall be so. If Raph had him at the Fencing-schoole, if hee <mark>did</mark> not make a puppy of him, and driue him vp and downe the schoole he should nere come in my shop more. Yes Ducke. Yes indeed <mark>did</mark> he mouse. What is it Nel? So he shall</div>
+<div class="excerpt">if I ioyne with him, wee&#x27;le knocke them all. No Nel, I warrant thee Iasper is at Puckeridge with her, by this. Nay Cunny, what wilt thou laie with me that Raph <mark>has</mark> her not yet. Peace Coney, thou shalt see him taken downe too I warrant thee; here&#x27;s Luces father come now. Why this is well coney: but if Raph were hot once, thou</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Hold your peace good-man boy. That you haue no good meaning: This seuen yeares there hath beene playes at this house, I haue obserued it, you haue still girds at Citizens; and now you call your play, The London Marchant. Downe with your Title boy, downe with your Title. I am. Yea, and a Grocer. No sir, yes sir, if you were not resolu&#x27;d to play the Iacks, what need you study for new subiects, purposely to a buse your betters? why could not you be contented, as well as others, with the legend of Whittington, or the life &amp; death of sir Thomas Gresham? with the building of the Royall Ex change? or the story of Queene Elenor, with the rearing of London bridge vpon wool-sackes? Why present something notably in honour of the Commons of the Citty. I do not like that, but I will haue a Citizen, and hee shall be of my owne trade. &#x27;Tis all one for that, I will haue a Grocer, and he shall do admirable things. Marry I will haue him— What sayst thou cunny? So he shall, ll&#x27;e haue him kill a Lyon with a pestle. I cunny. Rafe helpe your mistresse this way: pray gen tlemen make her a little roome, I pray you sir lend me your hand to helpe vp my wife: I thanke you sir. So. Boy, let my wife and I haue a cupple stooles, and then begin, and let the Grocer do rare things. Well remembred wife, come vp Rafe: Il&#x27;e tell you Gentlemen, let them but lend him a suit of reparrell, and ne cessaries, and by Gad, if any of them all blow winde in the taile on him, Il&#x27;e be hang&#x27;d. Do Rafe, do. How say you Gentlemen, is it not as I told you? I, and hee should haue playd Ieronimo with a Shooe maker for a wager. In Rafe, in Rafe, and set out the Grocery in their kinde, if thou lou&#x27;st me. The Grocers honour. Let it be so, begin, begin, my wife and I wil sit downe. What stately mucsike haue you? you haue shawmes. No? Im&#x27;e a thiefe if my minde did not giue me so. Rafe playes a stately part, and he must needs haue shawnes: Il&#x27;e be at the charge of them my selfe, rather then wee&#x27;l be with out them. Why and so I will be: ther&#x27;s two shillings, let&#x27;s haue the waits of South-warke, they are as rare fellowes as any are in England; and that will fetch them all or&#x27;e the water with a vengeance, as if they were mad. I, come wife. Take you no care for Rafe, hee&#x27;l discharge himselfe I warrant you. Chicken, I prethee heartely containe thy selfe, the childer are pretty childer, but when Rafe comes, Lambe. I prethee mouse be patient, a shall haue her, or i&#x27;le make some&#x27;em smoake for&#x27;t. Peace foole, let Rafe alone, harke you Rafe; doe not straine your selfe too much at the first, peace, begin Rafe. Hold thy tongue, on Rafe. Well said Rafe, some more of those words Rafe. Whoresome blocke-head cannot remember. Go thy waies Rafe, as Im&#x27;e a true man, thou art the best on &#x27;em all. If hee were my sonne, I would hang him vp by the heeles, and flea him, and salt him, whoore-sonne halter sacke. Yes Cunny. I by Ladie cunnie, hold thee there. Hang him rougue, he seru&#x27;d him well enough: loue his maisters daughter! by my troth Cunnie if there were a thousand boies, thou wouldst spoile them all with taking their parts, let his mother alone with him. Peace Cunnie. Sirrah, you scuruie boy, bid the plai ers send Rafe, or by Gods—and they do not, Il&#x27;e teare some of their periwigs beside their heads: this is all Riffe Raffe. No, no, I pre&#x27;thee sit still hony-suckle, thoul&#x27;t spoile all, if he deny him, Il&#x27;e bring halfe a doze ̄ good fellows my selfe, &amp; in the shutting of an euening knock&#x27;t vp, &amp; ther&#x27;s an end. If I could but see Raph againe, I were as merry as mine Host i&#x27;faith. How lik&#x27;st thou this wench? Here&#x27;s Raph, here&#x27;s Raph. Peace a little bird, hee shall kill them all and they were twentie more on &#x27;em then there are. Did not I tell you Nel what your man would doe? by the saith of my bodie wench, for cleane action and good deliuerie they may all cast their caps at him. You&#x27;re too bitter, conny, the yong man may do wel enough for all this. No, no, you talke like a foolish woman, I&#x27;le ha Raph fight with him, and swing him vp welfauourdlie, sirrah boie come hither, let Raph come in and fight with Iasper. Plot mee no plots, I&#x27;le ha Raph come out, I&#x27;le make your house too hot for you else. Go your waies good-man boie, I&#x27;le hold him a pen nie hee shall haue his bellie-full of fighting now, ho heere comes Raph, no more. No more, wife no more. No, no, I haue found out the matter sweete-heart, Iasper is inchanted, as sure as we are heere, he is inchanted, he could no more haue stood in Raph&#x27;s hands, then I can stand in my Lord Maiors, I&#x27;le haue a ring to discouer all inchant ments, and Raph shall beate him yet: be no more vext for it shall be so. If Raph had him at the Fencing-schoole, if hee did not make a puppy of him, and driue him vp and downe the schoole he should nere come in my shop more. Yes Ducke. Yes indeed did he mouse. What is it Nel? So he shall Nel, and if I ioyne with him, wee&#x27;le knocke them all. No Nel, I warrant thee Iasper is at Puckeridge with her, by this. Nay Cunny, what wilt thou laie with me that Raph has her not yet. Peace Coney, thou shalt see him taken downe too I warrant thee; here&#x27;s Luces father come now. Why this is well coney: but if Raph were hot once, thou shouldst see more. I Nell, but this is scuruy musicke: I gaue the whore son gallowes money, and I thinke hee has not got mee the waits of South-warke, if I heare him not anan, Il&#x27;e twinge him by the eares. You Musicians, play Baloo. Why this is it cony. No lambe, that&#x27;s Raph and Lucrece. No mouse, that was a Tartarian. I warrant thee (sweet heart) wee&#x27;l haue him ham pered. I conie. Come, hugge in mine armes sweet mouse, hee shall not fright thee any more: alas mine owne deere heart, how it quiuers. Peace Nell, let Rafe alone. No Nell, no, nothing but the old Knight is merrie with Rafe. I, I Raph, all is paid. I hold my cap to a farthing hee does: why Nel I saw him wrastle with the great Dutch-man and hurle him. Nay by your leaue Nel, Niniuy was better. Yes lam. Good Mistresse Merry-thought be gone, I pray you for my sake, I pray you forbeare a little, you shall haue audi ence presently, I haue a little businesse. Boy, come hither, send away Raph and this whore-sonne Giant quickely. Let him come now and dispatch this, and I&#x27;le trou ble you no more. Falsifie a blow Raph, falsifie a blow, the Giant lies open on the left side. Fetch him ore the hip boy. No Raph get all out of him first. Peace Nel, heere comes the prisoners. Cony, I can tell thee the Gentlemen like Rafe. Now Rafe is in this humour, I know hee would ha beaten all the boyes in the house if they had beene set on him. What if he be, sweet heart? What how does he vse her hunny? Nay pre&#x27;thee Nell chide not: for as I am an honest man, and a true Christian Grocer, I doe not like his do ings. I pre&#x27;thee sweet hunny-suckle, be content. Here loue. Let me alone sweet-heart, I haue a tricke in my head shall lodge him in the Arches for one yeare, and make him sing Peocani, er&#x27;e I leaue him, and yet hee shall neuer know who hurt him neither. What shall we haue Rafe do now boy? Why so sir, go and fetch me him then, and let the So phy of Persia come and christen him a childe. Well said Nell, it shal be so: boy let&#x27;s ha&#x27;t done quickly. Sir boy, lets ha&#x27;t as you can then. Will it so sir? you are well read in Histories: I pray you what was sir Dagonet? was not he prentice to a Grocer in London? read the play of the Foure Prentices of London, where they tosse their pikes so: I pray you fetch him in sir, fetch him in. I Nell, it is the fashion of that country, I warrant tee. Well sayd Rafe, conuert her if thou canst. Harke thee Rafe, there&#x27;s money for thee; giue something in the King of Cracouia&#x27;s house, be not beholding to him. I cony, peace. No more a shannot loue; but Nel I will haue Raph doe a very notable matter now, to the eternall honour and glory of all Grocers, sirrah you there boy, can none of you heare? Let Raph come out on May-day in the morning and speake vpon a Conduit with all his Scarfes about him, and his fethers and his rings and his knacks. Why sir, I care not what become on&#x27;t, I&#x27;le haue him come out, or I&#x27;le fetch him out my selfe, I&#x27;le haue some thing done in honor of the Citty, besides, he hath bene long enough vpon Aduentures, bring him out quickely, or if I come in amongst you— Bring him away then. Rafe, Why Rafe boy. Come hither Rafe, come to thy mistresse boy. Rafe, Rafe, double your files brauely Rafe. Let him looke narrowly to his seruice, I shall take him else, I was there my selfe a pike-man once in the hottest of the day, wench; had my feather shot sheere away, the fringe of my pike burnt off with powder, my pate broken with a scouring-sticke, and yet I thanke God I am heere. Ran, tan, tan, tan; ran, tan: O wench an thou hadst but seene little Ned of Algate, drum Ned, how hee made it rore againe, and layd on like a tyrant: and then stroke softly till the ward came vp, and then thundred againe, and toge ther we go: sa, sa, sa, bounce quoth the guns: courage my hearts, quoth the Captaines: Saint George, quoth the pike men; and withall here they lay, and there they lay: And yet for all this I am heere wench. Nell, the boy has deceiued me much, I did not thinke it had beene in him: he has performed such a matter wench, that if I liue, next yeare Il&#x27;e haue him Captaine of the Gally foist, or Il&#x27;e want my will. I do not like this, peace boies, heare me one of you, euery bodies part is come to an end but Raphes, and hee&#x27;s left out. Raph come away, make on him as you haue done of the rest, boies come. He shall Nel, Raph come away quickely and die boy. Take you no care of that sir boy, is not his part at an end, thinke you, when he&#x27;s dead? come away Raph. &#x27;Tis a pretty fiction i&#x27;faith.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Knight of the Burning Pestle</div><div class="body">At the theatre, a citizen and his wife object to the satirical subject matter of the play, The London Merchant: they insist on a more romantic offering starring their apprentice, Rafe, as a heroic grocer. The boy actors do their best to provide this within the play they have rehearsed. In the play, Luce prefers her father Venturewell’s apprentice Jasper to his chosen son-in-law, Humphrey; so Venturewell discharges Jasper, and he goes home to a family impoverished by the irresponsible merriment of his father, Old Merrythought. His mother, who 1607 favours his younger brother Michael, insists that he be paid his inheritance and sent out into the world. Several of the characters go to Waltham Forest. Luce elopes with Humphrey, intending to meet Jasper there. Rafe the grocer, a voluminous reader of chivalric romance, becomes the Knight of the Burning Pestle and leaves in search of heroic deeds. He scares Mistress Merrythought, who leaves behind her jewels. These are found and taken away by Jasper, who then meets the eloping couple, beats Humphrey, and takes Luce. In the audience, the citizen and his wife take Jasper to be the villain and Humphrey the hero; they demand that Rafe return to fight Jasper, but Jasper beats him. Notified by Humphrey, Venturewell confronts Jasper’s father, but is offended by his refusal to take the matter seriously. Jasper tests Luce’s love by threatening her with violence. She accepts her fate, but Humphrey and her father seize her before he can admit he was only pretending. Rafe stays at the Bell inn, but cannot understand that he must pay for its hospitality. (The citizen settles the bill for him.) The host sends him to fight the giant Barbaroso, better known as Nick the barber, who has imprisoned many knights and ladies — actually clients and venereal disease patients. Rafe defeats the ‘giant’ and releases the ‘knights’. The citizens then have a scene inserted in which he meets a foreign king’s daughter, but refuses her offer oflove. Later interpolated scenes show Rafe as the city’s May Lord, and mustering troops at Mile End. Venturewell incarcerates Luce in her room, but Jasper gains access by pretending to be dead: Venturewell accedes to a request that his body should be brought to Luce, and then has the coffin sent on to Old Merrythought, unaware that Luce has taken Jasper’s place inside. Left behind in Luce’s room, Jasper appears to Venturewell in ghostly guise and instructs him to repent, compensate Old Merrythought for his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COR in 219 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>COR</span>
+</nav>
+
+<h1>COR</h1>
+<p class="lede">in <em>219</em> — [84]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1605</td></tr>
+<tr><th>Words</th><td>1840</td></tr>
+<tr><th>Characters</th><td>9353</td></tr>
+<tr><th>BritDrama no.</th><td>219</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Gentleman, In vertuous qualityes, that <mark>has</mark> but stolne vm. Will any man assure me of her good behauiour? And who shall watch the keepers? But say I am gone out of town, &amp; <mark>must</mark> trust others; how shall I know if those I trust be trusty to me? Sound doctrine I warrant you: I am resolu&#x27;d ifaith. Pray what are you, sir? Well, sir, let him</div>
+<div class="excerpt">bring his Father to this spectacle? You are a friend in deed. Why harke you, you <mark>two</mark> Knights; Doe you thinke I will forsake Gazetta? Why theet&#x27;s your wisedome; why <mark>did</mark> I make shew of Diuorce thinke you? Onelie to bridle her stout stomack: and how <mark>did</mark> I draw on the cullour for my diuorce? I <mark>did</mark> traine the Wood cocke Dariotto into</div>
+<div class="excerpt">his meere industry, and that by spurts, Such qualities, as no wit else can match, With plodding at perfection euery houre; Which, if his father knew eche gift he <mark>has</mark>, Were like enough to make him giue all from him: I meane besides his dyeing and his wenching, He <mark>has</mark> stolne languages, th&#x27; Italian, Spanish, And some spice of the</div>
+<div class="excerpt">Wel, sir, be as be may, I scorn to set my head against yours, d&#x27;ye see? when in the meane time I will fircke your father, whether you see or no. Well. And why then <mark>did</mark> you not your selfe that honour ▪ Y&#x27;are a villayne. I, ile proue thee one. Well, sir, thus I proue it. Youle set a badge on the ielous fooles head, sir; Now set</div>
+<div class="excerpt">with wits. What&#x27;s that to you? looke to your owne affaires, The time requires it; are not you engag&#x27;d In some bonds forfeit for V lerio? I thinke it may, but I <mark>must</mark> not be seene in&#x27;t, Nor would I wish you, for we both are parties, And liker 〈◊〉 to bring our selues in trouble, Then beare him out: I haue already made Mean s to</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Now La ▪ what plots haue we now in hand? They say, when onely one Dame is alone, Shee plots some mischiefe; but if three together, They plot three hundred: Wife, the Ayre is sharpe, Y&#x27;ad best to take the house least you take cold. Goe, in I say; a friend of yours attends you. Nay stand not chopping Logicke; in I pray. A prettie worke, I pray what flowers are these ▪ O thats for louers thoughtes. Whats that, a Columbine? Him? yet it may mine ▪ This were a pretrie present for some friend, Some gallant Courtier, as for Doriotto, One that ado you in his soule I know. O ye , h adores you, and adhornes mee ▪ Y faith deale plainelie, Doe not his kisses relish Much better then such Pessants as I am? Doriottoes; does he not? The thing you wot on? Why Lady, lie with you? I with you. Nay I am told that he lies with you too, And that he is the onely Whore-maister About the Cittie. Well Mistresse well, I will not be abusde, Thinke not you daunce in Netts; for though you do not Make brode profession of your loue to him, Y et do I vnderstand your darkest language, Your treads ath&#x27;toe, your secret iogges and wringes: Your enter course of glaunces: euery tittle Of your close Amorous rites I vnderstand, They speake as loud to mee, as if you said, My dearest Dariotto, I am thine. No, not with Doriotto? No Letters past, nor no designes for meeting? Well, no time past, Goe goe; goe in and sow ▪ Suspition is (they say) the st degree Of deepest wisedome: and how euer others ygh against this mood of Ielousy, For my part I suppose it the best curb, To check the ranging appetites that raigne In this weake sexe: my neighbours poynt at me For this my ielousy; but should I doe As most of them doe; let my wife fly out To feasts and reuels, and in te home Gallants, Play Menelaus, giue them time and place, While 〈◊〉 t like a well-taught wayting-woman, Turning h r eyes vpon some worke or picture, Read in a Booke, or take a fayned nap, While her ind Lady takes one to her lap? No, let me still be poynted at, and thought A ielouse Asse, and not a wittally Knaue. I haue a shew of Courtyers haunt my house, In shew my friends, and or my profit too: But I perceiue vm, and will mock their aymes, With looking to their marke, I warrant vm: I am content to ride abroad with them, To reuell, dice, and fit their other sports; But by their leaues ile haue a vigilant eye To the mayne chaunce still. See my braue Comrades. Any thing I. In health, God saue her. Abroad about her businesse. What, to the Court? then take me for a Gull. Ha 〈◊〉 , shall we gull this Guller? Let me alone. Of all mens 〈◊〉 aliue, I most admyre Valerioes, that hath stolne, By his meere industry, and that by spurts, Such qualities, as no wit else can match, With plodding at perfection euery houre; Which, if his father knew eche gift he has, Were like enough to make him giue all from him: I meane besides his dyeing and his wenching, He has stolne languages, th&#x27; Italian, Spanish, And some spice of the French, besides his dauncing, Singing, playing on choyce Instruments: These has he got, almost against the hayre. Vayne glory makes yee iudge on lyte yfayth. Sir, your ignorance Shall est soone be confuted. Prythee Val, Take thy Theorbo for my sake a little. Toucht a Theorbo? marke the very word. Sirra, goe fetch. See what a Caper there was! The best that euer; and how it becomes him! Nay, that&#x27;s the very wonder of his wit, To carry all without his fathers knowledge. No but we could not, Although we think we could: his wit doth charme vs. Come sweet Val, touch and sing. O God, sir. He sings. Courtiers, how like you this? Is it not naturall? Go to, Signeur Courtier, You deale not courtly now to be so playne, Nor nobly, to discourage a young Gentleman, In vertuous qualityes, that has but stolne vm. Will any man assure me of her good behauiour? And who shall watch the keepers? But say I am gone out of town, &amp; must trust others; how shall I know if those I trust be trusty to me? Sound doctrine I warrant you: I am resolu&#x27;d ifaith. Pray what are you, sir? Well, sir, let him say on. Out you rogue. I 〈◊〉 your knauery, sir, and will yet haue pa tience. All shall not serue her turne, I am thinking of o ther matters. Tis excellent good, sir; I do take you, sir, d&#x27;ye see? to be, as it were bastard to the sawcy Courtier, that would haue me father more of your fraternity, d&#x27;ye see? &amp; so are instructed (as we heare) to second that villayne with your toung, which he has acted with his Tenure piece, d&#x27;ye see? Wel, sir, be as be may, I scorn to set my head against yours, d&#x27;ye see? when in the meane time I will fircke your father, whether you see or no. Well. And why then did you not your selfe that honour ▪ Y&#x27;are a villayne. I, ile proue thee one. Well, sir, thus I proue it. Youle set a badge on the ielous fooles head, sir; Now set a Coxcombe on your owne. Well, si , know and spare not; I will presently bee diuorst, and then take her amongst ye. By this sword I will, the world shall not disswade me. Talke no more to me, Ile not be made Cuckold in my owne house: Notarie read me the diuorce. Sing to me no more Syren, for I will heare thee no more, I will take no compassion on thee. Goe too sir, y&#x27;are a rascall, e giue you a fee for plea ding for her one day, Notary doe you your office. Extremity? go too, I deale but too mercifully with her, If I should vse extremi e with her I might hang her, and her copesmate my drud e here, how say you M. Notary, might I not doe it by law? Nay by the masse they haue had too much of the sheete already. W &#x27;s that to the capitall letter thats written in minde, I say for all your law, maister Notary that I may hang am, may I not hang him that robs me of mine honour, as well as he that robs me of my horse? Soe is honour, a man may buy it with his peny, and if I may hang a man for stealing my horse (as I say) much more for robbing mee of my honour; for why? if my ho se be stolne, it may bee my owne fault; for why? eyther the stable is not st ong enough, or the pasture not well fenc&#x27;t, or watcht, or so foorth: But for your wife that keepes the sta ble of your honour: Let her be lo in a brazen towre, let Ar gus himselfe keepe her, yet can you neuer bee secure of your honour, for why? she can runne through all with her serpent nodle: besides you may hang a locke vpon your horse, and so can you not vpon your wife. What els maister Notary, I am resolute ifaith. Auoyde, I charge thee in name of this diuorce: Thou mightst haue lookt to it in time, yet this I will doe for thee; if thou canst spie out any other man that thou wouldest cuckolde, thou shalt haue my letter to him: I can do no more: more Inke maister Notary, I wright my name at large. Ah asse that thou could not knowthy happinesse till thou hadst lost it, how now? my nose bleed? shall I write in blood? what onely three drops? Sfoote thi&#x27;s Omninous: I will not set my hand toot now certaine, maister Notary I like not this abodement: I will deferre the setting too of my hand till the next court day: keepe the diuorce I pray you, and the wo man in your house together. Not so Sir, it shall not serue her turne M. Notary, keep it at your perill, &amp; gentlemen you may be gone a Gods name, what haue you to doe to flocke about me thus? I am neither Howlet, nor Cuckooe: gentlewomen for gods sake medle with your owne cases, it is not fit you should haunt these publike as sembles. May I beleeue this? It may well be, yet haue I cause enough To perfect my diuorce, but it shall rest, Till I conclude it with a Counterbuffe, giuen to these noble rascals: Claudio thankes: What comes of this, watch but my braine a little, And yee shall see, if like two partes in me, I leaue not both these gullers wits Imbrierd, Now 〈◊〉 perceiue well where the wilde winde sits, Heres Gull for Gull and wits at warre with wits. What&#x27;s that to you? looke to your owne affaires, The time requires it; are not you engag&#x27;d In some bonds forfeit for V lerio? I thinke it may, but I must not be seene in&#x27;t, Nor would I wish you, for we both are parties, And liker 〈◊〉 to bring our selues in trouble, Then beare him out: I haue already made Mean s to the officers to sequester him In priuate for a time, till some in cret Might make his Father vnderstand his state, Who would perhaps take present order for him, Rather then suffer him t&#x27;endure the shame Of his imprisonment; Now, would you but goe And breake the matter closely to his Father, (As you can wisely doo&#x27;t) and bring him to him, This were the onely way to saue his credit, And to keepe off a shrowd blow from our selues. Excellent Guestes: these are my dayly Guestes. Why Rinald, what meant you to intrap your friend, And bring his Father to this spectacle? You are a friend in deed. Why harke you, you two Knights; Doe you thinke I will forsake Gazetta? Why theet&#x27;s your wisedome; why did I make shew of Diuorce thinke you? Onelie to bridle her stout stomack: and how did I draw on the cullour for my diuorce? I did traine the Wood cocke Dariotto into the net, drew him to my house, gaue him opportunitie with my wife (as you say my Father dealt with his wiues friendes) onely to traine him in: let him alone with my wife in her bed-chamber; and sometimes founde him a bedd with her, and went my way backe againe softlie, onelie to draw him into the Pitte. And now shal the world see I am as wise as my father.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 219</div><div class="body">Christ has recently come to Jewry, and Infidelity is keen to interfere with his work: his plan is to influence the religious establishment against Christ and thereby ensure his crucifixion. Meanwhile, he encourages Mary Magdalen to enjoy her youth while she can, and introduces her to three companions who will help: Pride, Cupidity, and Carnal Concupiscence (all of whom go under less damaging names). They recommend fashionable clothes and hairstyles, which will attract men, but also advise her against marriage. Mary meets The Law of God and Knowledge of Sin, and experiences the stirrings of conscience: she despairs, thinking herself surely damned and God unjust. Christ casts seven devils out of Mary and drives away Infidelity: she is given the grace to repent. Simon the Pharisee is suspicious of Christ because he is lower-class and uneducated, and invites him to dinner. During the meal, Mary washes his feet with her tears and anoints them. Simon is outraged, but Christ emphasizes the universality of forgiveness: Mary is a genuine penitent, whereas Simon is merely a hypocrite wanting to show off his wealth and presumed holiness. Simon is offended and sets Infidelity and Malicious Judgement to follow Christ, spy on his preaching, and have him brought to trial. Mary ends the play in the company of Love and Justification, who emphasize that she is saved through her faith alone.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

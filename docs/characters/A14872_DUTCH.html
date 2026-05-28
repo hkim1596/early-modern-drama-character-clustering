@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DUTCH in The Duchess of Malfi · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>DUTCH</span>
+</nav>
+
+<h1>DUTCH</h1>
+<p class="lede">in <em>The Duchess of Malfi</em> — Webster, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1337</td></tr>
+<tr><th>Characters</th><td>7193</td></tr>
+<tr><th>BritDrama no.</th><td>1726</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Bring me the Casket hither, and the Glasse; You get no lodging here, to night (my Lord.) <mark>Must</mark>? you are a Lord of Misse-rule. To what vse will you put me, la , what pleasure can <mark>two</mark> Louers find in sleepe? Mine bleedes for&#x27;t. You are, in this Too strict: and</div>
+<div class="excerpt">As if a Myne, beneath my feete, were ready To be blowne vp. <mark>Away</mark>, Oh misery, me thinkes vniust actions Should weare these masques, and curtaines; and not we: You <mark>must</mark> instantly part hence: I haue fashion&#x27;d it already. Ex. Ant. So late? Indeed, I am very neere it. Antonio, the master of our house-hold Hath dealt so falsely with</div>
+<div class="excerpt">Neopolitane Iewes, And Antonio let&#x27;s the Bonds be forfeyt. And hereupon My brothers Bills at Naples are protested Against: call vp our Officers. The place that you <mark>must</mark> flye to, is Ancona, Hire a house there. I&#x27;ll send after you My Treasure, and my Iew ls: our weake safetie Runnes vpon engenous wheeles: short sillables, <mark>Must</mark> stand</div>
+<div class="excerpt">Ancona, Hire a house there. I&#x27;ll send after you My Treasure, and my Iew ls: our weake safetie Runnes vpon engenous wheeles: short sillables, <mark>Must</mark> stand for periods: I <mark>must</mark> now accuse you Of such a fained crime, as Tasso calls Magnanima Mensogna: a Noble Lie, &#x27;Cause it <mark>must</mark> shield our honors: harke they are comming. I haue got well</div>
+<div class="excerpt">vnderstanding To know thy misery: For all our wit And reading, brings vs to a truer sence Of sorrow: In the eternall Church, Sir, I doe hope we shall not part thus. <mark>Must</mark> I like to a slaue-borne Russian, Account it praise to suffer tyranny? And yet (O Heauen) thy heauy hand is in&#x27;t. I haue seene my litle boy, oft scourge his top,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Bring me the Casket hither, and the Glasse; You get no lodging here, to night (my Lord.) Must? you are a Lord of Misse-rule. To what vse will you put me, la , what pleasure can two Louers find in sleepe? Mine bleedes for&#x27;t. You are, in this Too strict: and were you not my Princely brother I would say to wilfull: My reputation Is safe. Why should onely I, Of all the other Princes of the World Be cas&#x27;de-vp, like a holy Relique? I haue youth, And a litle beautie. You saw this apparition. That Gallery gaue him entrance. He left this with me: she shewes the poniard. His Action Seem&#x27;d to intend so much. I stand As if a Myne, beneath my feete, were ready To be blowne vp. Away, Oh misery, me thinkes vniust actions Should weare these masques, and curtaines; and not we: You must instantly part hence: I haue fashion&#x27;d it already. Ex. Ant. So late? Indeed, I am very neere it. Antonio, the master of our house-hold Hath dealt so falsely with me, in&#x27;s accounts: My brother stood engag&#x27;d with me for money Ta&#x27;ne vp of certaine Neopolitane Iewes, And Antonio let&#x27;s the Bonds be forfeyt. And hereupon My brothers Bills at Naples are protested Against: call vp our Officers. The place that you must flye to, is Ancona, Hire a house there. I&#x27;ll send after you My Treasure, and my Iew ls: our weake safetie Runnes vpon engenous wheeles: short sillables, Must stand for periods: I must now accuse you Of such a fained crime, as Tasso calls Magnanima Mensogna: a Noble Lie, &#x27;Cause it must shield our honors: harke they are comming. I haue got well by you: you haue yeelded me A million of losse; I am like to inherit The peoples curse for your Stewardship: You had the tricke, in Audit time to be sicke, Till I had sign&#x27;d your Quietus ; and that cur&#x27;de you Without helpe of a Doctor. Gentlemen, I would haue this man be an example to you all: So shall you hold my fauour: I pray let him; For h&#x27;as done that (alas) you would not thinke of, And (because I intend to be rid of him) I meane not to publish: vse your fortune else-where. We doe confifcate (Towards the satisfying of your accounts) All that you haue. So, sir; you haue your Passe. I would know what are your opinions Of this Antonio. Leaue vs: what doe you thinke of these? The Birds, that liue i&#x27;th field On the wilde benefit of Nature, liue Happier then we; for they may choose their Mates, And carroll their sweet pleasures to the Spring: Thou do&#x27;st blanch mischiefe Wouldst make it white: See, see; like to calme weather At Sea, before a tempest, false hearts speake faire To those they intend most mischiefe. A Letter. Send Antonio to me; I want his head in a busines: (a poli ticke equiuocation) He doth not want your councell, but your head; That is, he cannot sleepe till you be dead. And here&#x27;s annother Pitfall, that&#x27;s strew&#x27;d ore With Roses: marke it, &#x27;tis a cunning one. I stand ingaged for your husband, for seuerall debts at Naples: let not That trouble him, I had rather haue his heart, then his mony. And I beleeue so too. That he so much distrusts my husbands loue, He will by no meanes beleeue his heart is with him Vntill he see it: The Diuell is not cunning enough To circumuent vs in Ridles. Their league is like that of some politick Kings Onely to make themselues of strength, and powre To be our after-ruine: tell them so; I suspect some Ambush: Therefore by all my loue; I doe coniure you To take your eldest sonne, and flye towards Millaine ; Let vs not venture all this poore remainder In one vnlucky bottom. I know not which is best, To see you dead, or part with you: Farewell Boy. Thou art happy, that thou hast not vnderstanding To know thy misery: For all our wit And reading, brings vs to a truer sence Of sorrow: In the eternall Church, Sir, I doe hope we shall not part thus. Must I like to a slaue-borne Russian, Account it praise to suffer tyranny? And yet (O Heauen) thy heauy hand is in&#x27;t. I haue seene my litle boy, oft scourge his top, And compar&#x27;d my selfe to&#x27;t: naught made me ere go right, But Heauens scourge-sticke. Pitie? with such a pitie men preserue aliue Pheasmes, and Quailes, when they are not fat enough To be eaten. Yes: No: But I intend, since they were borne accur d; Cursses shall be their first language. Were I a man: I&#x27;ll&#x27;d beat that counterfeit face, into thy other Say that he was borne meane. Man is most happy, when&#x27;s owne actions Be arguments, and examples of his Vertue. I pre-thee who is greatest, can you tell? Sad tales befit my woe: I&#x27;ll tell you one. A Salmon, as she swam vnto the Sea, Met with a Dog-fish; who encounters her With this rough language: why art thou so bold To mixe thy selfe with our high state of floods Being no eminent Courtier, but one That for the calmest, and fresh time o&#x27;th&#x27; yeere Do&#x27;st liue in shallow Riuers, rank&#x27;st thy selfe With silly Smylts, and Shrympes? and darest thou Passe by our Dog-ship, without reuerence? O (Quoth the Salmon) sister, be at peace: Thanke Iupiter, we both haue pass&#x27;d the Net, Our value neuer can be truely knowne, Till in the Fishers basket we be showne, I&#x27;th&#x27; Market then my price may be the higher, Euen when I am neerest to the Cooke, and fire. So, to Great men, the Morrall may be stretched. ,,Men oft are valued high, when th&#x27;are most wretch&#x27;d. But come: whether you please: I am arm&#x27;d &#x27;gainst misery: Bent to all swaies of the Oppressors will. There&#x27;s no deepe Valley, but neere some great Hill. Ex. I will haue none: &#x27;Pray-thee, why do&#x27;st thou wrap thy poysond Pilles In Gold, and Sugar? Here sir: I would aske you pardon: You are very cold. I feare you are not well after your trauell: Hah? lights: oh horrible: What witch-craft doth he practise, that he hath left A dead-mans hand here? — Here is discouer&#x27;d, (behind a Trauers;) the artificiall figures of Antonio, and his children, ap pearing as if they were dead. If they would bind me to that liueles truncke, And let me freeze to death. That&#x27;s the greatest torture soules feele in hell, In hell: that they must liue, and cannot die: Portia, I&#x27;ll new kindle thy Coales againe, And reuiue the rare, and almost dead example Of a louing wife. The Church enioynes fasting: I&#x27;ll starue my selfe to death. Good comfortable fellow Perswade a wretch that&#x27;s broke vpon the wheele To haue all his bones new set: entreate him liue, To be executed againe: who must dispatch me? I account this world a tedious Theatre, For I doe play a part in&#x27;t &#x27;gainst my will. Indeed I haue not leysure to tend so small a busi nes. Thou art a foole then, To wast thy pitty on a thing so wretch&#x27;d As cannot pitty it: I am full of daggers: Puffe: let me blow these vipers from one. What are you? I could curse the Starres. And those three smyling seasons of the yeere Into a Russian winter: nay the world To its first Chaos. Oh, but you must remember, my curse hath a great way to goe: Plagues, (that make lanes through largest families) Consume them: Let them like tyrants Neuer be remembred, but for the ill they haue done: Let all the zealous prayers of mortefied Church-men forget them, Let heauen, a little while, cease crowning Martirs To punish them: Goe, howle them this: and say I long to bleed ,,It is some mercy, when men kill with speed. Exit. Antonio. Mercy. she dies,</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Duchess of Malfi</div><div class="body">There are two new arrivals at the Duchess of Malfi’s court. One is Antonio, her steward, who has returned from an extended visit to France. The other is Bosola, an ex-convict who committed a murder for the Cardinal, and who is now placed at court by the Duchess’s brother Ferdinand, with instructions to supply information. Ferdinand and the Cardinal leave the court, enjoining their sister not to marry again, but she defies them and secretly woos and marries Antonio. She clandestinely gives birth to a son, which Bosola discovers after Antonio accidentally drops the baby’s horoscope. The news is duly reported to the infuriated Ferdinand. The Duchess has two more children. Ferdinand visits Malfi, planning to marry her to Count Malateste. He visits her private chamber and catches her talking to Antonio, whose identity remains unknown because he has hidden as part of a practical joke. She banishes Antonio as a pretext to get him out of court, and follows him on a feigned pilgrimage to the state of Ancona. Bosola wins her confidence by speaking well of Antonio, unlike the other court flatterers; she entrusts him with the secret of their marriage, which he duly reports to his paymaster. The Cardinal is commissioned to fight in the war, and ceremonially puts off his ecclesiastical office. By papal decree, the Duchess and Antonio are banished ===== PAGE 347 ===== 1613 from Ancona and the Duchy of Malfi is seized by the Holy See; Antonio flees to Milan with his eldest son, and Bosola arrests the Duchess. Acting on Ferdinand’s orders, he imprisons and torments her, shows her the dead bodies of Antonio and her son (which turn out to be waxworks), and finally supervises her and her younger children’s murder. Ferdinand disowms him, then goes mad with lycanthropic delusions. The Cardinal schemes to have Antonio’s lands confiscated, poisons his mistress, and inadvertently reveals to Bosola his part in the Duchess’s death. Seeking revenge, Bosola mistakenly kills Antonio in the dark. In his madness, Ferdinand kills the Cardinal and Bosola, who kills him in turn. Delio decides to advance the rights of Antonio’s surviving son.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

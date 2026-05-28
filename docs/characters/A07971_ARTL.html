@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARTL in 542 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ARTL</span>
+</nav>
+
+<h1>ARTL</h1>
+<p class="lede">in <em>542</em> — [173]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>1949</td></tr>
+<tr><th>Characters</th><td>11173</td></tr>
+<tr><th>BritDrama no.</th><td>542</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">the lustre of perfection Invite&#x27;s the eye, and tells the searching thoughts It holds a richer minde, with which my soule Would rather mixe her faculties. But you <mark>must</mark> not fall out with the Gentlewoman. Adiew Mistris Tongall. What serious affaire have they together? Those words create a hell of torment in me. Is there no love</div>
+<div class="excerpt">severe In your restraint from praising her pure excellence, Which should be Poets studie; not with fiction, And common figures, but diviner attributes: Then they <mark>must</mark> call it nothing but it selfe. The subjects weight would make a Poem weighty; And take <mark>away</mark> the imputation Which seeming solidnesse would throw upon&#x27;t Of a light</div>
+<div class="excerpt">jealousie Proceeding from our better thoughts infection Hath beene a provocation. And perhaps The love I beare your Sister, will appeare Your chiefest safety. I <mark>must</mark> be honourable! Those words include a doubt works strangely in me. Love <mark>must</mark> not wrack my reputation. Sir, I begin to scan the circumstance, And conster your intention.</div>
+<div class="excerpt">honesty Clad in the naked livery of truth Is a most glorious vertue, that preserves White innocence unstain&#x27;d with falshood. Good meanes as well as good intention <mark>Must</mark> make an act good. Let those that study mischiefe To satisfie their sensualties Practise such wickednesse. I&#x27;de not abuse A noble goodnes to possesse the Indies.</div>
+<div class="excerpt">of strange severity. My honour Is that part of my selfe, without which The man that&#x27;s in me can have no subsisting. Honour&#x27;s the greatest of exteriour goods, And <mark>must</mark> be still pursu&#x27;d as the reward Due unto vertue, through the greatest dangers. Yet fortitude is not the appetite Of formidable things, nor inconsult Rashnes; but</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Mistresse Tongall, you are delighting your selfe with these new erections. Indeed they are faire ones, and their uniformity addes much to their beauty. Pray which is Sir Generous Worthie&#x27;s house? I have seene her beauty, and her nimble eyes Have shot a fire into me, that inflam &#x27;s My cold desires. I that have resisted Th&#x27; assaults of passion to a perfect conquest; And call&#x27;d it (justly too) the height of folly To give that wanton Power the attribute Of a false Deity: I, that have out-gone Th&#x27; example of Zenocrates, am captiv&#x27;d; But by a Beauty, such as would review Heat in the frozen bosome of an Anchorite, Who hath spent his age even to decrepitnesse In such austerities as would mortifie The strongest pamperd wantonnesse. I cove A good successe, but faile in&#x27;t. Never yet Could I be blest with opportunity To shew her my desires, and to try The fortune of perswasion. Should I be fortunate in my attempts To win her liking; should my person please her, Or that annexion to my better part Of education, yet the disparitie Betwixt our states, checks me from hoping That the designe can prosper. The lighter fire Nere mixeth with the earth, but to confusion: Or from their severall natures bringing forth Events prodigious. But simple honesty Clad in the naked livery of truth Is a most glorious vertue, that preserves White innocence unstain&#x27;d with falshood. Good meanes as well as good intention Must make an act good. Let those that study mischiefe To satisfie their sensualties Practise such wickednesse. I&#x27;de not abuse A noble goodnes to possesse the Indies. Thy old humour still friend. I shall be ready to serve him. Yes, to disease it. Yes, I confesse it; where there is an union Of loving hearts, the joy exceed&#x27;s expression. That love is vertuous whose desires doe never End in their satisfaction, but increase Towards the object. When a beautious frame Garnish&#x27;t with all the lustre of perfection Invite&#x27;s the eye, and tells the searching thoughts It holds a richer minde, with which my soule Would rather mixe her faculties. But you must not fall out with the Gentlewoman. Adiew Mistris Tongall. What serious affaire have they together? Those words create a hell of torment in me. Is there no love But what&#x27;s attended by vaine jealousie! Yes, passionately. My dreamings, wakings, thoughts and actions Are nothing but desire. See where my comforts Sun Breaks through a clowd. Oh that this unkind distance Might be contracted into lesser ayre: I&#x27;de then convey my whispers to her eares; And teach her understanding what delight Society hath in it. Blest accident; Why doe you stop my hast? let me embrace it. Thus with religious worship doe I kisse What your white hand hath hallow&#x27;d. Ha! shee&#x27;s gone ▪ What envious mischiefe intercepts the meanes Of my desired happinesse! or have mine eyes Wasted their beames in gazing on the place Where I first saw her, to imagination Fancying her figure. Where are the powers of my intellect? Reason and understanding have forsaken Their proper seates, and left strong passions To triumph o&#x27;re this captiv&#x27;d Microcosme. It was my happinesse, and &#x27;twould be much in creased, if I might kisse the hand that wore it. May I be bold to enter with you? My behaviour shall deserve your good opinion. Doth she love me? what greater secret Hath Nature in her Workes then simpathie! I do conceive a thousand fond expressions, Which throng so fast, they choake the passage up, That none can finde an issue. I cannot answer her; my heart is bigg With other thoughts; which till I am deliver&#x27;d of, I suffer torments. Take it, But not t&#x27;abuse the others innocence. Whilst I with sighes draw in th&#x27; unwilling ayre Which she perfum&#x27;d at distance. Ayd me love, wit and fate; that my desires Burne not themselves without her equall fires. As far as my power will extend to expression. How on a sodaine my resolves are numb&#x27;d, And frozen into silence, that confirmes The first distrust of my knowne indeservings, I dare not speake. Well Ladie! yes. Health it selfe Is a disease in others, if compar&#x27;d With th&#x27; absolute state of mine. Where you are present Sicknesse can have no power over frailtie. The b ames which you bright e es shoot, purifie Th most infectious ayr . Your words distill A B l re more pr cious then that Miracle The Chymicks d eame of. At distance I have ften seene your beauty; And thence receiv&#x27;d a fire, whose quickning flames Did animate my soule, that else was earthy, A lump of passive dulnesse; now &#x27;tis active: And if you please to cherish it, shall pay All it&#x27;s derivative abilities Vnto your lowest service. She mocks me sure. This grosse flattery, Ladie, Commends your wit, rather then your good nature. My heart is a plaine heart, and my desires Are truly vertuous, not to be contemn&#x27;d. I would first kisse your hand. How glorious shews heaven with trembling lights Sparkling their distant beames! The full orb&#x27;d Moone Borne on nights dewie wings, rides in her Sphoere; And throwes the shine which from her brothers rayes. She borrowes to illuminate the earth Through thinner ayre, where no condensed vapours Are interpos&#x27;d to let her piercing eye From seeing that which she gives sight to. Yet My heart is wrapt in clouds of leaden sadnesse. Love is not that in me which others feigne it. I dreame not of delights; my busie fancie Presents no fabulous heaven. A hell of torment Darken&#x27;s my mind&#x27;s bright faculties; and reason suffers it selfe to be ecclips&#x27;d by passion. Oft have these instruments of heavens influence Seene my contemplative watchings; When with profound and an unwearied search I have scan&#x27;d the causes of their great effects; And waded through the most inscrutable secrets Both of the mediate and immediate nature ▪ But comming once to read a Womans face, There were so many heavens, that every thought In me, requir&#x27;d a severall understanding, To give each severall grace a severall name, And definition. The Chaos and the earth were loves first Parents; And yet the child did give the Parents forme. What Riddles are in nature! Man&#x27;s a disorder&#x27;d Masse, a meere confusion Of rude, inanimate sense and understanding. Vntill inspir&#x27;d with loves diviner soule. The sense is tir&#x27;d, unlesse it varye&#x27;s objects. Knowledge would be finite, were not the mind Delighted with diversitie. But love&#x27;s a subject for eternall studie; And one faire booke preserv&#x27;d so, a full library. What fabulous errors learning is attended with! Plato&#x27;s five Worlds; their sempiternitie; Pythagoras transmigration; and opinions Judgement would blush to father. But a woman, Did men contemplate such a one as I doe, They&#x27;d Make her all those Worlds: and then include All the fam&#x27;d excellence of former beauties In her more perfect frame. Murder a Gentleman the voyce came thence. Ile rescue him, though danger and destruction Met me with open mouths. Villaines, desist. That&#x27;s to reward it sir; from which base ends Good actions should be free. I&#x27;de gladly heare A short relation of the Accident. If you are the son of Sir Generous Worthy. Your modestie is too severe In your restraint from praising her pure excellence, Which should be Poets studie; not with fiction, And common figures, but diviner attributes: Then they must call it nothing but it selfe. The subjects weight would make a Poem weighty; And take away the imputation Which seeming solidnesse would throw upon&#x27;t Of a light fancie. He were a Divell did not love such goodnesse. It is the onely vertue: frailty boasts of, To love faire sensuall objects: but my soule Hath noted inward beauty in her mind, Which makes me glory (though it be presumption) That I doe love her. Your Riddle needs some Oedipus to solve it. What base suspition Poysons his jealous thoughts! &#x27;Tis injurie Beyond all patience. Dare not denie it! Were thy hands armd with Thunder; Hadst thou a Gorgons looke, wer&#x27;t not her Brother, Ring&#x27;d in the terror of a thousand Jibbets And executioners, I have a point Should finde thy hart out. Your speech, Sir, Savours of strange severity. My honour Is that part of my selfe, without which The man that&#x27;s in me can have no subsisting. Honour&#x27;s the greatest of exteriour goods, And must be still pursu&#x27;d as the reward Due unto vertue, through the greatest dangers. Yet fortitude is not the appetite Of formidable things, nor inconsult Rashnes; but vertue fighting for a truth; Deriv&#x27;d from knowledge of distinguishing Good or bad causes. Thinke me not a Coward Because I am not rash: nor through defect O better counsell, doe not resist the force Of will or passion; how soe&#x27;re your jealousie Proceeding from our better thoughts infection Hath beene a provocation. And perhaps The love I beare your Sister, will appeare Your chiefest safety. I must be honourable! Those words include a doubt works strangely in me. Love must not wrack my reputation. Sir, I begin to scan the circumstance, And conster your intention. You would trie me: Bu your temptations have beene too abusive. And now my resolution is prepar&#x27;d To doe my credit justice. There&#x27;s Magick in those words. What a prophane breath from his blacke mouth flies, Would poison all the idolatrous religions That e&#x27;re aw&#x27;d wicked mortalls. He is not sure her brother, but some impostor, That onely counterfeit&#x27;s his worthier person, I could be patient at the lye, or Coward, Or any thing that can make passion violent. But her bright honour staind&#x27;s a cause of justice To arme a Nation. Draw, if th&#x27;art a man; And with the plea of valour, (if th&#x27;ast any) Defend thy errours: Draw thy sword. Is my just anger mock&#x27;t! love made ridiculous! Draw; lest I make my selfe an Executioner. And doe an act of justice on thy guilt. I am confounded to amazement. Then requesting Sir, That you&#x27;l presume no more upon the priviledge Of that pure love I beare your vertuous Sister T&#x27; admit a jealousie of any action, Or thought of mine which tends not unto noblenesse, Next unto her my bosome holds you deare, And shall doe ever. We are bound to thanke your readinesse. The mercie of my Startes: but what event Their influence will direct, I cannot prophesie. re hee be carefull, hee&#x27;s a Cynick noter Of men and of their manners Good friend be milde; Temper thy passions here. Scandall may grow From low foundations to an heighth of infamy. Thou know&#x27;st my temperance doth not oft frequent These publique places. Fill some Wine boy: never a Drawer here? I pray no more, the subject is too harsh To make good musicke in societie. Why then a health to her whose beauties are Not a grosse Earth, with painted superficies; But a more spright y Element of pure ire. Within whose Sphaere a glorious M nde doth move All th&#x27; orbes of vertue with celestiall flame. Whose active climbings carry her d si es To th&#x27; utmost height of noblenesse and honour: To her that calls you Brother. Now Sir, &#x27;tis yours. We are your servants. &#x27;Tis a blest opportunity. Wee&#x27;l take the Barr our way. I am now animated To come the neerest way without more circumstance; And tell you how your beauty and your vertues Have won on my desires to make them yours. It seemes you did commend me! I must thanke you Sir. How am I blest that your white soule Hath bounded it&#x27;s desires within the circuit Of my too narrow worth!</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 542</div><div class="body">The Queen is greeted on her arrival by the Genius of the House. The house is transformed into the semblance of a ship, and a mock sea-fight ensues.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

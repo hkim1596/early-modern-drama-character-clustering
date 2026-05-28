@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HIDAS in Cupid&#x27;s Revenge · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> ›
+  <span>HIDAS</span>
+</nav>
+
+<h1>HIDAS</h1>
+<p class="lede">in <em>Cupid&#x27;s Revenge</em> — Beaumont, FrancisFletcher, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1615</td></tr>
+<tr><th>Words</th><td>831</td></tr>
+<tr><th>Characters</th><td>4299</td></tr>
+<tr><th>BritDrama no.</th><td>1533</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 12 (<em>amyntas, phillis, did, must, endimion, death…</em>). Matches are highlighted.</p>
+<div class="excerpt">bold lasciuiousnes. Many Ages before this, When euery man got to himselfe a Trade, And was laborious in that chosen course, Hating an idle life, farre worse then <mark>death</mark>: Some one that gaue himselfe to wine and sloth, Which breed lasciuious thoughts; And found himselfe conioynd For that by euery painefull man, To take his staine</div>
+<div class="excerpt">For that by euery painefull man, To take his staine away, framde to himselfe A god, whom he pretented to obey, In being thus dishonest, for a name He call&#x27;d him <mark>Cupid</mark>. This created god, Mans nature being euer credulous Of any vice that takes part with his blood, Had ready followers enow: and since In euery age they grew, especially</div>
+<div class="excerpt">mayden-thoughts are fledde against my selfe, I harbour Traytors in my Virginitie, That from my child-hood kept me company, Is heauier then I can endure to beare: Forgiue me <mark>Cupid</mark>, for thou art a god, And I a wretched creature; I haue sinn&#x27;d, But be thou mercifull, and graunt that yet I may enioy what thou wilt haue me, Loue. Beshrew me then</div>
+<div class="excerpt">milde fauour I doe liue To tell thee so: I pray thee scorne me not; Alas, what can it adde vnto thy worth To tryumph ouer me, that am a Mayd? Without deceit, whose <mark>heart</mark> does guide her tongue, Drownd in my passions, yet I will take leaue. To call it reason that I dore on thee. What answere wilt thou giue me? If it be iest, not to</div>
+<div class="excerpt">Know, that thou art their better. Away, hold off thy hands: Strike her sweete Zoylous, for it is my will, Which thou hast sworne to doe. In way of Marriage, it <mark>must</mark> be so. Your Oath is tyde to heauen: as my loue to him, If I should aske all my life time, this is all still. Syr I am serious, I <mark>must</mark> haue this worthy man with</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">This is it I begge, And on my knees. The people of your Land, The Lycians, are through all the Nations That know their name, noted to haue in vse A vaine and fruitlesse Superstition; So much more hatefull, that it beares the shew Of true Religion, and is nothing else But a selfe-pleasing bold lasciuiousnes. Many Ages before this, When euery man got to himselfe a Trade, And was laborious in that chosen course, Hating an idle life, farre worse then death: Some one that gaue himselfe to wine and sloth, Which breed lasciuious thoughts; And found himselfe conioynd For that by euery painefull man, To take his staine away, framde to himselfe A god, whom he pretented to obey, In being thus dishonest, for a name He call&#x27;d him Cupid. This created god, Mans nature being euer credulous Of any vice that takes part with his blood, Had ready followers enow: and since In euery age they grew, especially Amongst your Subiects, who doe yet remaine Adorers of that drowsie Deitie: Which drinke inuented: and the winged Boy, (For so they call him) has his sacrifices. These loose naked statutes through the Land, And in euery Village, nay the palace Is not free from&#x27;em. This is my request, That these erected obsceane Images May be pluckt downe and burnt: and euery man That offers to&#x27;em any sacrifice, may lose his life. Cleophila, what was he that went hence? I meane that hansome man, That something more then man I met at dore. Come, hee&#x27;s some one You would preserue in priuate, but you want Cunning to doe it, and my eyes are sharper Then yours, and can with one neglecting glaunce, See all the graces of a man. Who was&#x27;t? That went hence now: I he. I thinke twas he: how brauely he past by: Is he not growne a goodly Gentleman? O blasphemy! he may perhaps to thee Appeare deform&#x27;d, for he is indeed Vnlike a man: his shape and colours are Beyond the Art of Painting; he is like Nothing that we haue seene, yet doth resemble Apollo, as I oft haue fancied him, When rising from his bedde he sturres himselfe, And shakes day from his hayre. Cleophila, goe send a page for him, And thou shalt see thy error, and repent. Alas what doe I feele, my blood rebells, And I am one of those I vs&#x27;d to scorne, My mayden-thoughts are fledde against my selfe, I harbour Traytors in my Virginitie, That from my child-hood kept me company, Is heauier then I can endure to beare: Forgiue me Cupid, for thou art a god, And I a wretched creature; I haue sinn&#x27;d, But be thou mercifull, and graunt that yet I may enioy what thou wilt haue me, Loue. Beshrew me then if I be merry; But I am content whilst thou art with me: Thou that art my Saint, By hope of whose milde fauour I doe liue To tell thee so: I pray thee scorne me not; Alas, what can it adde vnto thy worth To tryumph ouer me, that am a Mayd? Without deceit, whose heart does guide her tongue, Drownd in my passions, yet I will take leaue. To call it reason that I dore on thee. What answere wilt thou giue me? If it be iest, not to esteeme my life, Compard with thee: If it be iest in me, To hang a thousand kisses in an houre Vpon those lippes, and take &#x27;em off againe: If it be iest for me to marry thee, And take obedience on me whilst I liue: Then all I say is iest: For euery part of this, I sweare by those That see my thoughts, I am resolu&#x27;d to doe. And I beseech thee, by thine owne white hand, (Which pardon me, that I am bold to kisse With so vnworthy lippes) that thou wilt sweare To marry me, as I doe here to thee, Before the face of heauen. I aske no more: but let me kisse that mouth That is so mercifull, that is my will: Next, goe with me before the King in hast, That is my will, where I will make our Peeres Know, that thou art their better. Away, hold off thy hands: Strike her sweete Zoylous, for it is my will, Which thou hast sworne to doe. In way of Marriage, it must be so. Your Oath is tyde to heauen: as my loue to him, If I should aske all my life time, this is all still. Syr I am serious, I must haue this worthy man with out enquyring why; and suddenly, and freely: Doe not looke for reason or obedience in my words: My Loue admits no wisedome: Onely hast, and hope hangs on my furie. Speake Syr, speake, but not as a Father, I am deafe and dull to counsell: my inflamed bloud Heares nothing but my will, For Gods sake speake.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Cupid&#x27;s Revenge</div><div class="body">Leontius, King of Lycia, promises his daughter Hydaspes anything she asks for on her birthday. She wants him to ban the cult of Cupid in Lycia: the god’s naked statues are to be taken down and burnt, and Cupid-worship to be made a capital offence. Leontius agrees, persuaded that the religion is the cause of national immorality. His nephew Ismenus demurs: he will promulgate the Duke’s orders, but will himself take no hand in obeying them. As his temples are dismantled, Cupid declares vengeance on the kingdom. The Lycian royal family begins to behave with inappropriate amorousness. Hydaspes fixates on Zoilus, a deformed dwarf, and asks to be allowed to marry him; her father’s response is to have him beheaded, and she pines to death. Prince Leucippus falls for Bacha, a strumpet only interested in his wealth and power, but, questioned by his father, denies sexual misbehaviour and praises her virtue and chastity. Leontius is so impressed that he sends Leucippus away ===== PAGE 378 ===== and woos Bacha for himself, affecting youthful clothing and behaviour. Bacha becomes Queen of Lycia. When Leucippus returns to court, Bacha tries to seduce him again. He refuses to cuckold his father, and, annoyed at his refusal, she plots his death; this will leave her daughter Urania as the only heir to the throne. She makes Leontius jealous of his son’s popularity with the people and courtiers, and persuades him that Leucippus is plotting his assassination. The court parasite Timantus tells Leucippus that the King is to discuss his arrest at a council, and arranges to place him where he can eavesdrop and be forewarned of the charges. It is a ruse: Leucippus is arrested and sentenced to death, and Urania is proclaimed heir to the throne. At the execution, the citizens rise in rebellion and rescue the Prince from the scaffold. As Leontius sickens, Bacha schemes to marry Urania to a foreign prince; but she is in love with Leucippus, locates him through the good offices of Ismenus, and follows him posing as a page. Bacha engages Timantus to murder Leucippus. He finds the Prince by intercepting a letter from Ismenus; but his attack fails when Urania interposes her own body and is mortally wounded. Timantus is killed, but reveals her true identity before he dies. Ismenus brings Leucippus news that Leontius is dead. He declares that he will leave Bacha to heaven’s justice, but she stabs him. He dies, bequeathing the throne to Ismenus and enjoining him to reinstate the cult and…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> page.
+</div>
+</div></body></html>

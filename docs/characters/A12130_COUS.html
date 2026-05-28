@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COUS in 592 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>COUS</span>
+</nav>
+
+<h1>COUS</h1>
+<p class="lede">in <em>592</em> — [152]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1640</td></tr>
+<tr><th>Words</th><td>821</td></tr>
+<tr><th>Characters</th><td>4348</td></tr>
+<tr><th>BritDrama no.</th><td>592</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">your possession, and I am willing. On reasonable conditions, and such As shall not trench on borrowing money. For you shall give it freely and get by&#x27;t; For you <mark>must</mark> understand if I do this, I shall betray a friend of mine, that <mark>has</mark> Put me in trust, one that intends to marry her, (For truth to tell, they are not yet contracted)</div>
+<div class="excerpt">receive Some trifles, sir, in trust to be deliver&#x27;d To me, If I restore his Kinswoman. You sha&#x27;not long expect: So rest you merry. There, sir, you have her, and I <mark>must</mark> ha&#x27; these. &#x27;Tis upon record, I&#x27;ll bring a Parson that shall take his oath 〈◊〉 Here, here, but not to be recovered By law: I have a judgement, sir, against you.</div>
+<div class="excerpt">should fine For Alderman, though halfe his soule went with it, For his quietnesse; he doth apprehend Nothing but earth-quakes. My Lords, This fellowes insolence <mark>must</mark> be corrected; Dispose him in what prison you think fit. To Bedlam with him then, Is this a place for fools or madmen, who Admitted him? take him, see you He be</div>
+<div class="excerpt">madmen, who Admitted him? take him, see you He be well whipt, and let him thanke our mercy, Bandog. Does she not become her rich cloathes too? No more Raptures. I <mark>must</mark> confesse I had a trick of Mercury when I pick&#x27;d His pocket for the Keyes. His eyes were drench&#x27;d in fuds, and I return&#x27;d em Ere they recover&#x27;d light. D&#x27;ee think</div>
+<div class="excerpt">a thing was whisper&#x27;d only whisper&#x27;d; Just as he was describ&#x27;d: In my opinion Y&#x27;are very handsome, and do looke as like a reverend— Why, you shall have it, sir. <mark>Did</mark> not she leap the casement? With civill meaning to discover how You may be abus&#x27;d. I ha sworne never To write my name or marke; But I can tell— More I can do, if</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Right as an Arrow Couze. I was compell&#x27;d to frame the outside of a reason, Lest our owne mirth should play the Traytor with us, Her spleene was so dilated, he beleeved I have made her mad, which change makes for us. And he that we employed, the Pursevant, Shewed such a fierie Raskall, the poore Usurer Trembled, as Bawds beneath the lash. With as much joy, as to receive a hanging: He would be whipt, and say his prayers i&#x27;th&#x27; Church In a white sheet. Nay, he would pay as much as he should fine For Alderman, though halfe his soule went with it, For his quietnesse; he doth apprehend Nothing but earth-quakes. My Lords, This fellowes insolence must be corrected; Dispose him in what prison you think fit. To Bedlam with him then, Is this a place for fools or madmen, who Admitted him? take him, see you He be well whipt, and let him thanke our mercy, Bandog. Does she not become her rich cloathes too? No more Raptures. I must confesse I had a trick of Mercury when I pick&#x27;d His pocket for the Keyes. His eyes were drench&#x27;d in fuds, and I return&#x27;d em Ere they recover&#x27;d light. D&#x27;ee think he&#x27;ll know her? Where ha&#x27; you left him? Then all runs smoothe, his wonder still continues. I, that garbe becomes him; How was his person lost within that shape He was first presented to me? I will think on&#x27;t; He shall be — but toth&#x27; banquet, Then let the masque be ready, there we shall Employ your worthy diligence. You&#x27;ll follow. &#x27;Tis time to breake off revels: How like you this, S r . Gyles? I see you&#x27;d be a bed; You are not us&#x27;d To these late houres. Save M r . Hornet. This he? The Broker wo&#x27;not Lend halfe the money. I came for other purpose, and with newes perhaps, You would be willing to receive; You have A Neece? Faith I imagine. I thanke you, sir, for nothing; I do owe you Too much already, on these tearmes. Were you knighted lately? No generall rumour; By a chance I came Where such a thing was whisper&#x27;d only whisper&#x27;d; Just as he was describ&#x27;d: In my opinion Y&#x27;are very handsome, and do looke as like a reverend— Why, you shall have it, sir. Did not she leap the casement? With civill meaning to discover how You may be abus&#x27;d. I ha sworne never To write my name or marke; But I can tell— More I can do, if need require; Tis in my power to give Her back to your possession, and I am willing. On reasonable conditions, and such As shall not trench on borrowing money. For you shall give it freely and get by&#x27;t; For you must understand if I do this, I shall betray a friend of mine, that has Put me in trust, one that intends to marry her, (For truth to tell, they are not yet contracted) To marry her, d&#x27;ee marke? and yet e&#x27;re morning Three thousand pounds upon her, Is&#x27;t not so much? One that has lent me sums too without parchmon. Or foolish circumstance, to be repaid; Which you were never yet so much a Christian, As to be guilt of, in your Usurers gallon Of conscience melting Sacke; This deserves something, But cause some expedition is required; You have a Bond of mine. I had but forty, and your Scrivenor paid, With whom, perhaps, your worship too divided; If you remember, there were precious dinners, Ere I could count my Chickens altogether, Which was your thrift and my expence; You shall First cancell that Bond, nay this wo&#x27;not dot, And give, d&#x27;ee marke, give me a hundred pieces, Perhaps I&#x27;ll drinke your health: This shall retrive Your Neece, and give her into your hands, Though for my treachery, I be sung in ballads, And have the towne curse if ever I marry. If I consider, Three hundred will not bring me to&#x27; agen; Thus faire I&#x27;ll deale with you; I&#x27;le not touch your money Till I ha&#x27; don&#x27;t, but then I will be sure: Fetch, fetch the businesse. I will have ready money too: You have B gs of all sizes and denominations. I, these things promise well; now I&#x27;ll attend you. Excuse my boldnesse, sir, this Gentleman. Sir, our desires are modest; That you would Be witnesse to a bargaine, and receive Some trifles, sir, in trust to be deliver&#x27;d To me, If I restore his Kinswoman. You sha&#x27;not long expect: So rest you merry. There, sir, you have her, and I must ha&#x27; these. &#x27;Tis upon record, I&#x27;ll bring a Parson that shall take his oath 〈◊〉 Here, here, but not to be recovered By law: I have a judgement, sir, against you. I saw the Priest conjoyne&#x27;em: He will deserve your love. For your owne sake, and as you are true Knight.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

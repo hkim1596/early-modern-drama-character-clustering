@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAU in 478 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MAU</span>
+</nav>
+
+<h1>MAU</h1>
+<p class="lede">in <em>478</em> — [149]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1633</td></tr>
+<tr><th>Words</th><td>1481</td></tr>
+<tr><th>Characters</th><td>7999</td></tr>
+<tr><th>BritDrama no.</th><td>478</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">good men as I haue lyen in foule sheets I am sure; the linnen <mark>has</mark> not beene much the worse for the wearing a little: I will haue her with all my-<mark>heart</mark>. How&#x27;s that? <mark>must</mark> I come no more neere the Court? Not neere the Court? Wilt thou forsake me, Giacopo? Yes, I will <mark>goe</mark>; and I humbly thank your Lordship and Ladiship: Pauy, sweet</div>
+<div class="excerpt">of her excellencies beauty, in the prospectiue and mirror, as it were, in my <mark>heart</mark>. Who&#x27;s that laughs? search with thine eyes, Giacopo. Pitty,—oh my wisdome! I <mark>must</mark> speake to them. O Duke most great, and most renowed Dutchesse! Excuse my apprehension, which not much-is: &#x27;Tis loue, my Lord, that&#x27;s all the hurt you see, Angelica</div>
+<div class="excerpt">poetry, in the eternall commenda tion of this gracious Tooth-picker: but first, I hold it a most healthy policy to make a flight supper. For meat&#x27;s the food that <mark>must</mark> preserue our liues, And now&#x27;s the time, when mortals whet their kniues on thresholds, shoo-soles, Cart-wheeles, &amp;c. <mark>Away</mark> Giacopo. Blesse thee, most excellent Duke;</div>
+<div class="excerpt">Madam, If I grow sicke, to make my spirits quicker, I will reuiue them with this sweet Tooth-picker. Giacope! Come behind me, Giacopo; I am big with conceit and <mark>must</mark> be deliuered of poetry, in the eternall commenda tion of this gracious Tooth-picker: but first, I hold it a most healthy policy to make a flight supper. For meat&#x27;s</div>
+<div class="excerpt">highest, a direct Figure; put it downe, Giacopo Yes, pray, my Lord. Good my Lord, I am an innocent in the businesse. Come you my learned Counsell, doe not rore; If I <mark>must</mark> hang, why then lament therefore: You may reioyce, and both, no doubt, be great To serue your Prince, when I am turn&#x27;d wormes meat. I feare my lands, and all I haue,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">BEard be confin&#x27;d to neatnesse, that no haire May stouer vp to pricke my mistris lip, More rude than bristles of a Porcupine. Giacopo. Am I all sweet behind? But Giacopo, with what grace doe my words pro ceed out of my mouth? haue I a mouing countenance? is there harmony in my voyce? canst thou perceiue, as it were, a hansomenesse of shape in my very breath, as it is formed into syllable, Giacopo? Hold thou the glasse, Giacopo, and marke me with what exceeding comlinesse I could court the Lady Marquesse if it come to the push. Thus I reuerse my pace, and thus stalkingly in Courtly gate I aduance, one, two, and three.—Good, I kisse my hand, make my Congee, settle my countenance, and thus begin.—Hold vp the glasse higher, Giacopo. &#x27;Tis well, now marke me: Most excellent Marquesse, most faire La-dy, Let not old age, or haires that are sil-uer Dis-parage my desire; for it may be I am then other greene youth nimb-ler: Since I am your gra-ces seruant so true, Great Lady then loue me for my ver-tue. Oh Giacopo! Petrach was a dunce, Dantes a Iig-maker, S&#x27;anazar a goose, and Ar … osto a puck-fist to me: I tell thee, Giacopo, I am wrap&#x27;d with fury, And haue beene for these six nights together Drunke with the pure liquor of Helycon. God-a-mercy braines; Giocopo, I haue it. A conceit, Giacopo, and a fine one; downe on thy knees, Giocopo, and worship my wit; giue me both thy eares: thus it is, I will haue my picture drawn most composituously in a squire table of some too foot long, from the crowne of the head to the waste downward, no further. Speake not thou, but wonder at the conceit that followes; In my bosome on my left side. I will haue a lease of blood-red crimson veluet (as it were part of my doublet) open; Which being open&#x27;d, Giacopo, (now marke) I will haue a cleare and most transparent Chrystall in the forme of a heart.—(Singular admirable.) When I haue framed this, I will, as some rare outlandish peece of workemanship, bestow it on the most faire and illustrious Lady Fiormonda. Simplicity and Ignorance, prate no more: blockhead, dost not vnderstand yet? why this being to her instead of a Looking-glasse, she shall no oftner powder her haire, surfell her cheekes, cleanse her teeth, or conforme the haires of her eye-browes, but hauing occasion to vse this glasse (which for the rarenesse and richnesse of it, she will hourely doe) but she shall as often gaze on my picture, remember me, and behold the excellence of her excellencies beauty, in the prospectiue and mirror, as it were, in my heart. Who&#x27;s that laughs? search with thine eyes, Giacopo. Pitty,—oh my wisdome! I must speake to them. O Duke most great, and most renowed Dutchesse! Excuse my apprehension, which not much-is: &#x27;Tis loue, my Lord, that&#x27;s all the hurt you see, Angelica her selfe plead for me. Giacopo, helpe me; his Grace has put mee out my owne Bias, and I know not what to answer in forme. Yes, I will come, my Lord the Duke, I will. Are they gone? What newes, Giacopo? She is mine, Giacopo, she is mine; aduance the glasse, Giacapo, that I may practise as I passe, to walke a portly grace like a Marquesse; to which degree I am now a climbing. Thus doe we march to honors hauen of blisse, To ride in triumph through Persepolis. Let them wonder; I am wise, as I am Courtly. Nay, I know I can tickle &#x27;em at my pleasure: I am stiffe and strong, Ferentes. She doth loue me. Right Princely Fernando, the best of the Fernando&#x27;s: by the pith of generation, the man I looke for. His Highnes hath sent to find you out; hee is determin&#x27;d to weather his owne proper individuall person, for two dayes space, in my Lord Narbassa&#x27;s forrest, to hunt the Deere, rhe Bucke, the Roe, and eke the Barren Doe. My Lord Fernando, I haue a sute to you. Will you grant mine? Onely to know what the sute is, you please to P … ferre to me. A Foole? I beseech you, my Lord, has the foole qualities? Giacopo, these are very rare elements in a creature of little vnderstanding: oh, that I long to see him. I take the Foole most thankefully at your hands, my Lord: Hast any qualities, my pretty foole? wilt dwell with me? Beast that I am, not to aske the fooles name: &#x27;Tis no matter, Foole is a sufficient title to call The greatest Lord in the Court by, if he be no wiser then he. True; oh that he could but speake methodically! Canst speake, Foole? I haue it, I am wise and fortunate; Giacopo, I will leaue all conceits, and instead of my picture, offer the Lady Marquesse this mortall man of weake brayne. I may tell you, Ferentes, there&#x27;s not a great woman amongst forty, but knowes how to make sport with a Foole. Dost know how old thou art, sirrah? Most fit opportunitie: Her grace comes iust i&#x27;th nicke; let me study. Vouchsafe to stay thy foot, most Cynthian hue. And from a Creature, euer vow&#x27;d thy seruant, Accept this gift; most rare, most fi … , most new, The earnest penhy of a loue so seruent. Nothing, sweet Princesse, But onely to present your grace with this sweet fac&#x27;d Foole: please you to accept him to make you merry; I&#x27;le assure your Grace, he is a very whole some Foole. Now, iust very now, giuen me out of speciall fauour, by the Lord Fernando, Madam. A Tooth-picker; I kisse your bounty: no quibble now? And Madam, If I grow sicke, to make my spirits quicker, I will reuiue them with this sweet Tooth-picker. Giacope! Come behind me, Giacopo; I am big with conceit and must be deliuered of poetry, in the eternall commenda tion of this gracious Tooth-picker: but first, I hold it a most healthy policy to make a flight supper. For meat&#x27;s the food that must preserue our liues, And now&#x27;s the time, when mortals whet their kniues on thresholds, shoo-soles, Cart-wheeles, &amp;c. Away Giacopo. Blesse thee, most excellent Duke; I here present thee as worthy and learned a Gentleman, as euer I (and yet I haue liued threescore yeares) conuers&#x27;d with; take it from me, I haue try&#x27;d him, and is worthy to be priuy-Counsayler to the greatest Turke in Christendome: of a most apparant and deep vnderstanding, slow of speech, but speaks to the purpose; Come forward, Sir, and appeare before his Highnesse in your owne proper Elements. Oh Sir, had you heard him as I did, deliuer whole histories in the Tangay tongue, you would sweare there were not such a linguist breath&#x27;d againe; and did I but perfectly vnderstand his language, I would be confident, in lesse then two houres, to distinguish the meaning of Bird, Beast, or Fish, naturally, as I my selfe speake Italian, my Lord.—Well, he has rare qualities. I will, my Lord. Tell me, rare scholler, which in thy opinion, Doth cause the strongest breath,— garlick or onyon? Admirable, I protest, Duke; marke oh Duke, mark! What did I aske him, Giacopo? Right, right by Hellicon; and his answer is, that a knane has a stronger breath then any of &#x27;em; wisedome (or I am an Asse) in the highest, a direct Figure; put it downe, Giacopo Yes, pray, my Lord. Good my Lord, I am an innocent in the businesse. Come you my learned Counsell, doe not rore; If I must hang, why then lament therefore: You may reioyce, and both, no doubt, be great To serue your Prince, when I am turn&#x27;d wormes meat. I feare my lands, and all I haue, is begg&#x27;d, Else, woe is me, why should I be so ragg&#x27;d? O how my stomacke doth begin to puke! When I doe heare that onely word, the Duke. Nay, and shall please your good grace, and it come to that, I care not; as good men as I haue lyen in foule sheets I am sure; the linnen has not beene much the worse for the wearing a little: I will haue her with all my-heart. How&#x27;s that? must I come no more neere the Court? Not neere the Court? Wilt thou forsake me, Giacopo? Yes, I will goe; and I humbly thank your Lordship and Ladiship: Pauy, sweet Pauy farwel: come wife, come Gia- Now is the time that we away must lag, (copo. And march in pompe with baggage and with bag: O poore Maurucio! what hast thou mis-doue? To end thy life when life was new begun. A … ew to all; for Lords and Ladies see My wofull plight; and Squires of low degree:</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 478</div><div class="body">Eteocles and Polynices are elected co-kings of Thebes, ruling in alternate years. At the end of the first year, Eteocles refuses to stand down and banishes Polynices. Six champions join Polynices to besiege Thebes, but, after heavy losses, Polynices offers to settle the case by single combat. He and Eteocles kill one another, and Creon takes the crown. Tiresias prophesies that the walls of Thebes will stand only as long as the last of the seven champions remains alive. After Adrastus’ death, the Argive troops sack the city. 1569</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAN in Croesus · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> ›
+  <span>SAN</span>
+</nav>
+
+<h1>SAN</h1>
+<p class="lede">in <em>Croesus</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>690</td></tr>
+<tr><th>Characters</th><td>4072</td></tr>
+<tr><th>BritDrama no.</th><td>1425</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 25 (<em>did, whil, death, might, minde, fortune…</em>). Matches are highlighted.</p>
+<div class="excerpt">defend. &quot;Ah! this is but the out-ſide of your courſe, &quot;A dangerous ambuſh which ambition plants: &quot;There may come Rivers raging from this ſource, &quot;To drown your ſtate, <mark>whil</mark>&#x27;ſt ſuch high <mark>thoughts</mark> nought daunts; &quot;I know thoſe new-borne monſters of vour <mark>minde</mark> &quot;Have arm&#x27;d your raviſh&#x27;d heart with faire conceits, &quot;Yet may thoſe wonders</div>
+<div class="excerpt">ſee, &quot;And not attaine to that which you deviſe. Thus ſtill in love with what we <mark>minde</mark> to doe, &quot;What we affect, we faireſt ſtill conceive, &quot;This feeds our humour, <mark>whil</mark>&#x27;ſt (ſelfe-flatterers) loe, &quot;To ſhew our wit, we would our ſelves deceive; &quot;Vaine hopes ſo maske all doubts, you cannot ſpy &quot;What ſecret danger this deſigne doth</div>
+<div class="excerpt">(Sir) to ſtop the ſource. That is not kingly. Such woefull plaints cannot repaire your ſtate. what Stoicke ſtrange, who moſt preciſe appeares, Could that youths <mark>death</mark> with teareleſſe eyes behold, In all perfections ripe, though greene in yeares, A hoarie judgement under lockes of gold? No, no man lives, but muſt lament to ſee</div>
+<div class="excerpt">(ſelfe-flatterers) loe, &quot;To ſhew our wit, we would our ſelves deceive; &quot;Vaine hopes ſo maske all doubts, you cannot ſpy &quot;What ſecret danger this deſigne doth beare; &quot;But <mark>whil</mark>&#x27;ſt well view&#x27;d with an indifferent eye, &quot;There want not grounds, where fore-ſight may find feare: &quot;You unadvis&#x27;dly purpoſe to purſue &quot;A barbarous people oppoſite</div>
+<div class="excerpt">eaſie, that they feele no paine, &quot;This cooles the ſummers heate, kils winters cold: &quot;This makes the Rivers dry, the Mountaines plaine. &quot;They whoſe ambition poverty <mark>did</mark> bound, &quot;Of Lydia&#x27;s dainties if they once doe taſte, &quot;Will have in hatred ſtraight their barren ground, &quot;And all our treaſures inſolently waſte; &quot;To governe ſuch,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Let not thoſe woes ecclipſe your vertues light. Strive of your ſorrowes (Sir) to ſtop the ſource. That is not kingly. Such woefull plaints cannot repaire your ſtate. what Stoicke ſtrange, who moſt preciſe appeares, Could that youths death with teareleſſe eyes behold, In all perfections ripe, though greene in yeares, A hoarie judgement under lockes of gold? No, no man lives, but muſt lament to ſee The worlds chiefe hope even in the bloſſome choak&#x27;d, &quot;But men cannot controll the Heavens decree, &quot;And what is done, can never be revok&#x27;d. Let not this loſſe with griefe torment you more; Of which a part with you your Country beares: If wailing could your ruin&#x27;d ſtate reſtore, Soules charg&#x27;d with griefe ſhould ſaile in Seas of teares; Leſt all our comfort daſh againſt one ſhelfe, And his untimely death but haſten yours. Have pitty of your people, ſpare your ſelfe, If not to your own uſe, yet unto ours. This benefit muſt binde me with the reſt To ſerve your Majeſtie, and hold you deere, And I&#x27;le be free with you, yet I proteſt, That what I friendly ſpeake, you freely heare. Oft men of Iudges thence have parties gone, &quot;Where both their eares were patent but to one. A deadly rancor reconcil&#x27;d againe, &quot;With conſanguinity would ſeal&#x27;d remaine. Though natures law you car&#x27;d not to tranſgreſſe, &quot;Nor this your wrong&#x27;d ally would not repaire; &quot;Yet the regard to Monarchs in diſtreſſe, &quot;Should move the mighty with a mutuall care; &quot;Thoſe terrours too which thunder in your eare, &quot;I thinke the Lydians will not well allow: &quot;For when the Cedar falles, the Oake may feare, &quot;That which o&#x27;rethrowes the Medes may trouble you. &quot;And when a neighbours houſe they burning view, &quot;Then their owne dangers men may apprehend; &quot;It better is with others to purſue, &quot;Then be when but alone, forc&#x27;d to defend. &quot;Ah! this is but the out-ſide of your courſe, &quot;A dangerous ambuſh which ambition plants: &quot;There may come Rivers raging from this ſource, &quot;To drown your ſtate, whil&#x27;ſt ſuch high thoughts nought daunts; &quot;I know thoſe new-borne monſters of vour minde &quot;Have arm&#x27;d your raviſh&#x27;d heart with faire conceits, &quot;Yet may thoſe wonders which you have divin&#x27;d, &quot;Prove traiterous projects, painted for deceits; &quot;And (pardon Sir) it is not good to be &quot;Too raſhly ſtout, nor curiouſly wiſe, &quot;Leſt that you leave that which we certaine ſee, &quot;And not attaine to that which you deviſe. Thus ſtill in love with what we minde to doe, &quot;What we affect, we faireſt ſtill conceive, &quot;This feeds our humour, whil&#x27;ſt (ſelfe-flatterers) loe, &quot;To ſhew our wit, we would our ſelves deceive; &quot;Vaine hopes ſo maske all doubts, you cannot ſpy &quot;What ſecret danger this deſigne doth beare; &quot;But whil&#x27;ſt well view&#x27;d with an indifferent eye, &quot;There want not grounds, where fore-ſight may find feare: &quot;You unadvis&#x27;dly purpoſe to purſue &quot;A barbarous people oppoſite to peace, &quot;Who but by robbery to their greatneſſe grew, &quot;And would for each light cauſe, the warres embrace; &quot;No dainty ſilkes, dipt in Aſſyrian dye, &quot;Doe decke their bodies, to abaſe their mindes: &quot;Skinnes reft from beaſts them cloath, who danger ply, &quot;Not mov&#x27;d by flattering Sunnes, nor bragging windes; &quot;They ſimply feed, and are not griev&#x27;d each day, &quot;With ſtomackes clody, decocting divers meates, &quot;They fare not as they would, but as they may, &quot;Of judgement ſound, not carried with conceits. &quot;Thoſe ancient cuſtomes which they ſtrictly hold, &quot;Make all things eaſie, that they feele no paine, &quot;This cooles the ſummers heate, kils winters cold: &quot;This makes the Rivers dry, the Mountaines plaine. &quot;They whoſe ambition poverty did bound, &quot;Of Lydia&#x27;s dainties if they once doe taſte, &quot;Will have in hatred ſtraight their barren ground, &quot;And all our treaſures inſolently waſte; &quot;To governe ſuch, although that we prevaile, &quot;You ſhall but buy vexation with your bloud, &quot;And doe your ſelfe, and yours, if fortune faile, &quot;From Soveraignty (by time ſecur&#x27;d) ſeclude; Yea, though this raſh deſire your judgement blindes, I for my part muſt praiſe the Gods for you, Who have not yet inſpir&#x27;d the Perſians mindes, To waſte with warre all Lydia long ere now.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Croesus</div><div class="body">Solon visits Croesus, hoping to persuade him to give up his immoderate love of gold and think about less transitory things. He explains that all mortality is subject to change, and tells Croesus stories about the importance of posthumous fame, but Croesus considers them irrelevant to his situation as a king. Solon realizes that Croesus wili change only by losing the power which has made him arrogant. Adrastus is banished from Phrygia after accidentally killing his brother. (His intended victim was the man who poisoned his girlfriend.) Croesus has a nightmare about the death of his son Atys, and becomes excessively protective: he makes Atys marry in order to secure the succession, appoints him a bodyguard, and bans the type of sharp implement which caused his death in the dream. Mysia is ravaged by a wild boar, and its people appeal to Croesus for help. He is happy to hear that they don’t want his money, but distressed that they ask instead that he send Atys to hunt the boar. Atys protests at his father’s reluctance, so Croesus accedes, assigning Adrastus to look after him during the mission. Atys is killed, and Adrastus kills himself in remorse. In the past, Astyages, King of Media and Croesus’ brother-in-law, was perturbed by a prophecy that he would be deposed by his grandson. When the child was born, he tried to have it killed; but the herdsman who was given the job spared its life and adopted it as a replacement for his own stillborn baby. During his youth, Cyrus’ princely behaviour led to his identification. Astyages served Harpagus a banquet of his own son’s flesh, so Harpagus contacted Cyrus and raised a rebellion. Now Cyrus has led the Persian army to depose Astyages. Against his counsellor’s advice, Croesus plans to intervene and conquer Persia, but Cyrus anticipates him and attacks pre-emptively, ordering that Croesus be taken alive. Croesus is nearly killed by a Persian soldier, but saved when his dumb son cries out and identifies him. Cyrus intends to burn him at the stake, but is impressed by Croesus’ acknowledgement that Solon was right to warn him not to trust in worldly things. Cyrus frees him, and orders restraint in his soldiers’ looting.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> page.
+</div>
+</div></body></html>

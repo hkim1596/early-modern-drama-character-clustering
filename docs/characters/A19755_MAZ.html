@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAZ in The Bloody Banquet · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MAZ</span>
+</nav>
+
+<h1>MAZ</h1>
+<p class="lede">in <em>The Bloody Banquet</em> — Dekker, ThomasMiddleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1639</td></tr>
+<tr><th>Words</th><td>1352</td></tr>
+<tr><th>Characters</th><td>7029</td></tr>
+<tr><th>BritDrama no.</th><td>1624</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">allowes it, If he should prove a rivall to my love, I have argued faire for his abiding here: My plots shall worke his ruine, if one faile Ile rayse a second, for I <mark>must</mark> prevaile: I that us&#x27;d policie to cause him stay Can shew like Art to rid my feares <mark>away</mark>. Exit. Death! minute favours? every step a kisse? I thinke they count how</div>
+<div class="excerpt">Roxano ▪ Enough. Exit. My Lord? Now could I poyson him fitly, aptly, rarely, My vengeance speakes me happy; there it goes. It comes my Lord. And in this my revenge <mark>must</mark> be remov&#x27;d Where first I left it, now my abused wrath Pursues thy ruine in this dangerous path. Ile after thee, and see the measure of my vengeance upheapt His</div>
+<div class="excerpt">the light. He dyes were he my kinseman for that guilt, Though twere as farre to&#x27;s <mark>heart</mark> as tis to th&#x27; hilt. Fall villaine, for betraying of thy Lady, Such things <mark>must</mark> never creepe about the earth To poyson the ̄ right use of service— a Trecher! O villaine, in, and overtake thy soule. Oh pardon me, that were too full of evill,</div>
+<div class="excerpt">cut off long journeys, And tedious wayes that runne my hopes past breath, Ile take the plaine roade ̄ way and hunt his death. Exit. Ile have some other, for he <mark>must</mark> not live. Roxano in my judgement had be ̄ ene fittest, And farthest from suspect of such a deed Because he keepes in the Castle. Roxano! I was to seeke thee twice;</div>
+<div class="excerpt">call&#x27;d desert, I shall de serve. Why this was happily observ&#x27;d and follow&#x27;d; a side. The King will to the Castle late to night, And tread through all the Vaults, I <mark>must</mark> attend. Tis better thus; so my revenge imports; Now thrive my plots, the end shall make me great, She mine, the Crowne sits here I am then Compleate ̄ . Exit. Yes,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">He cooles—my Lord, remember you are possess&#x27;d. Those men are yours, my Lord. Your Grace defines him right, he may remaine ̄ , The Prince your sonne, bindes him in a love-chaine; There&#x27;s little feare of him. His presence sets a glosse on your atte ̄ mpts, They have their luster from him. Ha! taste lips so bounteously with a begger? What&#x27;s here? either the Princes out of charities rare nesse Are pleas&#x27;d to lay aside their glories, and refresh The gasping fortunes of a desperate wretch; Or if for larger bounties I was mad T&#x27; advise the King for his remaining here That had beene banish&#x27;d, and with him my feare: I love the Princesse, and the King allowes it, If he should prove a rivall to my love, I have argued faire for his abiding here: My plots shall worke his ruine, if one faile Ile rayse a second, for I must prevaile: I that us&#x27;d policie to cause him stay Can shew like Art to rid my feares away. Exit. Death! minute favours? every step a kisse? I thinke they count how the day goes by kissing, Tis past foure since I met them. Stayes he to proove my Rivall? curs&#x27;d be th&#x27; houre ̄ Wherein I advis&#x27;d the King for his stay here, I have set slaves t&#x27; entrap him, yet none prosper, Ile lay no more my faith upon their workes Th&#x27; are weake and loose, and like a rotten wall, Leaning on them may hazard my owne fall. Ile use a swifter course, cut off long journeys, And tedious wayes that runne my hopes past breath, Ile take the plaine roade ̄ way and hunt his death. Exit. Ile have some other, for he must not live. Roxano in my judgement had be ̄ ene fittest, And farthest from suspect of such a deed Because he keepes in the Castle. Roxano! I was to seeke thee twice; Tell me Roxano, have I any power in thee? doe ̄ I move there, Or any part of me flow in thy blood? As far as love man, I aske no further. First there&#x27;s gold for thee, After which follow favour, eminence, And all those gifts which fortune calls her owne. There&#x27;s one Tymethes sonne to the banisht King, Lives about Court, Zenarchus gives him grace, That fellow&#x27;s my disease, I thrive not with him, He&#x27;s like a prison chaine shooke in my eares I take no sleepe for him, his favours mad me. My honours and my dignities are dreames When I behold him; That right arme can ease ̄ me, I will not boast my bounties, but for ever Live rich and happy: thou art wise farewell. Exit. Hast thou thought of me? may I doe good upon thee? Ile out of recreation, make thee worthy; play honours to thy hand. Art thou resolv&#x27;d? and I will be thy Lord. Thou mak&#x27;st me thirst. Here? excellent, on Roxano ; he meetes thee here. Y faith I doe. Withdraw behind the Lodge ̄ , relate it breefely. I both admire the deede, and my revenge. Thou mak&#x27;st thy friend. Exit. Whist, Roxano ▪ Enough. Exit. My Lord? Now could I poyson him fitly, aptly, rarely, My vengeance speakes me happy; there it goes. It comes my Lord. And in this my revenge must be remov&#x27;d Where first I left it, now my abused wrath Pursues thy ruine in this dangerous path. Ile after thee, and see the measure of my vengeance upheapt His ruine is my charge; I have seene that This night would make one blush through this vizard. Like lightning in a Tempest her lust shewes, Or drinking drunke in Thunder, horrible: For on this Act a Thousand dangers waite, The King will seize him in his burning fury and seale his vengeance on his reeking brest, Though I make Panders use of eare and eye No office vile to damme mine Enemie. This course is but the first, twill not rest there, The next shall change him into fire and Ayre. Exit. I&#x27;me sure of more my Lord, she favours him. Worse my Lord, that villaine Traytor, and yet worse my Lord. Pardon my Lord, a riper time shall bring him forth. Behold him there my Lord. Tymethes kisses her. Favours are growne to custome twixt them both, Letters, close banquets, whisperings, private meetings. Marry, my Lord, she courtly begs a Iewell of him Which he keepes backe as Courtly, with faire words. Tis hers my Lord, at which they part in kisses. Enough, th&#x27;art honest; I affect thee much; Goe, traine him to his ruine. Exit. I know not what; The King sent. Here comes his Highnesse. Enter Tyrant. My Lord! I can resolve your highnesse. He is some Ape, the huske falls from him now, And you shall know his inside: he&#x27;s a villaine, A Traytor to the pleasures of your Bed. He&#x27;s receiv&#x27;d this night Into her bosome. I trac&#x27;d him to the deed. I abus&#x27;d my eyes in the true survey of&#x27;t, Tainted my hearing with lascivious sounds; My loyalty did prompt me to be sure Of what I found so wicked and impure. This night. Madam. I doe beseech your Grace for what I have done Lay no oppressing censure upon me; I could not but in honesty reveale it, Not envying in that he was my Rivall, Nor in the force of any ancient grudge But as the deede in its owne nature crav&#x27;d, So mong the rest it was reveal&#x27;d to me: Appe ̄ aring so detested that your selfe Gracious and kinde, had you but seene the manner Would have throwne by all pitty and remorce And tooke my office or one more in force. If constant service may be call&#x27;d desert, I shall de serve. Why this was happily observ&#x27;d and follow&#x27;d; a side. The King will to the Castle late to night, And tread through all the Vaults, I must attend. Tis better thus; so my revenge imports; Now thrive my plots, the end shall make me great, She mine, the Crowne sits here I am then Compleate ̄ . Exit. Yes, my good Lord. True, my Lord, I brought him, saw him feasted and re ̄ ceiv&#x27;d, So, by this sleight I have deceiv&#x27;d them both, I&#x27;m tooke for him I strive to make her loath. Exit. Yonder she kneeles, little suspecting me The neate discoverer of her Venery. I were full safe had I Roxano&#x27;s life Which in this streame I fish for; how now Lady; So nere the earth suites not a living Queene. What is&#x27;t that can drive you to such discomforts ▪ To prize your glories at so meane a Rate? Dare they prove trecherous? most ignoble Vassals, To the sweete peace of so divine a Mistresse? Let me but know him, that I may bestow My service to your Grace upon his heart And thence deserve a Mistresse like your selfe. Madam, stand by, let him not see the light. He dyes were he my kinseman for that guilt, Though twere as farre to&#x27;s heart as tis to th&#x27; hilt. Fall villaine, for betraying of thy Lady, Such things must never creepe about the earth To poyson the ̄ right use of service— a Trecher! O villaine, in, and overtake thy soule. Oh pardon me, that were too full of evill, I threat not Angels though I smite the Devill: Doubt not your peace, the King will be appeas&#x27;d There Ile bestow my service. As much as comes to nothing; Ile not sue To urge the King from that he urg&#x27;d him to. Exit. I dreampt of some new honours for my late service ̄ , And I wondred how he could keepe off so long from my de sert, My lov&#x27;d Lord. I was received into a waiters roome my Lord. And in a vizard helpt to serve the banquet. Saw him conveyd into a Chamber privately. I let him play my Lord. I watcht still nere, till her armes claspt him. There he was caught my Lord.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Bloody Banquet</div><div class="body">Although peace between Lydia and Lycia is guaranteed by an exchange of hostages, the King of Lycia persuades the Lydian hostage, Lapyrus, to betray his country. When hostilities resume, Lydia solicits military assistance from Armatrites, King of Cilicia, who repels the invaders - but then seizes the Lydian throne. The Queen flees with her infant children into the forest, where Lapyrus rescues her from the advances of two soldiers. In remorse for his treachery, he gives her the opportunity to kill him, but she cannot bring herself to do it. He becomes her protector, and goes in search of food, but falls into a wolf-trap. One of the babies dies of starvation. The old King of Lydia rescues Lapyrus from the pit, but the Queen has gone when Lapyrus shows the King where he left her. Armatrites’ son, Zenarchus, promises Tymethes, the heir of Lydia, that he will give back the kingdom when he succeeds to the throne. Tymethes falls in love with Zenarchus’ sister, Amphridote, who has been promised in marriage to the court favourite Mazeres. Zenarchus and Tymethes visit the young Queen of Cilicia, whom Armatrites has jealously locked up in a castle. She conceives a passion for Tymethes, and bribes her keeper Roxano to arrange an assignation, with the proviso that Tymethes must not know her identity lest he boast of his conquest; but Mazeres also bribes Roxano to kill Tymethes, and his gold seems to weigh the heavier. Tymethes keeps the appointment, is taken to the Queen with a hood over his head, and is feasted, then seduced. With Roxano’s help, Mazeres poses as one of the masked waiters; he attempts to poison Tymethes’ wine, ===== PAGE 92 ===== but the wine is spilt by accident. Though enjoined not to inquire into the lady’s identity, Tymethes purloins her ring in the hope of learning who she is. Mazeres and Armatrites secretly watch a liaison between Tymethes and Amphridote. She begs the ring from Tymethes, and is given it on condition that she keeps it safe. When the King confronts his daughter, he recognizes his wife’s ring, and Mazeres explains how Tymethes came by it. Amphridote is horrified, switches her affections to Mazeres, and swears revenge. On his ‘hext darkling visit to his lover, Tymethes brings a light and learns that she is the Queen; she shoots him dead. ‘When Armatrites arrives, she claims that she was defending herself against a rapist, but the King will not believe her; her punishment will be to banquet on Tymethes’ flesh. Armatrites learns from…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

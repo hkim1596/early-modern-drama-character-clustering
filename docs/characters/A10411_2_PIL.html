@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PIL in Amyntas, or The Impossible Dowry · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> ›
+  <span>PIL</span>
+</nav>
+
+<h1>PIL</h1>
+<p class="lede">in <em>Amyntas, or The Impossible Dowry</em> — Randolph, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>896</td></tr>
+<tr><th>Characters</th><td>4934</td></tr>
+<tr><th>BritDrama no.</th><td>2321</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 12 (<em>amyntas, phillis, did, must, endimion, death…</em>). Matches are highlighted.</p>
+<div class="excerpt">This happy village; to expresse our glee This day each yeare shall Cupids triumphs <mark>bee</mark>. The Goddesse is well pleas&#x27;d, she daines to answer By gracious Echo&#x27;s; goe <mark>Amyntas</mark> speak.</div>
+<div class="excerpt">Archiflamen of Trinacria I <mark>did</mark> demand a Dowry of that sheapheard That askes my daughter:—Set the price said I, Thou Goddesse, that dost cause such hatefull loves; If that <mark>Amyntas</mark> be thy darling swaine, Aske thou, and set a Dowry for Vrania: With that the Altar groan&#x27;d, my haire grew stiffe, <mark>Amyntas</mark> look&#x27;d agast; Vrania quiver&#x27;d, And the</div>
+<div class="excerpt">kindled? And is the fire of my Damon kindled But to be quench&#x27;t againe: Ceres! a frost Dwell on thy Alters, ere my zeale renew Religious fires to warme&#x27;em. How <mark>Amyntas</mark>? speake! Thou that hast sav&#x27;d a Father, save a sonne. <mark>Amyntas</mark>, thou hast now made full amends For my Philebus <mark>death</mark>; Claius all envy, Envy the viper of a venemous</div>
+<div class="excerpt">Fond Vrania, Can ignorant love make thee affect the seede, The hatefull seede of cursed Lalage? <mark>Did</mark> I for this beget thee? I blame thee not so much For loving him, while yet he was Amynt as. But being mad and having lost himselfe, Why shouldst not thou loose thy</div>
+<div class="excerpt">… a; All her answers Are full, and doubtfull. Appeas&#x27;d say you? Rather againe incens&#x27;d so farre, Corymbus, As that my selfe am plagu&#x27;d; My poore Vrania Dotes on <mark>Amyntas</mark>. The chaine of fate Will have it so! And he lov&#x27;d her as much. Ah, thou knowest not What sting this waspish fortune pricks me with! I seeing their loves so constant,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Fond Vrania, Can ignorant love make thee affect the seede, The hatefull seede of cursed Lalage? Did I for this beget thee? I blame thee not so much For loving him, while yet he was Amynt as. But being mad and having lost himselfe, Why shouldst not thou loose thy affection too ▪ What canst thou love In his distemper&#x27;d wildnesse? Doe not Vrania. The Gods did well to make their Destinies Of woemen, that their wills might stand for law Fixt and unchang&#x27;d; who&#x27;s this? Corymbus? he. Corymbus —welcome! What newes Corymbus? Is our Countrie&#x27;s Mischeif Fetter&#x27;d in chaines? Corymbus none! The Goddesse has not yet deign&#x27;d to accept One sacrifice, no favourable Echo Resounded from her Omp … a; All her answers Are full, and doubtfull. Appeas&#x27;d say you? Rather againe incens&#x27;d so farre, Corymbus, As that my selfe am plagu&#x27;d; My poore Vrania Dotes on Amyntas. The chaine of fate Will have it so! And he lov&#x27;d her as much. Ah, thou knowest not What sting this waspish fortune pricks me with! I seeing their loves so constant, so inflexible, Chid with dame Ceres if sheus&#x27;d me thus. My words were inconsiderate, and the heavens Punish&#x27;d my rough expostulations: Being Archiflamen of Trinacria I did demand a Dowry of that sheapheard That askes my daughter:—Set the price said I, Thou Goddesse, that dost cause such hatefull loves; If that Amyntas be thy darling swaine, Aske thou, and set a Dowry for Vrania: With that the Altar groan&#x27;d, my haire grew stiffe, Amyntas look&#x27;d agast; Vrania quiver&#x27;d, And the Ompha answer&#x27;d No. Ceres defend us, The Sacred Vally is prophan&#x27;d. By Ceres, and her holy Ompha, hee That did it, with his blood shall satisfy The Goddesse anger; who by blood offends By his own sacrific&#x27;d, must make amends. How soever &#x27;Tis death to him that did it. What should this mean Corymbus! You see her selfe frees him. Laurinda, and Alexis, doe you call The Sheapheards, and the virgins of Sicilia To see him sacrific&#x27;d, whose death must make There loves more fortunate; this day shall be Happy to all Sicilians, but to mee. Yet come thou cursed Claius, the sweet comfort Which I shall take when my revenge is done, Will something ease the sorrow for my sonne. Sicilians, Nature and religion Are at contention in mee: my sad soule Divided &#x27;twixt my Goddesse and my sonne, Would in her strange distractions, either have mee Turne Parricide or Apostate: Awefull Ceres, For whom I feed the fattest of my Lambs, To whom I send the holiest of my prayers Vpon the smoaky wings of sweetest myrrhe, Instruct thy doubtfull Flamen! As I cannot Forget I am thy priest: for sooner shall Our Lambs forget to feed, our swaines to sing, Our Bees forget first, from the fruitfull Thyme To cull them baggs of Nectar: everything Forget his nature, ere I can forget I am thy Priest: Nor can I but remember That Damon is my sonne: yet take him Ceres! You need not powre water upon his head, I&#x27;le doe it with my teares. Ceres, I hope Thy anger will not bind the Fathers eye To look into the Bowels of his sonne, I&#x27;le therefore first spill on thy hallowed Altar This Captives blood; and then retire my selfe Not to be present at my Damons death Least nature might turne Rebell to devotion. Ceres, to whom we owe that yet We doe not Mast and Acornes eat: That didst provide us better meat, The purest flower of finest wheat. This bloud we spill at thy desire, To kindle, and to quench a ire. O let it quench thy flame of fire, And kindle mercies more entire. O let this guilty bloud attone For every poore unlucky one; Nymph, or Swain, who ere doe grone Vnder sad Loves imperious throne. That Love a happier age may see In thy long tortur&#x27;d Sicily. That blood which must th&#x27; Attonement bee Thus Goddesse, thus, we pay to thee! Avoid the mad man. Why it hath quencht the sadder flames of love, And more auspitious fires begin to move. But I know The wrath of Ceres cannot be appeas&#x27;d But by the bloud of Claius. How can that bee? yet his accursed gore Hath not imbru&#x27;d the Altar. What hath it quencht or kindled? And is the fire of my Damon kindled But to be quench&#x27;t againe: Ceres! a frost Dwell on thy Alters, ere my zeale renew Religious fires to warme&#x27;em. How Amyntas? speake! Thou that hast sav&#x27;d a Father, save a sonne. Amyntas, thou hast now made full amends For my Philebus death; Claius all envy, Envy the viper of a venemous soule Shall quit my brest: This is the man, Sicilians, The man to whom you owe your liberties; Goe Virgins, and with Roses strow his way, Crowne him with violets, and lilly wreathes; Cut off your golden tresses, and from them Weave him a robe of love: Damon, pay here The debt of duty that thou ow&#x27;st to mee; Hence was thy second birth. Lovers come, Come all with flowry chaplets on your browes, And singing Hymmes to Ceres, walk around This happy village; to expresse our glee This day each yeare shall Cupids triumphs bee. The Goddesse is well pleas&#x27;d, she daines to answer By gracious Echo&#x27;s; goe Amyntas speak.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Amyntas, or The Impossible Dowry</div><div class="body">More than sixteen years before the start of the action, Claius stole Lalage, the girlfriend of Philaebus. Philaebus grew melancholy and his father Pilumnus prayed to Ceres for vengeance on Lalage, who duly died in childbirth. This didn’t help Philaebus, who pined to death on her grave. Ceres declared that she will remain angry until the blood of Claius both quenches and kindles fire; so Claius fled, pursued by Corymbus, determined to kill him and lift the curse. But Ceres also disapproved of Pilumnus’ vindictiveness, and further declared that his daughter Urania will have 1630 an unhappy marriage unless her fiancé Amyntas, Claius’ son, gives her as a dowry something he does not, may not, and cannot have. The riddle so occupied his mind that he went mad. All this strife convinces Medorus that the time is not right for his daughter Laurinda to fall in love. She is herself averse to committing herself in marriage (since marriages always seem to end in unhappiness), and cannot make up her mind between her two suitors, Damon and Alexis. Damon is also the object of Amaryllis’ affections, but he is only interested in Laurinda. The two suitors would like to settle matters by fighting a duel, but bloodshed is a capital crime in the sacred vale, so they make a suicide pact instead. Laurinda dissuades them from carrying it out, and promises that she will finally accept one of them tomorrow: all three must accept the decision of the first virgin they meet coming out of the temple in the morning. Amaryllis is in despair over Damon, and intends asking him to kill her if he cannot love her. Laurinda proposes a remedy, and they spend the night together. Claius returns to Sicily in disguise, hoping to use his medical knowledge to cure Amyntas. He succeeds, but advises Urania to take an oath of virginity to prevent Amyntas racking his brains into a relapse. During the night, Dorylas and his friends dress up as elves to scrump apples from an orchard owned by the fairy- obsessed Jocastus. When caught, Dorylas claims to be King Oberon, and ‘knights’ Jocastus. Damon and Alexis meet the virgins at the temple. The first one is Amaryllis in disguise, which pleases Alexis: he goes to fetch Laurinda. The angry Damon wounds Amaryllis, then flees. She writes a letter in her own blood, informing Laurinda of her decision, and claims that she accidentally gored herself on her own spear. Claius finds her and administers medicine; but, although it is clear that she was deliberately…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_12.html">Cluster 12 — 12: amyntas, phillis, did</a> page.
+</div>
+</div></body></html>

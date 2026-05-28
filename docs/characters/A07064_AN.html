@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AN in 185 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>AN</span>
+</nav>
+
+<h1>AN</h1>
+<p class="lede">in <em>185</em> — [94]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1602</td></tr>
+<tr><th>Words</th><td>631</td></tr>
+<tr><th>Characters</th><td>3539</td></tr>
+<tr><th>BritDrama no.</th><td>185</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Antonio. But shee was full of hope. Haue I an arme, a <mark>heart</mark>, a sword, a sowle? The gloomie wing of night begins to stretch His lasie pinion ouer all the ayre: We <mark>must</mark> be stiffe and steddie in resolue. Let&#x27;s thus our hands, our hearts, our armes inuolue. Now, therefore, pittie, piety, remorse, Be aliens to our thoughts: grim fier-ey&#x27;d</div>
+<div class="excerpt">now the womb of mischiefe is deliuer&#x27;d, Of the prodigious issue of the night. Lies thy cold father dead, his glossed eyes New closed vp by thy sad mothers hands? Hast thou a loue as spotlesse as the browe Of clearest heauen, blurd with false defames? Are thy moyst entrals crumpled vp with griefe Of parching mischiefs? Tel me,</div>
+<div class="excerpt">sleepe toumb&#x27;d in an honour&#x27;d hearse, So may my bones rest in that Sepulcher, May I be cursed by my fathers ghost, And blasted with incensed breath of heauen, If my <mark>heart</mark> beat on ought but vengeance, May I be numd with horror, and my vaines Pucker with sing&#x27;ing torture, if my braine Disgest a thought, but of dire vengeance: May I</div>
+<div class="excerpt">horror, and my vaines Pucker with sing&#x27;ing torture, if my braine Disgest a thought, but of dire vengeance: May I be fetter&#x27;d slaue to coward Chaunce, If blood, <mark>heart</mark>, braine, plot ought saue vengeance. O, for thy sisters sake, I flagge reuenge. See, vnamaz&#x27;d, I will beholde thy face, Outstare the terror of thy grimme aspect,</div>
+<div class="excerpt">I am all ayre, and feele no waight Of humane dirt clogge. This is Iulios bloode. Rich musique, father; this is Iulio&#x27;s blood. Why liues that mother? By wisdomes <mark>heart</mark> there is no essence mortal, That I can enuie, but a plumpe cheekt foole: O, he hath a patent of immunities Confirm&#x27;d by custome, seald by pollicie, As large as</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Why now the womb of mischiefe is deliuer&#x27;d, Of the prodigious issue of the night. Lies thy cold father dead, his glossed eyes New closed vp by thy sad mothers hands? Hast thou a loue as spotlesse as the browe Of clearest heauen, blurd with false defames? Are thy moyst entrals crumpled vp with griefe Of parching mischiefs? Tel me, does thy hart With punching anguish spur thy galled ribs? Then come and let&#x27;s sit and weep &amp; wreath our arms: Ile heare thy counsell. May I be cursed, but I credit thee. Alas, for what? God be with you. Suspect, I scorn&#x27;t. Here&#x27;s cap &amp; leg; good night: Thou that wants power, with dissemblance fight. THE black iades of swart night trot foggy rings Bout heauens browe. (12) Tis now starke deade night. Is this Saint Markes Church? So I may sleepe toumb&#x27;d in an honour&#x27;d hearse, So may my bones rest in that Sepulcher, May I be cursed by my fathers ghost, And blasted with incensed breath of heauen, If my heart beat on ought but vengeance, May I be numd with horror, and my vaines Pucker with sing&#x27;ing torture, if my braine Disgest a thought, but of dire vengeance: May I be fetter&#x27;d slaue to coward Chaunce, If blood, heart, braine, plot ought saue vengeance. O, for thy sisters sake, I flagge reuenge. See, vnamaz&#x27;d, I will beholde thy face, Outstare the terror of thy grimme aspect, Daring the horred&#x27;st obiect of the night. Looke how I smoake in blood, reeking the steame ▪ Of foming vengeance. O my soule&#x27;s inthroan&#x27;d In the tryumphant chariot of reuenge. Me thinks I am all ayre, and feele no waight Of humane dirt clogge. This is Iulios bloode. Rich musique, father; this is Iulio&#x27;s blood. Why liues that mother? By wisdomes heart there is no essence mortal, That I can enuie, but a plumpe cheekt foole: O, he hath a patent of immunities Confirm&#x27;d by custome, seald by pollicie, As large as spatious thought. What? not a foole? Why friend, a golden asse, A babl&#x27;d foole are sole canonicall, Whil&#x27;st pale cheekt wisdome, and leane ribd arte Are kept in distance at the halberts point: All held Apocrypha, not worth suruey. Why, by the Genius of that Florentine, Deepe, deepe obseruing, sound brain&#x27;d Macheueil, He is is not wise that striues not to seeme foole. When will the Duke holde feed Intelligence, Keepe warie obseruation in large pay, To dogge a fooles act? Pish, most things that morally adhere to soules, VVholly exist in drunke opinion: VVhose reeling censure, if I valew not, It valewes naught. Alberto, see you streight rumour me dead: Leaue me, good mother, leaue me Luceo, Forsake me all. Now patience hoope my sides, With steeled ribs, least I doe burst my breast With struggling passions. Now disguise stand bolde. Poore scorned habits, oft choyce soules infould. What villanie are they decocting now? Vmh. Antonio&#x27;s dead, the foole wil follow too, he, he, he, Now workes the sceane; quick obseruation scud To coate the plot, or els the path is lost: My verie selfe am gone, my way is fled: I, all is lost, if Mellida is deade. Exit Antonio. But shee was full of hope. Haue I an arme, a heart, a sword, a sowle? The gloomie wing of night begins to stretch His lasie pinion ouer all the ayre: We must be stiffe and steddie in resolue. Let&#x27;s thus our hands, our hearts, our armes inuolue. Now, therefore, pittie, piety, remorse, Be aliens to our thoughts: grim fier-ey&#x27;d rage Possesse vs wholly. Now pel mell; thus the hand of heauen chokes The throate of murder. This for my fathers blood. Poore? standing tryumphant ouer Belzebub ? Hauing large interest for blood; &amp; yet deem&#x27;d poor?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 185</div><div class="body">Simplicity, a new arrival in London, is horrified to find the city full of heresy, where ‘old custom’, the traditional religious observances of earlier generations, is held in contempt. Knowledge offers to explain the truth, and shows how the mass has no basis in scripture and certainly does not involve transubstantiation. He teaches Simplicity the doctrinal basis of Protestant worship: pray and fast simply, and shun popish idolatry. Simplicity is duly grateful.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

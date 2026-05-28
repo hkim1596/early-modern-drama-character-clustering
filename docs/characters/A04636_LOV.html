@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LOV in The Alchemist · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LOV</span>
+</nav>
+
+<h1>LOV</h1>
+<p class="lede">in <em>The Alchemist</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1612</td></tr>
+<tr><th>Words</th><td>1168</td></tr>
+<tr><th>Characters</th><td>6249</td></tr>
+<tr><th>BritDrama no.</th><td>1621</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Vpon a Table, or some Dog to Daunce? When saw you him? How! Yo&#x27; amaze me, Neigh bours. Ha? It&#x27;s no time to question, then. This&#x27;s strange! that none will answere! Didst thou <mark>heare</mark> A cry, saist thou? These be miracles, or you make &#x27;hem so! A man an hower strangled, and could not speake, And both you heard him cry? Thou art a wise</div>
+<div class="excerpt">knowledge, That they are yours, but by publique meanes. If you can bring certificate, that you were gull&#x27;d of &#x27;hem, Or any formall Writ, out of a Court, That you <mark>did</mark> cosen your selfe; I will not hold them. That you shall not, Sir, By me, in troth. Vpon these termesthey&#x27; are yours. What should they ha&#x27; beene, Sir, turn&#x27;d into</div>
+<div class="excerpt">What should my Knaue aduance, To draw this company? He hung out no Banners Of a strang Calfe, with fiue legs, to be seene? Or a huge Lobstar, with six clawes? He <mark>has</mark> no guift Of Teaching i&#x27;the nose, that ere I knew of! You saw no Bils set vp, that promis&#x27;d cure Of Agues, or the Tooth-ach? Nor heard a Drum strooke, for Babouns,</div>
+<div class="excerpt">ha&#x27; not kept such open house, That he hath sold my hangings, and my bedding: I left him nothing else. If he haue eate &#x27;hem, A plague o&#x27; the Moath, say I. Sure he <mark>has</mark> got Some baudy Pictures, to call all this Ging; The Frier, and the Nun; or the new M tion Of the Knights Courser, couering the Parsons Mare; The Boy of six yeare</div>
+<div class="excerpt">and sayes You swore, and told her, you had tane the paines, To dye your beard, and vmbre o&#x27;er your face, Borrowed a Sute, and Ruffe, all for her Loue; And then <mark>did</mark> nothing What an ouer sight, And want of putting forward, Sir, was this! Well fare an old Hargubuzier, yet, Could prime his poulder, and giue fire, and hit, All</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">What should my Knaue aduance, To draw this company? He hung out no Banners Of a strang Calfe, with fiue legs, to be seene? Or a huge Lobstar, with six clawes? He has no guift Of Teaching i&#x27;the nose, that ere I knew of! You saw no Bils set vp, that promis&#x27;d cure Of Agues, or the Tooth-ach? Nor heard a Drum strooke, for Babouns, or Puppets? What deuise should he bring forth now? I loue a teeming wit, as I loue my nourishment. &#x27;Pray God he ha&#x27; not kept such open house, That he hath sold my hangings, and my bedding: I left him nothing else. If he haue eate &#x27;hem, A plague o&#x27; the Moath, say I. Sure he has got Some baudy Pictures, to call all this Ging; The Frier, and the Nun; or the new M tion Of the Knights Courser, couering the Parsons Mare; The Boy of six yeare old, with the great thing: O &#x27;t may be, he has the fleas that runne at ilt, Vpon a Table, or some Dog to Daunce? When saw you him? How! Yo&#x27; amaze me, Neigh bours. Ha? It&#x27;s no time to question, then. This&#x27;s strange! that none will answere! Didst thou heare A cry, saist thou? These be miracles, or you make &#x27;hem so! A man an hower strangled, and could not speake, And both you heard him cry? Thou art a wise fellow. Giue me thy hand, I pray thee. What trade art thou, on? A Smith? Then, lend me thy help, to get this dore open. Why? what&#x27;s the matter? I&#x27;the name of wonder, What meanes the fellow? What? with the Plague? stand thou the ̄ farder. Who had it then? I left None else, but thee, i&#x27;the house. How! Breath lesse, and farder off. Why this is stranger! The Neighbors tell me all, here, that the Dores Haue still been open. Gallants, Men, and Women, And of all sorts, tag-rag, beene seene to flock here In threaues, these ten weekes, as to a second Hogs-den, In dayes of Pimlico, and Eye-bright. To day, they speake Of Coaches, and Gallants; one in a French-hood, Went in, they tell me: and another was seene In a Veluet Gowne, at the windore. Diuerse more Passe in and out. Strange! Doe you but thinke it now? And but one Coach? Fine Rogues, to haue your testimonies built on! Peace, and get hence, you Changelings. Yes, Sir. What Knaues? What Cheaters? &#x27;Pray you stay, Gentlemen. What meanes this? This is something, sure! Here comes another. Good Gentlemen, a word. The world&#x27;s turn&#x27;d Bet&#x27;lem. It mazes me! Who&#x27;s that? &#x27;Tis i&#x27;the house. Ha! List. Peace, you— O, is it so? Then you conuerse with spirits. Come Sir. No more o&#x27;your tricks, good leremy, The truth, the shortest way. Good Neighbours, I thanke you all. You may depart. Come Sir, You know that I am an indulgent Master: And therefore conceale nothing. What&#x27;s your med&#x27;cine, To draw so many seuerall sorts of wild-foule? But by me, who came Sooner then you expected. Well: Let&#x27;s see your Widdow. HOw! ha&#x27; you eaten your gag? What warrant haue you? Is there an Officer, there? Haue but patience, And I will open it straight. Yes, my Braine? Hold. Hold Gentlemen, what meanes this violence? Good Gentlemen, heare me. Are you Officers, And cannot stay this violence? Gentlemen, what is the matter? Whom doe you seeke? Fewer at once, I pray you. Goodzeale, lye still, A little while. The House is mine here, and the dores are open: If there be any such persons, as you seeke for, Vse your authoritie, search on o&#x27; Gods name. I am but newly come to towne, and finding This tumult &#x27;bout my dore(to tell you true) It somewhat mazd me; till my Man, here, (fearing My more displeasure) told me had done Somewhat an insolent part, let out my house (Belike, presuming on my knowne auersion From any ayre o&#x27;the towne, while there was Sicknesse) To a Doctor, and a Captaine, who, what they are, Or where they be, he knowes not. You may goe in, and search, Sir. Here, I finde The empty Walls, worse then I left&#x27;hem, smoak&#x27;d, A few crack&#x27;d pots, and Glasses, and a Fornace, The Seeling fill&#x27;d with To sies of the Candle: And Madame, with a Dildo, writ o&#x27;the walles. Onely one Gentlewoman, I met here, That is within, that said she was a Widdow— And should ha&#x27; married a Spanish Count, buthe, When he came to&#x27;t, neglected her so grossely, That I, a Widdower, am gone through with her. Were you the Don, Sir? Good faith, now, she do&#x27;s blame yo&#x27; extreamely, and sayes You swore, and told her, you had tane the paines, To dye your beard, and vmbre o&#x27;er your face, Borrowed a Sute, and Ruffe, all for her Loue; And then did nothing What an ouer sight, And want of putting forward, Sir, was this! Well fare an old Hargubuzier, yet, Could prime his poulder, and giue fire, and hit, All in a twinckling. What sort of Birds were they? Thinke you so Sir? By order of Law, Sir, but not otherwise. Sir, I can take no knowledge, That they are yours, but by publique meanes. If you can bring certificate, that you were gull&#x27;d of &#x27;hem, Or any formall Writ, out of a Court, That you did cosen your selfe; I will not hold them. That you shall not, Sir, By me, in troth. Vpon these termesthey&#x27; are yours. What should they ha&#x27; beene, Sir, turn&#x27;d into Gold all? What a great losse in hope haue ou sustain&#x27;d? For what, my zealous Friends? What is that portion? What, those i&#x27;the Cellar, The Knight, Sir Mammon claimes? Mine earnest vehement Botcher, And Deacon also, I cannot dispute with you, But, if you get you not away the sooner, I shall confute you, with a Cudgell. I shall send you To Amstredam, to your Cellar. Another too? Away you Harry Nicholas, doe you talke? You lye, Boy; As sound as you: and I am afore-handwith you. Come, will you quarrell? I will feize you, sirrah. Why doe you not buckle to your tooles? What doe you change your coppy now? Proceede, Here stands my Doue: stoope at her, if you dare. O doe you so, Sir. Fill a pipe-full, Ieremie. We will. I will be rul&#x27;d by thee in any thing, Ieremy. Whiffe in with your Sister, brother Boy. That Master That had receiu&#x27;d such happinesse by a Seruant, In such a Widdow, and with so much wealth, Were very vngratefull, if he would not be A little indulgent to that Seruants wit, And help his fortune, though with some small straine Of his owne candor. Therefore Gentlemen, And kinde Spectators, if I hau out stript An old mans grauitie, or strict canon, thinke What a yong Wife, and a good Brayne may doe: Stretch Ages truth sometimes, and crack it too. Speake for thy selfe, Knaue.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Alchemist</div><div class="body">With his master absent to avoid the plague in London, Face has set up an occult consultancy in his house in association with the formerly itinerant rogues Subtle and Doll Common: Face fetches in the clients and Subtle poses as the alchemist. They quarrel over the relative merits of their contributions to the enterprise, but resolve to collaborate competitively in the day’s ===== PAGE 80 ===== business. They are visited by successive clients: Dapper, who wants a familiar to help him win at gambling; Drugger, who wants advice on the most auspicious layout for his shop; Sir Epicure Mammon, who seeks the philosopher’s stone to fulfil his fantasies of wealth, luxury, and voluptuousness, and who brings along with him the sceptic Surly; and the religious sectarians Ananias and Tribulation, who want both the stone and Subtle’s claimed expertise in counterfeiting foreign coins. Dapper is persuaded that he is the Fairy Queen’s nephew and heir, and is promised an introduction to her. Mammon brings various domestic articles for aurification, which Subtle then sells on to Ananias and Tribulation, saying they belong to orphans. Clients come thick and fast. Drugger introduces his neighbours, Kastril (who wants te learn how to quarrel) and the wealthy widow Pliant (who wants her fortune told and whom Face and Subtle both want to marry). They are sent away so that the tricksters can deal with Dapper, who in his turn is secreted in the privy while they attend to Mammon. The knight courts Doll, who is presented to him as a lord’s sister prone to religious mania, which he activates by ill-chosen words; but he is then told that his lust has caused a setback in the alchemical process, which demands moral purity. Meanwhile, Surly returns, disguised as a Spanish count seeking sexual favours; but, since Doll is busy with Mammon, he is foisted on Dame Pliant, who is tempted with the chance of becoming a Spanish countess. His attempt to tell her the truth is outmanoeuvred when Face and Subtle convince her that he is an impostor and that the real Count is on his way; Drugger is persuaded to impersonate him and sent off to borrow a Spanish suit for the role. Lovewit, the master of the house, returns to hear Tumours of strange goings-on. Face’s explanation is confuted by the cries of Dapper, forgotten in the privy, so he confesses everything. Dapper is presented to the Fairy Queen (impersonated by Doll) and goes away the owner of an imaginary magical fly, with instructions not to look…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HARP in Croesus · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> ›
+  <span>HARP</span>
+</nav>
+
+<h1>HARP</h1>
+<p class="lede">in <em>Croesus</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>1644</td></tr>
+<tr><th>Characters</th><td>9289</td></tr>
+<tr><th>BritDrama no.</th><td>1425</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 25 (<em>did, whil, death, might, minde, fortune…</em>). Matches are highlighted.</p>
+<div class="excerpt">borne) deſtruction <mark>did</mark> attend, <mark>Whil</mark>&#x27;ſt ere thou could&#x27;ſt offend, purſu&#x27;d by hate, Even then to end what now ſhall never end? Your mother firſt her fathers <mark>minde</mark> <mark>did</mark> ſting, <mark>Whil</mark>&#x27;ſt once he dream&#x27;d, which yet his ſoule confounds, That of a tree which from her wombe <mark>did</mark> ſpring, Th&#x27;umbragious branches, darkened Aſias bounds; Then</div>
+<div class="excerpt">doth ſtill feare all; &quot;And tyrants no ſecurity can finde, &quot;For every ſhadow frights a guilty <mark>minde</mark>. This Monarch then who could not dreame of harmes, Whoſe guards <mark>did</mark> glance all ſtill with ſteele array&#x27;d, Then <mark>whil</mark>&#x27;ſt he liv&#x27;d ſecure from forraigne Armes, A babe, ſcarce borne, and his, <mark>did</mark> make afraid. And <mark>whil</mark>&#x27;ſt Lucina the</div>
+<div class="excerpt">care, And led you ſafe through many dangerous toiles; Though of the troubles of your youth I ſee, You have not heard the wonderfull diſcourſe, I them remember, who <mark>did</mark> chance to be An actor in your Tragicke-Comicke courſe. Who would not wonder at thy wondrous fate, Whom (even or borne) deſtruction <mark>did</mark> attend, <mark>Whil</mark>&#x27;ſt ere thou</div>
+<div class="excerpt">tree which from her wombe <mark>did</mark> ſpring, Th&#x27;umbragious branches, darkened Aſias bounds; Then to the Magies ſtraight he gave in charge To try what this ſtrange viſion <mark>did</mark> preſage, VVho having ſtudied their darke Art at large, Gave this reſponſe with a propheticke rage: That once his daughter ſhould a ſonne bring forth, Who ſhould</div>
+<div class="excerpt">ſome weake ſtranger of no great degree. And to Cambyſes, who of her made choice, He, for his Country (then contemn&#x27;d) gave eare, Whom by your birth the Princeſſe <mark>did</mark> rejoyce, And gave her father further cauſe of feare, &quot;Thus tyranny (their brood whoſe courage failes) &quot;Doth force the Parents in deſpaire to fall, &quot;To fight a daſtard,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Though all who partners are of th&#x27; earth and ayre, Still whil&#x27;ſt tapeſtred with this azure pale, If for nought elſe, yet for thoſe gifts leaſt rare, To ſerve th&#x27; all-pow&#x27;rfull pow&#x27;rs, ſhould never faile; Yet there are ſome whom ſucceſſe hath deſign&#x27;d, Whoſe names are written in reſpected ſcroules, WHom benefits (not ordinary) binde To love them more then life, yea, then their ſoules: Of thoſe that you are one, your deeds declare, Of whom amid&#x27;ſt innumerable broiles, Even from your cradle they have had a care, And led you ſafe through many dangerous toiles; Though of the troubles of your youth I ſee, You have not heard the wonderfull diſcourſe, I them remember, who did chance to be An actor in your Tragicke-Comicke courſe. Who would not wonder at thy wondrous fate, Whom (even or borne) deſtruction did attend, Whil&#x27;ſt ere thou could&#x27;ſt offend, purſu&#x27;d by hate, Even then to end what now ſhall never end? Your mother firſt her fathers minde did ſting, Whil&#x27;ſt once he dream&#x27;d, which yet his ſoule confounds, That of a tree which from her wombe did ſpring, Th&#x27;umbragious branches, darkened Aſias bounds; Then to the Magies ſtraight he gave in charge To try what this ſtrange viſion did preſage, VVho having ſtudied their darke Art at large, Gave this reſponſe with a propheticke rage: That once his daughter ſhould a ſonne bring forth, Who ſhould (by valour gaining great renowne) Make vanquiſh&#x27;d Aſia witneſſe of his worth; But from his grand-father firſt reave the Crowne. This to Aſtyages a terrour bred, Who (vainely bent to ſcorne the heavens decree) His daughter (out of policy) would wed, To ſome weake ſtranger of no great degree. And to Cambyſes, who of her made choice, He, for his Country (then contemn&#x27;d) gave eare, Whom by your birth the Princeſſe did rejoyce, And gave her father further cauſe of feare, &quot;Thus tyranny (their brood whoſe courage failes) &quot;Doth force the Parents in deſpaire to fall, &quot;To fight a daſtard, proud when it prevailes, &quot;But yet (as fear&#x27;d of all,) doth ſtill feare all; &quot;And tyrants no ſecurity can finde, &quot;For every ſhadow frights a guilty minde. This Monarch then who could not dreame of harmes, Whoſe guards did glance all ſtill with ſteele array&#x27;d, Then whil&#x27;ſt he liv&#x27;d ſecure from forraigne Armes, A babe, ſcarce borne, and his, did make afraid. And whil&#x27;ſt Lucina the laſt helpe did make, As if ſome ugly monſter had beene borne, A Minotaure, a Centaure, or a Snake, The peoples terrour, and the Mothers ſcorne; The Grand-childes birth, which juſtly ſhould impart, To grand-fathers the greateſt cauſe of joyes, Did (long ere wounded, making him to ſmart) Involve him in a maze of ſad annoyes; And to prevent what did him fondly fright, By giving cauſe of a deſerved hate, He ſought by robbing you the new-found light, To make your birth and buriall of one date. Soone after this he ſent for me in haſte, Whom at that time (and not in vaine) he lov&#x27;d, And told the ſumme of all things that were paſt, By which his marble-minde ſeem&#x27;d nothing mov&#x27;d; Yet in the ſame, as he would let me know, Though pitty none, ſome horrour did remaine, Whil&#x27;ſt damn&#x27;d in ſubſtance, to ſeeme cleere in ſhow, Your bloud his heart, but not his hand ſhould ſtaine. &quot;Thus having lull&#x27;d aſleepe their judgement ſtill, &quot;The wicked would extenuate their crimes, &quot;Not knowing thoſe who but allow of ill, &quot;As actors guilty, differ but in times. With his vile fault he would have burden&#x27;d me, Whom ſtraight he charg&#x27;d an Innocent to ſlay; I promis&#x27;d to performe his raſh decree, Well weighing whom, not what I ſhould obey; When I had parted from his Highneſſe face, And carried you (then ſwadled) with me too, Whil&#x27;ſt horrour did congeale my bloud, a ſpace I ſtood perplex&#x27;d, not knowing what to doe, And as to purge my part) even ſhedding teares, By troupes of paſſions griefe, my ſoule aſſail&#x27;d, Thus (when diſtreſs&#x27;d for eaſing others feares,) Th&#x27;intended death of you, your murd&#x27;rers wail&#x27;d; For him I ſent a ſervant of mine owne, VVho for the time was heardſ-man to the King, To whom I made all my Commiſſion knowne, But as enjoyn&#x27;d to him, ſhew&#x27;d every thing; Delivering you with an unwilling breath, WHom of pure gold, a gliſtring robe array&#x27;d, I threatned him with many a cruell death, If that your death were any way delay&#x27;d; Straight then to execute the Tyrants doome, He from my ſight did all aſtoniſh&#x27;d goe, Too great a charge for ſuch a ſimple Groome, The ſhew of Majeſtie amaz&#x27;d him ſo; What man (not wondring) can by deeds behold The providence of all-commanding Iove, Whoſe brazen edicts cannot be contrould: &quot;Firme are the Statutes of the States above: &quot;That mortall whom a Deities favour ſhields, &quot;No worldly force is able to confound, &quot;He may ſecurely walke through dangers fields, &quot;Times and occaſions are to ſerve him bound: For loe, before the heardſ-man was come home, His wife had chanc&#x27;d a breath-leſſe childe to beare, Who wondred ſo to ſee her husband come, While by his conſcience cruſh&#x27;d, he quak&#x27;d for feare; And ſtraight ſhe curious grew to know the forme, How he a babe ſo beautifull obtain&#x27;d; Who her of all did ſuddenly informe, And to what cruelty he was conſtrain&#x27;d; She quickly then th&#x27; occaſion to embrace, (No doubt inſpir&#x27;d by ſome celeſtiall pow&#x27;r) Pray&#x27;d that her infant might ſupply your place, Yet where no beaſts his body might devo re, So ſhall we have (ſaith ſhe) a double gaine, Since our owne childe ſhall get a ſtately tombe, And we a Princely brood, which may remaine, Still nurſt with us as th&#x27;iſſue of my wombe. The husband lik&#x27;t ſo well his wives deſigne, That he perform&#x27;d all what ſhe did require, And when I had directed one of mine, This Tragedies laſt act, who might enquire: My man who ſpy&#x27;d a babe there breathleſſe lye, With that rich funerall furniture array&#x27;d, Told what the fellow told, (a generous lye) So that thus try&#x27;d, I truſted what they ſaid. I end, Time (poſting with houre-feather&#x27;d wings) Had given you ſtrength, with others of your yeares You haunted games, not nephewes unto Kings, But for that time admitted for your Peeres, They faile call fortune blinde, ſhe ſight bewray&#x27;d, And your authority by lot enlarg&#x27;d, In paſtorall ſport, who ſtill the Scepter ſway&#x27;d, And as but borne for that, that beſt diſcharg&#x27;d: With other children then, as once it chanc&#x27;d, A Noble-man of Medeas Sonne remain&#x27;d, Who ſwolne with envy to ſee you advanc&#x27;d, Your childiſh charge with ſcornfull words diſdain&#x27;d; You raging at that proud attempt of his, Did puniſh him, as it became a Prince, I doubt now (Sir) if that you thinke of this: The reſt of raſhneſſe did your deed convince. The childes great Father did inform the King, How that ſo baſe a boy his Sonne abuſ&#x27;d, And of the guard one haſted you to bring, As for an odious crime to be accuſ&#x27;d; But when the King (expoſtulating long) By terrours ſtriv&#x27;d to caſt your courage downe: You boldly ſaid, that you had done no wrong, To puniſh one who had contemn&#x27;d your Crowne; You ſo magnanimous amaz&#x27;d to finde, Whil&#x27;ſt pauſing long with an attentive Eye, That ſpeech imperious told the King your kinde: Whoſe brood but th&#x27;Eagles durſt have ſoar&#x27;d ſo high? The fained Father to the King was brought, Who (fear&#x27;d for torture) telling truth in time, Where he reward deſerv&#x27;d, but pardon ſought, As if the ſaving you had beene a crime. Then (as it ſeem&#x27;d) delighted with the reſt, The King did cauſe a ſumptuous feaſt prepare, And me deſir&#x27;d as his moſt ſpeciall gueſt, That with my Sonne I would to Court repaire; When I was come, the King great joy diſclos&#x27;d, And ſooth&#x27;d my words which did his chance applaud, But for another end then I ſuppoſ&#x27;d: &quot;What fairer cloke then courteſie for fraud? When th&#x27;abſence of the Sunne did darkneſſe breed, The Candles light inheriting his place, On my Sonnes fleſh they caus&#x27;d my ſelfe to feed, Then did upbraid me with his bloudleſſe face; VVhat anguiſh, or what rage o&#x27;re-flow&#x27;d my ſoule, A loving Father may imagine beſt, Yet at that time I did my rage controull, But laid it high up in a ſtormie breſt. &quot;Loe how thoſe wretches whom the heavens would wrack, &quot;(To plagues expoſ ) of judgement are unarm&#x27;d: &quot;The King of me his Captaine ſtraight did make, &quot;And look&#x27;t for help of him whom he had harm&#x27;d; &quot;Yet was th&#x27;old wrong ſo rooted in my heart, &quot;My Countries thraldome, and mine owne diſgrace, &quot;That all the horrours miſchiefe could impart &quot;Seem&#x27;d nought to me, ſo my diſdaine took place. This enterpriſe at firſt ſo well did ſpeed, That ſince, your Greatneſſe ſtill began to riſe, Which may by time to brave a ſtory breed, As may be pretious in all Princes eyes. No doubt that Dame this trouble hardly beares, Who onely ſeem&#x27;d for him to like of life, I heard him (whil&#x27;ſt ſhe bath&#x27;d his breaſt with teares) Oft wiſh by proofe to merit ſuch a wife. When their farewell was ſeal&#x27;d, laſt ſpeeches ſpent, She kiſſ&#x27;d the Coach that did containe her truſt, And with eyes bigge with pearle, gaz&#x27;d where he went, Still till her ſight was choak&#x27;d with clods of duſt. I&#x27;le raiſe a Pyramide of Croeſus ſpoils, Where of their worth each part ſhall be compris&#x27;d, But how to do in theſe tumultuous broils, Now time requires that you were well adviſ&#x27;d: Your adverſary doth attend your will; This hauty Towne for feare to fall doth bow, And therefore pardon, ranſome, quite, or kill, Do what you pleaſe, none can controll us now.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Croesus</div><div class="body">Solon visits Croesus, hoping to persuade him to give up his immoderate love of gold and think about less transitory things. He explains that all mortality is subject to change, and tells Croesus stories about the importance of posthumous fame, but Croesus considers them irrelevant to his situation as a king. Solon realizes that Croesus wili change only by losing the power which has made him arrogant. Adrastus is banished from Phrygia after accidentally killing his brother. (His intended victim was the man who poisoned his girlfriend.) Croesus has a nightmare about the death of his son Atys, and becomes excessively protective: he makes Atys marry in order to secure the succession, appoints him a bodyguard, and bans the type of sharp implement which caused his death in the dream. Mysia is ravaged by a wild boar, and its people appeal to Croesus for help. He is happy to hear that they don’t want his money, but distressed that they ask instead that he send Atys to hunt the boar. Atys protests at his father’s reluctance, so Croesus accedes, assigning Adrastus to look after him during the mission. Atys is killed, and Adrastus kills himself in remorse. In the past, Astyages, King of Media and Croesus’ brother-in-law, was perturbed by a prophecy that he would be deposed by his grandson. When the child was born, he tried to have it killed; but the herdsman who was given the job spared its life and adopted it as a replacement for his own stillborn baby. During his youth, Cyrus’ princely behaviour led to his identification. Astyages served Harpagus a banquet of his own son’s flesh, so Harpagus contacted Cyrus and raised a rebellion. Now Cyrus has led the Persian army to depose Astyages. Against his counsellor’s advice, Croesus plans to intervene and conquer Persia, but Cyrus anticipates him and attacks pre-emptively, ordering that Croesus be taken alive. Croesus is nearly killed by a Persian soldier, but saved when his dumb son cries out and identifies him. Cyrus intends to burn him at the stake, but is impressed by Croesus’ acknowledgement that Solon was right to warn him not to trust in worldly things. Cyrus frees him, and orders restraint in his soldiers’ looting.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> page.
+</div>
+</div></body></html>

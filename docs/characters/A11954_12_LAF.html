@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LAF in All&#x27;s Well That Ends Well · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LAF</span>
+</nav>
+
+<h1>LAF</h1>
+<p class="lede">in <em>All&#x27;s Well That Ends Well</em> — Shakespeare, WilliamMiddleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1936</td></tr>
+<tr><th>Characters</th><td>10013</td></tr>
+<tr><th>BritDrama no.</th><td>1461</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">traitors His Maieſty ſeldome feares, I am Creſſeds Vncle, That dare leaue <mark>two</mark> together, far you well. Do you <mark>heare</mark> Monſieur? A word with you. Your Lord and Maſter <mark>did</mark> well to make his re cantation. I: Is it not a Language I ſpeake? Are you Companion to the Count Roſillion ? To what is Counts man: Counts maiſter is of another</div>
+<div class="excerpt">to the Count Roſillion ? To what is Counts man: Counts maiſter is of another ſtile. I muſt tell thee ſirrah, I write Man: to which title age cannot bring thee. I <mark>did</mark> thinke thee for <mark>two</mark> ordinaries: to <mark>bee</mark> a prettie wiſe fellow, thou didſt make tollerable vent of thy trauell, it might paſſe: yet the ſcarffes and the ban nerets</div>
+<div class="excerpt">for <mark>two</mark> ordinaries: to <mark>bee</mark> a prettie wiſe fellow, thou didſt make tollerable vent of thy trauell, it might paſſe: yet the ſcarffes and the ban nerets about thee, <mark>did</mark> manifoldlie diſſwade me from be leeuing thee a veſſell of too great a burthen. I haue now found thee, when I looſe thee againe, I care not: yet art thou good for</div>
+<div class="excerpt">home. I moued the King my maſter to ſpeake in the behalfe of my daughter, which in the minoritie of them both, his Maieſtie out of a ſelfe gracious remembrance <mark>did</mark> firſt propoſe, his Highneſſe hath promis&#x27;d me to doe it, and to ſtoppe vp the diſpleaſure he hath conceiued againſt your ſonne, there is no fitter matter. How do&#x27;s</div>
+<div class="excerpt">me, I had talke of you laſt night, though you are a foole and a knaue, you ſhall eate, go too, follow. This I muſt ſay, But firſt I begge my pardon: the yong Lord <mark>Did</mark> to his Maieſty, his Mother, and his Ladie, Offence of mighty note; but to himſelfe The greateſt wrong of all. He loſt a wife, Whoſe beauty <mark>did</mark> aſtoniſh the ſuruey</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">You ſhall find of the King a husband Madame, you ſir a father. He that ſo generally is at all times good, muſt of neceſſitie hold his vertue to you, whoſe worthi neſſe would ſtirre it vp where it wanted rather then lack it where there is ſuch abundance. He hath abandon&#x27;d his Phiſitions Madam, vn der whoſe practiſes he hath perſecuted time with hope, and finds no other aduantage in the proceſſe, but onely the looſing of hope by time. How call&#x27;d you the man you ſpeake of Madam? He was excellent indeed Madam, the King very latelie ſpoke of him admiringly, and mourningly: hee was skilfull enough to haue liu&#x27;d ſtil, if knowledge could be ſet vp againſt mortallitie. A Fiſtula my Lord. I would it were not notorious. Was this Gen tlewoman the Daughter of Gerard de Narbon? Moderate lamentation is the right of the dead, exceſſiue greefe the enemie to the liuing. How vnderſtand we that? He cannot want the beſt That ſhall attend his loue. Farewell prettie Lady, you muſt hold the cre dit of your father. Good faith a-croſſe, but my good Lord &#x27;tis thus, Will you be cur&#x27;d of your infirmitie? O will you eat no grapes my royall foxe? Yes but you will, my noble grapes, and if My royall foxe could reach them: I haue ſeen a medicine That&#x27;s able to breath life into a ſtone, Quicken a rocke, and make you dance Canari With ſprightly fire and motion, whoſe ſimple touch Is powerfull to arayſe King Pippen, nay To giue great Charlemaine a pen in&#x27;s hand And write to her a loue-line. Why doctor ſhe: my Lord, there&#x27;s one arriu&#x27;d, If you will ſee her: now by my faith and honour, If ſeriouſly I may conuay my thoughts In this my light deliuerance, I haue ſpoke With one, that in her ſexe, her yeeres, profeſſion, Wiſedome and conſtancy, hath amaz&#x27;d mee more Then I dare blame my weakeneſſe: will you ſee her? For that is her demand, and know her buſineſſe? That done, laugh well at me. Nay, Ile fit you, And not be all day neither. Nay, come your waies. Nay, come your waies, This is his Maieſtie, ſay your minde to him, A Traitor you doe looke like, but ſuch traitors His Maieſty ſeldome feares, I am Creſſeds Vncle, That dare leaue two together, far you well. Do you heare Monſieur? A word with you. Your Lord and Maſter did well to make his re cantation. I: Is it not a Language I ſpeake? Are you Companion to the Count Roſillion ? To what is Counts man: Counts maiſter is of another ſtile. I muſt tell thee ſirrah, I write Man: to which title age cannot bring thee. I did thinke thee for two ordinaries: to bee a prettie wiſe fellow, thou didſt make tollerable vent of thy trauell, it might paſſe: yet the ſcarffes and the ban nerets about thee, did manifoldlie diſſwade me from be leeuing thee a veſſell of too great a burthen. I haue now found thee, when I looſe thee againe, I care not: yet art thou good for nothing but taking vp, and that th&#x27; ourt ſcarce worth. Do not plundge thy ſelfe to farre in anger, leaſt thou haſten thy triall: which if, Lord haue mercie on thee for a hen, ſo my good window of Lettice fare thee well, thy caſement I neede not open, for I look through thee. Giue me thy hand. I with all my heart, and thou art worthy of it. Yes good faith, eu&#x27;ry dramme of it, and I will not b te thee a ſcruple. Eu&#x27;n as ſoone as thou can&#x27;ſt, for thou haſt to pull at a ſmacke a&#x27; th contrarie. If euer thou bee&#x27;ſt bound in thy skarfe and beaten, thou ſhall finde what it is to be proud of thy bondage, I haue a deſire to holde my ac quaintance with thee, or rather my knowledge, that I may ſay in the default, he is a man I know. I would it were hell paines for thy ſake, and my poore doing eternall: for doing I am paſt, as I will by thee, in what motion age will giue me leaue. Sirra, your Lord and maſters married, there&#x27;s newes for you: you haue a new Miſtris. Who? God. The deuill it is, that&#x27;s thy maſter. Why dooeſt thou garter vp thy armes a this faſhion? Doſt make hoſe of thy ſleeues? Do other ſeruants ſo? Thou wert beſt ſet thy lower part where thy noſe ſtands. By mine Honor, If I were but two houres yonger, I&#x27;de beate thee: mee think&#x27;ſt thou art a generall offence, and euery man ſhold beate thee: I thinke thou waſt created for men to breath themſelues vpon thee. Go too ſir, you were beaten in Italy for picking a kernell out of a Pomgranat, you are a vagabond, and no true traueller: you are more ſawcie with Lordes and honourable perſonages, then the Commiſsion of your birth and vertue giues you Heraldry. You are not worth another word, elſe I&#x27;de call you knaue. I leaue you. But I hope your Lordſhippe thinkes not him a ſouldier. You haue it from his owne deliuerance. Then my Diall goes not true, I tooke this Larke for a bunting. I haue then ſinn&#x27;d againſt his experience, and tranſgreſt againſt his valour, and my ſtate that way is dangerous, ſince I cannot yet find in my heart to repent: Heere he comes, I pray you make vs freinds, I will pur ſue the amitie. Pray you ſir whoſe his Tailor? O I know him well, I ſir, hee ſirs a good worke man, a verie good Tailor. A good Trauailer is ſomething at the latter end of a dinner, but on that lies three thirds, and vſes a known truth to paſſe a thouſand nothings with, ſhould bee once hard, and thrice beaten. God ſaue you Cap taine. You haue made ſhift to run into&#x27;t, bootes and ſpurres and all: like him that leapt into the Cuſtard, and out of it you&#x27;le runne againe, rather then ſuffer queſtion for your reſidence. And ſhall doe ſo euer, though I tooke him at&#x27;s prayers. Fare you well my Lord, and beleeue this of me, there can be no kernell in this light Nut: the ſoule of this man is his cloathes: Truſt him not in matter of heauie conſequence: I haue kept of them tame, &amp; know their natures. Farewell Monſieur, I haue ſpoken better of you, then you haue or will to deſerue at my hand, but we muſt do good againſt euill. No, no, no, your ſonne was miſled with a ſnipt taffata fellow there, whoſe villanous ſaffron wold haue made all the vnbak&#x27;d and dowy youth of a nation in his colour: your daughter-in-law had beene aliue at this houre, and your ſonne heere at home, more aduanc d by the King, then by that red-tail&#x27;d humble Bee I ſpeak of. Twas a good Lady, &#x27;twas a good Lady. Wee may picke a thouſand ſallets ere wee light on ſuch ano ther hearbe. They are not hearbes you knaue, they are noſe-hearbes. Whether doeſt thou profeſſe thy ſelfe, a knaue or a foole? Your diſtinction. So you were a knaue at his ſeruice indeed. I will ſubſcribe for thee, thou art both knaue and foole. No, no, no. Whoſe that, a Frenchman? What prince is that? Hold thee there&#x27;s my purſe, I giue thee not this to ſuggeſt thee from thy maſter thou talk&#x27;ſt off, ſerue him ſtill. Go thy waies, I begin to bee a wearie of thee, and I tell thee ſo before, becauſe I would not fall out with thee. Go thy wayes, let my horſes be wel look&#x27;d too, without any trickes. A ſhrewd knaue and an vnhappie. I like him well, &#x27;tis not amiſſe: and I was about to tell you, ſince I heard of the good Ladies death, and that my Lord your ſonne was vpon his returne home. I moued the King my maſter to ſpeake in the behalfe of my daughter, which in the minoritie of them both, his Maieſtie out of a ſelfe gracious remembrance did firſt propoſe, his Highneſſe hath promis&#x27;d me to doe it, and to ſtoppe vp the diſpleaſure he hath conceiued againſt your ſonne, there is no fitter matter. How do&#x27;s your Ladyſhip like it? His Highneſſe comes poſt from Marcellus, of as able bodie as when he number&#x27;d thirty, a will be heere to morrow, or I am deceiu&#x27;d by him that in ſuch intel ligence hath ſeldome fail&#x27;d. Madam, I was thinking with what manners I might ſafely be admitted. Ladie, of that I haue made a bold charter, but I thanke my God, it holds yet. A ſcarre nobly got, Or a noble ſcarre, is a good liu&#x27;rie of honor, So belike is that. Let vs go ſee your ſonne I pray you, I long to talke With the yong noble ſouldier. And what would you haue me to doe? &#x27;Tis too late to paire her nailes now. Wherein haue you played the knaue with fortune that ſhe ſhould ſcratch you, who of her ſelfe is a good Lady, and would not haue knaues thriue long vnder? There&#x27;s a Cardecue for you: Let the Iuſtices make you and fortune friends; I am for other buſineſſe. you begge a ſingle peny more: Come you ſhall ha t, ſaue your word. You begge more then word then. Cox my paſ ſion, giue me your hand: How does your drumme? Was I inſooth? And I was the firſt that loſt thee. Out vpon thee knaue, doeſt thou put vpon mee at once both the offiee of God and the diuel: one brings thee in grace, and the other brings thee out. The Kings comming I know by his Trumpets. Sirrah, inquire fur ther after me, I had talke of you laſt night, though you are a foole and a knaue, you ſhall eate, go too, follow. This I muſt ſay, But firſt I begge my pardon: the yong Lord Did to his Maieſty, his Mother, and his Ladie, Offence of mighty note; but to himſelfe The greateſt wrong of all. He loſt a wife, Whoſe beauty did aſtoniſh the ſuruey Of richeſt eies: whoſe words all eares tooke captiue, Whoſe deere perfection, hearts that ſcorn&#x27;d to ſerue, Humbly call&#x27;d Miſtris. All that he is, hath reference to your Highnes. He lookes well on&#x27;t. Come on my ſonne, in whom my houſes name Muſt be digeſted: giue a fauour from you To ſparkle in the ſpirits of my daughter, That ſhe may quickly come. By my old beard, And eu&#x27;rie haire that&#x27;s on&#x27;t, Helen that&#x27;s dead Was a ſweet creature: ſuch a ring as this, The laſt that ere I tooke her leaue at Court, I ſaw vpon her finger. I am ſure I ſaw her weare it. I will buy me a ſonne in Law in a faire, and toule for this. Ile none of him. your reputation comes too ſhort for my daugh ter, you are no husband for her. I ſaw the man to day, if man he bee. Hee&#x27;s a good drumme my Lord, but a naughtie Orator. This womans an eaſie gloue my Lord, ſhe goes off and on at pleaſure. Mine eyes ſmell Onions, I ſhall weepe anon: Good Tom Drumme lend me a handkercher. So I thanke thee, waite on me home, Ile make ſport with thee: Let thy curtſies alone, they are ſcuruy ones.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — All&#x27;s Well That Ends Well</div><div class="body">When Béftrami’s father dies, he becomes a royal ward, and is summoned to court. H@léfhi loves him and is sad to see him go, but knows she can never have him because of the disparity in their rank. Phe@uDowager (@GuntEesS learns of her love and permits her to go to court and use her father’s medical knowledge, passed on to her on his deathbed, to cure the King of the fistula which afflicts him. ‘The Kimig has been advised to remain neutral in the war between Florence and Siena, but allows his lords to join on either side; Bertram, however, is deemed too young and required to stay at court. Helen wagers her life on the efficacy of her cure, and asks as her reward to be allowed her own choice of husband. She successfully heals the fistula and selects Bertram. He protests vehemently, but the King browbeats him into marriage. Rather than consummate the union, however, he runs away to the war and sends Helen word that he will only acknowledge her as his wife if she gets the ring from his finger and presents him with a child which he has lawfully begotten on her. She takes herself off, leaving word that she is going on a pilgrimage. Bertram acquits himself well in battle, but his companion Paroles allows the company’s drum to be captured by the Sienese. Passing through Florence, Helen encounters a widow whose daughter, Diama, is being solicited by Bertram for sex. She arranges for the widow to agree, on condition that Bertram gives up his ring; Helen then takes Diana’s place in bed, has sex with her husband, and exchanges rings with him. Meanwhile Paroles insists on trying to recover the lost drum, intending to return with no drum and a heroic story of insurmountable obstacles. He is ambushed by Florentine soldiers posing as the enemy, blindfolded, and put in fear of his life; under interrogation, he betrays the Florentine army’s military secrets and makes some uncomplimentary remarks about Bertram, only to find when the blindfold is removed that his captors are Florentines and that Bertram is present. With the war coming to an end, Bertram returns to France. Since Helen is presumed dead, he makes preparations to marry again, and sends his proposed fiancée his ring. The King identifies it as the ring he himself gave to Helen. Diana arrives, claiming the right to marry him after their supposed night together in Florence, and produces his own ring as proof. Bertram attempts to lie his way out of the situation, but is repeatedly caught out. Diana introduces Helen,…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

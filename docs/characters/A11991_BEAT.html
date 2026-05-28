@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BEAT in Much Ado About Nothing · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BEAT</span>
+</nav>
+
+<h1>BEAT</h1>
+<p class="lede">in <em>Much Ado About Nothing</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>1504</td></tr>
+<tr><th>Characters</th><td>7527</td></tr>
+<tr><th>BritDrama no.</th><td>1148</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">them all together, which maintaind so politique a state of euil, that they will not admitte any good part to inter mingle with them: but for which of my good parts <mark>did</mark> you first suffer loue for me? In spight of your <mark>heart</mark> I thinke, alas poore <mark>heart</mark>, if you spight it for my sake, I will spight it for yours, for I wil ne uer loue</div>
+<div class="excerpt">You had musty vittaile, and he hath holpe to eate it, he is a very valiaunt trencher man, he hath an excellent sto macke. And a good souldiour to a Lady, but what is he to a</div>
+<div class="excerpt">That I was disdainefull, and that I had my good wit out of the hundred mery tales: wel, this was signior Benedick that said so. I am sure you know him well enough. <mark>Did</mark> he neuer make you laugh? Why he is the princes ieaster, a very dul fool only his gift is, in deuising impossible slaunders, none but Libertines delight in him,</div>
+<div class="excerpt">peradue ̄ ture, (not markt, or not laught at) strikes him in to melancholy and then theres a partrige wing saued, for the foole will eate no supper that night: wee <mark>must</mark> follow the lea ders. Nay, if they leade to any ill, I will leaue them at the next turning. Speake cosin, or (if you cannot) stop his mouth with a kisse, and let</div>
+<div class="excerpt">signior? I answer to that name, what is your will? Why no, no more then reason. Do not you loue me? Why then my cosin Margaret and Vrsula Are much deceiu&#x27;d, for they <mark>did</mark> sweare you <mark>did</mark>. They swore that you were welnigh dead for me. No truly, but in friendly recompence. I would not denie you, but by this good day, I yeeld vpon great</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">You had musty vittaile, and he hath holpe to eate it, he is a very valiaunt trencher man, he hath an excellent sto macke. And a good souldiour to a Lady, but what is he to a Lord? It is so indeed, he is no lesse then a stuft man, but for the stuffing wel, we are al mortall. Alas he gets nothing by that, in our last conflict, 4 of his fiue wits went halting off, and now is the whole man gouernd with one, so that if he haue wit enough to keep himself warm, let him beare it for a difference between himself and his horse, for it is all the wealth that he hath left, to be known a reasona ble creature, who is his companion now? he hath euery month a new sworne brother. Very easily possible, he weares his faith but as the fa shion of his hat, it euer changes with the next blocke. No, and he were, I would burne my study but I pray you who is his companion? is there no yong squarer now that will make a voyage with him to the diuell? O Lord, he will hang vpon him like a disease, hee is sooner caught than the pestilence, and the taker runs present ly madde, God help the noble Claudio, if he haue caught the Benedict, it will cost him a thousand pound e e a be cured. Do good friend. No, not till a hote Ianuary. I wonder that you will still be talking, signior Bene dicke, no body markes you. A deere happinesse to women, they would else haue beene troubled with a pernitious suter, I thanke God and my cold blood, I am of your humour for that, I had rather heare my dog barke at a crow, than a man sweare he loues me. Scratching could not make it worse, and twere such a face as yours were. A bird of my tongue, is better than a beast of yours. You alwayes end with a iades tricke, I knowe you of olde. Will you not tell me who tolde you so? Nor will you not tell me who you are? That I was disdainefull, and that I had my good wit out of the hundred mery tales: wel, this was signior Benedick that said so. I am sure you know him well enough. Did he neuer make you laugh? Why he is the princes ieaster, a very dul fool only his gift is, in deuising impossible slaunders, none but Libertines delight in him, and the commendation is not in his wit, but in his villanie, for he both pleases men and angers them, and then they laugh at him, and beate him: I am sure he is in the Fleete, I would he had boorded me. Do, do, heele but break a comparison or two on me, which peradue ̄ ture, (not markt, or not laught at) strikes him in to melancholy and then theres a partrige wing saued, for the foole will eate no supper that night: wee must follow the lea ders. Nay, if they leade to any ill, I will leaue them at the next turning. Speake cosin, or (if you cannot) stop his mouth with a kisse, and let not him speake neither. Good Lord for aliance: thus goes euery one to the world but I, and I am sun-burnt, I may sit in a corner and crie, heigh ho for a husband. I would rather haue one of your fathers getting: hath your grace ne re a brother like you? your father got excellent husbands if a maide coulde come by them. I crie you mercy vncle, by your graces pardon. I tooke no more paines for those thankes, then you take paines to thanke me, if it had bin painful I would not haue come. Yea iust so much as you may take vppon a kniues point, and choake a daw withall: you haue no stomach signior, fare you well. What fire is in mine eares? can this be true? Stand I condemn&#x27;d for pride and scorne so much? Contempt, farewel, and maiden pride, adew, No glory liues behind the backe of such. And Benedicke, loue on I will requite thee, Taming my wild heart to thy louing hand: If thou dost loue, my kindnesse shall incite thee To bind our loues vp in a holy band. For others say thou dost deserue, and I Beleeue it better then reportingly. Good morrow sweete Hero. I am out of all other tune, me thinkes. Ye Light alone with your heels, then if your husband haue stables enough youle see he shall lacke no barnes. Tis almost fiue a clocke cosin, tis time you were rea dy, by my troth I am exceeding ill, hey ho. For the letter that begins them al, H. What meanes the foole trow? I am stuft cosin, I cannot smell. O God help me, God help me, how long haue you profest apprehension? It is not seene enough, you should weare it in your cap, by my troth I am sicke. Benedictus, why benedictus? you haue some moral in this benedictus. What pace is this that thy tongue keepes? O on my soule my cosin is belied. No truly, not although vntill last night, I haue this tweluemonth bin her bedfellow. Yea ▪ and I will weep a while longer. You haue no reason, I do it freely. Ah, how much might the man deserue of me that would right her! A very euen way, but no such friend. It is a mans office, but not yours. As strange as the thing I knowe not, it were as possi ble for me to say, I loued nothing so wel as you, but beleue me not and yet I lie not, I confesse nothing, nor I deny nothing I am sory for my coosin. Do not sweare and eate it. Will you not eate your word? Why then God forgiue me. You haue stayed me in a happy houre, I was about to protest I loued you. I loue you with so much of my heart, that none is left to protest. Kill Claudio. You kill me to deny it, farewell. I am gone, though I am here, there is no loue in you, nay I pray you let me go. In faith I will go. You dare easier be friends with mee, than fight with mine enemy. Is a not approoued in the height a villaine, that hath slaundered, scorned, dishonored my kinswoman? O that I were a man! what, beare her in hand: vntill they come to take handes and then with publike accusation vncouerd slaunder, vnmittigated rancour? O God that I were a man! I woulde eate his heart in the market place. Talke with a man out at a window, a proper saying. Sweete Hero, she is wrongd, she is slaundred, shee is vndone. Princes and Counties! surely a princely testimonie, a goodly Counte, Counte Comfect, a sweete Gallant surely, O that I were a man for his sake! or that I had any friend woulde be a man for my sake! But manhoode is melted into cursies, valour into complement, and men are only turnd into tongue, and trim ones too: he is now as valiant as Hercules, that only tels a lie, and sweares it: I cannot be a man with wishing, ther fore I will die a woman with grieuing. Yea signior, and depart when you bid me. Then, is spoken: fare you wel now, and yet ere I goe, let me goe with that I came, which is, with knowing what hath past betweene you and Claudio. Foule words is but foule wind, and foule wind is but foule breath, and foule breath is holsome, therfore I wil depart vnkist. For them all together, which maintaind so politique a state of euil, that they will not admitte any good part to inter mingle with them: but for which of my good parts did you first suffer loue for me? In spight of your heart I thinke, alas poore heart, if you spight it for my sake, I will spight it for yours, for I wil ne uer loue that which my friend hates. It appeares not in this confession, theres not one wise man among twentie that will praise himselfe. And how long is that thinke you? Verie ill. Verie ill too. Will you go heare this newes signior? I answer to that name, what is your will? Why no, no more then reason. Do not you loue me? Why then my cosin Margaret and Vrsula Are much deceiu&#x27;d, for they did sweare you did. They swore that you were welnigh dead for me. No truly, but in friendly recompence. I would not denie you, but by this good day, I yeeld vpon great perswasion, and partly to saue your life, for I was told, you were in a consumption.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Much Ado About Nothing</div><div class="body">Returning to Messina after a war, Claudio falls in love with Hero. At a masked revel, Don Pedro woos her for him by proxy; Don John maliciously tells Claudio that Pedro has wooed her for himself, but the truth soon purges Claudio’s jealousy and he and Hero are engaged to be married in a week’s time. In the interim, Don Pedro undertakes to make Beatrice and Benedick, who have a humour of mutual hatred, fall in love with each other. This is done by letting each of them overhear a conversation about how much in love the other is. Don John attempts to prevent Claudio’s marriage by showing him what he takes to be a nocturnal assignation between Hero and another man; in fact it is Margaret in Hero’s clothes, wooed by Borachio whom Don John has suborned. Claudio rejects Hero at the wedding, and the Friar proposes that she feign death to inculcate remorse in him. Borachio and his associate Conrad are arrested and examined, and confess the plot. As penance, Claudio undertakes to marry another ===== PAGE 61 ===== 1598 lady, said to be Leonato’s niece, without first seeing her; she is actually Hero. Benedick and Beatrice join Hero and Claudio to make it a double wedding. Don John flees Messina, but is apprehended and brought back to face punishment.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

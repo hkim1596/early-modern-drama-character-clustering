@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MERRY REPORT in The Play of the Weather · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>MERRY REPORT</span>
+</nav>
+
+<h1>MERRY REPORT</h1>
+<p class="lede">in <em>The Play of the Weather</em> — Heywood, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1544</td></tr>
+<tr><th>Words</th><td>853</td></tr>
+<tr><th>Characters</th><td>4101</td></tr>
+<tr><th>BritDrama no.</th><td>2</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">this whyle The ̄ a old moae ſhall whyle a man may go a myle By that tyme the god hath all made an ende Ye ſhall ſe howe the wether wyll amende By ſaynt Anne he goeth to worke euen boldely I thynke hym wyſe ynough for he loketh holdely Wherfore mayſtres be ye nowe of good chere For though in his preſence ye can not appeare</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">¶No but ye knowe howe he maye paſſe into you. ¶Ye ſhall I ſo, and your forſyde ſo wyde Naye nat yet but ſyns ye loue to be alone We twayne wyll into a corner anone But fyrſt I praye you come your waye hyther And let vs twayne chat a whyle togyther. ¶Stande ye ſtyll a whyle and I wyll go proue Whether that the god wyll be brought in loue My lorde howe nowe loke vp luſtely Here his a derlynge come by ſaynt Antony And yf it be your pleaſure to mary Speke quyckely for ſhe maye nat tary In fayth I thynke ye may wynne her anone For ſhe wolde ſpeke with your lordſhypen alone. ☜I counte women loſt yf we loue them not well For ye ſe god loueth them neuer a dele Mayſtres ye can not ſpeke with the god. ¶By my fayth for his lordſhyp is ryght beſy With a peece of worke that nedes muſt be doone Euen nowe is he makynge of a newe moone He ſayth your olde moones be ſo farre taſted That all the goodnes of them is waſted Which of the greate wete hath ben moſte matter For olde moones be lyke, they holde no water But for this newe moone I durſt lay my gowne Excepte a fewe droppes at her goynge downe Ye get no rayne tyll her aryſynge Without it nede and then no mans deuyſynge Coulde wyſhe the faſhyon of rayne to be ſo good Not guſhinge out lyke gutters of Noyes fludde But ſmall droppes ſprynklynge ſortely on the grounde Though they fel on a ſponge they wolde gyue no ſounde This new moone ſhal make a thynge ſprynge more in this whyle The ̄ a old moae ſhall whyle a man may go a myle By that tyme the god hath all made an ende Ye ſhall ſe howe the wether wyll amende By ſaynt Anne he goeth to worke euen boldely I thynke hym wyſe ynough for he loketh holdely Wherfore mayſtres be ye nowe of good chere For though in his preſence ye can not appeare Tell me your matter and let me alone May happe I wyll thynke on you when you be go en ¶Why ſwete harte by your falſe fayth can ye ſynge ¶Nowe by my trouth for the loue that I owe you You ſhall here what pleaſure I can ſhewe you One ſonge I haue for you ſuch as it is And yf it were better ye ſhulde haue it by gys. ¶Come on ſyrs but nowe let vs ſynge luſtely. ¶Oft tyme is ſene both in court and towne. Longe be women a bryngynge vp &amp; ſone brought downe So fete it is, ſo nete it is, ſo nyſe it is, So trycke it is, ſo quycke it is, ſo wyſe it is I feare me ſelfe excepte I may entreate her I am ſo farre in loue I ſhall forget her. Nowe good mayſtres I praye ye let me kys ye ☜What yes hardly kys me ones and no more I neuer deſyred to kys you defore. ¶To whome doeſt thou ſpeke foule hore canſt thou tel. ☜No doubte he wyll deale ſo graciouſly That all folke ſhall be ſerued indifferently Howe be it I tell the truth my offyce is ſuche That I muſt report eche ſute lytell or muche Wherefore with the god ſyns thou cauſt not ſpeke Truſt me with thy ſute I wyll not fayle it to breke. ¶Nowe I beſeche our lorde the deuyll the burſt Who medleth with many I holde hym accurſt Thou hore can I medle with you bothe at ones. ¶Many wordes lytell matter and to no purpoſe Suche is the effect that thou diſcloſe. The more ye byb, the more ye babyll. The more ye babyl, the more ye fabyl The more ye fabyl, the more vnſtabyl. The more vnſtable, the more vnabyll In any maner thynge to do any good No hurte though ye were hanged by the holy rood. ¶What monſter is this I neuer harde none ſuche For loke howe muche more I haue made her to muche And ſo farre at laſte ſhe hath made me to lyttell Where be ye Launder I thynke in ſome ſpyttell Ye ſhall waſhe me no gere for fere of fretynge I loue no launders that ſhrynke my gere in wettynge I praye the go hens and let me be in reſt I wyll do thyne errande as I thynke beft. Gyue boys wether quoth a nonny nonny. ¶I can not tell for by this lyght. I chepte nor barowed none of hym this nyght But by ſuche ſhyfte as I wyll make Thou ſhalt ſe ſoone what way he wyll take. ☜That ſhall be no lenger in doynge Then I am in commynge and goynge ¶If I had caught them Or euer I taught them I wolde haue taught them To be nere me. Full dere haue I bought them Lorde ſo I ſought them Yet haue I brought them Suche as they be.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Play of the Weather</div><div class="body">Discord between the four gods responsible for snow, sun, rain, and wind is making the weather inconsistent. Jupiter calls a parliament to settle the matter and sends Merry Report to summon any suitors. Eight representatives of various professions and occupations ask for different kinds of weather to suit themselves. Jupiter declares the need for compromise: all their jobs are mutually interdependent despite their differing needs, so the weather will continue to be inconsistent. The suitors all praise the decision.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

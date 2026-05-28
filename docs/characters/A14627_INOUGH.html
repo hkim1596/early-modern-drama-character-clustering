@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INOUGH in Enough Is as Good as a Feast · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_07.html">Cluster 7 — 7: thu, lorde, did</a> ›
+  <span>INOUGH</span>
+</nav>
+
+<h1>INOUGH</h1>
+<p class="lede">in <em>Enough Is as Good as a Feast</em> — Wager, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1570</td></tr>
+<tr><th>Words</th><td>677</td></tr>
+<tr><th>Characters</th><td>3466</td></tr>
+<tr><th>BritDrama no.</th><td>468</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 7 (<em>thu, lorde, did, holy, christ, tyme…</em>). Matches are highlighted.</p>
+<div class="excerpt">godlyly all our liues through, For we muſt tread the paths of death ſo ſharp and rough. And then ſhall we be ſure to cary as little away: As we brought with vs thus Saint Paule dooth ſay. Yea, hardely my fréend ſay what you would. Your minde vnto me you may boldely declare. If you had required a greater thing of me, I would</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Godlines is great riches if a man can be content, When God hath ſent him plenty and Inough: Let vs praiſe him for our food and raiment, And liue godlyly all our liues through, For we muſt tread the paths of death ſo ſharp and rough. And then ſhall we be ſure to cary as little away: As we brought with vs thus Saint Paule dooth ſay. Yea, hardely my fréend ſay what you would. Your minde vnto me you may boldely declare. If you had required a greater thing of me, I would haue doon it for you I tel you certain: Sir, one of yonder men which you doo ſee, Would ſpeak with you alone very fain. Be not raſh in taking of a fréend Ariſtotle dooth ſay: Nor when thou haſte taken him, caſt him not away. Admit not thy fréend either high or lowe: Except his behauiour to others thou dooſt knowe. For look how before he hath ſerued his other fréend: Euen ſo wil he ſerue thée alſo in the end. Inough is as good as a feaſt, wel you wot: More then inough: a man needeth not. Whether it be lands, money, freends or ſtore: if he haue inough: what néedeth he any more? It is an olde prouerbe and of an ancient time: Which ſaith, it is not all Golde, that like Golde dooth ſhine. No more are all fréends that freendſhip pretend: As it approoued with many in the end. Theſe woords procéed from a couetouſe minde: And from a worldly luſt which dooth you blinde. was not y e poor widdow for her offring praiſed more Then all they y t offred of their ſuperfluitie &amp; ſtore. The ſacrifice of God as the prophet Dauid dooth ſay Is a broken hart and a good minde alway. The greateſt boſters are not the beſt giuers: Nor the erneſt preachers are the beſt liuers. As ſucre increaſeth riches and honor, So couetouſe inlargeth dayly more and more. I knowe ſo ̄ e in this realme which once were co ̄ tent With poorely inough which God to them had ſent. Wiſhing of a good conſcience as they ſaid verily: That God would once again reſtore the veritie. If it pleaſe thee good Lord (ſaid they) thy woord to vs again ſend And then truely our Couetouſe liues we wil amend. But ſince it hath pleaſed God, them to welth to reſtore: They are ten times more Couetouſe then they were before. Yea hedling without all conſideration: They for Couetouſe make ſome lawes in that nation. Such bying and ſelling of Leaces and benifices: Such doubling of wares to extreme prices. So ſhamefully Gods miniſters they poule &amp; ſhaue: That not half inough to liue vpon they haue. But it is an olde ſaying and a true certainly: it wil not out of the fleſh y t is bred in y e bone verily. The worldly man wil needs be a worldly man ſtil: Wel chuſe you I wil let you alo ̄ e doo what you wil. I cannot think but thoſe that of me holde ſcorne: Wil be glad of me or euer the yéer be half worne. Exit Inough is as good as a feaſt, where contentation dooth dwel, For where he remaineth is the ſpirit of God with reſt: The vnquiet minde of the couetouſe dooth grutch and ſwel, And to liue with inough he dooth abhorre and deteſt. The greedy gaſping of Couetouſe dooth him ſo moleſt. That to be rich he all his whole minde dooth ſet: Nothing regarding how the ſame he dooth get. Inough is as good as a feaſt, heer let vs ſtay, We haue troubled our audience, that let vs remember: Let vs conclude therfore, but firſt let vs pray, That it wil pleaſe God in mercy our good miſtres to tender, Our faith to ſtabliſh wherin we be ſlender. That at the laſt day when the trump ſhall blowe: For to be heauenly men the Lord may vs al knowe</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Enough Is as Good as a Feast</div><div class="body">Remembering his father’s bankruptcy, the Worldly Man hoards treasure for the future, seeing such behaviour as provident thrift, whereas the Heavenly Man relies on God to look after him and regards wealth as a distraction from spiritual things. He and Contentation persuade the Worldly Man to change to a godly lifestyle, but the vices, using innocuous aliases to inveigle their way into his confidence, cause him to backslide into covetous materialism. He becomes a miser and maltreats his tenants, servants, and hirelings: he raises rents, fails to pay the wages he owes, and seizes property adjacent to his own. After a bad dream about God’s punishment, he falls ill and dies. Satan carries him to hell on his back, advising the audience to live their lives in the same way. The virtues advise the contrary.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_07.html">Cluster 7 — 7: thu, lorde, did</a> page.
+</div>
+</div></body></html>

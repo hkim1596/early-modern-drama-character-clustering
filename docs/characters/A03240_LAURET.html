@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LAURET in A Maidenhead Well Lost · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LAURET</span>
+</nav>
+
+<h1>LAURET</h1>
+<p class="lede">in <em>A Maidenhead Well Lost</em> — Heywood, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1634</td></tr>
+<tr><th>Words</th><td>653</td></tr>
+<tr><th>Characters</th><td>3405</td></tr>
+<tr><th>BritDrama no.</th><td>2289</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Lord: And wherefore doe you sigh? Nor could I chuse, should you but sigh againe. Married my Lord! Nay, nothing. Why should you grieue For that? For I, my Lord, <mark>must</mark> haue a Husband too. When&#x27;s yours my Lord? The selfe same day, And selfesame houre that you inioy your loue, My Princely Husband I <mark>must</mark> then inioy. Not my selfe</div>
+<div class="excerpt">Husband I <mark>must</mark> then inioy. Not my selfe more deere. You shall see him That day, as richly habited as the great Heire of Florence: But royall Sir, what&#x27;s shee That you <mark>must</mark> bed then? That shee that hates mee most should liue to inioy Him I affect best: O my ominous fate, I thought to haue hid mee from thee in these desarts, But thou</div>
+<div class="excerpt">amisse, Because my Lord the Prince had such content Which caus&#x27;d him giue his Charter to my hand, The full assurance of faire Iulia&#x27;s dowre: Day gins to breake, and I <mark>must</mark> to the Lodge. Oh what a griefe it was to leaue the Prince! But leaue those thoughts: These Gifts to me assign&#x27;d, Are nothing worth the Iem I left behind. They are</div>
+<div class="excerpt">those thoughts: These Gifts to me assign&#x27;d, Are nothing worth the Iem I left behind. They are wellcome to me my Lord. So we haue heard it rumor&#x27;d Trew My Lord, I <mark>did</mark>. And lay with him last night. That you may soone coniecture by this gift. Some few my Lord, amongst the rest, this diamond Hee put vpon my finger. Sir, ten thousand</div>
+<div class="excerpt">yeere. See here, My Lord, Sir, Is not that sufficient for a dowry? Pardon great Prince; for all that loue you spake To Iulia, you whisper&#x27;d in my eare: Shee is vnchast; which, lest you should haue found, Her father sent mee here, fiue hundred crownes By Stroza; but neither his gold, nor all His sly temptations, could one whit</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Away, you are a foole, and trouble vs. Now sir, your skill. Now sir, you see I doe not smile. Oh Mother, doe you heare the newes, the Prince, The Prince is comming. Where is hee, oh where? Is hee not come then? Welcome my Lord: And wherefore doe you sigh? Nor could I chuse, should you but sigh againe. Married my Lord! Nay, nothing. Why should you grieue For that? For I, my Lord, must haue a Husband too. When&#x27;s yours my Lord? The selfe same day, And selfesame houre that you inioy your loue, My Princely Husband I must then inioy. Not my selfe more deere. You shall see him That day, as richly habited as the great Heire of Florence: But royall Sir, what&#x27;s shee That you must bed then? That shee that hates mee most should liue to inioy Him I affect best: O my ominous fate, I thought to haue hid mee from thee in these desarts, But thou dost dogg mee euery where. Admit him in. Wee would bee priuate sirra, And therefore leaue vs. Yes, I haue. All this is granted. I wish that nappinesse were mine alone, Oh my faint heart: Passion ouer-swayes me quite, But hide thy griefe Lauretta: Sir, you &#x27;le make Me fall in loue with him: Were I his equall, I then should iudge him worthy of no lesse. Good Sir bee briefe: To what pray tends these speeches? Good Sir bee plaine. Doe you not blush, when you deliuer this Praye tell the Duke, all Women are not Iulia, And though wee bee deiected, thus much tell him, Wee hold our honour at too high a price, For Gold to buy. Sir bee answered, If Iulia bee disloyall: Let her bee found So by the Prince she wedds: Let her be branded With the vile name of strumpet: Shee disgrac&#x27;d Mee, that nere thought her harmes; publikely strucke mee, Nay in the Court: And after that, procur&#x27;d My banishment: These Iniuries I reap&#x27;t By her alone, then let it light on her. My blood rebells against my reason, and I no way can withstand it: &#x27;Tis not the Gold Mooues mee, but that deere loue I beare the Prince, Makes me neglect the credit and the honour Of my deare Fathers house: Sir, what the Duke desires I am resolued to doe his vtmost will. Good Mother speake not, for my word is past. And cannot bee recall&#x27;d, Sir will you away? I am resolute. The Prince is fast, all done. And for my part, it was not much amisse, Because my Lord the Prince had such content Which caus&#x27;d him giue his Charter to my hand, The full assurance of faire Iulia&#x27;s dowre: Day gins to breake, and I must to the Lodge. Oh what a griefe it was to leaue the Prince! But leaue those thoughts: These Gifts to me assign&#x27;d, Are nothing worth the Iem I left behind. They are wellcome to me my Lord. So we haue heard it rumor&#x27;d Trew My Lord, I did. And lay with him last night. That you may soone coniecture by this gift. Some few my Lord, amongst the rest, this diamond Hee put vpon my finger. Sir, ten thousand crownes by th&#x27; yeere. See here, My Lord, Sir, Is not that sufficient for a dowry? Pardon great Prince; for all that loue you spake To Iulia, you whisper&#x27;d in my eare: Shee is vnchast; which, lest you should haue found, Her father sent mee here, fiue hundred crownes By Stroza; but neither his gold, nor all His sly temptations, could one whit mooue mee; Onely the loue I euer bare your honour, Made me not prise my owne. No lust full appetite Made me attempt such an ambitious practise, As to aspire vnto your bed my Lord. Great Sir, I shall. Royall Princesse, I still shall be your hand-maide.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Maidenhead Well Lost</div><div class="body">Julia has given herself sexually to her flance, the Prince of Parma, but is now concerned that he mav have fost interest in her: she has been told of a dalliance between him and Lauretta. When lulia publicly strikes Eauretta, Parma breaks off the engagement. In fact, Julia’. informant, Stroza, was lying: he has a grudge agamoat ===== PAGE 406 ===== Lauretta’s father, General Sforza, and has also been working to secure his downfall by delaying the shipment of money and supplies to the front. News arrives that the war is won, but that Sforza, unable to pay his men, gave them everything he had and died of grief. His widow pays the soldiers’ arrears out of her estate and leaves Milan with Lauretta. Fearful of dishonour, Julia tries to persuade Parma to stay by telling him she is pregnant. He denies paternity — she consented so readily to pre-marital sex that, misled by Stroza, he believes she must also have had other men - and leaves anyway. Her father the Duke learns of the situation, and sends Stroza to fetch Parma back, dead or alive. Julia’s unborn child saves her from execution for her misdeed, and she goes into hiding until the baby is born. When it is, the Duke orders Stroza to dispose of it, and plans to conceal her shame with a hasty marriage to another foreign prince. Stroza leaves the baby in a grove to be found by passers-by; sure enough, when he returns a few hours later, it has gone, found by Parma and recognized as his own true issue. Lauretta and her mother are found in the forest by the Prince of Florence, and installed by him in a ducal hunting lodge. She falls in love with him, but, knowing herself too low-born, gives cryptic answers to his questions about her love-life. Stroza arrives in Florence as an ambassador to negotiate a marriage between the Prince and Julia. The Duke of Florence accepts, and the Prince is obliged to consent. When he tells Lauretta about it, she initially assumes herself to be the bride, and continues her cryptic answers, telling him that she too will be marrying a prince at the exact same time; on learning he is to wed Julia, she faints. The Prince receives a letter from Parma warning him that Julia is unchaste, and he interrupts the wedding to raise the matter; only on receiving assurances of the bride’s virginity does he allow the ceremony to be completed. To avoid the deception being exposed on the wedding night, Stroza plans to put a substitute bride in the Prince’s bed, and bribes Lauretta to undertake the…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

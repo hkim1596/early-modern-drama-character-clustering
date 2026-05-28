@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HOR in Two Wise Men and All the Rest Fools · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>HOR</span>
+</nav>
+
+<h1>HOR</h1>
+<p class="lede">in <em>Two Wise Men and All the Rest Fools</em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1619</td></tr>
+<tr><th>Words</th><td>1215</td></tr>
+<tr><th>Characters</th><td>5940</td></tr>
+<tr><th>BritDrama no.</th><td>1891</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">more wit then twentie such loggerheads. Now Acuto ▪ let vs <mark>two</mark> conclude what shall be come of these holydaies, and as we agree, I warrant it shall <mark>goe</mark>. And thou hast almost perswaded me to let them stand. But let vs <mark>goe</mark> and read a booke I haue at home of the liues of Saints to furnish vs with stronger reasons against our next</div>
+<div class="excerpt">as soone as it peeps out of thy mouth as pa rats doe bread and butter. Ile lay ten pound to nothing, Ile not misse a straws breadth, His-to-ri-o-gra-fers. Law, <mark>did</mark> no I tell you so? Nay you never had an apter scholler in your life then I am: twool doe you good to teach me. I will: but you need not doubt that it&#x27;s safe, &amp; will</div>
+<div class="excerpt">saying (and I thinke it <mark>bee</mark> true) that a man may as soone depart with his honestie, as with any thing he hath. I promise you I am in some doubt of it now: go on. <mark>Goe</mark> to then: if you <mark>bee</mark> such a scholler I will not dispute with you about the Holy dayes, but my neighbour Acuto hath beene a scholler as well as you, and hee is able</div>
+<div class="excerpt">in this kinde of argument? But who could abide his wife to teach and con trolle him? But for all this it should <mark>bee</mark> long before I would chuse such a wife, which <mark>did</mark> desire to cary such a hand over me as she doth over thee. Why doth she cary that cudgill while she is pray ing? But will she correct her seruants with this cudgill?</div>
+<div class="excerpt">dutie being a gardner, to doe all b line and levell. Yes I make no question, though I lack a few teeth but I can swallow a sullebub as full as you. No? that you <mark>did</mark>. Ile be iudg&#x27;d by all this compa nie. Go too then ▪ I wooll: vp with it once againe. No, not I more then my dog. Let me alone for that: Ile make a shift. Doe you</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Faith, neighbour Rustico, I am euen of your mind. For Ile bide by it, I ha more weeds growes in one Holyday, then in three workie dayes. Indeed &#x27;twer a gay thing if wee could put downe these Holy-dayes, as you say. Me thinks&#x27; twer an easie mat ter as well as we ha put downe the Fasting-dayes pell mell, hand ouer head. An wee wood hang together &#x27;twer soone done, but when some are so arseward &#x27;twill neuer be. M r Acuto talke with me, hee speakes like a foole. I haue more wit then twentie such loggerheads. Now Acuto ▪ let vs two conclude what shall be come of these holydaies, and as we agree, I warrant it shall goe. And thou hast almost perswaded me to let them stand. But let vs goe and read a booke I haue at home of the liues of Saints to furnish vs with stronger reasons against our next encounter with these Dunce , and then wee will end this controversie. O Histornoggerfers. a braue word. Ile make a knot of these letters. Now I haue it Histriagerfers. That I will be sure to doe. Stay there. Now gape (he gapes &amp; Hortano looks in his mouth) lets tell, how many teeth ha you? 22. hough, whoos within there? a paire of pincers. Why to pull two teeth out a your mouth for I ha but iust 20. Mary because youle ha me say it iust as you doe, &amp; that I cannot except you &amp; I haue the like number of teeth. I, and Ile measure your tongue, that if it bee longer then mine it may be cut even: for it is my dutie being a gardner, to doe all b line and levell. Yes I make no question, though I lack a few teeth but I can swallow a sullebub as full as you. No? that you did. Ile be iudg&#x27;d by all this compa nie. Go too then ▪ I wooll: vp with it once againe. No, not I more then my dog. Let me alone for that: Ile make a shift. Doe you say the word, and if there be ere a one there, Ile finde him I war rant you. Very well: how shood I misse them then? turne me loosse. Ile take it as soone as it peeps out of thy mouth as pa rats doe bread and butter. Ile lay ten pound to nothing, Ile not misse a straws breadth, His-to-ri-o-gra-fers. Law, did no I tell you so? Nay you never had an apter scholler in your life then I am: twool doe you good to teach me. I will: but you need not doubt that it&#x27;s safe, &amp; will never be lost. But to satisfie you Ile doe it, and that quickly, Histor-cockafurrs. This is your faut: that wood ha me say it so fast: &amp; is a very s urvie word to hit, except a man haue a mouth made thereafter. Thanks gentle Master: and the next time you teach me, weele doe it very closely ant please you. For I doe not meane to be very lavish of my learning, when it shall bee at the biggest in no companie but yours. Sir you are much mistaken. The Tailer is an honest man, and a true man, (although it be impossible) and we are fully agreed they shall stand, &amp; be kept as holy as they were the last yeare. What a villaine is this? then thou wilt not pray for thy selfe? Yes; a man would thinke so; art thou not? What a goose art thou? Is it possible thou canst speake, and yet be no liuing creature? proue this and proue anything. That were strange. How? He that was the last yeare and yet liues, is not. I cannot devise how this should be: for if he liue, how can he chuse but haue a being? This may be. For I haue heard an old saying (and I thinke it bee true) that a man may as soone depart with his honestie, as with any thing he hath. I promise you I am in some doubt of it now: go on. Goe to then: if you bee such a scholler I will not dispute with you about the Holy dayes, but my neighbour Acuto hath beene a scholler as well as you, and hee is able to shew you many reasons why they ought to continue. And he hath fully converted me. Sure their bitternesse pass&#x27;d the bou ds of huma nitie. They make me afraid of marying, if such jarres fall out betweene those that be one flesh. How can that be neighbour Rustico? if you can teach me that, you doe much. For I haue heard many say, that it is impossible to tame a shrew by any meanes, except by hauing no woman at all. I thinke this is very likely: but who can endure his wife to doe what she listeth at all times? But I haue heard say ▪ it is better to haue honorable warres, then inconvenient peace. How commest thou to be so cunning in this kinde of argument? But who could abide his wife to teach and con trolle him? But for all this it should bee long before I would chuse such a wife, which did desire to cary such a hand over me as she doth over thee. Why doth she cary that cudgill while she is pray ing? But will she correct her seruants with this cudgill? But I had rather be her seruant, then her husband, if she strike with such twigges. How doth shee bring vp thy sonne Iacke? Nay, nay, if your wife bee a woman of that com mand as you describe he to be, and as she makes shew of no lesse by her part, it may well be, the Boy takes his courage from her, and his outward personage from you. How can you defend that to be lawfull to be got ten with child by any but your husband? Where learn&#x27;d you to beate your husband? But how shall he know that a good spirit moveth you to correct him? But for all this I see no ground or proofe you haue, that a wife shall take vpon her to teach and correct her hus band. You alleage Scripture as farre as Rome is from Rock ingham, and expound it at your pleasure, and frame it to your owne fancie: but if I were your husband I would cud gill you well, and by the word maintaine it better. Yes: but what, shall women doe it? No, nor sluts neither: but men shall instruct men. How now Rustico, what wilt thou doe: kill thy selfe with this same foolish zeale? plucke vp a good heart, and liue to see thy boy a man. A martir. How canst thou be a martir? If you find your selfe so sicke indeed, I wish you to make your will, and dispose of your estate. Not a whit neerer death for that. Let me perswade you (neighbour Rustico ) to make your will. I assure you it is superstition to thinke death to be erer you for that cause.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Two Wise Men and All the Rest Fools</div><div class="body">Proberio returns to England from his overseas travels, bringing with him the Italianated Antonio. Aton sets up in business, giving Proberio employment an house-room in return for an investment in the business. Simplo asks to enter his service as an apprentice in order to learn his tricks, and is ies ar provided that Antonio is granted the use of his lan and money. ” Securus asks Hermito to.advise him on a series © issues. They sit down to watch the debates, and witness the rest of the play’s action. Several rustics argue over whether holy days should be abolished: because no work gets done, weeds grow in the gardens and os in the fields. They appeal to Hermito, who rules in favour of Sunday observance. Sperato and Spurco disagree over whether hawking or hunting is the better sport, while Gulato avers that drinking is better than both. The husband Rustico and the bachelor Hortano debate the virtues of marriage: Hortano is afraid of marrying a shrew, whereas Rustico has already done so. His wife Lamia has conceived her son in his absence, and now ===== PAGE 161 ===== 1619 spoils the boy whilst beating Rustico, who reflects that at least he will go straight to heaven when he dies, having endured purgatory on earth. A lawyer, a merchant, and a farmer debate the relative merits and vices of their professions; asked for an opinion, Securus rules in the farmer’s favour, but Hermito argues that all three have their place in society and all three are open to abuse. They also adjudicate in a similar argument between a soldier, an intelligencer, and a musician, declaring each to be as bad as the other: they could do useful service, but have degenerated of late. Antonio’s business dealings prove unethical. He misappropriates borrowed goods, reneges on contracts, and dishonours debts, tearing his authenticating seal off a bill when it is presented to him by a poor widow. He and Noverindo plan to set up a livery company of usurers, in order to make it easier for them to charge exorbitant rates of interest. They employ Proberio to procure them a coat of arms, but since Proberio has been cheated by Antonio, he refuses to hand over the design before receiving his fee; it turns out to show Judas being hanged by the Devil, which Noverindo thinks might not be as good for business as they hoped. &#x27; Insatiato the courtier is in financial difficulties. His brother offers him a partnership in a commodity of rags, which are in heavy demand by the paper industry. Insatiato feigns…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

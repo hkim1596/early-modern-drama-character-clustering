@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BYDET in 252 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BYDET</span>
+</nav>
+
+<h1>BYDET</h1>
+<p class="lede">in <em>252</em> — [94]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>610</td></tr>
+<tr><th>Characters</th><td>3318</td></tr>
+<tr><th>BritDrama no.</th><td>252</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">and preoccupie the pustulent dangers incident to all your cases. We will vouchsafe in this our publike session to per use them, pleaseth your excellent wagship to <mark>bee</mark> informed that the deuision of pages is tripartite (tripartite) or three fold, of pages, some be Court pages, others Ordinary gallants pages, &amp; the third-apple squiers,</div>
+<div class="excerpt">page of the plac ket, what is your mistres? Stand forth Court-page, thou lokest pale and wan. O say no more, I know thy miseryes, what betwixt thy Lady, her Gentlewoman and thy Masters late gaming thou maist looke pale. I know thy miseries and I condole thy calami ties, thou art borne well, bred ill, but diest worst of al, thy</div>
+<div class="excerpt">thee but as his pander neuer, regardeth thee but as an idle bur that stickst vpon the nap of his fortune, and so naked thou camst into the world and naked thou <mark>must</mark> returne; whom serue you. Thou art my happiest subiect, the seruice of a foole is the onely blessedst slauery that euer put on a chaine and a blew cote, they know</div>
+<div class="excerpt">fortunes are ordain&#x27;d for fooles, as fooles are for fortune, to play with all not to vse, hath hee taken an oth of alleagiance is hee of our brother hood yet? You <mark>must</mark> performe a valorous Vertuous, and religi ous exploit first in desert of your order. Pippo tis our will and pleasure thou sute thy selfe like a Marchants wife, leaue</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">At pawne sir. And if it liue strike of this little head. Exit. Death or scilence proceed. Our selfe will giue them their charge, Now let mee stroake my beard and I had it, &amp; speake wisely if I knew how: most vnconsionable, honest little, or little honest good subiects, informe our person of your seuerall qualities and of the pre iudice that is foisted vppon you that our selfe may peruew, pre uent, and preoccupie the pustulent dangers incident to all your cases. We will vouchsafe in this our publike session to per use them, pleaseth your excellent wagship to bee informed that the deuision of pages is tripartite (tripartite) or three fold, of pages, some be Court pages, others Ordinary gallants pages, &amp; the third-apple squiers, basket-bearers or pages of the placket, with the last we will proceede first, stand forth page of the plac ket, what is your mistres? Stand forth Court-page, thou lokest pale and wan. O say no more, I know thy miseryes, what betwixt thy Lady, her Gentlewoman and thy Masters late gaming thou maist looke pale. I know thy miseries and I condole thy calami ties, thou art borne well, bred ill, but diest worst of al, thy bloud most commonly gentle, thy youth ordinaryly idle, and thy age to often miserable. When thy first sute is fresh, thy cheekes cleere of Court soiles, and thy Lord falne out with his Lady, so longe may be heele chuck thee vnder the chin, call thee good pretty ape and giue thee a scrap from his owne trencher, but after he neuer beholds thee, but when thou squierst him with a torch to a wantons sheetes, or lightes his Tobacco pipe. Neuer vseth thee but as his pander neuer, regardeth thee but as an idle bur that stickst vpon the nap of his fortune, and so naked thou camst into the world and naked thou must returne; whom serue you. Thou art my happiest subiect, the seruice of a foole is the onely blessedst slauery that euer put on a chaine and a blew cote, they know not what nor for what they giue, but so they giue tis good, so it be good they giue: fortunes are ordain&#x27;d for fooles, as fooles are for fortune, to play with all not to vse, hath hee taken an oth of alleagiance is hee of our brother hood yet? You must performe a valorous Vertuous, and religi ous exploit first in desert of your order. Pippo tis our will and pleasure thou sute thy selfe like a Marchants wife, leaue the managing of the sequence vnto our prudence. Our maiesty dismounteth, and wee put of our great nesse, and now my little knaues I am plaine Crack, as I am Bos phoros Carmelidon Honorificacuminos Bydet I am imperious: ho nor sparckles in mine eyes; but as I am Crack I wil conuay cros bite and cheat vpon Simplicius, I will feed, satiat and fill your panches: replenish, stuff or furnish your purses, wee will laugh when others weepe, sing when others sith, feede when others starue, and be drunke when others are sober, this my charge at the loose, as you loue our brother-hood, auoide true speech square dice, small liquor, and aboue all, those to vngentleman like protestations of indeede and verely, and so gentle Appollo touch thy nimble string our sceane is donne yet fore wee cease wee sing. The Song and Exeunt. O that purse with all the white pence in it, fine man I loue you, giue you the fine red pence soone at night, he, I thanke you where&#x27;s the foole now?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 252</div><div class="body">The pageant dealt with one or more elements in the career of John the Baptist. 1553 The subject matter lacks the usual verbal connection to the name of the Lord Mayor (Sir Thomas White), but presumably reflected the same personal preferences that led VWVhite to commemorate the Baptist in the name of the Oxford college he founded in 1555.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

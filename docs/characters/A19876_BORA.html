@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BORA in The Cruel Brother · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BORA</span>
+</nav>
+
+<h1>BORA</h1>
+<p class="lede">in <em>The Cruel Brother</em> — Davenant, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1630</td></tr>
+<tr><th>Words</th><td>935</td></tr>
+<tr><th>Characters</th><td>4834</td></tr>
+<tr><th>BritDrama no.</th><td>2202</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">dayes and houres too. And for my part Let the Glaſſe runne out. Why then the Deuill, will ne&#x27;re giue a Ma Leaſure, to beleeue a trueth. Sir, let him, that hath a <mark>heart</mark> of his owne Thinke what he liſt. All is witc craft. know when the Moone winks There&#x27;s ſomething in&#x27; , beſides an ecclips. Allas ſir l&#x27;ue more faults then misbeliefe.</div>
+<div class="excerpt">craft. know when the Moone winks There&#x27;s ſomething in&#x27; , beſides an ecclips. Allas ſir l&#x27;ue more faults then misbeliefe. Therefore giue me your bleſ ing, and let me <mark>Goe</mark> home in peace. T&#x27;is true, wh n the skie falls We ſhall haue Larkes. But let weaker ſtomachs, Ex ect ſuch curious meate. I can eate Oates, and Garlick, vnder my</div>
+<div class="excerpt">of his body. Tis no Chamber, but a Court. Cubbord. They cannot Sir, For he&#x27;s a fainte eater, If he would pray ſo often as he faſts; He had bin at libertie long agoe. He&#x27;le dine vpon a ſingle Pea; and leaue Orts. Alas Sir, when Fortune&#x27;s Tippet ſtands vp, Few men will lend a pin to tacke it downe, I, and my linage haue ſweete</div>
+<div class="excerpt">thought with much care on theſe Offices: And finde my ſelfe fitting to be in&#x27;em. I will haue&#x27;em all; come Cut, and Long-taile. For my Wife, will be ſuch a glad <mark>woman</mark>. O Sir! giue me your bleſsing— You Signior Caſtruch o! Signior Coxcombe! Are you ti &#x27;d with doing well? you haue ſcarce Brought my poore Lord out of the Priſon</div>
+<div class="excerpt">hundred offices, You confound all, by leading my poore Lord Into new broyles. Yes, perſwade me to dry Ice in an Ouen! But I&#x27;le follow your Heeles ſo cloſe: as Ile <mark>Goe</mark> neere to tread vpon your Kibes.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">O rare concluſion: Well. He that ſtill expects, but tires his hope, What One cannot, another can: t&#x27;is ſo With dayes and houres too. And for my part Let the Glaſſe runne out. Why then the Deuill, will ne&#x27;re giue a Ma Leaſure, to beleeue a trueth. Sir, let him, that hath a heart of his owne Thinke what he liſt. All is witc craft. know when the Moone winks There&#x27;s ſomething in&#x27; , beſides an ecclips. Allas ſir l&#x27;ue more faults then misbeliefe. Therefore giue me your bleſ ing, and let me Goe home in peace. T&#x27;is true, wh n the skie falls We ſhall haue Larkes. But let weaker ſtomachs, Ex ect ſuch curious meate. I can eate Oates, and Garlick, vnder my owne Roofe. But wont yee floute, and play the knaue with one? Interpret the word, as your ſelfe ſhall pleaſe. I ſcorne to be your Dictionary. Marry come vp: Are your eares ſo tender? I hope I&#x27;m a Man, although a ſinner. No, no, Hot words make but warme aire, A figg For a Knight-errant; that hath a ſtile, and nere a hedge. Holde, holde Enough ſufficeth all women but whores. He that expects the Morning lengthens the Night Therefore ſtraitway let my Lord get the Duke To ſigne theſe Patents: which done I&#x27;le returne to the wife of my bowels, And dye for ioy. Who would haſten Time, when we may be old Too ſoone. Let me take downe a Cuſhion, and pray. For I ſhall haue more dignitie then will ſuffice To damne a Monke. Why, can I helpe it? If a man be borne To Offices. Or as my Maſter ſayd, Predeſtinate in the wombe of greatneſſe. Tis not our faults. Each man obayes his Starre, In ſpight of his Teeth, One thing grieues me. I&#x27;ue a badd memory Already, and now t&#x27;will be made worſe. O Sir! preferment makes a man forget His deereſt friends; nay his kindred too. How! Grow not old in anothers garment, Sell what&#x27;s your owne, Some of thoſe offices Are mine by promiſe. Let the Deuill take the Knighthood, and make His Damme a Lady. I&#x27;le not be his Aſſe, That ſeru&#x27;d for blowes, and Prouander. Nay He&#x27;le not beleeue me: though I ſhould ſw You ſlout him behind his backe: and when a man Sees things plainely; he neede not buy ſpectacles, Till he grow old. Sir, now we are priuat, tis a fit time To be troubleſome— Concerning thoſe Offices. I&#x27;ue thought on&#x27;em. And will haue &#x27;em all in ſpight of Boltens teeth. I, your worſhip is wiſe, to ſpeake no more, Then what you may well ſtand too. I pray bid the Gentleman take good heede; For my Maſter, can doe all this, and more too I haue ſeene him. If I doe, what then? there be hoſe deſire Worſe things. He that cannot runne for his Liberty Hath no courage in his Heeles. Let the Goute Take him, that hath Leggs, and w&#x27;ont vſe&#x27;em Alas Sir, I (Good Gentleman,) the Roome Wherein they haue put him, is ſo litle Hee fills it vp to the Roofe: and is faine To leaue his Legges Sentinels without doore, To watch the reſt of his body. Tis no Chamber, but a Court. Cubbord. They cannot Sir, For he&#x27;s a fainte eater, If he would pray ſo often as he faſts; He had bin at libertie long agoe. He&#x27;le dine vpon a ſingle Pea; and leaue Orts. Alas Sir, when Fortune&#x27;s Tippet ſtands vp, Few men will lend a pin to tacke it downe, I, and my linage haue ſweete loſſe of him: I&#x27;m ſure o&#x27;that, O ſir! I would not a&#x27;giuen this Ruſh; T&#x27;haue bin aſſur&#x27;d all th&#x27;offices in&#x27;s gift But hang ſuch Dukes (I ſay) that ſuffer thus Their Fauorites to be impriſoned. Sir, I haue ſayd no more, then what I meane To vnſay againe: which is but a kinde Of looſing one&#x27; labor. An &#x27; is better, To be ill imploy&#x27;d then to be idle. Allas I&#x27;m apt to weepe, though I but ſee An Onyon ſtripp&#x27;d naked. The Deuill take your worſhip for me, why, D&#x27;yee bring ſuch good newes, on a work&#x27;y day? Why could he euer come to leſſe purpoſe Then when he findes you doing well. Though he Looſe his labour once: I dare warrant ye, He&#x27;le come againe on the ſame arrand. Sir, let we friends be true to one another. There are but few true friends extant. Let them Be kindly vs&#x27;d and kept, if only for breed. Is my Maſter at liberty? Well, is he ſtill in fauour with the Duke? Enough. T&#x27;is not wholeſome to burſt with oy. I&#x27;ue thought with much care on theſe Offices: And finde my ſelfe fitting to be in&#x27;em. I will haue&#x27;em all; come Cut, and Long-taile. For my Wife, will be ſuch a glad woman. O Sir! giue me your bleſsing— You Signior Caſtruch o! Signior Coxcombe! Are you ti &#x27;d with doing well? you haue ſcarce Brought my poore Lord out of the Priſon doores; But you long to haue him in agen. Nay, N&#x27;ere looke! For my Sword dwells within a Yard Of my Tongue, and ſhall defend what I ſay What harme haue my poore Wife, and Children done To you, or yours; that ſeeing me within A haires breadth, of a hundred offices, You confound all, by leading my poore Lord Into new broyles. Yes, perſwade me to dry Ice in an Ouen! But I&#x27;le follow your Heeles ſo cloſe: as Ile Goe neere to tread vpon your Kibes.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Cruel Brother</div><div class="body">As a favour to Lucio, to whom he is devoted, the Duke appoints the low-born Foreste his secretary, the first port of call for ali suitors seeking monopolies and preferment. Lucio also wants to marry Foreste’s sister, 1627 Corsa, arguing that she is ennobled by her virtue, though not her ancestry. He goes through with the marriage secretly, without the Duke’s permission; but the Duke is impressed by Corsa when they are introduced, and has her brought to court so that the marriage can be properly celebrated with masques and revels. Foreste humiliates the satirist Castruccio, but his elevation to the secretaryship prevents Castruccio from challenging him to a duel. The poet initially takes a literary revenge, but, when the Duke asks about his satires, he is too cowardly to admit that Foreste is the target. The rustic Lothario comes to court, dressing foppishly in the hope of becoming a ducal favourite. Castruccio persuades him that his lack of success is Foreste’s fault. Lothario accosts Foreste offensively and finds himself imprisoned in a tiny cell. The Duke’s real intention in bringing Corsa to court is to seduce her. He engages Foreste’s wife as an unwitting go-between, then sends Lucio away overnight on a diplomatic mission. With Castruccio’s assistance, he visits Corsa, and rapes her. Foreste learns of the rape and slits the dishonoured Corsa’s wrist; she bleeds to death. On his return, Lucio takes a more lenient view than Foreste — he places more weight on the compulsion than the sexual penetration — but both agree to take revenge on the Duke, and visit him in bed. In the end, they decide to spare him, but he has already arranged assassins to dispose of them: the job was given to Castruccio, who subcontracted it to Lothario. Lothario kills the Duke by mistake; Castruccio and his accomplice kill him, then finish the job by killing Foreste and Lucio. The conspirators are kept alive to answer questions, and then suffer a death of exemplary horribleness.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

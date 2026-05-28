@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TAL in 1 Henry the Sixth · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> ›
+  <span>TAL</span>
+</nav>
+
+<h1>TAL</h1>
+<p class="lede">in <em>1 Henry the Sixth</em> — AnonymousMarlowe, ChristopherShakespeare, WilliamNashe, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>868</td></tr>
+<tr><th>Characters</th><td>4847</td></tr>
+<tr><th>BritDrama no.</th><td>919</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 20 (<em>france, edward, did, duke, death, england…</em>). Matches are highlighted.</p>
+<div class="excerpt">the right Of Engliſh <mark>Henry</mark>, ſhall this night appeare How much in duty. I am bound to both. Shame to the <mark>Duke</mark> of Burgundy, and thee: I vow&#x27;d (baſe Knight) when I <mark>did</mark> meete the next, To teare the Garter from thy Crauens legge, Which I haue done, becauſe (vnworthily) Thou was&#x27;t inſtalled in that High Degree. Pardon me Princely</div>
+<div class="excerpt">Poictiers, When (but in all) I was ſixe thouſand ſtrong, And that the French were almoſt ten to one, Before we met, or that a ſtroke was giuen, Like to a truſtie Squire, <mark>did</mark> run away. In which aſſault, we loſt twelue hundred men. My ſelfe, and diuers Gentlemen beſide, Were there ſurpriz&#x27;d, and taken priſoners. Then iudge (great <mark>Lords</mark>)</div>
+<div class="excerpt">they ſhall finde deere Deere of vs my Friends. God, and S. George, Talbot and Englands right, Proſper our Colours in this dangerous fight. O yong Iohn Talbot, I <mark>did</mark> ſend for thee ▪ To tutor thee in ſtratagems of Warre, That Talbots name might be in thee reuiu&#x27;d, When ſapleſſe Age, and weake vnable limbes Should bring thy Father</div>
+<div class="excerpt">nayles digg&#x27;d ſtones out of the ground, To hurle at the beholders of my ſhame. My griſly countenance made others flye, None durſt come neere, for feare of ſuddaine <mark>death</mark>. In Iron Walls they deem&#x27;d me not ſecure: So great feare of my Name &#x27;mongſt them were ſpread, That they ſuppos&#x27;d I could rend Barres of Steele, And ſpurne in pieces</div>
+<div class="excerpt">ſuppos&#x27;d I could rend Barres of Steele, And ſpurne in pieces Poſts of Adamant. Wherefore a guard of choſen Shot I had, That walkt about me euery Minute while: And if I <mark>did</mark> but ſtirre out of my Bed, Ready they were to ſhoot me to the heart. Lord Regent, and redoubted Burgundy, By whoſe approach, the Regions of Artoys, Wallon, and Picardy,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">With ſcoffes and ſcornes, and contumelious taunts, In open Market-place produc&#x27;t they me, To be a publique ſpectacle to all: Here, ſayd they, is the Terror of the French, The Scar-Crow that affrights our Children ſo. Then broke I from the Officers that led me, And with my nayles digg&#x27;d ſtones out of the ground, To hurle at the beholders of my ſhame. My griſly countenance made others flye, None durſt come neere, for feare of ſuddaine death. In Iron Walls they deem&#x27;d me not ſecure: So great feare of my Name &#x27;mongſt them were ſpread, That they ſuppos&#x27;d I could rend Barres of Steele, And ſpurne in pieces Poſts of Adamant. Wherefore a guard of choſen Shot I had, That walkt about me euery Minute while: And if I did but ſtirre out of my Bed, Ready they were to ſhoot me to the heart. Lord Regent, and redoubted Burgundy, By whoſe approach, the Regions of Artoys, Wallon, and Picardy, are friends to vs: This happy night, the Frenchmen are ſecure, Hauing all day carows&#x27;d and banquetted, Embrace we then this opportunitie, As fitting beſt to quittance their deceite, Contriu&#x27;d by Art, and balefull Sorcerie. A Maid, they ſay. Well, let them practiſe and conuerſe with ſpirits. God is our Fortreſſe, in whoſe conquering name Let vs reſolue to ſcale their flinty bulwarkes. Not altogether: Better farre I gueſſe, That we do make our entrance ſeuerall wayes: That if it chance the one of vs do faile, The other yet may riſe againſt their force. And heere will Talbot mount, or make his graue. Now Salisbury, for thee and for the right Of Engliſh Henry, ſhall this night appeare How much in duty. I am bound to both. Shame to the Duke of Burgundy, and thee: I vow&#x27;d (baſe Knight) when I did meete the next, To teare the Garter from thy Crauens legge, Which I haue done, becauſe (vnworthily) Thou was&#x27;t inſtalled in that High Degree. Pardon me Princely Henry, and the reſt: This Daſtard, at the battell of Poictiers, When (but in all) I was ſixe thouſand ſtrong, And that the French were almoſt ten to one, Before we met, or that a ſtroke was giuen, Like to a truſtie Squire, did run away. In which aſſault, we loſt twelue hundred men. My ſelfe, and diuers Gentlemen beſide, Were there ſurpriz&#x27;d, and taken priſoners. Then iudge (great Lords) if I haue done amiſſe: Or whether that ſuch Cowards ought to weare This Ornament of Knighthood, yea or no? When firſt this Order was ordain&#x27;d my Lords, Knights of the Garter were of Noble birth; Valiant, and Vertuous, full of haughtie Courage, Such as were growne to credit by the warres: Not fearing Death, nor ſhrinking for Diſtreſſe, But alwayes reſolute, in moſt extreames. He then, that is not furniſh&#x27;d in this ſort, Doth but vſurpe the Sacred name of Knight, Prophaning this moſt Honourable Order, And ſhould (if I were worthy to be Iudge) Be quite degraded, like a Hedge-borne Swaine, That doth preſume to boaſt of Gentle blood. Content, my Liege? Yes: But y t I am preuented, I ſhould haue begg&#x27;d I might haue bene employd. I go my Lord, in heart deſiring ſtill You may behold confuſion of your foes. He Fables not, I heare the enemie: Out ſome light Horſemen, and peruſe their Wings. O negligent and heedleſſe Diſcipline, How are we park&#x27;d and bounded in a pale? A little Heard of Englands timorous Deere, Maz&#x27;d with a yelping kennell of French Curres. If we be Engliſh Deere, be then in blood, Not Raſcall-like to fall downe with a pinch, But rather moodie mad: And deſperate Stagges, Turne on the bloody Hounds with heads of Steele, And make the Cowards ſtand aloofe at bay: Sell euery man his life as deere as mine, And they ſhall finde deere Deere of vs my Friends. God, and S. George, Talbot and Englands right, Proſper our Colours in this dangerous fight. O yong Iohn Talbot, I did ſend for thee ▪ To tutor thee in ſtratagems of Warre, That Talbots name might be in thee reuiu&#x27;d, When ſapleſſe Age, and weake vnable limbes Should bring thy Father to his drooping Chaire. But O malignant and ill-boading Starres, Now thou art come vnto a Feaſt of death, A terrible and vnauoyded danger: Therefore deere Boy, mount on my ſwifteſt horſe, And Ile direct thee how thou ſhalt eſcape By ſodaine flight. Come, dally not, be gone. Thou antique Death, which laugh&#x27;ſt vs here to ſcorn, Anon from thy inſulting Tyrannie, Coupled in bonds of perpetuitie, Two Talbots winged through the lither Skie, In thy deſpight ſhall ſcape Mortalitie. O thou whoſe wounds become hard fauoured death, Speake to thy father, ere thou yeeld thy breath, Braue death by ſpeaking, whither he will or no: Imagine him a Frenchman, and thy Foe. Poore Boy, he ſmiles, me thinkes, as who ſhould ſay, Had Death bene French, then Death had dyed to day. Come, come, and lay him in his Fathers armes, My ſpirit can no longer beare theſe harmes. Souldiers adieu: I haue what I would haue, Now my old armes are yong Iohn Talbots graue.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 1 Henry the Sixth</div><div class="body">King Henry Vis dead, and England&#x27;s French lands are lost. After a military setback, the French accept the offered aid of Joan Pucelle , who claims supernatural powers from the Virgin Mary; but they also release Talbot in an exchange of prisoners. With Joan &#x27;s help the French recapture the occupied town of Orleans, but the English take it back in a night attack led by Talbot. The Countess of Auvergne invites Talbot to visit her. intending treachery, but he second-guesses her and brings soldiers with him. In England, feuds brew between Gloucester and Winchester, and between Richard Plantagenet and the Duke of Somerset, whose supporters show their allegiance by picking different coloured roses. Richard , who has been deprived of his titles through the attainder of his father, learns from the imprisoned and dying Mortimer that he has a claim to the throne . King Henry restores him to his inheritance, creating him Duke of York. Joan takes Rouen by a ruse , but Talbot recaptures it the same day; she then persuades England&#x27;s ally Burgundy to join the French. After King Henry&#x27;s coronation in Paris, York is left in command of Prance, but personal tension between him and Somerset means that troop reinforcements arrive late; in consequence, Talbot is defeated, surviving only long enough to learn that his son has perished in battle. Joan conjures devils, but they will not help her: she is captured by York and burned at the stake. The French and English agree a peace which will entail King Henry making a diplomatic marriage, but this is pre-empted when Suffolk captures Margaret and (having fallen in love with her but being alr eady married) plans to install her as Queen of England . Henry agrees to marry her, and Suffolk goes to France to mili the arrangements.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_20.html">Cluster 20 — 20: france, edward, did</a> page.
+</div>
+</div></body></html>

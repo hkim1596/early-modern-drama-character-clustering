@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TYR in Jocasta · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> ›
+  <span>TYR</span>
+</nav>
+
+<h1>TYR</h1>
+<p class="lede">in <em>Jocasta</em> — Gascoigne, GeorgeKinwelmershe, FrancisYelverton, ChristopherEuripidesDolce, Lodovico</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1573</td></tr>
+<tr><th>Words</th><td>832</td></tr>
+<tr><th>Characters</th><td>4394</td></tr>
+<tr><th>BritDrama no.</th><td>438</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 18 (<em>death, thebes, did, myne, eke, wyth…</em>). Matches are highlighted.</p>
+<div class="excerpt">string <mark>did</mark> well declare, Which from the heart doth out alonely growe. So <mark>did</mark> the péece corrupted playnly shewe, An argument most euident to proue Thy sonne his <mark>death</mark>. I neither ought, ne will kéepe it so close. Ne blame not me, but blame the starres for this. We ought beléeue the cause is good and iust. &quot;A foole is he accuseth</div>
+<div class="excerpt">victories against their enimies, Hath bene the cause why I doe weare this Crowne, As right rewarde and not vnméete for me. Long haue I bene within the towne of <mark>Thebes</mark>, Since that I tyed this trustie toung of mine From telling truth, fearing Eteocles: Yet, since thou doest in so great néede desire I should reueale things hidden</div>
+<div class="excerpt">stand content to pleasure thée herein. But first, that to this mightie God of yours There might some worthy sacrifice be made, Let kill the fairest goate that is in <mark>Thebes</mark>, Within whose bowells when the Préest shall loke, And tell to me what he hath there espyed, I trust t&#x27;aduyse thée what is best to doen. Take here the salte, and</div>
+<div class="excerpt">Creon, that these outward séemely signes By that the Gods haue let me vnderstand Who vnderstandeth al and séeth secrete things, Betokeneth that the Citie great of <mark>Thebes</mark> Shall Uictor be against the Greekish host, If so consent be giuen, but more than this I lyst not say: Creon make me not stay By force. Syr &#x27;tis not fro ̄ thée I</div>
+<div class="excerpt">thou heard with eare These wéery newes, or rather wicked tales That this deuine of thee deuined hath: Yet will thy father neuer be thy foe, With cruell doome thy <mark>death</mark> for to consent.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Gramercie Lord, what is your noble will? Know this, that for I did with graue aduise, Foretell the Citizens of Athens towne, How they might best with losse of litle bloude, Haue victories against their enimies, Hath bene the cause why I doe weare this Crowne, As right rewarde and not vnméete for me. Long haue I bene within the towne of Thebes, Since that I tyed this trustie toung of mine From telling truth, fearing Eteocles: Yet, since thou doest in so great néede desire I should reueale things hidden vnto thée, For common cause of this our common weale, I stand content to pleasure thée herein. But first, that to this mightie God of yours There might some worthy sacrifice be made, Let kill the fairest goate that is in Thebes, Within whose bowells when the Préest shall loke, And tell to me what he hath there espyed, I trust t&#x27;aduyse thée what is best to doen. Take here the salte, and sprinckle therwithall About the necke, that done, cast all the rest Into the sacred fire, and then annoynte The knife prepared for the sacrifice. O mightie Ioue, preserue the precious gifte That thou me gaue, when first thine angrie Quéene, For déepe disdayne did both mine eyes do out, Graunt me, I may foretell the truth in this, For, but by thée, I know that I ne may, Ne will ne can, out trustie sentence say, With knife then stick y kid. Now cast at once into the holy flame The swete incense, and then aduertise mée What hew it beares, and euery other ryte That ought may helpe the truth for to coniecte. Stay there, suffy eth this for to haue séene, Know Creon, that these outward séemely signes By that the Gods haue let me vnderstand Who vnderstandeth al and séeth secrete things, Betokeneth that the Citie great of Thebes Shall Uictor be against the Greekish host, If so consent be giuen, but more than this I lyst not say: Creon make me not stay By force. Syr &#x27;tis not fro ̄ thée I flée, but from this fortune foule and fell. Thou Creon séemest now desirous still It to preserue: but if as well as I Thou knewest that which is to thée vnknowne, Then wouldste thou not so soone consent therto. And dost thou then so instantly request To know which way thou mayest the same preserue? Then will I satisfie Thy gréedie minde in this: but first tell me, Menetius where is he? I pray thée sende him out some other where. I would not haue him heare what I should say. And shall I then while he is present speake? Then Creon shalt thou knowe: the meane to saue This Citie, is, that thou shalt lea thy sonne, And of his bodie make a sacrifice For his Countrey: lo héere is all you séeke So muche to knowe, and since you haue me forst To tell the thing that I would not haue tolde, If I haue you offended with my words, Blame then your selfe, and eke your frowarde fate. Euen that, that heauen Hath ordeined once, and needes it must ensue. Though euill for thée, yet for thy countrey good. &quot;Aboue all things we ought to holde it deare. &quot;For co ̄ mo ̄ weale, were well, that one man waile. &quot;Best Citizens care least for priuate gayne. &quot;Lo, thus the truthe dothe alwayes hatred get. &quot;The harme that co ̄ mes from heauen can not be scapt. &quot;What heauen hath done, that can not I vndoe. And wouldst thou haue me learne to make a lye? That will I not: But in thy woe to yéelde thée some reliefe, I tell thée once, thou shalt be Lorde of Thebes. Which happe of thine this string did well declare, Which from the heart doth out alonely growe. So did the péece corrupted playnly shewe, An argument most euident to proue Thy sonne his death. I neither ought, ne will kéepe it so close. Ne blame not me, but blame the starres for this. We ought beléeue the cause is good and iust. &quot;A foole is he accuseth heauens of wrongs. Then this that heauen commaunds can not be ill. Bicause I tell thée that doth thée displease. Go daughter go, oh what a foole is he That puts in vre to publishe prophecies? &quot;For if he do foretell a frowarde fate, &quot;Though it be true, yet shall he purchase hate: &quot;And if he silence kéepe, or hide the truth, &quot;The heauy wrath of mightie Gods ensuth. Apollo he might well tell things to come, That had no dread the angry to offende: But hye we daughter hence some other way. OH my deare childe, well hast thou heard with eare These wéery newes, or rather wicked tales That this deuine of thee deuined hath: Yet will thy father neuer be thy foe, With cruell doome thy death for to consent.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Jocasta</div><div class="body">Oedipus unknowingly murdered his father and married his mother Jocasta; on learning the truth, he blinded himself. His sons imprisoned him and agreed to alternate annually as kings of Thebes: Polynices went into exile while Eteocles took the first turn on the throne; but Eteocles refused to give it up at the end of his year in office, and Polynices has besieged Thebes in association with the King of Argos. Jocasta intervenes as their mother, and persuades Polynices to enter Thebes and meet Eteocles under truce. Eteocles will not hand over power, but offers to accept his brother back as a private citizen. Jocasta is unable to reconcile her sons, and Polynices’ forces prepare for battle. Eteocles names Creon as his successor, and asks him to marry Antigone to his son Haemon. Creon consults Tiresias, and learns that Thebes is doomed to destruction in divine revenge for Jocasta’s incest; only the death of his other son, Menoeceus, can save the city. Keen to die for his country, Menoeceus refuses to go into exile as his father wishes, reports the prophecy to Eteocles, and kills himself. Meanwhile, the battle is indecisive, and Eteocles and Polynices agree to settle their dispute in single combat. Jocasta and Antigone are too late to stop them killing each other: arriving to find them both dying, Jocasta stabs herself with Polynices’ dagger. The besieging army is massacred by the Thebans. Antigone brings the three bodies back to Thebes and tells her father what has happened. Creon declares himself King of Thebes and gives order for the funerals of Jocasta and Eteocles, but demands that Polynices, as an enemy of the city, should remain unburied. Antigone protests, pleads, and refuses to marry Haemon, threatening to kill him and then herself should Creon try to force her. Creon banishes both her and Oedipus. She helps her blind father to touch the dead bodies, and he asks her to see that Polynices is buried.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_18.html">Cluster 18 — 18: death, thebes, did</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ALFON in The Taming of a Shrew · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>ALFON</span>
+</nav>
+
+<h1>ALFON</h1>
+<p class="lede">in <em>The Taming of a Shrew</em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1594</td></tr>
+<tr><th>Words</th><td>883</td></tr>
+<tr><th>Characters</th><td>4455</td></tr>
+<tr><th>BritDrama no.</th><td>955</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">your Siſter prouide her ſelfe againſt that we doo come, And ſee you <mark>goe</mark> to church along with vs. I maruell that Ferando comes not <mark>away</mark>. I carde not I what coſt he <mark>did</mark> beſtow, In gold or ſilke, ſo he himſelfe were heere, For I had rather loſe a thouſand crownes, Then that he ſhould deceiue vs heere to daie, But ſoft I thinke I</div>
+<div class="excerpt">welcome to vnto my houſe, For thou I thinke muſt be my ſecond ſonne, Ferando, Polidor dooſt thou not know Muſt marry Kate, and to morrow is the day. Polidor tis true, <mark>goe</mark> let me alone, For I muſt ſee againſt the bridegroome come, That all thinges be according to his mind, And ſo Ile leaue you for an houre or <mark>two</mark>. How now daughters,</div>
+<div class="excerpt">vnto the key, To ſee what Marchandiſe is come a ſhore. Signiour Ferando your welcome hartilie, You are a ſtranger ſir vnto my houſe. Harke you ſir, looke what I <mark>did</mark> promiſe you Ile performe, if you get my daughters loue. Ha Kate, Come hither wench &amp; liſt to me, Vſe this gentleman friendlie as thou canſt. How now Ferando, what</div>
+<div class="excerpt">he will be wed. Your horſe! what ſon I hope you doo but ieſt, I am ſure you will not go ſo ſuddainly. Why ſon I hope at leaſt youle dine with vs. So mad a cupple <mark>did</mark> I neuer ſee. God hold it that it may continue ſtill, I would be loth that they ſhould diſagree, But he I hope will holde her in a while. Now Aurelius what ſay you</div>
+<div class="excerpt">not to ſee this great ſolemnitie. My Lord by heauens I ſweare vnto your grace, I knew none other but Valeria your man, Had bin the Duke of Ceſtus nobleſon, Nor <mark>did</mark> my daughter I dare ſweare for her. Let me giue thankes vnto your royall grace, For this great honor don to me and mine, And if your grace will walke vnto my houſe,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Daughters be gone, and hie you to y e church, And I will hie me downe vnto the key, To ſee what Marchandiſe is come a ſhore. Signiour Ferando your welcome hartilie, You are a ſtranger ſir vnto my houſe. Harke you ſir, looke what I did promiſe you Ile performe, if you get my daughters loue. Ha Kate, Come hither wench &amp; liſt to me, Vſe this gentleman friendlie as thou canſt. How now Ferando, what ſaies my daughter? Come hither Kate and let me giue thy hand To him that I haue choſen for thy loue, And thou to morrow ſhalt be wed to him. Giue me thy hand Ferando loues thee wel, And will with wealth and eaſe maintaine thy ſtate. Here Ferando take her for thy wife, And ſunday next ſhall be your wedding day. Doo ſo, come Kate, why dooſt thou looke So ſad, be merrie wench thy wedding daies at hand. Sonne fare you well, and ſee you keepe your promiſe. Thanks gentle ſir, Polidor take him in, And bid him welcome to vnto my houſe, For thou I thinke muſt be my ſecond ſonne, Ferando, Polidor dooſt thou not know Muſt marry Kate, and to morrow is the day. Polidor tis true, goe let me alone, For I muſt ſee againſt the bridegroome come, That all thinges be according to his mind, And ſo Ile leaue you for an houre or two. How now daughters, is Ferando come? And wheres your ſiſter that ſhe is not heere? Go daughters get you in, and bid your Siſter prouide her ſelfe againſt that we doo come, And ſee you goe to church along with vs. I maruell that Ferando comes not away. I carde not I what coſt he did beſtow, In gold or ſilke, ſo he himſelfe were heere, For I had rather loſe a thouſand crownes, Then that he ſhould deceiue vs heere to daie, But ſoft I thinke I ſee him come. I marrie ſon, we were almoſt perſwaded, That we ſhould ſcarſe haue had our bridegroome heere, But ſay, why art thou thus baſely attired? I prethie Ferando let me intreat Before thou goſte vnto the church with vs, To put ſome other ſute vpon thy backe. Come gentlemen go along with vs, For thus doo what we can he will be wed. Your horſe! what ſon I hope you doo but ieſt, I am ſure you will not go ſo ſuddainly. Why ſon I hope at leaſt youle dine with vs. So mad a cupple did I neuer ſee. God hold it that it may continue ſtill, I would be loth that they ſhould diſagree, But he I hope will holde her in a while. Now Aurelius what ſay you to this, What haue you ſent to Ceſtus as you ſaid, To certifie your father of your loue, For I would gladlie he would like of it, And if he be the man you tell to me, I geſſe he is a Marchant of great wealth. And I haue ſeene him oft at Athens here, And for his ſake aſſure thee thou art welcome. Inough Aurelieus? but we forget Our Marriage dinner now the bride is gon, Come let vs ſe what there they left behind. Whoſe there? what Aurelius whats the matter That you ſtand ſo like a ſtranger at the doore? Is this your father? you are welcome ſir. Truſt me I muſt commend your liberall mind, And louing care you beare vnto your ſon, And here I giue him freely my conſent, As for my daughter I thinke he knowes her mind, And I will in large her dowrie for your ſake. And ſolemniſe with ioie your nuptiall rites, But is this gentleman of Ceſtus too? Come louely ſonnes your marriage rites performed, Lets hie vs home to ſee what cheere we haue, I wonder that Ferando and his wife Comes not to ſee this great ſolemnitie. My Lord by heauens I ſweare vnto your grace, I knew none other but Valeria your man, Had bin the Duke of Ceſtus nobleſon, Nor did my daughter I dare ſweare for her. Let me giue thankes vnto your royall grace, For this great honor don to me and mine, And if your grace will walke vnto my houſe, I will in humbleſt maner I can, ſhow The eternall ſeruice I doo owe your grace. How now ſons what in conference ſo hard, May I without offence, know where abouts. Why then Ferando he is ſure to loſe, I promiſe thee ſon thy wife will hardly come, And therefore I would not wiſh thee lay ſo much. I promiſe thee Ferando I am afraid thou wilt loſe Polidor I dare preſume for thee, I thinke thy wife will not deny to come. And I do maruell much Aurelius, That your wife came not when you ſent for her. I promiſe thee Ferando I would haue ſworne, Thy wife would nere haue donne ſo much for thee. I Ferando the wager thou haſt won, And for to ſhew thee how I am pleaſd in this, A hundred poundes I freely giue thee more, Another dowry for another daughter, For ſhe is not the ſame ſhe was before. Now Aurelius what ſay you to this?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Taming of a Shrew</div><div class="body">Forcibly ejected from an alehouse, Sly is sleeping off his drunkenness when he is found by a lord, who brings him home and tricks him into thinking himself a nobleman. A play is performed for him: The Taming of a Shrew. In the play, Aurelius of Sestos, newly arrived in Athens, falls in love with Philema; his friend Polidor already loves her sister, Emelia. To pursue his love, Aurelius pretends to be a wealthy merchant’s son and has his man Valeria assume his aristocratic identity. However, the girls’ father Alfonso has decreed that his eldest daughter Kate, a shrewish scold, must be married before them. The two wooers decide to persuade Ferando to marry Kate, but Alfonso has already promised him six thousand crowns to undertake the same task He and Kate meet unchaperoned, and they wrangle, but the marriage is arranged for the following Sunday; Kate seems outwardly unwilling but consents in an aside. Ferando goes to prepare his country house. Valeria is sent to teach Kate the lute, but she behaves aggressively. On the wedding day Ferando arrives in base clothes and forces Kate to leave with him immediately after the ceremony. When they arrive in the country, he claims that the dinner is burnt, and beats his servants. She is kept hungry, and denied her choice of clothing. Aurelius has Philotus pose as his father to persuade Alfonso that he is wealthy enough to marry Philema. He and Polidor are married to Kate’s younger sisters. Kate and Ferando visit them, after Kate submits to Ferando’s will. On the way, they meet the Duke of Sestos (who has come to Athens in disguise to spy on his son), and mock him. The Duke exposes Aurelio’s pretence and proposes to have those involved sent to prison, but Sly intervenes in the performance to prevent this. The three new husbands bet on whose wife will come when called. Ferando wins, and Kate explains to her sisters their duty as wives. Sly falls asleep during the performance. The lord puts him back where he was found. He returns home intending to tame his own wife.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

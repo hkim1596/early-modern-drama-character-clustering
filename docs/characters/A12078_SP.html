@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SP in The Fleer · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SP</span>
+</nav>
+
+<h1>SP</h1>
+<p class="lede">in <em>The Fleer</em> — Sharpham, Edward</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>859</td></tr>
+<tr><th>Characters</th><td>4509</td></tr>
+<tr><th>BritDrama no.</th><td>1495</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">with other loue then as a Brother doth a sister neuer to loue any. No, Come Gentlemen will you <mark>bee</mark> going? Ladies our occasions cals vs hence, and I am sorrye we <mark>must</mark> leaue you. How now Fleire? Why are ye enemies? Why didst not strike him agen? Why her Ancient? But come Signior, how will you woe her? Because thy Ladies liue like</div>
+<div class="excerpt">agen? Why her Ancient? But come Signior, how will you woe her? Because thy Ladies liue like the Beadles of Bride well. By the sinnes of the people. And what fees hast thou out of their trade? How a peny a sheete? Come, a shall <mark>goe</mark>, for there will <mark>bee</mark> his Mistresse Madam Fromaga. Faith I, poore Signior, I see the Springle of</div>
+<div class="excerpt">his elder Brother. He it was, was Knighted, when so few scapt the sword, and he it is that now liues by the sword. Faith as some Courtiers doe, laugh at that he <mark>did</mark> not vnderstand, and swore an oath or <mark>two</mark> of the new fashion, as, by my conscience Ladie you haue a verie good spirit, &amp; so after <mark>two</mark> or three Court complements,</div>
+<div class="excerpt">complements, beseech&#x27;d the Ladies retaine him still in their good graces, kist his hand and went his way. VVhat&#x27;s that? O signor, condemne not all for some, indeede I <mark>must</mark> confesse there haue been Ladies at executions. A forked tree, why what tree doost thou thinke shee would haue made? But Fleire, how does the Gentleman Vsher liue</div>
+<div class="excerpt">good parts, perfec ted his ill partes, and made his secrete actions correspon dent to his outward wisdome, as you may well perceiue. Now Ladie, what drugs of wit <mark>has</mark> this Apothecarie of Tobacco sold you? Looke, looke, this fellow is like your vpright shoo, he will serue either foote. Why, how now signeur, what sayes the Ladie</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Ladies we are come to make a Gentleman of your ac quaintance heere. But since, it hath imbellisht his good parts, perfec ted his ill partes, and made his secrete actions correspon dent to his outward wisdome, as you may well perceiue. Now Ladie, what drugs of wit has this Apothecarie of Tobacco sold you? Looke, looke, this fellow is like your vpright shoo, he will serue either foote. Why, how now signeur, what sayes the Ladie will she loue thee man? Well thanke her for&#x27;t: Why, for her cold comfort, shee gaue it thee to coole the heate of thy nose man? By the diuine smoke of Tobacco signeur, you haue sham&#x27;d vs all. Why, proue signeur, you can but trie, weele al speake for you. And you are sorie for&#x27;t signeur, are you not? Forgiue him good Ladie, pra&#x27;y forgiue him, To this you sweare. Come Signior, you haue kneeld to a faire end, to get you a Mistris, and heere you haue for sworne her. Adew Signior. What art? Why Signior, I hope you wonnot swagger? Who doost serue? What doost want? Nothing else? What? Shall I preferre thee? Nai&#x27;t shall be to a couple of Gentlewomen of thine owne Countrie. I. Why thou shalt serue but one, yet take thy choice of both. Whats thy name? Whats thy profession? A Courtier! come Gentlemen, I like this fellowe so well that ile prefer him straite. Faire Ladies youle excuse vs. Saue ye Gentles. Faith I haue been with two Gentlewomen, in whose companie thou first sawst vs, and there the Knight, Sir Iohn Haue-little is so in loue with the younger, as a knowes not whether a should reioyce, shee had so much beautie: or la ment, because he is like to inioy none on&#x27;t. Why a sould his soule to the Deuillman, for the vel uet that lines his cloake. Nay, a deales with him, as a does with his Tailor, goes vpon trust and meanes to pay them both at the latter day. Yes, one of them asked if he were a celestriall or a ter restrial Knight, &amp; he very ignorant lie asked what Knights they were? your terrestriall Knight quoth she, is of a grosse element, and liues vppon landes of his owne, but your ce lestrial Knight, hee liues by the Heire, that is, by his elder Brother. He it was, was Knighted, when so few scapt the sword, and he it is that now liues by the sword. Faith as some Courtiers doe, laugh at that he did not vnderstand, and swore an oath or two of the new fashion, as, by my conscience Ladie you haue a verie good spirit, &amp; so after two or three Court complements, beseech&#x27;d the Ladies retaine him still in their good graces, kist his hand and went his way. VVhat&#x27;s that? O signor, condemne not all for some, indeede I must confesse there haue been Ladies at executions. A forked tree, why what tree doost thou thinke shee would haue made? But Fleire, how does the Gentleman Vsher liue with thy Ladies? We are euen readie for your two Ladies Signeur; I haue no reason Lady. That with a number oft hath bought. Madam, the loue that I may giue you, fully doe in ioy, but I haue sworne with other loue then as a Brother doth a sister neuer to loue any. No, Come Gentlemen will you bee going? Ladies our occasions cals vs hence, and I am sorrye we must leaue you. How now Fleire? Why are ye enemies? Why didst not strike him agen? Why her Ancient? But come Signior, how will you woe her? Because thy Ladies liue like the Beadles of Bride well. By the sinnes of the people. And what fees hast thou out of their trade? How a peny a sheete? Come, a shall goe, for there will bee his Mistresse Madam Fromaga. Faith I, poore Signior, I see the Springle of her beau tie hath alreadie caught the Woodcocke of his affections. I tell thee I was in hell. Me thought t&#x27;was long, as long as a suit hangs here in the Law ere it be ended. As broad as the space between two lines in a Chaun cerie bill. O the diuels are excellent companions, theile drink your Dutch captains, or Court Ladies spunges. Faith I saw the foure sonnes of Aymon, and they were Porters euer since there was a companie made of am. O I, the Diuels are but our Apes man. Yes, I sawe a Citizen damn&#x27;d for refusing a de sperate debt, because t&#x27;was tendred him on a Sabboth. Alas for a small fault. Alas man they seldom conuerse with a good Angell scarce once in a whole Michaelmasse Tearme, and if a come a stayes not long with am to feede these soules, for they are faine to sende am away strayght to pay for the feeding of their Horses, there was a Chamber maide damb&#x27;d for keeping her virginitie till shee was mar ryed, and there were many Soldiers damb&#x27;d for saying their prayers when they were drunke.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Fleer</div><div class="body">Before the start of the action, Piso deposed Antifront, whose daughters thereupon fled from Florence. Antifront now travels in search of his missing children. He arrives in London under the alias Fleer, and meets some gentlemen. One of them, Spark, gets him a job with two of his countrywomen, a pair of Florentine courtesans working in London. Antifront is dismayed to discover that they are his missing daughters. Two sisters, Susan and Nan, are interested in Spark and his friend Ruffle, who are among the courtesans’ many clients. They dress up as boys and try to get the gentlemen to employ them as pages; Spark and Ruffle refuse, and the ‘pages’ end up working for two other clients, Sir John Havelittle and Piso junior, the son of the Florentine usurper. ‘Fleer’ wants to engineer a marriage for his daughters, selecting Havelittle and Piso as the eligible bachelors. The daughters prefer Spark and Ruffle, but are refused; taking offence, they ask Piso and Havelittle to kill the gentlemen, and suggest poison as the safest method. The plot is overheard by ‘Fleer’ and the ‘pages’. ‘Fleer’ gets himself another job looking after an apothecary’s shop, and sells Piso and Havelittle a poison which is really a sleeping potion. Spark and Ruffle dine with Piso and Havelittle and apparently die. The hosts are at once arrested on suspicion of poisoning and are committed for trial. Fleer is sent on an errand to the senior judge, who is unable to attend through illness, and sends word back for the other two judges to proceed without him. Given a ring to authenticate the message, Fleer instead uses it to get himself deputized as the third judge. He produces a letter which establishes that the guilt extends to the daughters as well as the poisoners, and all four are sentenced to death. News arrives that Piso’s father has died, making him the new Duke of Florence; but-he tells the Florentines to recall the deposed Antifront instead, and offers to make amends for his father’s treason by marrying Antifront’s elder daughter. Antifront reveals his identity and says Piso can do just 1606 that; his younger daughter will marry Havelittle. He produces the murder victims, still alive, and bestows them on Nan and Susan.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

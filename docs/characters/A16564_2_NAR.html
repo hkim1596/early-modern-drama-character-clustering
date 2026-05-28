@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NAR in Darius · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> ›
+  <span>NAR</span>
+</nav>
+
+<h1>NAR</h1>
+<p class="lede">in <em>Darius</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>855</td></tr>
+<tr><th>Characters</th><td>4809</td></tr>
+<tr><th>BritDrama no.</th><td>1404</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 25 (<em>did, whil, death, might, minde, fortune…</em>). Matches are highlighted.</p>
+<div class="excerpt">griev&#x27;d) we muſt appeare to mone: The Perſians may promiſes be pleas&#x27;d, So to diſarme him of his native <mark>pow</mark>&#x27;rs, Then taking him, our <mark>thoughts</mark> may all be eas&#x27;d, For <mark>whil</mark>&#x27;ſt he is his owne, we are not ours: Till ſtrong with titles, we with <mark>pow</mark>&#x27;r command, His ſhadow ſhrouds, while rights are forc&#x27;d, or fain&#x27;d, And his to daunt, or</div>
+<div class="excerpt">for your State to offer up their bloud; What? ſhould we ruſh like beaſts to needleſſe ſtrife? Be well prepar&#x27;d, and then your <mark>fortune</mark> try, &quot;Brave mindes ſhould <mark>death</mark> deſpiſe, not loathing life: &quot;For feare of danger cowards crave to dye. &quot;But vertue firſt all hopes accounts doth caſt, &quot;And of each meane to helpe maturely thinkes,</div>
+<div class="excerpt">this courſe may beſt be kept obſcure, Our care muſt ſeeme all for our Country bent; &quot;When mask&#x27;d with zeale; crimes are reputed pure, &quot;A ſhew of good doth vulgar mindes content, &quot;In dangerous plots where courage joynes with Art, &quot;Let ſlow advice, a quicke diſpatch be us&#x27;d: &quot;What can (ſave ſucceſſe) juſtifie our part, &quot;Who muſt</div>
+<div class="excerpt">favour may defend, As thoſe who all things for his good have wrought; Then if we thus his grace cannot procure, But that he us with rigour doe purſue, With Darius <mark>death</mark> we will our ſtates aſſure, Then firſt our force, and next the warres renue. My words will firſt your Majeſtie diſpleaſe, Yet duty makes me ſpeake where ſilence</div>
+<div class="excerpt">feare of danger cowards crave to dye. &quot;But vertue firſt all hopes accounts doth caſt, &quot;And of each meane to helpe maturely thinkes, &quot;Then, when all elſe is done, <mark>death</mark> is the laſt, &quot;The which to meet true courage never ſhrinkes. Now for the time, let Bactria be our ſeate, To Beſſus for the forme your Crowne reſigne, Who, when</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">I will moſt willingly performe my part, For, I the ſame exceedingly allow: Deare wealth and honour, Idols of my heart, If you I may enjoy, I care not how; Yet that this courſe may beſt be kept obſcure, Our care muſt ſeeme all for our Country bent; &quot;When mask&#x27;d with zeale; crimes are reputed pure, &quot;A ſhew of good doth vulgar mindes content, &quot;In dangerous plots where courage joynes with Art, &quot;Let ſlow advice, a quicke diſpatch be us&#x27;d: &quot;What can (ſave ſucceſſe) juſtifie our part, &quot;Who muſt command, or come to be accus&#x27;d? Well, then amongſt our ſelves to flye debate, Which ſuch great actions oft-times under-mines, I yeeld that you poſſeſſe the higheſt ſeat, And will my faction frame for our deſignes. Yet of my thoughts ſome doubt new counſell claimes, And with huge honour aggravates diſgrace: The ſtaine of treaſon ſtill attends our names, And with our errour burdens all our race; Our purpoſe muſt accompliſh&#x27;d be with paine, And we (though pompe a ſpace appeaſe our ſoules) Shall finde afflictions to diſturbe our raigne, And be when dead, defam&#x27;d by famous ſcroules. The ſacred title of a Soveraigne King Doth worke a terrour more then can be thought, And Majeſtie to brave my minde doth bring, Whoſe count&#x27;nance only ſtrange effects hath wrought. Now that the time and manner may be ſure, The Bactrian bands ſhall all attend in Armes, Yet faine a cauſe that he may live ſecure, And be ſurpris&#x27;d not looking for alarmes. Then through the campe a rumour muſt be ſpread, That hopeleſſe Darius hath deſpair&#x27;dly gone, By violence to dwell amongſt the dead, Which (as much griev&#x27;d) we muſt appeare to mone: The Perſians may promiſes be pleas&#x27;d, So to diſarme him of his native pow&#x27;rs, Then taking him, our thoughts may all be eas&#x27;d, For whil&#x27;ſt he is his owne, we are not ours: Till ſtrong with titles, we with pow&#x27;r command, His ſhadow ſhrouds, while rights are forc&#x27;d, or fain&#x27;d, And his to daunt, or ſtrangers to gaine-ſtand, To raiſe our ſtate, his ſhew muſt be, maintain&#x27;d. To Alexander after we will ſend, And offer him his foe to bondage bought, Then crave that us his favour may defend, As thoſe who all things for his good have wrought; Then if we thus his grace cannot procure, But that he us with rigour doe purſue, With Darius death we will our ſtates aſſure, Then firſt our force, and next the warres renue. My words will firſt your Majeſtie diſpleaſe, Yet duty makes me ſpeake where ſilence ſpilles; &quot;The beſt Phyſitian cures a ſharpe diſeaſe, &quot;With ſome ſowre potion that corruption killes; &quot;And skilfull Pilots when they feare a ſtorme, &quot;To ſave the ſhip, will caſt out pretious things, You in ſome ſort may imitate their forme, For elſe a tempeſt totall ruine brings. Since bent againſt the Gods, how can we ſpeed? To all our actions, fortune is oppos&#x27;d, We muſt of force ſome other way proceed, So have the heavens of our affaires dispos&#x27;d: Give (Sir,) the ſtate, at leaſt your titles place On ſome more happy man, not in effect, But with your ſhadow cloath him for a ſpace, Till he your Realmes from ruine may protect. This ſtorme once calm&#x27;d, that now diſturbes your ſtate, And Aſia free from any forraigne hoſte, He ſhall with haſte reſigne the Soveraigne ſeat, Theſe Kingdoms gain&#x27;d againe, which you have loſt: All Bactria yet abides at your command, The Indians, loe, would dye to doe you good, Yea, many thouſand thouſands armed ſtand, Bent for your State to offer up their bloud; What? ſhould we ruſh like beaſts to needleſſe ſtrife? Be well prepar&#x27;d, and then your fortune try, &quot;Brave mindes ſhould death deſpiſe, not loathing life: &quot;For feare of danger cowards crave to dye. &quot;But vertue firſt all hopes accounts doth caſt, &quot;And of each meane to helpe maturely thinkes, &quot;Then, when all elſe is done, death is the laſt, &quot;The which to meet true courage never ſhrinkes. Now for the time, let Bactria be our ſeate, To Beſſus for the forme your Crowne reſigne, Who, when he once hath re-advanc&#x27;d your ſtate, Sh ll with your foes o&#x27;rethrow his charge confine. If I have err&#x27;d, no pardon (Sir) I crave. Firſt heare, and if I faile, then let me fall; I call the Gods to teſtifie my part, Who can (commenting thoughts) cleare truth afford, If ever treaſon harbour&#x27;d in my heart, Straight let me dye, not pittied, but abhorr&#x27;d; I counſell gave according to my skill, It was my upright minde that made me bold, And though my wit not anſwer&#x27;d to my will, &quot;Still zeale what it conceives, muſt needs unfold. &quot;We ſhould be loth to ſpeake in great affaires, &quot;Where words are damn&#x27;d, or ballanc&#x27;d by th&#x27; event: &quot;For, if things faile, the fault is ſtill thought theirs, &quot;Who gave advice, though of a good intent, Great Prince forget this not well grounded grudge ▪ Who dare be free if thus for words rejected? At leaſt examine firſt before you judge, I rather dye abſolv&#x27;d, then live ſuſpected.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Darius</div><div class="body">Vanquished by Alexander, Darius fears for his mother, wife, and children, who have been taken captive. He offers a ransom for them, and Parmenio encourages Alexander to accept (the money can be used to finance future campaigns), but Alexander refuses. The women assume that Darius is dead and ask leave to bury him. Alexander gives them his personal assurance that Darius is alive and that they v.ill be treated honourably. Bessus and Narbazanes plan to betray Darius to Alexander in the hope of getting kingdoms for themselves. Darius learns that his wife has died, but is impressed by Alexander&#x27;s honourable treatment of her. Narbazanes encourages him to resign the crown to Bessus, while others advise him not to trust the two traitors, and to rely on his mercenary troops if necessary. Darius meditates on tl1e inevitable fall of princes and accepts the coming of death. The traitors spread a rumour that he has committed suicide, then take him prisoner and offer him to Alexander. Darius dies with a speech honouring Alexander for his magnanimity in victory. Alexander vows to hunt down and dismember the traitors.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> page.
+</div>
+</div></body></html>

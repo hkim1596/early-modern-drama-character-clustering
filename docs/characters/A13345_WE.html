@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WE in The Hog Hath Lost His Pearl · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>WE</span>
+</nav>
+
+<h1>WE</h1>
+<p class="lede">in <em>The Hog Hath Lost His Pearl</em> — Tailor, Robert</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1614</td></tr>
+<tr><th>Words</th><td>1675</td></tr>
+<tr><th>Characters</th><td>8681</td></tr>
+<tr><th>BritDrama no.</th><td>1701</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">though many an old Iuſtice is ſo. How now Peter is thy young miſtris vp yet? Faith and ſo ſhe may, for tis long ere I can get vp when I <mark>goe</mark> ſoxt to bed; but Peter <mark>has</mark> ſhe no other ſuters beſides my ſelfe. Not fit ſhe ſhould, I tell thee Peter, I would giue <mark>away</mark> as much as ſome Knights are worth, and that&#x27;s not much, only to wipe</div>
+<div class="excerpt">ſelfe. Not fit ſhe ſhould, I tell thee Peter, I would giue <mark>away</mark> as much as ſome Knights are worth, and that&#x27;s not much, only to wipe the noſes of ſome dozen or <mark>two</mark> of Gallants, and to ſee how pittifully thoſe percels of mans fleſh would looke when I had caught the bird, which they had beaten the buſh for. Foot, as I am a Lo.</div>
+<div class="excerpt">now at this time, When my gray head&#x27;s declining to the graue! Could any Maſculine flatterer on earth So far bewitch thee, to forget thy ſelfe, As now to leaue me? <mark>Did</mark> Nature ſoly giue thee me, As my chiefe ineſtimable treaſure, Whereby my age might paſſe in quiet to reſt: And art thou prov&#x27;d to be the only curſe, Which heauen</div>
+<div class="excerpt">wiſdome will ſit as mure as learning among many Courtiers, but father I partlie ſuſpect that Carracus hath got my ſiſter. Berlady and that may be true, but whether a <mark>has</mark> or no, its al one, if you pleaſe, Ile take her from vnder his noſe in ſpight ons teeth, and aske him no leaue. Troth and I wiſh ſo too, for in my minde hees a gent.</div>
+<div class="excerpt">and I wiſh ſo too, for in my minde hees a gent. of a good houſe, and ſpeakes true lattine, Why doe ye take me for a mid-wife, I am ſure my ſiſter willbe glad to <mark>heare</mark> it, and I cannot blame her, for ſheele then inioy that with quietneſſe, which ma ny a wench in theſe dayes does ſcratch for, Sir, an a were in the pangs of childe-bed,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Morrow father Hogge, I come to tel you ſtrange newes, my ſiſter is ſtolne away to night, tis thought by Nigromancy, what Nigromancy is, I leaue to the readers of the ſeauen cham pions of chiſtendome. Impatient, I ha ſeene the picture of Hector in a Haber daſhers ſhop, not looke halfe ſo furious, he apprares more ter rible then wilde fire at a play. But father Hogge, when is the time your daughter and I ſhall to this wedlock druggery. Moreouer, father Hogge, to proſecute the gaine of her affectation with the beſt affecting words, as I am a Lord, a moſt rare phraſe: well I perceiue age is not altogether ignorant, though many an old Iuſtice is ſo. How now Peter is thy young miſtris vp yet? Faith and ſo ſhe may, for tis long ere I can get vp when I goe ſoxt to bed; but Peter has ſhe no other ſuters beſides my ſelfe. Not fit ſhe ſhould, I tell thee Peter, I would giue away as much as ſome Knights are worth, and that&#x27;s not much, only to wipe the noſes of ſome dozen or two of Gallants, and to ſee how pittifully thoſe percels of mans fleſh would looke when I had caught the bird, which they had beaten the buſh for. Foot, as I am a Lo. it angers me to the guts, that no bo dy hath been about her. An I could haue inioin&#x27;d her to ſome pale fac&#x27;t louers diſtraction, or beene enuied for my happineſſe, it had beene ſomewhat. But ſee where ſhee comes, I knewe ſhe had not power enough to ſtay another ſending, for ô lords! what are we? our very names enforce beauty to fly, being ſent for aſide. Morrow pretty Becke: how dooſt? Dee ye think I am ſubiect to ſuch common infirmities? nay, were I diſeas&#x27;d I&#x27;de ſcorne but to be diſeas&#x27;d like a lord iſaith: but I can tell you newes, your fellow virgin-hole play er, my ſiſter is ſtolne away to night. No, nor care nor, as ſhe brewes, ſo let her bake, ſo ſayd the auntient prouerbe, but lady mine that ſhalbe, your father hath wiſht me to appoint the day with you. Why of mariage, as the learned Hiſtoriographer writes hymens hollidaies, or nuptial Ceremonious rites. Why let me ſee, I thinke the Taylor may diſpatch all our veſtures in a weeke: therefore, it ſhall be directly this day ſennight. How, not loue a lord; ô indiſcreete young woman! Indeed your father told me how vnripe I ſhould finde you: but al&#x27;s, one vnripe fruit will aske more ſhaking before they fall, then thoſe that are, and my conqueſt will ſee me the greater ſtill. Nay ye could not a pleas&#x27;d me better, then ſeeing you ſo inuincible, and ſuch a difficult attaining to, I would not giue a pin for the ſociety of a female that ſhould ſeeme willing, but giue me a wench that hath diſdainefull lookes: For tis denial whets on appetite, When proferred ſeruice doth allay delight. Neuer to marry, Peter I pray beare witnes of her words that when I haue attain&#x27;d her, it may adde to my fame and con queſt. Nay, ye muſt think Becke I know how to woe, ye ſhall finde no baſhfull vniuerſity man of me. Yes faith that I haue, and the laſt week too, three dayes and a night together. Onely to finde out, why a woman going on the right ſide of her husband the day time, ſhould lie on his left ſide at night; and as I am a lord, I neuer knew the meaning on&#x27;t till yeſterday, Mallapert my fathers Butler being a witty I acka napes told me why it was. Nay, tis all one whether you doe or no, tis but a little more trouble to bring ye about agen, &amp; no queſtion but a man may doot; I am he, tis true as your father ſayd, the blacke Oxe hath not trode vpon that foote of yours. Wel go thy waies, th&#x27;art as witty a marmaled eater, as euer I conuerſt with; now, as I am a lord, I loue her better and better, ile home and Poetiſe vpon her good parts preſently, Pe ter heres apreparatiue to my further applications, and Peter be circumſpect in giuing me diligent notice, what ſutors ſeeme to be pee-ping. Why god-a-mercy, and if euer I do gaine my requeſt, Thou ſhalt in brauer cloathes be ſhortly dreſt. Haue the fates then conſpir&#x27;d, and quite bereft My drooping yeeres, of all the bleſt content That age partakes of, by the ſweet aſpect Of their well nurtur&#x27;d iſſue; whoſe obedience, Diſcreete and duteous haueour, onely lengthens The thred of age; when on the contrary, By rude demeanour and their headſtrong wils, That thred&#x27;s ſoone rauel&#x27;d out: O why Maria Couldſt thou abandon me now at this time, When my gray head&#x27;s declining to the graue! Could any Maſculine flatterer on earth So far bewitch thee, to forget thy ſelfe, As now to leaue me? Did Nature ſoly giue thee me, As my chiefe ineſtimable treaſure, Whereby my age might paſſe in quiet to reſt: And art thou prov&#x27;d to be the only curſe, Which heauen could throw vpon mortality: Yet ile not curſe thee, though I feare the fates Will on thy head inflict ſome puniſhment, Which I will daily pray they may with-hold; Although thy diſobediency deſerues Extreameſt rigor, yet I wiſh to thee Content in loue full of tranquility. But ſee where ſtands my ſhame, whoſe indiſcretion Doth ſeeme to bury all the liuing honours, Of all our aunceſtours but tis the fates decree, That men might know their weake mortality. Sir, I cannot finde my ſiſter, How father, is it not poſſible that wiſdome ſhould be found out by ignorance; I pray then how do many Magnificoes come by it? Then wiſdome will ſit as mure as learning among many Courtiers, but father I partlie ſuſpect that Carracus hath got my ſiſter. Berlady and that may be true, but whether a has or no, its al one, if you pleaſe, Ile take her from vnder his noſe in ſpight ons teeth, and aske him no leaue. Troth and I wiſh ſo too, for in my minde hees a gent. of a good houſe, and ſpeakes true lattine, Why doe ye take me for a mid-wife, I am ſure my ſiſter willbe glad to heare it, and I cannot blame her, for ſheele then inioy that with quietneſſe, which ma ny a wench in theſe dayes does ſcratch for, Sir, an a were in the pangs of childe-bed, I&#x27;de ſpeake with him. Sfoote I thinke a be diſturb&#x27;d indeed, a ſpeakes more commaunding then a Conſtable at midnight. Sir, my lord and father, by me a lord, hath ſent theſe lines in clos&#x27;d, which ſhew his whole intent. Is yous M r . a Stateſman friend? I but when my father dies, I am to be call&#x27;d in for one my ſelfe, and I hope to beare the place as grauely as my ſucceſ ſors haue done before me. I will relate as much ſir, fare ye well. Why now I vnderſtand you ſir, that Maria is my ſiſter, by whoſe coniunction you are created brother, to me a lord. Alas no ſir, we meane to ride it, my ſiſter ſhall ride vpon my nagge. Content ſir. Peace be here: for I came late enough from a madman. And you alſo: I could ſpeake it in lattine, but the phraſe is common. That I will, but my maſters thus much ile ſay vntee, if ſo be this quarrell may be taken vp peaceably, without the in dangering of my owne perſon, well, and good, otherwiſe I will not meddle therewith, for I haue beene vext late enough al readie. I doe giue leaue, or permit. Why ſo, this is better then being among mad-men yet. Yes faith, Ile tell you all in the Seller, how I was taken for an Embaſſador, and being no ſooner in the houſe, but the mad man carries mee vp into the garret for a ſpie, and very roundly bad me vntruſſe, and had not a courteous ſeruing man conueied me away whilſt he went to feteh whips I thinke in my conſcience: not reſpecting my honour a would a breecht me. O Peter, how long haue we ſlept vpon the hogſhead? I maruell what&#x27;s become of Haddit and Lighfoote? Yet I beleeue Had. had his part, for to my thinking the ſeller went round with him when a left vs, but are we come to a bed yet? I muſt needs ſleepe. Where art Peter. Wheres this noyſe Peter canſt tell? Why Peter wilt not anſwere me? Tis I, the Lord your ſonne that ſhall be, vpon my honor I came not to rob you. But are you rob&#x27;d indeed father Hogge, of how much I praye? Nay tis no matter where ſhee is now? ſhele ſcarce be worth a 1000. pound and thats but a taylors priſe. No as I hope to liue in peace. Well father Hogge, though you are vndone, your daughter ſhall not be, ſo long as a Lords can ſtand her in any ſtead: come you ſhall with me to my Lord and father, whoſe warrants wee will haue for the apprehending of all ſuſpitious liues, and though the labour be infinite, you muſt conſider your loſſe is ſo. Roome for a deſirer of Iuſtice, what my ſiſter Maria; Who thought to haue met you here? Well, but is your husband there any quieter then a was? Which I agree to, for patience is a vertue father Hogge. Yes marry was it, and this the party to whome it apper taines. I thought a was a Cheater, ere ſince I heard two or three Templers ſweare at dice the laſt Chriſtmas, that the diuel had got all. To follow after then, our lot doth fall, Now rime it Peter.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Hog Hath Lost His Pearl</div><div class="body">Haddit has spent all his money and mortgaged his lands to Hog the usurer, and now ekes out a living selling jigs to players. He aims to solve his financial problems by marrying Rebecca, Hog’s daughter, whose affections he had previously refused in the belief that she was too low-born for him. Hog intends Rebecca to marry young Lord Wealthy, but she refuses, and helps Haddit trick her father. Haddit’s uncle, Lightfoot, helps to get the servant Peter out of the way by picking a quarrel, to give him a pretext for making peace with a drinking contest; Peter imbibes himself insensible in the cellar. Rebecca steals Hog’s keys, giving Haddit and his accomplices access to his bedroom, where he keeps his gold. Lightfoot appears to Hog as the ghost of Croesus, come to make the usurer rich: a spirit will ===== PAGE 291 ===== 1613 take his gold and transform it into pearl, which is even more valuable; in reality, Haddit steals the money and retrieves his mortgage, then absconds with Rebecca and marries her. Hog goes to complain to old Lord Wealthy, but his supernatural experiences induce a conversion: he renounces avarice and gives the couple his blessing. In the sub-plot, Carracus plans to elope with young Lord Wealthy’s sister Maria, and entrusts his friend Albert with the arrangements. Albert visits Maria early, posing as Carracus, and has sex with her; she then leaves with Carracus as planned, and marries him: Albert suffers remorse and decides to leave human society. Some time later, Carracus notices that Maria is wearing Albert’s ring, which he gave her on the night of the elopement. Both realize what Albert did; Maria faints and Carracus is told that she has died of shame. In fact, she disguises herself as a page and flees to the woods, where Albert has carved penitential verses on every tree. Posing as a hermit, Albert finds her almost dead from starvation; he takes her to his cave; and feeds her. Carracus also goes to the woods, where an echo tells him that Maria is alive and innocent. They meet up, and revelations ensue: the page is chaste Maria and the hermit is penitent Albert. Carracus and Maria forgive him, and make their peace with Maria’s family.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

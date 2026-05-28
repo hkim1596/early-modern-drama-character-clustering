@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SVR in The Alchemist · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SVR</span>
+</nav>
+
+<h1>SVR</h1>
+<p class="lede">in <em>The Alchemist</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1612</td></tr>
+<tr><th>Words</th><td>1383</td></tr>
+<tr><th>Characters</th><td>7658</td></tr>
+<tr><th>BritDrama no.</th><td>1621</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Lady, doe you informe your Brother. Sir, all is truth, she says. You are valiant out of Company. Hydra of villany! Why this is madnesse, Sir, Not valure in you: I <mark>must</mark> laugh at this. You&#x27;ll <mark>heare</mark> me Sir? New Raskals! I <mark>must</mark> giue way. But ile take A course with you— Captaine, and Doctor. The happy word, Be rich — Should be to day</div>
+<div class="excerpt">No, Sir, wee&#x27;ll come with warrant. Down with the dore. And my Captaine Face? That are Birding in mens purses. And the Captaine Pandar. How! Haue I lost her then? <mark>Must</mark> I needes cheat my selfe, With that same foolish vice of Honesty! Come let vs <mark>goe</mark>, and hearken out the Rogues. That Face I&#x27;ll marke for mine, if ere I meete him.</div>
+<div class="excerpt">write, Sir, in high Dutch? What Paper? O that, indeed (they say) Will last &#x27;gainst wormes. And do&#x27;you thinke to haue the Stone, with this? Why, I haue heard, he <mark>must</mark> be Homo frugi, A pious, holy, and religious man, One free from mortall sinne, a very Virgin. What a braue language here is? next to Canting? Your Cockscomb&#x27;s, is</div>
+<div class="excerpt">for you that are, &#x27;tis thought, shall weepe. I will not, Sir. Sir Epicure, I shall leaue you. Peuter, and Brasse, Andirons, and Kitchin ware, Mettalls, that we <mark>must</mark> vse our med&#x27;cine on: Wherein the Brethren may haue a penn&#x27;orth. For ready money. Sennores, beso las manos, à vuestras mercedes. Gratia. Por dios, Sennores, muy</div>
+<div class="excerpt">Shires. While you send in— Captaine, (what is he gone?) Dam&#x27;sells with child, Wiues, that are barren, or, the waiting-Maide With the Greene-sicknesse. Nay Sir, you <mark>must</mark> tarry Though he be scap&#x27;t; and answere, by the eares, Sir. VVHy, now&#x27;s the time, if euer you will quarrell Well (as they say) and be a true-borne Child. The Doctor,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">What, and turne that too? No faith. Yes, when I see&#x27;t, I will. But, if my eyes doe cossen me so (and I Giuing&#x27;hem no occasion) sure, I&#x27;ll haue A Whore, shall pisse&#x27;hem out next day. No doubt hee&#x27;is that already. The decay&#x27;d Vestall&#x27;s of Pickt-hatch would thanke you, That keepe the fire a-liue, there. And I&#x27;ll Be bound, the Players shall sing your pra ses, then, Without their Poets. As he that built the Water-worke, dos with water, Faith, I haue a humor, I would not willingly be gull&#x27;d. Your Stone Cannot transmute me How! Did Adam write, Sir, in high Dutch? What Paper? O that, indeed (they say) Will last &#x27;gainst wormes. And do&#x27;you thinke to haue the Stone, with this? Why, I haue heard, he must be Homo frugi, A pious, holy, and religious man, One free from mortall sinne, a very Virgin. What a braue language here is? next to Canting? Your Cockscomb&#x27;s, is t not? O, I look&#x27;d for this. The hay is a pitching. O, this Ferret Is ranke as any Pole-cat. I, are you bolted? Yes twenty, and be cossend, Doe. We shal haue a sallad. I beleeue you, in that. And Dripping-pannes, and Pot-hangers, and Hookes? Shall he not? To be an Asse. And little hope, Sir, But, much lesse charitie, should I gull my selfe. But your whole worke, no more. That, you should hatch gold in a Fornace, Sir, As they doe egges in Egypt. If I should? That cannot be. The Egg&#x27;s ordain&#x27;d by Nature, to that end: And is a Chicken, in Potentia. I, what is that? Pray you, Sir, stay. Rather, then I&#x27;ll be bray&#x27;d, Sir, I&#x27;ll beleeue, That Alchemie is a pretty kinde of Game, Somewhat like Tricks o&#x27;the Cards, to cheat a man, With charming. What else are all your Term , Whereon no one o&#x27;your Writers grees with other? Of your Elixir, your Lac virginis, Your Stone, your Med&#x27;cine, and your Chrysosperme, Your Sal, your Sulphur, and your Mercurie, Your Oyle of height, your Tree of life, your Blood, Your Marchesite, your Tutie, your Magnesia, Your Toade, your Crow, your Dragon, and your Panthar, Your Sunne, your Moone, your Firmament, your Adrop, Your Lato, Azoch, Zernich, Chibrit, Heautarit, And then your Red man, and your white 〈◊〉 ; With all your Broathes, your M nstrues, and Materialls, Of Pisse, and Egge-shells, Womens termes, Mans blood, Hayre o&#x27;the head, burnt Cloutes, Chalke, Merds, and Clay, Poulder of bones, scalings of Iron, glasse. And worlds of other strange Ingredients, Would burst a man to name. Hart, this is a baudy-House. I&#x27;ll be burnt else. Be not gull&#x27;d, Sir Mammon. Yes, as you are. And trust confederate Knaues, and Baudes, and Whores. Sir Epic re, Your friend to vse. Yet, still, loth to be gull&#x27;d. I doe not like your Phil sophicall baudes. Their Stone is lechery inough, to pay for, Without this bayte And yet, you ne&#x27;re saw her Till now? A very trecherous memory. Tut if you ha&#x27;it not about you passe it, Till we meete next. Hart! Can it be, That a graue Sir, a rich, that has no need, A wise Sir, too, at other times should thus With his owne oathes, and arguments, make hard meanes To gull himselfe? And, this be your Elixir, Your Lapis M neralis, and your Lunarie, Giue me your honest trick, yet, at Primero, Or Gleeke; and take your Lutum sapientis, Your Menstruum simplex: I&#x27;ll haue Gold, before you, And, with lesse danger of the Quick-siluer; Or the hot Sulphur. Sir, I will. But, by Attorney, and to a second purpose. Now, I am sure, it is a Bawdy-house; I&#x27;ll sweare it, were the Marshall here, to thankeme. The naming this Commander, doth confirme it. Don Face! Why, h&#x27;is the most autentique dealer I&#x27;these Commodities! The Superintendent To all the queinter Traffiquers, in towne. He is their Visiter, and do&#x27;s appoint Who lies with whom; and at what hower; what price; Which gowne; and in what smock; what fall; what tire. Him will I proue, by a third person, to finde The subtilties of this darke Labyrinth: Which, if I doe discouer, deare, Sir Mammon, You&#x27;ll giue your poore Friend leaue, though no Philosopher, To laugh: for you that are, &#x27;tis thought, shall weepe. I will not, Sir. Sir Epicure, I shall leaue you. Peuter, and Brasse, Andirons, and Kitchin ware, Mettalls, that we must vse our med&#x27;cine on: Wherein the Brethren may haue a penn&#x27;orth. For ready money. Sennores, beso las manos, à vuestras mercedes. Gratia. Por dios, Sennores, muy linda Casa! Ent endo. Con licencia, se puede ver à esta Sennorà? Entiendo, que la Sennora es tan her mosa, q 〈◊〉 tan à ver la, como la bien 〈◊〉 de mi vida, 〈◊〉 , p r que se tàrdatànta? Puede, ser, de haz r burla de miamor. Por estas 〈◊〉 barbas. Tiengo dùd , Sennores, Que no me hágan algunatraycion. Que es èsto Se ores, que non seve ga? Esta tardanza me mata! Por todos los dioses, la mas acabada Hermosùra, que he visto en mivìda! El Solha perdido su lumbre, con el Resplandor, que tràe esta dama. Valga me dio ! Por que no se acùde? Por el amor de dios, que es esto, que se tàrda? Sennora mia, mi persona muy indignaesta Alle gar àtànta Hermosura. Sennora, si sera seruida, entremus. And for these Houshold-Rogues, let me alone. To treat with them. Will you, Don Baud, and Pick-purse? How now? Reele you? Stand vp Sir, you shall finde since I am so heauy, I&#x27;ll gi&#x27; you aequall weight. No Sir. There&#x27;s no such thing intended. A good Cart, And a cleane Whip shall ease you of that feare. I am the Spanish Don, that should be cossened, Doe you see? cossened. Where&#x27;s your Captaine Face? That parcell-Broker, and whole-Baud, all Raskall. O, make your approach, good Captaine. I&#x27;haue found, from whence your Copper Rings, and Spoones Come now, wherewith you cheate abroad in Tauernes. &#x27;Twas here, you learn&#x27;d t&#x27; annoint your boote with Brimstone, Then rub mens Gold on&#x27;t, for a kinde of touch, And say &#x27;twas naught, when you had chang&#x27;d the colour, That you might ha&#x27;t for nothing. And this Doctor, Your sooty, smoaky-bearded Compeere, He Will close you so much Gold, in a Bolts-head, And, on a turne, conuay (i&#x27;the stead) another With sublim&#x27;d Mercury, that shall burst i&#x27; he heate, And flye out all in fumo. Then weepes Mammon. Then swounes his Worship. Or he is the Faustus, That casteth figures, and can coniure, cures Plague, Piles, and Poxe, by the Ephemerides, And holds intelligence, with all the Baudes, And Midwiues of three Shires. While you send in— Captaine, (what is he gone?) Dam&#x27;sells with child, Wiues, that are barren, or, the waiting-Maide With the Greene-sicknesse. Nay Sir, you must tarry Though he be scap&#x27;t; and answere, by the eares, Sir. VVHy, now&#x27;s the time, if euer you will quarrell Well (as they say) and be a true-borne Child. The Doctor, and your Sister both are abus&#x27;d. I should be loth, Sir, To confesse so much. How? Sir you are abus&#x27;d. You are indeed. Will you heare me, Sir? This&#x27;s strange! Lady, doe you informe your Brother. Sir, all is truth, she says. You are valiant out of Company. Hydra of villany! Why this is madnesse, Sir, Not valure in you: I must laugh at this. You&#x27;ll heare me Sir? New Raskals! I must giue way. But ile take A course with you— Captaine, and Doctor. The happy word, Be rich — Should be to day pronounc&#x27;d, to all your friends. And where be your Andirons now? And your Brasse Pots? That should ha&#x27;beene Golden Flaggons, and great Wedges? I, now, &#x27;tis Holyday with them. Your word, Groome arrogant? This&#x27;s a new Face! You Raskall. This is one O&#x27; the Confederacie. Come let&#x27;s get Officers! And force the dore. No, Sir, wee&#x27;ll come with warrant. Down with the dore. And my Captaine Face? That are Birding in mens purses. And the Captaine Pandar. How! Haue I lost her then? Must I needes cheat my selfe, With that same foolish vice of Honesty! Come let vs goe, and hearken out the Rogues. That Face I&#x27;ll marke for mine, if ere I meete him.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Alchemist</div><div class="body">With his master absent to avoid the plague in London, Face has set up an occult consultancy in his house in association with the formerly itinerant rogues Subtle and Doll Common: Face fetches in the clients and Subtle poses as the alchemist. They quarrel over the relative merits of their contributions to the enterprise, but resolve to collaborate competitively in the day’s ===== PAGE 80 ===== business. They are visited by successive clients: Dapper, who wants a familiar to help him win at gambling; Drugger, who wants advice on the most auspicious layout for his shop; Sir Epicure Mammon, who seeks the philosopher’s stone to fulfil his fantasies of wealth, luxury, and voluptuousness, and who brings along with him the sceptic Surly; and the religious sectarians Ananias and Tribulation, who want both the stone and Subtle’s claimed expertise in counterfeiting foreign coins. Dapper is persuaded that he is the Fairy Queen’s nephew and heir, and is promised an introduction to her. Mammon brings various domestic articles for aurification, which Subtle then sells on to Ananias and Tribulation, saying they belong to orphans. Clients come thick and fast. Drugger introduces his neighbours, Kastril (who wants te learn how to quarrel) and the wealthy widow Pliant (who wants her fortune told and whom Face and Subtle both want to marry). They are sent away so that the tricksters can deal with Dapper, who in his turn is secreted in the privy while they attend to Mammon. The knight courts Doll, who is presented to him as a lord’s sister prone to religious mania, which he activates by ill-chosen words; but he is then told that his lust has caused a setback in the alchemical process, which demands moral purity. Meanwhile, Surly returns, disguised as a Spanish count seeking sexual favours; but, since Doll is busy with Mammon, he is foisted on Dame Pliant, who is tempted with the chance of becoming a Spanish countess. His attempt to tell her the truth is outmanoeuvred when Face and Subtle convince her that he is an impostor and that the real Count is on his way; Drugger is persuaded to impersonate him and sent off to borrow a Spanish suit for the role. Lovewit, the master of the house, returns to hear Tumours of strange goings-on. Face’s explanation is confuted by the cries of Dapper, forgotten in the privy, so he confesses everything. Dapper is presented to the Fairy Queen (impersonated by Doll) and goes away the owner of an imaginary magical fly, with instructions not to look…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QUIC in Eastward Ho · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>QUIC</span>
+</nav>
+
+<h1>QUIC</h1>
+<p class="lede">in <em>Eastward Ho</em> — Chapman, GeorgeJonson, BenMarston, John</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1605</td></tr>
+<tr><th>Words</th><td>1441</td></tr>
+<tr><th>Characters</th><td>7663</td></tr>
+<tr><th>BritDrama no.</th><td>1473</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">be able to ſtand of your legges to endure it. Thereby lyes a tale ſir. The old vſurer will be here inſtantly, with my Puncke Syndefie, whome you know your Lady <mark>has</mark> promiſt mee to entertaine for her Gentlewoman: and he (with a purpoſe to feede on you) inuites you moſt ſo lemnly by me to ſupper. One maiſter Frances Quickeſiluer,</div>
+<div class="excerpt">lemnly by me to ſupper. One maiſter Frances Quickeſiluer, an&#x27;t pleaſe your La diſhip. I told him what a Burre he had gotten. In pollicie Dad, till to morrow ſhe <mark>has</mark> ſeald. See Madam, the Bride and Bridegrome: Wel Sir, here&#x27;s to al Eaſtward &amp; toward Cuckolds, &amp; ſo to famouſe Cuckolds hauen ſo fatally remembred. Surgit. Sfoote</div>
+<div class="excerpt">at Wapping, rather then euer ha&#x27; come here. Muſt Goulding ſit vpon vs? O they mock vs. Worſhipfull Maiſter. O me, what an infortunate thing am I! Sir, withall my <mark>heart</mark>, &amp; as I told M. Tobie, I ſhall be glad to haue any man a witneſſe of it. And the more openly I proſeſſe it, I hope it will appeare the hartier and the more vnſained.</div>
+<div class="excerpt">it, I hope it will appeare the hartier and the more vnſained. I caſt my Coat, and Cap avvay, I vvent in ſilkci, and ſaitens gay, Falſe Mettall of good manners, I <mark>Did</mark> dayly coint valavvſully. I ſcornd my Maſter, being drunke. I kept my Golding, and my Punke, And vvith a knight, ſir Flaſh, by name, (VVho novv is ſory for the ſame)</div>
+<div class="excerpt">Flaſh, by name, (VVho novv is ſory for the ſame) Still Eaſtward hoe vvas all my word: But VVeſtward I had no regard. Nor neuer thought, vvhat vvould coine aſter As <mark>did</mark> alas his youngeſt Daughter, At laſt the black Oxe trode o&#x27;my foote, And I ſavv then vvhat longd vntoo&#x27;t, Novv try I, Touchſtone, touch me ſtil, And make me currant</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Whipt, thats good ifaith, vntruſſe me? Nay Slife, take this and take all: as I am a Gentle man borne, Ile be drunke, grow valiant, and beate thee. Exit. (Vmp) pulldo, Pulldo; ſhowſe quoth the Caliuer. Pickle? pickle in thy throate; zounes pickell? wa ha ho, good morow knight Petronell: morow lady Gouldſmith ▪ come of, Knight, with a counterbuff, for the honor of knighthood. Where I am? why sbloud you loulthead where I am? Sfoote lend me ſome money, haſt thou not Hyren here? Who cries on murther? lady was it you? how does our maiſter? pray thee crie Eaſtward ho? Tis for your credit maiſter. Tis for your credit Maiſter. Am I free a, my ferters? Renſe; Flye with a Duck in thy mouth: and now I tell thee Touchſtone— When this eternall ſubſtance of my ſoule, I was a Courtier in the Spaniſh court, and Don Andrea was my name. Sweete Touchſtone, will you lend me two ſhillings? Not a penny? I haue friends, &amp; I haue acquaintance, I will piſſe at thy ſhop poſts, and throw rotten Egges at thy ſigne: Worke vpon that now. Exit, ſtaggering. Come old Securitie, thou father of deſtruction: th&#x27;in dented Sheepeskinne is burn&#x27;d wherein I was wrapt, and I am now looſe, to get more children of perdition into thy vſurous Bonds. Thou feed&#x27;ſt my Lecherie, and I thy Couetouſnes: Thou art Pandar to me for my wench, and I to thee for thy cooſena ges: K. mee, K. thee, runnes through Court and Countrey. Why man, tis the London high-way to thriſt, if ver tue bee vſde; tis but as a ſcrappe to the nette of villanie. They that vſe it ſimplie, thriue ſimplie I warrant: Waight and faſhion makes Goldſmiths Cockolds. That ſhe ſhall keepe her Port open to any thing ſhe commends to her. With all feſtination; I haue broken the Ice to it al ready; and will preſently to the Knights houſe, whether, my good old Dad, let me pray thee with all formallitie to man her. I Wynney, quod he? thats all he can doe poore man; he may well cut off her name at Wynney. O tis an egregious Pandare! what will not an vſurous knaue be, ſo he may bee riche? O &#x27;tis a notable lewes trump! I hope to liue to ſee dogs meate made of the old Vſurers fleſh; Dice of his bones; and Indentures of his skinne: and yet his skinne is too thicke to make Parchment, &#x27;twould make good Bootes for a Peeter man to catch Salmon in. Your onely ſmooth skinne to make fine Vellam is your Puritanes skinne; they be the ſmootheſt and ſlickeſt knaues in a countrie. I know it Knight, and therefore wonder whether your Lady is going. And I feare, when her enchanted Caſtle becomes in uiſible, her Ladyſhip will returne and follow his example. As eaſely as can be. Tell her ſhe miſtooke your di rections, and that ſhortly, your ſelfe will downe with her to approoue it; and then, cloath but her croupper in a new Gowne, and you may driue her any way you liſt: for theſe wome ̄ Sir, are like Eſſex Calues, you muſt wriggle &#x27;hem on by the tayle ſtill, or they will neuer driue orderly. Caſt that coſt on me Sir, I haue ſpoken to my olde Pandare Securitie, for money or commoditie; and commodi tie (if you will) I know he will procure you. Why then Sir, what ſay you to Fortie pound in ro ſted Beefe? Nay harke you ſir; what Nurſes, what Midwiues, what Fooles, what Phiſitions, what cunning women muſt be ſought for (fearing ſometimes ſhe is bewitcht, ſome times in a conſumption) to tell her tales, to talke bawdy to her, to make her laughe, to giue her gliſters, to let her bloud vnder the tongue, and betwixt the toes; how ſhe will reuile and kiſſe you; ſpit in your face, and lick it off againe; how ſhe will vaunt you are her Creature; ſhee made you of nothing; how ſhee could haue had thouſand marke ioyntures; ſhe could haue bin made a Lady by a Scotche Knight; &amp; neuer ha&#x27; married him: Shee could haue had Poynados in her bed euery morning; how ſhe ſet you vp, and how ſhe will pull you downe: youle neuer be able to ſtand of your legges to endure it. Thereby lyes a tale ſir. The old vſurer will be here inſtantly, with my Puncke Syndefie, whome you know your Lady has promiſt mee to entertaine for her Gentlewoman: and he (with a purpoſe to feede on you) inuites you moſt ſo lemnly by me to ſupper. One maiſter Frances Quickeſiluer, an&#x27;t pleaſe your La diſhip. I told him what a Burre he had gotten. In pollicie Dad, till to morrow ſhe has ſeald. See Madam, the Bride and Bridegrome: Wel Sir, here&#x27;s to al Eaſtward &amp; toward Cuckolds, &amp; ſo to famouſe Cuckolds hauen ſo fatally remembred. Surgit. Sfoote Knight, what an vn-knightly faintneſſe tran ſports thee? let our Ship ſinck, and all the world thats with out vs be taken from vs, I hope I haue ſome tricks, in this braine of mine, ſhall not let vs periſh. Go to Knight, I haue more meanes then thou art a ware off: I haue not liu&#x27;d amongſt Gould-ſmiths and Gould makers all this while, but I haue learned ſomething worthy of my time with &#x27;hem. And, not to let thee ſtinck where thou ſtandſt, Knight, Ile let thee know ſome of my skill preſently. I will blanche Copper ſo cunningly, that it ſhall en dure all proofes, but the Teſt: it ſhall endure malleation, it ſhal ▪ haue the ponderoſitie of Luna, and the tenacitie of Luna, by no meanes friable. Tuſh Knight, the tearmes of this Arte, euery ignorant Quack-ſaluer is perfect in: but Ile tell you how your ſelfe ſhal blanche Copper thus cunningly. Take Arſnicke, otherwiſe called Realga, (which indeede is plaine Ratsbane) Sublime &#x27;hem three or foure times, then take the Sublimate of this Re alga, and put&#x27;hem into a Glaſſe, into Chymia, &amp; let&#x27;hem haue a conuenient decoction Naturall, foure and twentie houres, &amp; he will become perfectly fixt: Then take this fixed powder, &amp; proiect him vpon wel-purgd Copper, et habebis Magiſtriu ̄ . You ſhall reſtore that thus: Take your ſal Achyme prepar&#x27;d, and your diſtild Vrine; and let your Angels lie in it but foure and twenty howres, and they ſhall haue their perfect weight againe: come on now I hope this is enough to put ſome ſpirit into the liuers of you, Ile infuſe more an other time. We haue ſaluted the proud Ayre long enough with our bare skon ces, now will I haue you to a wenches houſe of mine at Lon don, there make ſhift to ſhift vs, and after ſuch fortunes as the ſtars ſhal aſſigne vs. Would it had beene my fortune, to haue beene truſt vp at Wapping, rather then euer ha&#x27; come here. Muſt Goulding ſit vpon vs? O they mock vs. Worſhipfull Maiſter. O me, what an infortunate thing am I! Sir, withall my heart, &amp; as I told M. Tobie, I ſhall be glad to haue any man a witneſſe of it. And the more openly I proſeſſe it, I hope it will appeare the hartier and the more vnſained. I caſt my Coat, and Cap avvay, I vvent in ſilkci, and ſaitens gay, Falſe Mettall of good manners, I Did dayly coint valavvſully. I ſcornd my Maſter, being drunke. I kept my Golding, and my Punke, And vvith a knight, ſir Flaſh, by name, (VVho novv is ſory for the ſame) Still Eaſtward hoe vvas all my word: But VVeſtward I had no regard. Nor neuer thought, vvhat vvould coine aſter As did alas his youngeſt Daughter, At laſt the black Oxe trode o&#x27;my foote, And I ſavv then vvhat longd vntoo&#x27;t, Novv try I, Touchſtone, touch me ſtil, And make me currant by thy skill. This Stanze now following, alludes to the ſtory of Man nington from whence I tooke my proiect for my inuention. O Manington thy ſtories ſhevv, Thou cutſt a Horſe-head off at a blovv But I confeſſe, I haue not the force For to cut off the head of a horſe, Yet I deſire this grace to vvinne, That I may cut off the Horſe-head of Sin. And leaue his body in the duſt Of ſinneshigh vvay and bogges of Luſt, VVherby I may take Vertues purſe, And liue vvith her for better, for vvorſe. Alas ſir. With all my heart.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Eastward Ho</div><div class="body">The goldsmith [owehstone has two apprentices, the rebellious prodigal QUIEKSIWVEF and the virtuous Golding, and two daughters, the proud Gertrude and the modest Mildréd. Mistress Touchstone insists that Gertrude should marry above her rank to Sim@PéetronelFlash, while Touchstone bestows Mildred on Golding. Quicksilver is sacked after appearing for work drunk; Golding is also released from his indentures to become his former master’s son-in-law. Quicksilver considers becoming a merchant, then conspires with Security to entrap Sir Petronel Flash into debt to finance the secret expedition to Virginia he is planning. While Gertrude travels to her new husband’s fictitious country castle, Sir Petronel plans a _ - sexual liaison with [Winifméd| Security’s wife. Quicksilver and Sir Petronel both set sail, each in a different vessel, with the jealous S€@uirity following in a third, but a storm wrecks all three boats at Cuckold’s Haven. Winifred convinces Security that his suspicions are groundless. Quicksilver and Sir Petronel are arrested and sent to prison by Golding, now a deputy alderman, on suspicion of stealing from Touchstone. They and Security become penitent in their incarceration, but Touchstone is determined to prosecute them. Golding wishes to be more forgiving, and feigns his own imprisonment to bring his father-in-law to the jail. There Touchstone sees and accepts the sincerity of the miscreants’ repentance; Quicksilver, Sir Petronel, and Security are released, and Quicksilver promises to marry Sindefy, his punk.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

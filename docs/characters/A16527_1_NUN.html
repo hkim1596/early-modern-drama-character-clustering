@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NUN in The Alexandraean Tragedy · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> ›
+  <span>NUN</span>
+</nav>
+
+<h1>NUN</h1>
+<p class="lede">in <em>The Alexandraean Tragedy</em> — Alexander, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>963</td></tr>
+<tr><th>Characters</th><td>5594</td></tr>
+<tr><th>BritDrama no.</th><td>1552</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 25 (<em>did, whil, death, might, minde, fortune…</em>). Matches are highlighted.</p>
+<div class="excerpt">with murders fill; Which from her part the people <mark>did</mark> eſtrange, Whilſt nought but rigour limited her will. So that when fierce Caſſander ſought her wreake, She <mark>did</mark> miſtruſt the Macedonians mindes: And for the time the neereſt ſtrength <mark>did</mark> take, There till the ſtorme was paſt t&#x27;attend faire windes. But ſoone Caſſander <mark>did</mark> the</div>
+<div class="excerpt">the worſt, As th&#x27;earth in pride, the heauens in plagues abounds, Our higheſt hopes haue periſht but of late. Our Queene Olimpias rauiſht by reuenge, All Macedony <mark>did</mark> with murders fill; Which from her part the people <mark>did</mark> eſtrange, Whilſt nought but rigour limited her will. So that when fierce Caſſander ſought her wreake, She</div>
+<div class="excerpt">the time the neereſt ſtrength <mark>did</mark> take, There till the ſtorme was paſt t&#x27;attend faire windes. But ſoone Caſſander <mark>did</mark> the towne encloſe, And as ſhe held him out, <mark>did</mark> hold her in, That like a captiue guarded by her foes, She knew not by what way a way to winne. And when their lifes prouiſion <mark>did</mark> decay, Then <mark>did</mark> bare walles but</div>
+<div class="excerpt">bare walles but ſmall refuge afford: She Scilla ſcap&#x27;d to be Charibdis prey, That fell on famine flying from the ſword. Strait like pale Ghoſts faint ſouldiers <mark>did</mark> remaine, Whoſe bowels hunger like a Harpie teares: And with courageous words, the Queene in vaine <mark>Did</mark> raiſe their ſpirit; (the belly hath no eares.) All then began</div>
+<div class="excerpt">fleſh fell in, bones burſted out: And when that th&#x27;ordinarie meates were ſpent, Then horſes, dogs, cats, rats, all ſeru&#x27;d for food; Of which no horror th&#x27;eater <mark>did</mark> torment, For all that was not poiſon, then ſeem&#x27;d good. Some mouthes accuſtom&#x27;d once with daintie meates Wiſh&#x27;d what they oft had loath&#x27;d, ile crums, foule floods</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Amultitude of murders. What not. They haue told much, and yet I muſt tell more; Their newes were euill, yet were they not the worſt, As th&#x27;earth in pride, the heauens in plagues abounds, Our higheſt hopes haue periſht but of late. Our Queene Olimpias rauiſht by reuenge, All Macedony did with murders fill; Which from her part the people did eſtrange, Whilſt nought but rigour limited her will. So that when fierce Caſſander ſought her wreake, She did miſtruſt the Macedonians mindes: And for the time the neereſt ſtrength did take, There till the ſtorme was paſt t&#x27;attend faire windes. But ſoone Caſſander did the towne encloſe, And as ſhe held him out, did hold her in, That like a captiue guarded by her foes, She knew not by what way a way to winne. And when their lifes prouiſion did decay, Then did bare walles but ſmall refuge afford: She Scilla ſcap&#x27;d to be Charibdis prey, That fell on famine flying from the ſword. Strait like pale Ghoſts faint ſouldiers did remaine, Whoſe bowels hunger like a Harpie teares: And with courageous words, the Queene in vaine Did raiſe their ſpirit; (the belly hath no eares.) All then began to languiſh, and to fade, As if being tir&#x27;de to beare themſelues about; Legges fail&#x27;d the bodie, and the necke the head, Then whilſt the fleſh fell in, bones burſted out: And when that th&#x27;ordinarie meates were ſpent, Then horſes, dogs, cats, rats, all ſeru&#x27;d for food; Of which no horror th&#x27;eater did torment, For all that was not poiſon, then ſeem&#x27;d good. Some mouthes accuſtom&#x27;d once with daintie meates Wiſh&#x27;d what they oft had loath&#x27;d, ile crums, foule floods And Ladyes that had liu&#x27;d in pompous ſtates, Fed, as brought vp with wolues amidſt the woods: Yea, nurſt by thoſe whom they themſelues had nurſt, Oft then by th&#x27; of ſprings death th&#x27;engendrer liu&#x27;d; And which was worſt, whilſt breaſts were like to burſt None comfort could, for all themſelues were grieu&#x27;d. Such was their ſtate, no friend bewaild bis friend, No wife her husband, nor no Syre his ſonne; For apprehending their approching end. All with compaſſion of them ſelues were wonne. The dead mens ſmell empoiſon&#x27;d them that liu&#x27;d, Whilſt firſt made faint by a defrauded wombe: Heapes were of breath and buriall both depriu&#x27;d, That all the towne in end was but a tombe. When thus the world Olimpias plagu&#x27;d did ſpie, All ſought Caſſander, though for ſeuerall ends. And ſhe conſidering that ſhe could not long Hold out the ſiege, ſince vittailes were growne ſcant, Did ſend (as weake) for peace t&#x27;intreat the ſtrong. Then did Caſſander know that need conſtrain&#x27;d Her ſo to bow as ſtrangely being diſeaſde: And though he her requeſt not quite diſdain&#x27;d, Th&#x27;agreement was appointed as he pleaſde. For all the fauour that ſhe could procure, Was leaue to liue a priuate perſon ſtill; And yet of that ſhe could not be made ſure, Which did depend vpon her enemies will. Then whilſt Caſſander fought his enemies ends, There wanted not ſtrange troupes with him t&#x27;abide; Yet might haue many followers, and few friends: Friends by the touchſtone of diſtreſſe are try&#x27;d. But though the Queene was rendred in this ſort, With proteſtation t&#x27;haue her life preſeru&#x27;d. The tyrant with her ſpirit could not comport, But from his faith for her confuſion ſweru&#x27;d. The Macedonians were togither brought, There to conſult what did concerne their Queene; But when of them a number deepely thought, Both what ſhe was, and what ſhe once had beene; Euen as Caſſander had ſubborn&#x27;d them all, Their parents came whom ſhe had damn&#x27;d to death, And did her rigour to remembrance call, By which the multitude was mou&#x27;d to wrath. Whilſt from their braſen breaſts all ruth was barr&#x27;d, They did conclude, their Queen behou&#x27;d to die. Yet did Caſſander put (all ſleights t&#x27;aſſay) A maske of pittie on a cruell minde, And offred her a ſhip to flye away, As if to death againſt his will aſſign&#x27;de. Nor Was this courſe for her deliuerance fram&#x27;d, But onely as by chance that ſhe might drowne: So for her death that he might not be blam&#x27;d, But onely Neptune, that had throwne her downe. Yet ſhe a princeſſe of a mightie ſpright, Whoſe loftie courage nothing could ore-come, Said, ere ſhe ſcap&#x27;d by ſuch a ſhamefull flight, That ſhe would heare the Macedonians doome. But when Caſſanders counſel was contem&#x27;nd, Leſt that the multitude had chang&#x27;d their mind, When they remembred whom they had condemn&#x27;d, And warily weigh&#x27;d what raſhly they deſign&#x27;d. To rid her ſoone from paine, and him from feare, He ſent ſome bands from pittie moſt eſtrang&#x27;d; Yet ſhe gainſt fortune did a banner beare, And not her heart, no, not her count&#x27;nance chang&#x27;d. She conſtant ſtill, though mon&#x27;d, would neuer mone, Whoſe ſtately geſture ſcorn&#x27;d their foule attempt: And did vnite her vertues all in one, To grace diſgrace, and glorifie contempt. She on two Ladies ſhoulders lean&#x27;d her armes, And with a Maieſtie did march towards death: Like Alexander once amidſt th&#x27;alarmes, As if in triumph bent t&#x27;abandon breath. The height of vertue admiration brings, At this great magnanimitie amaz&#x27;d: As ſpying th&#x27;Image of their auncieat kings, Or then ſome goddeſſe; all the ſouldiers gaz&#x27;d. But ah, ſome boſted by the tirant ſtriu&#x27;d To ſpoile (vnnaturall) natures faireſt frame; And th&#x27;Alabaſter balles betweene they driu&#x27;d Th&#x27;vnwilling ſwords, that ſtrait grew red for ſhame. Then ſhe in worth, that would her ſelfe excell, Would neither word, nor teare, nor ſigh forth ſend; But ſpread her garments ouer her whilſt ſhe fell, As iealous of her honour ſtill to th&#x27;end. And yet the plague of theſe deteſted times. Hath wrought more miſchiefe t&#x27;aggrauate our grones.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Alexandraean Tragedy</div><div class="body">Alexander the Great is dead, poisoned by Cassander. He leaves behind a pregnant widow but no definite heir. Unable to get into the underworld because as yet unburied, his ghost returns to earth and recounts his life story, a tale of escalating atrocity as power progressively divorced him from ordinary humanity. He decides to inspire his captains with ambition and bloodlust. The captains are unable to agree on how best to secure the Macedonian Empire, and various proposals are advanced: to await the birth of Alexander&#x27;s posthumous child, and appoint a regent in the interim; to crown either Alexander’s bastard brother or his elder son, who is half-barbarian and so unacceptable to the people; to split up the empire between themselves. The only thing they can agree on is that the common foot-soldiers should have no say in the decision. Lysimachus and Seleucus decide to bide their time, let their fellow captains wear themselves out with wrangling, and then step in to take the empire for themselves. Meleager tries to have Perdiccas, his rival, murdered, but the plot fails and Perdiccas responds in kind with more success. When Alexander’s child is born, it is a son. Perdiccas and others become his joint regents, but Perdiccas schemes for personal supremacy. He removes his two colleagues in the regency, gives the other captains their own kingdoms in an effort to secure their loyalty, and plans to marry into the royal family. Two of his new subject kings, Antigonus and Ptolemy, ally themselves against him. He accepts the advice of Eumenes to deal with the rebels first before engaging with dynastic matters, but is murdered by his own soldiers during the campaign. Olympias, Alexander’s mother, plots against Cassander, but Cassander besieges her and, starving, she has to give herself up. She refuses his mercy and is executed. Cassander then procures the murder of Alexander’s remaining family. Antigonus secures the support of Eumenes, but then has him treacherously killed. The four remaining captains (Cassander, Ptolemy, Lysimachus, and Seleucus) agree to unite against Antigonus. Philastrus prophesies continuing strife: Cassander will die in disgrace, Seleucus will kil Lysimachus and then die himself, and Ptolemy’s line will ultimately end with a lustful queen who will see his empire fall into the hands of the enemy.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_25.html">Cluster 25 — 25: did, whil, death</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BOT in A Midsummer Night&#x27;s Dream · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>BOT</span>
+</nav>
+
+<h1>BOT</h1>
+<p class="lede">in <em>A Midsummer Night&#x27;s Dream</em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>773</td></tr>
+<tr><th>Characters</th><td>4061</td></tr>
+<tr><th>BritDrama no.</th><td>1012</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">paines, <mark>bee</mark> perfit: adieu. Enough: holde, or cut bowstrings. Exeunt. There are things in this Comedy, of Pyramus and Thisby, that will neuer please. First, Pyramus <mark>must</mark> draw a sworde, to kill himselfe; which the Ladies cannot abide. How answere you that? No: make it <mark>two</mark> more: let it be written in eight &amp; eight. Masters, you ought</div>
+<div class="excerpt">your mother, and to master Peascod, your father. Good master Pease-blossome, I shall desire you of more acquaintance, to. Your name I beseech you sir? Good master Mustardseede, I know your patience woll. That same cowardly, gyantlike, Ox-beefe hath de uourd many a gentleman of your house. I promise you, your kindred hath made</div>
+<div class="excerpt">Ox-beefe hath de uourd many a gentleman of your house. I promise you, your kindred hath made my eyes water, ere now. I desire you more acquaintance, good master Mustardseede. Where are these lads? Where are these harts? Not a word of mee. All that I will tell you, is, that the Duke hath dined. Get your apparrell together, good</div>
+<div class="excerpt">shielde vs) a Lyon among Ladies, is a most dreadfull thing. For there is not a more fearefull wilde foule then your Lyon liuing: &amp; we ought to looke toote. Nay: you <mark>must</mark> name his name, and halfe his face <mark>must</mark> be seene through the Lions necke, and he himselfe <mark>must</mark> speake through, saying thus, or to the same defect; Ladies, or faire</div>
+<div class="excerpt">life. No: I am no such thing: I am a man as other men are: &amp; there indeed, let him name his name, and tell them plainely he is Snugge, the Ioyner. Some man or other <mark>must</mark> present wall: and let him haue some plaster, or som lome, or some rough cast, about him, to signifie wall; or let him holde his fingers thus: and through that crany,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">You were best to call them generally, man by man, according to the scrippe. A very good peece of worke, I assure you, &amp; a mer ry. Now good Peeter Quince, call forth your Actors, by the scrowle. Masters, spreade your selues. Well, proceede. I grant you, friends, if you should fright the Ladies out of their wits, they would haue no more discretion, but to hang vs: but I will aggrauate my voice so, that I wil roare you as gently, as any sucking doue: I will roare you, and &#x27;twere any Nightingale. Well: I will vndertake it. What beard were I best to play it in? I wil discharge it, in either your straw colour beard, your Orange tawnie bearde, your purple in graine beard, or your french crowne colour beard, your perfit yellow. Wee will meete, &amp; there we may rehearse most ob scenely, and coragiously. Take paines, bee perfit: adieu. Enough: holde, or cut bowstrings. Exeunt. There are things in this Comedy, of Pyramus and Thisby, that will neuer please. First, Pyramus must draw a sworde, to kill himselfe; which the Ladies cannot abide. How answere you that? No: make it two more: let it be written in eight &amp; eight. Masters, you ought to consider with your selfe, to bring in (God shielde vs) a Lyon among Ladies, is a most dreadfull thing. For there is not a more fearefull wilde foule then your Lyon liuing: &amp; we ought to looke toote. Nay: you must name his name, and halfe his face must be seene through the Lions necke, and he himselfe must speake through, saying thus, or to the same defect; Ladies, or faire Ladies, I would wish you, or I would re quest you, or I wold intreat you, not to feare, not to tre ̄ ble: my life for yours. If you thinke I come hither as a Lyon, it were pittie of my life. No: I am no such thing: I am a man as other men are: &amp; there indeed, let him name his name, and tell them plainely he is Snugge, the Ioyner. Some man or other must present wall: and let him haue some plaster, or som lome, or some rough cast, about him, to signifie wall; or let him holde his fingers thus: and through that crany, shall Pyramus and Thisby whis per. What doe you see? You see an Asse head of your owne. Do you? I see their knauery. This is to make an asse of mee, to fright me, if they could: but I wil not stirre from this place, do what they can. I will walke vp and downe heere, and I will sing, that they shall heare I am not afraide. The Woosell cock, so blacke of hewe, With Orange tawny bill, The Throstle, with his note so true, The Wren, with little quill. The Fynch, the Sparrowe, and the Larke, The plainsong Cuckow gray: Whose note, full many a man doth marke, And dares not answere, nay. For indeede, who would set his wit to so foolish a birde? Who would giue a bird the ly, though hee cry Cuckow, neuer so? I cry your worships mercy, hartily: I beseech your worshippes name. I shall desire you of more acquaintance, good ma ster Cobweb : if I cut my finger, I shall make bolde with you. Your name honest gentleman? I pray you commend mee to mistresse Squash, your mother, and to master Peascod, your father. Good master Pease-blossome, I shall desire you of more acquaintance, to. Your name I beseech you sir? Good master Mustardseede, I know your patience woll. That same cowardly, gyantlike, Ox-beefe hath de uourd many a gentleman of your house. I promise you, your kindred hath made my eyes water, ere now. I desire you more acquaintance, good master Mustardseede. Where are these lads? Where are these harts? Not a word of mee. All that I will tell you, is, that the Duke hath dined. Get your apparrell together, good strings to your beardes, new ribands to your pumpes, meete presently at the palace, euery man looke ore his part. For, the short and the long is, our play is preferd. In any case let Thisby haue cleane linnen: and let not him, that plaies the Lyon, pare his nailes: for they shall hang out for the Lyons clawes. And most deare Actors, eate no O nions, nor garlicke ▪ for we are to vtter sweete breath: and I do not doubt but to hear them say, it is a sweete Comedy. No more wordes ▪ Away, go away.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Midsummer Night&#x27;s Dream</div><div class="body">: Theseus has conquered Hippolyta and is soon to marry her. Hermia loves Lysander, but her father Egeus wishes her to marry Demetrius, who has jilted Helena for her. Egeus invokes an Athenian law which allows him to have her executed for disobedience — though Theseus points to the additional option of lifelong — chastity in a nunnery. Lysander proposes fleeing with Hermia beyond Athenian jurisdiction, | and they confide their plans to Helena - who tells Demetrius in the hope of winning his favour. He pursues Lysander and Hermia into the woods, and Helena follows him. Marital strife between Oberon and Titania over a changeling boy has. led to chaos in the natural environment. Oberon sends Robin Goodfellow to fetch a magic flower whose juice can compel love. Seeing Demetrius reject Helena, Oberon sends Robin to use some of the juice on him, while he himself uses some on Titania. On the lookout for Athenian clothing, Robin comes upon Lysander and Hermia sleeping, and anoints his eyes. Helena discovers Lysander, and wakes him; he falls in love with her and pursues her, leaving Hermiaalone. — - A group of artisans, planning to perform Pyramus and Thisbe at Theseus’ wedding, meet for a rehearsal in the woods. They begin to adapt the play to avoid scaring the ladies in the audience, and to make it possible to represent the moon and a wall on stage. During the rehearsal, Robin metamorphoses Bottom, putting an ass’s head on him, and scares off the other artisans. Titania wakes, sees him, and falls in love. Oberon and Robin observe as Demetrius pursues Hermia, who assumes that he has murdered Lysander. Oberon sends Robin to fetch Helena while he anoints Demetrius’ eyes. Helena arrives, pursued by Lysander, and wakes Demetrius to find that both young men now love her; she infers that she is the object of a practical joke. Demetrius and Lysander prepare to fight each other, but Robin spreads darkness across the sky and leads them away from one another. Having got all four lovers asleep, he administers the antidote to Lysander. ; , Titania hands over the changeling boy to Oberon, has fun with the monstrous Bottom, and sleeps with him. Oberon applies the antidote, and they are reconciled. The sleeping lovers are found by Theseus, out hunting in the forest. Demetrius no longer wants Hermia, but Egeus insists. Theseus overrules him and the courtly characters have a triple wedding. Bottom takes his experience to have been a dream, and joins his fellow artisans, who are…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

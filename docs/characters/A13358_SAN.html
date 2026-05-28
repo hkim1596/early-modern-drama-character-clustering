@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAN in The Taming of a Shrew · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SAN</span>
+</nav>
+
+<h1>SAN</h1>
+<p class="lede">in <em>The Taming of a Shrew</em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1594</td></tr>
+<tr><th>Words</th><td>1459</td></tr>
+<tr><th>Characters</th><td>7148</td></tr>
+<tr><th>BritDrama no.</th><td>955</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">They be hard at hand I am ſure by this time. Now, adſum, ſir. I forſooth. I hurt his foote for the nonce man. Come Miſtris. I marry miſtris but you know my maiſter <mark>Has</mark> giuen me a charge that you muſt eate nothing, But that which he himſelfe giueth you. You ſay true indede: why looke you Miſtris, What ſay you to a peeſe of beeffe</div>
+<div class="excerpt">Here comes my Maiſter now hele courſe you. Yes ſir Ile Carrie it hence: Maiſter let her Haue none for ſhe can fight as hungrie as ſhe is. Maſter the haberdaſher <mark>has</mark> brought my Miſtreſſe home her cappe here. Here is the Taylor too with my Miſtris gowne. I thats true. Thats a lie maiſter, I ſayd <mark>two</mark> truncke ſleeues. Maiſter if</div>
+<div class="excerpt">good cunning I hope ſheele make you one of the head men of the pariſh ſhortly. I warrant you Maiſter feare not me For dooing of my buſineſſe. Now hang him that <mark>has</mark> not a liuerie cote To ſlaſh it out and ſwaſh it out amongſt the proudeſt On them. Why looke you now Ile ſcarce put vp Plaine Saunder now at any of their handes,</div>
+<div class="excerpt">new Miſtris And all, and he ſent me before to ſee all thinges redy. I and that thou ſhalt find I can tell thee and thou Doſt not pleaſe her well, why my Maiſter <mark>Has</mark> ſuch a doo with hir as it paſſeth and he&#x27;s euen like a madman. Why Ile tell you what: when they ſhould Go to church to be maried he puts on an olde Ierkin and a</div>
+<div class="excerpt">bodies gowne, Sew me in a ſeame and beate me to death, With a bottome of browne thred. I ſay the note lies in his throate and thou too, And thou ſayſt it. Dooſt thou <mark>heare</mark> Taylor, thou haſt braued Many men: braue not me. Thou&#x27;ſt faſte many men. Face not me Ile nether be faſte nor braued At thy handes I can tell thee. Souns: villaine</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Marrie my lord you maie haue a Tragicall Or a comoditie, or what you will. Marrie my lord tis calde The taming of a ſhrew: Tis a good leſſon for vs my lord, for vs y are maried men O braue, ſirha Tom, we muſt play before A fooliſh Lord, come lets go make vs ready, Go get a diſhclout to make cleane your ſhooes, And Ile ſpeake for the properties, My Lord, we muſt Haue a ſhoulder of mutton for a propertie, And a little vinegre to make our Diuell rore. I warrant you maiſter and you take my councell. Who I, twere better for you by fiue marke And you could tel how to doo it as well as I. I faith ſir, my maiſters going to this geere now. Sander, I faith your a beaſt, I crie God hartilie Mercie, my harts readie to run out of my bellie with Laughing, I ſtood behind the doore all this while, And heard what you ſaid to hir. You ſpoke like an aſſe to her, Ile tel you what, And I had been there to haue woode hir, and had this Cloke on that you haue, chud haue had her before ſhe Had gone a foot furder, and you talke of Woodcocks with her, and I cannot tell you what. I marry twas more by hap then any good cunning I hope ſheele make you one of the head men of the pariſh ſhortly. I warrant you Maiſter feare not me For dooing of my buſineſſe. Now hang him that has not a liuerie cote To ſlaſh it out and ſwaſh it out amongſt the proudeſt On them. Why looke you now Ile ſcarce put vp Plaine Saunder now at any of their handes, for and any Bodie haue any thing to doo with my maiſter, ſtraight They come crouching vpon me, I beſeech you good M. Saunder ſpeake a good word for me, and then am I ſo Stout and takes it vpon me, &amp; ſtands vpon my pantoflles To them out of all crie, why I haue a life like a giant Now, but that my maiſter hath ſuch a peſtilent mind To a woman now a late, and I haue a prettie wench To my ſiſter, and I had thought to haue preferd my Maiſter to her, and that would haue beene a good Deale in my waie but that hees ſped alreadie. Souns, friend well met. I hold my life he ſees Not my maiſters liuerie coat, Plaine friend hop of my thum, kno you who we are. The ſlaue is ſorie for his fault, now we cannot be Angrie, wel whats the matter that you would do with vs. I and thou beeſt not blind thou maiſt ſee, Ecce ſignum, heere. I, it may be, &amp; you tel vs from whence you com. Do you ſerue him, and whats your name? Cake and pie, O my teeth waters to haue a peece of thee. Eate thee, who would not eate Cake and pie? Nay thou muſt firſt tell me where thy maiſter is, For I haue good newes for him, I can tell thee. Marry ſir my maiſter ſends you word That you muſt come to his wedding to morrow. Faith I, you thinke he ſtandes as long about it as you doo. Marrie hees gone to our houſe in the Countrie, To make all thinges in a readineſſe againſt my new Miſtreſſe comes thither, but heele come againe to morrowe. Boy; oh diſgrace to my perſon, ſouns boy Of your face, you haue many boies with ſuch Pickadeuantes I am ſure, ſouns would you Not haue a bloudie noſe for this? The pie? I you haue more minde of your bellie Then to go ſee what your maiſter dooes. Why you may take it and the deuill burſt You with it, one cannot ſaue a bit after ſupper, But you are alwaies readie to munch it vp. O braue, I would I had eate no meat this week, For I haue neuer a corner left in my bellie To put a venſon paſtie in, I thinke I ſhall burſt my ſelfe With eating, for Ile ſo cram me downe the tarts And the marchpaines, out of all crie. Let my maiſter alone with hir for that, for Heele make hir tame wel inough ere longe I warent thee For he&#x27;s ſuch a churle waxen now of late that and he be Neuer ſo little angry he thums me out of all crie, But in my minde ſirra the yongeſt is a verie Prettie wench, and if I thought thy maiſter would Not haue hir Ide haue a flinge at hir My ſelfe, Ile ſee ſoone whether twill be a match Or no: and it will not Ile ſet the matter Hard for my ſelfe I warrant thee. Oh, cruell iudgement, nay then ſirra, My tongue ſhall talke no more to you, marry my Timber ſhall tell the truſtie meſſage of his maiſter, Euen on the very forehead on thee, thou abuſious Villaine, therefore prepare thy ſelfe. O ſupernodicall foule? well Ile take your two ſhillinges but Ile barre ſtriking at legges. Here here take your two ſhillings again Ile ſee thee hangd ere Ile fight with thee, I gat a broken ſhin the other day, Tis not, whole yet and therefore Ile not fight Come come why ſhould we fall out? Which horſe, your curtall? The oſtler will not let me haue him, you owe ten pence ▪ For his meate, and 6 pence for ſtuffing my miſtris ſaddle. Shall I giue them another pecke of lauender. I pray you maiſter lets ſtay till dinner be don. Come ſirs prouide all thinges as faſt as you can, For my Maſters hard at hand and my new Miſtris And all, and he ſent me before to ſee all thinges redy. I and that thou ſhalt find I can tell thee and thou Doſt not pleaſe her well, why my Maiſter Has ſuch a doo with hir as it paſſeth and he&#x27;s euen like a madman. Why Ile tell you what: when they ſhould Go to church to be maried he puts on an olde Ierkin and a paire of canuas breeches downe to the Small of his legge and a red cap on his head and he Lookes as thou wilt burſt thy ſelfe with laffing When thou ſeeſt him: he&#x27;s ene as good as a Foole for me: and then when they ſhould go to dinner He made me Saddle the horſe and away he came. And nere tarried for dinner and therefore you had beſt Get ſupper reddy againſt they come, for They be hard at hand I am ſure by this time. Now, adſum, ſir. I forſooth. I hurt his foote for the nonce man. Come Miſtris. I marry miſtris but you know my maiſter Has giuen me a charge that you muſt eate nothing, But that which he himſelfe giueth you. You ſay true indede: why looke you Miſtris, What ſay you to a peeſe of beeffe and muſtard now? I, I could helpe you to ſome but that I doubt the muſtard is too collerick for you, But what ſay you to a ſheepes head and garlick? I but the garlike I doubt will make your breath ſtincke, and then my Maiſter will courſe me for letting You eate it: But what ſay you to a fat Capon? Nay berlady then tis too deere for vs, we muſt Not meddle with the Kings meate. Sounes are you ſo light fingerd with a murrin, Ile keepe you faſting for it this two daies. Here comes my Maiſter now hele courſe you. Yes ſir Ile Carrie it hence: Maiſter let her Haue none for ſhe can fight as hungrie as ſhe is. Maſter the haberdaſher has brought my Miſtreſſe home her cappe here. Here is the Taylor too with my Miſtris gowne. I thats true. Thats a lie maiſter, I ſayd two truncke ſleeues. Maiſter if euer I ſayd looſe bodies gowne, Sew me in a ſeame and beate me to death, With a bottome of browne thred. I ſay the note lies in his throate and thou too, And thou ſayſt it. Dooſt thou heare Taylor, thou haſt braued Many men: braue not me. Thou&#x27;ſt faſte many men. Face not me Ile nether be faſte nor braued At thy handes I can tell thee. Souns: villaine not for thy life touch it not, Souns, take vp my miſtris gowne to his Maiſters vſe? I haue a deeper conceite in it then you thinke for, take vp my Miſtris gowne To his maiſters vſe? I will ſir I warrant you,</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Taming of a Shrew</div><div class="body">Forcibly ejected from an alehouse, Sly is sleeping off his drunkenness when he is found by a lord, who brings him home and tricks him into thinking himself a nobleman. A play is performed for him: The Taming of a Shrew. In the play, Aurelius of Sestos, newly arrived in Athens, falls in love with Philema; his friend Polidor already loves her sister, Emelia. To pursue his love, Aurelius pretends to be a wealthy merchant’s son and has his man Valeria assume his aristocratic identity. However, the girls’ father Alfonso has decreed that his eldest daughter Kate, a shrewish scold, must be married before them. The two wooers decide to persuade Ferando to marry Kate, but Alfonso has already promised him six thousand crowns to undertake the same task He and Kate meet unchaperoned, and they wrangle, but the marriage is arranged for the following Sunday; Kate seems outwardly unwilling but consents in an aside. Ferando goes to prepare his country house. Valeria is sent to teach Kate the lute, but she behaves aggressively. On the wedding day Ferando arrives in base clothes and forces Kate to leave with him immediately after the ceremony. When they arrive in the country, he claims that the dinner is burnt, and beats his servants. She is kept hungry, and denied her choice of clothing. Aurelius has Philotus pose as his father to persuade Alfonso that he is wealthy enough to marry Philema. He and Polidor are married to Kate’s younger sisters. Kate and Ferando visit them, after Kate submits to Ferando’s will. On the way, they meet the Duke of Sestos (who has come to Athens in disguise to spy on his son), and mock him. The Duke exposes Aurelio’s pretence and proposes to have those involved sent to prison, but Sly intervenes in the performance to prevent this. The three new husbands bet on whose wife will come when called. Ferando wins, and Kate explains to her sisters their duty as wives. Sly falls asleep during the performance. The lord puts him back where he was found. He returns home intending to tame his own wife.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

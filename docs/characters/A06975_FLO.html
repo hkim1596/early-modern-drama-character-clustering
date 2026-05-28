@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FLO in The Dumb Knight · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>FLO</span>
+</nav>
+
+<h1>FLO</h1>
+<p class="lede">in <em>The Dumb Knight</em> — Markham, GervaseMachin, Lewis</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1608</td></tr>
+<tr><th>Words</th><td>622</td></tr>
+<tr><th>Characters</th><td>3415</td></tr>
+<tr><th>BritDrama no.</th><td>1563</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">the king would speake with you. The pox rot off your fingers for this blow, It is coronation day, thorow all my scull, Theres such a fatall ringing in my braine, <mark>Has</mark> woone the selt, <mark>has</mark> laid fiue fingers on; But twas a knauish part of him to play so. <mark>Heare</mark> me you Gods for this my open wrong, Make short his fingers as you haue</div>
+<div class="excerpt">coyne you are not for my con ference, Fare you well. Make roome there, his Maiesty is comming to the execution. The feare of death hath brought her to a swound. <mark>Did</mark> your grace call? He is in his priuie chamber playing at chesse. I <mark>goe</mark> my Lord. Tis true indeed, and nature in her selfe, Doth giue vs still distaste in contraries.</div>
+<div class="excerpt">Doth giue vs still distaste in contraries. And in my thoughts it is as base to see a <mark>woman</mark> man As see a man a long roab&#x27;d feminine. Your graces pleasure. I go. <mark>Did</mark> your maiesty call? Madam and Prince Philocles, in the Kings name I arrest you both of high treason. Madam I am most sorrie tis my fortune, But what I doe is by</div>
+<div class="excerpt">and there and there ground for the battailes. Place here the lists, fixe euery ioint as strong As &#x27;twere a wall, for on this foote of earth This day shall stand <mark>two</mark> famous monuments, The one a throne of glory bright as gold, Burnisht with angels luster, and with starres, Pluckt from the crowne of conquest, in which shall sit</div>
+<div class="excerpt">commission. There is a co ̄ batant on the defe ̄ da ̄ ts part; your maiesties pleasure. Are the faire ends of this your warlike posture, To proue the innocence of these <mark>two</mark> condemnd? So help you Ioue.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">How neere will your maiesties hand the lists extend Vnto the Cities walles? What square or circuite? Your maiesty shal haue your will perform&#x27;d. High marshall for the King, your Character. Here vnderneath these walles, and there and there ground for the battailes. Place here the lists, fixe euery ioint as strong As &#x27;twere a wall, for on this foote of earth This day shall stand two famous monuments, The one a throne of glory bright as gold, Burnisht with angels luster, and with starres, Pluckt from the crowne of conquest, in which shall sit Men made halfe Gods through famous victory: The other a rich tombe of memorable fame, Built by the curious thoughts of noble mindes, In which shall sleepe these valiant soules in peace, Whom Fortunes hand shall only ouerthrow. Heauen in thy Palme, this day the ballance hings. Which makes Kings Gods, or men more great then Kings. What are you that appeare, and what deuoyre Drawes you within these lists? And what are you or your intendiments? Enter and prosper as your cause deserues. Princes, lay your hands on these swords points Here you shall sweare by hope, by heauen, by loue; And by the right you challenge in true fame, That here you stand not arm&#x27;d with any guile, Malignant hate, or vsurpation Of philters charmes, of nightspels characters, Or other blacke infernall vantages, But euen with thoughts as pure As your pure vallures, or the sunnes pure beames, T&#x27;approue the right of pure affection; And howsoe&#x27;re your fortunes rise or fall, To breake no faith in your conditions, So help you Ioue. Sound cornets, Princes respect your guards. Master Orator, it is the King and Queenes maiesties plea sure, that you presently repaire vnto the Court, touching the draw ing out of certaine Articles for the benefite of both the king domes. Doe, for they expect you seriously. Prince Philocles, the king would speake with you: Prince Philocles, the king would speake with you, Prince Philocles, the king would speake with you. The pox rot off your fingers for this blow, It is coronation day, thorow all my scull, Theres such a fatall ringing in my braine, Has woone the selt, has laid fiue fingers on; But twas a knauish part of him to play so. Heare me you Gods for this my open wrong, Make short his fingers as you haue his tongue. You may not. His maiestie is now downe prest with seriousnesse: As for your suit it is with Prat the Orator. I heard his highnesse giue him a speciall charge For your dispatch with fauour. Nay if you will correct the kings coyne you are not for my con ference, Fare you well. Make roome there, his Maiesty is comming to the execution. The feare of death hath brought her to a swound. Did your grace call? He is in his priuie chamber playing at chesse. I goe my Lord. Tis true indeed, and nature in her selfe, Doth giue vs still distaste in contraries. And in my thoughts it is as base to see a woman man As see a man a long roab&#x27;d feminine. Your graces pleasure. I go. Did your maiesty call? Madam and Prince Philocles, in the Kings name I arrest you both of high treason. Madam I am most sorrie tis my fortune, But what I doe is by the Kings commission. I am his instrument but not his counsailor. To prison are the words of my commission. There is a co ̄ batant on the defe ̄ da ̄ ts part; your maiesties pleasure. Are the faire ends of this your warlike posture, To proue the innocence of these two condemnd? So help you Ioue.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Dumb Knight</div><div class="body">The King of Cyprus, in love with the Queen of Sicily; lays siege to her city, but accepts the Queen’s proposal that they settle the affair with a trial by combat: the King and his champion Philocles versus the Duke of Epire and Lord Alfonso. Epire defeats the King but is bested in a play-off with Philocles; the Queen accepts the outcome and submits to the King’s love, but Epire swears to avenge his dishonour. Philocles woos Epire’s sister, Mariana, but gets the brush-off. Asked to set him a task to prove his love, she demands that he remain silent for a year; when he swears to do so, she is pleased not to have to listen to any more love-talk from him. His dumbness is taken to be a malady, which medicine fails to remedy. The King offers a reward for a successful cure ~ but those who try unsuccessfully will be executed. Mariana offers to achieve the cure, but Philocles will not speak at her command and she is duly sentenced to death. Philocles waits until the headsman is about to strike before speaking out. She is spared, but Philocles refuses to marry her until she demonstrates that she cares as much for him as he for her. Epire’s vindictive vexation grows. Epire suggests to the King that the Queen is having an affair with Philocles: he takes his opportunities to put the Queen into Philocles’ company, and arranges for the King to see them dancing and playing cards together. They are arrested and imprisoned, and parliament condemns them to death. Epire’s plan is to proclaim the Queen’s innocence after she has been executed, and then see the King deposed by an outraged populace. Mariana bribes Philocles’ jailer to allow her a visit. They swap garments: Philocles escapes posing as her, and she joins the Queen on the scaffold on the day of execution. Epire agrees to defend his accusation as the King’s champion in a trial by combat. Philocles comes forward to fight for the Queen, and defeats Epire, who admits malicious slander. The Queen forgives him, but only for Mariana’s sake. In the sub-plot, Lollia is unhappily married to the choleric orator Prate. Alfonso attempts to seduce her, using her neighbour as a go-between; Lollia agrees to receive him when her husband is next away. Lord Méchant has had his lands confiscated for abetting the Cypriot invasion; the King has sent him and others to Prate, but Prate neglects these cases in favour of the King’s own business. Méchant plans to avenge himself by cuckolding Prate, but finds that Alfonso has got there first.…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

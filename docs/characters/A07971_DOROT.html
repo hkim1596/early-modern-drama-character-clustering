@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DOROT in 542 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>DOROT</span>
+</nav>
+
+<h1>DOROT</h1>
+<p class="lede">in <em>542</em> — [173]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>793</td></tr>
+<tr><th>Characters</th><td>4514</td></tr>
+<tr><th>BritDrama no.</th><td>542</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">You have fall&#x27;n my glove. Sure Mris. Tongall your friend would make an excellent midwife; he can keepe secrets. By no meanes Sir. Wrong not your judgement, which <mark>must</mark> needs <mark>bee</mark> ab solute. The choice of me Is too inferiour to your richer value. The Cyprian Queene had shee but seene your face, Would ne&#x27;re have dy&#x27;d the roses with</div>
+<div class="excerpt">Nothing but knowne desert shall tye my thoughts To a staid liking, if I may distinguish it. And when my choice is fixt, it shall be such As your fraternall love <mark>must</mark> not dispute. Dishonour Brother, I have a spirit too, That scornes as much an Act of foule dishonour, As you, or any Masculine pretender To noble Vertues. Guilt</div>
+<div class="excerpt">that seem&#x27;d To court my beauty, were indeed a man, Not guilded imperfections; one whose words Were full of weighty judgement, not mere sound; Whose reall vertues <mark>did</mark> beget an envie, Perhaps an emulation in all others; And from the freedome of his richer minde He gave himselfe and them to be my servants; What gratitude in me</div>
+<div class="excerpt">emulation in all others; And from the freedome of his richer minde He gave himselfe and them to be my servants; What gratitude in me might equall this? Brother, <mark>did</mark> not the ties Of love and nature check my forward aptnesse, I&#x27;de tell you y&#x27;are not noble, and suspect Whether your mind hold that derivative goodnesse Which generous</div>
+<div class="excerpt">will not you prevent them? And what&#x27;s their quarrell? Your selfe perhaps. Fie; now you forget your selfe. Hee is now in some deepe meditation of your beautie. They <mark>goe</mark> contrary wayes. Wee shall not see the fight. They meane to meete and end it at the An tipodes. Why, they are fixt. Hath not feare congeal&#x27;d them into stones? Will</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Yonder Gentlemen observe us: let&#x27;s be gone. You have fall&#x27;n my glove. Sure Mris. Tongall your friend would make an excellent midwife; he can keepe secrets. By no meanes Sir. Wrong not your judgement, which must needs bee ab solute. The choice of me Is too inferiour to your richer value. The Cyprian Queene had shee but seene your face, Would ne&#x27;re have dy&#x27;d the roses with her blood, Wept on their palenesse for Adonis losse: But circled in a ring of all her graces Court your celestiall forme upon the bosome Of some more fragrant Tempe. My Father, and my Brother. My lip being too unworthy. Brother, you may pretend your love In this distrust; but &#x27;tis an ill expression. Thinke not my judgement subject to such weaknesse, That I can build a faith on Complements, Or (with rash passion) run into an error. Nothing but knowne desert shall tye my thoughts To a staid liking, if I may distinguish it. And when my choice is fixt, it shall be such As your fraternall love must not dispute. Dishonour Brother, I have a spirit too, That scornes as much an Act of foule dishonour, As you, or any Masculine pretender To noble Vertues. Guilt is aptest still To be suspitious. If a maid be free In her discourse, and courteous entertainment, She straight is censur&#x27;d. But let a man appeare Stuck fu l of apish Courtship; light, inconstant, As talkative as Parrats, that are taught A voyces imitation; one that courts Every tam&#x27;d beauty with a seeming zeale; As if his soules devotion were restrain&#x27;d Onely to her Divinitie; this man&#x27;s call&#x27;d A well-bred complementall Gentleman. Mens greatest follies, if compar&#x27;d with ours, Are vertues, fit for our imitation. They are but suppositions Brother. And pray suppose the Gentleman that seem&#x27;d To court my beauty, were indeed a man, Not guilded imperfections; one whose words Were full of weighty judgement, not mere sound; Whose reall vertues did beget an envie, Perhaps an emulation in all others; And from the freedome of his richer minde He gave himselfe and them to be my servants; What gratitude in me might equall this? Brother, did not the ties Of love and nature check my forward aptnesse, I&#x27;de tell you y&#x27;are not noble, and suspect Whether your mind hold that derivative goodnesse Which generous bloud communicates, to suspect Her re olute constancie whom you call Sister. Thinke not your being a man prerogative To be the onely Counsellor in manners Brother, though to your person I am partiall. Through confidence of your appearing vertue; The generall vices noted in your sexe, Such as with publique ostentation You glory to be guiltie of, which in Our very thoughts raise blushes— How is our weaknes trodden and insulted on By these imperious men! Aid me resolves Against their threats and counsels, unlesse grounded On stronger reasons then suspition. As the pure Oare refin&#x27;d exceeds in value Treble proportions of the courser drosse; So true desert in Man an outward glosse. But &#x27;tis not so healthfull The night infects the ayre with unwholsome vapours. Fie upon thee. But will not you prevent them? And what&#x27;s their quarrell? Your selfe perhaps. Fie; now you forget your selfe. Hee is now in some deepe meditation of your beautie. They goe contrary wayes. Wee shall not see the fight. They meane to meete and end it at the An tipodes. Why, they are fixt. Hath not feare congeal&#x27;d them into stones? Will you talke to strangers in the street? I am weary; wee&#x27;l imagine the rest done. I&#x27;le send my Brother forth to make them friends. Brother, without mature consideration I dare not doe an act; on which depends Such dangerous events. We have a father (Brother) to whose care We owe another dutie, then that onely Which Nature hath injoyn&#x27;d us for receiving Our beings from him. Let not our rash wills Sway&#x27;d onely by desire, run any course Agrees not with his liking: Yet I&#x27;le tell The Gentleman how much he owes your love For thus commending him. I thanke you Sir, and could mine owne eyes see But halfe that worth my Brother sayes is in you, My equall thoughts should answer. How! defective! Brother, my judgement hath as searching eyes Can see the fulnesse of his manly worth Through all the vailes of your detraction. And now to shew how much I doe prefer The freedome of my will before your counsell; I&#x27;le tell him I doe love him. As earnest as my love; Which since I first beheld him tooke possession Of all my though s, though customary nicenesse Restraind me from discovering them; but now— I hope to your kind judgement &#x27;twill appeare A vertuous truth.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 542</div><div class="body">The Queen is greeted on her arrival by the Genius of the House. The house is transformed into the semblance of a ship, and a mock sea-fight ensues.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

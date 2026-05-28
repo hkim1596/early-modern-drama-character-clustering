@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LUS in The Revenger&#x27;s Tragedy · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LUS</span>
+</nav>
+
+<h1>LUS</h1>
+<p class="lede">in <em>The Revenger&#x27;s Tragedy</em> — Middleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1607</td></tr>
+<tr><th>Words</th><td>986</td></tr>
+<tr><th>Characters</th><td>5341</td></tr>
+<tr><th>BritDrama no.</th><td>1520</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">haue banisht, The Bastard shall not liue: after these Reuells Ile begin strange ones; hee and the stepsonnes, Shall pay their liues for the first subsidies, We <mark>must</mark> not frowne so soone, else t&#x27;ad beene now? We are for pleasure, Beshrew thee, what art thou? madst me start? Thou hast committed treason,—A blazing star. Spy out.</div>
+<div class="excerpt">Especially knowing her to be as chast As that part which scarce suffers to be toucht, Th&#x27; eye would not endure him, But with some fiue frownes kept him out, What <mark>did</mark> me he but in reuenge of that, Went of his owne free will to make infirme, Your sisters honor, whome I honor with my soule, For chast respect, and not preuayling</div>
+<div class="excerpt">roague—O slaue—O rascall: Behold, behold my Lords the Duke my fathers murderd by a vassaile, that owes this habit, and here left disguisde. Where be those <mark>two</mark>, that <mark>did</mark> affirme to vs? My Lord the Duke was priuately rid forth? O heauens, that false charge was his death, Impudent Beggars, durst you to our face, Maintaine such a false</div>
+<div class="excerpt">stroake of death. Begon I say, thou art a false knaue. Push, I shall prooue too bitter with a word, Make thee a perpetuall prisoner, And laye this yron-age vpon thee, <mark>Has</mark> greatly moou&#x27;d me. But ile recouer, to his ruine: twas told me lately, I know not whether falslie, that you&#x27;d a brother, How chance the Court neere saw him? of</div>
+<div class="excerpt">To reare vp Towers from cottages. Why the better: bring him to Court. Oh hees rod forth. His Grace is old, and sudden, tis no treason To say, the Duke my Father <mark>has</mark> a humor, Or such a Toye about him; what in vs Would appeare light, in him seemes vertuous. The conceit&#x27;s pritty ifaith, But tak&#x27;t vpon my life twill nere be likt.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">What of him? Most ignoble slaue? I in kinde loyaltie to my fathers fore-head, Made this a desperare arme, and in that furie, Committed treason on the lawfull bed, And with my sword een rac&#x27;d my fathers bosome, For which I was within a stroake of death. Begon I say, thou art a false knaue. Push, I shall prooue too bitter with a word, Make thee a perpetuall prisoner, And laye this yron-age vpon thee, Has greatly moou&#x27;d me. But ile recouer, to his ruine: twas told me lately, I know not whether falslie, that you&#x27;d a brother, How chance the Court neere saw him? of what nature? How does he apply his houres? There&#x27;s hope in him, sor discontent and want Is the best clay to mould, a villaine off; Hippolito, wish him repaire to vs, If there be ought in him to please our bloud, For thy sake weele aduance him, and build faire His meanest fortunes: for it is in vs To reare vp Towers from cottages. Why the better: bring him to Court. Oh hees rod forth. His Grace is old, and sudden, tis no treason To say, the Duke my Father has a humor, Or such a Toye about him; what in vs Would appeare light, in him seemes vertuous. The conceit&#x27;s pritty ifaith, But tak&#x27;t vpon my life twill nere be likt. A parlous melancholy, has wit enough, To murder any man, and Ile giue him meanes, I thinke thou art ill monied; It hits as I could wish, Somewhat to set thee vp withall, How now man. I thinke I shall afecte his melancholy, How are they now. You shall be better yet if you but fasten, Truly on my intent, now yare both present I will vnbrace such a closse priuate villayne, Vnto your vengfull swords, the like nere heard of, Who hath disgrac&#x27;d you much and iniur&#x27;d vs, I Hippolito. I kept it here till now that both your angers, Might meete him at once, You know him that slaue Pandar, Piato whome we threatened last With irons in perpetuall prisonment; Ile tell you, you first preferd him to me. And the ingreatfull villayne, To quit that kindnes, strongly wrought with me, Being as you see a likely man for pleasure, With iewels to corrupt your virgin sister. I far from thinking any Virgin harme. Especially knowing her to be as chast As that part which scarce suffers to be toucht, Th&#x27; eye would not endure him, But with some fiue frownes kept him out, What did me he but in reuenge of that, Went of his owne free will to make infirme, Your sisters honor, whome I honor with my soule, For chast respect, and not preuayling there, (As twas but desperate folly to attempt it,) In meere spleene, by the way, way laies your mother, Whose honor being a coward as it seemes. Yeelded by little force. Oh me; you both present. I best of all. No matter, let him reele to hell. Thou art a mad brest. Come be ready, nake your swords, thinke of your wrongs This slaue has iniur&#x27;d you. Meete with him now. Puh, am I a Lord for nothing thinke you, quickly, now. Nimbly done, ha? oh, villaines, murderers, Tis the old Duke my father. What stiffe and colde already? O pardon me to call you from your names: Tis none of your deed,—that villaine Piato Whom you thought now to kill, has murderd him, And left him thus disguizd. Faith thou sayst true? ile forth-with send to Court, For all the Nobles, Bastard, Duchesse, all? How here by miracle wee found him dead, And in his rayment that foule villaine fled. Be wittnesses of a strange spectacle: Choosing for priuate conference that sad roome We found the Duke my father gealde in bloud. Oh sight, looke hether, see, his lips are gnawn with poyso ̄ . O villaine—O roague—O slaue—O rascall: Behold, behold my Lords the Duke my fathers murderd by a vassaile, that owes this habit, and here left disguisde. Where be those two, that did affirme to vs? My Lord the Duke was priuately rid forth? O heauens, that false charge was his death, Impudent Beggars, durst you to our face, Maintaine such a false answer? beare him straight to execution. Meete me? I&#x27;me not at leisure my good Lord, I&#x27;ue many greefes to dispatch out ath way: Welcome sweete titles,—talke to me my Lords, Offepulchers, and mighty Emperors bones, Thats thought for me. Come then my Lords, my fauours to you all, The Duchesse is suspected, fowly bent, Ile beginne Dukedome with her banishment? My Lords we&#x27;re pleasd to thanke you?—tho we know, Tis but your duety now to wish it so. That foule-Incontinent Duchesse we haue banisht, The Bastard shall not liue: after these Reuells Ile begin strange ones; hee and the stepsonnes, Shall pay their liues for the first subsidies, We must not frowne so soone, else t&#x27;ad beene now? We are for pleasure, Beshrew thee, what art thou? madst me start? Thou hast committed treason,—A blazing star. Spy out. I am not pleasd at that ill-knotted fire, That bushing-flaring star,—am not I Duke? It should not quake me now: had it appeard, Before it, I might then haue iustly feard, But yet they say, whom art and learning Weds: When stars were locks, they threaten great-mens heads, Is it so? you are read my Lords. That dos not please our Grace. Faith and I thinke so too. True, no more but threescore years. Giue me thy hand, these others I rebuke, He that hopes so, is sittest for a Duke: Thou shalt sit next me, take your places Lords, We&#x27;re ready now for sports, let &#x27;em set on. You thing? we shall forget you quite anon! Ah tis well, Brothers, and Bastard, you dance next in hell? Oh, oh. Treason, a guard. Oh.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Revenger&#x27;s Tragedy</div><div class="body">Nine years ago, the DUKE poisoned Gl@fiana when she refused to submit to his sexual advances; Windies has preserved her skull. HippOlit6 is given the task of recruiting a pander for the Duke’s son [iisstinioso, and brings Mimdiee, his brother, to court in disguise. The object of seduction turns out to be their sister, @AStiZa. Vindice undertakes the task, incognito as the pander (Piato’; he is delighted at Castiza’s outraged rejection, but less pleased at their mother’s venal readiness to countenance a liaison between her daughter and the heir apparent. ‘Piato’ reports this limited success back to Lussurioso. The Prince changes his initial plans to visit Castiza that night when he learns of a chance to catch his bastard brother Spud in bed with the DweHessl However, Spurio has changed his plans too, in the expectation of catching Lussurioso in the act of raping Castiza; so when Lussurioso bursts in on the Duchess with his sword drawn, it is the Duke who is with her, and he is arrested. Two of the Duchess’s sons plead insincerely for their stepbrother’s release, and put their pleas into reverse when the Duke, recognizing their malice, agrees to pardon him. Finally, without their knowledge, he sends order for Lussurioso to be freed. Meanwhile, the Duchess’s younger son, Jaimi6r has raped Ammtonio&#x27;siwifé at a recent court masque. He is tried and convicted for the crime, but the Duke defers sentencing until a later date. The victim poisons herself in shame; and a group of lords, including Hippolito, decide to take the law into their own hands should the Duke grant a reprieve. AlbiHOS6 and Sipenvaeuo use the Duke’s signet to order Lussurioso’s immediate execution, not knowing that he has already been released; in consequence it is Jiii6r who is beheaded. His brothers receive the severed head and are busy congratulating themselves on their stratagem when [bussurioss arrives, with his head still on. The Duke engages ‘Piato’ to get him a girl in secret. Waimedice arranges the assignation at a place where the Duchess and Spurid have agreed to meet. The ‘lady’ is also not what the Duke expects: Gléfianasiskull The Duke kisses the skull and is poisoned by it; the last thing he sees is the Duchess and Spurio together. Later, the brothers violently force their mother to repent; (Castiza then tests her by pretending to agree to sex with Lussurioso. Dissatisfied with ‘Piato’, IGSSii0sS6 asks Hippolito to bring his brother Vindice to court as a replacement; his first…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

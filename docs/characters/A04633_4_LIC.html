@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LIC in The Staple of News · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>LIC</span>
+</nav>
+
+<h1>LIC</h1>
+<p class="lede">in <em>The Staple of News</em> — Jonson, Ben</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>1321</td></tr>
+<tr><th>Characters</th><td>7177</td></tr>
+<tr><th>BritDrama no.</th><td>2174</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">still. By the mouldie signes? VVhen you &amp; your dogs haue din&#x27;d. A sweet reuersion. Nothing but a yong Haire in white-broth, I know his diet better then the Doctor. I <mark>must</mark> needs, You see who driues me, gentlemen. Newes, newes my boyes! I am to furnish a great feast to day, And I would haue what newes the Office affords. Sir, for that</div>
+<div class="excerpt">They&#x27;ll aske me about new Playes, at dinner time. And I should be as dumbe as a fish. He is dead, That plai&#x27;d him! What newes of Gundomar ? Iustice! Iustice! What <mark>must</mark> you haue for these? Something of Bethlem Gabor, And then I&#x27;m gone. Or neuer; well, God b&#x27;wi&#x27;you (stay, who&#x27;s here?) A little of the Duke of Bauier, and then— It</div>
+<div class="excerpt">Fountaines, Of all the knowledge in the vniuerse. And they &#x27;are the Kitchins, where the Master-Cooke — (Thou dost not know the man, nor canst thou know him, Till thou hast seru&#x27;d some yeeres in that deepe schoole, That&#x27;s both the Nurse and Mother of the Arts, And hear&#x27;st him read, interpret, and demonstrate!) A Master-Cooke! Why,</div>
+<div class="excerpt">You will be tost like Block, in a blanket else. By the Porter, that came for it, from you, And by the token, you had giu&#x27;n me the keyes, And bad me bring it. Why <mark>did</mark> you send a counter-mand? You, or some other you, you put in trust. Your Trust&#x27;s another selfe, you know, And without Trust, and your Trust, how should he Take notice</div>
+<div class="excerpt">tinckling Captaine, Cymbal, and the rest, Dare put on any visor, to deride The wretched: or with buffo licence, ieast At whatsoe&#x27;r is serious, if not sacred. Who <mark>did</mark>? I? I trench the liberty o&#x27; the subiects?</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">To wish &#x27;hem you, I confesse, That ha&#x27;them already. The pox! Or I, till now? And &#x27;tis but halfe an houre. Why? you thinke I can runne like light-foot Ralph, Or keep a wheele-barrow, with a sayle in towne here, To whirle me to you: I haue lost two stone Of suet i&#x27;the seruice posting hither, You might haue followed me like a watering pot, And seene the knots I made along the street; My face dropt like the skimmer in a fritter panne, And my whole body, is yet (to say the truth) A rosted pound of butter, with grated bread in &#x27;t! He sweepes his face. A shilling or two cheaper, That&#x27;s your iealousie. And bating two i&#x27;the hundred. Sir, take heed What you giue out. Ask your Eccho ) You can spare &#x27;hem nothing. As good as nothing. Beware those worshipfull eares, Sir, be not shortned, And you play Crop i&#x27;the fleete, if you vse this licence. I am Lickfinger, Your Cooke. I know his gift, hee can be deafe when he list. Yes Sir, I ha&#x27; spar&#x27;d &#x27;hem Out of the custard politique for you, the Maiors. They are a little crooked. Because you do indent. Rather then meat, I know it: you are iust still. By the mouldie signes? VVhen you &amp; your dogs haue din&#x27;d. A sweet reuersion. Nothing but a yong Haire in white-broth, I know his diet better then the Doctor. I must needs, You see who driues me, gentlemen. Newes, newes my boyes! I am to furnish a great feast to day, And I would haue what newes the Office affords. Sir, for that I will not vrge, but for the fire and zeale To the true cause; thus I haue vndertaken: With two Lay-brethren, to my selfe, no more, One o&#x27;the broach, th&#x27;other o&#x27;the boyler, In one sixe months, and by plaine cookery, No magick to&#x27;t, but old Iap ets physicke, The father of the Europaean Arts, To make such sauces for the Sauages, And cookes their meats, with those inticing steemes, As it would make our Caniball-Christians, Forbeare the mutuall eating one another, Which they doe doe, more cunningly, then the wilde Anthropophagi ; that snatch onely strangers, Like my old Patrons dogs, there. When you please, Sir. I was bespeaking but a parcell of newes, To strew out the long meale withall, but&#x27;t seemes You are furnish&#x27;d here already. What Court-newes is there? any Proclamations, Or Edicts to come forth. And Coachmen. To mount their boxes, reuerently, and driue, Like Lapwings, with a shell vpo&#x27; their heads. Thorow the streets. Ha&#x27;you no Newes o the St ge? They&#x27;ll aske me about new Playes, at dinner time. And I should be as dumbe as a fish. He is dead, That plai&#x27;d him! What newes of Gundomar ? Iustice! Iustice! What must you haue for these? Something of Bethlem Gabor, And then I&#x27;m gone. Or neuer; well, God b&#x27;wi&#x27;you (stay, who&#x27;s here?) A little of the Duke of Bauier, and then— It expected More then it vnderstood: for, they stand mute, Poore innocent dumb things; they are but wood. As is the bench and blocks, they were wrought on, yet If May-day come, and the Sunne shine, perhaps, They&#x27;ll sing like Memnons Statue, and be vocall. I&#x27;ll ha&#x27;that newes. Heretique, I see Thou art for the vaine Oracle of the Botle. The hogshead, Trismegistus, is thy Pegasus. Thence flowes thy Muses spring, from that hard hoofe: Seduced Poet, I doe say to thee, A Boyler, Range, and Dresser were the Fountaines, Of all the knowledge in the vniuerse. And they &#x27;are the Kitchins, where the Master-Cooke — (Thou dost not know the man, nor canst thou know him, Till thou hast seru&#x27;d some yeeres in that deepe schoole, That&#x27;s both the Nurse and Mother of the Arts, And hear&#x27;st him read, interpret, and demonstrate!) A Master-Cooke! Why, he&#x27;s the man o&#x27; men, For a Professor ! he designes, he drawes, He paints, he carues, he builds, he fortifies, Makes Citadels of curious fowle and fish, Some he dri-dishes, some motes round with broths. Mounts marrowbones, cuts fifty angled custards, Reares bulwark pies, and for his outerworkes He raiseth Ramparts of immortall crust ; And teacheth all the Tacticks, at one dinner: What Rankes, what Files, to put his dishes in; The whole Art Military. Then he knowes, The influence of the Starres vpon his meats, And all their seasons, tempers, qualities, And so to fit his relishes, and sauces, He has Nature in a pot, &#x27;boue all the Chymists, Or airy brethren of the Rosie-crosse. He is an Architect, an Inginer, A Souldiour, a Physician, a Philosopher, A generall Mathematician. And that you may not doubt him, for a Poet — I am telling Mistresse Band, and Mistresse Statute, What a braue Gentleman you are, and Waxe, here! How much &#x27;twere better, that my Ladies Grace, Would here take vp Sir, and keepe house with you. Her doze of Sacke. I haue it for her, and her distance of Hum. Your Broker is laid out vpon a bench, yonder, Sacke hath seaz&#x27;d on him, in the shape of sleepe. Will you take a cup He strikes the Sacke out of his hand. And try if you can sleepe? Goe, Sir, One of his Dogges. You will be tost like Block, in a blanket else. By the Porter, that came for it, from you, And by the token, you had giu&#x27;n me the keyes, And bad me bring it. Why did you send a counter-mand? You, or some other you, you put in trust. Your Trust&#x27;s another selfe, you know, And without Trust, and your Trust, how should he Take notice of your keyes, or of my charge. I know he was a Porter, And a seal&#x27;d Porter for he bore the badge On brest, I am sure. Why! and I sent it by the man you sent Whom else, I had not trusted. A writing, Sir, Young Pe ny-boy dis couers it, to his Father to be his plot of sending for it by the Porter, and that hee is in possession of the Deed. He sent for&#x27;t by a token, I was bringing it: But that he sent a Porter, and hee seem&#x27;d A man of decent carriage. Elder Peny-boy startles at the newes. Heare you the Newes ? But of your vncle ? He&#x27;s runne mad, Sir. Stark staring mad, your brother, H&#x27;has almost kill&#x27;d his maid. But that she&#x27;s Cat-liu&#x27;d, and Squirrill-limb&#x27;d, With throwing bed-staues at her: h&#x27;has set wide His outer doores, and now keepes open house, For all the passers by to see his iustice: First, he has apprehended his two dogges, As being o&#x27;the plot to coozen him: And there hee sits like an old worme of the peace, Wrap&#x27;d vp in furres at a square table, screwing, Examining, and committing the poore curres, To two old cases of close stooles, as prisons; The one of which, he calls his Lollard&#x27;s tower, Th&#x27;other his Blocke -house, &#x27;cause his two dogs names Are Blocke, and Lollard. Sure, I met them all, I thinke, vpon that quest. Arme, arme you, Gentlemen Ieerers, th&#x27;old Canter Is comming in vpon you, with his forces, The Gentleman, that was the Canter. See! the whole Couy is scatter&#x27;d, They all run away. &#x27;Ware, &#x27;ware the Hawkes. I loue to see him flye. YOu see by this amazement, and distraction, What your companions were, a poore, affrighted, And guilty race of men, that dare to stand No breath of truth: but conscious to themselues Of their no-wit, or honesty, ranne routed At euery Pannicke terror themselues bred. Where else, as confident as sounding brasse, Their tinckling Captaine, Cymbal, and the rest, Dare put on any visor, to deride The wretched: or with buffo licence, ieast At whatsoe&#x27;r is serious, if not sacred. Who did? I? I trench the liberty o&#x27; the subiects?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Staple of News</div><div class="body">Young. Pennyboy has recently heard of his father’s death; he retains Canter, the beggar who told him of his bereavement, as his constant companion. Now, a week later, he comes of age, and can-spend his inheritance as -‘he ‘pleases. He buys himself fashionable. clothes at .extravagant prices, and agrees to pay the £50 that will ~ procure Tom, his barber, a place at a newly opened news _-agency, the Staple. His lawyer, Picklock, shows him a codicil to his father’s will requiring him to pay court to . Pecunia, his uncle Richer’s ward, so he joins her many -Suitors, likes her, and takes her out. First they visit the ‘Staple ef News, where Pennyboy pays lavishly for . unlikely stories of European affairs, while Cymbal, the - proprietor, unsuccessfully tries to persuade Pecunia to come and live with him. Pennyboy entertains Pecunia to-dinner at a tavern, after which he and his worthless friends énjoy one another&#x27;s songs and jeering games. .Pecunia.agrees to live with Pennyboy, resenting the restraints and mean accommodation she has endured at shis. miser uncle’s house. Pennyboy plans to use his ‘wealth to. establish a canting school where people may . learn-the techniques of meaningless verbosity. ‘.. Canter reveals himself to be Pennyboy’s father, Francis. He reported his own death, entrusting his estate to Picklock’s safe keeping, in order to test how his:son would treat Pecunia, and is unimpressed by the - resultant riot and prodigality. He takes Pecunia into “his:own custody, leaving his son only the ragged cloak - of his. beggar’s disguise. . The Staple of News explodes, putting Tom out of his - mew job. Picklock claims that he was given the Pennyboy estate absolutely, rather than in trust; but he also tries to make more money playing father and son off against one another, and admits too much to the son. Young Pennyboy produces Tom as a witness to what was said, and gets the crucial document back by a ruse. Richer Pennyboy goes mad at the loss of Pecunia and blames his dogs for driving her away. He is mocked by Young Pennyboy’s unworthy friends, but Francis gets rid of them. Richer gives his blessing to Young Pennyboy’s marriage to Pecunia.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>

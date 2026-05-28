@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SUSAN in 542 · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> ›
+  <span>SUSAN</span>
+</nav>
+
+<h1>SUSAN</h1>
+<p class="lede">in <em>542</em> — [173]</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1638</td></tr>
+<tr><th>Words</th><td>1350</td></tr>
+<tr><th>Characters</th><td>7149</td></tr>
+<tr><th>BritDrama no.</th><td>542</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 8 (<em>must, did, has, goe, heart, heare…</em>). Matches are highlighted.</p>
+<div class="excerpt">Not yet (Mistris Dorothy.) Now I have drunke a cup of Sack, I <mark>must</mark> be in love with one of them, him that seemes most worthy of a gentleuman. Pray you Sir, <mark>did</mark> you take up a Gentleumans glove? As I am a Gentleuman I shall be most</div>
+<div class="excerpt">answer the desires of a gentle uman, who proft ates her love at the feete of your ac ceptance. I understand you not. Fie little one, that you should so offend the chast eares of a Gentleuman. But to you Sir, the Load-stone of my <mark>heart</mark>, that turnes it selfe at your motions pointing still to the North of your Love. And since the</div>
+<div class="excerpt">Warrant, send but for one bottle of Sack, and be friends; I&#x27;le love you both. Though I am but a waiting-uman, I haue more wit then to believe this is earnest. As if I <mark>did</mark> not know them to <mark>bee</mark> as arrant Cowards, as a Justices Clerke or Gentleman Vsher can be; and deserve rather to be whipt by a Satire, then rewarded for their valours</div>
+<div class="excerpt">Ladiship discover this to mee? Truely I meane not to <mark>bee</mark> degraded from your Ladiships uman, to hold the doore, and crye, my Master&#x27;s comming. How, call my Master! <mark>Did</mark> ever any Ladie en joy a friend in a corner, and wish her Husband (who is sufficiently jealous alreadie) to see it! Now as I am a Gentleuman, and had rather <mark>bee</mark></div>
+<div class="excerpt">jealousie. But I am my Ladies Gentleuman: I keepe the key of her secrets, and if you please, her closet shall conceale you; where you may dispose of Suckets and Eringoe&#x27;s for your refreshment. I pray Sir, call not a gen tleumans freenesse immodesty. Truely Sir, a man could not stand better in the conceit of a gentleuman at first</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Not yet (Mistris Dorothy.) Now I have drunke a cup of Sack, I must be in love with one of them, him that seemes most worthy of a gentleuman. Pray you Sir, did you take up a Gentleumans glove? As I am a Gentleuman I shall be most carefull to give your deservings their due commendations. You are a stranger Sir, and it may give occasion of jealousie. But I am my Ladies Gentleuman: I keepe the key of her secrets, and if you please, her closet shall conceale you; where you may dispose of Suckets and Eringoe&#x27;s for your refreshment. I pray Sir, call not a gen tleumans freenesse immodesty. Truely Sir, a man could not stand better in the conceit of a gentleuman at first sight, then you doe in mine. I hope your goodnesse will not misconster my readinesse to humble my desires to your disposing. Sir, you appeare so repleat with goodnesse, that I presume you cannot but answer the desires of a gentle uman, who proft ates her love at the feete of your ac ceptance. I understand you not. Fie little one, that you should so offend the chast eares of a Gentleuman. But to you Sir, the Load-stone of my heart, that turnes it selfe at your motions pointing still to the North of your Love. And since the ardor of my desires have urg&#x27;d my blushes to discover them; let not your appearing worth suffer such a disparagement to conte ne a Gentleumans willingnesse. Vnfortunate Gentleuman as I am, to be thus re jected. Truly young Gentleman, I doe not know what I may doe when you come to your full growth. Cry ye mercy little Sir; you may be the father of dwarfes. The sack begins to leave working and by this time my Ladie expects her gentleuman. Farewell, un kind Sir. Alas Mr. Warrant how can a poore Gentleuman deserve it? A pardon! blesse me, for what? Are you earnest? Who Mr. Spruce? but have you charng&#x27;d him? And your quarrell my love. Wel Mr. Warrant; I know a Gentleuman hath interest in a Lord at Court, who hath long beene inward with her. I&#x27;le warrant your par don. But my Lady expects me. Fie Mr. Spruce and Mr. Warrant, how loud you are my Ladie heares your noise, and is offended. Indeed Mr. Spruce and I love you. Truely Mr. Warrant and I love you. Mr. Spruce and Mr. Warrant, send but for one bottle of Sack, and be friends; I&#x27;le love you both. Though I am but a waiting-uman, I haue more wit then to believe this is earnest. As if I did not know them to bee as arrant Cowards, as a Justices Clerke or Gentleman Vsher can be; and deserve rather to be whipt by a Satire, then rewarded for their valours with the love of a gentleuman. But Mr. Spruce doe you meane to fight? As how? the meanes. As I am a Gentleuman Mr. Spruce, if you kill him fairely in a duell; and upon no base advantage I&#x27;le doe it. By no meanes at this time. I&#x27;le kisse you at the gallowes. My Lady. Neither can a Gentleuman be in love now and then out she is censur&#x27;d. And the latter great fooles. I would not now for all the Sacke in Spaine my loving humour were upon mee. This dumb Gentleman would make me forsweare the qualitie. Madame. Come Mris Dorothy; here&#x27;s a Moone would make a great bellied uman long for greene cheefe. Me thinks &#x27;tis pleasant taking the ayre by Moone-shine. A figg for these Physicall observations. I have knowne a Doctors prescriptions cast down a Gentleuman for three quarters of a yeare. But if ever I lie under any of them for the greene sicknes. Why I doe not meane naughtines. But what doe you thinke made me so earnest to have you hither? No such matter. Ile not drinke a drop more till towards supper. I brought you to see a Duell. My Ladies Gentle-man, and Mr. Warrant. And that&#x27;s a terrible one. But I saw the Cutler bring him a sword; I saw it naked, which was enough to fright many a gentleuman. I saw him trie it on a bar of iron in the kitchin; and many more fearfull preparations. By no means, unlesse there were more dan ger. &#x27;Twill be mirth for this twelve-month, if our eyes (through this imperfect Moone-light) can but reach the sight of them. What confident daring will be betwixt them at some great distance? The love of a Gentleuman, I assure you. No otherwise indeed. My beauty is the object of their valour. The Combatants will enter presently. The Knight of the Inkhorue, and the Knight of the Spanish Needle. For you to make them Ladies, as you have done me. Indeed they might serve by Moone-light; the day perhaps would discover a greasie Gentry. &#x27;Tis ordinary for a waiting-Gentleuman but newly made a Lady to forget her selfe. But see, I am pre vented from proceeding. Let us observe. See Mistris, there&#x27;s the other. Me thinks I perceive them stand. Dissolv&#x27;d them rather into gelley. Now could I fancy in my imagination what they say. Mr. Warrant. O that I had this Coward Spruce here: I would dismember him; and then what Gentleuman would care a rush for him? Now Mr. Spruce hath studien the Arcadia. He sayes. Oh that I had this Warrant here It would cut him into atomes; that wheresoever the Sun shines, the trophces of my renowned victorie might bee visible. Who are these? observe. Mistris Dorothy, I have fasten&#x27;d on a designe for rare sport. My friends. Will you doe a courtesie for a Gentleuman? You seeme to be valiant. Perceive you not two men yonder in severall places? For any manhood that&#x27;s in them. If you will but beat them a little, besides a Gentleumans thankes, some o ther reward shall attend it. You may trust the word of a Gent euman. Nay: pray you stay a little longer. Madame. I would not for th&#x27;exchange your Ladiship were a man. I should runne madd, for love of your La diship. I hope your Ladiship hath a better opinion of your uman, then to be earnest because she jests. A very handsome gentleman. I wonder no wor thy Gentleuman is in love with him: Doth your 〈…〉 truely and so doe. And w ll your Ladiship discover this to mee? Truely I meane not to bee degraded from your Ladiships uman, to hold the doore, and crye, my Master&#x27;s comming. How, call my Master! Did ever any Ladie en joy a friend in a corner, and wish her Husband (who is sufficiently jealous alreadie) to see it! Now as I am a Gentleuman, and had rather bee a Ladie, &#x27;tis not my mind. But is your Ladiship earnest? But I am resolv&#x27;d not to obey your Ladyship. Shall I that am my Ladies Secretary as it were, be treache rous to her secrets? Then let me not be counted a gentle uman. If it please your Ladiship Ile tell him you intend such a thing that he may prevent it. You shall command a poore Gentleuman any thing; neither doe I expect reward. I onely desire you will accept it as an act of my love. But why should you be jealous of my Lady. Alas Sir, an old man raise a Gentleuman. Truly Sir, if my Lady knew how much I lov&#x27;d you, &#x27;twould make her jealous. They are going to it, and heer&#x27;s a little one will tell. Pray sir, can you keepe counsell? Indeed they and children are kin. Then I shall love you heartily. But pray Sir, no medling with a gentleumans apron. Here&#x27;s that will helpe your growth: Please you to partake. Sack I assure you Sir; and I hope you will love poore gentleumans as she loves you. Madame. I saw your Ladiship doe nothing yet. I runne then, and dare not looke backe for feare of blushing.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 542</div><div class="body">The Queen is greeted on her arrival by the Genius of the House. The house is transformed into the semblance of a ship, and a mock sea-fight ensues.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_08.html">Cluster 8 — 8: must, did, has</a> page.
+</div>
+</div></body></html>
