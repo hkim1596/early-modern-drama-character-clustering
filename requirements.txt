@@ -5,8 +5,12 @@ tqdm
 numpy
 scikit-learn
 plotly
-umap-learn
-hdbscan
+# Cluster-stack pins — UMAP+HDBSCAN output is version-sensitive even with
+# fixed random_state, and the reference run was produced with these versions.
+umap-learn==0.5.12
+numba==0.62.1
+pynndescent==0.6.0
+hdbscan==0.8.43
 torch
 transformers>=4.45,<4.50   # newer (5.x) breaks gte-Qwen2's custom modeling code
 # Recommended on GPU:
