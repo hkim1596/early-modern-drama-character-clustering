@@ -149,8 +149,8 @@ def build_figure(df: pd.DataFrame, preset_name: str) -> go.Figure:
             "marker.line.color":[base_line_c],
         }
 
-    updatemenus = []
-    y_pos = 1.0
+    # Pre-build the list of (axis, label, sorted values) to know how many we have
+    axes_to_show = []
     for col, label in HIGHLIGHT_AXES:
         if col not in df.columns:
             continue
@@ -162,7 +162,14 @@ def build_figure(df: pd.DataFrame, preset_name: str) -> go.Figure:
             values = sort_decades([str(v) for v in raw_values])
         else:
             values = sorted([str(v) for v in raw_values])
+        axes_to_show.append((col, label, values))
 
+    # Layout: dropdowns in a single horizontal row above the plot, legend on the right.
+    updatemenus = []
+    n_axes = len(axes_to_show)
+    # Distribute dropdowns across the plot's width (x = 0.0 .. 0.92 in figure-relative coords)
+    x_step = (0.92 / max(n_axes - 1, 1)) if n_axes > 1 else 0
+    for i, (col, label, values) in enumerate(axes_to_show):
         buttons = [dict(label=f"All ({label})", method="restyle",
                         args=[reset_args(), [0]])]
         for v in values:
@@ -180,19 +187,24 @@ def build_figure(df: pd.DataFrame, preset_name: str) -> go.Figure:
 
         updatemenus.append(dict(
             buttons=buttons, direction="down", showactive=True,
-            x=1.02, xanchor="left", y=y_pos, yanchor="top",
+            x=i * x_step, xanchor="left",
+            y=1.04, yanchor="bottom",
             bgcolor="white", bordercolor="lightgrey",
+            pad=dict(l=0, r=0, t=0, b=0),
         ))
-        y_pos -= 0.15
 
     fig.update_layout(
-        title=f"Character Clusters — {preset_name}",
+        title=dict(text=f"Character Clusters — {preset_name}",
+                   x=0.5, xanchor="center",
+                   y=0.98, yanchor="top",
+                   font=dict(size=18)),
         xaxis=dict(visible=False),
         yaxis=dict(visible=False),
-        legend=dict(title="Cluster", itemsizing="constant", x=1.18, y=1.0),
+        legend=dict(title="Cluster", itemsizing="constant",
+                    x=1.02, xanchor="left", y=1.0, yanchor="top"),
         updatemenus=updatemenus,
-        width=1300, height=850,
-        margin=dict(l=40, r=320, t=60, b=40),
+        width=1400, height=920,
+        margin=dict(l=40, r=300, t=160, b=40),
     )
     return fig
 
