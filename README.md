@@ -68,5 +68,5 @@ If you use this code or data, please cite this repository and the underlying sou
 
 ## License
 
-Code: MIT (or your preferred license).
+Code: MIT.
 Derived data files: subject to the EEBO-TCP and DEEP licensing terms of the originals.
