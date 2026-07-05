@@ -1,7 +1,11 @@
 """Stage 03 — Embed each character's full speech with gte-Qwen2-1.5B-instruct.
 
-No chunking. Each character is a single document; the model's 32k-token
-context comfortably holds even very long parts.
+No chunking: each character is a single document. Before embedding, every
+document is length-checked against config.EMBED_MAX_TOKENS and the run ABORTS,
+naming the offenders, if any would be truncated. Project rule #1 is never to
+truncate a character's speech, so the fix for an over-length document is to
+raise the cap (the model supports up to 131072 positions) or chunk it — never
+to silently drop text.
 
 Run this on the GPU server. From inside the khj Docker:
     pip install -r requirements.txt
@@ -61,28 +65,8 @@ def main() -> None:
         dtype = torch.float32
     print(f"🖥 Device: {device}  dtype: {dtype}")
 
-    print(f"⏳ Loading model: {config.EMBED_MODEL}")
+    print(f"⏳ Loading tokenizer: {config.EMBED_MODEL}")
     tokenizer = AutoTokenizer.from_pretrained(config.EMBED_MODEL, trust_remote_code=True)
-
-    # Newer transformers releases stopped auto-populating default attributes on
-    # Config objects, but Alibaba's custom modeling_qwen.py still reads
-    # `config.rope_theta` directly. Patch it in if missing.
-    hf_cfg = AutoConfig.from_pretrained(config.EMBED_MODEL, trust_remote_code=True)
-    if not hasattr(hf_cfg, "rope_theta") or getattr(hf_cfg, "rope_theta", None) is None:
-        hf_cfg.rope_theta = 1000000.0     # Qwen2-1.5B default for 32k context
-        print("ℹ️  Patched missing rope_theta on config (1000000.0)")
-
-    # Note: gte-Qwen2 does not support flash_attention_2 in transformers. SDPA
-    # (PyTorch's built-in scaled dot-product attention) is the right choice
-    # here; it's memory-efficient and handles 32k context fine on RTX 6000.
-    model = AutoModel.from_pretrained(
-        config.EMBED_MODEL,
-        config=hf_cfg,
-        trust_remote_code=True,
-        torch_dtype=dtype,
-    )
-    print("ℹ️  Using SDPA attention")
-    model = model.to(device).eval()
 
     # Embed the de-referenced text (proper nouns masked by stage 02) so
     # clusters reflect register, not shared names. Falls back to raw speech
@@ -92,19 +76,59 @@ def main() -> None:
     print(f"🗂 Embedding column: {text_col}")
     texts = [format_with_instruction(t or "") for t in df[text_col].fillna("").tolist()]
 
-    truncated = 0
+    # ---- Pre-flight length check: never silently truncate a character ----
+    # Tokenize every document once (no truncation) and refuse to run if any
+    # exceeds EMBED_MAX_TOKENS, naming the offenders. This enforces project
+    # rule #1 in code rather than reporting a truncation after the fact.
+    ids = df["character_id"] if "character_id" in df.columns else df.index
+    token_lens = [len(tokenizer(t, truncation=False)["input_ids"]) for t in texts]
+    over = sorted(
+        ((str(ids.iloc[i] if hasattr(ids, "iloc") else ids[i]), n)
+         for i, n in enumerate(token_lens) if n > config.EMBED_MAX_TOKENS),
+        key=lambda kv: -kv[1],
+    )
+    if over:
+        detail = "\n".join(
+            f"    {cid}: {n:,} tokens (+{n - config.EMBED_MAX_TOKENS:,} over)"
+            for cid, n in over[:20]
+        )
+        raise SystemExit(
+            f"❌ Refusing to truncate: {len(over)} document(s) exceed "
+            f"EMBED_MAX_TOKENS={config.EMBED_MAX_TOKENS:,}:\n{detail}\n"
+            f"    Raise config.EMBED_MAX_TOKENS (gte-Qwen2 supports 131072 "
+            f"positions) or chunk these documents, then re-run."
+        )
+    print(f"✅ length check: {len(texts)} docs, longest {max(token_lens):,} "
+          f"tokens ≤ EMBED_MAX_TOKENS ({config.EMBED_MAX_TOKENS:,})")
+
+    print(f"⏳ Loading model: {config.EMBED_MODEL}")
+    # Newer transformers releases stopped auto-populating default attributes on
+    # Config objects, but Alibaba's custom modeling_qwen.py still reads
+    # `config.rope_theta` directly. Patch it in if missing.
+    hf_cfg = AutoConfig.from_pretrained(config.EMBED_MODEL, trust_remote_code=True)
+    if not hasattr(hf_cfg, "rope_theta") or getattr(hf_cfg, "rope_theta", None) is None:
+        hf_cfg.rope_theta = 1000000.0     # Qwen2-1.5B default for long context
+        print("ℹ️  Patched missing rope_theta on config (1000000.0)")
+
+    # Note: gte-Qwen2 does not support flash_attention_2 in transformers. SDPA
+    # (PyTorch's built-in scaled dot-product attention) is the right choice
+    # here; it's memory-efficient and handles long context fine on RTX 6000.
+    model = AutoModel.from_pretrained(
+        config.EMBED_MODEL,
+        config=hf_cfg,
+        trust_remote_code=True,
+        torch_dtype=dtype,
+    )
+    print("ℹ️  Using SDPA attention")
+    model = model.to(device).eval()
+
     embs: list[np.ndarray] = []
 
     with torch.inference_mode():
         for i in tqdm(range(0, len(texts), config.EMBED_BATCH_SIZE), desc="Embedding"):
             batch = texts[i : i + config.EMBED_BATCH_SIZE]
-
-            # Detect (and count) any truncation
-            for t in batch:
-                full = tokenizer(t, truncation=False, return_tensors="pt")["input_ids"]
-                if full.shape[1] > config.EMBED_MAX_TOKENS:
-                    truncated += 1
-
+            # truncation=True is a safety net only; the pre-flight check above
+            # guarantees no batch is ever actually cut.
             tok = tokenizer(
                 batch,
                 max_length=config.EMBED_MAX_TOKENS,
@@ -125,7 +149,8 @@ def main() -> None:
         "dim": int(arr.shape[1]),
         "n_rows": int(arr.shape[0]),
         "max_tokens": config.EMBED_MAX_TOKENS,
-        "truncated_count": int(truncated),
+        "max_doc_tokens": int(max(token_lens)),
+        "truncated_count": 0,   # guaranteed by the pre-flight length check
         "instruction": config.EMBED_INSTRUCTION,
     }
     with open(config.DATA_DIR / "embeddings_metadata.json", "w") as f:
@@ -133,7 +158,8 @@ def main() -> None:
 
     print()
     print(f"✅ embeddings.npy   shape={arr.shape}")
-    print(f"   truncated characters (> {config.EMBED_MAX_TOKENS} tokens): {truncated}")
+    print(f"   longest document {max(token_lens):,} tokens "
+          f"(limit {config.EMBED_MAX_TOKENS:,}); truncated: 0")
 
 
 if __name__ == "__main__":

@@ -35,7 +35,13 @@ RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 # Embedding
 # -------------------------------------------------------------------
 EMBED_MODEL      = "Alibaba-NLP/gte-Qwen2-1.5B-instruct"
-EMBED_MAX_TOKENS = 32768   # gte-Qwen2 native context
+# Sized to hold the corpus's longest character untruncated: CELESTINA
+# (A18331, The Spanish Bawd) is 37,936 tokens incl. the instruction prefix.
+# gte-Qwen2 is tuned for a 32k context but supports up to 131072 positions
+# (rope_theta=1e6, patched in 03_embed.py), so we can go past 32k rather than
+# drop text. 03_embed.py aborts if ANY document still exceeds this — never
+# silently truncates. Raise further (or chunk) if a longer character appears.
+EMBED_MAX_TOKENS = 40960
 EMBED_BATCH_SIZE = 1       # safe default for long inputs; raise if VRAM allows
 EMBED_INSTRUCTION = "Represent the unique speech style and rhetorical signature of this dramatic character for similarity comparison."
 
