@@ -17,8 +17,8 @@ Unsupervised clustering of speaking characters in the early modern English drama
 
 ```bash
 python code/01_normalize_characters.py        # fuzzy-match speech prefixes to catalogue roles
-python code/02_build_character_documents.py   # attach play metadata (joins on TCP)
-python code/03_embed.py                       # GPU-recommended: gte-Qwen2-1.5B-instruct
+python code/02_build_character_documents.py   # attach play metadata (joins on TCP) + build speech_text_embedding: proper nouns masked (gazetteer ∪ NER ∪ curated), TCP artifacts repaired, leaked stage directions stripped
+python code/03_embed.py                       # GPU-recommended: gte-Qwen2-1.5B-instruct (encodes speech_text_embedding)
 python code/04_cluster.py                     # UMAP-5D → HDBSCAN → UMAP-2D, three presets
 python code/05_label_clusters.py              # per-cluster top words (c-TF-IDF)
 python code/06_visualize.py                   # interactive HTML per preset
@@ -43,7 +43,7 @@ Several intermediate artifacts are excluded from the repo because of size (see `
 |---|---|---|
 | `data/character_json_all/` | external (EEBO-TCP extraction) | one JSON per play (TCP id) with `characters` + `speeches`. EEBO-TCP licensing applies. |
 | `data/character_table.csv` | `01_normalize_characters.py` | ~35 MB |
-| `data/character_documents.csv` | `02_build_character_documents.py` | ~87 MB |
+| `data/character_documents.csv` | `02_build_character_documents.py` | ~165 MB; carries both `speech_text` (original, for the evidence site) and `speech_text_embedding` (proper nouns masked, encoded by stage 03) + per-row masking QC columns |
 | `data/embeddings.npy` | `03_embed.py` | ~75 MB, requires GPU |
 | `data/cluster_xy_table__*.csv` | `04_cluster.py` | ~88 MB each |
 

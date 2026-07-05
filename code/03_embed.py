@@ -84,7 +84,13 @@ def main() -> None:
     print("ℹ️  Using SDPA attention")
     model = model.to(device).eval()
 
-    texts = [format_with_instruction(t or "") for t in df["speech_text"].fillna("").tolist()]
+    # Embed the de-referenced text (proper nouns masked by stage 02) so
+    # clusters reflect register, not shared names. Falls back to raw speech
+    # if the documents table predates the masking stage.
+    text_col = "speech_text_embedding" if "speech_text_embedding" in df.columns \
+        else "speech_text"
+    print(f"🗂 Embedding column: {text_col}")
+    texts = [format_with_instruction(t or "") for t in df[text_col].fillna("").tolist()]
 
     truncated = 0
     embs: list[np.ndarray] = []

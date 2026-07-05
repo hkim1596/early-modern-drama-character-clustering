@@ -90,3 +90,43 @@ PRESETS = [
                         metric="cosine", random_state=RANDOM_STATE),
     },
 ]
+
+# -------------------------------------------------------------------
+# Round-2 speaker mapping (stage 01e)
+# -------------------------------------------------------------------
+# Unresolved speech-prefix buckets (the `unresolved` lists in llm_maps/*.json)
+# are ALWAYS kept on record in the maps and in extraction_merge_summary.xlsx.
+# This switch only controls whether they enter character_table.csv — and thus
+# embedding/clustering — as standalone pseudo-characters.
+#   False (default): leave them out of clustering entirely (~0.14% of corpus words).
+#   True:            include each unresolved form as its own row, named
+#                    "[unresolved] <form>", e.g. after later fixing the <100-word
+#                    leftovers and wanting to inspect what remains.
+INCLUDE_UNRESOLVED_PREFIXES = False
+
+# Speech-text normalization for character_table.csv (embedding input).
+# The per-play JSONs and the plays sheet keep the VERBATIM transcription;
+# this only cleans the text handed to the embedder, where printer-dependent
+# typography would otherwise register as (spurious) style signal:
+#   - long s (ſ) -> s                    (434k occurrences, 36% of characters)
+#   - VV / Vv / vv -> W / w              (printers lacking a W sort)
+#   - TCP damage/gap glyphs 〈◊〉 〈…〉 • ▪ removed (transcription noise)
+# Deliberately NOT normalized (period-uniform or a research decision):
+# u/v, i/j, ligatures (æ, œ), macron vowels (ā ō = suspended n/m).
+NORMALIZE_SPEECH_TEXT = True
+
+# Two speech-text versions are written by stage `table`:
+#   character_table_original.csv  verbatim transcription (ſ, VV, damage glyphs
+#                                 and all period spelling preserved)
+#   character_table_modern.csv    typographic normalization + rule-based
+#                                 spelling modernization driven by MorphAdorner's
+#                                 EME resources (ememergedspellingpairs.tab,
+#                                 standardspellings.txt)
+# Both files contain the SAME rows (kept/dropped decided on the original text)
+# so results are directly comparable. Stage 02 consumes the version named here:
+TABLE_VERSION = "modern"          # "modern" | "original"
+import os as _os
+MORPHADORNER_DATA = Path(_os.environ.get(
+    "MORPHADORNER_DATA",
+    "/Users/heejin/Library/CloudStorage/Dropbox/Documents/Topics/"
+    "Computational Analysis/Programs/MyPrograms/morphadorner-2.0.1/data"))

@@ -7,13 +7,24 @@ interactive map.
 ## Run order
 
 ```bash
-python 01_normalize_characters.py
+python 01_build_corpus.py                # extract + summary + character table
 python 02_build_character_documents.py
 python 03_embed.py                       # GPU server (gte-Qwen2-1.5B-instruct)
 python 04_cluster.py
 python 05_label_clusters.py
 python 06_visualize.py
 ```
+
+Stage 01 is unified: XML extraction, the speaker-map summary (validation +
+verify flags included), and the character table all run from one script and
+share ONE bookkeeping workbook, `data/corpus_master.xlsx` (sheets: plays,
+speaker_maps, extraction, characters, decisions, queue). The `speaker_maps`
+sheet is the single source of mapping truth — edit it, then rerun
+`python 01_build_corpus.py --stage summary` and `--stage table`. Unresolved
+prefix buckets are excluded from clustering (config.INCLUDE_UNRESOLVED_PREFIXES
+toggles this); they appear on the `characters` sheet as `unresolved_excluded`.
+Superseded stage-1 scripts and the old multi-file bookkeeping live in
+`_superseded_stage1/` (safe to delete).
 
 Stages 01, 02, 04, 05, 06 are CPU-bound and fast (minutes). Stage 03 is the
 only GPU-bound step.
@@ -23,9 +34,9 @@ only GPU-bound step.
 ```
 Character Clustering/
 ├── data/
-│   ├── character_table.csv                # one row per (TCP, normalized_name) — speech text + match score
-│   ├── name_normalization_review.csv      # borderline fuzzy matches for manual review
-│   ├── dropped_short_characters.csv       # characters whose speech fell below the length cutoff
+│   ├── corpus_master.xlsx                 # ALL stage-1 bookkeeping (plays / speaker_maps / extraction / characters / decisions / queue)
+│   ├── character_table_original.csv       # kept characters, VERBATIM transcription (ſ, VV, damage glyphs preserved)
+│   ├── character_table_modern.csv         # same rows, typographic normalization + MorphAdorner rule-based spelling modernization (config.TABLE_VERSION picks which one stage 02 uses)
 │   ├── character_documents.csv            # character_table + play metadata (title, author, genre, date, plot, …)
 │   ├── embeddings.npy                     # [n_characters, dim] aligned 1-to-1 with character_documents.csv
 │   ├── embeddings_metadata.json
