@@ -37,6 +37,53 @@ def clean_speech_text(s: str) -> str:
     return s.strip()
 
 
+def derive_display_columns(df):
+    """Add the flat display columns stages 06/07 expect (author, genre,
+    company, play_type, Date_Decade) on top of the raw master-table schema.
+
+    The June-era table carried these directly; the current stage-02 schema
+    keeps the source-specific columns (authors_display, genre_brit_display,
+    …), so 06/07 derive them here at load time instead of stage 04 baking
+    them in. Idempotent: existing columns are left untouched.
+    """
+    import pandas as pd
+
+    def first_filled(*cols):
+        out = pd.Series(float("nan"), index=df.index, dtype="object")
+        for c in cols:
+            if c in df.columns:
+                out = out.fillna(df[c])
+        return out
+
+    # 06/07 do int(row["year"]): coerce bracketed catalogue dates ("[1544?]")
+    # to their 4-digit year first, leaving unparseable values as NaN.
+    if "year" in df.columns and df["year"].dtype == object:
+        yr = pd.to_numeric(df["year"], errors="coerce")
+        need = yr.isna() & df["year"].notna()
+        yr.loc[need] = pd.to_numeric(
+            df.loc[need, "year"].astype(str).str.extract(r"(\d{4})")[0],
+            errors="coerce")
+        df["year"] = yr
+
+    if "author" not in df.columns:
+        df["author"] = first_filled("authors_display", "title_page_author", "Author")
+    if "genre" not in df.columns:
+        df["genre"] = first_filled("genre_brit_display", "genre_annals_display", "genre_wiggins")
+    if "company" not in df.columns:
+        df["company"] = first_filled("company_first_performance_brit_display",
+                                     "company_first_performance_annals_display")
+    if "play_type" not in df.columns:
+        df["play_type"] = first_filled("play_type_display", "play_type_filter")
+    if "Date_Decade" not in df.columns:
+        yr = pd.to_numeric(df.get("year"), errors="coerce")
+        dec = (yr // 10 * 10)
+        df["Date_Decade"] = dec.map(lambda d: f"{int(d)}s" if pd.notna(d) else float("nan"))
+    # 06/07 treat these as strings (e.g. author.split(",")); missing → ""
+    for c in ("author", "genre", "company", "play_type"):
+        df[c] = df[c].fillna("")
+    return df
+
+
 def parse_roles_field(roles_str: str) -> list[dict[str, str]]:
     """Extract role names + descriptions from the catalogue's `roles` column.
 

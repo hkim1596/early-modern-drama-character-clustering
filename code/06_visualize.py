@@ -136,18 +136,18 @@ def build_figure(df: pd.DataFrame, preset_name: str) -> go.Figure:
         ))
 
     # ----- Dropdown highlight menus -----
-    base_size    = [5] * n
-    base_opacity = [0.7] * n
-    base_line_w  = [0] * n
-    base_line_c  = ["rgba(0,0,0,0)"] * n
-
-    def reset_args() -> dict:
-        return {
-            "marker.size":      [base_size],
-            "marker.opacity":   [base_opacity],
-            "marker.line.width":[base_line_w],
-            "marker.line.color":[base_line_c],
-        }
+    # A dedicated highlight overlay trace sits on top of the points. Each
+    # dropdown option only carries the x/y/colors of ITS OWN members, so the
+    # HTML stays small (the old per-option full-length restyle arrays made the
+    # file >100 MB, over GitHub's hard limit). hoverinfo="skip" lets hover
+    # fall through to the underlying points.
+    highlight_idx = len(fig.data)
+    fig.add_trace(go.Scattergl(
+        x=[], y=[], mode="markers",
+        marker=dict(size=11, opacity=1.0, color=[],
+                    line=dict(width=1.5, color="black")),
+        hoverinfo="skip", showlegend=False, name="highlight",
+    ))
 
     # Pre-build the list of (axis, label, sorted values) to know how many we have
     axes_to_show = []
@@ -164,6 +164,9 @@ def build_figure(df: pd.DataFrame, preset_name: str) -> go.Figure:
             values = sorted([str(v) for v in raw_values])
         axes_to_show.append((col, label, values))
 
+    xs_all = df["x"].tolist()
+    ys_all = df["y"].tolist()
+
     # Layout: dropdowns in a single horizontal row above the plot, legend on the right.
     updatemenus = []
     n_axes = len(axes_to_show)
@@ -171,18 +174,19 @@ def build_figure(df: pd.DataFrame, preset_name: str) -> go.Figure:
     x_step = (0.92 / max(n_axes - 1, 1)) if n_axes > 1 else 0
     for i, (col, label, values) in enumerate(axes_to_show):
         buttons = [dict(label=f"All ({label})", method="restyle",
-                        args=[reset_args(), [0]])]
+                        args=[{"x": [[]], "y": [[]], "marker.color": [[]]},
+                              [highlight_idx]])]
+        series = df[col].astype(str)
         for v in values:
-            mask = (df[col].astype(str) == v).tolist()
+            idx = series.index[series == v].tolist()
             buttons.append(dict(
                 label=f"{label}: {v}",
                 method="restyle",
                 args=[{
-                    "marker.size":       [[10 if m else 3   for m in mask]],
-                    "marker.opacity":    [[0.95 if m else 0.20 for m in mask]],
-                    "marker.line.width": [[1.5 if m else 0   for m in mask]],
-                    "marker.line.color": [["black" if m else "rgba(0,0,0,0)" for m in mask]],
-                }, [0]],
+                    "x": [[xs_all[j] for j in idx]],
+                    "y": [[ys_all[j] for j in idx]],
+                    "marker.color": [[point_colors[j] for j in idx]],
+                }, [highlight_idx]],
             ))
 
         updatemenus.append(dict(
@@ -215,7 +219,16 @@ def main() -> None:
         if not path.exists():
             print(f"⚠ {name}: missing {path.name} — run 04 first")
             continue
-        df = pd.read_csv(path)
+        df = pd.read_csv(path, low_memory=False)
+        from utils import derive_display_columns
+        df = derive_display_columns(df)
+        # keep only the columns the figure uses — the full table (speech text
+        # etc.) would otherwise be serialized into the HTML (>100 MB)
+        keep = ["x", "y", "cluster", "topic_label", "display_name",
+                "normalized_name", "raw_names", "title", "author", "year",
+                "date_first_performance", "Date_Decade", "genre", "play_type",
+                "theater", "company", "role_description", "top_words"]
+        df = df[[c for c in keep if c in df.columns]]
         if "topic_label" not in df.columns:
             print(f"⚠ {name}: topic_label missing — run 05 first")
             continue

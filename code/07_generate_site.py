@@ -585,7 +585,9 @@ def main() -> None:
     cxy = config.DATA_DIR / f"cluster_xy_table__{config.CLUSTER_TABLES[0]}.csv"
     if not cxy.exists():
         raise FileNotFoundError(f"{cxy} not found. Run 04_cluster.py first.")
-    df = pd.read_csv(cxy)
+    df = pd.read_csv(cxy, low_memory=False)
+    from utils import derive_display_columns
+    df = derive_display_columns(df)
     df["cluster"] = df["cluster"].astype(int)
 
     lbl_path = config.DATA_DIR / f"cluster_labels__{config.CLUSTER_TABLES[0]}.csv"

@@ -49,15 +49,13 @@
   <h1>Character Clustering in Early Modern English Drama</h1>
   <p class="lede">An interactive map of dramatic-character archetypes built from the full speech of every named character in the early modern English repertoire. Each point is a character; color encodes cluster.</p>
 
-  <h2>Cluster maps</h2>
+  <h2>Cluster map</h2>
   <div class="cards">
-    <a class="card" href="interactive_clusters__baseline.html">
-      <h3>Baseline preset</h3>
-      <p>UMAP n_neighbors=15, HDBSCAN min_cluster_size=20. The recommended view.</p>
-    </a>
-    <a class="card" href="interactive_clusters__tuned_less_outliers.html">
-      <h3>Less-outliers preset</h3>
-      <p>UMAP n_neighbors=35, HDBSCAN min_cluster_size=30, min_samples=10. Smoother neighborhood graph.</p>
+    <a class="card" href="interactive_clusters__archetype.html">
+      <h3>Archetype clustering</h3>
+      <p>Chunked speech embeddings (1,024-token windows, mean-pooled), leave-one-out play
+      centering, spherical k-means (k=25). Characters with fewer than 150 spoken words are
+      left unclustered. UMAP 2-D projection for display only.</p>
     </a>
   </div>
 
