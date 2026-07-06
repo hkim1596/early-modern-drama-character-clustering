@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HENRY in Look About You  · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_03.html">Cluster 3 — 3: faustus, gaveston, pembroke</a> ›
+  <span>HENRY</span>
+</nav>
+
+<h1>HENRY</h1>
+<p class="lede">in <em>Look About You </em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>1702</td></tr>
+<tr><th>Characters</th><td>9268</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 3 (<em>faustus, gaveston, pembroke, mortimer, marius, marcus…</em>). Matches are highlighted.</p>
+<div class="excerpt">Parliament, If they be mine confirmed, he must be pleased. Why hair-brained brother can ye brook no jest? I do confirm you Earl of Nottingham. I and Moorton too. <mark>Richard</mark> I have had wrong about his wardship. No matter for his bill let him come in. Welcome good Skinke thou justly dost complain, Thou standest in dread of death for</div>
+<div class="excerpt">Proud Earl isle spurn thee, quickly go &amp; bear it Give it him Leister upon our displeasure. Avoid there every under Officer. Leave but us, our Peers and Ladies here. <mark>Richard</mark> you love Earl Gloucester look about If you can spy one in this company, That hath not done as great a sin as Gloucester; Choose him, let him be the executioner.</div>
+<div class="excerpt">farewell, the world is yours, pray take it, I&#x27;ll leave vexation, and with joy forsake it. Exit. Why hear you Gloucester? And why not King? Pass to the bills Sir <mark>Richard</mark> Faukenbridge. Do not you seem crowned? Here take your charge, let no man speak with him, Except our self, our brothers, or Earl Leicester. I&#x27;ll have his hand &amp;</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Peace doting fool. I&#x27;ll not subscribe to this indignity, I&#x27;ll not be called a King but be a King; Allow me half the Realm, give me the North, The Provinces that lie beyond the Seas, Wales and the Isles that compass in the main. Our mother&#x27;s liberty is some content. The Kingdom. And why my Lord? What&#x27;s that to me, by Act of Parliament, If they be mine confirmed, he must be pleased. Why hair-brained brother can ye brook no jest? I do confirm you Earl of Nottingham. I and Moorton too. Richard I have had wrong about his wardship. No matter for his bill let him come in. Welcome good Skinke thou justly dost complain, Thou standest in dread of death for Rosamond, Whom thou didst poison at our dread command, And the appointment of our gracious Mother; See here my Father&#x27;s hand unto thy pardon. Beside thou suest to have some maintenance, We have bethought us how we will reward thee, Thou shalt have Rowden Lordship. Your lands? it is our gift and he shall have it. Take Gloucester to you Lieutenant of the Tower, Keep him aside till we confer a while, Father you must subscribe to his committing. I prithee Faukenbridge be patient, Gloucester must of force answer this contempt. Why be it so, yet stay with him a while, Till we take order for the company That shall attend him, and resort to him. Yes Faukenbridge thou shalt. No but the household servants of the Fleet. On our displeasure see he speak no more. And wee&#x27;ll by land through the City ride, Making the people tremble at our pride. Exeunt with Trum pets two ways. Mother and ycester add not oil to fire. Wrath&#x27;s kindled with a word, and cannot hear The number less persuasions you infort, Have I not sworn by that eternal arm That puts joust vengeance sword in Monarchs hands, Gloucester shall die for his presumption? What needs more conjuration gracious Mother? And honourable Leister mark my words. I have a Bedrole of some threescore Lords, Of Gloucesters faction, The destinies run to the book of Fates, And read in never-changing Characters Robert of Gloucesters end he die to day, So fate, so heaven, so does King Henry say. Pride seize upon my heart, wrath fill mine eyes, Fit lawful majesty upon my front Duty fly from me, pity be exiled, Senses forget that I am Henries child, I hear thee Henry, and I thus reply. I do desire the death of Basterd Gloucester. For that he spends the Treasure of the Crown. I do desire the death of basterd Gloucester, For that he does desire to pull me down. Or were this false (I purpose to be plain) He loves thee, and for that I him disdain. Therein thou shewest a hate corrupted mind, To him the more unjust, to me kind, She is and therefore cannot change her colour. The Confessor was but a simple fool. Away with books my word shall be a law, England her breath shall from this bosom draw, Gloucester shall die, What law, will you be Traitors? whats the law? I will high hearted brother. What means our brother? Where is Glow. brother? The porter shall be hanged let&#x27;s partly and seek him, Gloucester shall die all Europe shall not save him. Father by heaven if this were your advice, Your head or heart shall pay the bitter price, Come mother, Brother, Leister, lets away, Herald, fetch Lancaster and Leister Coronets, Suffer no Marquess, Earl, nor Countess enter, Except their temples circled are in gold, Show them our vize-roys: by our will controlled As at a coronation, every Peer Appears in all his pomp, so at this feast Held for our birthright, let them be adorned. Let Gloucester be brought in, crowned Like and Earl, Exit This day we&#x27;ll have no parley of his death, But talk of Iouisanes and gleeful mirth. Let Skinke come in, give him a Barons seat, High is his spirrit, his deserts are great. I that had the power. Why does not Gloucester wear a Coronet? By heaven put on thy Coronet, or that heaven Which now with a clear, lends us this light, Shall not be courtain&#x27;d with the veil of night, Ear on thy head I clap a burning Crown, Of read hight Iron that shall sear thy brains. Fit down and take thy place. We are pleased thou shalt fit there, Skinke take thy place among my nobles. Assend your seats live in our daily love. You&#x27;re welcome too, though little be your love. Fit down, thou art a neuter, she a foe, Thy love we doubt her heart too well we know. What suitors are without, let them come in. Mad man I give no ear to thy lose words. What are you two? And what&#x27;s your mate? Sirrah your father has his pardon signed, Go to the office it shall be delivered. I that he shall, but let him be advised Hereafter, how lets out prisoners, What hast thou more to say? Then get away. What means the fellow? And what have you to say? Take hence that stuttering fellow, shut them forth. The sundry misdemeanors late committed, As thefts and shifts in other men&#x27;s disguise, We now must (knave Skinke) freely tell thy faults. Skinke thou hast life, our pardon and our love. Bring forth a block, wine, water and towel, Knives, and a Surgeon to bind up the veins, Of Gloucesters arm: when his right hand is off, His hand that struck Skinke at the Parliament: Father I do commend your humble course. But quite dislike the project of your suit, Good words in and ill cause makes the fact worse, Of blood or Baseness, Justice will dispute, The greater man the greater his transgression, Where strength wrongs weakness, it is mere oppression, Call none till we have drunk: father fill wine, To day your Office is to bear our cup. Saturn kneeled to his Son the God was feign To call young Jove his ages Sovereign. Take now your seat again and wear your Crown; Now shines Henry Like the Middays Son, Through his Horizon, darting all his beams, Blinding with his bright splendour every eye, That stares against his face of Majesty. The Comets, whose malicious gleams Threatened the ruin of our Royalty, Stands at our mercy, yet our wrath denies All favour, but extreme extreamityes. Gloucester, have to thy sorrow chafe thy arm That I may see thy blood (I longed for oft) Gush from thy veins, and stain this Palace roof. Leister reach Gloucester wine. Proud Earl isle spurn thee, quickly go &amp; bear it Give it him Leister upon our displeasure. Avoid there every under Officer. Leave but us, our Peers and Ladies here. Richard you love Earl Gloucester look about If you can spy one in this company, That hath not done as great a sin as Gloucester; Choose him, let him be the executioner. Silence, I see thou leanst to find none fit. I am sure, nor Lancaster nor Huntington, Nor Faukenbridge, will lay a hand on him. Mother, wife, brother, lets descend the Throne Where Henry is the Monarch of the West, Hath set amongst his Princes dignified. Father take you the place, see Justice. Mother hold you the Basin, you the Towel, I know your French hearts thirst for English blood; John, take the Mallet, I will hold the knife, And when I bid thee smite, strike for thy life: Make a mark Surgeon, Gloucester now prepare thee. Then have I done my worst, thrice honoured Earl, I do embrace thee in affections arms. I mean no longer to be lullabied, In your seditious arms. I have been mad; what stampst thou John? knowest thou not who I am? Come stamp the devil out, sucked from thy Dam. Your best be quiet, least where we find you, to the Tower we bear you, For being abroad, England hath cause to fear ye. Gloucester, I give thee first this Skinke, this slave, Its in thy power, his life to spill or save, Stand not thus wondering, Princes kneel all down, And cast your Coronets before his Crown. Down stubborn Queen, kneel to your wronged King, Down Mammet; Leister isle cut of thy legs, If thou delay thy duty: when proud John? Father you see your most rebellious son, Stricken with horror of his horred gilded, Requesting sentence fitting his desert, Oh tread upon his head, that trodden your heart. I do deliver up all dignity, Crown, Sceptre, sword unto your Majesty. I will not rise, I will not leave this ground, Till all these voices joined in one found: Cry, God save Henry second of that name, Let his friends live, his foes see death with shame. Amen, Amen, Amen. Be angry at your envy gracious mother, Learn patience and true humility Of your worst tuter&#x27;d Son, for I am he. Send hence that Frenchwoman, give her her dowry, Let her not speak, to trouble my mild soul, Which of this world hath taken her last leave: And by her power, will my proud flesh control. Off with these silks, my garments shall be grey, My shirt hard hair, my bed the ashey dust, My pillow but a lump of hardened clay: For clay I am, and unto clay I must, Oh I beseech you let me go alone, To live, where my lose life I may bemoan. Let none call me their Son, I am no men brother, My kindred is in heaven, I know no other, Farewell, farewell, the world is yours, pray take it, I&#x27;ll leave vexation, and with joy forsake it. Exit. Why hear you Gloucester? And why not King? Pass to the bills Sir Richard Faukenbridge. Do not you seem crowned? Here take your charge, let no man speak with him, Except our self, our brothers, or Earl Leicester. I&#x27;ll have his hand &amp; head. Fetch him here I&#x27;ll see him dead. Who brought Gloucester hither? Dick you are too mean, so bow unto your sovereign, Mordieu nor devil, little tit of France, I know your heart leaps, at our hearts mischance,</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Look About You </div><div class="body">Before the start of the action, Queen Eleanor had her rival, Rosamund, poisoned by Skink, and was imprisoned for it; Skink escaped and has taken the identity of a fortune-telling hermit. Her son Henry and his brothers attempted a coup, and there are now two kings in England, father and son. At a parliament, the younger King Henry offers to split the kingdom with the elder, but alienates his supporters by his readiness to seize their lands. Skink, summoned to the parliament by Prince Richard, is rewarded with Gloucester’s lands, and Gloucester imprisoned when he protests and strikes Skink. Richard, who has an interest in Gloucester’s sister, Lady Falconbridge, promises to free him. Eavesdropping on a meeting between them, Sir Richard Falconbridge sees his wife reject the Prince’s advances. Pursued by the watch, Skink evades arrest by swapping clothes with Redcap, but is taken to the Fleet prison for identification by Redcap’s father, the porter. Gloucester swaps clothes with him in turn and escapes, and finally Skink too gets away by purloining Prince John’s clothes. Lady Falconbridge disguises Gloucester as her husband, fooling the watch sent to search for him. The substitutions cause misunderstandings when Skink (as John) is given a chain by Falconbridge and Gloucester (as Falconbridge) is given John’s sword; in each case the real man denies what his doppelganger has done. The porter of the Fleet is to be hanged for Gloucester’s escape, but the old King is persuaded to reprieve him. Gloucester intercepts the pursuivant, gets him drunk, steals the pardon, and ensures that it reaches its destination. Skink evades capture at the tavern by swapping clothes with the drawer and pretending to have been assaulted by the escaped Skink. John and Falconbridge consult the hermit: John wants to locate Gloucester, and Falconbridge to know for sure whether his wife is committing adultery. Lady Falconbridge also goes there in disguise, leaving Robin Hood standing in for her at home, cross-dressed. She too wants to locate Gloucester, to save him from the malice of John and his mother; John and Falconbridge both arrange assignations with her. Skink resumes the hermit’s identity, tells them how Gloucester escaped, and predicts that they will be able to catch Skink committing a robbery nearby; he then changes his disguise, induces them to fall in a hole, and steals their purses. While he is away, Gloucester finds his hermit costume and puts it on, convincing the robbed…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_03.html">Cluster 3 — 3: faustus, gaveston, pembroke</a> page.
+</div>
+</div></body></html>

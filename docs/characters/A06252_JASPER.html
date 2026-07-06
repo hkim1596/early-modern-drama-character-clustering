@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JASPER in The Knight of the Burning · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_13.html">Cluster 13 — 13: nerrissa, cynthia, lucrecia</a> ›
+  <span>JASPER</span>
+</nav>
+
+<h1>JASPER</h1>
+<p class="lede">in <em>The Knight of the Burning</em> — Beaumont, Francis</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1613</td></tr>
+<tr><th>Words</th><td>1825</td></tr>
+<tr><th>Characters</th><td>9416</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 13 (<em>nerrissa, cynthia, lucrecia, esau, nymph, mido…</em>). Matches are highlighted.</p>
+<div class="excerpt">hope Forsake me not, but fling thy Anchor out, And let it hold: stand fixed thou rolling stone, Till I enjoy my dearest: hear me all You powers that rule in men <mark>celestial</mark>. And thus you meet the living Dear substance, I swear I am no shadow, feel my hand, It is the same it was, I am your Jasper, Your Jasper that&#x27;s yet living, and</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Sir, I do liberally confess I am yours, Bound, both by love and duty, to your service; In which, my labour hath be all my profit; I have not lost in bargain, nor delighted To wear your honest gains upon my back, Nor have I given a pension to my blood, Or lavishly in play consumed your stock. These, and the Misery&#x27;s that do attend them, I dare, with innocence, proclaim are strangers To all my temperate actions; for your daughter, If there be any love, to my deservings, Born by her virtuous self, I cannot stop it? Nor, am I able to refrain her wishes. She&#x27;s private to her self and best of knowledge, Whom she&#x27;ll make so happy as to sighs for. Beside, I cannot think you mean to match her, Unto a fellow of so lame a presence, One that hath little left of Nature in him. Your care becomes you. These be the fair rewards of them that love. Oh you that live in freedom never prove The travel of a mind led by desire. Struck and struck dead unless the remedy Be full of speed and virtue; I am now, What I expected long, no more your father&#x27;s. But yours, and only yours I am, That&#x27;s all I have to keep me from the Statute, You dare be constant still. You know my rival? Oh no, I do not mean to do him so much kindness, But to our own desires, you know the plot We both agreed on. I desire no more, Farewell, and keep my heart, it&#x27;s yours. Mother, though you forget a parents love, I must preserve the duty of a child. I ran not from my master, nor return To have your stock maintain my Idleness. My coming only is to beg your love, Which I must ever, though I never gain it, And howsoever you esteem of me, There is no drop of blood hid in these veins, But I remember well belongs to you That brought me forth, and would be glad for you To rip them all again, and let it out. Long may you live free from all thought of ill, And long have cause to be thus merry still. But father? Now Fortune, if thou be&#x27;st not only ill, Show me thy better face, and bring about Thy desperate wheel, that I may climb at length And stand, this is our place of meeting, If love have any constancy. O age! Where only wealthy men are counted happy: How shall I please thee? how deserve thy smiles? When I am only rich in misery? My father&#x27;s blessing, and this little coin Is my inheritance, a strong revenue, From earth thou art, and to the earth I give thee, There grow and multiply, while fresher air, Breeds me a fresher fortune, how, illusion! What hath the Devil coined himself before me? It&#x27;s mettle good, it rings well, I am waking, And taking too I hope, now Gods deer blessing Upon his heart that left it here, it&#x27;s mine, These pearls, I take it, were not left for swine. Luce deer friend Luce. You are mine. And arrant noddy Nay, and you be so forward for to tell, Take that, and that, and tell him sir I gave it, And say I paid you well. Go, get to your nightcap and the diet, To cure your beaten bones. Tell the Knight that sent thee He is and Ass, and I will keep the wench And knock his Headpiece. Come my deer deer, though we have lost our way, We have not lost our selves: are you not weary With this nights wandering, broken from your rest? And frighted with the terror that attends The darkness of these wild unpeopled place? You have caught me Luce, so fast, that while I live I shall become your faithful prisoner, And were these chains for ever. Come fit down, And rest your body, too too delicate For these disturbances; so, will you sleep? Come, do not be more able then you are, I know you are not skilful in these watches: For women are no soldiers; be not nice, But take it, sleep I say. Why then we&#x27;ll sing, And try how that will work upon our senses. Tell me (dearest) what is love? Sleep, sleep, &amp; quiet rest crown thy sweet thoughts: Keep from her fair blood, distempers, startings, Horrors, and fearful shapes: let all her dreams Be joys, and chased delights, embraces, wishes, And such new pleasures, as the ravished soul Gives to the senses. So, my charms have took. Keep her you powers divine, while I contemplate Upon the wealth and beauty of her mind. She is only fair, and constant: only kind, And only to thee Jasper. O my joys! Whither will you transport me? let not fullness Of my poor buried Hope&#x27;s, come up together, And overcharge my spirits: I am weak Some say (how ever ill) the sea and women Are governed by the Moon, both ebb and flow, Both full of changes: yet to them that know, And truly judge, these but opinions are, And heresies to bring on pleasing war Between our tempers, that without these were Both void of ater-loue, and present fear. Which are the best of Cupid. O thou child! Bred from despair, I dare not entertain thee, Having a love without the faults of women, And greater in her perfect goods then men: Which to make good, and please my self the stronger, Though certainly I am certain of her love, Il&#x27;e try her, that the world and memory May sing to after times, her constancy. Luce, Luce, awake. Come make your way to heaven, and bid the world (With all the villainies that stick upon it) Farewell; you&#x27;re for another life. Foolish girl, Canst thou imagine I could love his daughter, That flung me from my fortune into nothing? Discharged me his service, shut the doors Upon my poverty, and scorned my prayers, Sending me, Like a boat without a mast, To sink or swin? Come, by this hand you die, I must have life and blood to satisfy Your father&#x27;s wrongs. No more of this, now to my self again. Sirrah, no. They are gone, and I am hurt, my love is lost, Never to get again. O me unhappy! Bleed, bleed, and die, I cannot: O my folly! Thou hast betrayed me. Hope where art thou fled? Tell me if thou be&#x27;st any where remaining. Shall I but see my love again? O no! She will not dame to look upon her butcher, Nor is it fit she should; yet I must venture. O chance, or fortune, or what ere thou art That men adore for powerful, hear my cry, And let me loving, live; or losing, die. There boy, deliver this: but do it well. Hast thou provided me four lusty fellows? Able to carry me? and art thou perfect In all thy business? There my boy, Take it, but buy no land. Go, and be happy. Now my latest hope Forsake me not, but fling thy Anchor out, And let it hold: stand fixed thou rolling stone, Till I enjoy my dearest: hear me all You powers that rule in men celestial. And thus you meet the living Dear substance, I swear I am no shadow, feel my hand, It is the same it was, I am your Jasper, Your Jasper that&#x27;s yet living, and yet loving, Pardon my rash attempt, my foolish proof I put in practice of your constancy, For sooner should my sword have drunk my blood, And set my soul at liberty, then drawn The least drop from that body; for which boldness Doom me to any thing: if death I take it And willingly. Nothing more possible, within this coffin Do you convey your self, let me alone, I have the wits of twenty men about me, Only I crave the shelter of your Closet A little, and then fear me not; creep in That they may presently convey you hence: Fear nothing dearest love, Il&#x27;e be your second, Lie close, so, all goes well yet; Boy. Convey away the Coffin, and be wary. Now must I go conjure. Forbear thy pains found man, it is too late. I, I am his Ghost Whom thou hast injured for his constant love: Found worldly wretch, who dost not understand In death that true hearts cannot parted be. First know thy daughter is quite born away, On wings of Angels, through the liquid air, To far out of thy reach, and never more Shalt thou behold her face: But she and I Will in another world enjoy our loves, Where neither father&#x27;s anger, poverty, Nor any cross that troubles earthly men Shall make us sever our united hearts. And never shalt thou fit, or be alone In any place, but I will visit thee With ghastly looks, and put into thy mind The great offences which thou didst to me. When thou art at thy Table with thy friends Merry in heart, and filled with swelling wine, Il&#x27;e come in amid of all thy pride and mirth, Invisible to all men but thy self, And whisper such a sad tale in thine ear, Shall make thee let the Cup fallen from thy hand, And stand as mute and pale as Death it self. There is no means, too late thou thinkest of this. Repent thy deed, and satisfy my father, And Beatrice found Humphrey out of thy doors, Then I pray you sir do so still. Nay good sir be persuaded, she is my mother: if her offences have been great against you, let your own love remember she is yours, and so forgive her. It is my masters voice, good sir go hold him in talk while we convey our selves into some inward room. Come little Mermaid, rob me of my heart With that enchanting voice. The poor hearts of men that prove. Tell me more, are women true? Are they fair, and never kind? Are they froward? Dissemble it no more, I see the God Of heavy sleep, lay on his heavy mace Upon your eyelids. Nay do not fly me fair, I am no spirit, Look better on me, do you know me yet? By my troth sir, I never came there, &#x27;tis too hight for me sir. Marry look you sir. Come Knight, I am ready for you, now your Pestel Shall try what temper, sir, your Mortars off With that he stood upright in his stirrups, And gave the Knight of the Calve-skin such a knock, That he forsook his horse and down he fell, And then he leapt upon him and plucking of his Helmet. Come Luce, we must have other Arms for you, Humphery and Golden Pestle both adieu. First to see you, Then to convey you hence.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Knight of the Burning</div><div class="body">At the theatre, a citizen and his wife object to the satirical subject matter of the play, The London Merchant: they insist on a more romantic offering starring their apprentice, Rafe, as a heroic grocer. The boy actors do their best to provide this within the play they have rehearsed. In the play, Luce prefers her father Venturewell’s apprentice Jasper to his chosen son-in-law, Humphrey; so Venturewell discharges Jasper, and he goes home to a family impoverished by the irresponsible merriment of his father, Old Merrythought. His mother, who 1607 favours his younger brother Michael, insists that he be paid his inheritance and sent out into the world. Several of the characters go to Waltham Forest. Luce elopes with Humphrey, intending to meet Jasper there. Rafe the grocer, a voluminous reader of chivalric romance, becomes the Knight of the Burning Pestle and leaves in search of heroic deeds. He scares Mistress Merrythought, who leaves behind her jewels. These are found and taken away by Jasper, who then meets the eloping couple, beats Humphrey, and takes Luce. In the audience, the citizen and his wife take Jasper to be the villain and Humphrey the hero; they demand that Rafe return to fight Jasper, but Jasper beats him. Notified by Humphrey, Venturewell confronts Jasper’s father, but is offended by his refusal to take the matter seriously. Jasper tests Luce’s love by threatening her with violence. She accepts her fate, but Humphrey and her father seize her before he can admit he was only pretending. Rafe stays at the Bell inn, but cannot understand that he must pay for its hospitality. (The citizen settles the bill for him.) The host sends him to fight the giant Barbaroso, better known as Nick the barber, who has imprisoned many knights and ladies — actually clients and venereal disease patients. Rafe defeats the ‘giant’ and releases the ‘knights’. The citizens then have a scene inserted in which he meets a foreign king’s daughter, but refuses her offer oflove. Later interpolated scenes show Rafe as the city’s May Lord, and mustering troops at Mile End. Venturewell incarcerates Luce in her room, but Jasper gains access by pretending to be dead: Venturewell accedes to a request that his body should be brought to Luce, and then has the coffin sent on to Old Merrythought, unaware that Luce has taken Jasper’s place inside. Left behind in Luce’s room, Jasper appears to Venturewell in ghostly guise and instructs him to repent, compensate Old Merrythought for his…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_13.html">Cluster 13 — 13: nerrissa, cynthia, lucrecia</a> page.
+</div>
+</div></body></html>
