@@ -108,14 +108,19 @@ def derive_display_columns(df):
     return df
 
 
-def split_facets(value, multi: bool = True) -> list[str]:
+def split_facets(value, multi: bool = True, kind: str | None = None) -> list[str]:
     """Split a possibly multi-valued metadata string into atomic facets.
 
     Catalogue fields are ';'-joined lists ("Fletcher, John; Massinger, Philip",
     "Adult Professional;Professional", "Blackfriars;Globe;Indoor Professional").
     Commas stay (they belong to "Last, First"), '/' stays ("Phoenix/Cockpit",
-    "Closet/Unacted"). Uncertain-attribution markers "(?)" are stripped so
-    "Queen Henrietta Maria's Men (?)" merges with its certain form.
+    "Closet/Unacted").
+
+    Normalization so uncertain/contextual variants merge with their base form:
+      - "(?)" markers are removed ANYWHERE ("Closet (?) Translation" →
+        "Closet Translation"; "Queen Henrietta Maria's Men (?)" → certain form)
+      - performance-context qualifiers "(on tour)" / "(in London)" are dropped
+        (same company either way) — identity qualifiers like "(second)" are kept
     """
     import pandas as pd
     import re as _re
@@ -127,9 +132,14 @@ def split_facets(value, multi: bool = True) -> list[str]:
     parts = s.split(";") if multi else [s]
     out = []
     for p in parts:
-        p = _re.sub(r"\s*\(\?\)\s*$", "", p.strip()).strip()
-        if p and p.lower() != "unknown" and p not in out:
-            out.append(p)
+        p = _re.sub(r"\s*\(\s*\?\s*\)", "", p)                      # any (?)
+        p = _re.sub(r"\s*\((?:on tour|in London)\)", "", p, flags=_re.I)
+        if kind == "author":
+            # merge translator/reviser credits with the base author
+            p = _re.sub(r",\s*(?:trans|rev|attrib)\.?\s*$", "", p, flags=_re.I)
+        p = _re.sub(r"\s+", " ", p).strip(" ,;")
+        if p and p.lower() != "unknown" and not p.isdigit() and p not in out:
+            out.append(p)   # pure-digit facets are catalogue junk (e.g. "1562" as a company)
     return out
 
 

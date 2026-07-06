@@ -368,7 +368,8 @@ def _first_author(r) -> str:
     return f[0].split(",")[0].strip() if f else ""
 
 
-def facet_counts(series: pd.Series, unknown_label: str | None = None) -> pd.Series:
+def facet_counts(series: pd.Series, unknown_label: str | None = None,
+                 kind: str | None = None) -> pd.Series:
     """Value counts over ATOMIC facets of a ';'-joined multi-valued column
     ("Tragedy; History" counts once for Tragedy AND once for History)."""
     from collections import Counter
@@ -376,7 +377,7 @@ def facet_counts(series: pd.Series, unknown_label: str | None = None) -> pd.Seri
     c: Counter = Counter()
     n_unknown = 0
     for v in series:
-        f = split_facets(v)
+        f = split_facets(v, kind=kind)
         if not f:
             n_unknown += 1
         c.update(f)
@@ -400,7 +401,7 @@ def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame)
     if "centroid_sim" not in sub.columns:
         sub["centroid_sim"] = float("nan")
 
-    author_counts = facet_counts(sub["author"], unknown_label="(unknown)")
+    author_counts = facet_counts(sub["author"], unknown_label="(unknown)", kind="author")
     decade_counts = sub["Date_Decade"].fillna("Unknown").astype(str).value_counts().to_dict()
     genre_counts = facet_counts(sub["genre"])
     years = sub["year"].dropna()

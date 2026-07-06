@@ -26,6 +26,7 @@ HIGHLIGHT_AXES = [
     ("title",       "Title"),
     ("play_type",   "Play type"),
     ("theater",     "Theater"),
+    ("company",     "Company"),
 ]
 
 
@@ -153,8 +154,9 @@ def build_figure(df: pd.DataFrame, preset_name: str) -> go.Figure:
         if col not in df.columns:
             continue
         facet_rows: dict[str, list[int]] = {}
+        kind = "author" if col == "author" else None
         for r, v in df[col].items():
-            for f in split_facets(v):
+            for f in split_facets(v, kind=kind):
                 facet_rows.setdefault(f, []).append(r)
         if not facet_rows:
             continue
