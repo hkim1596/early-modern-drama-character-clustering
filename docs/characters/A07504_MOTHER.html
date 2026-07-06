@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MOTHER in A Mad World, · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_01.html">Cluster 1 — 1: kate, warwick, stesias</a> ›
+  <span>MOTHER</span>
+</nav>
+
+<h1>MOTHER</h1>
+<p class="lede">in <em>A Mad World,</em> — Middleton, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1608</td></tr>
+<tr><th>Words</th><td>886</td></tr>
+<tr><th>Characters</th><td>4743</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">No keyword-matching excerpt could be extracted (the cluster label doesn't share vocabulary with this character's speech).</p>
+
+
+<h2>Full speech</h2>
+<div class="full-speech">How now daughter? A token from thy keeper. Hold thee there girl. Every partly of the world shoots up daily into more subtlety: the very spider weaves her caules with more art and cunning, to entrap the fly. The shallow ploughman can distinguish now, Betwixt simple truth and a dissembling brow. Your base mechanic fellow can spy out A weakness in a L. and learns to flout. How dost behoove us then that live by sleight, To have our wits wound up to their stretched height? Fifteen times thou knowest I have sold thy may denhead, To make up a dowry for thy marriage, and yet Theres may denhead enough for old sir Bounteous still, Heel be all his life time about it yet, and be as far to seek when he has done. The sums that I have told upon thy pillow! I shall once see those golden days again: Though fifteen, all thy may den heads are not gone: The Italian is not served yet, nor the French: The British men come for a dozen at once, They engross all the market, Tut my girl, &#x27;Tis nothing but a politic conveyance; A sincere carriage, a religious eyebrowe That throws their charms over the worldlings senses; And when thou spiest a fool that truly pities The false springs of thine eyes, And honorably dotes upon thy love, If he be rich, set him by for a husband; Be wisely tempered and learn this my wench Who gets the opinion for a virtuous name May sin at pleasure, and never think of shame: Will be thy own, I say no more; peace, hark, remove thy self, o, the two elder Brother&#x27;s. Good morrow gentlemen, Master Inesse, and M. Possibility. Even at her book sir. &#x27;Tis no new motion sir, sh&#x27;as took it from and in fant. Upon that condition you will promise me gentle men, to avoid all profane talk, wanton compliments, un decent phrases, and lascivious courtings (which I know my daughter will sooner die then endure,) I am contented your suits shall be granted. Bless you sir Bounteous. Nay heeres but two on&#x27;s sir. He make it hold sir, my daughter is a couple, She was married yesterday. Sir Boun. Buz. Nay to no buzzard neither, a right Hawk When ere you know him. You&#x27;re welcome sir. I, nature has done her partly sir. Whats that sir? A lass, impute that to her bashful spirit, she&#x27;s fear full of her honour. True, and I have often told her so, but what would you have of a foolish virgin sir, a wilful virgin, I tell you sir, I need not have been in that solitary estate that I am, had she had grace and boldness to have put her self forward, always timorsome, always backward, ah that same peevish honour of hers, has undone her and me both good gentlema ̄ : the suitors, the jewels, the jointers that has been offered her, we had been made women for ever, but what was her fa shion? she could not endure the sighed of a man for sooth, but run and hold her self presently, so choice of her honour, I am persuaded, when ere she has husband, she will eene be a presi dent for all married wives, how to direct their actions, and their lives. You shall see straight what I can do sir. Has the gentleman answered you, tro? I know your Grandsire well; she knows him bet ter. Thanks sweet son;—Son Folliwit, come hither, if I might counsel thee, weel eene take her while the good moods upon her, send for a Priest, and clapped up within this hour. Oh yes son, he&#x27;s a lusty old gentleman. That were needless i&#x27;faith. I have best cause to know her, &#x27;ime her mother sir. Thou childish thing, more bashful then thour&#x27;t wise, Why dost thou turn aside, and drown thine eyes? Look fearful fool, theres no to ̄ ptation never thee, Art not ashamed that any flesh should fear thee, Why I durst pawn my life the gentleman means no other but honest and pure love to thee, how say you sir? Hark you there? what think you now forsooth? what grieves your honour now? Or what lascivious breath intends to rear Against that maiden Organ your chaste care? Are you resolved now better of men&#x27;s hearts? Their faiths and their affections, with you none, Or at most, few whose tongues and minds are one. Repent you now of your opinion passed, Men love as purely as you can be chaste: to her your self sir, The ways broke before you, you have the easier passage, Nay daughter he says true. Ah twilll be a merry journey. &#x27;Tis done, ther&#x27;s witness on&#x27;t. Nor do&#x27;s her wealth consist all in her flesh, Though beauty be enough wealth for a woman, She brings a Dowry of three hundred pound with her. Fie. And excellent course (i&#x27;faith) and a thrifty, why son, me thinks you begin to thrive before you&#x27;re married. So girl, here was a bird well caught. Who covets fruit, never cares from whence it fell, Thou&#x27;st wedded youth and strength, and wealth will fallen: Last thourt made honest. Not all under one hood sir. Comfort thy self, thou art before hand with him daughter.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — A Mad World,</div><div class="body">Sir Bounteous Progress is much sought after for his generosity, but one person who has not benefited is his heir, Follywit. Down on his luck, Follywit decides to take some of his inheritance early. He poses as a lord and invites himself to stay with Sir Bounteous, and, during the night, changes clothes and burgles the house. Sir Bounteous is aghast that a lord has been robbed under his roof, and reimburses Follywit’s pretended losses. Harebrain is suspicious of his wife: he hires men to watch the house, takes away her bawdy reading matter, and allows her only the company of Lady Gullman, whom he takes for a pious virgin. In fact, Gullman is a courtesan working as a go-between for Penitent Brothel, and devises a plan to allow him access: she feigns sickness, and Harebrain allows his wife to visit her; Penitent Brothel poses as her physician. Other visitors include Sir Bounteous, Gullman’s principal client, and two other would-be clients, all of whom give money to ‘the doctor’. Mistress Harebrain arrives and has sex with Penitent Brothel. Meanwhile Gullman pretends to hold a conversation with her for the benefit of the eavesdropping Harebrain, who takes his wife home confident in her chastity. Worried that Sir Bounteous may leave his estate to a courtesan, Follywit poses as Gullman, visits the knight’s country house, and steals jewels. Back in London, he persuades Gullman to marry him on the expectation of his inheritance, not realizing who she is. Meanwhile, Penitent Brothel undergoes a spiritual conversion: his horror at his own lust is compounded by an encounter with a succubus in the shape of Mistress Harebrain. He visits the real Mistress Harebrain, partly to establish that it wasn’t her and partly to apologise for having endangered her chastity. Harebrain overhears them and is delighted. The Harebrains are invited to a feast at Sir Bounteous’s house. Follywit and his associates, disguised as actors, provide the entertainment, a comedy entitled The Slip, and Follywit persuades Sir Bounteous to hand over more valuables, including a watch, for use as props. The ‘actors’ are arrested escaping with their loot, but Follywit improvises to suggest that the constable is only a character in the ===== PAGE 231 ===== 1605 play. They tie him up get away, but return in their own persons. The truth comes out when the stolen watch starts to chime in Follywit’s pocket. He assures Sir Bounteous that he will settle down now that he has a wife, and is discomfited to…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_01.html">Cluster 1 — 1: kate, warwick, stesias</a> page.
+</div>
+</div></body></html>

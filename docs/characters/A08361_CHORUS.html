@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CHORUS in Gorboduc · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_15.html">Cluster 15 — 15: thu, gor, somnus</a> ›
+  <span>CHORUS</span>
+</nav>
+
+<h1>CHORUS</h1>
+<p class="lede">in <em>Gorboduc</em> — 42</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1570</td></tr>
+<tr><th>Words</th><td>789</td></tr>
+<tr><th>Characters</th><td>4419</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 15 (<em>thu, gor, somnus, biancha, begar, vench…</em>). Matches are highlighted.</p>
+<div class="excerpt">care nclynes, And yields his mind to poisonous tale, that flows From flattering mouth. And woe to wretched land That wastes it self with civil sword in hand. Lo, thus it is, poison in gold to take, And wholesome drink in homely cup forsake. When greedy lust in royal seat to reign Hath re to all care of Gods and eke of men, And</div>
+<div class="excerpt">treason, and disoaine Within ambitious breast are lodged, then Behold how mischief wide her self displays, And with the brother&#x27;s hand the brother slays. When blood thus shed, does stain the heavens face, Crying to Jove for vengeance of the deed, The mightic God even moves from his place, With wrath to wreke: then sends he forth</div>
+<div class="excerpt">wretched prince, ne dost thou yet record The yet fresh murders done within the land Of thy forefathers, when the cruel sword Bereft Morgan his life with cousin&#x27;s hand? Thus fatal plagues pursue the guilty raze, Whose murderous hand imbrued with guiltless blood Asks vengeance still before the heavens face, With endless mischiefs on</div>
+<div class="excerpt">raze, Whose murderous hand imbrued with guiltless blood Asks vengeance still before the heavens face, With endless mischiefs on the cursed brood. The wicked child thus brings to woeful sire The mournful plaints, to wast his very life. Thus do the cruel flames of ciuyll fire Destroy the parted reign with hateful strife. And hence</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">When settled stay does hold the royal throne In steadfast place, by known and doubtless right, And chiefly when dissent on one alone Makes single and unparted reign to light: Eke change of course unjoints the whole estate, And yields it thrall to ruin by debate. The strength that knit by fast accord in one, Against all foreign power of mighty foes, Could of it self defend it self alone, Disjoined once, the former force does loose. The sticks, that sundered brake so soon in twain, In faggot bound attempted were in vain. Oft tender mind that leads the partial eye Oferring parents in their children&#x27;s love, Destroys the wrongly loved child thereby This does the proud son of Apollo prove, Who rashly set in chariot of his sire. Inflamed the parched earth with heavens fire. And this great king, that does divide his land, And change the course of his descending crown, And yields the reign into his children&#x27;s hand, From blissful state of joy and great renown, A mirror shall become to Princes all, To learn to shun the cause of such a fallen. When youth not bridled with a guiding stay Is left to random of their own delight, And wields whole realms, by force of sovereign sway, Great is the danger of unmasted might, Lest skillesse rage throw down with headlong fallen Their lands, their states, their lives, them selves &amp; all When growing pride does fill the swelling breast, And greedy lust does raise the climbing mind, O hardly may the peril be repressed, Ne fear of angry Gods, ne laws kind. Ne countries care can fired hearts restrain, When force hath armed envy and disdain. When kings of before ette will neglect the rede Of best advise, and yield to pleasing tales, That do their fancies noisome humour feed, Ne reason, nor regard of right avails. Succeeding heaps of plagues shall teach to late, To learn the mischiefs of misguided state. Fowy fallen the traitor false, that undermines The love of brothers to destroy them both. Woe to the prince, that pliant care nclynes, And yields his mind to poisonous tale, that flows From flattering mouth. And woe to wretched land That wastes it self with civil sword in hand. Lo, thus it is, poison in gold to take, And wholesome drink in homely cup forsake. When greedy lust in royal seat to reign Hath re to all care of Gods and eke of men, And cruel heart, wrath, treason, and disoaine Within ambitious breast are lodged, then Behold how mischief wide her self displays, And with the brother&#x27;s hand the brother slays. When blood thus shed, does stain the heavens face, Crying to Jove for vengeance of the deed, The mightic God even moves from his place, With wrath to wreke: then sends he forth with speed The dreadful furies, daughters of the night, With Serpents girded, carrying the whip of ire, With hear of stinging Snakes, and shining bright With flames and blood, and with a brand of fire. These for revenge of wretched murder done, Do make the mother kill her only son. Blood asks blood, and death must death requite. Jove by his joust and everlasting dome Justly hath ever so requited it. The times before record, and times to come Shall find it true, and so does present proof Present before our eyes for our behoof. Oh happy wight that suffres not the snare Of murderous mind to tangle him in blood. And happy he that can in time beware By others harms and turn it to his good. But woe to him that fearing not to offend Does serve his lust, and will not see the end, The lust of kingdom knows no sacred faith, No rule of reason, no regard of right, No kindly love, no fear of heavens wrath: But with contempt of Gods, and men despite, Through bloody slaughter, does prepare the ways To fatal sceptre and accursed reign. The son so loathes the father&#x27;s lingering days, Ne dreads his hand in brother&#x27;s Blood to stain. Oh wretched prince, ne dost thou yet record The yet fresh murders done within the land Of thy forefathers, when the cruel sword Bereft Morgan his life with cousin&#x27;s hand? Thus fatal plagues pursue the guilty raze, Whose murderous hand imbrued with guiltless blood Asks vengeance still before the heavens face, With endless mischiefs on the cursed brood. The wicked child thus brings to woeful sire The mournful plaints, to wast his very life. Thus do the cruel flames of ciuyll fire Destroy the parted reign with hateful strife. And hence does spring the well from which does flow The dead black streams of mourning, plaints &amp; woe.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Gorboduc</div><div class="body">Queen Queen Videna Videna is is outraged outraged that King Gorboduc plans King to divide his l1is prosperous kingdo111 between his t\\&#x27;O prosperous kingdom two ·sons, sons, instead insteadof ofleaving leavingeverything e\&#x27;erythingto to the the elder, Ferrex.. Ferrex. Gorboduc Gorboduc seeks seeks his his council&#x27;s council,s consent to the division, consent to the di\rision, ·and and to to his his sons&#x27; sons&#x27; installation as kings before his own as kings before his own deatl1) death, but but gets gets three different different ans\Vers. He makes answers. He Ferrex king king of of the t11e south, Porrex of of the north, and appoints appoints a a counsellor counsellor to to advise each. FerrexFerrex isis advisedadvisedtoto mistrust his brother&#x27;s intentions&gt; intentions, and and he he prepares prepares for for war. war. This provokes Porrex into · making making a a pre-emptive pre-en1ptive invasion invasion of of the the south; ·h e he 7 own murders Ferrex Ferrex \\ with ith his his o\vn hands. Gorboduc summons Porrex and charges him with fratricide. summons Porrex and charges him with fratricide. tw·n, Porrex Porrex admits ad1nits it, it, and a11d is is killed by by \l&quot; Videna. idena. In turn, Gorboduc Gorboduc and and Videna Videna are are murdered murdered by by their 0\\ 1 n own people. The land is is laid waste with civil &#x27;&#x27;rar, follo\\&quot;ed by land laid \Vaste witl1 war, followed by mass mass executions executions after after the good councillor Eubulus and and the the British British . dukes dukes repress repress the the rebellion. rebellion. Fergus, The Duke Duke of of Albany, Albany, takes takes advantage advantage of of the the.chaos chaos to to .plot plot for the the throne. In In taking arms against him, ·the the other lords agree, rather ratl1er than submit to foreign domination,to to remit the question of of ·the the succession succession · to tothe the judgement judgement of of Parliament. Parliament. Eubulus is ls confident confident that the crown crown will will eventually evennially. be be restored restored· to to the therightful righ.tful heir.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_15.html">Cluster 15 — 15: thu, gor, somnus</a> page.
+</div>
+</div></body></html>

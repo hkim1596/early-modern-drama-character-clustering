@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HANS in See Me, and See Me Not ce. · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_00.html">Cluster 0 — 0: ane, minos, tom</a> ›
+  <span>HANS</span>
+</nav>
+
+<h1>HANS</h1>
+<p class="lede">in <em>See Me, and See Me Not ce.</em> — Belchier, Dabridgcourt</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1618</td></tr>
+<tr><th>Words</th><td>1344</td></tr>
+<tr><th>Characters</th><td>6969</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 0 (<em>ane, minos, tom, nat, scho, stinkard…</em>). Matches are highlighted.</p>
+<div class="excerpt">malling knock. Why then thou winnest my heart, I long to seet, to taste such wine, such cheer, But more, I long for such unheard of Beer. If that I speak my language natural, I think theres few that understands it here: Its Hebers tongue left with the Abderites; Hestron, pangaeon, cacobomboton, Aphnes halenon, Mydras, myphrasman,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">My Master calls, and I must needs be gone. Exit. Indeed, Madame, you never saw me drunk as yet, So much as to forget that endue respect I owe your service. Whither dost thou think? straight to Flutterkins, My jovial Host that longs to see my face, My beauteous face, my proper physiognomy; I soon dispatched, sold all my corn at once, And bought my meat. What of Meander ? now my things be done, I care not, isle go where thou wilt; lets on; But whats Meander ? man, or maid, or wife. Why Widgin, thinkest thou I would give thee&#x27;t else? Take heed, your supple joints Are tender, Bones are soon thrust out: a wrinch Comes quickly. If they be free from thee, it skills the less: Do you remember, how you served me once, When to the Leaguer I was sent from home With some provision to my Master&#x27;s son; You brought me to a whore, a Leaguer whore; Such stuff blind Polipheme would loath to touch: And wholesome piece, I near loud Mutton since. Near blush for shame. Can you accuse me? no, and speak but true. Why thou tellest all, thou mightest have hid some partly, And no I have shamed me so before company, But isle requite you, if I live ten days. It was no marvel, I will tell thee rest. As through the camp I passed in strange amaze, Driving mine Ass before me with his load; I thought to be devoured Ass and all By hungry soldiers, they did look so thin: My heals they were flung up, and headlong I, Fell on a Sutlers hut a fortnights space, I had no legs, nor could I quit that place. And lamde: you know too well, The grievous moan our Alips made for me, Alas, poor girl, she thought I had been slain, But had the Bullet hit me, as the wind, Poor Beere-pot had been squashed, these handsome limbs Had flown in pieces, nor splinter left unbroke. Is that good manners for to take my tale, Out of my mouth, before I make and end. Why? where is Amptill. I&#x27;ll hang thee first, The Fairy land, where that? I am with child, Good Pasquill tell me quickly, else I die; My mind is ravished from this lower Orb, We come in time, Here comes mine host propped up between two cans. Tha&#x27;ts well, all good. They send their blessing, but your mother&#x27;s, it Is to be felt: &#x27;tis leaquer on de tangde, It cleaves fast to your palms: nay sir, &#x27;tis gold, The purest mettle that the earth affords. Not I. Nor so, nor so, I can speak yet, if need, I hear, I see, yet nothing say at all: Mine Host hath learnt, to play at Fox mine host; He will grow kind, we shall have drink enough. Please you come in, your meat is taking up, And you may talk as well by th&#x27;fire side. What? did he hear me? now this bargains made; Once warnde, half armed, so does the Proverb say. Now if I would, I cannot, he will none, He not adventure, least I first be gone; He saw me not, yet sees what I would do; Him isle requite, see not, and yet see too I&#x27;ll give him what he wants, or drink or meat, And all you too, if that you please to eat, At your own costs, for my store will not doo&#x27;t, My means are short, they will not reach vntoo&#x27;t. In such excess, I will not do amiss; My mind is altered, you may see by this: And for what&#x27;s passed: if it have moude delight, I take my leave rejoice, and so good night. She&#x27;s gone, the best that ever trodden on shoe: I would not change my life to be Lord Mayor Of the thy crown of London : my service freedom, labour but a pleasure, what I ask, but half a word, &#x27;Tis done, she knew my mind, I would I have said, That with the Sergeant I must crack a pot, But I could bringt out, she stopped my mouth With Knave and shilling too: well let her doot As often as she will, See who gets most Of she or I. He sings. As I went to Uvalsingham, To that holy Land, Met I with and old bald Mare, By the way as I came. Indeed you do full little think, how I Am taken up amongst Soldiers in the town; Hans Beer pot is a man of note, well known To all under the degree of Officers. But Sergeant Goodfellow, I love him best; And why? because he loves my Master&#x27;s son My Master loves him too, for his honesty And never sees him, but he gives him gold, And sends him much provision for his house; Heel drink his cup, swears not &amp; hates a whore, Which if he used, I am sure my master Brooks not the company of any such To haunt his son: but with and angry frown, Would look upon him: for he and Beeremonde Are the only lads of all the Garrison; I come my lads, my markets once ore-past, At Flutterkins weel have one bridling cast. Come wife, help me on with my band: indeed This fair morning invites me take the pains To walk on foot, and see the town, visit My friends, &amp; children, drink some Spanish wine: And why, that wine? I am not yet grown old, I can bestride, a bouncing Gennet still, And with mine arm to frush a sturdy lance. Oh terrible, my Mistress sent you that, And bid you drink it, not to hoorde it up. To Calais as I think, or further off, I escaped I am sure, that dreadful malling knock. Why then thou winnest my heart, I long to seet, to taste such wine, such cheer, But more, I long for such unheard of Beer. If that I speak my language natural, I think theres few that understands it here: Its Hebers tongue left with the Abderites; Hestron, pangaeon, cacobomboton, Aphnes halenon, Mydras, myphrasman, tyltura, pantha, teman, Hogdon, camthompos, parathasta pidarda laronta, Clastriae campharides, bulgida bartram bela. I am a More born in Numedia, Parched with the suns extreme and scorching heat; My mother&#x27;s name Abdela Sydan hight, My Father was Done Jan de Ʋ echia, A noble Spaniard, brave Castilian: I served the King of swart Numidia, And did command ten thousand barbarous horse For two whole years; and then my father&#x27;s love Drew me from thence to seek mount Atlas out; And so to Spain : my Merchant played the jade, And hoisted sails for great Byzantiums town; From whence I ran, and so through Germany, With weary steps I posted to this place. If that you ask my name, and feign would know, It is Done Abendaraes Quixot, A Spaniard, More, half Turk, half Christian, How ere my flesh escapte the whizzing shot, My tatterde doublet sure, escaped not. Good Wine, good Beer, they say, it needs no bush; Yet have I looked abroad, and no man comes; I have ore-peerde the market hill quite round, My goodly front, mine eyes, my neatest beard. My well fed corpse: why, these are Adamants To draw men&#x27;s minds to lend me many a look, But yet (none hears) all pass, none steps aside, The soaring Falcon stoops not at my lure, But clippes her wings, flees on, heeds not her prey, I see no Younker, nor no Sergeant yet; But Hans is busy with his Master&#x27;s corn, His Markets done, I am sure he will be here, Oh theres a man lives bravely, keeps and house, Relieves the poor, his gates be never shut; His tables free, theres meat for honest men: He lived in England, learned that countries guise, For Hospitality, few such be here: Yet frugal too, was never prodigal, Spends nothing more, but what he well may spare, He borrows nought, nor lends on usury: Yet hath enough.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — See Me, and See Me Not ce.</div><div class="body">Hans is sent to town to sell corn for his master, Cornelius; his mistress, Hanneke, gives him money to give to her younger son, a student, anda shilling on top for beer-money. Cornelius suspects that Hans is cheating him, and follows him to town. There he finds his son and son-in-law drinking with Hans at a tavern; they have been losing bets with Sergeant Goodfellow about his linguistic ability, and discussing the relative merits of infantry and cavalry (with extensive reference to Turkish history). Hans sneaks away, thinking he has not been spotted; but in fact he has. The town characters go to the country as Cornelius’ guests at Christmas dinner. There they discuss the decline in public respect for soldiers, making extensive reference to the great military men of the Elizabethan era, including some with whom Cornelius served in his younger days.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_00.html">Cluster 0 — 0: ane, minos, tom</a> page.
+</div>
+</div></body></html>

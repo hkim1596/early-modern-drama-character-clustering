@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MESSENGER in Antigone · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_06.html">Cluster 6 — 6: constance, eteocles, eros</a> ›
+  <span>MESSENGER</span>
+</nav>
+
+<h1>MESSENGER</h1>
+<p class="lede">in <em>Antigone</em> — May, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1631</td></tr>
+<tr><th>Words</th><td>614</td></tr>
+<tr><th>Characters</th><td>3388</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 6 (<em>constance, eteocles, eros, mordred, arthur, talbot…</em>). Matches are highlighted.</p>
+<div class="excerpt">own dead carcase shall supply the place. To arms, my Lord, if any arms so soon Can rescue Thebes from quick destruction. The mighty Theseus threatens you at hand. <mark>Eteocles</mark> fell first; Over whom, before death closed up his eyes, Bloodless and feeble Polynices stood, And from his head taking imperial crown Impaled himself therewith;</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">The King was walking round the city walls, When straight a parley sounded from the foe, And Polynices our exiled Prince Himself appeared, who from below complained So many noble funerals had paid The forfeit of his brother&#x27;s perjury; Defied him then, and challenged him alone To end the difference in a single combat. Yes, with a seeming joy, And did complain alone that he himself Was not the challenger. Though many that were by, persuaded him He need not answer it at all; his strength Was great enough to keep the crown without it. It did not move his breast; thou shalt (quoth he) Immediately at head of all our troops Find us prepared to answer, and to take Mistake away, wee&#x27;ll wear our royal crown It grieves us only was thy motion first. And one of us, when this black fight is done, Shall without rival keep the Theban crown. Then hear a story that might make Amazed nature&#x27;s self to shake The Princes both are slain (alas). Nay there&#x27;s the sorrow of it, and a grief Worse then their death&#x27;s are, in a single combat They slew each other. When this great war of one divided womb, Two brother&#x27;s met, both armies stood at gaze, Amazed both; the grieved gods of war, Withdrew their presence from so black a fight. Bellona broke her lance, the blue-eyed maid Fled from the field ashamed, and Mars drove back His Thracian chariot; in whose stead the furies Marshaled the field, and all the Ogygian ghosts In a black ring beset the combatants Blasting the day with damps of Acheron. No Trumpets sounded, nor shrill cornets pierced The wounded air; for these the nights sad King Thrice thundered from Avernus&#x27;s; thrice the Earth with mournful groans gave signal to the fight. Old men complained that they had lived too long. To see that horrid sighed; the women shreik&#x27;d, And weeping mother&#x27;s from the walls forbade Their children to behold it, but the Princes With such a furious hatred both encounter As if the souls of all their slaughtered friends, And both the armies, whom their cause engaged, Had lived in them, till fate so cruelly Balanced their strength, that both were slain, yet both were guilty conquerors. The Argives all with winged speed are fled, And Thebes once more has peace; but that, I fear Long cannot last. Creon no sooner was saluted King (For so he was since both those Princes fell) But he commanded (O found tyranny) No man on pain of death should dare to bury One body of the Argives, they (alas) Remain exposed in the open field To feed the fool&#x27;s, or perish in the air. Nor must the Argives only want the rites Of funeral; but Theban Polynices Because with them he fought against his country, Remains exposed as the Argives are In the open air, who ere shall bury him, His own dead carcase shall supply the place. To arms, my Lord, if any arms so soon Can rescue Thebes from quick destruction. The mighty Theseus threatens you at hand. Eteocles fell first; Over whom, before death closed up his eyes, Bloodless and feeble Polynices stood, And from his head taking imperial crown Impaled himself therewith; at last (quoth he) Thou art mine own. o do not close his eyes Pale death, till he have seen me wear the Crown. But I must leave it too; O short short reign. If there be justice in the other world, Before great Minos urn, it Minos urn Be not a fable, will I summon thee, Nor shall this combat end our enmity. Then on his brother falling down he died.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Antigone</div><div class="body">Self-blinded and banished from Thebes, Oedipus wishes only for death. His daughter Antigone temporarily persuades him to give up such thoughts, but it is not long before he is dead. Thebes itself is at war: Eteocles has dishonoured a power-sharing agreement with his brother Polynices, and seven Greek champions have besieged the city in support of the latter’s claim. After sustaining heavy casualties, Polynices proposes settling the case in single combat with Eteocles. Both are killed. The new King, Creon, decrees that no Theban shall bury any enemy soldier, including Polynices. He also places Antigone under house arrest and refuses his son Haemon permission to marry her. In defiance of Creon, Antigone goes to the battlefield in search of Polynices’ body. There she meets his widow, Argia, and together they convey the corpse past the watchmen and give it a funeral. Creon too comes to the battlefield, to consult the witches who are gathering Parts of the dead bodies for magical use. They make a dead body tell his fortune: he will die soon, and disorder will come to Thebes. Antigone and Argia are arrested. Creon holds Argia, a foreign princess, for ransom, but sentences Antigone to be entombed alive and left to starve to death. By threatening to take his own life, Haemon persuades his father to allow her release, but it is too late: she has taken poison to hasten her death. Haemon kills himself. Thebes is attacked by Theseus, who has been summoned by another widow to intervene for the unburied. Argia is released and Creon killed, but Theseus allows him the burial he denied his enemies.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_06.html">Cluster 6 — 6: constance, eteocles, eros</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HODGE in nan · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_00.html">Cluster 0 — 0: ane, minos, tom</a> ›
+  <span>HODGE</span>
+</nav>
+
+<h1>HODGE</h1>
+<p class="lede">in <em></em></p>
+
+<h2>Metadata</h2>
+<table><tr><th>Words</th><td>1322</td></tr>
+<tr><th>Characters</th><td>6455</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 0 (<em>ane, minos, tom, nat, scho, stinkard…</em>). Matches are highlighted.</p>
+<div class="excerpt">C Ome Masters, I think it be passed five a clock, Is it not time we were at work? My old Master heel be stirring anon. Will I bear thee company <mark>Tom</mark>, what tellest me of Italy, were it to the furthest partly of Flanders, I would go with thee <mark>Tom</mark>, I am thine in all weal and woe, thy own to come maund. what <mark>Tom</mark>,</div>
+<div class="excerpt"><mark>Tom</mark>, what tellest me of Italy, were it to the furthest partly of Flanders, I would go with thee <mark>Tom</mark>, I am thine in all weal and woe, thy own to come maund. what <mark>Tom</mark>, I have passed the rigorous waves of Nep tunes blasts, I tell you Thomas I have been in the danger of the floods, and when I have seen Boreas begin to play the</div>
+<div class="excerpt">give you to understanding that your fa there is in health, and Alice Downing here hath sent you a Nut meg, and Bess Make water a raze of Ginger, my fellow Will and <mark>Tom</mark> hath between them sent you a dozen of points, and good man Tolle, of the Goat, a pair of mittons, my self came in per son, and this is all the news. I follow thee</div>
+<div class="excerpt">between them sent you a dozen of points, and good man Tolle, of the Goat, a pair of mittons, my self came in per son, and this is all the news. I follow thee sweet <mark>Tom</mark>, I follow thee Call ye this seeing of fashions? Marry would I had stayed at Putney still, Oh Master Thomas, we are spoiled, we are gone. Fortune, a plague of this</div>
+<div class="excerpt">up and lay tother on my chops, I were gone, there lay I, there lay Hodge. Oh Master Thomas, have not I told you of this, have not I many a time and often, said <mark>Tom</mark>, or Master Thomas, learn to make a Horseshoe, it will be your own another day: this was not regarded. Hark you Thomas, what do you call the fellows that robbed</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">C Ome Masters, I think it be passed five a clock, Is it not time we were at work? My old Master heel be stirring anon. Will I bear thee company Tom, what tellest me of Italy, were it to the furthest partly of Flanders, I would go with thee Tom, I am thine in all weal and woe, thy own to come maund. what Tom, I have passed the rigorous waves of Nep tunes blasts, I tell you Thomas I have been in the danger of the floods, and when I have seen Boreas begin to play the Ruffian with us, then would I down a my knees and call upon Vulcan. Nay I&#x27;ll follow you, God bless us from the thieving Bandettoes again. I warrant you my Lord, let me alone to take state upon me: but hark my Lord, do you feel nothing bite about you? He skill of the stars? theres goodman Car of Fulhum, He that carried us to the strong Ale, where goody Trundell Had her maid God with child: Oh he knows the Stars, Heel tickle you Charles Wain in nine degrees, That same man will tell goody Trundell When her Ale shall miscarry, only by the stars. I content, first lets take our morning&#x27;s draught, And then to work roundly. Why how now Master Thomas how now, Will you not let us work for you? How fret your heart? I but Thomas, yowl Fret your father&#x27;s purse if you let us from working. Marry sir your son Thomas will not let us work at all, Your son Thomas, quoth you, I have been Thomast, I had thought it had been no such matter to a gone by water: for at Putnay isle go you to Parish-garden for two pence, fit as still as may be, without any wagging or jolting in my guts, in a little boat too: here we were scarce four mile in the great green water, but I thinking to go to my afternoons vnchines, as it my manner at home, but I felt a kind of rising in my guts: at last one a the Sailors spying of me, be a good cheer says he, set down thy victuals, and up with it, thou hast nothing but and Ecle in thy belly Well, too&#x27;t went I, to my victuals went the Sailors, &amp; thinking me to be a man of better experience then any in the ship, asked me what Wood the ship was made of: they all swore I could them as right as if I had been acquainted with the Carpenter that made it, at last we grew near land, and I grew villainous hungry, went to my bag, the devil a bit there was, the Sailors had tickled me yet I cannot blame them, it was a partly of kindness, for I in kindness told them what Wood the ship was made of, and they in kindness eat up my victuals, as indeed one good turn asks another: well would I, could I, find my Master Thomas in this Dutch Town, he might put some English Bear into my belly. Because as this same fellow Neptune is God of the Seas, so Vulcan is LORD over the Smiths, and therefore I being a Smith, thought his Godhead would have some care yet of me. Thomas to speak the truth, not a bit yet I. I they&#x27;re up, God send some to read them, And not only to read them, but also to look on us: And not altogether to look on us, But to relieve us, Oh cold, cold, cold. Who I sir, by my troth I do not know my self what I am now, but sir, I was a Smith sir, a poor Farrier of Putney, thats my Master sir yonder, I was robbed for his sake sir. How say you, I&#x27;ll tell you what master Thomas If all men be of this Gentleman&#x27;s mind, Lets keep our standings upon this Bridge, We shall get more here with begging in one day, Then I shall with making Horshoes in a whole year. Yes faith sir, and I am Hodge your poor Smith, Many a time and oft have I shooed your Dapper Grey. Will I Oh noble Lord, I do accord? in any thing I can, And do agree, to set thee free, do fortune what she can. I warrant you isle with a . How do I feel my self? why as a Noble man should do, Oh how I feel honour come creeping on, My Nobility is wonderful melancholy: Is it not most Gentleman Like to be melancholy? I, they know they want their old pasture, &#x27;tis a strange thing of this vermin, they dare not meddle with Nobility. Fellow William, I am not as I have been, I went from you a Smith, I write to you as a Lord: I am at this present writing, a mong the Polonyan Casiges. I do commend my Lordship to Raphe &amp; to Roger, to Bridget &amp; to Doritie, &amp; so to all the youth of Putu y. I change my merry vain, no thou Bononian, no, I am a Lord and therefore let me go, And do defy thee and thy Sasigis, Therefore stand off, and come not near my honour. Dost think thou black Bononian beast, That I do flower, do gibe, or jest, No, no, thou Beare-pot, know that I, a noble Earl, a Lord pardy. No I&#x27;ll assure you I am no Earl, but a smith Sir, One Hodge, a smith at Putney sir: One that hath gulled you, that hath bored you sir. I sir: and isle leave the greater fool with you. My friend afore, my Lordship will follow thee. Come, away with these beggars here, rise up sirrah, Come out good people: run afore there no. Master Thomas, Oh God Master Thomas, your hand. glove and all, this is to give you to understanding that your fa there is in health, and Alice Downing here hath sent you a Nut meg, and Bess Make water a raze of Ginger, my fellow Will and Tom hath between them sent you a dozen of points, and good man Tolle, of the Goat, a pair of mittons, my self came in per son, and this is all the news. I follow thee sweet Tom, I follow thee Call ye this seeing of fashions? Marry would I had stayed at Putney still, Oh Master Thomas, we are spoiled, we are gone. Fortune, a plague of this Fortune makes me go wet shod, the rogues would not leave me a shoe to my feet, for my hoase they scorned them with their heals, but for my Doublet and Hat, Oh Lord they embraced me, and lased me, and took away my clothes, and so disgraced me. Nay I know not, for begging I am nought, for stealing worse: by my troth I must even fallen to my old trade, to the Hammer and the Horse heals again: but now the worst is, I am not acquainted with the humour of the horses in this country, whither they are not coultish, given much to kicking, or no, for when I have one leg in my hand, if he should up and lay tother on my chops, I were gone, there lay I, there lay Hodge. Oh Master Thomas, have not I told you of this, have not I many a time and often, said Tom, or Master Thomas, learn to make a Horseshoe, it will be your own another day: this was not regarded. Hark you Thomas, what do you call the fellows that robbed us? The Bandetto do you call them, I know not what they are called here, but I am sure we call them plain thieves in England, Oh That mass that we were now at Putney, at the ale there</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_00.html">Cluster 0 — 0: ane, minos, tom</a> page.
+</div>
+</div></body></html>
