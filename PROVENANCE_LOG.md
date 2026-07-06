@@ -160,6 +160,16 @@ two newly kept Folio texts (R3 1592, Troilus 1602); re-run stages 04–07 now. C
 reshuffle on the re-run; Heejin's curated cluster names will be remapped by member
 overlap and flagged for her review.
 
+**Result (same day, commits `2ce3c7d` + `08a2b04`):** re-clustered with the verified
+canon — 6,466 characters (59 works / 61 duplicate editions excluded; full record in
+`data/edition_dedup__archetype.csv`, silhouette 0.021). The refit reorganized the
+partition substantially; only 11 of Heejin's 25 cluster names could be transferred with
+member-overlap ≥ 0.46 (transfer shares recorded in `cluster_names__archetype.json`).
+The other 14 clusters (2, 3, 4, 9, 10, 11, 12, 14, 16, 18, 19, 21, 22, 23) carry
+c-TF-IDF fallback labels on the site and **await Heejin's naming** against
+`data/cluster_profiles__archetype.md`. No names were guessed. The batch-push script now
+takes its commit message as a parameter (stale-message defect in §6 fixed).
+
 ---
 
 ### 7. Open items requiring explicit approval before any action
