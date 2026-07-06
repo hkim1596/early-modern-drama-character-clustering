@@ -172,14 +172,72 @@ takes its commit message as a parameter (stale-message defect in §6 fixed).
 
 ---
 
+## Entry 003 — 2026-07-07: full data verification (read-only; nothing changed)
+
+Requested by Heejin after adding the original source files `data/DEEP_data.csv`,
+`data/TCP.csv`, and `data/british_drama_matched_manual.xlsx` (collection volumes split
+into per-play dotted TCPs manually by Heejin). Every check below was performed
+read-only; **no data, metadata, or site file was modified**. This entry is the citable
+verification record.
+
+### Checks — all PASS
+
+| # | check | result |
+|---|---|---|
+| 1 | Corpus coverage against `TCP.csv` (61,315 texts) | **PASS** — all 411 undotted corpus TCPs present; all 146 manually split dotted items have their parent volume present (33 collection volumes; largest: First Folio A11954 ×36, Jonson Works A72473 ×24 and A04632 ×21, Seneca *Tenne Tragedies* A11909 ×10) |
+| 2 | Pipeline metadata against `DEEP_data.csv` (1,921 records) | **PASS** — 448/557 corpus plays carry a deep_id; all 448 resolve to a DEEP record (5 apparent misses were a float-formatting artifact, see F2); `item_title` and `year_int` are **100% identical** to DEEP on all matched plays |
+| 3 | Manual match file coverage | **PASS** — 448/557 corpus plays present in `british_drama_matched_manual.xlsx`; the 109 absent plays are exactly the known metadata-bare set (mostly collection items) |
+| 4 | `character_documents.csv` integrity | **PASS** — 9,638 rows; `character_id` unique; 557 plays; masked embedding text present for all rows; `n_words` > 0 everywhere; `mask_rate` ∈ [0,1] |
+| 5 | `embeddings.npy` | **PASS** — shape (9,638 × 1,536) aligned with documents; no NaNs; all vectors L2-normalized; metadata records `mode: chunked`, 15,734 chunks |
+| 6 | `cluster_xy_table__archetype.csv` | **PASS** — 9,638 rows in **identical order** to documents; clusters ∈ {−1…24}; 6,466 clustered / 3,172 not; x/y and `centroid_sim` present for exactly the clustered rows; `centroid_sim` ∈ [−1,1]; matches `cluster_summary__archetype.json` |
+| 7 | Year imputations (approved, Entries 001–002) | **PASS** — imputed print-year values exist for **exactly** the seven kept Folio texts (3H6 1591, R3 1592, Wiv 1597, Romeo 1595, Hamlet 1601, Troilus 1602, Othello 1604; 181 character rows); no other undated row was touched; Lear correctly carries its real Q1 date 1608 |
+| 8 | `edition_dedup__archetype.csv` record | **PASS** — 120 edition rows, 59 groups, exactly one included edition per group; all 61 excluded editions' 1,150 character rows have cluster = −1; the 8 canonical-override groups match `canonical_editions.json` |
+| 9 | Labels / names / k-sweep | **PASS** — 26 label rows (−1…24); names json = 11 transferred names (Heejin's curation), 14 awaiting; k-sweep 9 rows |
+| 10 | Site consistency | **PASS with finding F6** — 25 cluster pages; evidence lede says 6,466; but 7,339 character pages exist (see F6) |
+
+### Findings (documented, NOT acted upon — each needs approval before any change)
+
+- **F1.** `DEEP_data.csv` contains 69 ragged records (100 fields vs 99 in the header).
+  Reference-file quality issue only; the pipeline's DEEP-derived values were verified
+  100% identical to correctly parsed DEEP records.
+- **F2.** `deep_id` is stored as a float in the pipeline metadata, so trailing zeros
+  collapse ("5076.20" → "5076.2"; likewise 5081.10/.20/.30, 5124.20). All five such ids
+  were verified to match the intended DEEP records (titles identical). Cosmetic;
+  recommendation: store deep_id as a string at the next metadata rebuild.
+- **F3.** **Alexander's two collection volumes (A16527 = *Monarchic Tragedies*;
+  A16564 = *Recreations with the Muses*, 1637) have internally inconsistent item titles.**
+  Cast evidence: A16527.1 (titled "The Alexandraean Tragedy", deep 5061.01) has a
+  near-identical cast to A16564.1 (titled "Croesus", deep 5106.01), J = 0.91; the
+  dedup's cast-based grouping merged them (and the .2/.3/.4 pairs) regardless of titles,
+  so **clustering is unaffected**, but the title metadata of these 8 dotted TCPs is
+  unreliable. DEEP's own export for 5061 lists two "Alexandraean Tragedy" items
+  (Greg 260a(i)/(ii)) and no Croesus/Darius items, suggesting the source of confusion.
+  → Flagged for Heejin's manual review of the A16527.x / A16564.x item assignments.
+- **F4.** `british_drama_matched_manual.xlsx` has 467 rows but 455 unique TCPs
+  (12 TCPs appear in multiple rows — presumably multi-work volumes). No action.
+- **F5.** 109 corpus plays (19.6%) have no DEEP/manual-match metadata (titles fall back
+  to TCP ids on the site) — the known metadata gap; enrichment would be a data change
+  requiring approval.
+- **F6.** `docs/characters/` contains **873 orphan pages** — stale pages generated for
+  characters clustered in earlier, larger runs (7,339-character era) that are no longer
+  clustered. They are not linked from any current page but remain reachable by direct
+  URL with outdated cluster assignments. Deleting them is a site change awaiting
+  approval.
+
+---
+
 ### 7. Open items requiring explicit approval before any action
 
 1. ~~§4e year imputation~~ — **resolved 2026-07-07: keep, with explicit note** (recorded
    in §4e and `canonical_editions.json`).
-2. §4d `confirm: true` NOS entries (Lear, Othello, R3, Troilus) — confirm against the MCE.
+2. ~~§4d `confirm: true` NOS entries~~ — **resolved 2026-07-07 (Entry 002)**: verified
+   against Heejin's MCE copy; Lear/R3/Troilus corrected with approval.
 3. Proposed but NOT implemented: stage-02 masking round 2 (fuzzy cast-list matching);
-   metadata source fixes (digit junk in `authors_display`, ~20% missing DEEP titles);
-   consensus clustering; fixed-budget chunk pooling experiment; "(perf.)" year marker on
-   site pages for the six §4e values.
-4. ~~Committing and pushing this log file~~ — **approved 2026-07-07**; this file is
-   committed with this resolution.
+   metadata source fixes (digit junk in `authors_display`, deep_id float→string (F2),
+   ~20% missing DEEP titles (F5)); consensus clustering; fixed-budget chunk pooling
+   experiment; "(perf.)" year marker on site pages for the §4e values.
+4. ~~Committing and pushing this log file~~ — **approved 2026-07-07**.
+5. Cluster names for ids 2, 3, 4, 9, 10, 11, 12, 14, 16, 18, 19, 21, 22, 23 —
+   awaiting Heejin (Entry 002).
+6. A16527.x / A16564.x item-title assignments — awaiting Heejin's manual review (F3).
+7. 873 orphan character pages in `docs/characters/` — deletion awaiting approval (F6).
