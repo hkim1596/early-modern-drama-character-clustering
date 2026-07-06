@@ -151,11 +151,20 @@ def canonical_edition_tcps(df) -> tuple[set, list[dict]]:
     corrupt the temporal kNN genealogy: a character's nearest neighbour becomes
     its own reprint, and reprint dates masquerade as late 'followers'.
 
-    Grouping: `work_id` where present, else normalized clean-title + author
-    (i/j and u/v folded, alphanumerics only). Plays with no work_id and no
-    title stand alone (kept). Within a group keep the EARLIEST edition
-    (parsed year; undated last), tie-broken by most total spoken words
-    (fullest transcription), then TCP id for determinism.
+    Merging is CAST-CONFIRMED throughout — the catalogue's `work_id` proved
+    unreliable (it lumps distinct plays: four different Chapman comedies share
+    one work_id, and 'Antonio and Mellida ×5' mixed part 1, its sequel, and
+    reprints), so no metadata key merges on its own:
+      1. same folded title+author  → merge if distinctive-cast Jaccard ≥ 0.25
+         (editions of one play always pass; title collisions fail)
+      2. same work_id              → merge only if same title OR Jaccard ≥ 0.55
+      3. metadata-bare plays (Folio/collection items: no work_id, no title,
+         no year) → merge to their best cast match if J ≥ 0.5, ≥4 shared
+         distinctive names, and a ≥1.5× margin over the runner-up (catches
+         Folio-vs-quarto Falstaffs without confusing 1H4 with 2H4)
+    Distinctive names = appearing in ≤15 plays corpus-wide. Within a group
+    keep the EARLIEST edition (parsed year; undated last), tie-broken by most
+    total spoken words (fullest transcription), then TCP id.
     """
     import pandas as pd
 
@@ -178,29 +187,143 @@ def canonical_edition_tcps(df) -> tuple[set, list[dict]]:
         year=("year", "first") if "year" in df.columns else ("TCP", "first"),
         words=("n_words", "sum") if "n_words" in df.columns else ("TCP", "size"),
     ).reset_index()
-
-    def group_key(r):
-        if pd.notna(r.work_id) and str(r.work_id).strip() and str(r.work_id).lower() != "nan":
-            return f"w:{r.work_id}"
-        t = r.item_title if (pd.notna(r.item_title) and str(r.item_title).strip()) else r.title
-        if pd.isna(t) or not str(t).strip() or str(t).lower() == "nan":
-            return f"solo:{r.TCP}"
-        au = fold(r.author) if pd.notna(r.author) else ""
-        return f"t:{fold(t)}|{au}"
-
-    plays["_key"] = plays.apply(group_key, axis=1)
     plays["_yr"] = plays["year"].map(parse_year)
+
+    # distinctive casts (names in ≤15 plays: drops messenger/servant/boy,
+    # keeps falstaff/hotspur/mistress quickly)
+    dcast: dict[str, set] = {}
+    if "normalized_name" in df.columns:
+        name_play: dict[str, set] = {}
+        cast: dict[str, set] = {}
+        for nm, tcp in zip(df["normalized_name"].fillna("").astype(str).str.lower(),
+                           df["TCP"].astype(str)):
+            nm = nm.strip()
+            if nm:
+                name_play.setdefault(nm, set()).add(tcp)
+                cast.setdefault(tcp, set()).add(nm)
+        distinctive = {n for n, ps in name_play.items() if len(ps) <= 15}
+        dcast = {t: (c & distinctive) for t, c in cast.items()}
+
+    def jac(a: str, b: str) -> tuple[float, int]:
+        ca, cb = dcast.get(a, set()), dcast.get(b, set())
+        if not ca or not cb:
+            return 0.0, 0
+        inter = len(ca & cb)
+        return inter / len(ca | cb), inter
+
+    def has(v) -> bool:
+        return pd.notna(v) and str(v).strip() != "" and str(v).lower() != "nan"
+
+    tcps = plays["TCP"].tolist()
+    pos = {t: i for i, t in enumerate(tcps)}
+    parent = list(range(len(tcps)))
+
+    def find(i: int) -> int:
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    def union(a: str, b: str) -> None:
+        ra, rb = find(pos[a]), find(pos[b])
+        if ra != rb:
+            parent[rb] = ra
+
+    def title_key(r):
+        t = r.item_title if has(r.item_title) else (r.title if has(r.title) else None)
+        if t is None:
+            return None
+        au = fold(r.author) if has(r.author) else ""
+        return f"{fold(t)}|{au}"
+
+    plays["_tk"] = [title_key(r) for r in plays.itertuples()]
+
+    # 1) same title+author, cast-confirmed (loose: reprints always pass)
+    for _, g in plays[plays["_tk"].notna()].groupby("_tk"):
+        ts = g["TCP"].tolist()
+        for i in range(1, len(ts)):
+            j, inter = jac(ts[0], ts[i])
+            small = min(len(dcast.get(ts[0], ())), len(dcast.get(ts[i], ())))
+            if small < 4 or j >= 0.25:
+                union(ts[0], ts[i])
+
+    # 2) same work_id, but only cast- or title-confirmed
+    if "work_id" in plays.columns:
+        w = plays[plays["work_id"].map(has)]
+        for _, g in w.groupby(w["work_id"].astype(str)):
+            ts = g["TCP"].tolist()
+            tks = g["_tk"].tolist()
+            for i in range(1, len(ts)):
+                same_title = tks[0] is not None and tks[0] == tks[i]
+                j, inter = jac(ts[0], ts[i])
+                if same_title or (j >= 0.55 and inter >= 4):
+                    union(ts[0], ts[i])
+
+    # 3) metadata-bare plays: cast matching. All candidates with J ≥ 0.55 are
+    # co-editions (sequels sit near J ≈ 0.2–0.35, editions at 0.55–0.9), so a
+    # margin test against the runner-up would wrongly block three-edition sets
+    # (the runner-up IS another edition). A guarded best-match fallback at
+    # J ≥ 0.45 catches divergent versions (bad quartos).
+    bare = plays[plays["_tk"].isna() & ~plays["work_id"].map(has)]
+    for b in bare.itertuples():
+        bc = dcast.get(b.TCP, set())
+        if len(bc) < 4:
+            continue
+        scored = []
+        for t2 in tcps:
+            if t2 == b.TCP:
+                continue
+            j, inter = jac(b.TCP, t2)
+            if inter >= 4:
+                scored.append((j, inter, t2))
+        scored.sort(reverse=True)
+        for j, inter, t2 in scored:
+            if j >= 0.55:
+                union(t2, b.TCP)
+        if scored and scored[0][0] < 0.55:
+            j0, i0, t0 = scored[0]
+            margin_ok = (len(scored) == 1 or j0 >= 1.5 * scored[1][0]
+                         or scored[1][0] >= 0.55)
+            # divergent editions (bad quartos): decent J + margin
+            if j0 >= 0.45 and margin_ok:
+                union(t0, b.TCP)
+            # heavily divergent versions (Q1 Hamlet vs Folio: renamed cast →
+            # J 0.22, but 8 shared distinctive names and NO competitor)
+            elif i0 >= 6 and j0 >= 0.15 and \
+                    (len(scored) == 1 or j0 >= 2.5 * scored[1][0]):
+                union(t0, b.TCP)
+
+    # 4) near-identical casts under DIFFERENT titles (metadata mislabels:
+    # collection items with shifted/crossed titles, e.g. a Works masque
+    # carrying its neighbour's name). J ≥ 0.75 cannot be a sequel or source
+    # play (those sit at 0.2–0.5), so this only merges true duplicates.
+    if dcast:
+        pair_inter: dict[tuple, int] = {}
+        for n in distinctive:
+            ps = sorted(name_play[n])
+            for i in range(len(ps)):
+                for j2 in range(i + 1, len(ps)):
+                    pair_inter[(ps[i], ps[j2])] = pair_inter.get((ps[i], ps[j2]), 0) + 1
+        for (a, b), inter in pair_inter.items():
+            if inter >= 6 and a in pos and b in pos:
+                j = inter / len(dcast.get(a, set()) | dcast.get(b, set()))
+                if j >= 0.75:
+                    union(a, b)
+
+    plays["_grp"] = [find(pos[t]) for t in tcps]
 
     keep: set = set()
     report: list[dict] = []
-    for _, g in plays.groupby("_key"):
+    for _, g in plays.groupby("_grp"):
         g = g.sort_values(["_yr", "words", "TCP"], ascending=[True, False, True])
         keep.add(g.iloc[0]["TCP"])
         if len(g) > 1:
+            best = g.iloc[0]
+            work = best["item_title"] if has(best["item_title"]) else best["title"]
             report.append({
-                "work": str(g.iloc[0]["item_title"] or g.iloc[0]["title"])[:60],
-                "kept": g.iloc[0]["TCP"],
-                "kept_year": None if g.iloc[0]["_yr"] == float("inf") else int(g.iloc[0]["_yr"]),
+                "work": str(work)[:60],
+                "kept": best["TCP"],
+                "kept_year": None if best["_yr"] == float("inf") else int(best["_yr"]),
                 "dropped": g["TCP"].tolist()[1:],
             })
     return keep, report
