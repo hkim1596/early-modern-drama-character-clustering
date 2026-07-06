@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HONORIA in The Ball · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_10.html">Cluster 10 — 10: tab, hermia, ane</a> ›
+  <span>HONORIA</span>
+</nav>
+
+<h1>HONORIA</h1>
+<p class="lede">in <em>The Ball</em> — Shirley, James</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1639</td></tr>
+<tr><th>Words</th><td>1165</td></tr>
+<tr><th>Characters</th><td>6083</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 10 (<em>tab, hermia, ane, dulipo, phillis, polidora…</em>). Matches are highlighted.</p>
+<div class="excerpt">know His Lordship has the constitution Of other Courtiers, they can endure To be commended. Madam, Master Barker hath some design Which he pretends concerns us both. Although he use to rail thus, yet we have Some argument to suspect his Lordship&#x27;s tongue Has been to liberal. But does his Lordship think We were so taken with</div>
+<div class="excerpt">I wish my Lord I had the art to effect What you desire. Speak it my Lord. Why, this is worse than all the rest. This will Ask counsel. And I, Cupid instruct us both. Exeunt. No Mounsieure Le Frisk put not up your pipe, my La die Was but in jest, and you must take it for a favour. Yes Madam, Your Ladyship will be too much troubled.</div>
+<div class="excerpt">just as many hounds as hairs that ever My eyes distinguished yet, you have a body And unpromising in his slashes, one May see through him, and for his legs they both Would but make stuffing for one handsome stocking, Th&#x27;are a Lords I will be sworn, I dote upon him, I could wish somewhat, but I me sworry sir To trouble you so</div>
+<div class="excerpt">extinct, we have devised Another way. We should Be else unjust. Dare you expose your head to the air so long? That draw which quickly tell how much I love you. How? both. You cannot otherwise be reconciled, I&#x27;ll be content to marry one, and do Service to the others petticoat, I must tell you, I am not without president. There you</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Does he not Deserve it? name a gentleman in the Kingdom, So affable, so moving in his language, So pleasant, witty, indeed every thing A Lady can desire. If I be not mistaken, I have herd Your tongue reach higher in his praises Madam, How ere you now seem cold, but if you tell him My opinion, as you shall do him no pleasure, You can do me no injury, I know His Lordship has the constitution Of other Courtiers, they can endure To be commended. Madam, Master Barker hath some design Which he pretends concerns us both. Although he use to rail thus, yet we have Some argument to suspect his Lordship&#x27;s tongue Has been to liberal. But does his Lordship think We were so taken with his person. How Sir? Is&#x27;t possible, I am sorry now at heart. I had a good thought on him, he shall see&#x27;t, For I will love some other in revenge, And presently if any gentleman Would but the grace to smile, and court me up too&#x27;t. And had it? All night. Ene what you will He may so. Most deserving, This language is not levill with that friendship, You have professed, this touches a comparison. You are angry Lady, How much does this concern you to be thus Officious in his cause, if you be not Engaged by more than ordinary affection. I must interpret this no kind respect To me. You then transgress against civility. Then you love him too. Your consequence perhaps may be denied too, Why there are no such wonders in your eye Which other composition do not boast of, My Lord no doubt hath in his travels clapped As modest cheeks, and kissed as melting lips. It may be they blush for the teeth behind them. &#x27;Tis not perfumed. Not above your forehead, When you have brushed away the hairy pentehrush, And made it visible. My Lord. Yet it did concern you. You were kissed first, discover now At your discretion. It might would turned to earnest, if your Lordship Had not interposed. You have the better gift at telling secrets. Yet you know him. How dee mean my Lord? My Lord I&#x27;ll take my leave. I can be patient To hear your Lordship mock me, these are but A course reward for my good thoughts. Yes I hope my Lord. Give me leave My Lord to wonder you can love me, With such a flame you have expressed yet she, Your mistress? I wish my Lord I had the art to effect What you desire. Speak it my Lord. Why, this is worse than all the rest. This will Ask counsel. And I, Cupid instruct us both. Exeunt. No Mounsieure Le Frisk put not up your pipe, my La die Was but in jest, and you must take it for a favour. Yes Madam, Your Ladyship will be too much troubled. A bubble of Nobility, a giddy Fantastic Lord, I want none of his titles, Now in my imaginations he appears Ill favoured, and not any partly about him Worth half a commendation, wood he were here. That I might examine, And do my judgement right between you two now How much he would come short, you have and eye Worth forty of his, nose of another making; I saw your teeth ene now compared to which, His are of the complexion of his comb, I mean his box, and will in time be yellower, And ask more making clean, you have a show Of something on your upper lip, a Witch Has a Philosophers beard to him, his chin Has just as many hounds as hairs that ever My eyes distinguished yet, you have a body And unpromising in his slashes, one May see through him, and for his legs they both Would but make stuffing for one handsome stocking, Th&#x27;are a Lords I will be sworn, I dote upon him, I could wish somewhat, but I me sworry sir To trouble you so much, all happy thoughts Possess you. Exit Sir, I have a small request to you. If you think I have power Or will to deserve from you any courtesy, Pray learn to dance. At my entreaty sir to dance, It was the first thing took me with his Lordship, You know not what may follow, fare you well. Exit. Is&#x27;t possible your heart hath been tormented In loves flame, and I the cause. &#x27;Tis as I tell you sir, no Lady in The world can speak more praises of your body? She knows not yet your mind. And yet because she saw your compliments Directed so unhappily to me, I know not how yowl find her on the sudden, But &#x27;tis not half and hour since you possessed The first place in her thoughts. A slight error. &#x27;Tis sufficient That you recant no more neglect. I love you, you&#x27;re strangely sir mistaken, Put your devices on some other Lady, I would been so far from my affection to you, That I would laboured I confess to unsettle The opinion of my Lady Rosomond, Who I confess loves you, and that extremely. What cunning she is mistress of to hide Her strange affections, or what power she has, She does fly into your arms I know not. We are relieved, Enter Mounsieur. Mounsieur Le Frisk. A Country dance then. A French Cupid. Cupid is a child, you have a beard Mounsieur. But Mounsieur, we read Cupid was fair, and You are black, how will that agree? You wonot shoot us, I hope yowl spare our hearts. Yad better buy a new one, Nay then we shall be troubled. Exit. Where is my Lord? Were you ever abroad before Signior. Have you seen a fairer City than London? You have been there I me sure. Enter Lord. Proceed Sir. See Sir. Were you at Room too Signior. In France. Did you ever hear the Like. The Cardinal. Do not interrupt him. Who was we ye? You should would fished fort, and as good luck as She that found her wedding ring in the Haddocks belly. By drinking? Whats that? We had armies too my Lord, of wounded thoughts. You did propound A hard Province, and we could not Determine as you expected, but if Your flame be not extinct, we have devised Another way. We should Be else unjust. Dare you expose your head to the air so long? That draw which quickly tell how much I love you. How? both. You cannot otherwise be reconciled, I&#x27;ll be content to marry one, and do Service to the others petticoat, I must tell you, I am not without president. There you triumph. By our example know, some Ladies may Commend, nay love a gentleman, and yet Be safe in their own thoughts, and see as far As modesty, and honour will allow us, We are still servants to your Lordship, We love our own when we preserve, Gentlemens honour.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Ball</div><div class="body">Lord Rainbow is to hold a ball. Ladies practise their dancing, coached by Monsieur La Frisk, and engage in amours. Lucina has four suitors whom she teases with the prospect of marriage. She plans to see each of them in turn, but unknown to her, her servant Scutilla conceals one of them, Colonel Winfield, in her room, and he witnesses her scornful treatment of his rivals: Sir Marmaduke is mocked for his money-making schemes, Sir Ambrose for his baldness, and Bostock, who habitually boasts of his imagined kinship with noblemen, is told she will only marry a commoner—which induces him to suggest that he may be illegitimate, and therefore eligible after all. The Colonel takes a more masterful line with her at his meeting. He then suggests to the other insulted suitors that they go back and treat her with contempt. Bostock nominates himself the spokesman, and is duly rude to her, whereupon the Colonel steps in to defend her honour. She agrees to marry him, on condition that he proves himself to be a virgin; he infers another jeer on her part, and takes offence. She is in earnest, however. She tests the Colonel’s fidelity by telling him that he will be taking on her debts and children (both imaginary) and that he will have to live in the country; when he is undaunted, she accepts him. In another plot, before leaving on a journey to Venice, Freshwater sold his land and laid out money to be paid back fivefold on his safe return. When he gets back, the men who took his money seem reluctant to pay him. At the ball, he is asked to describe his travels, but does so with a suspicious lack of geographical knowledge. It turns out that he spent the summer in Gravesend awaiting a favourable wind. His debtors insist that he undertake the voyage before getting anything back. In the third plot, Lord Rainbow loves both Honoria and Rosamund, but cannot choose between them, so he asks them to decide between themselves which is worthier of him. They are annoyed to learn from the satirical Barker that this arrangement is common knowledge, and decide to get their own back by turning their affections to unlikely rivals. Barker is the first recipient of Honoria’s attention, and she encourages him to learn to dance. Sir Marmaduke and Sir Ambrose also pursue the ladies on the rebound from Lucina; they have some fun by repeatedly directing each knight to woo the other lady, back and forth. Honoria and Rosamund ask Rainbow to draw lots for them. He decides on a threesome and takes both…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_10.html">Cluster 10 — 10: tab, hermia, ane</a> page.
+</div>
+</div></body></html>
