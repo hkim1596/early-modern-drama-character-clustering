@@ -230,7 +230,7 @@ def main() -> None:
             if tcp in keep_tcps:
                 sel = (df["TCP"] == tcp) & df["year"].isna()
                 if sel.any():
-                    df.loc[sel, "year"] = yr
+                    df.loc[sel, "year"] = str(yr)   # year column is str-typed
     sub = df.loc[mask, ["TCP", "display_name", "normalized_name", "title", "year",
                         "n_words", "genre_brit_display", "genre_annals_display"]
                  ].reset_index(drop=True)
