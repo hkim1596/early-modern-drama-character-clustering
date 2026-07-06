@@ -91,7 +91,7 @@ STOPWORDS = {w for w in STOPWORDS if len(w) >= 2}
 
 def label_for(top_words: list[str], cluster_id: int) -> str:
     if cluster_id == -1:
-        return "-1: outliers"
+        return "-1: not clustered (below word threshold)"
     head = ", ".join(top_words[:3]) if top_words else ""
     return f"{cluster_id}: {head}".rstrip(": ")
 
@@ -153,8 +153,8 @@ def label_one_preset(name: str) -> None:
 
 
 def main() -> None:
-    for preset in config.PRESETS:
-        label_one_preset(preset["name"])
+    for name in config.CLUSTER_TABLES:
+        label_one_preset(name)
 
 
 if __name__ == "__main__":

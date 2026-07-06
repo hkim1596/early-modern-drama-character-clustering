@@ -1,8 +1,11 @@
 # Character Clustering — pipeline
 
 Cluster every named character in the matched early-modern drama corpus by the
-full text of their speech (no chunking), and render the result as an
-interactive map.
+full text of their speech (embedded in ~1k-token chunks, mean-pooled per
+character), and render the result as an interactive map. Stage 04 clusters
+with leave-one-out play centering + spherical k-means (the original
+UMAP→HDBSCAN preset pipeline was retired 2026-07-06 — a document-length
+confound organized that space; see the 04_cluster.py docstring).
 
 ## Run order
 
@@ -40,14 +43,16 @@ Character Clustering/
 │   ├── character_documents.csv            # character_table + play metadata (title, author, genre, date, plot, …)
 │   ├── embeddings.npy                     # [n_characters, dim] aligned 1-to-1 with character_documents.csv
 │   ├── embeddings_metadata.json
-│   ├── reduced_5d__<preset>.npy
-│   ├── reduced_2d__<preset>.npy
-│   ├── clusters_hdbscan__<preset>.npy
-│   ├── cluster_xy_table__<preset>.csv     # master table: documents + x/y + cluster + topic_label + top_words
-│   ├── cluster_labels__<preset>.csv       # per-cluster top distinguishing words (c-TF-IDF) + members
-│   └── preset_summary.csv                 # summary stats per preset
+│   ├── cluster_xy_table__<name>.csv       # master table: documents + x/y + cluster + centroid_sim + topic_label + top_words (cluster = -1 → below word threshold)
+│   ├── cluster_profiles__<name>.md        # per-cluster sizes, genres, top names, exemplars
+│   ├── cluster_k_sweep__<name>.csv        # silhouette diagnostics over KMEANS_K_SWEEP
+│   ├── cluster_summary__<name>.json       # parameters + length-R² audit trail
+│   └── cluster_labels__<name>.csv         # per-cluster top distinguishing words (c-TF-IDF) + members
 └── results/
-    └── interactive_clusters__<preset>.html
+    └── interactive_clusters__<name>.html
+
+`<name>` comes from `config.CLUSTER_TABLES` (default `archetype`); pass
+`--name` to stage 04 for comparison runs (e.g. a whole-document control).
 ```
 
 ## Configuration

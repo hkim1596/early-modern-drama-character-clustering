@@ -1,6 +1,6 @@
 """Stage 07 — Generate the full static analysis site.
 
-Reads cluster_xy_table__baseline.csv + cluster_labels__baseline.csv and writes
+Reads cluster_xy_table__<CLUSTER_TABLES[0]>.csv + its cluster_labels file and writes
 the entire browsable site into docs/ (the GitHub Pages root):
 
     docs/
@@ -419,7 +419,7 @@ character's name to open their full-speech page.</p>
 {plot_html}
 
 <div class="footer">
-  Generated automatically from <code>cluster_xy_table__baseline.csv</code> by
+  Generated automatically from <code>cluster_xy_table__{config.CLUSTER_TABLES[0]}.csv</code> by
   <code>code/07_generate_site.py</code>. View the
   <a href="https://github.com/hkim1596/early-modern-drama-character-clustering">source on GitHub</a>.
 </div>
@@ -531,7 +531,7 @@ def render_character_page(row: pd.Series, df: pd.DataFrame, labels: pd.DataFrame
 {('<h2>Plot summary</h2>' + plot_html) if plot_html else ''}
 
 <div class="footer">
-  Generated automatically from <code>cluster_xy_table__baseline.csv</code>.
+  Generated automatically from <code>cluster_xy_table__{config.CLUSTER_TABLES[0]}.csv</code>.
   View other characters in this group on the
   {cluster_link} page.
 </div>
@@ -582,13 +582,13 @@ Click into a cluster, then any character's name, to read their full speech with 
 # Main
 # -------------------------------------------------------------------
 def main() -> None:
-    cxy = config.DATA_DIR / "cluster_xy_table__baseline.csv"
+    cxy = config.DATA_DIR / f"cluster_xy_table__{config.CLUSTER_TABLES[0]}.csv"
     if not cxy.exists():
         raise FileNotFoundError(f"{cxy} not found. Run 04_cluster.py first.")
     df = pd.read_csv(cxy)
     df["cluster"] = df["cluster"].astype(int)
 
-    lbl_path = config.DATA_DIR / "cluster_labels__baseline.csv"
+    lbl_path = config.DATA_DIR / f"cluster_labels__{config.CLUSTER_TABLES[0]}.csv"
     if lbl_path.exists():
         labels = pd.read_csv(lbl_path).set_index("cluster")
     else:

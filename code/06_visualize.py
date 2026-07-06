@@ -210,8 +210,7 @@ def build_figure(df: pd.DataFrame, preset_name: str) -> go.Figure:
 
 
 def main() -> None:
-    for preset in config.PRESETS:
-        name = preset["name"]
+    for name in config.CLUSTER_TABLES:
         path = config.DATA_DIR / f"cluster_xy_table__{name}.csv"
         if not path.exists():
             print(f"⚠ {name}: missing {path.name} — run 04 first")

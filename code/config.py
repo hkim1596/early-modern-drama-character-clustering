@@ -45,6 +45,22 @@ EMBED_MAX_TOKENS = 40960
 EMBED_BATCH_SIZE = 1       # safe default for long inputs; raise if VRAM allows
 EMBED_INSTRUCTION = "Represent the unique speech style and rhetorical signature of this dramatic character for similarity comparison."
 
+# --- Chunked embedding (2026-07: fixes the length confound) ---
+# Diagnosis on the first full run: log(word count) was recoverable from the
+# top-5 PCs of the whole-document embeddings with R²=0.90 — the space was
+# organized by document LENGTH, not by character. One embedding per character
+# over docs ranging 53 words – 38k tokens bakes length/register into the
+# vector. Fix: split each character's speech into ~EMBED_CHUNK_TOKENS windows
+# (token-aligned, tail <25% merges into the previous window), embed each
+# window, then token-weighted mean-pool + L2-normalize per character. Every
+# character is then represented in the same length regime — and CELESTINA no
+# longer needs a 40k context (EMBED_MAX_TOKENS only applies to the legacy
+# whole-doc mode).
+# Set EMBED_CHUNK_TOKENS = None to reproduce the legacy whole-document
+# embeddings (kept for control comparison).
+EMBED_CHUNK_TOKENS     = 1024
+EMBED_CHUNK_BATCH_SIZE = 16    # chunks are short; raise/lower to fit VRAM
+
 # -------------------------------------------------------------------
 # Filtering
 # -------------------------------------------------------------------
@@ -63,39 +79,36 @@ GENERIC_LABELS = {
 }
 
 # -------------------------------------------------------------------
-# Clustering presets (UMAP-5D -> HDBSCAN -> UMAP-2D)
+# Clustering (stage 04: LOO play centering + spherical k-means)
 # -------------------------------------------------------------------
+# The original UMAP→HDBSCAN preset pipeline was retired 2026-07-06 (length
+# confound + wrong tool for a typology; see 04_cluster.py docstring and git
+# history for the old presets).
 RANDOM_STATE = 42
 
-PRESETS = [
-    {
-        "name": "baseline",
-        "umap_5d": dict(n_components=5, n_neighbors=15, min_dist=0.05,
-                        metric="cosine", random_state=RANDOM_STATE),
-        "hdbscan": dict(min_cluster_size=20, min_samples=None,
-                        metric="euclidean", cluster_selection_method="eom"),
-        "umap_2d": dict(n_components=2, n_neighbors=15, min_dist=0.0,
-                        metric="cosine", random_state=RANDOM_STATE),
-    },
-    {
-        "name": "tuned_less_outliers",
-        "umap_5d": dict(n_components=5, n_neighbors=35, min_dist=0.10,
-                        metric="cosine", random_state=RANDOM_STATE),
-        "hdbscan": dict(min_cluster_size=30, min_samples=10,
-                        metric="euclidean", cluster_selection_method="eom"),
-        "umap_2d": dict(n_components=2, n_neighbors=35, min_dist=0.0,
-                        metric="cosine", random_state=RANDOM_STATE),
-    },
-    {
-        "name": "tuned_stricter",
-        "umap_5d": dict(n_components=5, n_neighbors=20, min_dist=0.05,
-                        metric="cosine", random_state=RANDOM_STATE),
-        "hdbscan": dict(min_cluster_size=40, min_samples=None,
-                        metric="euclidean", cluster_selection_method="eom"),
-        "umap_2d": dict(n_components=2, n_neighbors=20, min_dist=0.0,
-                        metric="cosine", random_state=RANDOM_STATE),
-    },
-]
+# Cluster-table name suffixes consumed by stages 05–07
+# (cluster_xy_table__<name>.csv). Stage 04 writes CLUSTER_TABLES[0] by
+# default; add entries here when comparing runs (e.g. a whole-document
+# control re-run of stage 03).
+CLUSTER_TABLES = ["archetype"]
+# Characters below this many words don't carry a stable stylistic signature
+# (and are mostly functional bit-parts). Filtering happens at CLUSTERING time,
+# not at table-build time, so the documents table keeps every character.
+# 150 keeps ~7.3k of 9.6k characters and ~98% of corpus words.
+MIN_WORDS_CLUSTER = 150
+
+# Linear length-axis deflation applied after play-centering. Needed while
+# embeddings.npy is still the legacy whole-document run (length R² 0.90 →
+# ~0.33 after centering+3 rounds). After re-embedding with
+# EMBED_CHUNK_TOKENS set, this should do little — set to 0 and check that the
+# reported length R² stays low on its own.
+LENGTH_DEFLATE_ROUNDS = 3
+
+# k for the final partition. The k-sweep (silhouette diagnostics over
+# KMEANS_K_SWEEP) is written alongside; pick k by silhouette + interpretability
+# of the profiles, not silhouette alone (it tends to favor degenerate small k).
+KMEANS_K       = 25
+KMEANS_K_SWEEP = [10, 15, 20, 25, 30, 35, 40, 50, 60]
 
 # -------------------------------------------------------------------
 # Round-2 speaker mapping (stage 01e)
