@@ -143,6 +143,69 @@ def split_facets(value, multi: bool = True, kind: str | None = None) -> list[str
     return out
 
 
+def canonical_edition_tcps(df) -> tuple[set, list[dict]]:
+    """Pick ONE canonical edition per work; return (kept TCP set, report).
+
+    The corpus contains multiple printings of the same play (All Fools ×4,
+    Antonio and Mellida ×5, …). Duplicate editions inflate clusters and, worse,
+    corrupt the temporal kNN genealogy: a character's nearest neighbour becomes
+    its own reprint, and reprint dates masquerade as late 'followers'.
+
+    Grouping: `work_id` where present, else normalized clean-title + author
+    (i/j and u/v folded, alphanumerics only). Plays with no work_id and no
+    title stand alone (kept). Within a group keep the EARLIEST edition
+    (parsed year; undated last), tie-broken by most total spoken words
+    (fullest transcription), then TCP id for determinism.
+    """
+    import pandas as pd
+
+    def parse_year(v):
+        y = pd.to_numeric(pd.Series([v]), errors="coerce").iloc[0]
+        if pd.isna(y):
+            m = re.search(r"(\d{4})", str(v)) if v is not None else None
+            y = float(m.group(1)) if m else float("inf")
+        return float(y)
+
+    def fold(s: str) -> str:
+        s = str(s).lower().replace("j", "i").replace("v", "u")
+        return re.sub(r"[^a-z0-9]", "", s)
+
+    plays = df.groupby("TCP").agg(
+        work_id=("work_id", "first") if "work_id" in df.columns else ("TCP", "first"),
+        item_title=("item_title", "first") if "item_title" in df.columns else ("TCP", "first"),
+        title=("title", "first") if "title" in df.columns else ("TCP", "first"),
+        author=("authors_display", "first") if "authors_display" in df.columns else ("TCP", "first"),
+        year=("year", "first") if "year" in df.columns else ("TCP", "first"),
+        words=("n_words", "sum") if "n_words" in df.columns else ("TCP", "size"),
+    ).reset_index()
+
+    def group_key(r):
+        if pd.notna(r.work_id) and str(r.work_id).strip() and str(r.work_id).lower() != "nan":
+            return f"w:{r.work_id}"
+        t = r.item_title if (pd.notna(r.item_title) and str(r.item_title).strip()) else r.title
+        if pd.isna(t) or not str(t).strip() or str(t).lower() == "nan":
+            return f"solo:{r.TCP}"
+        au = fold(r.author) if pd.notna(r.author) else ""
+        return f"t:{fold(t)}|{au}"
+
+    plays["_key"] = plays.apply(group_key, axis=1)
+    plays["_yr"] = plays["year"].map(parse_year)
+
+    keep: set = set()
+    report: list[dict] = []
+    for _, g in plays.groupby("_key"):
+        g = g.sort_values(["_yr", "words", "TCP"], ascending=[True, False, True])
+        keep.add(g.iloc[0]["TCP"])
+        if len(g) > 1:
+            report.append({
+                "work": str(g.iloc[0]["item_title"] or g.iloc[0]["title"])[:60],
+                "kept": g.iloc[0]["TCP"],
+                "kept_year": None if g.iloc[0]["_yr"] == float("inf") else int(g.iloc[0]["_yr"]),
+                "dropped": g["TCP"].tolist()[1:],
+            })
+    return keep, report
+
+
 def parse_roles_field(roles_str: str) -> list[dict[str, str]]:
     """Extract role names + descriptions from the catalogue's `roles` column.
 

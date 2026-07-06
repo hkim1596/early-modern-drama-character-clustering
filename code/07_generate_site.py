@@ -713,7 +713,7 @@ def render_master_index(df: pd.DataFrame, labels: pd.DataFrame) -> str:
 <p class="lede">Twenty-five voice clusters over 7,339 characters from 550+ plays, grouped
 into families. Each cluster page lists every member chronologically (candidate prototypes
 first), with landmarks, typicality scores, and speech evidence. Characters speaking fewer
-than 150 words are not clustered.</p>
+than 150 words are not clustered, and only one edition of each play is included.</p>
 
 {''.join(sections)}
 

@@ -140,7 +140,7 @@ def load_curated_names(name: str) -> dict[int, str]:
 
 def label_for(top_words: list[str], cluster_id: int, curated: dict[int, str]) -> str:
     if cluster_id == -1:
-        return "-1: not clustered (below word threshold)"
+        return "-1: not clustered (short part or duplicate edition)"
     if cluster_id in curated:
         return f"{cluster_id}: {curated[cluster_id]}"
     head = ", ".join(top_words[:3]) if top_words else ""

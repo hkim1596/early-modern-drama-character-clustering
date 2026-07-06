@@ -793,6 +793,23 @@ def attach_metadata(out_rows: list[dict], tcp_key: str):
 def write_outputs(out_rows, rows, fieldnames_in, n_crowd, tcp_key, output: Path):
     output.parent.mkdir(parents=True, exist_ok=True)
     merged = attach_metadata(out_rows, tcp_key)
+
+    # One canonical edition per work (config.DEDUPE_EDITIONS): duplicate
+    # printings inflate clusters and corrupt the temporal genealogy.
+    import config as _cfg
+    if getattr(_cfg, "DEDUPE_EDITIONS", False):
+        from utils import canonical_edition_tcps
+        keep, report = canonical_edition_tcps(merged)
+        n_before = len(merged)
+        merged = merged[merged["TCP"].isin(keep)].reset_index(drop=True)
+        print(f"edition dedup: {len(report)} multi-edition works — dropped "
+              f"{n_before - len(merged)} characters from "
+              f"{sum(len(r['dropped']) for r in report)} duplicate editions",
+              flush=True)
+        for r in report:
+            print(f"    {r['work']}: kept {r['kept']} ({r['kept_year']}), "
+                  f"dropped {', '.join(r['dropped'])}", flush=True)
+
     merged.to_csv(output, index=False, encoding="utf-8-sig")
     print(f"wrote {output} ({len(merged)} rows, {len(merged.columns)} columns)",
           flush=True)

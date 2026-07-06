@@ -91,6 +91,18 @@ RANDOM_STATE = 42
 # default; add entries here when comparing runs (e.g. a whole-document
 # control re-run of stage 03).
 CLUSTER_TABLES = ["archetype"]
+
+# Edition deduplication: the corpus contains multiple printings of some works
+# (All Fools ×4, Antonio and Mellida ×5, The Bride ×5, …) — ~4% of characters
+# are duplicated people, which inflates clusters and corrupts the temporal
+# genealogy (a character's nearest neighbour becomes its own reprint). Keep
+# ONE canonical edition per work: earliest year, fullest transcription as
+# tie-break; grouped by work_id, falling back to normalized title+author
+# (see utils.canonical_edition_tcps). Enforced at corpus build (stage 02);
+# stage 04 applies the same filter at clustering time so it also works on an
+# already-built table without re-embedding (excluded duplicates → cluster -1).
+DEDUPE_EDITIONS = True
+
 # Characters below this many words don't carry a stable stylistic signature
 # (and are mostly functional bit-parts). Filtering happens at CLUSTERING time,
 # not at table-build time, so the documents table keeps every character.

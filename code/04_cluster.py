@@ -183,6 +183,15 @@ def main() -> None:
         print(f"📏 length R² (deflated): {r2_deflated:.3f}")
 
     mask = df["n_words"].values >= args.min_words
+    n_dup = 0
+    if getattr(config, "DEDUPE_EDITIONS", False):
+        from utils import canonical_edition_tcps
+        keep_tcps, report = canonical_edition_tcps(df)
+        dup = ~df["TCP"].isin(keep_tcps).values
+        n_dup = int((dup & mask).sum())
+        mask = mask & ~dup
+        print(f"📚 Edition dedup: {len(report)} multi-edition works — "
+              f"{n_dup} duplicate-edition characters excluded from clustering")
     sub = df.loc[mask, ["TCP", "display_name", "normalized_name", "title", "year",
                         "n_words", "genre_brit_display", "genre_annals_display"]
                  ].reset_index(drop=True)
@@ -271,6 +280,7 @@ def main() -> None:
         "deflate_rounds": args.deflate,
         "n_clustered": int(mask.sum()),
         "n_below_threshold": int((~mask).sum()),
+        "n_duplicate_editions_excluded": n_dup,
         "corpus_words_kept": round(float(kept_words), 4),
         "silhouette_cosine_full": round(float(sil_full), 4),
         "ari_vs_agglomerative": ari,
