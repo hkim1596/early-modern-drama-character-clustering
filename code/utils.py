@@ -143,8 +143,14 @@ def split_facets(value, multi: bool = True, kind: str | None = None) -> list[str
     return out
 
 
-def canonical_edition_tcps(df) -> tuple[set, list[dict]]:
+def canonical_edition_tcps(df, prefer: set | None = None) -> tuple[set, list[dict]]:
     """Pick ONE canonical edition per work; return (kept TCP set, report).
+
+    `prefer` is a set of TCPs that override the default choice within their
+    group (e.g. New Oxford Shakespeare canonical texts from
+    data/canonical_editions.json). Report entries carry every group member
+    (TCP, title, year, words, characters) plus the selection policy, so
+    stage 04 can write a full inclusion/exclusion record.
 
     The corpus contains multiple printings of the same play (All Fools ×4,
     Antonio and Mellida ×5, …). Duplicate editions inflate clusters and, worse,
@@ -186,8 +192,10 @@ def canonical_edition_tcps(df) -> tuple[set, list[dict]]:
         author=("authors_display", "first") if "authors_display" in df.columns else ("TCP", "first"),
         year=("year", "first") if "year" in df.columns else ("TCP", "first"),
         words=("n_words", "sum") if "n_words" in df.columns else ("TCP", "size"),
+        chars=("TCP", "size"),
     ).reset_index()
     plays["_yr"] = plays["year"].map(parse_year)
+    prefer = prefer or set()
 
     # distinctive casts (names in ≤15 plays: drops messenger/servant/boy,
     # keeps falstaff/hotspur/mistress quickly)
@@ -315,16 +323,35 @@ def canonical_edition_tcps(df) -> tuple[set, list[dict]]:
     keep: set = set()
     report: list[dict] = []
     for _, g in plays.groupby("_grp"):
-        g = g.sort_values(["_yr", "words", "TCP"], ascending=[True, False, True])
-        keep.add(g.iloc[0]["TCP"])
+        g = g.copy()
+        g["_pref"] = (~g["TCP"].isin(prefer)).astype(int)   # preferred first
+        g = g.sort_values(["_pref", "_yr", "words", "TCP"],
+                          ascending=[True, True, False, True])
+        best = g.iloc[0]
+        keep.add(best["TCP"])
         if len(g) > 1:
-            best = g.iloc[0]
-            work = best["item_title"] if has(best["item_title"]) else best["title"]
+            work = None
+            for _, r in g.iterrows():   # first titled member names the group
+                if has(r["item_title"]):
+                    work = r["item_title"]; break
+                if work is None and has(r["title"]):
+                    work = r["title"]
+            work = work if work is not None else best["TCP"]
             report.append({
                 "work": str(work)[:60],
                 "kept": best["TCP"],
                 "kept_year": None if best["_yr"] == float("inf") else int(best["_yr"]),
+                "policy": "canonical-override" if best["TCP"] in prefer else "earliest-dated",
                 "dropped": g["TCP"].tolist()[1:],
+                "members": [{
+                    "TCP": r["TCP"],
+                    "title": (r["item_title"] if has(r["item_title"])
+                              else (r["title"] if has(r["title"]) else "")),
+                    "year": None if r["_yr"] == float("inf") else int(r["_yr"]),
+                    "total_words": int(r["words"]),
+                    "n_characters": int(r["chars"]),
+                    "included": r["TCP"] == best["TCP"],
+                } for _, r in g.iterrows()],
             })
     return keep, report
 

@@ -1,0 +1,21 @@
+{
+  "_note": "Hand-curated canonical-edition overrides consulted by stage 04's edition dedup (utils.canonical_edition_tcps). Default policy keeps the EARLIEST DATED edition of a work; entries here force a specific TCP instead. For Shakespeare, the choice follows the New Oxford Shakespeare: the version underlying the Modern Critical Edition text is canonical, so where the corpus offers only a 'bad' quarto/octavo and the Folio, the Folio (nearest witness to the MCE base text) is kept. 'year' supplies a working date for the kept text when the TCP itself is undated (Folio items) — first-performance dating, used for chronology on the site; the print date of the Folio is 1623. Entries marked confirm=true are two-text plays where the NOS MCE choice should be double-checked against the edition itself.",
+  "works": {
+    "Hamlet": {"keep": "A11954.32", "over": ["A11959"], "year": 1601,
+               "basis": "NOS MCE base is Q2 (not in corpus); Folio is the nearest witness. Q1 (1603) is the memorial/early short text.", "confirm": false},
+    "Romeo and Juliet": {"keep": "A11954.28", "over": ["A12010"], "year": 1595,
+               "basis": "NOS MCE base is Q2 1599 (not in corpus); Folio nearest. Q1 1597 is the short 'bad' text.", "confirm": false},
+    "The Merry Wives of Windsor": {"keep": "A11954.3", "over": ["A11983", "A11988"], "year": 1597,
+               "basis": "NOS MCE base is F; Q 1602 is the short 'bad' text.", "confirm": false},
+    "3 Henry the Sixth": {"keep": "A11954.22", "over": ["A10726"], "year": 1591,
+               "basis": "NOS MCE base is F (Richard Duke of York O 1595 is the short text).", "confirm": false},
+    "King Lear": {"keep": "A11954.33", "over": ["A11978"], "year": 1606,
+               "basis": "Two-text play; F-based Tragedy taken as the MCE reading text.", "confirm": true},
+    "Othello": {"keep": "A11954.34", "over": ["A11992"], "year": 1604,
+               "basis": "Two-text play; F contains ~160 lines absent from Q 1622; F taken as MCE base.", "confirm": true},
+    "Richard the Third": {"keep": "A12001", "over": ["A11954.23"], "year": 1592,
+               "basis": "Q1 1597 kept (earliest dated); NOS treats the Q tradition as the theatrical text. Confirm against MCE.", "confirm": true},
+    "Troilus and Cressida": {"keep": "A12021", "over": ["A11954.25"], "year": 1602,
+               "basis": "Q 1609 kept (earliest dated). Confirm MCE base (Q vs F) against the edition.", "confirm": true}
+  }
+}

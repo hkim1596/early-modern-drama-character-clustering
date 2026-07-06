@@ -92,15 +92,16 @@ RANDOM_STATE = 42
 # control re-run of stage 03).
 CLUSTER_TABLES = ["archetype"]
 
-# Edition deduplication: the corpus contains multiple printings of some works
-# (All Fools ×4, Antonio and Mellida ×5, The Bride ×5, …) — ~4% of characters
-# are duplicated people, which inflates clusters and corrupts the temporal
-# genealogy (a character's nearest neighbour becomes its own reprint). Keep
-# ONE canonical edition per work: earliest year, fullest transcription as
-# tie-break; grouped by work_id, falling back to normalized title+author
-# (see utils.canonical_edition_tcps). Enforced at corpus build (stage 02);
-# stage 04 applies the same filter at clustering time so it also works on an
-# already-built table without re-embedding (excluded duplicates → cluster -1).
+# Edition deduplication — CLUSTERING-TIME ONLY. All editions are kept through
+# table-building (stage 02) and embedding (stage 03) so alternative editions
+# remain available for comparison work; stage 04 excludes duplicates at the
+# last minute (cluster = -1) because duplicated characters inflate clusters
+# and corrupt the temporal genealogy (a character's nearest neighbour becomes
+# its own reprint). Grouping is cast-confirmed (utils.canonical_edition_tcps);
+# the default choice is the earliest dated edition, overridden per work by
+# data/canonical_editions.json (New Oxford Shakespeare Modern Critical Edition
+# choices for Shakespeare). Stage 04 writes the full inclusion/exclusion
+# record to data/edition_dedup__<name>.csv.
 DEDUPE_EDITIONS = True
 
 # Characters below this many words don't carry a stable stylistic signature

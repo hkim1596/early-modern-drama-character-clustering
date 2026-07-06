@@ -186,12 +186,51 @@ def main() -> None:
     n_dup = 0
     if getattr(config, "DEDUPE_EDITIONS", False):
         from utils import canonical_edition_tcps
-        keep_tcps, report = canonical_edition_tcps(df)
+        # Canonical-edition overrides (e.g. New Oxford Shakespeare choices)
+        prefer, year_fill = set(), {}
+        can_path = config.DATA_DIR / "canonical_editions.json"
+        if can_path.exists():
+            with open(can_path, encoding="utf-8") as f:
+                for w in json.load(f).get("works", {}).values():
+                    prefer.add(w["keep"])
+                    if w.get("year"):
+                        year_fill[w["keep"]] = w["year"]
+            print(f"📖 Canonical-edition overrides: {len(prefer)} "
+                  f"(data/canonical_editions.json)")
+
+        keep_tcps, report = canonical_edition_tcps(df, prefer=prefer)
         dup = ~df["TCP"].isin(keep_tcps).values
         n_dup = int((dup & mask).sum())
         mask = mask & ~dup
         print(f"📚 Edition dedup: {len(report)} multi-edition works — "
-              f"{n_dup} duplicate-edition characters excluded from clustering")
+              f"{n_dup} duplicate-edition characters excluded from clustering "
+              f"(kept in the table and embeddings; excluded here only)")
+
+        # Full inclusion/exclusion record — one row per edition in every
+        # multi-edition group.
+        rec_rows = []
+        for r in report:
+            for m in r["members"]:
+                rec_rows.append({
+                    "work": r["work"], "TCP": m["TCP"], "title": m["title"],
+                    "year": m["year"], "total_words": m["total_words"],
+                    "n_characters": m["n_characters"],
+                    "included_in_clustering": m["included"],
+                    "selection_policy": r["policy"] if m["included"] else "",
+                    "kept_edition": r["kept"],
+                })
+        rec_path = config.DATA_DIR / f"edition_dedup__{args.name}.csv"
+        pd.DataFrame(rec_rows).to_csv(rec_path, index=False)
+        print(f"   ↳ {rec_path.name} ({len(rec_rows)} edition rows)")
+
+        # Working dates for undated canonical texts (e.g. Folio-only items):
+        # first-performance year from canonical_editions.json, so chronology
+        # on the site stays meaningful.
+        for tcp, yr in year_fill.items():
+            if tcp in keep_tcps:
+                sel = (df["TCP"] == tcp) & df["year"].isna()
+                if sel.any():
+                    df.loc[sel, "year"] = yr
     sub = df.loc[mask, ["TCP", "display_name", "normalized_name", "title", "year",
                         "n_words", "genre_brit_display", "genre_annals_display"]
                  ].reset_index(drop=True)
