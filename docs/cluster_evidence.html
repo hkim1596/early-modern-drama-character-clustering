@@ -61,140 +61,180 @@ mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
 .idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
 .idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
 .footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+th.sortable { cursor: pointer; user-select: none; }
+th.sortable:hover { background: #e8e8df; }
+th.sortable::after { content: " ↕"; color: var(--muted); font-size: .8em; }
+.badge { display: inline-block; font-size: .72rem; font-weight: 600; color: #7a6a2e;
+         background: #f5eecb; border-radius: 8px; padding: 0 7px; margin-left: 6px; vertical-align: 1px; }
+.landmarks { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; margin: .6em 0 1em; }
+.lm-card { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 14px; font-size: .9rem; }
+.lm-card .who { font-weight: 600; }
+.lm-card .who a { color: var(--accent); text-decoration: none; }
+.lm-card .who a:hover { text-decoration: underline; }
+.lm-card .whence { color: var(--muted); font-size: .86rem; }
+details { margin: 1em 0; }
+details > summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; padding: .3em 0; }
+h2.fam { margin-top: 2.2em; border-bottom: 1px solid var(--rule); padding-bottom: .3em; }
 </style>
 </head><body><div class="wrap">
 
 <nav class="crumbs"><a href="index.html">Home</a> › <span>All clusters</span></nav>
-<h1>Per-cluster evidence</h1>
-<p class="lede">Each cluster's full character list, important speech excerpts, decade
-distribution, authorial mix, and the plot summaries of every play represented.
-Click into a cluster, then any character's name, to read their full speech with metadata.</p>
+<h1>Character archetypes — all clusters</h1>
+<p class="lede">Twenty-five voice clusters over 7,339 characters from 550+ plays, grouped
+into families. Each cluster page lists every member chronologically (candidate prototypes
+first), with landmarks, typicality scores, and speech evidence. Characters speaking fewer
+than 150 words are not clustered.</p>
 
-
+<h2 class='fam'>Comedy &amp; service</h2>
 <a class="idx-card" href="cluster_00.html">
-  <h3>Cluster 0 — 0: ane, minos, tom</h3>
-  <p>377 characters · 87 authors · 1544–1641, median 1618<br>
-     <small>ane, minos, tom, nat, scho, stinkard, jacob, dorus, tuball, naybor</small></p>
-</a>
-<a class="idx-card" href="cluster_01.html">
-  <h3>Cluster 1 — 1: kate, warwick, stesias</h3>
-  <p>360 characters · 75 authors · 1547–1641, median 1609<br>
-     <small>kate, warwick, stesias, bianca, pandora, iphicles, henry, melos, dunston, gremio</small></p>
+  <h3>Cluster 0 — Plebeian service &amp; tavern voices</h3>
+  <p>PORTER <span style='color:var(--muted)'>(Henry the Eighth (All Is True), 1623)</span> · SPUNGIUS <span style='color:var(--muted)'>(The Virgin Martyr, 1622)</span> · GROOM <span style='color:var(--muted)'>(Love&#x27;s Cruelty, 1640)</span><br>
+     377 characters · 265 plays · 1544–1641<br>
+     <small>tom, nat, stinkard, mutton, gent, chud, naybor, beacon, punque, toms</small></p>
 </a>
 <a class="idx-card" href="cluster_02.html">
-  <h3>Cluster 2 — 2: stilt, trincalo, ieoffry</h3>
-  <p>354 characters · 85 authors · 1565–1641, median 1612<br>
-     <small>stilt, trincalo, ieoffry, nuncle, coossen, tom, horatio, lancelet, sim, hugh</small></p>
-</a>
-<a class="idx-card" href="cluster_03.html">
-  <h3>Cluster 3 — 3: faustus, gaveston, pembroke</h3>
-  <p>344 characters · 86 authors · 1566–1640, median 1611<br>
-     <small>faustus, gaveston, pembroke, mortimer, marius, marcus, warwick, lavinia, richard, kate</small></p>
-</a>
-<a class="idx-card" href="cluster_04.html">
-  <h3>Cluster 4 — 4: tranio, ego, achilles</h3>
-  <p>341 characters · 80 authors · 1548–1641, median 1609<br>
-     <small>tranio, ego, achilles, ane, ajax, scylla, qui, thom, hoc, navarre</small></p>
-</a>
-<a class="idx-card" href="cluster_05.html">
-  <h3>Cluster 5 — 5: owen, skinke, rafe</h3>
-  <p>336 characters · 90 authors · 1548–1641, median 1610<br>
-     <small>owen, skinke, rafe, gloucester, faukenbridge, firk, redcap, rees, lancelet, tom</small></p>
-</a>
-<a class="idx-card" href="cluster_06.html">
-  <h3>Cluster 6 — 6: constance, eteocles, eros</h3>
-  <p>332 characters · 76 authors · 1547–1641, median 1613<br>
-     <small>constance, eteocles, eros, mordred, arthur, talbot, tou, palamon, crochet, bremo</small></p>
-</a>
-<a class="idx-card" href="cluster_07.html">
-  <h3>Cluster 7 — 7: parmeno, calisto, melibea</h3>
-  <p>332 characters · 88 authors · 1544–1641, median 1608<br>
-     <small>parmeno, calisto, melibea, hollidam, sempronio, celestina, dorus, guilt, dauphine, ane</small></p>
-</a>
-<a class="idx-card" href="cluster_08.html">
-  <h3>Cluster 8 — 8: iago, cassio, cressid</h3>
-  <p>329 characters · 80 authors · 1547–1641, median 1613<br>
-     <small>iago, cassio, cressid, desdemon, romeo, claudio, handkerchief, alteza, juliet, evadne</small></p>
-</a>
-<a class="idx-card" href="cluster_09.html">
-  <h3>Cluster 9 — 9: numps, numpes, ane</h3>
-  <p>315 characters · 84 authors · 1544–1641, median 1609<br>
-     <small>numps, numpes, ane, gar, rugby, luce, broker, pisanio, slid, ford</small></p>
-</a>
-<a class="idx-card" href="cluster_10.html">
-  <h3>Cluster 10 — 10: tab, hermia, ane</h3>
-  <p>306 characters · 82 authors · 1544–1641, median 1611<br>
-     <small>tab, hermia, ane, dulipo, phillis, polidora, troilus, zanthia, erostrato, bot</small></p>
-</a>
-<a class="idx-card" href="cluster_11.html">
-  <h3>Cluster 11 — 11: ane, cuze, numps</h3>
-  <p>293 characters · 83 authors · 1561–1641, median 1611<br>
-     <small>ane, cuze, numps, deliro, palemon, mitis, sogliardo, ohe, dauphine, pasiphilo</small></p>
-</a>
-<a class="idx-card" href="cluster_12.html">
-  <h3>Cluster 12 — 12: antonio, tou, valdaura</h3>
-  <p>290 characters · 79 authors · 1565–1641, median 1618<br>
-     <small>antonio, tou, valdaura, bosola, borgia, richard, harry, aubrey, henry, ursini</small></p>
-</a>
-<a class="idx-card" href="cluster_13.html">
-  <h3>Cluster 13 — 13: nerrissa, cynthia, lucrecia</h3>
-  <p>288 characters · 75 authors · 1548–1641, median 1610<br>
-     <small>nerrissa, cynthia, lucrecia, esau, nymph, mido, lelias, julia, olinda, celestial</small></p>
-</a>
-<a class="idx-card" href="cluster_14.html">
-  <h3>Cluster 14 — 14: ich, jarbus, regan</h3>
-  <p>279 characters · 84 authors · 1548–1641, median 1608<br>
-     <small>ich, jarbus, regan, damon, earine, milesia, mellida, antonio, presens, ferrando</small></p>
-</a>
-<a class="idx-card" href="cluster_15.html">
-  <h3>Cluster 15 — 15: thu, gor, somnus</h3>
-  <p>272 characters · 76 authors · 1547–1640, median 1607<br>
-     <small>thu, gor, somnus, biancha, begar, vench, lorrique, hercles, jacob, broom</small></p>
-</a>
-<a class="idx-card" href="cluster_16.html">
-  <h3>Cluster 16 — 16: cassio, davus, dauphine</h3>
-  <p>262 characters · 81 authors · 1547–1641, median 1609<br>
-     <small>cassio, davus, dauphine, pamphilus, chremes, abigall, ithimore, ane, daw, desdemon</small></p>
+  <h3>Cluster 2 — Clowns &amp; fools</h3>
+  <p>ADAM <span style='color:var(--muted)'>(A Looking Glass for London and…, 1594)</span> · CLOWN <span style='color:var(--muted)'>(Orlando Furioso, 1594)</span> · HIRCIUS <span style='color:var(--muted)'>(The Virgin Martyr, 1622)</span><br>
+     354 characters · 247 plays · 1565–1641<br>
+     <small>nuncle, sim, tom, tailors, zounds, wares, butler, hobbyhorse, tout, oundes</small></p>
 </a>
 <a class="idx-card" href="cluster_17.html">
-  <h3>Cluster 17 — 17: quae, cricca, albumazar</h3>
-  <p>258 characters · 76 authors · 1547–1641, median 1615<br>
-     <small>quae, cricca, albumazar, quam, qui, ego, sicut, hoc, sunt, freres</small></p>
+  <h3>Cluster 17 — Hosts &amp; tradesmen</h3>
+  <p>CLOVE <span style='color:var(--muted)'>(Every Man Out of His Humor, 1600)</span> · RAMUS <span style='color:var(--muted)'>(The Massacre at Paris, 1596)</span> · RUSEE <span style='color:var(--muted)'>(The Bloody Brother (Rollo, Duke…, 1639)</span><br>
+     258 characters · 190 plays · 1547–1641<br>
+     <small>sicut, quasi, istis, habet, staple, hunc, alphabet, animal, pars, bully</small></p>
 </a>
 <a class="idx-card" href="cluster_18.html">
-  <h3>Cluster 18 — 18: nab, amyntas, awl</h3>
-  <p>257 characters · 84 authors · 1544–1640, median 1614<br>
-     <small>nab, amyntas, awl, troilus, nat, broom, ford, jenkin, rosalind, pru</small></p>
-</a>
-<a class="idx-card" href="cluster_19.html">
-  <h3>Cluster 19 — 19: senate, burbon, catiline</h3>
-  <p>256 characters · 73 authors · 1548–1641, median 1611<br>
-     <small>senate, burbon, catiline, lentulus, rodoricke, coronel, reignald, ego, chill, navarre</small></p>
-</a>
-<a class="idx-card" href="cluster_20.html">
-  <h3>Cluster 20 — 20: romeo, erastus, phillis</h3>
-  <p>255 characters · 79 authors · 1571–1640, median 1608<br>
-     <small>romeo, erastus, phillis, endymion, amyntas, awdrey, absalon, perseda, mosbie, mosca</small></p>
-</a>
-<a class="idx-card" href="cluster_21.html">
-  <h3>Cluster 21 — 21: enormity, ouerdoo, aull</h3>
-  <p>245 characters · 67 authors · 1544–1641, median 1608<br>
-     <small>enormity, ouerdoo, aull, ane, welse, sciarrha, madestee, bellario, latronello, hes</small></p>
-</a>
-<a class="idx-card" href="cluster_22.html">
-  <h3>Cluster 22 — 22: lysander, hermia, griselda</h3>
-  <p>241 characters · 71 authors · 1566–1640, median 1623<br>
-     <small>lysander, hermia, griselda, antonio, clarinda, ferdinand, philoclea, helena, furio, mario</small></p>
+  <h3>Cluster 18 — Comic middle (mixed)</h3>
+  <p>BELLAPERT <span style='color:var(--muted)'>(The Fatal Dowry, 1632)</span> · ZANTHIA <span style='color:var(--muted)'>(The Bondman (The Noble Bondman), 1624)</span> · FULVIA <span style='color:var(--muted)'>(Catiline His Conspiracy, 1611)</span><br>
+     257 characters · 204 plays · 1544–1640<br>
+     <small>nat, broom, topas, woodcock, messias, nidden, lenkin, humfrey, linen, pyed</small></p>
 </a>
 <a class="idx-card" href="cluster_23.html">
-  <h3>Cluster 23 — 23: urs, dorus, vapours</h3>
-  <p>227 characters · 71 authors · 1544–1641, median 1608<br>
-     <small>urs, dorus, vapours, amyntas, vapour, simperina, phillis, anne, nony, asotus</small></p>
+  <h3>Cluster 23 — Gulls &amp; simpletons</h3>
+  <p>WINNY <span style='color:var(--muted)'>(The Late Lancashire Witches, 1634)</span> · CORDELIA <span style='color:var(--muted)'>(King Lear, 1608)</span> · SORDIDO <span style='color:var(--muted)'>(Every Man Out of His Humor, 1600)</span><br>
+     227 characters · 184 plays · 1544–1641<br>
+     <small>vapours, vapour, nony, vrsla, vader, griselda, trivia, ogenes, tom, pigs</small></p>
+</a><h2 class='fam'>Principals &amp; leads</h2>
+<a class="idx-card" href="cluster_01.html">
+  <h3>Cluster 1 — Court principals (dynastic)</h3>
+  <p>STANLEY <span style='color:var(--muted)'>(Richard the Third, 1597)</span> · LEARCHUS <span style='color:var(--muted)'>(The Woman in the Moon, 1597)</span> · GERTRED <span style='color:var(--muted)'>(Hamlet, Prince of Denmark, 1603)</span><br>
+     360 characters · 222 plays · 1547–1641<br>
+     <small>ralph, blastfield, tanner, henry, jarbus, minola, george, humfrey, behalf, tailor</small></p>
+</a>
+<a class="idx-card" href="cluster_03.html">
+  <h3>Cluster 3 — History &amp; tragedy kings</h3>
+  <p>EDWARD II <span style='color:var(--muted)'>(Edward the Second, 1594)</span> · HENRY <span style='color:var(--muted)'>(The Massacre at Paris, 1596)</span> · GUISE <span style='color:var(--muted)'>(The Massacre at Paris, 1596)</span><br>
+     344 characters · 229 plays · 1566–1640<br>
+     <small>mephastophilis, caius, traitorous, salic, flewellen, harry, barons, mamon, mutius, crimes</small></p>
+</a>
+<a class="idx-card" href="cluster_04.html">
+  <h3>Cluster 4 — Statesman-rulers (Roman register)</h3>
+  <p>DIOCLETIAN <span style='color:var(--muted)'>(The Virgin Martyr, 1622)</span> · KING HENRY <span style='color:var(--muted)'>(1 Henry the Fourth, 1598)</span> · BASSIANUS <span style='color:var(--muted)'>(Titus Andronicus, 1594)</span><br>
+     341 characters · 215 plays · 1548–1641<br>
+     <small>renowned, harry, massinissa, apud, traitorous, yaw, horestes, quasi, glas, westmoreland</small></p>
+</a>
+<a class="idx-card" href="cluster_05.html">
+  <h3>Cluster 5 — Comedy principals &amp; witty servants</h3>
+  <p>ONION <span style='color:var(--muted)'>(The Case Is Altered, 1609)</span> · FALSTAFF <span style='color:var(--muted)'>(2 Henry the Fourth, 1600)</span> · THERSITES <span style='color:var(--muted)'>(Troilus and Cressida, 1609)</span><br>
+     336 characters · 226 plays · 1548–1641<br>
+     <small>faukenbridge, rees, bully, zounds, ningle, tospot, whee, fauconbridge, prolixity, ralph</small></p>
+</a>
+<a class="idx-card" href="cluster_16.html">
+  <h3>Cluster 16 — Intriguers &amp; politicians</h3>
+  <p>LORENZO <span style='color:var(--muted)'>(The Spanish Tragedy (Hieronimo is…, 1592)</span> · RISIO <span style='color:var(--muted)'>(Mother Bombie, 1594)</span> · BORACHIO <span style='color:var(--muted)'>(Much Ado About Nothing, 1600)</span><br>
+     262 characters · 187 plays · 1547–1641<br>
+     <small>ithimore, kate, leaguer, blastfield, knavery, notary, glycerie, harry, sango, divorce</small></p>
+</a>
+<a class="idx-card" href="cluster_20.html">
+  <h3>Cluster 20 — Romantic-comedy leads</h3>
+  <p>ALVIDA <span style='color:var(--muted)'>(A Looking Glass for London and…, 1594)</span> · AURELIO <span style='color:var(--muted)'>(May Day, 1611)</span> · JULIET <span style='color:var(--muted)'>(Romeo and Juliet, 1597)</span><br>
+     255 characters · 180 plays · 1571–1640<br>
+     <small>zelmane, absolon, orgalio, rasnes, savage, signiour, rsini, sal, blot, trat</small></p>
+</a>
+<a class="idx-card" href="cluster_22.html">
+  <h3>Cluster 22 — Romantic leads (high style)</h3>
+  <p>LEOSTHENES <span style='color:var(--muted)'>(The Bondman (The Noble Bondman), 1624)</span> · SELINA <span style='color:var(--muted)'>(The School of Compliment (Love…, 1631)</span> · VALENTINE <span style='color:var(--muted)'>(Monsieur Thomas (Father&#x27;s Own Son), 1639)</span><br>
+     241 characters · 177 plays · 1566–1640<br>
+     <small>griselda, marriam, cestus, thalander, loyalty, hamilcar, sufferings, peggy, ungrateful, faukenbridge</small></p>
+</a><h2 class='fam'>Messengers &amp; officers</h2>
+<a class="idx-card" href="cluster_06.html">
+  <h3>Cluster 6 — Battlefield messengers &amp; soldiers</h3>
+  <p>GENERAL <span style='color:var(--muted)'>(The Spanish Tragedy (Hieronimo is…, 1592)</span> · SOLDIER <span style='color:var(--muted)'>(If It Be Not Good, the Devil Is…, 1612)</span> · ENCELADUS <span style='color:var(--muted)'>(The Golden Age, or The Lives of…, 1611)</span><br>
+     332 characters · 227 plays · 1547–1641<br>
+     <small>crochet, armies, thundering, kicked, doister, hideous, renowned, tidle, pikes, harms</small></p>
+</a>
+<a class="idx-card" href="cluster_07.html">
+  <h3>Cluster 7 — Go-betweens &amp; merchants</h3>
+  <p>FABIO <span style='color:var(--muted)'>(The Young Admiral, 1637)</span> · AMBASSADOR <span style='color:var(--muted)'>(The Spanish Tragedy (Hieronimo is…, 1592)</span> · LORD <span style='color:var(--muted)'>(Macbeth, 1623)</span><br>
+     332 characters · 239 plays · 1544–1641<br>
+     <small>guilt, fitz, patent, bashas, rynaldo, parson, nat, relyke, sceptors, arthur</small></p>
+</a>
+<a class="idx-card" href="cluster_19.html">
+  <h3>Cluster 19 — Messengers &amp; professionals</h3>
+  <p>FREDERICK <span style='color:var(--muted)'>(As You Like It, 1623)</span> · MAYOR <span style='color:var(--muted)'>(Master Arden of Faversham in Kent, 1592)</span> · CALABRIA <span style='color:var(--muted)'>(If It Be Not Good, the Devil Is…, 1612)</span><br>
+     256 characters · 205 plays · 1548–1641<br>
+     <small>coronel, alii, chil, oyez, aides, crimes, traitorous, hercles, dick, threatens</small></p>
+</a><h2 class='fam'>Women &amp; intimacy</h2>
+<a class="idx-card" href="cluster_08.html">
+  <h3>Cluster 8 — Matrons, queens &amp; wives</h3>
+  <p>AMINTOR <span style='color:var(--muted)'>(The Maid&#x27;s Tragedy, 1619)</span> · MOLL <span style='color:var(--muted)'>(Northward Ho, 1607)</span> · EDITH <span style='color:var(--muted)'>(The Bloody Brother (Rollo, Duke…, 1639)</span><br>
+     329 characters · 222 plays · 1547–1641<br>
+     <small>handkerchief, dos, slander, loathed, vild, perjured, perjury, thursday, wedded, cuz</small></p>
+</a>
+<a class="idx-card" href="cluster_10.html">
+  <h3>Cluster 10 — Nurses, widows &amp; love-intermediaries</h3>
+  <p>SUFFOLK <span style='color:var(--muted)'>(1 Henry the Sixth, 1623)</span> · FRENCH LADY <span style='color:var(--muted)'>(The Four Prentices of London, 1615)</span> · GALATEA <span style='color:var(--muted)'>(Gallathea, 1592)</span><br>
+     306 characters · 227 plays · 1544–1641<br>
+     <small>fitz, signor, mall, dois, thursday, ladyships, massinissa, peggy, sal, tailors</small></p>
+</a><h2 class='fam'>Belief, allegory &amp; frame</h2>
+<a class="idx-card" href="cluster_09.html">
+  <h3>Cluster 9 — Civic &amp; moral abstractions</h3>
+  <p>USURER <span style='color:var(--muted)'>(A Looking Glass for London and…, 1594)</span> · CALIANAX <span style='color:var(--muted)'>(The Maid&#x27;s Tragedy, 1619)</span> · HOSTESS <span style='color:var(--muted)'>(1 Henry the Fourth, 1598)</span><br>
+     315 characters · 224 plays · 1544–1641<br>
+     <small>numps, numpes, gar, slid, lollard, shakbag, broom, peny, remuneration, buck</small></p>
+</a>
+<a class="idx-card" href="cluster_11.html">
+  <h3>Cluster 11 — Prologues &amp; light lovers</h3>
+  <p>SANDYS <span style='color:var(--muted)'>(Henry the Eighth (All Is True), 1623)</span> · CORDATUS <span style='color:var(--muted)'>(Every Man Out of His Humor, 1600)</span> · PLANET <span style='color:var(--muted)'>(Jack Drum&#x27;s Entertainment…, 1601)</span><br>
+     293 characters · 212 plays · 1561–1641<br>
+     <small>numps, palemon, butter, assyrian, nat, numpes, crites, cousse, rhyme, slid</small></p>
+</a>
+<a class="idx-card" href="cluster_13.html">
+  <h3>Cluster 13 — Gods, priests &amp; allegorical dignity</h3>
+  <p>QUEEN ELIZA <span style='color:var(--muted)'>(Histriomastix, or The Player…, 1610)</span> · HARMONY <span style='color:var(--muted)'>(The Inner-Temple Masque, or The…, 1619)</span> · PRIEST <span style='color:var(--muted)'>(The Rape of Lucrece, 1608)</span><br>
+     288 characters · 209 plays · 1548–1641<br>
+     <small>sysimethres, chooses, crites, dooste, elementis, luife, yeah, lasting, objects, eudoxiam</small></p>
+</a>
+<a class="idx-card" href="cluster_14.html">
+  <h3>Cluster 14 — Choric &amp; tragic frame voices</h3>
+  <p>CORNELIA <span style='color:var(--muted)'>(The White Devil (Vittoria…, 1612)</span> · KATHERINE <span style='color:var(--muted)'>(Jack Drum&#x27;s Entertainment…, 1601)</span> · CORNELIA <span style='color:var(--muted)'>(Cornelia (Pompey the Great His…, 1594)</span><br>
+     279 characters · 217 plays · 1548–1641<br>
+     <small>jarbus, earine, sewt, alack, mishap, harms, hodg, bestis, caitiff, crimes</small></p>
+</a>
+<a class="idx-card" href="cluster_15.html">
+  <h3>Cluster 15 — Personified vice &amp; devils</h3>
+  <p>GENTLEMAN <span style='color:var(--muted)'>(The School of Compliment (Love…, 1631)</span> · WAR <span style='color:var(--muted)'>(Histriomastix, or The Player…, 1610)</span> · SECOND PYRGUS <span style='color:var(--muted)'>(Poetaster, or The Arraignment, 1602)</span><br>
+     272 characters · 205 plays · 1547–1640<br>
+     <small>hercles, broom, ang, sight, guilt, idol, beam, snakes, heinous, dagon</small></p>
 </a>
 <a class="idx-card" href="cluster_24.html">
-  <h3>Cluster 24 — 24: ich, mardonius, bacon</h3>
-  <p>190 characters · 69 authors · 1547–1641, median 1613<br>
-     <small>ich, mardonius, bacon, gammer, bungay, urania, dol, gobrius, diccon, fairy</small></p>
+  <h3>Cluster 24 — Conjurers &amp; prophets</h3>
+  <p>FLAVIA <span style='color:var(--muted)'>(The Young Admiral, 1637)</span> · MEDEA <span style='color:var(--muted)'>(The Brazen Age (The Age of Brass), 1613)</span> · BELINDA <span style='color:var(--muted)'>(The Grateful Servant (The…, 1630)</span><br>
+     190 characters · 151 plays · 1547–1641<br>
+     <small>spells, lungs, nat, asmody, casane, metals, chould, chil, aphorisms, fressingfield</small></p>
+</a><h2 class='fam'>Authority &amp; law</h2>
+<a class="idx-card" href="cluster_12.html">
+  <h3>Cluster 12 — Attendant lords &amp; functionaries</h3>
+  <p>CARDINAL <span style='color:var(--muted)'>(The Noble Spanish Soldier (The…, 1634)</span> · OLD GERALDINE <span style='color:var(--muted)'>(The English Traveller, 1633)</span> · ERMENHILD <span style='color:var(--muted)'>(If It Be Not Good, the Devil Is…, 1612)</span><br>
+     290 characters · 210 plays · 1565–1641<br>
+     <small>harry, henry, behalf, guiltless, dou, faction, concern, tee, loyalty, distrusts</small></p>
+</a>
+<a class="idx-card" href="cluster_21.html">
+  <h3>Cluster 21 — Law &amp; officialdom</h3>
+  <p>EUARCHUS <span style='color:var(--muted)'>(The Arcadia, 1640)</span> · GOVERNOR <span style='color:var(--muted)'>(The Widow&#x27;s Tears, 1612)</span> · METELLUS <span style='color:var(--muted)'>(Caesar and Pompey (The Wars of…, 1631)</span><br>
+     245 characters · 180 plays · 1544–1641<br>
+     <small>enormity, madestee, welse, parson, dois, parliament, bench, devysit, weill, worshipful</small></p>
 </a>
 
 <div class="footer">

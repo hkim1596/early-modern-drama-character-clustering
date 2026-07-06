@@ -61,22 +61,28 @@
 
   <h2>Per-cluster evidence</h2>
   <p>
-    For each cluster, a dedicated page lists every character, samples of their actual speech, the
-    decade and author distribution, and the plot summary of every play represented in the cluster.
-    Use these to verify the archetypal interpretation against the raw data.
+    For each cluster, a dedicated page names the archetype, shows its most typical and most
+    familiar members, then lists every character in chronological order — the earliest members
+    are the candidate prototypes of that voice; later ones follow suit. Each row links to the
+    character's full speech; typicality (cosine similarity to the cluster centre) shows how
+    central a member is. Use these pages to verify the archetypal interpretation against the raw data.
   </p>
   <p><a class="repo" href="cluster_evidence.html">→ Browse all clusters with evidence</a></p>
 
   <h2>How to read the map</h2>
-  <p>Each point is a single character. Colors encode cluster (HDBSCAN). Hover for play, author, date, genre, role, cluster, and the cluster's top distinguishing words. Use the dropdown menus at the right to highlight a single decade, genre, author, play, play type, or theater at a time.</p>
+  <p>Each point is a single character; color encodes its archetype cluster. Hover for play,
+  author, date, genre, role, and the cluster's distinguishing words. Click a legend entry to
+  hide that cluster, double-click to isolate it. The dropdown menus highlight a single decade,
+  genre, author, play, play type, theater, or company — everything else dims. Characters
+  speaking fewer than 150 words are not shown (too little text for a stable stylistic signature).</p>
 
   <h2>About</h2>
-  <p>Characters were extracted from <a href="https://textcreationpartnership.org/" target="_blank" rel="noopener">EEBO-TCP</a>; play metadata is merged from Wiggins &amp; Richardson's <em>British Drama: A Catalogue of Plays</em> and from <a href="https://deep.sas.upenn.edu/" target="_blank" rel="noopener">DEEP</a>. Each character's full speech is encoded with the <code>Alibaba-NLP/gte-Qwen2-1.5B-instruct</code> long-context sentence model — no chunking. Clustering uses UMAP (5-D, cosine) then HDBSCAN; the visible 2-D map is a separate UMAP projection of the same embeddings.</p>
+  <p>Characters were extracted from <a href="https://textcreationpartnership.org/" target="_blank" rel="noopener">EEBO-TCP</a>; play metadata is merged from Wiggins &amp; Richardson's <em>British Drama: A Catalogue of Plays</em> and from <a href="https://deep.sas.upenn.edu/" target="_blank" rel="noopener">DEEP</a>. Speech is typographically normalized, spelling-modernized (MorphAdorner), and proper nouns are masked so clusters reflect register rather than shared names. Each character's speech is embedded with <code>Alibaba-NLP/gte-Qwen2-1.5B-instruct</code> in ~1,024-token windows, mean-pooled per character; play-level signal is removed by leave-one-out play centering; the typology is spherical k-means (k=25). The visible 2-D map is a UMAP projection for display only — cluster membership comes from the full 1,536-dimensional space.</p>
 
   <p><a class="repo" href="https://github.com/hkim1596/early-modern-drama-character-clustering">→ View the source code on GitHub</a></p>
 
   <div class="footer">
-    Built with Python, sentence-transformers, UMAP, HDBSCAN, and Plotly.
+    Built with Python, transformers, scikit-learn, UMAP, and Plotly.
   </div>
 </div>
 </body>

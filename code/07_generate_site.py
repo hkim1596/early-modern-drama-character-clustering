@@ -99,6 +99,61 @@ mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
 .idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
 .idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
 .footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+th.sortable { cursor: pointer; user-select: none; }
+th.sortable:hover { background: #e8e8df; }
+th.sortable::after { content: " ↕"; color: var(--muted); font-size: .8em; }
+.badge { display: inline-block; font-size: .72rem; font-weight: 600; color: #7a6a2e;
+         background: #f5eecb; border-radius: 8px; padding: 0 7px; margin-left: 6px; vertical-align: 1px; }
+.landmarks { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; margin: .6em 0 1em; }
+.lm-card { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 14px; font-size: .9rem; }
+.lm-card .who { font-weight: 600; }
+.lm-card .who a { color: var(--accent); text-decoration: none; }
+.lm-card .who a:hover { text-decoration: underline; }
+.lm-card .whence { color: var(--muted); font-size: .86rem; }
+details { margin: 1em 0; }
+details > summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; padding: .3em 0; }
+h2.fam { margin-top: 2.2em; border-bottom: 1px solid var(--rule); padding-bottom: .3em; }
+"""
+
+# Authors whose plays general readers are most likely to know — used to pick
+# "familiar landmarks" per cluster (never affects the clustering itself).
+FAMILIAR_AUTHORS = {"Shakespeare", "Jonson", "Marlowe", "Middleton", "Fletcher",
+                    "Webster", "Kyd", "Ford", "Massinger", "Beaumont", "Dekker",
+                    "Chapman", "Heywood", "Marston", "Shirley", "Lyly", "Greene"}
+
+
+def load_cluster_meta() -> dict:
+    """Curated names/families from data/cluster_names__<name>.json (optional)."""
+    path = config.DATA_DIR / f"cluster_names__{config.CLUSTER_TABLES[0]}.json"
+    if not path.exists():
+        return {}
+    import json as _json
+    with open(path, encoding="utf-8") as f:
+        return {int(k): v for k, v in _json.load(f).get("clusters", {}).items()}
+
+
+SORT_JS = """
+<script>
+document.querySelectorAll("table.sortable th").forEach(function (th, ci) {
+  th.classList.add("sortable");
+  th.addEventListener("click", function () {
+    var tb = th.closest("table").querySelector("tbody");
+    var rows = Array.from(tb.querySelectorAll("tr"));
+    var dir = th.dataset.dir === "asc" ? -1 : 1;
+    th.dataset.dir = dir === 1 ? "asc" : "desc";
+    rows.sort(function (a, b) {
+      var x = a.children[ci].dataset.v ?? a.children[ci].textContent.trim();
+      var y = b.children[ci].dataset.v ?? b.children[ci].textContent.trim();
+      var nx = parseFloat(x), ny = parseFloat(y);
+      if (!isNaN(nx) && !isNaN(ny)) return (nx - ny) * dir;
+      if (x === "" && y !== "") return 1;
+      if (y === "" && x !== "") return -1;
+      return x.localeCompare(y) * dir;
+    });
+    rows.forEach(function (r) { tb.appendChild(r); });
+  });
+});
+</script>
 """
 
 
@@ -307,53 +362,92 @@ def render_character_block_for_cluster_page(row: pd.Series, keywords: list[str])
 """
 
 
+def _first_author(r) -> str:
+    return str(r.get("author") or "").split(",")[0].strip()
+
+
 def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame) -> str:
-    sub = df[df.cluster == cluster_id].copy().sort_values("n_words", ascending=False).reset_index(drop=True)
+    # Chronological order: the genealogical reading — earliest members first,
+    # successors after suit.
+    sub = (df[df.cluster == cluster_id].copy()
+           .sort_values(["year", "n_words"], ascending=[True, False], na_position="last")
+           .reset_index(drop=True))
     n = len(sub)
     label = cluster_label_for(cluster_id, df)
     top_words_str = labels.loc[cluster_id, "top_words"] if cluster_id in labels.index else ""
     keywords = _parse_top_words(top_words_str)
+    if "centroid_sim" not in sub.columns:
+        sub["centroid_sim"] = float("nan")
 
     author_counts = (
         sub["author"].fillna("(unknown)").astype(str)
-        .str.split(",").str[0].str.strip()
+        .str.split(",").str[0].str.strip().replace("", "(unknown)")
         .value_counts()
     )
     decade_counts = sub["Date_Decade"].fillna("Unknown").astype(str).value_counts().to_dict()
+    genre_counts = sub["genre"].replace("", float("nan")).dropna().value_counts()
+    years = sub["year"].dropna()
+    yr_str = f"{int(years.min())}–{int(years.max())} (median {int(years.median())})" if len(years) else "undated"
 
-    title = f"Cluster {cluster_id} — {label}"
+    title = f"Cluster {cluster_id} — {label.split(': ', 1)[-1]}"
 
-    # Top-N characters with excerpts inline
-    top_for_excerpts = sub.head(TOP_CHARS_WITH_EXCERPTS_ON_CLUSTER)
-    excerpt_blocks = "\n".join(
-        render_character_block_for_cluster_page(r, keywords) for _, r in top_for_excerpts.iterrows()
-    )
+    # ---- Landmarks: most typical + most familiar ----------------------
+    typical = sub.nlargest(min(6, n), "centroid_sim")
+    fam_mask = sub["author"].astype(str).apply(
+        lambda a: any(f in a for f in FAMILIAR_AUTHORS))
+    familiar = (sub[fam_mask & ~sub.index.isin(typical.index)]
+                .nlargest(4, "n_words"))
 
-    # Full table of every character (sortable)
+    def lm_card(r, tag):
+        slug = slugify(r.get("character_id", ""))
+        sim = "" if pd.isna(r.get("centroid_sim")) else f" · typicality {r['centroid_sim']:.2f}"
+        yr = "" if pd.isna(r.get("year")) else f", {int(r['year'])}"
+        return (f'<div class="lm-card"><div class="who">'
+                f'<a href="characters/{slug}.html">{esc(r.get("display_name") or "?")}</a>'
+                f'<span class="badge">{tag}</span></div>'
+                f'<div class="whence">{esc(truncate(str(r.get("title") or ""), 60))}'
+                f'{yr} · {esc(_first_author(r))}{sim}</div></div>')
+
+    landmarks_html = "".join([lm_card(r, "typical") for _, r in typical.iterrows()] +
+                             [lm_card(r, "familiar") for _, r in familiar.iterrows()])
+
+    # ---- Full chronological roster ------------------------------------
+    dated_pos = sub.index[sub["year"].notna()].tolist()
+    early_set = set(dated_pos[:5])
     table_rows = []
-    for _, r in sub.iterrows():
+    for i, r in sub.iterrows():
         slug = slugify(r.get("character_id", ""))
         nm = esc(r.get("display_name") or "?")
-        play = esc(r.get("title", ""))
-        au = esc((r.get("author") or "").split(",")[0])
+        early = '<span class="badge">early</span>' if i in early_set else ""
+        play = esc(truncate(str(r.get("title") or ""), 60))
+        au = esc(_first_author(r))
         yr = "" if pd.isna(r.get("year")) else int(r["year"])
         gn = esc(r.get("genre", ""))
-        co = esc(r.get("company", ""))
         nw = "" if pd.isna(r.get("n_words")) else int(r["n_words"])
+        sim = "" if pd.isna(r.get("centroid_sim")) else f"{r['centroid_sim']:.2f}"
         table_rows.append(
-            f"<tr><td><a href='characters/{slug}.html'>{nm}</a></td>"
-            f"<td>{play}</td><td>{au}</td><td class='num'>{yr}</td>"
-            f"<td>{gn}</td><td>{co}</td><td class='num'>{nw}</td></tr>"
+            f"<tr><td><a href='characters/{slug}.html'>{nm}</a>{early}</td>"
+            f"<td>{play}</td><td>{au}</td><td class='num' data-v='{yr if yr != '' else 9999}'>{yr}</td>"
+            f"<td>{gn}</td><td class='num'>{nw}</td>"
+            f"<td class='num' data-v='{sim if sim else -1}'>{sim}</td></tr>"
         )
     table_html = (
-        "<table><thead><tr>"
+        "<table class='sortable'><thead><tr>"
         "<th>Character</th><th>Play</th><th>Author</th><th>Year</th>"
-        "<th>Genre</th><th>Company</th><th>Words</th>"
+        "<th>Genre</th><th>Words</th><th>Typicality</th>"
         "</tr></thead><tbody>"
         + "".join(table_rows) + "</tbody></table>"
     )
 
-    # Plot summaries
+    # ---- Representative excerpts: typical ∪ earliest ∪ familiar --------
+    rep_ids = list(dict.fromkeys(          # preserve order, drop dupes
+        list(typical.index) + dated_pos[:5] + list(familiar.index)))[:12]
+    rep = sub.loc[rep_ids].sort_values("year", na_position="last")
+    excerpt_blocks = "\n".join(
+        render_character_block_for_cluster_page(r, keywords) for _, r in rep.iterrows()
+    )
+
+    # ---- Plot summaries (collapsed) ------------------------------------
     plays = sub.drop_duplicates("TCP").sort_values("year", na_position="last")
     plot_blocks = []
     for _, r in plays.iterrows():
@@ -368,13 +462,7 @@ def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame)
         )
     plot_html = "\n".join(plot_blocks) if plot_blocks else "<p><em>No plot summaries available.</em></p>"
 
-    overflow_note = ""
-    if n > TOP_CHARS_WITH_EXCERPTS_ON_CLUSTER:
-        overflow_note = (
-            f'<p class="lede" style="margin-top:.4em">Showing important excerpts for the '
-            f'{TOP_CHARS_WITH_EXCERPTS_ON_CLUSTER} longest characters; '
-            f'the full speeches of all {n} are on the individual character pages linked below.</p>'
-        )
+    gtop = " · ".join(f"{esc(k)} {v / n:.0%}" for k, v in genre_counts.head(3).items())
 
     return f"""<!doctype html>
 <html lang="en"><head>
@@ -391,39 +479,50 @@ def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame)
 </nav>
 
 <h1>{esc(title)}</h1>
-<p class="lede">Each character is shown with two algorithmically-selected
-excerpts containing the cluster's distinguishing words (highlighted). Click any
-character's name to open their full-speech page.</p>
+<p class="lede">Distinguishing vocabulary: <em>{esc(top_words_str)}</em></p>
 
 <div class="kvp">
   <span><b>{n}</b> characters</span>
-  <span><b>{len(author_counts)}</b> authors</span>
   <span><b>{sub['TCP'].nunique()}</b> plays</span>
-  <span>Distinguishing words: <b>{esc(top_words_str)}</b></span>
+  <span><b>{len(author_counts)}</b> authors</span>
+  <span>dates <b>{yr_str}</b></span>
+  <span>{gtop}</span>
 </div>
 
-<h2>Authorship</h2>
-{render_author_tags(author_counts)}
+<h2>Landmarks</h2>
+<p class="lede" style="font-size:.92rem">The most <b>typical</b> members (closest to the
+cluster centroid) and the most <b>familiar</b> ones (major-author roles). Typicality is
+cosine similarity to the cluster centre — low values mean a blended, atypical member.</p>
+<div class="landmarks">{landmarks_html}</div>
 
-<h2>Decade distribution</h2>
-{render_decade_bars(decade_counts)}
-
-<h2>Characters with important excerpts</h2>
-{overflow_note}
-{excerpt_blocks}
-
-<h2>All {n} characters in this cluster</h2>
+<h2>All {n} characters, oldest first</h2>
+<p class="lede" style="font-size:.92rem">A genealogical reading: the earliest members
+(<span class="badge">early</span>) are the candidate prototypes of this voice; later
+members follow suit. Click a column header to re-sort.</p>
 {table_html}
 
-<h2>Plot summaries for plays represented</h2>
+<h2>Representative speech excerpts</h2>
+<p class="lede" style="font-size:.92rem">Shown for the typical, earliest, and familiar
+members above — passages containing the cluster's distinguishing words (highlighted).</p>
+{excerpt_blocks}
+
+<details><summary>Authorship &amp; decade distribution</summary>
+<h3>Authorship</h3>
+{render_author_tags(author_counts)}
+<h3>Decade distribution</h3>
+{render_decade_bars(decade_counts)}
+</details>
+
+<details><summary>Plot summaries for the {sub['TCP'].nunique()} plays represented</summary>
 {plot_html}
+</details>
 
 <div class="footer">
   Generated automatically from <code>cluster_xy_table__{config.CLUSTER_TABLES[0]}.csv</code> by
   <code>code/07_generate_site.py</code>. View the
   <a href="https://github.com/hkim1596/early-modern-drama-character-clustering">source on GitHub</a>.
 </div>
-</div></body></html>"""
+</div>{SORT_JS}</body></html>"""
 
 
 def render_character_page(row: pd.Series, df: pd.DataFrame, labels: pd.DataFrame) -> str:
@@ -463,13 +562,16 @@ def render_character_page(row: pd.Series, df: pd.DataFrame, labels: pd.DataFrame
         ("Speech prefix(es)", raw),
         ("Words",           n_words),
         ("Characters",      n_chars),
+        ("Typicality",      "" if pd.isna(row.get("centroid_sim"))
+                            else f"{row['centroid_sim']:.2f} (cosine to cluster centroid)"),
         ("TCP id",          row.get("TCP", "")),
         ("BritDrama no.",   "" if pd.isna(row.get("brit_drama_number")) else row.get("brit_drama_number")),
         ("Cluster",         f"Cluster {cluster_id} — {label}" if cluster_id != -1 else "Outlier (no cluster)"),
     ]:
-        if val == "" or pd.isna(val if not isinstance(val, str) else None):
+        if val is None or (isinstance(val, float) and pd.isna(val)):
             continue
-        if isinstance(val, str) and not val.strip():
+        sval = str(val).strip()
+        if not sval or sval.lower() == "nan":
             continue
         meta_rows.append(f"<tr><th>{esc(label_text)}</th><td>{esc(val)}</td></tr>")
     meta_html = "<table>" + "\n".join(meta_rows) + "</table>"
@@ -539,22 +641,46 @@ def render_character_page(row: pd.Series, df: pd.DataFrame, labels: pd.DataFrame
 
 
 def render_master_index(df: pd.DataFrame, labels: pd.DataFrame) -> str:
-    cards = []
+    meta = load_cluster_meta()
+    family_order = list(dict.fromkeys(
+        [meta[c].get("family", "Other") for c in sorted(meta)] + ["Other"]))
+    by_family: dict[str, list[str]] = {f: [] for f in family_order}
+
     for cid in sorted(c for c in df.cluster.unique() if c != -1):
         sub = df[df.cluster == cid]
         n = len(sub)
         top_words = labels.loc[cid, "top_words"] if cid in labels.index else ""
-        author_counts = (
-            sub["author"].fillna("(unknown)").astype(str).str.split(",").str[0].str.strip().value_counts()
-        )
+        name = meta.get(cid, {}).get("name", "")
+        headline = f"Cluster {cid} — {esc(name)}" if name \
+            else f"Cluster {cid} — {esc(cluster_label_for(cid, df))}"
         years = sub["year"].dropna()
-        yr_str = f"{int(years.min())}–{int(years.max())}, median {int(years.median())}" if len(years) else ""
-        cards.append(f"""
+        yr_str = f"{int(years.min())}–{int(years.max())}" if len(years) else ""
+
+        # Three exemplar members: familiar-author roles first, then most typical
+        s = sub.copy()
+        s["_fam"] = s["author"].astype(str).apply(
+            lambda a: any(f in a for f in FAMILIAR_AUTHORS))
+        s = s.sort_values(["_fam", "centroid_sim"], ascending=[False, False]) \
+            if "centroid_sim" in s.columns else s
+        ex = []
+        for _, r in s.head(3).iterrows():
+            yr = "" if pd.isna(r.get("year")) else f" {int(r['year'])}"
+            ex.append(f"{esc(r.get('display_name') or '?')} "
+                      f"<span style='color:var(--muted)'>({esc(truncate(str(r.get('title') or ''), 34))},{yr})</span>")
+        card = f"""
 <a class="idx-card" href="cluster_{cid:02d}.html">
-  <h3>Cluster {cid} — {esc(cluster_label_for(cid, df))}</h3>
-  <p>{n} characters · {len(author_counts)} authors · {yr_str}<br>
+  <h3>{headline}</h3>
+  <p>{' · '.join(ex)}<br>
+     {n} characters · {sub['TCP'].nunique()} plays · {yr_str}<br>
      <small>{esc(top_words)}</small></p>
-</a>""")
+</a>"""
+        fam = meta.get(cid, {}).get("family", "Other")
+        by_family.setdefault(fam, []).append(card)
+
+    sections = []
+    for fam in family_order:
+        if by_family.get(fam):
+            sections.append(f"<h2 class='fam'>{esc(fam)}</h2>" + "".join(by_family[fam]))
 
     return f"""<!doctype html>
 <html lang="en"><head>
@@ -565,12 +691,13 @@ def render_master_index(df: pd.DataFrame, labels: pd.DataFrame) -> str:
 </head><body><div class="wrap">
 
 <nav class="crumbs"><a href="index.html">Home</a> › <span>All clusters</span></nav>
-<h1>Per-cluster evidence</h1>
-<p class="lede">Each cluster's full character list, important speech excerpts, decade
-distribution, authorial mix, and the plot summaries of every play represented.
-Click into a cluster, then any character's name, to read their full speech with metadata.</p>
+<h1>Character archetypes — all clusters</h1>
+<p class="lede">Twenty-five voice clusters over 7,339 characters from 550+ plays, grouped
+into families. Each cluster page lists every member chronologically (candidate prototypes
+first), with landmarks, typicality scores, and speech evidence. Characters speaking fewer
+than 150 words are not clustered.</p>
 
-{''.join(cards)}
+{''.join(sections)}
 
 <div class="footer">
   Generated automatically by <code>code/07_generate_site.py</code>.

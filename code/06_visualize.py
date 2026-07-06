@@ -114,42 +114,34 @@ def build_figure(df: pd.DataFrame, preset_name: str) -> go.Figure:
     color_map = {lab: palette[i % len(palette)] for i, lab in enumerate(labels)}
     color_map["-1: outliers"] = "lightgrey"
 
-    point_colors = [color_map[l] for l in df["topic_label"]]
-    n = len(df)
-
+    # ----- One trace per cluster -----
+    # Native legend interactivity: click a legend entry to hide that cluster,
+    # double-click to isolate it. (The old design had a single points trace
+    # plus dummy legend entries, so legend clicks did nothing.)
     fig = go.Figure()
-    # Trace 0: the actual points. Restyle calls update this trace.
-    fig.add_trace(go.Scattergl(
-        x=df["x"], y=df["y"], mode="markers",
-        marker=dict(size=5, opacity=0.7, color=point_colors,
-                    line=dict(width=0, color="rgba(0,0,0,0)")),
-        hovertext=df["_hover"], hoverinfo="text",
-        showlegend=False,
-        name="points",
-    ))
-    # Invisible traces just to populate the cluster legend
-    for lab in labels:
+    trace_rows: list[list[int]] = []   # df row positions per trace
+    pos_in_trace = {}                  # df row position -> (trace_i, index within trace)
+    for t_i, lab in enumerate(labels):
+        rows = df.index[df["topic_label"] == lab].tolist()
+        trace_rows.append(rows)
+        for j, r in enumerate(rows):
+            pos_in_trace[r] = (t_i, j)
         fig.add_trace(go.Scattergl(
-            x=[None], y=[None], mode="markers",
-            marker=dict(size=10, color=color_map[lab]),
+            x=df.loc[rows, "x"], y=df.loc[rows, "y"], mode="markers",
+            marker=dict(size=5, opacity=0.75, color=color_map[lab]),
+            selected=dict(marker=dict(size=9, opacity=1.0)),
+            unselected=dict(marker=dict(size=4, opacity=0.12)),
+            hovertext=df.loc[rows, "_hover"], hoverinfo="text",
             name=lab, showlegend=True,
         ))
+    n_traces = len(labels)
+    all_trace_idx = list(range(n_traces))
 
     # ----- Dropdown highlight menus -----
-    # A dedicated highlight overlay trace sits on top of the points. Each
-    # dropdown option only carries the x/y/colors of ITS OWN members, so the
-    # HTML stays small (the old per-option full-length restyle arrays made the
-    # file >100 MB, over GitHub's hard limit). hoverinfo="skip" lets hover
-    # fall through to the underlying points.
-    highlight_idx = len(fig.data)
-    fig.add_trace(go.Scattergl(
-        x=[], y=[], mode="markers",
-        marker=dict(size=11, opacity=1.0, color=[],
-                    line=dict(width=1.5, color="black")),
-        hoverinfo="skip", showlegend=False, name="highlight",
-    ))
-
-    # Pre-build the list of (axis, label, sorted values) to know how many we have
+    # Selecting a value sets `selectedpoints` per trace: members render at
+    # full size/opacity, everything else dims (unselected style). Payload per
+    # option is just the member indices, so the HTML stays small (per-option
+    # full-length restyle arrays once made this file >100 MB).
     axes_to_show = []
     for col, label in HIGHLIGHT_AXES:
         if col not in df.columns:
@@ -164,29 +156,24 @@ def build_figure(df: pd.DataFrame, preset_name: str) -> go.Figure:
             values = sorted([str(v) for v in raw_values])
         axes_to_show.append((col, label, values))
 
-    xs_all = df["x"].tolist()
-    ys_all = df["y"].tolist()
+    reset_sel = {"selectedpoints": [None] * n_traces}
 
-    # Layout: dropdowns in a single horizontal row above the plot, legend on the right.
     updatemenus = []
     n_axes = len(axes_to_show)
-    # Distribute dropdowns across the plot's width (x = 0.0 .. 0.92 in figure-relative coords)
     x_step = (0.92 / max(n_axes - 1, 1)) if n_axes > 1 else 0
     for i, (col, label, values) in enumerate(axes_to_show):
         buttons = [dict(label=f"All ({label})", method="restyle",
-                        args=[{"x": [[]], "y": [[]], "marker.color": [[]]},
-                              [highlight_idx]])]
+                        args=[reset_sel, all_trace_idx])]
         series = df[col].astype(str)
         for v in values:
-            idx = series.index[series == v].tolist()
+            per_trace: list[list[int]] = [[] for _ in range(n_traces)]
+            for r in series.index[series == v]:
+                t_i, j = pos_in_trace[r]
+                per_trace[t_i].append(j)
             buttons.append(dict(
                 label=f"{label}: {v}",
                 method="restyle",
-                args=[{
-                    "x": [[xs_all[j] for j in idx]],
-                    "y": [[ys_all[j] for j in idx]],
-                    "marker.color": [[point_colors[j] for j in idx]],
-                }, [highlight_idx]],
+                args=[{"selectedpoints": per_trace}, all_trace_idx],
             ))
 
         updatemenus.append(dict(
@@ -204,7 +191,8 @@ def build_figure(df: pd.DataFrame, preset_name: str) -> go.Figure:
                    font=dict(size=18)),
         xaxis=dict(visible=False),
         yaxis=dict(visible=False),
-        legend=dict(title="Cluster", itemsizing="constant",
+        legend=dict(title="Cluster<br><span style='font-size:11px;color:#888'>click: hide · double-click: isolate</span>",
+                    itemsizing="constant",
                     x=1.02, xanchor="left", y=1.0, yanchor="top"),
         updatemenus=updatemenus,
         width=1400, height=920,

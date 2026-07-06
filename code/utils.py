@@ -65,8 +65,32 @@ def derive_display_columns(df):
             errors="coerce")
         df["year"] = yr
 
+    # Clean play title: the raw `title` column is the title-page transcription
+    # (truncated, with TCP damage glyphs: "2 The Honest Whore ~e>"). Prefer the
+    # DEEP catalogue title (item_title / title.1), fall back to a de-junked
+    # transcription, then the TCP id.
+    def _dejunk_title(t):
+        if not isinstance(t, str):
+            return t
+        s = t
+        for _ in range(3):   # strip trailing tokens containing damage glyphs
+            s2 = re.sub(r"\s+\S*[~<>«»▪〈〉\^]\S*\s*$", "", s).rstrip(" ,;·-")
+            if s2 == s:
+                break
+            s = s2
+        return s.strip() or t
+    clean = first_filled("item_title", "title.1")
+    if "title" in df.columns:
+        clean = clean.fillna(df["title"].map(_dejunk_title))
+    if "TCP" in df.columns:
+        clean = clean.fillna(df["TCP"])
+    df["title_raw"] = df.get("title")
+    df["title"] = clean
+
     if "author" not in df.columns:
         df["author"] = first_filled("authors_display", "title_page_author", "Author")
+        # authors_display carries numeric junk for some plays ("548")
+        df.loc[df["author"].astype(str).str.fullmatch(r"\d+"), "author"] = float("nan")
     if "genre" not in df.columns:
         df["genre"] = first_filled("genre_brit_display", "genre_annals_display", "genre_wiggins")
     if "company" not in df.columns:
