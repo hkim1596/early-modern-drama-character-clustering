@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WINE in Wine, Beer, and Ale Together · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_11.html">Cluster 11 — 11: ane, cuze, numps</a> ›
+  <span>WINE</span>
+</nav>
+
+<h1>WINE</h1>
+<p class="lede">in <em>Wine, Beer, and Ale Together</em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1629</td></tr>
+<tr><th>Words</th><td>959</td></tr>
+<tr><th>Characters</th><td>5120</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 11 (<em>ane, cuze, numps, deliro, palemon, mitis…</em>). Matches are highlighted.</p>
+<div class="excerpt">credit of a rare Physician, that sends more to the Church and Churchyard, then diseases do: I Wine, comfort and preserve, let that be my Character. I am cousin Germane to the blood, not so Like in my appearance as I am in nature, I repair the debilities of age, and revive the re frigerated spirits, exhilarate the heart, and steel</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Sugar, you are a sweet youth, you wait well. Yowl turn Surgeon, or Physician shortly. So sir, now you put me in mind on&#x27;t, I hear say you run a wenching, and keep women&#x27;s company too much. But some of them are Sour enough. Indeed one of your sweethearts complained tother day you made her teeth rotten. Well sirrah, I say, take heed of women. Why sure thou Wertenberg wrapped in thy mother&#x27;s smock. ☞ Well sirrah, enough of this discourse, you are for the Women, but we men have a better companion, and indeed bitter, as thou art sweet, that&#x27;s this Tobacco. There&#x27;s thy ignorance, &#x27;tis and excellent discourser, and a help for the imperfections of nature. Why, when a man hath not the wit to deliver his meaning in good words, this being taken, dus presently help him to spit it out Gentlemanlike. How? not men? why? How, Beer? we are not very good friends, no mat ter, I scorn to avoid him. So me thinks? how now Beer, running atilt, dost not know me? The wall of me, you would have your head and the wall knocked together, learn better manners, or I may chance to broach you. Not to me? From France, from Spain, from Greece. Where thou must never hope to come: who dares deny that I have been a traveler? The vessel of your wit leaks, Beer: why thou art drunk. Sirrah, if I take you in hand, I shall make you small Beer. Too hard for me? away Boy, I&#x27;ll be as hard as he for his heart: alas, he&#x27;s but weak Beer, if I give him but a tap, it shall stay him from running out thus. Come, come, Beer, you forget how low you were tother day: provoke me not too much, lest I bestow a firkin on you. Remember the place, and weapon. Alas poor Beer, I account him dead already. Thou hast disgraced thy self in thy comparisons. Wine must be acknowledged the Nectar of all drinks, the prince of Liquours. Oh base Ale! Antiquity? your first reason&#x27;s a very small one. We must bear with him, &#x27;tis in his Ale. If we should grant your argument, you would gain little by&#x27;t, go together, I do allow you both a couple of stale companions. And yet I have not herd that either of you both have fined for Alderman, though I confess something has been attempted out of neck and froth. Be ruled by me, Beer and Ale, &amp; aspire no higher then the Common-Councell-houses? O impudence, that either of you should talk of houses, when sometime you are both glad of a tub: dee hear Ale? do not you know the man that did the Bottle bring? Learning? If you have the Liberal Sciences, pray be free, and lets hear some. Oh learned Ale, you scorn to make Indentures any more, but you might as well have concluded this without book. Of Troy, hast not? here your own mouths con demne you: if killing be your conquest, every Quacksaluing knave may have the credit of a rare Physician, that sends more to the Church and Churchyard, then diseases do: I Wine, comfort and preserve, let that be my Character. I am cousin Germane to the blood, not so Like in my appearance as I am in nature, I repair the debilities of age, and revive the re frigerated spirits, exhilarate the heart, and steel the brow with confidence. For you both the Poet hath drawn your memorial in one. — nil spissius illam Dum bibitur, nil clarius est dum mingitur, unde Constat quod multas faeces in corpore linquat. Nothing goes in so thick, Nothing comes out so thin: It must needs follow then, Your dregs are left within. And so I leave you Stygiae monstrum conform paludi, a mon strous drink, Like the river Styx. How? upon their own charge? take the Constable committing that fault, and he&#x27;ll never be good in his office after it. Kings and Princes from me, and Like them I am sir ved in plate. This is beyond suffering: was ever Wine so under valued? Barbarous detractors, whose beginning came from a dunghill, I defy you. Bacchus, look down, and see me vin dicate thine honour, I scorn to procrastinate in this, and this minute you shall give account of your insolences: my spirits high, I am enemy to both. How now? what comes Water running hither for? To thee, Water? wilt thou take upon thee to cor rect our irregularity? Thou often goest beyond thy bounds thy self. But if they consent, I shall. Let&#x27;s in, and make they friends. How now Tossed? We are all friends. How comes this about, Sugar. I jovial Wine exhilarate the heart. I generous Wine, am for the Court. Lustily, make a merry day on&#x27;t; nay, leave out none, at Dancing and Football, all fellows. You&#x27;ll leave your impudence, and learn to know your superiors Beer, or I may chance to have you stopped up, what never leave working? I am none of your fell lowes. I am a companion for Princes, the least drop of my blood, worth all thy body. I am sent for by the Citizens, visited by the Gallants, kissed by the Gentlewomen: I am their life, their Genius, the Poetical fury, the Helicon of the Mu ses, of better vaiue then Beer; I should be sorry else. Stay, who&#x27;s here? Thou in every place? away hop of my thumb: Beer, I am ashamed of thee. I scorn thy words, thou art base Beer: Wine is well born, has good breeding, and bringing up; thou deservest to be carted, Beer. One may guess what brains he caries by the Sage now.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Wine, Beer, and Ale Together</div><div class="body">There is dissension among the servants of Wine, Beer, and Ale: the drunken, quarrelsome Toast picks a fight with Sugar, who is also in his master’s bad books for excessive womanizing. The masters also bicker: Beer wants to take the wall, and Wine asserts his social superiority. Ale arrives in time to see Wine challenge Beer toa duel, and tries to make the peace. Unfortunately he does it by insisting that he is their better, on grounds of antiquity, learning, and property (for there are many houses named after him). This only exacerbates the situation. Water arrives and asks to adjudicate the argument and reconcile them. He allows them all their own distinctive application: Wine for courtiers and gallants, Beer for citizens, and Ale for country people. The altercation is resolved, though it takes a little more persuasion to get Toast, who has brought a knife in his master’s defence, to put it away. Wine, Beer, and Ale sing a song, and the characters dance. B-Text In this version, business in which Wine smokes a pipe of tobacco is omitted, and Tobacco introduced as a character: he interrupts the festive ending before the characters can dance, insisting that he too is a kind of drink and is the best of all. Afraid of his power to seduce men against them, the other drinks invite him to join them on equal terms, and Tobacco agrees, In the dance, each of the servants is appropriately applied to his master: Sugar is shaken ver Wine, Nutmeg grated over Beer, and Toast has his backside warmed and placed over Ale’s mouth.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_11.html">Cluster 11 — 11: ane, cuze, numps</a> page.
+</div>
+</div></body></html>

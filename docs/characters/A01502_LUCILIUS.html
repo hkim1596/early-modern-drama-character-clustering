@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LUCILIUS in Antonius Ce · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_11.html">Cluster 11 — 11: ane, cuze, numps</a> ›
+  <span>LUCILIUS</span>
+</nav>
+
+<h1>LUCILIUS</h1>
+<p class="lede">in <em>Antonius Ce</em> — Herbert, Mary Sidney, trans.; Garnier, Robert</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1595</td></tr>
+<tr><th>Words</th><td>1024</td></tr>
+<tr><th>Characters</th><td>5794</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 11 (<em>ane, cuze, numps, deliro, palemon, mitis…</em>). Matches are highlighted.</p>
+<div class="excerpt">oftenest show. Whence grows, we daily see, who in their youth G tt honour there, do lose it in their age, Vanquished by some less warlike then themselves: Whom yet a meaner man shall overthrown. His use is not to lend us still her hand, But sometime headlong back a gain to throw, When by his favour she hath us extolled Unto the top</div>
+<div class="excerpt">marriage, ruling equally the Empire with him, and with him making war Have purged the earth of Caesars murderers. You into portions parted have the world Even Like coheirs their heritages part: And now with one accord so many years In quiet peace both have your charges ruled. A downcast foe Can hardly rise, which once is brought</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">In this our world nothing is steadfast found, In vain he Hope&#x27;s, who here his Hope&#x27;s does ground. Believe it not: Too high a heart she bears, Too princely thoughts. So long time you her constant love have tri&#x27;de. Her changed love what token makes you know? The dole she made upon our overthrow, Her realm given up for refuge to our men, Her poor attire when she devoutly kept The solemn day of her nativity, Again the cost and prodigal expense Showed when she did your birth day celebrate, Do plain enough her heart unfeigned prove, Equally touched, you loving, as you love. Leave of this love, that thus renews your woe. Think how you have so brave a captain be, And now are by this vain affection fallen. Men in their friendship ever should be one, And never ought with fickle Fortune shake, Which still removes, nor will, nor knows the way, Her rolling bowl in one sure state to stay. Wherefore we ought as borrowed things receive The goods light she lends us to pay again: Not hold them sure, nor on them built our Hope&#x27;s As on such goods as cannot fail, and fallen: But think again, nothing is durable, Virtue except, our never failing host: So bearing sail when favouring winds do blow, As frowning tempests may us least dismay When they on us do fallen: not overglad With good estate, nor over-grieved with bade. Resist mishap. Suppose he Monarch be and that this world No more acknowledge sundry Emperors, That Room him only fear, and that he join The east with west, and both at once do rule: Why should he not permit you peaceably Discharged of charge and Empires dignity, Private to live reading Philosophy, In learned Greece, Spain, Asia, any land? He hath not slain your brother Lucius, Nor shortened hath the age of Lepidus, Albeit both into his hands were fallen, And he with wrath against them both inflamed. Yet one, as Lord in quiet rest does bear. The greatest sway in great Iberia: The other with his gentle Prince retains Of highest Priest the sacred dignity. He fears no vanquished overfilled with woes. Witness may Afrique, and of conquered world All four quarters witnesses may be. For in what partly of earth inhabited, Hungry of praise have you not ensigns spread? all wars affairs, But battles most, daily have their success Now good, now ill: and though that fortune have Great force and power in every worldly thing, Rule all, do all, have all things fast enchained Unto the circle of his turning wheel: Yet seems it more then any practice else She does frequent Bellona&#x27;s bloody trade: And that his favour, wavering as the wind, His greatest power therein does oftenest show. Whence grows, we daily see, who in their youth G tt honour there, do lose it in their age, Vanquished by some less warlike then themselves: Whom yet a meaner man shall overthrown. His use is not to lend us still her hand, But sometime headlong back a gain to throw, When by his favour she hath us extolled Unto the top of highest happiness. Enchanting pleasure Venus sweet delights Weaken our bodies, overcloud our sprights, Trouble our reason, from our hearts out chase All holy virtues lodging in their place: Like as the cunnig fisher takes the fish By traitor bait whereby the hooks is hid: So Pleasure serves to vice in steed of food To bait our souls thereon too liquorish. This poison deadly is alike to all, But on great kings does greatest outrage work, Taking the royal sceptres from their hands, Thence forward to be by some stranger born: While that their people charged with heavy loads Their flatterers pill, and suck their marry dry, Not ruled but left to great men as a pray, While this fond Prince himself in pleasure&#x27;s drowns Who hears nought, sees nought, does nought of a king Seeming himself against himself conspire. Then equal Justice wanders banished, And in her seat sits greedy Tyranny. Confused disorder troubles all estates, Crimes without fear and outrages are done. Then mutinous Rebellion shows her face, Now hid with this, and now with that pretence, Provoking enemies, which on each side Enter at ease, and make them Lords of all. The hurtful works of pleasure here behold, There needs no proof, but by the Assyrian king, On whom that Monster woeful wrack did bring. Yet hath this ill so much the greater force, As scarcely any do against it stand: No not the Demigods the old world knew, Who all subdu&#x27;de, could Pleasures power subdue. Great Hercules, Hercules once that was Wonder of earth and heaven, matchless in might, Who And eus, Lie us, Geryon overcame, Who drew from hell the triple-headed dog, Who Hydra killed, vanquishd Achelous, Who heavens weight on his strong shoulders bore; Did he not under Pleasures burden bow? Did he not Captive to this passion yield, When by his Captive, so he was inflamed, As now your self in Cleopatra burn? Slept in his lap, his bosom kissed and kiste, With base unseemly service bought her love, Spinning at distaff, and with sinewy hand Winding on spindles thread, in maids attire? His conquering club at rest on wall did hang: His bow vnstringd he bent not as he used: Upon his shafts the weaving spiders spun: And his hard cloak the fretting moths did pierce. The monsters free and fearless all the time Throughout the world the people did torment. And more and more increasing day by day Scorned his weak heart become a mistress play. Caesar, as heir unto his father&#x27;s state. So will his Father&#x27;s goodness imitate, To you ward: whom he know&#x27;s allied in blood, Allied in marriage, ruling equally the Empire with him, and with him making war Have purged the earth of Caesars murderers. You into portions parted have the world Even Like coheirs their heritages part: And now with one accord so many years In quiet peace both have your charges ruled. A downcast foe Can hardly rise, which once is brought so low.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Antonius Ce</div><div class="body">Antonius has neglected his charge to fight for Rome in the East, and has betrayed his wife by devoting himself to the love of Cleopatra. This has led to a war with Caesar, which Antonius lost. Now Cleopatra has betrayed him, his followers have deserted him, and he despairs at his fall from greatness through a single act of folly at Actium. Certain that Caesar will no longer accept him as co-ruler of the Empire, he resolves to die. Ransacked by the Roman army, Egypt suffers; in future it will be governed by foreigners, its wealth exported to enrich another land. Cleopatra blames herself for the disaster. Her women encourage her to live and fight for Egypt’s independence, but she is more concerned about the loss of Antony, and keen not to acquire a reputation for faithlessness in adversity. She takes refuge in a tomb and sends word to Antony implying that she is dead. He stabs himself and is taken up to Cleopatra as he dies. While the people of Alexandria mourn, Dercetas brings the sword that killed him to the exultant Caesar. Agrippa advises entering the tomb to prevent Cleopatra destroying her treasure; Caesar also wants her to grace his triumph in Rome. The Roman soldiers look forward to peace and imperial power. Cleopatra entrusts her children to the care of their teacher and plans to join Antony in the afterlife.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_11.html">Cluster 11 — 11: ane, cuze, numps</a> page.
+</div>
+</div></body></html>

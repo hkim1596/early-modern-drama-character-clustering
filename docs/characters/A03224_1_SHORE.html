@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SHORE in 1 King Edward · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_01.html">Cluster 1 — 1: kate, warwick, stesias</a> ›
+  <span>SHORE</span>
+</nav>
+
+<h1>SHORE</h1>
+<p class="lede">in <em>1 King Edward</em> — Heywood, Thomas (?)</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1600</td></tr>
+<tr><th>Words</th><td>1787</td></tr>
+<tr><th>Characters</th><td>9155</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 1 (<em>kate, warwick, stesias, bianca, pandora, iphicles…</em>). Matches are highlighted.</p>
+<div class="excerpt">My Lord Ma or bears his sword in his defence, That put the sword into the arms of London, Made the Lord Malors for ever after Knights, Richard, worser osde . . . <mark>Henry</mark> Bolingbroke, From whom the house of York does claim their right. My name is Shore, a Goldsmith by my trade, Yes rebel even the very same. Why dost thou tremble</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">About and hour ago, and somewhat more, I left him fortifying the bridge my Lord, Which done he purposed to meet you here: My Lord, now here comes M. Recorder. Soft who is this, how now my friend what news? Nay then I tell thee bastard Falconbridge, My Lord Ma or bears his sword in his defence, That put the sword into the arms of London, Made the Lord Malors for ever after Knights, Richard, worser osde . . . Henry Bolingbroke, From whom the house of York does claim their right. My name is Shore, a Goldsmith by my trade, Yes rebel even the very same. Why dost thou tremble now, when perilspast First to maintain King Edwards royalty, Next to defend the Cities libertic, But chiefly anc to keep thee from the foil, Of him that to my face did how thy spoil, Had he prcua de, where then had been our lives, Dishonoured our daughters, ravished our fair wives, Possessed our goods, and set our servants free, Yet all this nothing to the lose of thee. Mark but the scornful eye of Falconbridge. Nay then look thou upon our Cities arms. Wherein is a bloody dagger, that is it, Where with a rebel Like to Falconbridge, Had his desert, meet for his treachery, Can you behold that, and not quake for fear? I have your meaning, and effect my Lord, I trust shall disappoint them of their hope. So well my Lord as better cannot be, All in the honour of your Majesty. Content your self my L. kings have their humour The letters did contain somewhat no doubt, That did displease him. Sir, if you bid not too much underfoot, I&#x27;ll driven the bargain betwixt you and my wife. See in the row then, if you can speed better. Nay nothing Jane, know you the Gentleman? cannot tell, What came he here to cheapen at our shop? Well I pray God he came for nothing else. Ah Jane, it is the King. I know I have not, see he comes again. I&#x27;ll fell it worth your money, if you please, I pray you come near sir. I do assure thee Jane it is the King. O God, betwixt the extremes of love and fear, In what a shivering ague sits my soul? Keep we our treasure secret, yet so found, As set so rich a beauty as this is, In the wide view of every gazers eye. O traitor beauty, o deceitful good, That dost conspire against thy self and love, No sooner God, but wished again of others, In thine own self, injurious to thy self, O rich poor portion, thou good evil thing? How many joyful woes still dost thou bring? Do I know you the uncle to my wife? know I Frank Emersley her brother here? so surely do I know that con terseit to be King. Uncle you are too forward in your rage, And much mistake me in this suddenness, Your Nieces reputation have I prizde, And shrined as devoutly in my soul As you, or any that it can concern. Nor when I tell you that it is the King, Comes muffled Like a common Servingman, Do I infer thereby my wife is false? Or swerves one jot from wonted modesty. Though in my shop she fit, more to respect, Her servants duty, then for any skill, She does, or can pretend in what we trade, Is it not strange, that ever when he comes, It is to her, and will not deal with me? Ah Uncle Frank, nay, would all her kin, Were here to censure of my cause aright: Though I misoéeme not her, yet give me leave, To doubt what his sly walking may intend. And let me tell the, he that is possessed, Of such a beauty, fears undermining guests: Especially a mighty one, Like him, Whose greatness may guild over ugly sin. But say his coming is not to my wife, Then hath he some sly aiming at my life, By false compounded metals, or light gold, Or else some other trifle to be sold. When kings themselves so narrowly do pry Into the world, men fear, and why not I? Yes marry is it: how now, what news with Thee? I cannot help it, a Gods name let her go, You cannot help it Uncle, no, nor you, Where kings are meddlers, meaner men must rue. I storm against it? no, farewell lane Shore. Once thou wast mine, but must be so no more. Yet uncle will you rage? Let mine example your high heat assuage. To note offences in a mighty man, It is enough, amend it he that can, Frank Emersley, my wife thy sister was, Lands, goods and all I have, to Thee I pass, Save that poor portion must along with me, To bear me from this badge of obloquy, It never shall be said that Matthew Shore, A Kings dishonour in his bonnet wore. Go honest fellow, bear my trunks aboard, And tell the master isle come presently. Go one of you I pray you, inquire her name, Yet all this good does but guild over thy ill. Thou canst not say to Me so, I have wrong. Its cold relief thou gettest Me from the King. So say I too, ah Jane this kills my heart, That thou recks others, and not ruest my smart. Yes Jane, the bill of my bliged faith, And I had thine, but thou hast canceled . No Jane, there is no place allowde for m e, Where once a King hath taken possession, Mean men brook not a Rival in their love, Much less so high vnriualde Majesty, oncubine to one so great as Edward. Is tar too great to be the wife of Shore, Thou go with me Jane, o God forbid, That I should be a traitor to my King, Shall I become a felon to his pleasures, And fly away as guilty of the theft? No my deer Jane, I say it may not be, O what have subjects that is not their kings, He not examine his prerogative. Indeed this were some comfort to a man, That tasted want or worldly misery, But I have lost what wealth cannot return, All worldly losses are but toys to mine, O, all my wealth, the lose of thee was more, Then ever time or Fortune can restore. Therefore sweet Jane farewell, once thou wast mine, Too rich for me, and that King Edward knew, Adieu, o world, he shall deceived be, That puts his trust in women or in thee. I fear not fair means, but a rebels force, True fame sur iues, when death the sh hath slain. Friend tell my Lord isle wait upon him strait. Not go sweet heart? that were a cowards trick, A traitors partly to shrink when others fight, Envy shall never say that Matthew Shore The Goldsmith aid, when other men went out, To meet his Kings and countries enemy, No Jane gainst all the rebels on Mileend, I dare alone K. Edwards right defend. Kite well my w changed, now will marry Thee, I leave thee worth at least five thousand pound. is idle talk good Jane, no more of that, Go to my Lady Majoress and the rest, As you are still companion with the best, With them be merry, and pray for our good speed, We know thy threats, and reckon them as wind, Not of suffecient pour to shake a read. With all my heart my Lord, &amp; thank you too, That you do please to use our homely help. Yes my Lord we will. So for this time we humbly take our leave. Strive not to change me, for I am resolved, And will not tarry. England fare thou well, And Edward, for requiting me so well, But dare I speak of him? forbear, forbear, Come Frank I will surrender all to thee, And then abroad, where ere my fortune be Pardon me gracious Lord, I do not stand contemptuous or des ising Such royal favour of my Sovereign, But to acknowledge mine unworthiness: Far be it from the thought of Matthew Shore, That he should be aduanc&#x27;de with Aldermen, With our L. Mayor, &amp; our right grane Recorder. If any thing hath been performed by me, That may deserve your Highness meanest respect, I have enough, and I desire no more. Then let me crave that I may have no more. Ah Jane, whats he dare say he is thy husband? Thou wast a wife, but now thou art not so, Thou wast a maid, a maid when thou wast wife, Thou wast a wife even when thou wast a maid, So good, so modest, and so chaste thou wast, But now thou art diuorcde, while yet he lives, That was thy husband, while thou wast his wife. Thy wisehood stained, by thy dishonoured life, For now thou art nor widow, maid, nor wife. Be not afraid (sweet heart) the worst is passed, God have the praise, the victory is ours, We have preuailde, the rebels are repulsoe, And every str to of London soundeth joy, Canst thou then (gentle Janc ) be sad alone? How now my flatcaps, are you grown so brave? &#x27;Tis but your words, when ̄ matters come to propose Yowl scud as it a company of sheep, My counsel therefore is to keep your shops, What lack you, better will bes em your mouths, Then terms of war, in sooth you are too young: Peace wife, no more, friend I will follow the, Be patient Uncle, storm not gentle Frank: The wrong is , by whom? a king, To talk of such it is no common thing. She is gone thou sayest? Her name is mistress Shore the kings beloved, Where shall I hide my head, or stop mine ears. But Like and owl I shall be wondered at? When she with me was wont to walk the streets, The people then as she did pass along, would say, there goes fair modest mistress Shore, When she attended Like a City Dame, Was praised of matrons. So that Citizens, When they would speak of ought unto their wives Fetched their example still from mistress Shore, But now she goes decked in her courtly robes, This is not she, that once in seemly black, Was the chaste sober wife of Matthew Shore, For now she is King Edwards Concubine, O great ill title, honourable shame, Her good I had, but King her ill is thine, Once Shores true wife, now Edwards Concubine, Amongst the rest isle note her new behaviour.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — 1 King Edward</div><div class="body">Although he has made diplomatic arrangements to marry a French princess, King Edward impulsively takes an English bride instead, much to his mother&#x27;s disapproval. The bastard Falconbridge leads a rebellion to reinstate the deposed King Henry VI. The London authorities prepare the city&#x27;s defences: Falconbridge is unable to penetrate the gates, the city apprentices make a significant contribution to the battle, and the rebels are beaten back to Mile End. When they regroup, the Londoners rout them again, and Matthew Shore defeats a rearguard attempt to take the city while the militia are at Mile End. The King rewards the civic officials with knighthoods, but Shore modestly declines. Falconbridge flees with a price on his head, and he and his associate Spicing plan to betray one another and claim the reward. A miller captures Spicing, but Falconbridge escapes. Spicing is hanged by his former comrade in arms, Chub. While out hunting, members of the court encounter Hobs the tanner. King Edward, pretending to be his own butler, tries to induce Hobs to say something uncomplimentary or treasonous about him, but fails. He accepts the tanner&#x27;s invitation to supper, where he takes a fancy to Hobs&#x27;s daughter Nell. Meanwhile, things are going King Edward&#x27;s way: his brother Gloucester sends word that King Henry VI is dead, and Falconbridge is captured and executed. Back in London, he dines with the Lord Mayor, where he meets Jane Shore. He is attracted to her and grapples with his conscience, but later visits her incognito in her husband&#x27;s shop. Initially she rejects his advances, but Mistress Blague, who hopes to acquire status and influence through her, advises her to submit to adultery. While her husband confides his suspicio ns to the Lord Mayor, she absconds to court. Shore gives away all his property and goes into exile. En route he encounters Jane, now a sought-after power-broker trying to deal justly with the people who seek her influence with the King; one of them, Jockie, she entertains as a servant. On recognizing her husband she regrets her betrayal, but he refuses to take her back: she now belongs to the King. Meanwhile, Edward pursues his claim to the French throne. Planning an invasion but financially depleted after the civil war and rebellion, he seeks support from his subjects, not by taxation or forced loan but voluntary contributions. Hobs&#x27;s generosity shames his fellows into giving more. He comes to London to try and procure a pardon for his son, who…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_01.html">Cluster 1 — 1: kate, warwick, stesias</a> page.
+</div>
+</div></body></html>

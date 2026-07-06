@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAESAR in Cornelia ~w&gt; · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_04.html">Cluster 4 — 4: tranio, ego, achilles</a> ›
+  <span>CAESAR</span>
+</nav>
+
+<h1>CAESAR</h1>
+<p class="lede">in <em>Cornelia ~w&gt;</em> — Kyd, Thomas, trans.; Garnier, Robert</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1594</td></tr>
+<tr><th>Words</th><td>979</td></tr>
+<tr><th>Characters</th><td>5448</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 4 (<em>tranio, ego, achilles, ane, ajax, scylla…</em>). Matches are highlighted.</p>
+<div class="excerpt">goods restore. What, think they me to be their Countries foe? To Room have I submitted mighty things. Heaven sets our time, with heaven may nought dispense. The quiet life that carelessly is led, Is not alonely happy in this world, But Death it self does sometime pleasure us. That death that comes unsent for or unseen, And</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Oh Room that with thy pride dost over-pear, The worthiest Cities of the conquered world. Whose honour God by famous victories, Hath filled heavens fiery vaults with frightful horror. Oh lofty towers, Oh stately battlements, Oh glorious temples, Oh proud Palaces, And you brave walls, bright heavens masonry, Graced with a thousand kingly diadems. Are ye not stirred with a strange delight, To see your Caesars matchless victories? And how your Empire and your praise begins Through fame, which he of stranger Nations wins? Oh beauteous Tiber, with thine easy streams, That glide as smoothly as a Parthian shaft; Turn not thy crispy tides Like silver curl, Back to thy grass-green banks to welcome us? And with a gentle murmur hast to tell The foaming Seas the honour of our fight? Trudge not thy streams to Trytons Mariners To bruit the praises of our conquests passed? And make their vaunts to old Oceanus, That henceforth Tiber shall salute the seas, More famed then Tiger or fair Euphrates? Now all the world (wellnigh) does stoop to Room. The sea, the earth, and all is almost ours. Be&#x27;it where the bright Sun with his neighbour beams, Does early light the Pearled Indians. Or where his Chariot stays to stop the day, Till heaven unlock the darkness of the night. Be&#x27;it where the Sea is wrapped in Crystal I&#x27;m, Or where the Summer does but warm the earth. Or here, or there, where is not Room renowned? There lives no King, (how great so ever he be,) But trembleth if he once but hear of me. Caesar is now earth&#x27;s fame, und Fortune&#x27;s terror, And Caesars worth hath stained old soldiers praises. Room, speak no more of either Scipio, Nor of the Fabii, or Fabritians, Here let the Decii and their glory die. Caesar hath tamed more Nations, taken more Towns, And fought more battles then the best of them. Caesar does triumph over all the world, And all they scarcely conquered a nook. The Gauls that came to Tiber to carouse, Did live to see my soldiers drink at Loire; And those brave Germains, true born Martialists, Beheld the swift Rheyn vnder-run mine Ensigns; The Britons (locked within a watery Realm, And walled by Neptune,) stooped to me at last. The faithless More, the fierce Numidian, Earth that the Euxine sea makes sometimes marsh, The stony-harted people that inhabit Where seau&#x27;nfold Nilus does disgorge it self, Have all been urged to yield to my command. Yea, even this City that hath almost made And universal conquest of the world. And that brave warrior my brother in law, That (ill advised) repined at my glory. Pompey that second Mars, whose haught renown And noble deeds, were greater then his Fortune&#x27;s. Proved to his lose but even in one assault My hand, my hap, my heart exceeded his; When the Thessalian fields were purpled over With either Armies murdered soldiers go. When he (to conquering accustomed,) Did (conquered) fly, his troops discomforted. Now Scipio, that longed to show himself Dissent of African, (so famed for Arms) He durst affront me and my warlike bans, Upon the Coasts of Libya, till he lost His scattered Army: and to shun the scorn Of being taken captive, killed himself. Now therefore let us triumph Anthony. And rendering thanks to heaven as we go For bridling those that did malign our glory, Lets to the Capitol. I call to witness heavens great Thunderer, That gainst my will I have maintained this war, Nor thirsted I for conquests bought with blood. I joy not in the death of Citizens. But through my self-willed enemies despite, And Romans wrong, was I constrained to fight. I never had the thought to injure them. Howbeit I never meant my greatness should, By any others greatness be overruled. For as I am inferior to none, So can I suffer no Superiors. Will those conspire my death that live by me? Beside their lives, I did their goods restore. What, think they me to be their Countries foe? To Room have I submitted mighty things. Heaven sets our time, with heaven may nought dispense. The quiet life that carelessly is led, Is not alonely happy in this world, But Death it self does sometime pleasure us. That death that comes unsent for or unseen, And suddenly does take us at unware, Me thinks is sweetest; And if heaven were pleased, I could desire that I might die so well. The fear of evil does afflict us more, Then evil it self, though it be never so soar. Why Anthony, what would you wish me do? Now shall you see that they will pack to Spain, And (joined with the Exiles there encamped,) Until th&#x27;ill spyrit that does them defend, Do bring their treasons to a bloody end. Whom fearest thou then Mark Anthony? Who dares to contradict our Emporie? I fear them not whose death is but deferred. A man may make his foe his friend you know. Good deeds the cruelest heart to kindness bring, If Citizens my kindness have forgotten, whom shall I then not fear? What, shall I slay them all that I suspect? Rather I will my life and all neglect. Nor labour I my vain life to assure. But so to die, as dying I may live, And leaving off this earthly Tomb of mine, Ascend to heaven upon my winged deeds. And shall I not have lived long enough That in so short a time am so much famed? Can I too-soone go taste Cocytus flood? No Anthony, Death cannot injure us, For he lives long that die victorious. But Fortune and the heavens have care of us. What shall I then do? What more assurance may our state defend Then love of those that do on us attend? Better it is to die then be suspicious.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Cornelia ~w&gt;</div><div class="body">Gigéfo laments the decline of Rome: after presumptuously conquering the nations of the world, the city has been laid waste by civil war, and now lives under a tyrant. @6ffélia laments the successive deaths of her two husbands, Gfassiis and Pompey. She and Gieér dispute which is greater: the common grief or hers in particular. He talks her out of committing suicide. She sees her dead husband in a dream; he tells her that her father has been killed in the African war, and asks her to send their son Sextus away from Rome for his own safety. Philip, a witness to Pompey’s murder, brings his ashes to @6FHelia. Both Cicero and Cornelia look forward to Caesar’s violent downfall. ’ Caesar returns to Rome in triumph. His supporter Decimus Brutus fears that he intends to assume absolute power in Rome; in that event, he and @assils plan to kill the tyrant. MaFR§AMtOMy warns Caesar against plots, but Caesar refuses to be cowed by fear. A messenger recounts to Cornelia how her father killed himself after G@A@8ar defeated him in battle. With her father dead and her husband’s property confiscated, @G6FMelia decides to defer suicide until she has erected their tombs.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_04.html">Cluster 4 — 4: tranio, ego, achilles</a> page.
+</div>
+</div></body></html>

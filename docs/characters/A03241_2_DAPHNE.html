@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DAPHNE in Apllo and Daphne · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_10.html">Cluster 10 — 10: tab, hermia, ane</a> ›
+  <span>DAPHNE</span>
+</nav>
+
+<h1>DAPHNE</h1>
+<p class="lede">in <em>Apllo and Daphne</em> — Heywood, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>816</td></tr>
+<tr><th>Characters</th><td>4278</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 10 (<em>tab, hermia, ane, dulipo, phillis, polidora…</em>). Matches are highlighted.</p>
+<div class="excerpt">That, when I have a daughter of my years, And tutored by her mother. I commend you: There is of you less danger, and least fear That you should die of love; when both of you Come with Like premeditation to digest A rigorous answer. Worthy friends. To be most plain, to me most pleasing is: Then take as plain and answer; I confess</div>
+<div class="excerpt">plain, to me most pleasing is: Then take as plain and answer; I confess me Weak as I am) unworthy of your love. And yet not so low prised, but have been courted Both by as great and good. Nor can you blame me, If I in adding to your worths, shall spare From mine, in the least kind to derogate. To you then, as my equals, I entreat;</div>
+<div class="excerpt">in noble courtesy, Not wronging him, to show my breeding base, coffing your proffered love with womanish scorn. is counsels, your persuasions, I commend, nowing both fitting, were they seasonable. hat Maids should love men I am not ignorant, that the breeding world should still increase; hat Progeny should reach from age to</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Hear me out: But when I in my best considerate thoughts Ponder my youth, and what it is to love; That vows are ties not easy to be loosed, And that the smallest finger can pluck on What not the hand and arm can well put off: That Marriage is a Maze, which entered in, The line is snatched thence which should guide us out. Ere hazard then that unknown labyrinth, Much blame me not to pause. I&#x27;ll resolve you That, when I have a daughter of my years, And tutored by her mother. I commend you: There is of you less danger, and least fear That you should die of love; when both of you Come with Like premeditation to digest A rigorous answer. Worthy friends. To be most plain, to me most pleasing is: Then take as plain and answer; I confess me Weak as I am) unworthy of your love. And yet not so low prised, but have been courted Both by as great and good. Nor can you blame me, If I in adding to your worths, shall spare From mine, in the least kind to derogate. To you then, as my equals, I entreat; Or if you shall deny me, Daphne then Proclaims it as her will. I must retire me For some few months, in them to meditate What marriage is, and truly study man, (A book in which I yet have truanted.) Now, if I in my more maturity, And after some cessation of your suits, Can ground this Maxim, Man is worthy us, And we of him; we&#x27;ll breviate your long motions Within a few short terms. And I that you are so. Nor can my father At this be discontented. You understand a courtesy as well, Once being done, as she that knows to do&#x27;t. Farewell. Where be my maids? I think, because that dotage which he breeds Only belongs to children. 1 Nymph. But why naked Either to affright the Modest; or to such As vow to him, to express their impudence. That denotes Inconstancy, because the shafts of love Are ever shot at random. However his shafts are aimed, it shows his kind Because they strike the eyes of Reason blind. Yet do I love the beauty of the spring, To listen to the birds, with various lays To welcome in his coming. I affect The pride and warmth of Summer, to behold Abundant Autumn pour his harvest forth In plenteous sheaves; to see the presses bleed A flowing vintage. But I most admire The glory of the Sun who comforts these: For without him, what were the earth? what heaven? If all were darkness, who should then discern The lustre of the one or of the other, The fresh fertility proudly adorned With choice and change of all discoloured flowers? More than a cased up Jewel, what were Beauty, Without the Sun to give a brightness to it? What&#x27;s ornament, without the Sun to judge it? What to be fair or foul, without the Sun, To censure and distinguish which is best? The Sun&#x27;s the deity which I adore. Here then upon this verdure cast your selves, And rest a while; not long it&#x27;s ever he will In all his glory mount the Eastern hill. All sleep is still in darkness, yet our souls See when our eyes are shut. My brest&#x27;s in uproar; And yet a dream tells me, the morning grey Says the Sun&#x27;s up, I shame to look on day. The Sun is up; Awake: What, shame you not That he should find you sleeping? The shades best please me, I in them will play; The Sun&#x27;s too hight and sultry. His piercing beams I never shall endure, They sick me of a fatal Calenture. That darkness does best please me: let&#x27;s away, My beauty will be sun burned if I stay, He&#x27;ll blast me Like and Ethiop. Oh me, I am so tortured with the Sun, I hate my very shadow. I am almost breathless. Oh now I am quite spent; help, goddess Juno, (Queen of chaste marriage) bright Diana, help One of thy true vowed Virgins: change my shape, That I this hight adulterous Sun may escape. Thanks, o you Powers divine: the Spheres assent To my chaste prayer: your heavenly dooms are joust. Here grow I fixed against all powers of lust. To you I bow in duty, as to a father; And these affront in noble courtesy, Not wronging him, to show my breeding base, coffing your proffered love with womanish scorn. is counsels, your persuasions, I commend, nowing both fitting, were they seasonable. hat Maids should love men I am not ignorant, that the breeding world should still increase; hat Progeny should reach from age to age, and that the gods make&#x27;t a necessity, oh have all their miraculous works admired: l this I know; but</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Apllo and Daphne</div><div class="body">Peneus encourages Daphne to marry and procreate, and introduces two suitors. Evasive and unwilling to commit herself, she asks for a few months’ respite to study men and marriage. In his role as the sun, Apollo has revealed Venus’ adultery with Mars, and she has sworn vengeance. At her instigation, Cupid makes him fall in love with Daphne. Daphne runs away, and Apollo gives chase; but Daphne prays to the chaste goddesses, and is transformed into a laurel tree before Apollo can catch her. Apollo’s infatuation has affected his work as the sun-god, and time has gone haywire: Aurora has to get up early (which displeases her husband), the seasons are beginning to meld into one another, and Day and Night are not getting their proper quota of hours. Apollo asserts his authority over them, but promises to do a better job in future.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_10.html">Cluster 10 — 10: tab, hermia, ane</a> page.
+</div>
+</div></body></html>

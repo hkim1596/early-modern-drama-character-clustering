@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ADORNI in nan · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_00.html">Cluster 0 — 0: ane, minos, tom</a> ›
+  <span>ADORNI</span>
+</nav>
+
+<h1>ADORNI</h1>
+<p class="lede">in <em></em></p>
+
+<h2>Metadata</h2>
+<table><tr><th>Words</th><td>1556</td></tr>
+<tr><th>Characters</th><td>8722</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 0 (<em>ane, minos, tom, nat, scho, stinkard…</em>). Matches are highlighted.</p>
+<div class="excerpt">have our Cellars stuffed with Corsike Wines: Yet for this foolish sin called Temperance, Tantalize, and never taste it, while your Dutch, Your noble-spirited Germane will carouse A score of Goblets to provoke this stomach To&#x27;s bred and Butter; do nothing but by discreet counsel of drink, not match his daughter to A man he sees</div>
+<div class="excerpt">necessary T&#x27;improve your judgement, still let your discourse Concern the foreign business, and be sure To applaud outlandish fashions, and take off from What is native, as if you shall hear Any commend the Genoa garb, or state Answer in France, in Naples, or in Spain, No Matter where, so it be far enough. From hence, they are</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">This is fitter ceremony for them Then to embrace and enemy, who will not partly On terms so easy; these gentlemen know better To cut a Caper, than a Cable, or board a Pink in the Burdells, than a Pinnace at sea: I marvel my Lord should know such Milksops. Yes, we are very Like To make good prize indeed, when all the profit Goes to the State and heavyheaded Burghers, That lie and snort at home, and eat what we Sweat bloody drops for. Sir, although I am One that affects not the nice phrase of Court, Having been nursed in war, yet I can frame My self to imitation of what honour Shall there, or any where appear to be. Worthy my laughter. It&#x27;s his grace After his dinner Sir, and to confirm Their most officious gravity, a Castilian Was for some crime in Paris to be whipped In triumph through the streets, and being admonished To be more swift of foot, so a void The dreadful lash the sooner, in scorn answered, He rather would be flayed alive, than break A Title of his gravity. Very airy people, who participate More fire than earth; yet generally good, And nobly dispositioned, something inclining To overweening fancy—This Lady Tells my remembrance of a Comic scene, I once saw in their Theatre. Your entreaty Is a command, if this grave Lady please, To act the Lady I must court. Stand fair Lady. Nay, if you make me common once, farewell, I am not for your company. Will he fight, is he soldier? For your sake reverend Madam I shall do&#x27;t: Sir please you walk, we will confer on rudiments. Come Signiors, will you walk? Come let not this dishearten you, your French Is a thing easily got, and when you have it, As hard to shake it off, runs in your blood, As it were your mother language, but there is And observation far more necessary T&#x27;improve your judgement, still let your discourse Concern the foreign business, and be sure To applaud outlandish fashions, and take off from What is native, as if you shall hear Any commend the Genoa garb, or state Answer in France, in Naples, or in Spain, No Matter where, so it be far enough. From hence, they are more politic, more witty; Every way more deserving, this will speak Infinitely judicious, when to praise Our own domestic manners, is as if A man should praise himself, and be accounted A self conceited gul for&#x27;t. Signior; still, you betray your igorance, why signior, Mounsiuer has a far more airy and harmonious found, There&#x27;s music in the letters, still polish your phrase With particles of language, which till I&#x27;ve taught you Perfectly answer with a shrug or nod, Or any foreign gesture, such a silence Will be esteemed for gravity, and become you better Then volubility of speech does some Whose tongues are gentlemen ushers to their wits, Still going before it, and when you do speak, Let it not be, as now you do of news Abroach ten days before, and quite drunk of; But what affairs are acted then in France, What in the English Court; and still remember Extol them infinitely, and if any answer Comparatively with our own a serious laughter, Will not become you ill, to show how much You slight their error. That showed those strangers judgements, and confirmed What I would have you understand in England, Where public houses are prohibited: There are the bravest Lasses, there some Donsella That was the last night yours, shall for two Ducats To morrow be a Sailors: when there Your Citizens wives, girls fresh as air, and wholesome As precious Candy wives will meet their Gamesters, At a convenient Tavern, rob their husbands Without a scruple, and supply their friends, While the good innocent Cuckolds pay a price For their own horning. Th&#x27;are grafted fast already sir, beside They never get Children, but their Hench boys on Their Sergeants wives, after some City feast, When the provoking spirit of White broth, and Custard enflames their blood: what Genoa Burgess Dam res be so boldly couraged: I&#x27;ll tell you, And mark how base and fordid it appears To have our Cellars stuffed with Corsike Wines: Yet for this foolish sin called Temperance, Tantalize, and never taste it, while your Dutch, Your noble-spirited Germane will carouse A score of Goblets to provoke this stomach To&#x27;s bred and Butter; do nothing but by discreet counsel of drink, not match his daughter to A man he sees not drunk first, scarce say&#x27;s prayers Till he be full of liquour, which enflames The mind to generous actions. Your English Deserves as large applause, who to say truth, Out-drinks the Dutch, as is the common proverb, The Dutchman drinks his buttons off, the English Doublet and all away, then mark their carriage: If two fallen out and strike, and be by company Parted; though one wears in his face the badge Of his dishonour, which excites him to As brave revenge, not daunts him: for he&#x27;ll straight Call out his enemy to a single Duel, Scorning his life; concerning the Lands laws, Which do forbid those combats, and never partly Till one be slain, and the survivor sure As death to hang for&#x27;t. Then to their further glory, which takes off All the disgrace of halter, they are sure Ere they be scarce cold, to be Chronicled In excellent new Ballads, which being sung Ith&#x27; streets among boys and girls, Colliers, and Carmen, Are bought as great memorials of their fame&#x27;s, Which to perpetuate, they are commonly stuck up With as great triumph in the tippling houses, As they were scutcheons. They have their special Poets for that purpose Such as still drink small Beer, and so are apt To spit out lamentable stuff: then for their clothes They hate a cut domestic, but imitate The French precisely gallants, wear their long Parisian Breeches, with five points at knees, Whose tagges concurring with their harmonious spurs Afford rare music; then have they Doublets So short ith&#x27; waste, they seem as &#x27;twere begotten Upon their Doublets by their Cloaks, which to save stuff Are but a years growth longer than their skirts; And all this magazine of device is furnished By your French Tailor: what Country man is yours? Fie, change him Monsieur, You have herd a Spanish Count&#x27;s Lately arrived, without any advice, hoved you salute him? That&#x27;s too vulgar; You must accost him thus with a state face, As if your beard had been turned up that morning By advice of all the Barbers in the City, As you had dressed you in a Lookingglass, Proper to none but the Dukes privy Counsellors: Pronounce your Besolos manas with a grace, As if you were the son and heir, apparent To th&#x27;Adelantado of Castille. Dares the state bereave him of his liberty, Without whose most unwearied valour, It had been betrayed to slavery? Alliance, death a thousand Bonivets, And Dukes and States, weigh not A scruple poised with his full worth. All our virgins ought, if they have virtue, to contend For such a glory; but if all be squeamish, May all the daughters of our best Burghers run Away with soldiers, and become Sutlers wives. May their parents turn most precise precisians, And forbid em the sighed of plays, or they may never Dance unless be to a bagpipe or a Crowd. Lactantio, let&#x27;s go wait the General In prison, &#x27;twould be base should we neglect him in His extremity. Your life my Lord; Death dare not venture to invade it, and The state as soon will call the enemy Into their City, as pretend the least Danger to their supporting Column, which Should it but shake, it might dismantle their Best Bulwarks, burn their Navy, and surrender Themselves to present slavery. Nay, should all fail you sir, Should the States anger&#x27;s, and the Dukes partial-sentence, The peoples malice bandy to surprise The treasure of your life; know you have friends Would fix the heads of half the Town upon Their Lances points, ere your least drop of blood Should be diminished. &#x27;Tis Like your self my noble Lord, but see The Duke approaching, let your soul expect And equal hearing. Near stand on terms, but marry her, and free your self, and trust to me, you shall not want a mistress has better colours in her face. The Priest I think Has the song perfect, but it is a question Among the wisest, whither in the City There be seven Virgins to be found to furnish The dance as&#x27;t should be; but you must accept them With all their faults; this music speaks their entrance. It becomes you to say truth scurvily, I do not Like it, You look as if y&#x27;ad lost some victory, Of which your hope had and assurance: Shall I tell your Lordship A very pleasant story? But sir J have somesuddaine news to tell you: The thousand Ducats you contracted to pay me, When you could understand the French as perfectly As my self; by all these Lords indifferent judgement is Endue on this very minute. No not a word, you must disburse. My Lord If he will undertake wars, I&#x27;ll quit my bargain. Well urged, and resolutely.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_00.html">Cluster 0 — 0: ane, minos, tom</a> page.
+</div>
+</div></body></html>

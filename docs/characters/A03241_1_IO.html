@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IO in Jupiter and Io · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_04.html">Cluster 4 — 4: tranio, ego, achilles</a> ›
+  <span>IO</span>
+</nav>
+
+<h1>IO</h1>
+<p class="lede">in <em>Jupiter and Io</em> — Heywood, Thomas</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1637</td></tr>
+<tr><th>Words</th><td>502</td></tr>
+<tr><th>Characters</th><td>2830</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 4 (<em>tranio, ego, achilles, ane, ajax, scylla…</em>). Matches are highlighted.</p>
+<div class="excerpt">Fabric, to behold Us in our eminence. Appear, Jove, in thy glory, let them know Ei, shamed confess their found surmises vain, And what it is, thy godhead to profane. What steal? what vow? Forbear to handle; yet I never knew A man so bold and rude: Can gods dispense, To teach us Women unknown impudence? Things that I would not</div>
+<div class="excerpt">Let earth&#x27;s Beauty&#x27;s ensure of Earth, mere terren as yours be, worser aim no further: the while this of mine all be new questioned by the Powers Divine. Not the meanest, such as we call under-deities, melancholy Saturn, (by his son ill and banished from the supreme rule) Phœbus, a mere Vassal to the earth, And forced each natural</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Here, Daphne, by your father Peneus streams (which falling from the top of Pindus mount, Waters Hemonian Tempe) let us fit, All daughters to the Rivers flowing near: There old Apidanus steals (murmuring) by; Next, Poplar-shadowed Enipeus glides: Not far, Amphrisus, Aeas, and amongst these, (Not least) my father, good old Inachus Lifts up his reverend head, with fresh flowers crowned, Prescribing laws and limits to his streams, To bound them in their channels, curb their torrent, Lest in their pride they should o&#x27;reswell their banks; Commanding them, through thousand strange indents To pay his plenteous tribute to the seas. Why, have you Suitors, Daphne? Yes, that your beauty&#x27;s Composed of the grosser elements, Want that attraction to call Jove himself Down from his heavenly Fabric, to behold Us in our eminence. Appear, Jove, in thy glory, let them know Ei, shamed confess their found surmises vain, And what it is, thy godhead to profane. What steal? what vow? Forbear to handle; yet I never knew A man so bold and rude: Can gods dispense, To teach us Women unknown impudence? Things that I would not learn. In all this lip-sport? or what more Is in these kisses meant? I am so dull,— Should I do ought save well, I were undone, my father&#x27;s floods would tell; These are his banks, they&#x27;ll blab: What mean you? fie; They swell above their bounds, only to spy And see what we are doing. Pish, away, Such deeds of darkness can you do by day? Beside, shall I consent to what you mean, Not all these silver drops can wash me clean. You make me blush. Well, when what most you sue for, you have wone, My comfort is, I see not what is done, But I may claim Priority above all water Nymphs, Nor can the Naiades compare with me; No, Daphne, not your self. The rural Swains, heigh gather from these banks mellifluous flowers, and make you chaplets to adorn your brows, and shadow your choice beauty from the Sun, ay think them costly Presents: but I&#x27;am one To whom the gods themselves have offered gifts. Then before all the daughters of these floods claim a just precedence. My apprehensions e no weak fantoms to beguile the sense, to real, and in Actium; with their from heigh bear a being substance. Yet will I dare S give my father greeting. Let earth&#x27;s Beauty&#x27;s ensure of Earth, mere terren as yours be, worser aim no further: the while this of mine all be new questioned by the Powers Divine. Not the meanest, such as we call under-deities, melancholy Saturn, (by his son ill and banished from the supreme rule) Phœbus, a mere Vassal to the earth, And forced each natural day to measure heaven; As Neptune, Sovereign over the Seas, to whom Our tributary rivers hourly pay: As Mercury, though son to Jove himself, No better than his Footboy or his Page, Compelled at every summons to his speed: But of the potent Thunderer.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Jupiter and Io</div><div class="body">Io boasts of her superiority to her fellow nymphs: they only have mortals for their suitors, whereas she is loved by a god, Jupiter. The nymphs think this an idle vaunt until Jupiter appears and confirms Io’s story. Jupiter conjures up a fog to shroud their love-making, but this makes jealous Juno suspicious. Jupiter turns Io into a cow to conceal his adultery, but Juno asks him to give her the cow, for use as a sacrificial offering. Jupiter has no choice: he hands over the cow, and Juno sets Argus to guard her and treat her harshly. Io’s disappearance worries her father Inachus. He and his friends see Argus maltreating the cow, and notice that she weeps like a human being; she also uses her hoofs to write her name on the ground. Hearing Inachus’ laments, Jupiter sends Mercury to release Io. Argus boasts to Mercury about the tricks his cow can do. Mercury sings him to sleep and decapitates him; Juno finds his body and turns him into a peacock. Jupiter and Juno reach a compromise: Juno will release Io, who will then go into exile in Egypt; Jupiter will leave her alone, but the Egyptians will worship her as a goddess.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_04.html">Cluster 4 — 4: tranio, ego, achilles</a> page.
+</div>
+</div></body></html>

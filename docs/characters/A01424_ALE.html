@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ALE in Wine, Beer, and Ale Together · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_04.html">Cluster 4 — 4: tranio, ego, achilles</a> ›
+  <span>ALE</span>
+</nav>
+
+<h1>ALE</h1>
+<p class="lede">in <em>Wine, Beer, and Ale Together</em> — Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1629</td></tr>
+<tr><th>Words</th><td>847</td></tr>
+<tr><th>Characters</th><td>4455</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 4 (<em>tranio, ego, achilles, ane, ajax, scylla…</em>). Matches are highlighted.</p>
+<div class="excerpt">Ale is the prince of liquours, and you are both my subjects. Leave your railing, and attend my reasons, I claim your duties to me, for many prerogatives: my antiquity, my riches, my learning, my strength, my gravity. Dare any of you deny my antiquity? I say. It only pleads for me: who hath not herd of the old Ale of England.</div>
+<div class="excerpt">you sufficient reasons for your acknowledgement of my principality, let your knees wit ness your obedience to your King, and I will grace you both by making you Squires of my body, right honourable Ale-Squires. Is Wine drawn? then have at you, I&#x27;ll make good Ale. So me thinks you look very thine vpon&#x27;t Water: but why do we not</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Umh: what&#x27;s this? it seems theres great difference between Wine and Beer. Sugar, what&#x27;s the matter? What do they contend about? Hah? to me? what&#x27;s that? Are they so proud? No matter for protestation. Stay, stay, come together again, why how now, what fight, and kill one another? But ith mean time you both forget your selves: dee hear? Ale is a friend to you both, let me know your differ ̄ ce. Hark you, are you both mad? who hath heat you, that you run over, do you contend for that in justice belongs to another. I tell you Wine and Beer, I do not relish you. I&#x27;ll tell you a tale: Two spruce Hotspur fiery gallants meeting ith streets, justled for the wall, drew, would would been fighting: there steps me forth a corrector of soles, and underlaid cobbler, and cries out, Hold, hold your hands Gentlemen, are you so simple to fight for the wall? why the wall&#x27;s my Landlords. Have you but so much wit as to apply this, you shall never needs fence for the matter. Superiority is mine, Ale is the prince of liquours, and you are both my subjects. Leave your railing, and attend my reasons, I claim your duties to me, for many prerogatives: my antiquity, my riches, my learning, my strength, my gravity. Dare any of you deny my antiquity? I say. It only pleads for me: who hath not herd of the old Ale of England. These are trifles, and convince me not. Let him, my second prerogative is my riches and possessions; for who knows not how many houses I have: Wine and Beer are feign to take up a corner, your ambition goes no further then a Seller, where the whole house where I am is mine, goes only by my name, is called and Alehouse; but when is either herd, the Wine-house, or the Beer-house, you cannot pass a street: wherein I have not How ses of mine own, beside many that go by other men&#x27;s names. Thou art glad of a Bottle thy self, Wine, sometime, and so is Beer too, for all he oaths now. My third Prerogative, is my Learning. For that, though I could give you demonstration, for brevities sake I remit you to my books. Admire me, but when I name learned, though not the great Alexander Ale, and Tost-atus the Jesuit. Now for my strength and invincibility. Nay but hark, &#x27;tis not your Latin must carry it a way, I will not lose a drop of my reputation, and by your fa vour, if you stand so much upon your preserving, I&#x27;ll put you to your Latin again, and prove my self superior, for Ale as if it were the life of mankind, hath a peculiar name and denomination, being called Ale from Alo, which every School boy can tell, signifies to feed and nourish, which neither Wine nor Beer can show for themselves, and for my strength and honour in the wars, know that Ale is a Knight of Malta, and dares fight with any man bears a head, &#x27;tis more safe to be leave what a Soldier I am, then try what I can do. But thou art come down of late to a glass, Wine, and that&#x27;s the reason I think, so many Vintners have broke: now observe my last Reason. Not in my Beard, I speak without mental reserua cion, I&#x27;ll tell you, and you shall confess it: the Wise men of and cient time were called Sages, and to this day it signifies judge meant, discretion, gravity; for by what other would you ex cite to good manners more aptly, then to wish a young man to be sage, that is graven: and with what title can you better salute him that is, graven, or more honour him, then to call him one of the Sages. Now this appellation neither of you can challenge, yet every man gives me the attribute; for who knows not I am called Sage Ale. And thus having given you sufficient reasons for your acknowledgement of my principality, let your knees wit ness your obedience to your King, and I will grace you both by making you Squires of my body, right honourable Ale-Squires. Is Wine drawn? then have at you, I&#x27;ll make good Ale. So me thinks you look very thine vpon&#x27;t Water: but why do we not fight? And I. Water has a deep judgement. We are henceforth brother&#x27;s. Let&#x27;s observe him a little, Tossed is angry. Is what? No such matter. We were at difference, and Wine too: but— Come hither again, Tossed. But Ale, bonny Ale, with Spice and a Tossed, In the morning&#x27;s a dainty thing. But Ale, bonny, Ale, Like a Lord of the Soil, In the Country shall domineer. Now you talk of dancing, Wine, &#x27;tis one of your qualities, let&#x27;s pay the Musicians all together: we have of ten made other men have light heads and heals, there&#x27;s no hurt a little in tripping for our selves, what say you?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Wine, Beer, and Ale Together</div><div class="body">There is dissension among the servants of Wine, Beer, and Ale: the drunken, quarrelsome Toast picks a fight with Sugar, who is also in his master’s bad books for excessive womanizing. The masters also bicker: Beer wants to take the wall, and Wine asserts his social superiority. Ale arrives in time to see Wine challenge Beer toa duel, and tries to make the peace. Unfortunately he does it by insisting that he is their better, on grounds of antiquity, learning, and property (for there are many houses named after him). This only exacerbates the situation. Water arrives and asks to adjudicate the argument and reconcile them. He allows them all their own distinctive application: Wine for courtiers and gallants, Beer for citizens, and Ale for country people. The altercation is resolved, though it takes a little more persuasion to get Toast, who has brought a knife in his master’s defence, to put it away. Wine, Beer, and Ale sing a song, and the characters dance. B-Text In this version, business in which Wine smokes a pipe of tobacco is omitted, and Tobacco introduced as a character: he interrupts the festive ending before the characters can dance, insisting that he too is a kind of drink and is the best of all. Afraid of his power to seduce men against them, the other drinks invite him to join them on equal terms, and Tobacco agrees, In the dance, each of the servants is appropriately applied to his master: Sugar is shaken ver Wine, Nutmeg grated over Beer, and Toast has his backside warmed and placed over Ale’s mouth.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_04.html">Cluster 4 — 4: tranio, ego, achilles</a> page.
+</div>
+</div></body></html>

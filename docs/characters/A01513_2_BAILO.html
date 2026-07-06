@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BAILO in Jocasta · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_10.html">Cluster 10 — 10: tab, hermia, ane</a> ›
+  <span>BAILO</span>
+</nav>
+
+<h1>BAILO</h1>
+<p class="lede">in <em>Jocasta</em> — Gascoigne, George, trans.; Kinwelmershe, Francis, trans.; Yelverton, Christopher, trans.; Euripides; Dolce, Lodovico</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1573</td></tr>
+<tr><th>Words</th><td>853</td></tr>
+<tr><th>Characters</th><td>4701</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 10 (<em>tab, hermia, ane, dulipo, phillis, polidora…</em>). Matches are highlighted.</p>
+<div class="excerpt">furthermore, beseemeth not a maid To show his self in such unseemly place, Whereas among such young and lusty troops Of harebrained soldiers marching to and from, Both honest name and honour is empairde: But yet rejoice, sith this thy great desire, Without long let, or yet without thy pain, At wish and will shall shortly be fulfillde.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Why daughter, knowest thou any remedy How to defend thy father&#x27;s city here From that outrage and fierce repining wrath, Which he against it, justly hath conceived? Oh princely dame, the tender care thou takste Of thy deer brother, deserves double praise: Yet cravest thou that, which cannot be obtainde, By reason of the distance from the town Unto the plain, where army lies incampt: And furthermore, beseemeth not a maid To show his self in such unseemly place, Whereas among such young and lusty troops Of harebrained soldiers marching to and from, Both honest name and honour is empairde: But yet rejoice, sith this thy great desire, Without long let, or yet without thy pain, At wish and will shall shortly be fulfillde. For Palynice forthwith will hither come, Even I my self was lately at the camp, Commanded by the Queen to bid him come, Who laboureth still to link in friendly league, His jarring sons (which happen so hoped for, Eftsoon I pray the gracious gods to grant) And sure I am, that ere this hour pass, Thou shalt him here in person safely see. Ere thou be beware thou shalt him here behold. For constant pledge, he hath his brother&#x27;s faith, He hath also the truce that yet endures. Daughter, God knows how willing I would be With sweet relief to comfort thy distress, But I cannot impart to Thee, the good Which I my self do not as yet enjoy. The wailful cause that moves Eteocles With Pollinyce to enter civil wars Is over great, and for this only cause Full many men have broke the laws of truth, And topsieturuie turned many towns. &quot;To greedy (daughter) too too greedy is &quot;Desire to rule and reign in kingly state. Ne can he bide, that swaise a realm alone To have another joined with him therein: Yet must we hope for help of heavenly powers, Sith they be just, their mercy is at hand, To help the weak when worldly force does fail. Yet daughter, must you trust in mighty Jove, His will is not, that for th&#x27;offence of one So many suffer undeserved smart: I mean of Thee, I mean of Polinyce, Of Jocasta thy woeful aged mother, And of Ismena thy beloved sister. Who though for this she doth not outwardly From dreary eyes distil lamenting tears, Yet do I think, no less afflicting grief Doth inwardly torment his tender breast. Dear daughter, leave this foolish jealous e, And seeing that thou shalt here shortly find Thy brother Polinyce, go in again. So noble a desire (Oh worthy dame) I much commend: and briefly as I can, Will satisfy thy hungry mind herein. The power of men that Polinyce hath brought, (Whereof he, (being Adrastus son in law) Takes chiefest charge) is even the flower of Greece, Whose hugy train so mighty seems to be, As I see not, how this our drooping town Is able to withstand so strong a siege. Entering the field their army did I find So orderly in form of battle set, As though they would forthwith have guien the charge: In battles seven the host divided is, To eke of which, by order of the king, A valiant knight for captain is assigned: And as you know this city hath seven gates, So every captain hath his gate prescribe, With fierce assault to make his entry at. And further, passing through our frowning foes (That gave me countenance of a messenger) Hard by the King I spied Pollinyce, In golden glistering arms most richly clad, Whose person many a stately prince enpalde, And many a comely crowned head enclosed: At sighed of me his colour straight he chaungde And Like a loving child in clasped arms He caught me up, and friendly kissed my cheek, Then hearing what his mother did demand With glad consent according to his hest Gave me his hand, to come unto the court, Of mutual truce desirous so he seemed, He asked me of Antygone, and Ismena, But chiefly unto Thee above the rest He gave me charge most heartily to commend him. Daughter no more, t&#x27;is time you now return It stands not with the honour of your state Thus to be seen suspiciously abroad: &quot;For vulgar tongues are armed evermore &quot;With slanderous bruit to blemish the renown &quot;Of virtues dams, which though at first it spring &quot;Of slender cause, yet does it swell to fast, &quot;As in short space it fills every ear &quot;With swift report of undeserved blame: &quot;You cannot be too curious of your name, &quot;Found show of evil (though still the mind be chased) &quot;Decays the credit oft, that Ladies had, &quot;Sometime the place presumest a wanton mind: &quot;Repair sometimes of some, does hurt their honour: &quot;Sometime the light and garish proud attire &quot;Persuades a yielding bent of pleasing youths. The voice that goes of your unspotted fame, Is Like a tender flower, that with the blast Of every little wind does fade away. Go in dear child, this way will I go see If I can meet thy brother Pollinyce.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Jocasta</div><div class="body">Oedipus unknowingly murdered his father and married his mother Jocasta; on learning the truth, he blinded himself. His sons imprisoned him and agreed to alternate annually as kings of Thebes: Polynices went into exile while Eteocles took the first turn on the throne; but Eteocles refused to give it up at the end of his year in office, and Polynices has besieged Thebes in association with the King of Argos. Jocasta intervenes as their mother, and persuades Polynices to enter Thebes and meet Eteocles under truce. Eteocles will not hand over power, but offers to accept his brother back as a private citizen. Jocasta is unable to reconcile her sons, and Polynices’ forces prepare for battle. Eteocles names Creon as his successor, and asks him to marry Antigone to his son Haemon. Creon consults Tiresias, and learns that Thebes is doomed to destruction in divine revenge for Jocasta’s incest; only the death of his other son, Menoeceus, can save the city. Keen to die for his country, Menoeceus refuses to go into exile as his father wishes, reports the prophecy to Eteocles, and kills himself. Meanwhile, the battle is indecisive, and Eteocles and Polynices agree to settle their dispute in single combat. Jocasta and Antigone are too late to stop them killing each other: arriving to find them both dying, Jocasta stabs herself with Polynices’ dagger. The besieging army is massacred by the Thebans. Antigone brings the three bodies back to Thebes and tells her father what has happened. Creon declares himself King of Thebes and gives order for the funerals of Jocasta and Eteocles, but demands that Polynices, as an enemy of the city, should remain unburied. Antigone protests, pleads, and refuses to marry Haemon, threatening to kill him and then herself should Creon try to force her. Creon banishes both her and Oedipus. She helps her blind father to touch the dead bodies, and he asks her to see that Polynices is buried.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_10.html">Cluster 10 — 10: tab, hermia, ane</a> page.
+</div>
+</div></body></html>

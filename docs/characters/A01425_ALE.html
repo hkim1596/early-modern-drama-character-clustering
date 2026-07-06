@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ALE in nan · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_17.html">Cluster 17 — 17: quae, cricca, albumazar</a> ›
+  <span>ALE</span>
+</nav>
+
+<h1>ALE</h1>
+<p class="lede">in <em></em></p>
+
+<h2>Metadata</h2>
+<table><tr><th>Words</th><td>1209</td></tr>
+<tr><th>Characters</th><td>6384</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 17 (<em>quae, cricca, albumazar, quam, qui, ego…</em>). Matches are highlighted.</p>
+<div class="excerpt">Ale is the prince of liquours, and you are both my subjects. Leave your railing, and attend my reasons, I claim your duties to me, for many prerogatives: my antiquity, my riches, my learning, my, strength, my gravity. Dare any of you deny my antiquity? I say. It only pleads for me: who hath not herd of the old Ale of England?</div>
+<div class="excerpt">you sufficient reasons for your acknowledgment of my principality, let your knees witness your obedience to your King, and I will grace you both by making you Squires of my body, right honourable Ale-Squires. Is Wine drawn? then have at you, I&#x27;ll make good Ale. So me thinks you look very thin vpon&#x27;t Water: but why do we not</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Umh: what&#x27;s this? it seems theres great difference between Wine and Beer. Sugar, what&#x27;s the matter? What do they contend about? Hah? to me? what&#x27;s that? Are they so proud? No matter for protestation. Stay, stay, come together again, why how now, what fight, and kill one another? Hark you, are you both mad? who hath heat you, that you run over, do you contend for that in justice belongs to another? I tell you Wine and Beer, I do not relish you, I&#x27;ll tell you a tale: Two spruce Hotspur fiery gallants meet king ith streets, justled for the wall, drew, would he been fight king: there steps me forth a correct of soles, and underlaid cobbler, and cries out, Hold, hold your hands Gentlemen, are you so simple to fight for the wall? why the wall&#x27;s my Land lords. Have you but so much wit as to apply this, you shall never need fence for the matter. Superiority is mine, Ale is the prince of liquours, and you are both my subjects. Leave your railing, and attend my reasons, I claim your duties to me, for many prerogatives: my antiquity, my riches, my learning, my, strength, my gravity. Dare any of you deny my antiquity? I say. It only pleads for me: who hath not herd of the old Ale of England? These are trifles, and convince me not. Let him, my second prerogative is my riches and possessions; for who knows not how many houses I have? Wine and Beer are feign to take up a corner, your ambition goes no further then a Cellar, where the whole house where I am is mine, goes only by my name, is called and Alehouse; but when is either herd, the Wine-house, or the Beer house? you cannot pass a street, wherein I have not How ses of mine own, beside many that go by other men&#x27;s names. Thou art glad of a Bottle thy self, Wine, some times, and so is Beer too, for all he froths now. For that, though I could give you demonstration, for brevities sake I remit you to my books. Admire me, but when I name learned, though not the great Alexander Ale and Tostatus the Jesuit. Now for my strength and invincibility. Nay but hark, &#x27;tis not your Latin must carry it a way, I will not lose a drop of my repuration, and by your favour, if you stand so much upon your preserving, I&#x27;ll put you to your Latin again, and prove my self superior, for Ale as if it were the life of mankind, hath a peculiar name and denomination, being called Ale from Alo, which every School boy can tell, signifies to feed and nourish, which nei there Wine nor Beer can show for themselves; and for my strength and honour in the wars, know that Ale is a Knight of Malta, and dares fight with any man bears a head, &#x27;tis more safe to believe what a Soldier I am, then try what I can do. But thou art come down of late to a glass, Wine: and that&#x27;s the reason I think, so many Vintners have broke: now observe my last Reason. Not in my Beard, I speak without mental reserua cion, I&#x27;ll tell you, and you shall confess it: the Wise men of ancient time were called Sages, and to this day it signifies judgement, discretion, gravity; for by what other would you excite to good manners more aptly, then to show a young man to be sage, that is graven: and with what title can you better salute him that is graven, or more honour him, then to call him one of the Sages? Now this appellation neither of you can challenge, yet every man gives me the attribute; for who knows not I am called Sage Ale? And thus having given you sufficient reasons for your acknowledgment of my principality, let your knees witness your obedience to your King, and I will grace you both by making you Squires of my body, right honourable Ale-Squires. Is Wine drawn? then have at you, I&#x27;ll make good Ale. So me thinks you look very thin vpon&#x27;t Water: but why do we not fight? And I. Water has a deep judgement. We are henceforth brother&#x27;s. Let&#x27;s observe him a little, Tossed is angry. Is what? No such matter. We were at difference, and Wine too. but— Come hither again, Tossed. But Ale, bonny Ale, with Spice and Tossed, In the Morning&#x27;s a dainty thing. But Ale, bonny Ale, Like a Lord of the Soil, In the Country shall domineer. Now you talk of dancing, Wine, &#x27;tis one of your qualities, let&#x27;s pay the Musicians all together: we have of ten made other men have light heads and heals, there&#x27;s no hurt a little in tripping for our selves, what say you? It shannot needs, we are concluded sir. Prithee go smoke somewhere else, we are covetous of your acquaintance. Or his understanding is not sufficiently lighted yet gine him leave I pray. Yet again, think, think, till to morrow, we may chance meet again. And yet we are not enchanted with the music of your pipe to dance after it. My most excellent discourser. Yes yes, I remember I have herd him reported a solidier, and once being in company with a knap-jack man a companion of his, I obtained a copy of his military po stures, which put down the pike and potgun clean, pray observe they. 1 Take your seal. 2 Draw your box. 3 Uncase your pipe. 4 Produce your rammer. 5 Blow you pipe. 6 Open your box. 7. Fill your pipe. 8. Ram your pipe. 9. Withdraw your Rammer. 10. Return your rammer. 11. Make ready. 12. Present. 13. Elbow your pipe. 14. Mouth your pipe. 15. Give fire. 16. Nose your Tobacco. 17. Puff up your smoke, 18. Spit on your right hand. 19. Throw off your lose ashes. 20. Present to your friend. 21. As you were. 22. Cleanse your pipe. 23. Blow your pipe. 24. Supply your pipe. Exercise this discipline till you stink, defile the room, offend your friends, destroy your liver and lungs, and bid adieu to the world with a scouring flux. I&#x27;m sure Tobacco will spoil it. Physicians are no fools, they may commend you for their profit, you are one of their harbingers to provide for a disease; yet howsoever you call them wise, and glory in their flatteries, they make but a very simple of you. How the vapour rises. Hum! he says well, now I better consider &#x27;twere sa fist to use him kindly, least by degrees he overthrow us, and jet upon our privileges, for I herd a geutleman tother day affirm, he had fasted 3 or 4 days, only with Tobacco. But ith mean time you both forget your selves: dee hear? Ale is a friend to you both, let me know your dif ference. My third Prerogative, is my Learning. You have turned over a new leaf Tobacco. After what rate is this and ounce? Indeed the most partly of our common compliment is but smoke, and now I know how Gentlemen come by it. And Ale.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_17.html">Cluster 17 — 17: quae, cricca, albumazar</a> page.
+</div>
+</div></body></html>
