@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JOAN in HarryVI~ · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_24.html">Cluster 24 — 24: ich, mardonius, bacon</a> ›
+  <span>JOAN</span>
+</nav>
+
+<h1>JOAN</h1>
+<p class="lede">in <em>HarryVI~</em> — Nashe, Thomas; Marlowe, Christopher; Shakespeare, William; Anonymous</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1963</td></tr>
+<tr><th>Characters</th><td>10798</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 24 (<em>ich, mardonius, bacon, gammer, bungay, urania…</em>). Matches are highlighted.</p>
+<div class="excerpt">Calamity: Her aid she promised, and assured success. In complete Glory she revealed her self: And whereas I was black and swart before, With those clear Rays, which she infused on me, That beauty am I blessed with, which you may see. Ask me what question thou canst possible, And I will answer unpremeditated: My Courage try</div>
+<div class="excerpt">thou shalt be fortunate, If thou receive me for thy Warlike Mate. I am prepared: here is my keen-edged Sword, Decked with fine Flower-de-Luces on each side, The which at Touraine, in S. Katherine&#x27;s Churchyard, Out of a great deal of old Iron, I chosen forth. And while I live, I&#x27;ll never fly from a man. Christ&#x27;s Mother helps me,</div>
+<div class="excerpt">This night the Siege assuredly I&#x27;ll raise: Expect Saint Martins Summer, Halcyons days, Since I have entered into these Wars. Glory is Like a Circle in the Water, Which never ceases to enlarge it self, Till by broad spreading, it disperse to nought. With Henries death, the English Circle ends, Dispersed are the glories it included:</div>
+<div class="excerpt">spreading, it disperse to nought. With Henries death, the English Circle ends, Dispersed are the glories it included: Now am I Like that proud insulting Ship, Which Caesar and his fortune bore at once. Come, come, it&#x27;s only I that must disgrace thee. Talbot farewell, thy hour is not yet come, I must go Victual Orleans forthwith:</div>
+<div class="excerpt">waving Colours on the Walls, Rescued is Orleans from the English. Thus Joan de Puzel hath performed her word. These are the City Gates, the Gates of Roan, Through which our Policy must make a breach. Take heed, be wary how you place your words, Talk Like the vulgar sort of Market men, That come to gather Money for their Corn. If</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Reignier, is&#x27;t thou that thinkest to beguile me? Where is the Dolphin? Come, come from behind, I know thee well, though never seen before. Be not amazed, there&#x27;s nothing hid from me; In private will I talk with thee apart: Stand back you Lords, and give us leave a while. Dolphin, I am by birth a Shepherds Daughter, My wit untrained in any kind of Art: Heaven and our Lady gracious hath it pleased To shine on my contemptible estate. Lo, whilst I waited on my tender Lambs, And to Suns parching heat displayed my cheeks, Gods Mother deigned to appear to me, And in a Vision full of Majesty, Willed me to leave my base Vocation, And free my Country from Calamity: Her aid she promised, and assured success. In complete Glory she revealed her self: And whereas I was black and swart before, With those clear Rays, which she infused on me, That beauty am I blessed with, which you may see. Ask me what question thou canst possible, And I will answer unpremeditated: My Courage try by Combat, if thou darest, And thou shalt find that I exceed my Sex. Resolve on this, thou shalt be fortunate, If thou receive me for thy Warlike Mate. I am prepared: here is my keen-edged Sword, Decked with fine Flower-de-Luces on each side, The which at Touraine, in S. Katherine&#x27;s Churchyard, Out of a great deal of old Iron, I chosen forth. And while I live, I&#x27;ll never fly from a man. Christ&#x27;s Mother helps me, else I were too weak. I must not yield to any rights of Love, For my Profession&#x27;s sacred from above: When I have chased all thy Foes from hence, Then will I think upon a recompense. Why no, I say: distrustful Recreants, Fight till the last gasp: I&#x27;ll be your guard. Assigned am I to be the English Scourge. This night the Siege assuredly I&#x27;ll raise: Expect Saint Martins Summer, Halcyons days, Since I have entered into these Wars. Glory is Like a Circle in the Water, Which never ceases to enlarge it self, Till by broad spreading, it disperse to nought. With Henries death, the English Circle ends, Dispersed are the glories it included: Now am I Like that proud insulting Ship, Which Caesar and his fortune bore at once. Come, come, it&#x27;s only I that must disgrace thee. Talbot farewell, thy hour is not yet come, I must go Victual Orleans forthwith: Overtake me if thou canst, I scorn thy strength. Go, go, cheer up thy hungry-starued men, Help Salisbury to make his Testament, This Day is ours, as many more shall be. Advance our waving Colours on the Walls, Rescued is Orleans from the English. Thus Joan de Puzel hath performed her word. These are the City Gates, the Gates of Roan, Through which our Policy must make a breach. Take heed, be wary how you place your words, Talk Like the vulgar sort of Market men, That come to gather Money for their Corn. If we have entrance, as I hope we shall, And that we find the slothful Watch but weak, I&#x27;ll by a sign give notice to our friends, That Charles the Dolphin may encounter them. Peasauns la pouure gens de France, Poor Market folks that come to fell their Corn. Now Roan, I&#x27;ll shake thy Bulwarks to the ground. Behold, this is the happy Wedding Torch, That joineth Roan unto her Countrymen, But burning fatal to the Talbonites. God morrow Gallants, want you Corn for Bred? I think the Duke of Burgonie will fast, Before he&#x27;ll buy again at such a rate. &#x27;Twas full of Darnel: do you Like the taste? What will you do, good graybeard? Break a Lance, and run atilt at Death, Within a Chair. Are you so hight, Sir: yet Pucell hold thy peace, If Talbot do but Thunder, Rain will follow. God speed the Parliament: who shall be the Speaker? Belike your Lordship takes us then for fools, To try if that our own be ours, or no. Away Captains, let&#x27;s get us from the Walls, For Talbot means no goodness by his Looks. God b&#x27;uy my Lord, we came but to tell you That we are here. Dismay not (Princes) at this accident, Nor grieve that Roan is so recovered: Care is no cure, but rather corrosive, For things that are not to be remedied. Let frantic Talbot triumph for a while, And Like a Peacock sweep along his tail, We&#x27;ll pull his Plumes, and take away his Train, If Dolphin and the rest will be but ruled. Then thus it must be, this does Joan devise: By fair persuasions, mixed with sugared words, We will entice the Duke of Burgonie To leave the Talbot, and to follow us. Your Honours shall perceive how I will work, To bring this matter to the wished end. Hark, by the found of Drum you may perceive Their Powers are marching unto Paris-ward. There goes the Talbot with his Colours spread, And all the Troops of English after him. Now in the Rearward comes the Duke and his: Fortune in favour makes him lag behind. Summon a Parley, we will talk with him. The Princely Charles of France, thy Countryman. Brave Burgonie, undoubted hope of France, Stay, let thy humble Handmaid speak to thee. Look on thy Country, look on fertile France, And see the Cities and the Towns defaced, By wasting Ruin of the cruel Foe, As looks the Mother on her lowly Babe, When Death does close his tender-dying Eyes. See, see the pining Malady of France: Behold the Wounds, the most unnatural Wounds, Which thou thy self hast given her woeful Breast. O turn thy edged Sword another way, Strike those that hurt, and hurt not those that help: One drop of Blood drawn from thy Countries Bosom, Should grieve thee more then streams of foreign gore. Return thee therefore with a flood of Tears, And wash away thy Countries stained Spots. Beside, all French and France exclaims on thee, Doubting thy Birth and lawful Progeny. Who joinest thou with, but with a Lordly Nation, That will not trust thee, but for profits sake? When Talbot hath set footing once in France, And fashioned thee that Instrument of Ill, Who then, but English Henry, will be Lord, And thou be thrust out, Like a Fugitive? Call we to mind, and mark but this for proof: Was not the Duke of Orleans thy Foe? And was he not in England Prisoner? But when they herd he was thine Enemy, They set him free, without his Ransom paid, In spite of Burgonie and all his friends. See then, thou fightest against thy Countrymen, And joinest with them will be thy slaughter-men. Come, come, return; return thou wandering Lord, Charles and the rest will take thee in their arms. Done Like a Frenchman: turn and turn a gain. Pezant avant. You have suborned this man Of purpose, to obscure my Noble birth. Once I encountered him, and thus I said: Thou Maiden youth, be vanquished by a Maid. But with a proud Majestical high scorn He answered thus: Young Talbot was not born To be the pillage of a Giglot Wench: So rushing in the bowels of the French, He left me proudly, as unworthy fight, Here&#x27;s a silly stately style indeed: The Turk that two and fifty Kingdoms hath, Writes not so tedious a Style as this. Him that thou magnifi&#x27;st with all these Titles, Stinking and flyblown lies here at our feet. The Regent conquers, and the Frenchmen fly. Now help you charming Spells and Periapts, And you choice spirits that admonish me, And give me signs of future accidents. You speedy helpers, that are substitutes Under the Lordly Monarch of the North, Appear, and aid me in this enterprise. This speedy and quick appearance argues proof Of your accustomed diligence to me. Now you Familiar Spirits, that are culled Out of the powerful Regions under earth, Help me this once, that France may get the field. O hold me not with silenee overlong: Where I was wont to feed you with my blood, I&#x27;ll lop member off, and give it you, In earnest of a further benefit: So you do condescend to help me now. No hope to have redress? My body shall Pay recompense, if you will grant my suit. Cannot my body, nor blood-sacrifice, Entreat you to your wonted furtherance? Then take my soul; my body, soul, and all, Before that England give the French the foil. See, they forsake me. Now the time is come, That France must vale her lofty plumed Crest, And let her head fallen into England&#x27;s lap. My ancient Incantations are too weak, And hell too strong for me to buckle with: Now France, thy glory droopcth to the dust. Changed to a worse shape thou canst not be: A plaguing mischief light on Charles, and thee, And may you both be suddenly surprised By bloody hands, in sleeping on your beds. I prithee give me leave to curse awhile. First let me tell you whom you have condemned; Not me, begotten of a Shepherd Swain, But issued from the Progeny of Kings. Virtuous and Holy, chosen from above, By inspiration of Celestial Grace, To work exceeding miracles on earth. I never had to do with wicked Spirits. But you that are polluted with your lusts, Stained with the guiltless blood of Innocents, Corrupt and tainted with a thousand Vices: Because you want the grace that others have, You judge it straight a thing impossible To compass Wonders, but by help of devils. No misconceived, Joan of Air hath been A Virgin from her tender infancy, Chaste, and immaculate in very thought, Whose Maiden-blood thus rigorously effused, Will cry for Vengeance, at the Gates of Heaven. Will nothing turn your unrelenting hearts? Then Joan discouet thine infirmity, That wartanteth by Law, to be thy privilege. I am with child you bloody Homicides: Murder not then the Fruit within my Womb, Although you hale me to a violent death. You are deceived, my child is none of his, It was Alanson that enjoyed my love. O give me leave, I have deluded you, &#x27;Twas neither Charles, nor yet the Duke I named, But Reignier King of Naples that prevailed. I think this upstarted is old Talbots Ghost, He speaks with such a proud commanding spirit: For Gods sake let him have him, to keep them here, They would but stink, and putrify the air. Peace be amongst them if they turn to us, Else ruin combat with their Palaces. Of all base passion, Fear is most accursed. Command the Conquest Charles, it shall be thine: Let Henry fret, and all the world repine. Decrepit Miser, base ignoble Wretch, I am descended of a gentler blood. Thou art no Father, nor no Friend of mine. Then led me hence: with whom I leave my curse May never glorious Sun reflex his beams Upon the Country where you make abided: But darkness, and the gloomy shade of death Environ you, till Mischief and Despair, Driven you to break your necks, or hang your selves. Wherefore is Charles impatient with his friend? At all times will you have my Power alike? Sleeping or waking, must I still prevail, Or will you blame and lay the fault on me? Improvident Soldiers, had your Watch been good, This sudden Mischief never could have fallen. Question (my Lords) no further of the case, How or which way; it&#x27;s sure they found some place, But weakly guarded, where the breach was made: And now there rests no other shift but this, To gather our Soldiers, scattered and disperc&#x27;t, And lay new Platforms to endamage them.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — HarryVI~</div><div class="body">King Henry Vis dead, and England&#x27;s French lands are lost. After a military setback, the French accept the offered aid of Joan Pucelle , who claims supernatural powers from the Virgin Mary; but they also release Talbot in an exchange of prisoners. With Joan &#x27;s help the French recapture the occupied town of Orleans, but the English take it back in a night attack led by Talbot. The Countess of Auvergne invites Talbot to visit her. intending treachery, but he second-guesses her and brings soldiers with him. In England, feuds brew between Gloucester and Winchester, and between Richard Plantagenet and the Duke of Somerset, whose supporters show their allegiance by picking different coloured roses. Richard , who has been deprived of his titles through the attainder of his father, learns from the imprisoned and dying Mortimer that he has a claim to the throne . King Henry restores him to his inheritance, creating him Duke of York. Joan takes Rouen by a ruse , but Talbot recaptures it the same day; she then persuades England&#x27;s ally Burgundy to join the French. After King Henry&#x27;s coronation in Paris, York is left in command of Prance, but personal tension between him and Somerset means that troop reinforcements arrive late; in consequence, Talbot is defeated, surviving only long enough to learn that his son has perished in battle. Joan conjures devils, but they will not help her: she is captured by York and burned at the stake. The French and English agree a peace which will entail King Henry making a diplomatic marriage, but this is pre-empted when Suffolk captures Margaret and (having fallen in love with her but being alr eady married) plans to install her as Queen of England . Henry agrees to marry her, and Suffolk goes to France to mili the arrangements.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_24.html">Cluster 24 — 24: ich, mardonius, bacon</a> page.
+</div>
+</div></body></html>

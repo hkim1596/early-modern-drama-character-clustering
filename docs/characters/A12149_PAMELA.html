@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PAMELA in The Arcadia · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_22.html">Cluster 22 — 22: lysander, hermia, griselda</a> ›
+  <span>PAMELA</span>
+</nav>
+
+<h1>PAMELA</h1>
+<p class="lede">in <em>The Arcadia</em> — Shirley, James</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1640</td></tr>
+<tr><th>Words</th><td>1275</td></tr>
+<tr><th>Characters</th><td>6528</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 22 (<em>lysander, hermia, griselda, antonio, clarinda, ferdinand…</em>). Matches are highlighted.</p>
+<div class="excerpt">there&#x27;s my fear, would they were free again, and had but their good swords to second their innocence, I am mad to think what a condition we are fallen to, prithee <mark>Philoclea</mark> shed some tears for me, if I weep now it must be for anger that we cannot help they, but let the gray-beards look too&#x27;t, for if they suffer, unless they send me</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Mopsa you are to coy in my opinion Though I confess your beauty may deserve As much as any; Dorus though he be Your father&#x27;s servant, he&#x27;s a handsome shepherd And not to be despised. You should then with some smiles encourage him. Alas poor man he cannot sleep for you he says, Make no scruple of that, if you can find in your heart to love him, in the name of upid go together, for ought I perceive your father holds a good opinion of him, marry I know not how your mother is inclined Heres your sweet heart Look you make much of him, poor Gentleman How love is aby to transport, who could Expect so rich a guest in that poor dwelling O how ere the winds compel him, or the stream Into whose troubled waves he has launched forth This way he steers his love, yet I seem ignorant. Mopsa take heed, your Shepherd can speak well And if he be honest Menalcus brother And heir, I know no reason why you should Think scorn of him. You must yet be a little coy to receive it A rich Jewel the figure of a Crabfish By force not choice—all his desire is Mopsa Tow in your grace by my presenting it Whats the matter? What haste does tire you? Believe me governor there is much hope of your servant, I&#x27;ll attend Zelmane you would say. I have a precious time; will you pace it governor? How comes it Mopsa that you are so taken So lifted up with high conceit? Yes Mapsa you, dee think I cannot Judge By outward gestures and your looks what joy Does inwardly possess you Yes you again, and it were not over boldness To request some knowledge of the cause But Mopsa may I not beseech a word That may be to my understanding Not I, when you are drawn up to majesty I can but wish you graciously would then Remember the obedience of your handmaid That first submits her self to your Command. Can she not hear us This is too plain This grove is all one bower, nature her self Must be delighted to dwell here, the Sun Can shoot no beam upon us through this Arbe Though he does rage abroad You compliment. I shall never In thy society, yet we may re to A little in this shade, o M He should be enemy to virtue now To cherish one suspectful thought of thee Some wild licentious Prince had now me And careless of his own ruined my honour. What&#x27;s that behind the trees? Still methinks I hear another noise There&#x27;s some thing whispers Pray if you can We are betrayed help Do not resign your sword but use it. Let us both die with honour, do not give Your strength and trust t&#x27;the mercy of those slaves In humane villains to us Pamela bids thee fight, fear not for me If I die I shall not be dishonord And thou shalt take a brave revenge on them, Pity not me to lose us both, weel meet Again in death and love eternally I am the same Pamela I easily forgive all and will be So far from a complaint that I&#x27;ll plead for Your pardons to my father, and he shall not Be able to deny me Omnes A pardon, a pardon, if it please your highness weel go back with you Not with me We are undone again Dead? What saucy fellow&#x27;s that? Meant you me Philonax, unhand those prisoners Yet stay and hear me As you did love Basilius hear his daughter, This insolence does interupt the tears Endue to my deer dead father, and enforces Me, since he thus forgets, to declare to you With confidence who I am, I am Pamela The eldest daughter of Basilius Your Queen if I mistake not, since my father Is dead, to whose memory these pious drops Fallen as the tribute of my grief, who then Shall be obeyed, he that was trusted with My father&#x27;s power, which in his death is canceled Or I your natural princess? Have you found so much sweetness in the reign You borrowed of my father, that you would Usurp now he is dead? I have not signed Any commission for your office, how Dare you then in my presence command any To prison, nay Like a bold insolent traitor Talk of confining me? we are merciful To let you keep your proud head on. But in the justice to my royal father, Snatched hence untimely from us, since you attempt To charge them with his death, we give you space To live and to accuse them, they shall be Our prisoners, ith mean time will become Your person to go home and study how To play the Advocate when you are called By us, and the grave laws, you are dismissed. Dare you all be traitors then? GOod Master jailor you might be so courteous in your office to let us see these Gentlemen, It&#x27;s well you dare obey King Philonax and be a rebel to me, the time may come you will repent. Well sir we are content Do not entreat him sister, pray have a special remem brance to let&#x27;em want air and necessaries, youl&#x27; forfeit your place if you make conscience to be over honest to&#x27;em. So it seems Good sir no tedious excuses nor Apology but proceed you and your great Master Philonax, and he will make you his treasurer, or trust you with his great seal, you cannot choose but be and excellent keeper. Nay what will become at&#x27;h Princes, there&#x27;s my fear, would they were free again, and had but their good swords to second their innocence, I am mad to think what a condition we are fallen to, prithee Philoclea shed some tears for me, if I weep now it must be for anger that we cannot help they, but let the gray-beards look too&#x27;t, for if they suffer, unless they send me of and errand after them, not a head that nodded to their sentence, shall know where to find Shoulders to support&#x27;em My mother That word strikes double sorrow, and does call A flood to drown my eyes, shall we not see her? And I my deer loved Musidorus, at which name My tears dry up, and black revenge prepares Thy throne within my blood, but Simpathus Are not the Princes sent for yet? I prithee tell me how they look; what say they to thee? Canst thou be such a fool then to believe They are murderers? Do not if thou darest be a Knave, and try if the Devil will bear you out in&#x27;t, we must not see&#x27;em Nor speak to our mother, Thou shat not deny us a little discourse with Dametas my old governor since we have no other company. They cannot hurt Us sister I have a breast as deeply charged As thine although I flatter it, it&#x27;s no sin To enable us for bearing—how de&#x27;e Governor? What will they do with thee? Had you any hand in my father&#x27;s death? You ran away from me. Speak well of Dorus sirrah, you had more need to pray for him. Your wife. I woe ld do so but I Fear my revenge will kill my charity. O my father We shall not be divor&#x27;d I hope again I do believe it, heaven make you and honest subject, For a wise one, I despair to see you. O fate how&#x27;s this My father, that that hath opened The spring again</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — The Arcadia</div><div class="body">King Basilius understands an oracle to have foretold that his daughters’ marriage will result in his death and the usurpation of his throne by a foreigner; it has also indicated that he will commit adultery with his own wife. In an effort to thwart any destiny, he has decided to keep the girls unmarried virgins; he leaves court, placing the kingdom under the rule of his deputy, Philanax, and lodges his elder daughter Pamela in the forest with Dametas. Pyrocles and Musidorus are amorously interested in Basilius’ daughters, Pamela and Philoclea, and come to Arcadia in disguise. Musidorus poses as a shepherd, takes a job under Dametas, and, to enable him to elope with Pamela, gets the family out of the way with a series of ruses: Dametas is told a story of buried gold, Miso of her husband’s philandering, and Mopsa of a wishing tree which will enable her to become whatever she wants. (She wants to be a queen, with no obligation to obey anyone.) Pyrocles, meanwhile, gets access to Philoclea by disguising himself as an Amazon, Zelmane, only to find that in his new identity he has attracted interest from Basilius. ‘Zelmane’ helps to quell a rebellion by the people of Arcadia, who are dissatisfied with Basilius’ retirement from government, then arranges an assignation with the King at a nearby cave. Queen Gynecia sees through Pyrocles’ disguise and falls for him herself. He arranges for Gynecia to take his place at the date with Basilius, and approaches Philoclea while they are away. Basilius meets Gynecia in the cave and so fulfils part of the oracle: he commits ‘adultery’ with his own wife. Realizing her identity and his folly, he swears constancy, and she gives him what she takes to be a love philtre—which causes him to pass out, apparently dead. The defeated rebels take refuge in the forest, and encounter Musidorus and Pamela. Despite Pamela’s insistence that he should fight and die with honour, Musidorus persuades the rebels to release them. When they realize Pamela’s identity, however, they suspect treason and take the couple to court in an attempt to purge their own crimes. Meanwhile Pyrocles and Philoclea are found asleep together by Dametas, who has come looking for the missing Pamela. Philanax is now faced with what appears to be a royal crime wave—a poisoner queen, and two princesses guilty of sexual misconduct—and, despite Pamela’s insistence that her father’s death makes her Queen of Arcadia, he has them all imprisoned. King Euarchus comes to visit…</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_22.html">Cluster 22 — 22: lysander, hermia, griselda</a> page.
+</div>
+</div></body></html>

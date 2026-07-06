@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HECTOR in nan · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_04.html">Cluster 4 — 4: tranio, ego, achilles</a> ›
+  <span>HECTOR</span>
+</nav>
+
+<h1>HECTOR</h1>
+<p class="lede">in <em></em></p>
+
+<h2>Metadata</h2>
+<table><tr><th>Words</th><td>1541</td></tr>
+<tr><th>Characters</th><td>8245</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 4 (<em>tranio, ego, achilles, ane, ajax, scylla…</em>). Matches are highlighted.</p>
+<div class="excerpt">general slept, Whilst emulation in the army crept: This I presume will wake him. Why then will I no more: Thou art great Lord, my Father&#x27;s sisters Son; A cousin germane to great Priam&#x27;s seed: The obligation of our blood forbids A gory emulation betwixt us twain: Were thy commixion, Greek and Trojan so, That thou couldst say, this</div>
+<div class="excerpt">our rank feud: but the joust gods gainsay, That any drop thou borrwd&#x27;st from thy mother, My sacred Aunt, should by my mortal Sword Be drained. Let me embrace thee <mark>Ajax</mark> : By him that thunders, thou hast lusty Arms; Hector would have them fallen upon him thus. Cozen, all honour to thee. Not Neoptolymus so mirable, On whose bright</div>
+<div class="excerpt">Trojan partly: Desire them home. Give me thy hand, my Cousin: I will go eat with thee, and see your Knights. The worthiest of them, tell me name by name: But for <mark>Achilles</mark>, mine own searching eyes Shall find him by his large and portly size. I thank thee most imperious Agamemnon. Who must we answer? Oh, you my Lord, by Mars his gauntlet</div>
+<div class="excerpt">think, The fallen of every Phrygian stone will cost A drop of Grecian blood: the end crowns all, And that old common Arbitrator, Time, Will one day end it. Is this <mark>Achilles</mark> ? Stand fair I prithee, let me look on thee. Nay, I have done already. Oh Like a Book of sport thou&#x27;lt read me over: But there&#x27;s more in me then thou understandest.</div>
+<div class="excerpt">say; Mine honour keeps the weather of my fate: Life every man holds deer, but the deer man Holds honour far more precious, deer, then life. How now young man? meanest thou to fight to day? No faith young Troilus ; doff thy harness youth: I am to day ith&#x27; vain of Chivalry: Let grow thy Sinews till their knots be strong; And</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Though no man lesser fears the Greeks then I, As far as touches my particular: yet dread Priam, There is no Lady of more softer bowels, More spongy, to suck in the sense of Fear, More ready to cry out, who knows what follows Then Hector is: the wound of peace is surety, Surety secure: but modest Doubt is called The Beacon of the wise: the tent that searches To the bottom of the worst. Let Helen go, Since the first sword was drawn about this question, Every tithe soul amongst many thousand dismes, Hath been as deer as Helen : I mean of ours: If we have lost so many tenths of ours To guard a thing not ours, nor worth to us (Had it our name) the value of one ten; What merit&#x27;s in that reason which denies The yielding of her up. Brother, she is not worth What she does cost the holding. But valve dwells not in particular will, It holds his estimate and dignity As well, wherein it&#x27;s precious of it self, As in the prizer: It&#x27;s made Idolatry, To make the service greater then the God, And the will dotes that is inclinable To what infectiously it self affects, Without some image of the affected merit. It is Cassandra. Peace sister, peace. Now youthful Troilus, do not these High strains Of divination in our Sister, work Some touches of remorse? Or is your blood So madly hight, that no discourse of reason, Nor fear of bade success in a bade cause, Can qualify the same? Paris and Troilus, you have both said well: And on the cause and question now in hand, Have glozed, but superficially; not much Unlike young men, whom Aristotle thought Unfit to hear Moral Philosophy. The Reasons you allege do more conduce To the hight passion of distempered blood, Then to make up a free determination betwixt right and wrong: For pleasure, and revenge, Have ears more deaf then Adders, to the voice Of any true decision. Nature craves All dues be rendered to their Owners: now What nearer debt in all humanity, Then Wife is to the Husband? If this law Of Nature be corrupted through affection, And that great minds of partial indulgence, To their benumbed wills resist the same, There is a Law in each well-ordered Nation, To curb those raging appetites that are Most disobedient and refracturie. If Helen then be wife to Sparta&#x27;s King (As it is known she is) these Moral Laws Of Nature, and of Nation, speak aloud To have her back returned. Thus to persist In doing wrong, extenuates not wrong, But makes it much more heavy. Hector&#x27;s opinion Is this in way of truth: yet never the less, My spritely brothers, I propend to you In resolution to keep Helen still; For it&#x27;s a cause that hath no mean dependence, Upon our joint and several dignities. I am yours, You valiant offspring of great Priamus, I have a roisting challenge sent amongst The dull and factious nobles of the Greeks, Will strike amazement to their drowsy spirits, I was advertized, their Great general slept, Whilst emulation in the army crept: This I presume will wake him. Why then will I no more: Thou art great Lord, my Father&#x27;s sisters Son; A cousin germane to great Priam&#x27;s seed: The obligation of our blood forbids A gory emulation betwixt us twain: Were thy commixion, Greek and Trojan so, That thou couldst say, this hand is Grecian all, And this is Trojan: the sinews of this Leg, All Greek, and this all Troy: my Mother&#x27;s blood Runs on the dexter cheek, and this sinister Bounds in my father&#x27;s: by Jove multipotent, Thou shouldst not bear from me a Greekish member Wherein my sword had not impressure made Of our rank feud: but the joust gods gainsay, That any drop thou borrwd&#x27;st from thy mother, My sacred Aunt, should by my mortal Sword Be drained. Let me embrace thee Ajax : By him that thunders, thou hast lusty Arms; Hector would have them fallen upon him thus. Cozen, all honour to thee. Not Neoptolymus so mirable, On whose bright crest, fame with her loudest (Oh yes) Cries, This is he; couldst promise to himself, A thought of added honour, torn from Hector. Weel answer it: The issue is embracement: Ajax, farewell. Aeneas, call my brother Troilus to me: And signify this loving interview To the expecters of our Trojan partly: Desire them home. Give me thy hand, my Cousin: I will go eat with thee, and see your Knights. The worthiest of them, tell me name by name: But for Achilles, mine own searching eyes Shall find him by his large and portly size. I thank thee most imperious Agamemnon. Who must we answer? Oh, you my Lord, by Mars his gauntlet thanks, Mock not, that I affect the untraded Oath, Your quondam wife swears still by Venus Glove She&#x27;s well, but bade me not commend her to you. Oh pardon, I offend. Let me embrace thee good old Chronicle, That hast so long walked hand in hand with time: Most reverend Nestor, I am glad to clasp thee. I would they could. I know your favour Lord Ulysses well. Ah sir, there&#x27;s many a Greek and Trojan dead, Since first I saw your self, and Diomed In Illion, on your Greekish Embassy. I must not believe you: There they stand yet: and modestly I think, The fallen of every Phrygian stone will cost A drop of Grecian blood: the end crowns all, And that old common Arbitrator, Time, Will one day end it. Is this Achilles ? Stand fair I prithee, let me look on thee. Nay, I have done already. Oh Like a Book of sport thou&#x27;lt read me over: But there&#x27;s more in me then thou understandest. Why dost thou so oppress me with thine eye? It would discredit the blessed Gods, proud man, To answer such a question: Stand again; Thinkest thou to catch my life so pleasantly, As to prenominate in nice conjecture Where thou wilt hit me dead? Wertenberg thou the Oracle to tell me so, I&#x27;d not believe thee: henceforth guard thee well, For I&#x27;ll not kill thee there, nor there, nor there, But by the forge that stythied Mars his helm, I&#x27;ll kill thee every where, yea, over and over. You wisest Grecians, pardon me this brag, His insolence draws folly from my lips, But I&#x27;ll endeavour deeds to match these words, Or may I never— I pray you let us see you in the field, We have had pelting Wars since you refused The Grecians cause. Thy hand upon that match. I trouble you. Thanks, and goodnight to the Greeks general. Goodnight sweet Lord Menelaus. Give me your hand. And so good night. You train me to offend you: get you gone. By the everlasting gods, I&#x27;ll go. No more I say. Ho? bid my Trumpet found. Begun I say: the gods have herd me swear. Hold you still I say; Mine honour keeps the weather of my fate: Life every man holds deer, but the deer man Holds honour far more precious, deer, then life. How now young man? meanest thou to fight to day? No faith young Troilus ; doff thy harness youth: I am to day ith&#x27; vain of Chivalry: Let grow thy Sinews till their knots be strong; And tempt nor yet the brushes of the war. Unarm thee, go; and doubt thou not brave boy, I&#x27;ll stand to day, for thee, and me, and Troy. What vice is that? good Troilus chide me for it. Oh it&#x27;s fair play. How now? how now? Fie savage, fie. Troilus, I would not have you fight to day. I must not break my faith: You know me dutiful, therefore deer sir, Let me not shame respect; but give me leave To take that course by your consent and voice, Which you do here forbid me, Royal Priam. Andromache I am offended with you: Upon the love you bear me, get you in. You are amazed, my Liege, at her exclaim: Go in and cheer the Town, weel forth and fight: Do deeds of praise, and tell you them at night. What art thou Greek? art thou for Hector&#x27;s match? Art thou of blood, and honour? I do believe thee, live. Yea Troilus ? Oh well fought my youngest Brother. Pause if thou wilt. Fare thee well: I would have been much more a fresher man, Had I expected thee: how now my Brother? Stand, stand, thou Greek, Thou art a goodly mark: No? wilt thou not? I Like thy armour well, I&#x27;ll frush it, and unlock the rivets all, But I&#x27;ll be master of it: wilt thou not beast abide? Why then fly on, I&#x27;ll hunt thee for thy hide. Most putrified core so fair without: Thy goodly armour thus hath cost thy life. Now is my days work done; I&#x27;ll take good breath: Rest Sword, thou hast thy fill of blood and death. I am unarmed, forgo this vantage Greek. Aeneas is a field, And I do stand engaged to many Greeks, Even in the faith of valour, to appear This morning to them.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_04.html">Cluster 4 — 4: tranio, ego, achilles</a> page.
+</div>
+</div></body></html>

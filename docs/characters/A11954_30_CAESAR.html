@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAESAR in Julius Caesar  · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_04.html">Cluster 4 — 4: tranio, ego, achilles</a> ›
+  <span>CAESAR</span>
+</nav>
+
+<h1>CAESAR</h1>
+<p class="lede">in <em>Julius Caesar </em> — Shakespeare, William</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1623</td></tr>
+<tr><th>Words</th><td>1141</td></tr>
+<tr><th>Characters</th><td>5942</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 4 (<em>tranio, ego, achilles, ane, ajax, scylla…</em>). Matches are highlighted.</p>
+<div class="excerpt">not: Yet if my name were liable to fear, I do not know the man I should avoid So soon as that spare Cassius. He reads much, He is a great Observer, and he looks Quite through the Deeds of men. He loves no Plays, As thou dost Antony: he hears no Music; Seldom he smiles, and smiles in such a sort As if he mocked himself, and</div>
+<div class="excerpt">I must prevent thee Cymber : These couchings, and these lowly courtesies Might fire the blood of ordinary men, And turn preordinance, and first Decree Into the lane of Children. Be not found. To think that Caesar bears such Rebel blood That will be thawed from the true quality With that which melts Fools, I mean sweet words,</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Calphurnia. Calphurnia. Stand you directly in Antonio is way, When he does run his course. Antonio. Forget not in your speed Antonio, To touch Calphurnia : for our Elders say, The Barren touched in this holy chase, Shake off their sterrile curse. Set on, and leave no Ceremony out. Would? Who calls? Who is it in the press, that calls on me? I hear a Tongue shriller then all the Music Cry, Caesar : Speak, Caesar is turned to hear. What man is that? Set him before me, let me see his face. What sayest thou to me now? Speak once again. He is a Dreamer, let us leave him: Pass. Antonio. Let me have men about me, that are fat, Sleeke-headed men, and such as sleep anights: Yond Cassius has a lean and hungry look, He thinks too much: such men are dangerous. Would he were fatter; But I fear him not: Yet if my name were liable to fear, I do not know the man I should avoid So soon as that spare Cassius. He reads much, He is a great Observer, and he looks Quite through the Deeds of men. He loves no Plays, As thou dost Antony: he hears no Music; Seldom he smiles, and smiles in such a sort As if he mocked himself, and scorned his spirit That could be moved to smile at any thing. Such men as he, be never at hearts ease, While they behold a greater then themselves, And therefore are they very dangerous. I rather tell thee what is to be feared, Then what I fear: for always I am Caesar. Come on my right hand, for this ear is deaf, And tell me truly, what thou thinkest of him. Go bid the Priests do present Sacrifice, And bring me their opinions of Success. Caesar shall forth; the things that threatened me, Never looked but on my back: When they shall see The face of Caesar, they are vanished. What can be avoided Whose end is purposed by the mighty Gods? Yet Caesar shall go forth: for these Predictions Are to the world in general, as to Caesar. Cowards die many times before their death&#x27;s, The valiant never taste of death but once: Of all the Wonders that I yet have herd, It seems to me most strange that men should fear, Seeing that death, a necessary end Will come, when it will come. What say the Augurers? The Gods do this in shame of Cowardice: Caesar should be a Beast without a heart If he should stay at home to day sor fear: No Caesar shall not; Danger knows full well That Caesar is more dangerous then he. We hear two Lyons littered in one day, And I the elder and more terrible, And Caesar shall go forth. Mark Antony shall say I am not well, And for thy humour, I will stay at home. Here&#x27;s Decius Brutus, he shall tell them so. And you are come in very happy time, To bear my greeting to the Senators, And tell them that I will not come to day: Cannot, is false: and that I dare not, falser: I will not come to day, tell them so Decius. Shall Caesar send a Lie? Have I in Conquest stretched mine Arm so far, To be afeared to tell Gray-beards the truth: Decius, go tell them, Caesar will not come. The cause is in my Will, I will not come, That is enough to satisfy the Senate But for your private satisfaction, Because I love you, I will let you know. Calphurnia here my wife, stays me at home: She dreamt to night, she saw my Statue, Which Like a Fountain, with and hundred spouts Did run pure blood: and many lusty Roman Came smiling, &amp; did bath their hands in it: And these does she apply, for warnings and portents, And evils imminent; and on her knee Hath begged, that I will stay at home to day. And this way have you well expounded it. How foolish do your fears seem now Calphurnia ? I am ashamed I did yield to them. Give me my Robe, for I will go. And look where Publius is come to fetch me. Welcome Publius. What Brutus, are you stirred so early too? Good morrow Caska: Caius Ligarius, Caesar was never so much your enemy, As that same Ague which hath made you lean. What is&#x27;t a Clock? I thank you for your pains and courtesy. See, Antony that Revels long anights Is notwithstanding up. Good morrow Antony. Bid them prepare within: I am too blame to be thus waited for. Now Cynna now Metellus: what Trebonius, I have and hours talk in store for you: Remember that you call on me to day: Be near me, that I may remember you. Good Friends go in, and taste some wine with me And we (Like Friends) will straight way go together. The Ides of March are come. What touches us our self, shall be last served. What, is the fellow mad? Are we all ready? What is now amiss, That Caesar and his Senate must redress? I must prevent thee Cymber : These couchings, and these lowly courtesies Might fire the blood of ordinary men, And turn preordinance, and first Decree Into the lane of Children. Be not found. To think that Caesar bears such Rebel blood That will be thawed from the true quality With that which melts Fools, I mean sweet words, Low-crooked-curtsies, and base Spaniel fawning: Thy Brother by decree is banished: If thou dost bend, and pray, and fawn for him, I spurn thee Like a Cur out of my way. Know, Caesar does not wrong, nor without cause Will he be satisfied. What Brutus ? I could be well moved, if I were as you, If I could pray to move, Prayers would move me: But I am constant as the Northern Star, Of whose true fixed, and resting quality, There is no fellow in the Firmament. The Skies are painted with unnumbered sparks, They are all Fire, and every one does shine: But, there&#x27;s but one in all does hold his place. So, in the World; It&#x27;s furnished well with Men, And Men are Flesh and Blood, and apprehensive; Yet in the number, I do know but One That vnassayleable holds on his Rank, Unshaked of Motion: and that I am he, Let me a little show it, even in this: That I was constant Cymber should be banished, And constant do remain to keep him so. Hence: Wilt thou lift up Olympus? Does not Brutus bootless kneel? Et Tu Brutè? —Then fallen Caesar. Nor Heaven, nor Earth, Have been at peace to night: Thrice hath Calphurnia, in her sleep cried out, Help, ho: They murder Caesar. Who&#x27;s within?</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — Julius Caesar </div><div class="body">Caesar returns to Rome triumphant over Pompey. He is warned to beware the Ides of March, and later offered the crown, which he refuses. Meanwhile Cassius sounds out Brutus’ attitude to Caesar’s ambition, and determines to screw him up to conspiracy. Supernatural portents disturb the night before the Ides of March. Brutus convinces himself that Caesar must be assassinated to prevent him establishing himself as a monarch. The conspirators meet at his house, and Brutus insists on limiting the scope of the plot. Cicero is not to be taken into their confidence, Mark Antony is to be spared, and only Caesar murdered. After the conspirators have left, Portia forces Brutus to take her into his confidence. The portents and Calpurnia’s anxiety persuade Caesar to stay at home, but Decius convinces him to go to the Senate as arranged. Artemidorus tries to give him a letter warning against the conspirators, but he refuses to read it. He is stabbed to death, and confusion ensues. Against Cassius’ wishes, Brutus agrees that Antony may speak at Caesar’s funeral. Brutus’ speech justifying the assassination temporarily convinces the mob, but Antony’s rhetoric, and a bequest in Caesar’s will, turns them against the conspirators. Brutus and Cassius flee Rome. In the riots that follow, the conspirators’ houses are burned and Cinna the poet killed, mistaken for the conspirator of the same name. Antony, Octavius, and Lepidus seize power, draw up a death list, and make preparations for war with Brutus and Cassius. Portia commits suicide. Brutus and Cassius quarrel, but reconcile themselves as friends. They determine to give battle at Philippi rather than waiting for Antony and Octavius to come to them at Sardis. Brutus is visited by Caesar’s ghost, which tells him that they will meet again at Philippi. The two armies face off at Philippi, and Cassius, mistakenly thinking that his side is beaten, commits suicide. Once the day really is lost, Brutus has difficulty in finding a friend willing to help him do the same; finally Strato holds his sword while he runs on it and dies. Antony and Octavius, victorious, pay him tribute and promise him an honourable burial.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_04.html">Cluster 4 — 4: tranio, ego, achilles</a> page.
+</div>
+</div></body></html>

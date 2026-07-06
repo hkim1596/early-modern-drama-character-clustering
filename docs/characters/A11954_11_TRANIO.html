@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TRANIO in nan · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_01.html">Cluster 1 — 1: kate, warwick, stesias</a> ›
+  <span>TRANIO</span>
+</nav>
+
+<h1>TRANIO</h1>
+<p class="lede">in <em></em></p>
+
+<h2>Metadata</h2>
+<table><tr><th>Words</th><td>2280</td></tr>
+<tr><th>Characters</th><td>11967</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 1 (<em>kate, warwick, stesias, bianca, pandora, iphicles…</em>). Matches are highlighted.</p>
+<div class="excerpt">And he shall be Vincentio of Pisa, And make assurance here in Padua Of greater sums then I have promised, So shall you quietly enjoy your hope, And marry sweet <mark>Bianca</mark> with consent. That by degrees we mean to look into, And watch our vantage in this business, Wee&#x27;ll overreach the greybeard <mark>Gremio</mark>, The narrow prying father Minola,</div>
+<div class="excerpt">unknown, And were his daughter fairer then she is, She may more suitors have, and me for one. Fair Laedaes daughter had a thousand wooers, Then well one more may fair <mark>Bianca</mark> have; And so she shall: Lucentio shall make one, Though Paris came, in hope to speed alone. No sir, but hear I do that he hath two: The one, as famous for a scolding</div>
+<div class="excerpt">other, for beauteous modesty. Pardon me sir, the boldness is mine own, That being a stranger in this City here, Do make my self a suitor to your daughter, Unto <mark>Bianca</mark>, fair and virtuous: Nor is your firm resolve unknown to me, In the preferment of the eldest sister. This liberty is all that I request, That upon knowledge of my</div>
+<div class="excerpt">Vincentio. Is this your speeding? nay the ̄ goodnight our partly. It a commodity lay fretting by you, It&#x27;ll bring you gain, or perish on the seas. And I am one that love <mark>Bianca</mark> more Then words can witness, or your thoughts can guess. Graybeard thy love does freeze. But youth in Ladies eyes that flourisheth. That only came well in: sir,</div>
+<div class="excerpt">devil, a devil, the devils dam. What said the wench when he rose again? Let us entreat you stay till after dinner. Of all mad matches never was the Like. Shall sweet <mark>Bianca</mark> practice how to bride it? Is&#x27;t possible friend Lisio, that mistress <mark>Bianca</mark> Does fancy any other but Lucentio, I tell you sir, she bears me fair in hand. O despightful</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Me Pardonato, gentle master mine: I am in all affected as your self, Glad that you thus continue your resolve, To suck the sweets of sweet Philosophy. Only (good master) while we do admire This virtue, and this moral discipline, Let&#x27;s be no Stoics, nor no stocks I pray, Or so devote to Aristotles checks As Ovid ; be and outcast quite abjured: Balk Lodgicke with acquaintance that you have, And practice Rhetoric in your common talk, Music and Poesy use, to quicken you, The Mathematics, and the Metaphysics Fallen to them as you find your stomach serves you: No profit grows, where is no pleasure taken: In brief sir, study what you most affect. Master some show to welcome us to Town. Hushed master, heres some good pastime towards; That wench is stark mad, or wonderful froward. Well said M r , mum, and gaze your fill. I pray sir tell me, is it possible That love should of a sudden take such hold. Master, it is no time to chide you now, Affection is not rated from the heart: If love have touched you, nought remains but so, Redime to captam quam queas minimo. Master, you looked so longly on the maid, Perhaps you marked not what&#x27;s the pith of all. Saw you no more? Marked you not how his sister Began to scold, and raise up such a storm, That mortal ears might hardly endure the din. Nay, then it&#x27;s time to stir him from ̄ his trance: I pray awake sir: if you love the Maid, Bend thoughts and wits to atcheeue her. Thus it stands: Her elder sister is so cursed and shrewed, That till the Father rid his hands of her, Master, your Love must live a maid at home, And therefore has he closely moved her up, Because she will not be annoyed with suitors. I marry am I sir, and now it&#x27;s plotted. Master, for my hand, Both our inventions meet and jump in one. You will be schoolmaster, And undertake the teaching of the maid: That&#x27;s your device. Not possible: for who shall bear your partly, And be in Padua here Vincentio&#x27;s son, Keep house, and ply his book, welcome his friends, Visit his Countrymen, and banquet them? So had you need: In breeze Sir, sith it your pleasure is, And I am tied to be obedient, For so your father charged me at our parting: Be serviceable to my son (quoth he) Although I think &#x27;twas in another sense, I am content to be Lucentio, Because so well I love Lucentio. So could I in-faith boy, to have the next wish of ter, that Lucentio indeed had Baptistas youngest daugh ter. But sirrah, not for my sake, but your Master&#x27;s, I and vise you use your manners discreetly in all kind of come panies: When I am alone, why then I am Tranio: but in all places else, you master Lucentio. Gentlemen God save you. If I may be bold Tell me I beseech you, which is the readiest way To the house of Signior Baptista Minola ? Even he Biondello. Perhaps him and her sir, what have you to do? And if I be sir, is it any offence? Why sir, I pray are not the streers as free For me, as for you? For what reason I beseech you. Softly my Master&#x27;s: If you be Gentlemen Do me this right: hear me with patience, Baptista is a noble Gentleman, To whom my Father is not all unknown, And were his daughter fairer then she is, She may more suitors have, and me for one. Fair Laedaes daughter had a thousand wooers, Then well one more may fair Bianca have; And so she shall: Lucentio shall make one, Though Paris came, in hope to speed alone. No sir, but hear I do that he hath two: The one, as famous for a scolding tongue, As is the other, for beauteous modesty. Pardon me sir, the boldness is mine own, That being a stranger in this City here, Do make my self a suitor to your daughter, Unto Bianca, fair and virtuous: Nor is your firm resolve unknown to me, In the preferment of the eldest sister. This liberty is all that I request, That upon knowledge of my Parentage, I may have welcome amongst the rest that woo, And free access and favour as the rest. And towards the education of your daughters: I here bestow a simple instrument, And this small packet of Greek and Latin books: If you accept them, then their worth is great: Of Pisa sir, son to Vincentio. Is this your speeding? nay the ̄ goodnight our partly. It a commodity lay fretting by you, It&#x27;ll bring you gain, or perish on the seas. And I am one that love Bianca more Then words can witness, or your thoughts can guess. Graybeard thy love does freeze. But youth in Ladies eyes that flourisheth. That only came well in: sir, list to me, I am my father&#x27;s heir and only son, If I may have your daughter to my wife, I&#x27;ll leave her houses three or four as good Within rich Pisa walls, as any one Old Signior Gremio has in Padua, Beside, two thousand Ducats by the year Of fruitful land, all which shall be her jointure. What, have I pinched you Signior Gremio ? Gremio, it&#x27;s known my father hath no less Then three great Argosies, beside two Galliasses And twelve tite Galleys, these I will assure her, And twice as much what ere thou offerest next. Why then the maid is mine from all the world By your firm promise, Gremio is outvied. That&#x27;s but a cavil: he is old, I young. A vengeance on your crafty withered hide, Yet I have faced it with a carded of ten: It&#x27;s in my head to do my master good: I see no reason but supposed Lucentio Must get a father, called supposed Ʋ incentio, And that&#x27;s a wonder: father&#x27;s commonly Do get their children: but in this case of wooing, A child shall get a sire, if I fail not of my cunning. Patience good Katherine and Baptista too, Upon my life Petruchio means but well, What ever fortune stays him from his word, Though he be blunt, I know him passing wise, Though he be merry, yet withal he&#x27;s honest. But say, what to thine old news? It&#x27;s some odd humour pricks him to this fashion, Yet oftentimes he goes but mean appareled. Not so well appareled as I wish you were. And tell us what occasion of import Hath all so long detained you from your wife, And sent you hither so unlike your self? See not your Bride in these unreverent robes, Go to my chamber, put on clothes of mine. He hath some meaning in his mad attire, We will persuade him be it possible, To put on better ere he go to Church. But sir, Love concerns us to add Her father&#x27;s liking, which to bring to pass As before imparted to your worship, I am to get a man what ere he be, It skills not much, weel fit him to our turn, And he shall be Vincentio of Pisa, And make assurance here in Padua Of greater sums then I have promised, So shall you quietly enjoy your hope, And marry sweet Bianca with consent. That by degrees we mean to look into, And watch our vantage in this business, Wee&#x27;ll overreach the greybeard Gremio, The narrow prying father Minola, The quaint Musician, amorous Litio, All for my Master&#x27;s sake Lucentio. Signior Gremio, came you from the Church? And is the Bride &amp; Bridegroom coming home? Curster then she, why it&#x27;s impossible. Why she&#x27;s a devil, a devil, the devils dam. What said the wench when he rose again? Let us entreat you stay till after dinner. Of all mad matches never was the Like. Shall sweet Bianca practice how to bride it? Is&#x27;t possible friend Lisio, that mistress Bianca Does fancy any other but Lucentio, I tell you sir, she bears me fair in hand. O despightful Love, unconstant womankind, I tell thee Lisio this is wonderful. Signior Hortensio, I have often herd Of your entire affection to Bianca, And since mine eyes are witness of her lightness, I will with you, if you be so contented, Forswear Bianca, and her love for ever. And here I take the Like unfeigned oath, Never to marry with her, though she would entreat, Fie on her, see how beastly she does court him. Mistress Bianca, bless you with such grace, As longeth to a Lovers blessed case: Nay, I have taken you napping gentle Love, And have forsworn you with Hortensio. Mistress we have. In faith he&#x27;ll have a lusty Widow now, That shall be wooed, and wedded in a day. I, and he&#x27;ll tame her. Faith he is gone unto the taming school. I mistress, and Petruchio is the master, That teaches tricks eleven and twenty long, To tame a shrew, and charm her chattering tongue. What is he Biondello ? If he be credulous, and trust my tale, I&#x27;ll make him glad to seem Vincentio, And give assurance to Baptista Minola. As if he were the right Ʋ incentio. And you sir, you are welcome, Travail you far on, or are you at the farthest? What Countryman I pray? Of Mantua Sir, marry God forbid, And come to Padua careless of your life. It&#x27;s death for any one in Mantua To come to Padua, know you not the cause? Your ships are stayed at Venice, and the Duke For private quarrel betwixt your Duke and him, Hath published and proclaimed it openly: It&#x27;s marvel, but that you are but newly come, you might have herd it else proclaimed about. Well sir, to do you courtesy, This will I do, and this I will advise you. First tell me, have you ever been at Pisa? Among them know you one Vincentio ? He is my father sir, and sooth to say, In countenance somewhat does resemble you. To save your life in this extremity, This favour will I do you for his sake, And think it not the worst of all your Fortune&#x27;s, That you are Like to Sir Vincentio. His name and credit shall you undertake, And in my house you shall be friendly lodged, Look that you take upon you as you should, you understand me sir: so shall you stay Till you have done your business in the City: If this be curtsy sir, accept of it. Then go with me, to make the matter good, This by the way I let you understand, My father is here looked for every day, To pass assurance of a dowry in marriage betwixt me, and one Baptistas daughter here: In all these circumstances I&#x27;ll instruct you, Go with me to cloth you as becomes you. Sirs, this is the house, please it you that I call. Where we were lodgers, at the Pegasus, &#x27;Tis well, and hold your own in any case With such austerity as longeth to a father. Fear you not him: sirrah Biondello, Now do your duty thoroughly I advise you: Imagine &#x27;twere the right Vincentio. But hast thou done thy errand to Baptista. the art a tall fellow, hold thee that to drink, Here comes Baptista : set your countenance sir. Signior Baptista you are happily met: Sir, this is the gentleman I told you of, I pray you stand good father to me now, Give me Bianca for my patrimony. I thank you sir, where then do you know best We be affied and such assurance taken, As shall with either parts agreement stand. Then at my lodging, and it Like you, There does my father lie: and there this night Weel pass the business privately and well: Send for your daughter by your servant here, My Boy shall fetch the Scrivener presently, The worst is this that at so slender warning, You are Like to have a thin and slender pittance. Sir, what are you that offer to beat my sir vant? How now, what&#x27;s the matter? Sir, you seem a sober ancient Gentleman by your habit: but your words show you a mad man: why sir, what cernes it you, if I wear Pearl and gold: I thank my good Father, I am able to maintain it. Call forth and officer: Carry this mad knave to the Jail: father Baptista, I charge you see that he be forth coming. It&#x27;s well sir that you hunted for your self: It&#x27;s thought your Dear does hold you at a bay. I love no chiders sir: Biondello, let&#x27;s away. If it be so sir, that you are the man Must steed us all, and me amongst the rest: And if you break the ice, and do this seek, Achieve the elder: set the younger free, For our access, whose hap shall be to have her, Will not so graceless be, to be ingrate. Sir, I shall not be slack, in sign whereof, Please you we may contrive this afternoon, And quaff carouses to our Mistress health, And do as adversaries do in law, Strive mightily, but eat and drink as friends. Dally not with the gods, but get thee gone. Signior Baptista, shall I lead the way, Welcome, one mess is Like to be your cheer, Come sir, we will better it in Pisa. Then thou Wertenberg best say that I am not Lu centio. O sir, Lucentio slipped me Like his Gray-hound, Which runs himself, and catches for his Master.</div>
+
+
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_01.html">Cluster 1 — 1: kate, warwick, stesias</a> page.
+</div>
+</div></body></html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DUCHESS in the duke · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+</style>
+</head><body><div class="wrap">
+
+<nav class="crumbs">
+  <a href="../index.html">Home</a> ›
+  <a href="../cluster_evidence.html">All clusters</a> ›
+  <a href="cluster_04.html">Cluster 4 — 4: tranio, ego, achilles</a> ›
+  <span>DUCHESS</span>
+</nav>
+
+<h1>DUCHESS</h1>
+<p class="lede">in <em>the duke</em> — Shirley, James</p>
+
+<h2>Metadata</h2>
+<table><tr><th>Year</th><td>1640</td></tr>
+<tr><th>Words</th><td>1481</td></tr>
+<tr><th>Characters</th><td>8099</td></tr></table>
+
+<h2>Important excerpts</h2>
+<p class="lede" style="font-size:.92rem; margin-top:-.5em">Passages from this character's speech that contain the most distinguishing words for Cluster 4 (<em>tranio, ego, achilles, ane, ajax, scylla…</em>). Matches are highlighted.</p>
+<div class="excerpt">You&#x27;ll find our disposition meet it, but Laura, dost thou not smile to think upon The event, we shall be censured humorous. That ambition Should have such fear in humane nature&#x27;s, but Court hath been long sick; they are my humours And I must physic em. Our guard. You amaze us, whats the treason, who is The conspirator? Be brief.</div>
+
+<h2>Full speech</h2>
+<div class="full-speech">Comachio! we have no knowledge of thy age ̄ , But what thy wisdom and experience does Discover, i&#x27;st not troublesome, t&#x27;attend A young Court? Contarini i&#x27;th morning&#x27;s eye ̄ , reveals More youth, then he did by Hymen&#x27;s tapers; Looks younger then when we call him Bridegroom. Censure him Laura. We cherish both your loves, and you Volterre Are great too within our memory. The cause of your attendance now, is known Ere you deliver it. The departure Of the young Duke (our Lover) from our Court In so obscure a way, without your notice; Our consent published gives you just cause Of wonder: yet so much you&#x27;re skilled both in Our soul and nature, that no immediate Motive of his anger shall be laid to Our charge; but what you think, makes our person Safe, and great. We know he merits all his praise. Proceed To what you call your business. You have yet hope, &#x27;tis in my power To prevent what you suspect. No more Comachio! these are my own thoughts: Shortly you shall see I am art, prevention Of all danger. Foscari is a foreigner: born in A climate not so temperate as ours, And I am yet to know, whither his mind Be different from such as please me here At home: foreign alliance is and old Disguise for Sunices hatred: It charms the Peaceful into a dull security; Until the furious find best advantage To make his anger known: then both are more Engaged t&#x27;inflame, what erst the one did kindle. I should sin my good Lords, if I did think My humility disgraced my honour, When I supposed my own Court able to Breed a man, fit to mingle blood, even with A Princess; should I say with mine: what amazed, Why does it want example, I should not Think my choice would much accuse my eyes, if I elect a Lover here: unless some Are more desertless then I am guilty of, Laura! Comachio, show me your Nephew! You&#x27;re welcome to Court my Lord. He has not only profited in growth Of person, but in&#x27;s judgement too: talks well, Our Court wants such Comachio, your Nephews Contemplation ends here. Padua must Lose him, he shall be our servant. You are a Florentine. We have herd so much of your demerits, That &#x27;twere injustice not to cherish you, Be confident, to gain our best favour. Laura begin your trial. This is a rude kind of duty, speak your Intention. Make your suit known. Orseollo, did not your offence breed mirth, You should perceiv&#x27;t more difficult to find A pardon fort. Leave us but so, that in and hours space We may command your presence here, to move Our laughter, when leisure will permit it, Or you shall never live to wear grey hairs. How Comachio. Deserves he that Epithet? My Lord Volterre, is a copious linguist. Are all the sluices stopped, that we may see Your Cormorants dive for their prey? Comachio— Led forward to the River. Signiour De Patri, be you near us. YOu now shall stay at Court Carintha, see Her very lips look black. Saturn&#x27;s issue. Were not so dull and sullen. Carintha, have I not power to increase Your grief; if you conceal the cause of it From me? Is he come? Carintha, follow me! He began to soften— Giotto? What speaks your hast? Usher em in. Signiour Depazzi. To curse? What purpose signiour? Would, would. This is witty, what detractor Gave out Signiour Comachio, your Nephew Had no rich brain, Carintha, do you nold him Laura, Comachio, would? Why, is mine so bade? He is most witty Carintha. Signior Depazzi, We have leisure to hear you finish your discourse With Laura and Carintha. This pleasantness becomes you well Carintha, And you show duty in it, this night we dedicate To our own delights. You&#x27;ll find our disposition meet it, but Laura, dost thou not smile to think upon The event, we shall be censured humorous. That ambition Should have such fear in humane nature&#x27;s, but Court hath been long sick; they are my humours And I must physic em. Our guard. You amaze us, whats the treason, who is The conspirator? Be brief. Is this the treason? And so I have, here was a piece of treason, But be reserved you are here safe; I&#x27;ll take My time to know and punish all; what bold Entruders this? He must deserve that place then. Signiour Depazzi, you shall be near our person, Here&#x27;s mirth more then&#x27;s expected; Laura, bid Some waiter command Giotto&#x27;s presence; Carintha, weel retire and hear your wonder. My Lord, weel sift the treason. Hah, who is the cause of this fury. My Lord the time is now arrived wherein We are to gain your thanks, and strive to oblige Posterity, your care oth&#x27; public weal, Encouraged your continual suit to heaven, And us, that we would make and earthy choice Of a good husband. Even from this number, Weel perform your wishes, envy is the sin Of Cowards: therefore no Lord of high birth, And temperate breeding will malign his destiny Whom we shall think most worthy our esteem: Nay, &#x27;twould show decay of duty Ith&#x27; greatest of our Court, to think that we Want skill to make a safe election, such A bold thought, in one we call our subject Would soon corrupt our nature, and make our Justice cruel; we do expect (my Lords) No verbal satisfaction in this point; But as we single out our choice, weel make A private trial of each heart, Contarini: How does your wife Signiour? Oh my good Lord you still increase my obligation Then you have practised a divorce already? What and Iron impudence rules in thy Nature? thou seemest to boast of crimes the devil Would in modesty conceal. Canst thou expect kindness from a Lady, That art so cruel to thy own: a soul So much ith&#x27; tongue of fame, as is Carintha: You are one oth&#x27; religious faction, Whose care merely did reflect upon the General good; the safety of your Country, I&#x27;ll not publish thy disgrace: kneel old man? And thank the privilege of this great day; Thou hast thy pardon. Orseollo. How thrives your charity towards our sex, What think you of a woman now my Lord? Stay signiour, this is a kin to flattery, Do you appear at this our summons, with Hope to gain by it: you that have professed Your self a natural enemy to all our sex? Heel tell me all I need not tempt it from him, Bold Mounsier, I&#x27;ve herd of your Goattish tricks Of your Seragho, and your Concubines; Dare you be so much a Traitor, to think I&#x27;d marry with a public stallious, A Town Bull. No more? for the honour of this day I do Conceal your faults and pardon em. Volterre. I am to give you thanks (my Lord) for your Great care oth&#x27; public weal. You did implore My haste to marriage, merely for your Countries good, you your self not guilty of, Any hope to profit by it. And can your nature suffer you to do Me wrong: you under valve me, my birth And title, for else a little foreign Vanity, show in corrupted mixture Of unknown tongues; would not encourage the ̄ e ̄ T&#x27;attempt our person, and so become our equal. Yes y&#x27;ave more deserved our mercy the ̄ n The rest—walk aside. Comachio You are your Countries fathe ̄ r, chief of those Whose zealous interest ith&#x27; common wealth, Urged to entreat my first endeavours, To help posterity with issue; yet Prescribed your self no share ith&#x27; benefit: Fie my Lord! how sinful has ambition Made you? &#x27;tis strange, that he, whom we have held Our Oracle, should conspire the death of One so harmless as your Nephew. We know all; but in hope you&#x27;ll not malign Our next election, you taste our mercy. Signiour de Pazzi. Your Lordship will please to hear ̄ me speak. The fellows saucy, Take him away. Behold (Lords) your Prince Foscari, Duke of Parma, and of Mantua, now our Lover, Whom lately you supposed dismissed our Court. And I made secret promise, to bring you To a Court purged, and in clear health: your Lords Have all taken physic from my prescription. Here I present em to you, penitent And wise; for now they know themselves; which is The best knowledge, and chief partly of wisdom. You are to grant their pardons for my sake. This noise brings in Carintha. Make not rumour acquainted with Your grief: as yet &#x27;tis contained ith&#x27; knowledge ̄ Of us four, I forgive his excellence His sin against me. Make me your good example, And forgive your wife her error. WAs not Orseollo&#x27;s humour, recreation To thee Carintha? Wherein Signiour. Whom? defend us heaven.</div>
+
+<h2>Plot summary</h2><div class="plot"><div class="title">Plot — the duke</div><div class="body">PLOT It is vital that the Duchess of Mantua marries; otherwise the King of Spain will assert his interest in the succession. But the Duchess has turned away three foreign princes proposed by her courtiers, most recently Foscari, who left Mantua annoyed. She declares that she will choose a husband from her own court, which puts the courtiers into a competitive frenzy of ambition. In this they are each abetted by a Florentine visitor to the court, Giotto. Giotto tells Comaccio that the Duchess is interested in his foolish nephew, de Pazzi. At Comaccio’s request, Giotto gives de Pazzi advice on wooing technique designed to make him appear undesirable: he is to talk unchastely and dispraise the other men and women of the court. He composes an offensive poem for the Duchess, but she finds it funny and shows de Pazzi greater favour than before. Comaccio asks Giotto to get de Pazzi out of the way for good, by murdering him; Giotto persuades him to go into hiding until after the marriage is decided. The soldier Orseollo is misled into thinking he is the chosen suitor, and starts to regret his public displays of misogyny. Even after his U-turn, Giotto tells him there is a slight problem: his former attitudes could be taken as evidence of his impotence, perhaps the result of a battlefield injury; so Orseollo attempts to secure his reputation as a stud by revealing the prodigious extent of his secret whoring. Old Contarini regrets his recent marriage to a young wife, which puts him out of the running; so he asks her to commit suicide. When she refuses, he procures Giotto to commit adultery with her in order to provide grounds for divorce. A messenger arrives with the news that the Duchess’s decision is to be announced that night, before the divorce can go through, so Contarini asks Giotto to kill his wife instead, and quickly. When the courtiers gather to hear the Duchess’s decision, de Pazzi denounces Giotto as a traitor for seeking to kill him, the next Duke. He is disabused of his expectations, and the Duchess exposes the corruption and hypocrisy of each of her ambitious courtiers. Her choice is Giotto, who is really Foscari in disguise: the whole exercise has been a ruse to enable him to find out the truth about his new court. All are forgiven.</div></div>
+
+<div class="footer">
+  Generated automatically from <code>cluster_xy_table__archetype.csv</code>.
+  View other characters in this group on the
+  <a href="cluster_04.html">Cluster 4 — 4: tranio, ego, achilles</a> page.
+</div>
+</div></body></html>
