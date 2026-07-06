@@ -108,6 +108,31 @@ def derive_display_columns(df):
     return df
 
 
+def split_facets(value, multi: bool = True) -> list[str]:
+    """Split a possibly multi-valued metadata string into atomic facets.
+
+    Catalogue fields are ';'-joined lists ("Fletcher, John; Massinger, Philip",
+    "Adult Professional;Professional", "Blackfriars;Globe;Indoor Professional").
+    Commas stay (they belong to "Last, First"), '/' stays ("Phoenix/Cockpit",
+    "Closet/Unacted"). Uncertain-attribution markers "(?)" are stripped so
+    "Queen Henrietta Maria's Men (?)" merges with its certain form.
+    """
+    import pandas as pd
+    import re as _re
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return []
+    s = str(value).strip()
+    if not s or s.lower() in ("nan", "unknown"):
+        return []
+    parts = s.split(";") if multi else [s]
+    out = []
+    for p in parts:
+        p = _re.sub(r"\s*\(\?\)\s*$", "", p.strip()).strip()
+        if p and p.lower() != "unknown" and p not in out:
+            out.append(p)
+    return out
+
+
 def parse_roles_field(roles_str: str) -> list[dict[str, str]]:
     """Extract role names + descriptions from the catalogue's `roles` column.
 

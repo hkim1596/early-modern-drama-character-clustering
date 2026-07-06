@@ -142,36 +142,44 @@ def build_figure(df: pd.DataFrame, preset_name: str) -> go.Figure:
     # full size/opacity, everything else dims (unselected style). Payload per
     # option is just the member indices, so the HTML stays small (per-option
     # full-length restyle arrays once made this file >100 MB).
+    #
+    # Metadata fields are multi-valued (";"-joined: "Adult Professional;
+    # Professional", "Fletcher, John; Massinger, Philip"), so options are
+    # built from ATOMIC facets: a point matches "Adult Professional" whether
+    # or not other types are listed alongside it.
+    from utils import split_facets
     axes_to_show = []
     for col, label in HIGHLIGHT_AXES:
         if col not in df.columns:
             continue
-        raw_values = [v for v in df[col].dropna().unique().tolist()
-                      if str(v).strip() and str(v).lower() != "unknown"]
-        if not raw_values:
+        facet_rows: dict[str, list[int]] = {}
+        for r, v in df[col].items():
+            for f in split_facets(v):
+                facet_rows.setdefault(f, []).append(r)
+        if not facet_rows:
             continue
         if col == "Date_Decade":
-            values = sort_decades([str(v) for v in raw_values])
+            values = sort_decades(list(facet_rows))
         else:
-            values = sorted([str(v) for v in raw_values])
-        axes_to_show.append((col, label, values))
+            values = sorted(facet_rows)
+        axes_to_show.append((col, label, values, facet_rows))
 
     reset_sel = {"selectedpoints": [None] * n_traces}
 
     updatemenus = []
     n_axes = len(axes_to_show)
     x_step = (0.92 / max(n_axes - 1, 1)) if n_axes > 1 else 0
-    for i, (col, label, values) in enumerate(axes_to_show):
+    for i, (col, label, values, facet_rows) in enumerate(axes_to_show):
         buttons = [dict(label=f"All ({label})", method="restyle",
                         args=[reset_sel, all_trace_idx])]
-        series = df[col].astype(str)
         for v in values:
+            rows = facet_rows[v]
             per_trace: list[list[int]] = [[] for _ in range(n_traces)]
-            for r in series.index[series == v]:
+            for r in rows:
                 t_i, j = pos_in_trace[r]
                 per_trace[t_i].append(j)
             buttons.append(dict(
-                label=f"{label}: {v}",
+                label=f"{label}: {v} ({len(rows)})",
                 method="restyle",
                 args=[{"selectedpoints": per_trace}, all_trace_idx],
             ))
