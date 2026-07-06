@@ -1,21 +1,21 @@
 {
-  "_note": "Hand-curated canonical-edition overrides consulted by stage 04's edition dedup (utils.canonical_edition_tcps). Default policy keeps the EARLIEST DATED edition of a work; entries here force a specific TCP instead. For Shakespeare, the choice follows the New Oxford Shakespeare: the version underlying the Modern Critical Edition text is canonical, so where the corpus offers only a 'bad' quarto/octavo and the Folio, the Folio (nearest witness to the MCE base text) is kept. 'year' supplies a working date for the kept text when the TCP itself is undated (Folio items) — FIRST-PERFORMANCE dating, not print dating (the Folio's print date is 1623); it is written into the derived clustering table only, never into source metadata. APPROVED by Heejin 2026-07-07 ('keep, with explicit note') — see PROVENANCE_LOG.md section 4e. Entries marked confirm=true are two-text plays where the NOS MCE choice should be double-checked against the edition itself.",
+  "_note": "Hand-curated canonical-edition overrides consulted by stage 04's edition dedup (utils.canonical_edition_tcps). Default policy keeps the EARLIEST DATED edition of a work; entries here force a specific TCP instead. For Shakespeare the canonical text follows the New Oxford Shakespeare MODERN CRITICAL EDITION; every entry below was VERIFIED against Heejin's copy (References/Taylor, Gary, ed. The New Oxford Shakespeare - Modern Critical Edition copy.pdf) on 2026-07-07 — quotes in each 'basis' field; see PROVENANCE_LOG.md Entry 002. Where the MCE base text is absent from the corpus (Hamlet Q2, Romeo Q2), the nearest surviving witness is kept — an INFERENCE, approved by Heejin 2026-07-07, not an MCE statement. 'year' supplies a working date for undated Folio texts — FIRST-PERFORMANCE dating, not print dating (Folio printed 1623); written into the derived clustering table only, never into source metadata; approved by Heejin 2026-07-07 ('keep, with explicit note').",
   "works": {
     "Hamlet": {"keep": "A11954.32", "over": ["A11959"], "year": 1601,
-               "basis": "NOS MCE base is Q2 (not in corpus); Folio is the nearest witness. Q1 (1603) is the memorial/early short text.", "confirm": false},
+               "basis": "MCE: 'This edition is based on the Second Quarto of 1604-5... The very different texts printed in 1603 and 1623 are both edited, separately, in Alternative Versions.' Q2 is not in the corpus; the Folio (kept) is the nearest witness to the MCE text, Q1 1603 being the short memorial version. Nearest-witness INFERENCE approved 2026-07-07.", "confirm": false},
     "Romeo and Juliet": {"keep": "A11954.28", "over": ["A12010"], "year": 1595,
-               "basis": "NOS MCE base is Q2 1599 (not in corpus); Folio nearest. Q1 1597 is the short 'bad' text.", "confirm": false},
+               "basis": "MCE: 'This edition is based on the more complete 1599 quarto'; the 1597 short version is in Alternative Versions. Q2 1599 is not in the corpus; the Folio (kept) descends from the Q2 line. Nearest-witness INFERENCE approved 2026-07-07.", "confirm": false},
     "The Merry Wives of Windsor": {"keep": "A11954.3", "over": ["A11983", "A11988"], "year": 1597,
-               "basis": "NOS MCE base is F; Q 1602 is the short 'bad' text.", "confirm": false},
+               "basis": "MCE: 'First printed in a short version in 1602... The longer text edited here was first published in 1623.' VERIFIED — MCE base is the Folio.", "confirm": false},
     "3 Henry the Sixth": {"keep": "A11954.22", "over": ["A10726"], "year": 1591,
-               "basis": "NOS MCE base is F (Richard Duke of York O 1595 is the short text).", "confirm": false},
-    "King Lear": {"keep": "A11954.33", "over": ["A11978"], "year": 1606,
-               "basis": "Two-text play; F-based Tragedy taken as the MCE reading text.", "confirm": true},
+               "basis": "MCE: 'Based on the 1623 Folio... For the shorter, significantly different 1595 text, see Alternative Versions.' VERIFIED.", "confirm": false},
+    "King Lear": {"keep": "A11978", "over": ["A11954.33"], "year": null,
+               "basis": "MCE: 'The present edition is based on the First Quarto of 1608, which gives the longest early text... The extensively altered text in the 1623 Folio is presented in Alternative Versions.' VERIFIED — corrected 2026-07-07 from the earlier Folio choice; Q1 1608 is dated, no year imputation needed.", "confirm": false},
     "Othello": {"keep": "A11954.34", "over": ["A11992"], "year": 1604,
-               "basis": "Two-text play; F contains ~160 lines absent from Q 1622; F taken as MCE base.", "confirm": true},
-    "Richard the Third": {"keep": "A12001", "over": ["A11954.23"], "year": 1592,
-               "basis": "Q1 1597 kept (earliest dated); NOS treats the Q tradition as the theatrical text. Confirm against MCE.", "confirm": true},
-    "Troilus and Cressida": {"keep": "A12021", "over": ["A11954.25"], "year": 1602,
-               "basis": "Q 1609 kept (earliest dated). Confirm MCE base (Q vs F) against the edition.", "confirm": true}
+               "basis": "MCE: 'Based on the 1623 Folio... For the 1622 text, see Alternative Versions.' VERIFIED.", "confirm": false},
+    "Richard the Third": {"keep": "A11954.23", "over": ["A12001"], "year": 1592,
+               "basis": "MCE: 'Based on the 1623 Folio... A somewhat shorter version was published in quarto in 1597: see Alternative Versions.' VERIFIED — corrected 2026-07-07 from the earlier Q1 choice; performance year per NOS 'Best guess 1592'.", "confirm": false},
+    "Troilus and Cressida": {"keep": "A11954.25", "over": ["A12021"], "year": 1602,
+               "basis": "MCE: 'The present edition is based on the 1623 Folio: see Reference edition. For the 1609 edition, see Alternative Versions.' VERIFIED — corrected 2026-07-07 from the earlier Q choice; performance year c. 1602.", "confirm": false}
   }
 }

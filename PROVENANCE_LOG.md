@@ -128,6 +128,40 @@ No source data modified on the server.
   `Archetype_Findings_2026-07-06.md` (project folder, outside the repo) describe the
   pre-dedup 7,339-character partition; both carry headers saying so.
 
+---
+
+## Entry 002 — 2026-07-07: canonical editions verified against the NOS Modern Critical Edition
+
+Heejin placed her copy of *The New Oxford Shakespeare: Modern Critical Edition* (Taylor,
+Bourus, Egan, Jowett eds.) in `References/`. The assistant extracted each play's "Text"
+headnote and compared it with `data/canonical_editions.json`. Findings, with MCE quotes:
+
+- **Verified correct (Folio-based per MCE):** Othello ("Based on the 1623 Folio… For the
+  1622 text, see Alternative Versions"), Merry Wives ("The longer text edited here was
+  first published in 1623"), 3 Henry VI ("Based on the 1623 Folio… the shorter,
+  significantly different 1595 text" in Alternative Versions).
+- **Corrected (previous assistant guesses were wrong):**
+  - *King Lear* → **Q1 1608** kept (A11978): "based on the First Quarto of 1608, which
+    gives the longest early text"; the Folio text is in Alternative Versions. The earlier
+    Folio choice and its imputed year 1606 are withdrawn (Q1 is dated).
+  - *Richard III* → **Folio** kept (A11954.23): "Based on the 1623 Folio"; Q 1597 is in
+    Alternative Versions. Performance year 1592 imputed (NOS "Best guess 1592").
+  - *Troilus and Cressida* → **Folio** kept (A11954.25): "based on the 1623 Folio"; the
+    1609 edition is in Alternative Versions. Performance year 1602 imputed.
+- **Nearest-witness inferences (MCE base absent from corpus), approved by Heejin:**
+  Hamlet (MCE base Q2 1604–5; Q1 1603 and F both "Alternative Versions" — F kept as
+  nearest witness) and Romeo and Juliet (MCE base Q2 1599; F kept, Q1 1597 short text).
+- Consistent without overrides: Richard II, 1 Henry IV, 2 Henry IV (all Q-based per MCE;
+  quartos already kept by the earliest-dated default).
+
+Approvals (Heejin, 2026-07-07): apply all three corrections; keep Folio + explicit
+inference note for Hamlet/Romeo; extend the approved performance-year convention to the
+two newly kept Folio texts (R3 1592, Troilus 1602); re-run stages 04–07 now. Cluster ids
+reshuffle on the re-run; Heejin's curated cluster names will be remapped by member
+overlap and flagged for her review.
+
+---
+
 ### 7. Open items requiring explicit approval before any action
 
 1. ~~§4e year imputation~~ — **resolved 2026-07-07: keep, with explicit note** (recorded
