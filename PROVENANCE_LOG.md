@@ -222,7 +222,11 @@ verification record.
   characters clustered in earlier, larger runs (7,339-character era) that are no longer
   clustered. They are not linked from any current page but remain reachable by direct
   URL with outdated cluster assignments. Deleting them is a site change awaiting
-  approval.
+  approval. → **RESOLVED same day: Heejin approved deletion.** All 873 files removed;
+  `docs/characters/` verified to contain exactly the 6,466 pages of the current
+  partition (file set identical to the clustered character ids). The deleting commit's
+  file list is the complete record of what was removed. Note: stage 07 does not prune
+  stale pages automatically — adding that is a code change awaiting approval (§7).
 
 ---
 
@@ -240,4 +244,7 @@ verification record.
 5. Cluster names for ids 2, 3, 4, 9, 10, 11, 12, 14, 16, 18, 19, 21, 22, 23 —
    awaiting Heejin (Entry 002).
 6. A16527.x / A16564.x item-title assignments — awaiting Heejin's manual review (F3).
-7. 873 orphan character pages in `docs/characters/` — deletion awaiting approval (F6).
+7. ~~873 orphan character pages in `docs/characters/`~~ — **resolved 2026-07-07:
+   deletion approved and executed** (F6; file list in the deleting commit).
+8. Stage 07 auto-pruning of stale character pages on each run — code change awaiting
+   approval.
