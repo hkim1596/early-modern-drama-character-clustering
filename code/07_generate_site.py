@@ -7,6 +7,7 @@ the entire browsable site into docs/ (the GitHub Pages root):
     ├── index.html                       (landing — already exists; left alone)
     ├── interactive_clusters__*.html     (interactive maps — already exist)
     ├── cluster_evidence.html            (master index of clusters)
+    ├── methods.html                     (how every on-page label is computed)
     ├── cluster_NN.html                  (one page per cluster)
     └── characters/<char_id>.html        (one page per character)
 
@@ -138,6 +139,11 @@ h2.fam { margin-top: 2.2em; border-bottom: 1px solid var(--rule); padding-bottom
                    color: #7a6a2e; text-transform: uppercase; margin-right: .5em; }
 .spark { display: inline-flex; align-items: flex-end; gap: 1px; height: 14px; margin-left: 8px; }
 .spark i { display: inline-block; width: 3px; background: var(--bar); }
+tr.formative td { background: #f7f3e6; }
+.badge-proto { background: #e7e0f4; color: #4a3a7a; }
+.methods h2 { margin-top: 1.8em; border-bottom: 1px solid var(--rule); padding-bottom: .25em; }
+.methods p { max-width: 72ch; }
+.methods code { background: var(--soft); border-radius: 4px; padding: 0 4px; font-size: .9em; }
 """
 
 # Authors whose plays general readers are most likely to know — used to pick
@@ -204,6 +210,34 @@ SIG_MIN_N = {"author": 4, "genre": 5, "company": 5, "theater": 5, "play_type": 5
 SIG_MIN_LIFT = 1.2
 SIG_TOP = 5
 
+# ---------------------------------------------------------------------
+# Emergence + prototype rules (2026-07-10, PROVENANCE_LOG Entry 007).
+# Replaces the old "early = first 5 dated roster rows" badge, which ignored
+# typicality (measured: those five sat at the 35th typicality percentile on
+# average; in 16/25 clusters at most one reached the cluster median).
+#
+# Year basis for everything genealogical: PERFORMANCE-FIRST — the parsed
+# date_first_performance where available, else the catalogued year
+# (year_analysis). Entry-005 display fill years (late-skewed parent-volume
+# print years) are excluded from the emergence computation, but do serve as
+# the last-resort roster display year (year_roster) so no row is undated.
+#
+#   established year = the year the first EMERGE_Q share (a tenth) of the
+#                      cluster's dated members has appeared ("established by")
+#   formative era    = members dated up to and including that year
+#   prototype        = formative-era member with typicality >= the cluster
+#                      median, top PROTO_TOP_N by typicality
+# Simple sustained-window rules ("first decade with >=3 members, recurring")
+# were tested and rejected: they collapse to the corpus onset (1544-1584) for
+# nearly every cluster — they track corpus survival, not the cluster's own
+# take-off.
+# ---------------------------------------------------------------------
+EMERGE_MIN_DATED = 20     # below this, no emergence line and no prototype badges
+EMERGE_Q         = 0.10   # "established by" = first tenth of dated members
+PROTO_TYP_GATE_Q = 0.50   # typicality gate: cluster median centroid_sim
+PROTO_TOP_N      = 5
+YEAR_SANE_RANGE  = (1400, 1700)   # parsed performance years outside → treated missing
+
 
 def render_reading_banner(summary: dict) -> str:
     """RQ1/RQ30 framing + partition identity (proposal item 1.1)."""
@@ -218,7 +252,9 @@ def render_reading_banner(summary: dict) -> str:
             f'Character-space is a <b>continuum with dense prototype regions</b>, not a set of '
             f'discrete boxes (silhouette {sil_s}; {SEED_ARI_TEXT}): read each cluster as a '
             f'density peak, membership as graded, and low-typicality members as blends of '
-            f'several regions. Cluster ids are not stable across re-clustering runs.</div>')
+            f'several regions. Cluster ids are not stable across re-clustering runs. '
+            f'How every label and number here is computed: '
+            f'<a href="methods.html">Methods &amp; labels</a>.</div>')
 
 
 def _analysis_years(frame: pd.DataFrame) -> pd.Series:
@@ -313,9 +349,10 @@ def render_temporal_strip(sub: pd.DataFrame, ctx: dict) -> tuple[str, list[str]]
     axis = (f'<div class="taxis">{ctx["bins"][0]}–{ctx["bins"][-1] + 4} in 5-year bins · '
             f'<span style="color:var(--accent)">▮</span> this cluster vs '
             f'<span style="color:#b7b7ac">▮</span> corpus (share of dated members; hover for '
-            f'numbers). Performance years as catalogued; the display-only fill years of '
-            f'PROVENANCE_LOG Entry 005 are excluded here, so a member can show a year in the '
-            f'roster yet not count as dated above.</div>')
+            f'numbers). Catalogued-year basis (largely print years), matching the published '
+            f'report; Entry-005 display fill years excluded. The roster below uses '
+            f'performance-first dating instead, so its years can sit earlier than this strip '
+            f'(<a href="methods.html">why two bases</a>).</div>')
 
     stats = (f'<div class="kvp">'
              f'<span><b>{nd}</b> dated of {n}</span>'
@@ -406,8 +443,11 @@ def render_name_badge(entry: dict) -> str:
 
 
 def render_decade_spark(sub: pd.DataFrame) -> str:
-    """Tiny inline decade sparkline for index cards (proposal item 1.7)."""
-    counts = sub["Date_Decade"].dropna().astype(str).value_counts()
+    """Tiny inline decade sparkline for index cards (proposal item 1.7).
+    Performance-first decades (Entry 007) when year_roster is available."""
+    dec = (decade_series(sub["year_roster"]) if "year_roster" in sub.columns
+           else sub["Date_Decade"])
+    counts = dec.dropna().astype(str).value_counts()
     counts = counts[~counts.index.str.lower().str.startswith("unknown")]
     if counts.empty:
         return ""
@@ -416,6 +456,53 @@ def render_decade_spark(sub: pd.DataFrame) -> str:
     bars = "".join(f'<i style="height:{max(2, round(13 * counts[d] / mx))}px"></i>'
                    for d in decades)
     return f'<span class="spark" title="decades {esc(decades[0])}–{esc(decades[-1])}">{bars}</span>'
+
+
+def decade_series(years: pd.Series) -> pd.Series:
+    """'1590s'-style decade labels from a numeric year series (NaN-safe)."""
+    dec = (pd.to_numeric(years, errors="coerce") // 10 * 10)
+    return dec.map(lambda d: f"{int(d)}s" if pd.notna(d) else float("nan"))
+
+
+def compute_emergence(sub: pd.DataFrame) -> dict:
+    """Emergence + prototype candidates (PROVENANCE_LOG Entry 007).
+
+    Operates on `year_gen` (performance-first: date_first_performance where
+    parseable, else the catalogued year; Entry-005 display fills excluded) and
+    `centroid_sim`. Returns {} when fewer than EMERGE_MIN_DATED members are
+    dated. Index values refer to `sub`'s index (call AFTER any reset_index).
+    """
+    if "year_gen" not in sub.columns:
+        return {}
+    d = sub[sub["year_gen"].notna()]
+    n = len(d)
+    if n < EMERGE_MIN_DATED:
+        return {}
+    ys = d["year_gen"].astype(int).sort_values()
+    k = max(1, int(-(-EMERGE_Q * n // 1)))          # ceil(EMERGE_Q * n)
+    established = int(ys.iloc[k - 1])
+    first_year = int(ys.iloc[0])
+    # name the first recorded member (highest typicality among the first year's)
+    firsts = d[d["year_gen"] == first_year]
+    first_row = firsts.loc[firsts["centroid_sim"].idxmax()] \
+        if firsts["centroid_sim"].notna().any() else firsts.iloc[0]
+    gate = float(sub["centroid_sim"].median())
+    formative = d[d["year_gen"] <= established]
+    proto = formative[formative["centroid_sim"] >= gate] \
+        .nlargest(PROTO_TOP_N, "centroid_sim")
+    n_perf = int(sub["year_perf"].notna().sum()) if "year_perf" in sub.columns else 0
+    return {
+        "n_dated": n, "n_perf": n_perf,
+        "first_year": first_year,
+        "first_name": str(first_row.get("display_name") or "?"),
+        "first_play": str(first_row.get("title") or ""),
+        "established": established,
+        "gate": gate,
+        "formative_idx": set(formative.index),
+        "n_formative": len(formative),
+        "n_pass_gate": int((formative["centroid_sim"] >= gate).sum()),
+        "proto_idx": list(proto.index),
+    }
 
 
 SORT_JS = """
@@ -567,12 +654,15 @@ def cluster_label_for(cluster_id: int, df: pd.DataFrame) -> str:
 
 
 def render_meta_line(row: pd.Series) -> str:
-    """One-liner with author / date / genre / company / theater."""
+    """One-liner with author / date / genre / company / theater.
+    Uses the performance-first roster year when present (Entry 007) so the
+    cluster page is internally consistent; falls back to the display year."""
     parts = []
     if isinstance(row.get("author"), str) and row["author"].strip():
         parts.append(esc(row["author"]))
-    if pd.notna(row.get("year")):
-        parts.append(str(int(row["year"])))
+    _y = row.get("year_roster") if pd.notna(row.get("year_roster")) else row.get("year")
+    if pd.notna(_y):
+        parts.append(str(int(_y)))
     if isinstance(row.get("genre"), str) and row["genre"].strip():
         parts.append(esc(row["genre"]))
     if isinstance(row.get("company"), str) and row["company"].strip():
@@ -681,9 +771,11 @@ def facet_counts(series: pd.Series, unknown_label: str | None = None,
 def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame,
                         meta: dict, ctx: dict, summary: dict) -> str:
     # Chronological order: the genealogical reading — earliest members first,
-    # successors after suit.
+    # successors after suit. PERFORMANCE-FIRST dating (Entry 007): sort and
+    # Year column use year_roster (first-performance year where parseable,
+    # else catalogued year, else the Entry-005 display fill year).
     sub = (df[df.cluster == cluster_id].copy()
-           .sort_values(["year", "n_words"], ascending=[True, False], na_position="last")
+           .sort_values(["year_roster", "n_words"], ascending=[True, False], na_position="last")
            .reset_index(drop=True))
     n = len(sub)
     label = cluster_label_for(cluster_id, df)
@@ -697,49 +789,63 @@ def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame,
         sub["centroid_sim"] = float("nan")
 
     author_counts = facet_counts(sub["author"], unknown_label="(unknown)", kind="author")
-    decade_counts = sub["Date_Decade"].fillna("Unknown").astype(str).value_counts().to_dict()
+    decade_counts = (decade_series(sub["year_roster"]).fillna("Unknown")
+                     .astype(str).value_counts().to_dict())
     genre_counts = facet_counts(sub["genre"])
-    years = sub["year"].dropna()
+    years = sub["year_roster"].dropna()
     yr_str = f"{int(years.min())}–{int(years.max())} (median {int(years.median())})" if len(years) else "undated"
 
     title = f"Cluster {cluster_id} — {label.split(': ', 1)[-1]}"
 
-    # ---- Landmarks: most typical + most familiar ----------------------
-    typical = sub.nlargest(min(6, n), "centroid_sim")
+    # ---- Emergence + prototype candidates (Entry 007) -----------------
+    emg = compute_emergence(sub)
+    proto_set = set(emg.get("proto_idx", []))
+    formative_set = emg.get("formative_idx", set())
+
+    # ---- Landmarks: prototypes + most typical + most familiar ---------
+    proto_lm = sub.loc[emg["proto_idx"]] if emg else sub.iloc[0:0]
+    typical = (sub[~sub.index.isin(proto_lm.index)]
+               .nlargest(min(6, n), "centroid_sim"))
     fam_mask = sub["author"].astype(str).apply(
         lambda a: any(f in a for f in FAMILIAR_AUTHORS))
-    familiar = (sub[fam_mask & ~sub.index.isin(typical.index)]
+    familiar = (sub[fam_mask & ~sub.index.isin(typical.index)
+                    & ~sub.index.isin(proto_lm.index)]
                 .nlargest(4, "n_words"))
 
-    def lm_card(r, tag):
+    def lm_card(r, tag, badge_cls="badge"):
         slug = slugify(r.get("character_id", ""))
         sim = "" if pd.isna(r.get("centroid_sim")) else f" · typicality {r['centroid_sim']:.2f}"
-        yr = "" if pd.isna(r.get("year")) else f", {int(r['year'])}"
+        _y = r.get("year_roster")
+        yr = "" if pd.isna(_y) else f", {int(_y)}"
         return (f'<div class="lm-card"><div class="who">'
                 f'<a href="characters/{slug}.html">{esc(r.get("display_name") or "?")}</a>'
-                f'<span class="badge">{tag}</span></div>'
+                f'<span class="{badge_cls}">{tag}</span></div>'
                 f'<div class="whence">{esc(truncate(str(r.get("title") or ""), 60))}'
                 f'{yr} · {esc(_first_author(r))}{sim}</div></div>')
 
-    landmarks_html = "".join([lm_card(r, "typical") for _, r in typical.iterrows()] +
-                             [lm_card(r, "familiar") for _, r in familiar.iterrows()])
+    landmarks_html = "".join(
+        [lm_card(r, "prototype", "badge badge-proto") for _, r in proto_lm.iterrows()] +
+        [lm_card(r, "typical") for _, r in typical.iterrows()] +
+        [lm_card(r, "familiar") for _, r in familiar.iterrows()])
 
     # ---- Full chronological roster ------------------------------------
-    dated_pos = sub.index[sub["year"].notna()].tolist()
-    early_set = set(dated_pos[:5])
+    proto_title = (f"formative era (≤{emg['established']}) · typicality ≥ cluster "
+                   f"median {emg['gate']:.2f}") if emg else ""
     table_rows = []
     for i, r in sub.iterrows():
         slug = slugify(r.get("character_id", ""))
         nm = esc(r.get("display_name") or "?")
-        early = '<span class="badge">early</span>' if i in early_set else ""
+        badge = (f'<span class="badge badge-proto" title="{esc(proto_title)}">prototype</span>'
+                 if i in proto_set else "")
+        row_cls = ' class="formative"' if i in formative_set else ""
         play = esc(truncate(str(r.get("title") or ""), 60))
         au = esc(_first_author(r))
-        yr = "" if pd.isna(r.get("year")) else int(r["year"])
+        yr = "" if pd.isna(r.get("year_roster")) else int(r["year_roster"])
         gn = esc(r.get("genre", ""))
         nw = "" if pd.isna(r.get("n_words")) else int(r["n_words"])
         sim = "" if pd.isna(r.get("centroid_sim")) else f"{r['centroid_sim']:.2f}"
         table_rows.append(
-            f"<tr><td><a href='characters/{slug}.html'>{nm}</a>{early}</td>"
+            f"<tr{row_cls}><td><a href='characters/{slug}.html'>{nm}</a>{badge}</td>"
             f"<td>{play}</td><td>{au}</td><td class='num' data-v='{yr if yr != '' else 9999}'>{yr}</td>"
             f"<td>{gn}</td><td class='num'>{nw}</td>"
             f"<td class='num' data-v='{sim if sim else -1}'>{sim}</td></tr>"
@@ -752,25 +858,25 @@ def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame,
         + "".join(table_rows) + "</tbody></table>"
     )
 
-    # ---- Representative excerpts: typical ∪ earliest ∪ familiar --------
+    # ---- Representative excerpts: prototypes ∪ typical ∪ familiar ------
     rep_ids = list(dict.fromkeys(          # preserve order, drop dupes
-        list(typical.index) + dated_pos[:5] + list(familiar.index)))[:12]
+        list(proto_lm.index) + list(typical.index) + list(familiar.index)))[:12]
     # why-chips: which landmark set(s) put each member here (item 1.6a)
     rep_why: dict[int, list[str]] = {}
+    for i in proto_lm.index:
+        rep_why.setdefault(i, []).append("prototype")
     for i in typical.index:
         rep_why.setdefault(i, []).append("typical")
-    for i in dated_pos[:5]:
-        rep_why.setdefault(i, []).append("early")
     for i in familiar.index:
         rep_why.setdefault(i, []).append("familiar")
-    rep = sub.loc[rep_ids].sort_values("year", na_position="last")
+    rep = sub.loc[rep_ids].sort_values("year_roster", na_position="last")
     excerpt_blocks = "\n".join(
         render_character_block_for_cluster_page(r, keywords, rep_why.get(i, []))
         for i, r in rep.iterrows()
     )
 
     # ---- Plot summaries (collapsed) ------------------------------------
-    plays = sub.drop_duplicates("TCP").sort_values("year", na_position="last")
+    plays = sub.drop_duplicates("TCP").sort_values("year_roster", na_position="last")
     plot_blocks = []
     for _, r in plays.iterrows():
         plot = truncate(r.get("plot", "") or "", 1500)
@@ -813,6 +919,39 @@ def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame,
     time_badge_html = "".join(f'<span class="badge">{esc(b)}</span>' for b in time_badges)
     signature_html = render_signature_panel(sub, ctx)
 
+    # ---- Ledes for landmarks / roster (Entry 007 wording) ---------------
+    landmarks_lede = (
+        '<p class="lede" style="font-size:.92rem">'
+        + ('The candidate <b>prototypes</b> (formative-era members with above-median '
+           'typicality — see the roster below), ' if emg else '')
+        + 'the most <b>typical</b> members (closest to the cluster centroid) and the most '
+          '<b>familiar</b> ones (major-author roles). Typicality is cosine similarity to the '
+          'cluster centre — low values mean a blended, atypical member.</p>')
+
+    if emg:
+        roster_lede = (
+            f'<p class="lede" style="font-size:.92rem">A genealogical reading under '
+            f'<b>performance-first dating</b>: first-performance year where known '
+            f'({emg["n_perf"]} of {emg["n_dated"]} dated members), else the catalogued year — '
+            f'so years here can sit earlier than in the historical profile above, which keeps '
+            f'the published print-year basis. First recorded <b>{emg["first_year"]}</b> '
+            f'({esc(emg["first_name"])}, <em>{esc(truncate(emg["first_play"], 60))}</em>); '
+            f'established by <b>{emg["established"]}</b> — the year the first tenth of the '
+            f'cluster\'s dated members had appeared. Tinted rows fall in that formative era; '
+            f'<span class="badge badge-proto">prototype</span> marks its most typical members '
+            f'(typicality ≥ cluster median {emg["gate"]:.2f}; top {min(PROTO_TOP_N, emg["n_pass_gate"])} '
+            f'of {emg["n_pass_gate"]} qualifying of {emg["n_formative"]} formative) — the strongest '
+            f'candidates for this voice\'s founding exemplars. Early members below the gate are '
+            f'more likely blends than models; kinship, not proven indebtedness. Click a column '
+            f'header to re-sort. Full rules: <a href="methods.html">Methods &amp; labels</a>.</p>')
+    else:
+        roster_lede = (
+            '<p class="lede" style="font-size:.92rem">Chronological roster under '
+            'performance-first dating (first-performance year where known, else the catalogued '
+            f'year). Fewer than {EMERGE_MIN_DATED} members are dated, so no emergence estimate '
+            'or prototype badges are shown. Click a column header to re-sort. '
+            'Full rules: <a href="methods.html">Methods &amp; labels</a>.</p>')
+
     return f"""<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8">
@@ -849,26 +988,22 @@ def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame,
 {signature_html}
 
 <h2>Landmarks</h2>
-<p class="lede" style="font-size:.92rem">The most <b>typical</b> members (closest to the
-cluster centroid) and the most <b>familiar</b> ones (major-author roles). Typicality is
-cosine similarity to the cluster centre — low values mean a blended, atypical member.</p>
+{landmarks_lede}
 <div class="landmarks">{landmarks_html}</div>
 
 <h2>All {n} characters, oldest first</h2>
-<p class="lede" style="font-size:.92rem">A genealogical reading: the earliest members
-(<span class="badge">early</span>) are the candidate prototypes of this voice; later
-members follow suit. Click a column header to re-sort.</p>
+{roster_lede}
 {table_html}
 
 <h2>Representative speech excerpts</h2>
-<p class="lede" style="font-size:.92rem">Shown for the typical, earliest, and familiar
+<p class="lede" style="font-size:.92rem">Shown for the prototype, typical, and familiar
 members above — passages containing the cluster's distinguishing words (highlighted).</p>
 {excerpt_blocks}
 
 <details><summary>Full authorship list &amp; decade counts</summary>
 <h3>Authorship (raw counts)</h3>
 {render_author_tags(author_counts)}
-<h3>Decade distribution (raw counts)</h3>
+<h3>Decade distribution (raw counts, performance-first dating)</h3>
 {render_decade_bars(decade_counts)}
 {algo_vocab_details}
 </details>
@@ -879,7 +1014,8 @@ members above — passages containing the cluster's distinguishing words (highli
 
 <div class="footer">
   Generated automatically from <code>cluster_xy_table__{config.CLUSTER_TABLES[0]}.csv</code> by
-  <code>code/07_generate_site.py</code>. View the
+  <code>code/07_generate_site.py</code>. How the labels are computed:
+  <a href="methods.html">Methods &amp; labels</a>. View the
   <a href="https://github.com/hkim1596/early-modern-drama-character-clustering">source on GitHub</a>.
 </div>
 </div>{SORT_JS}</body></html>"""
@@ -1023,9 +1159,11 @@ def render_master_index(df: pd.DataFrame, labels: pd.DataFrame,
             any_proposed = True
             prop_mark = (f'<span class="prop-mark" title="{esc(entry["proposed"])}">'
                          f'proposed</span>')
-        years = sub["year"].dropna()
+        years = sub["year_roster"].dropna() if "year_roster" in sub.columns else sub["year"].dropna()
         yr_str = f"{int(years.min())}–{int(years.max())}" if len(years) else ""
         med_str = f" · median {int(years.median())}" if len(years) else ""
+        emg_ix = compute_emergence(sub)
+        est_str = f" · est. by {emg_ix['established']}" if emg_ix else ""
         spark = render_decade_spark(sub)
 
         # Three exemplar members: familiar-author roles first, then most typical
@@ -1036,14 +1174,15 @@ def render_master_index(df: pd.DataFrame, labels: pd.DataFrame,
             if "centroid_sim" in s.columns else s
         ex = []
         for _, r in s.head(3).iterrows():
-            yr = "" if pd.isna(r.get("year")) else f" {int(r['year'])}"
+            _y = r.get("year_roster") if pd.notna(r.get("year_roster")) else r.get("year")
+            yr = "" if pd.isna(_y) else f" {int(_y)}"
             ex.append(f"{esc(r.get('display_name') or '?')} "
                       f"<span style='color:var(--muted)'>({esc(truncate(str(r.get('title') or ''), 34))},{yr})</span>")
         card = f"""
 <a class="idx-card" href="cluster_{cid:02d}.html">
   <h3>{headline}{prop_mark}</h3>
   <p>{' · '.join(ex)}<br>
-     {n} characters · {sub['TCP'].nunique()} plays · {yr_str}{med_str}{spark}<br>
+     {n} characters · {sub['TCP'].nunique()} plays · {yr_str}{med_str}{est_str}{spark}<br>
      <small>{esc(top_words)}</small></p>
 </a>"""
         fam = entry.get("family", "Other")
@@ -1102,9 +1241,14 @@ def render_master_index(df: pd.DataFrame, labels: pd.DataFrame,
 <h1>Character archetypes — all clusters</h1>
 <p class="lede">{df.cluster.nunique() - 1} voice clusters over {(df.cluster >= 0).sum():,}
 characters from {df.loc[df.cluster >= 0, "TCP"].nunique()} plays, grouped into families.
-Each cluster page lists every member chronologically (candidate prototypes first), with
-landmarks, typicality scores, and speech evidence. Characters speaking fewer than 150
-words are not clustered, and only one edition of each play is included.</p>
+Each cluster page lists every member chronologically, with an emergence estimate
+("established by" = the year the first tenth of dated members had appeared), prototype
+candidates (formative-era members of above-median typicality), landmarks, typicality
+scores, and speech evidence. Year ranges here and on the rosters use performance-first
+dating (first-performance year where known, else the catalogued year); "est." is the
+establishment year. Characters speaking fewer than 150 words are not clustered, and only
+one edition of each play is included. Full rules: <a href="methods.html">Methods &amp;
+labels</a>.</p>
 {banner}
 {prop_legend}
 {''.join(sections)}
@@ -1112,7 +1256,159 @@ words are not clustered, and only one edition of each play is included.</p>
 {coverage_html}
 
 <div class="footer">
-  Generated automatically by <code>code/07_generate_site.py</code>.
+  Generated automatically by <code>code/07_generate_site.py</code> ·
+  <a href="methods.html">Methods &amp; labels</a>.
+</div>
+</div></body></html>"""
+
+
+def render_methods_page(df: pd.DataFrame, ctx: dict, summary: dict) -> str:
+    """docs/methods.html — how every on-page label and number is computed.
+    Concise one-pager (approved 2026-07-10, PROVENANCE_LOG Entry 007).
+    Numbers are read from cluster_summary / the table at build time wherever
+    they live in a data file; the seed-ARI text reuses SEED_ARI_TEXT."""
+    cl = df[df.cluster >= 0]
+    n = len(cl)
+    k = summary.get("k", "?")
+    seed = summary.get("random_state", "?")
+    sil = summary.get("silhouette_cosine_full")
+    sil_s = f"{sil:.3f}" if isinstance(sil, (int, float)) else "?"
+    minw = summary.get("min_words", 150)
+    n_plays = cl["TCP"].nunique()
+    dated_perf = int(cl["year_perf"].notna().sum())
+    dated_gen = int(cl["year_gen"].notna().sum())
+    dated_disp = int(cl["year_roster"].notna().sum())
+    r2_raw = summary.get("length_r2_raw")
+    r2_fin = summary.get("length_r2_final")
+    r2_s = (f"{r2_raw:.2f} → {r2_fin:.2f}"
+            if isinstance(r2_raw, (int, float)) and isinstance(r2_fin, (int, float)) else "—")
+
+    return f"""<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methods &amp; labels · Character Clustering</title>
+<style>{CSS}</style>
+</head><body><div class="wrap methods">
+
+<nav class="crumbs">
+  <a href="index.html">Home</a> ›
+  <a href="cluster_evidence.html">All clusters</a> ›
+  <span>Methods &amp; labels</span>
+</nav>
+
+<h1>Methods &amp; labels</h1>
+<p class="lede">How every number and badge on these pages is computed. Partition:
+{PARTITION_NOTE} (k={k}, seed {seed}, {n:,} characters from {n_plays} plays).
+Added 2026-07-10; every methodological decision is recorded in the repository's
+<a href="https://github.com/hkim1596/early-modern-drama-character-clustering/blob/main/PROVENANCE_LOG.md">PROVENANCE_LOG</a>.</p>
+
+<h2>Corpus and characters</h2>
+<p>The corpus is the drama subset of EEBO-TCP: {summary.get("embedding_rows", 9638):,}
+speaking characters extracted from 557 playbook transcriptions, each character
+represented by everything they speak. Speech prefixes were mapped to characters
+play-by-play (with an LLM-assisted, fully recorded speaker-mapping pass). Two kinds of
+row are excluded from clustering, not from the data: characters speaking fewer than
+{minw} words (no stable stylistic signature), and duplicate editions of the same play —
+one edition is kept per work, confirmed by cast overlap, with New Oxford Shakespeare
+canonical choices for Shakespeare adopted under an explicit provenance note. That leaves
+the {n:,} clustered characters shown here.</p>
+
+<h2>From speeches to a character space</h2>
+<p>Character and place names in the speeches are masked (<code>someone</code>,
+<code>that place</code>, …) and spelling is modernized, so clusters reflect register
+rather than named content. Each character's masked speech is embedded with
+<code>{config.EMBED_MODEL.split("/")[-1]}</code> in {config.EMBED_CHUNK_TOKENS}-token
+chunks, token-weighted mean-pooled into one vector. Two corrections then make the space
+about <em>characters</em> rather than plays: leave-one-out play centering (each character
+minus the mean of its play-mates — "how does this voice differ from its own play?") and
+linear removal of the document-length direction (length R² {r2_s}). Spherical k-means
+with k={k} (seed {seed}) partitions the result.</p>
+
+<h2>Read clusters as regions, not boxes</h2>
+<p>The space is a continuum with dense regions: silhouette {sil_s}, {SEED_ARI_TEXT}.
+Clusters are density peaks in that continuum — membership is graded, boundary members
+are blends, and cluster ids reshuffle on every re-run. Nothing on these pages should be
+read as a hard Theophrastan pigeonhole.</p>
+
+<h2>The labels, one by one</h2>
+<p><b>Typicality.</b> Cosine similarity between a character and its cluster's centroid
+in the processed space. High = close to the heart of the register; low = a blend of
+several regions. It measures representativeness, never quality or importance — canonical
+protagonists are often <em>low</em>-typicality blends.</p>
+
+<p><b>Three year bases.</b> (1) <em>Catalogued year</em> — the year in the DEEP/TCP
+catalogue record, largely the <em>print</em> year: used by the historical-profile strip
+and its badges, matching the published report ({ctx["dated_n"]:,} dated members,
+median {ctx["median"]}). (2) <em>Performance-first dating</em> — the first-performance
+year where the catalogue records one ({dated_perf:,} of {dated_gen:,} dated members),
+else the catalogued year: used by the roster, its Year column and sort, the emergence
+line, prototype badges, index year-ranges and sparklines. Performance years run a median
+of ~3 years earlier than print years, sometimes decades. (3) <em>Display fills</em> —
+{dated_disp - dated_gen} characters from metadata-bare collection items carry an
+approved parent-volume print year as a last-resort display date (marked in the
+provenance log); these never enter the emergence computation. Character pages still show
+the catalogued year until their next regeneration.</p>
+
+<p><b>First recorded / established by (emergence).</b> Computed per cluster on
+performance-first dating, for clusters with ≥{EMERGE_MIN_DATED} dated members.
+<em>First recorded</em> is the earliest dated member. <em>Established by</em> is the year
+the first tenth of the cluster's dated members had appeared — the point where the type
+stops being sporadic and becomes an available resource. (Fixed-count burst rules were
+tested and rejected: they collapse to the corpus onset for nearly every cluster,
+tracking survival of playbooks rather than the type's own take-off.)</p>
+
+<p><b>Prototype.</b> A member of the formative era (dated up to the establishment year)
+whose typicality is at or above the cluster median; the top {PROTO_TOP_N} by typicality
+are badged. This replaces an earlier "early" badge that marked the five oldest dated
+members regardless of typicality (on average those sat at the 35th typicality percentile
+of their cluster — old, but mostly blends, and weak evidence for a prototype claim).
+Prototype badges assert kinship and priority within the corpus, not proven indebtedness:
+a directed temporal nearest-neighbour genealogy is planned as the real lineage
+instrument.</p>
+
+<p><b>early-rooted / late register.</b> Historical-profile badges on the catalogued-year
+basis, for clusters with ≥{MIN_DATED_FOR_BADGES} dated members: <em>early-rooted</em> =
+pre-1590 share ≥ {BADGE_EARLY_LIFT}× the corpus share; <em>late register</em> =
+post-1625 share ≥ {BADGE_LATE_LIFT}× corpus <em>and</em> median year above the corpus
+median ({ctx["median"]}).</p>
+
+<p><b>Signatures (×lift).</b> For authors, genres, companies, theaters and play types:
+the share of the cluster's members carrying the facet ÷ the same share over all
+{n:,} clustered characters. Shown only for facets carried by ≥{SIG_MIN_N["genre"]}
+members (authors ≥{SIG_MIN_N["author"]}) with lift ≥ {SIG_MIN_LIFT}; top {SIG_TOP}.
+Multi-valued fields are split into atomic facets first.</p>
+
+<p><b>Distinguishing vocabulary.</b> c-TF-IDF over the masked, modernized speech text,
+with stoplists and a character-name blocklist. Name-like tokens that survive
+(e.g. <code>mephastophilis</code>) are residue of incomplete masking, not register —
+a second masking pass is a recorded open item. These words drive the excerpt
+highlighting.</p>
+
+<p><b>Cluster names and families.</b> Names are curation, not computation: they are
+assigned by the author (Heejin Kim) against the cluster profiles; assistant-proposed
+names awaiting revision are marked <span class="prop-mark">proposed</span> with their
+evidence in the tooltip. c-TF-IDF fallback labels appear where no name is curated yet.
+Family groupings on the index are curated the same way.</p>
+
+<h2>What these pages do not claim</h2>
+<p>Survival is not production: dating and counts describe the <em>extant, dated</em>
+record. Priority is not influence: "prototype" marks the earliest typical exemplars in
+the corpus, not demonstrated imitation. Membership is not essence: a low-typicality
+member is evidence of blending, not misclassification. The partition is one defensible
+view of a continuous space, published with its instability measured and stated.</p>
+
+<h2>Provenance</h2>
+<p>Every data-affecting change — canonical-edition choices, approved metadata fills,
+year-basis decisions, label-rule changes — is logged with dates, approvals and commit
+hashes in <a href="https://github.com/hkim1596/early-modern-drama-character-clustering/blob/main/PROVENANCE_LOG.md">PROVENANCE_LOG.md</a>.
+The full pipeline (stages 01–07) and all derived tables are in the
+<a href="https://github.com/hkim1596/early-modern-drama-character-clustering">repository</a>;
+re-running stages 04–07 regenerates this site.</p>
+
+<div class="footer">
+  Generated automatically by <code>code/07_generate_site.py</code> ·
+  <a href="cluster_evidence.html">All clusters</a>
 </div>
 </div></body></html>"""
 
@@ -1146,6 +1442,29 @@ def main() -> None:
     df["year_analysis"] = _yr
     df["cluster"] = df["cluster"].astype(int)
 
+    # Performance-first dating (Entry 007). year_perf = parsed
+    # date_first_performance (numeric, else first 4-digit run), sanity-bounded.
+    # year_gen = perf-first ANALYSIS basis for emergence/prototypes (falls back
+    # to the catalogued year; Entry-005 display fills NEVER enter it).
+    # year_roster = what cluster pages display/sort by (last-resort fallback to
+    # the display year, which carries the approved fills, so no row is undated).
+    if "date_first_performance" in df.columns:
+        _perf = pd.to_numeric(df["date_first_performance"], errors="coerce")
+        _pneed = _perf.isna() & df["date_first_performance"].notna()
+        _perf.loc[_pneed] = pd.to_numeric(
+            df.loc[_pneed, "date_first_performance"].astype(str)
+              .str.extract(r"(\d{4})")[0], errors="coerce")
+        lo, hi = YEAR_SANE_RANGE
+        n_bad = int(((_perf < lo) | (_perf > hi)).sum())
+        if n_bad:
+            print(f"   ⚠ {n_bad} parsed performance year(s) outside {lo}–{hi} treated as missing")
+        _perf = _perf.where((_perf >= lo) & (_perf <= hi))
+    else:
+        _perf = pd.Series(float("nan"), index=df.index)
+    df["year_perf"] = _perf
+    df["year_gen"] = _perf.fillna(df["year_analysis"])
+    df["year_roster"] = df["year_gen"].fillna(df["year"])
+
     lbl_path = config.DATA_DIR / f"cluster_labels__{config.CLUSTER_TABLES[0]}.csv"
     if lbl_path.exists():
         labels = pd.read_csv(lbl_path).set_index("cluster")
@@ -1166,17 +1485,30 @@ def main() -> None:
 
     # 1) cluster pages (non-outlier clusters only)
     clusters = sorted(c for c in df.cluster.unique() if c != -1)
+    print("📅 Emergence (performance-first): first / established by (dated n; gate passes)")
+    for cid in clusters:
+        e = compute_emergence(df[df.cluster == cid])
+        if e:
+            print(f"   cl{cid:02d}: {e['first_year']} / est. {e['established']}  "
+                  f"({e['n_dated']} dated; {e['n_pass_gate']}/{e['n_formative']} "
+                  f"formative pass the median-typicality gate)")
+        else:
+            print(f"   cl{cid:02d}: fewer than {EMERGE_MIN_DATED} dated — no emergence line")
     for cid in clusters:
         (out_dir / f"cluster_{cid:02d}.html").write_text(
             render_cluster_page(cid, df, labels, meta, ctx, summary), encoding="utf-8"
         )
     print(f"✅ {len(clusters)} cluster pages written")
 
-    # 2) master cluster index
+    # 2) master cluster index + methods page
     (out_dir / "cluster_evidence.html").write_text(
         render_master_index(df, labels, ctx, summary), encoding="utf-8"
     )
     print(f"✅ cluster_evidence.html written")
+    (out_dir / "methods.html").write_text(
+        render_methods_page(df, ctx, summary), encoding="utf-8"
+    )
+    print(f"✅ methods.html written")
 
     # 3) character pages (only for characters in non-outlier clusters)
     if args.no_characters:

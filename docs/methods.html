@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methods &amp; labels · Character Clustering</title>
+<style>
+:root {
+  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
+  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
+  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
+}
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
+nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
+nav.crumbs a { color: var(--accent); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
+.lede { color: var(--muted); margin: 0 0 1.5em; }
+h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
+.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
+.kvp b { color: var(--fg); font-weight: 600; }
+.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
+.tag .n { color: var(--muted); margin-left: 4px; }
+.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
+.bar .label { width: 5.5em; text-align: right; }
+.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
+.bar .count { width: 3em; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+                   padding: 14px 18px; margin: 16px 0; }
+.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
+.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
+.character-block .ch-head .name a:hover { text-decoration: underline; }
+.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
+.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
+           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
+           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
+mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
+.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+        padding: 12px 16px; margin: 10px 0; }
+.plot .title { font-weight: 600; margin-bottom: .25em; }
+.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
+.plot .body { font-size: .94rem; }
+.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
+               font-size: 1.0rem; line-height: 1.65;
+               max-height: 620px; overflow-y: auto; }
+.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
+            text-decoration: none; color: inherit; }
+.idx-card:hover { border-color: var(--accent); }
+.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
+.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
+th.sortable { cursor: pointer; user-select: none; }
+th.sortable:hover { background: #e8e8df; }
+th.sortable::after { content: " ↕"; color: var(--muted); font-size: .8em; }
+.badge { display: inline-block; font-size: .72rem; font-weight: 600; color: #7a6a2e;
+         background: #f5eecb; border-radius: 8px; padding: 0 7px; margin-left: 6px; vertical-align: 1px; }
+.landmarks { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; margin: .6em 0 1em; }
+.lm-card { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 14px; font-size: .9rem; }
+.lm-card .who { font-weight: 600; }
+.lm-card .who a { color: var(--accent); text-decoration: none; }
+.lm-card .who a:hover { text-decoration: underline; }
+.lm-card .whence { color: var(--muted); font-size: .86rem; }
+details { margin: 1em 0; }
+details > summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; padding: .3em 0; }
+h2.fam { margin-top: 2.2em; border-bottom: 1px solid var(--rule); padding-bottom: .3em; }
+.fam-desc { color: var(--muted); font-size: .9rem; margin: .2em 0 .6em; }
+.banner { background: #f4f1fa; border: 1px solid #ddd3ee; border-radius: 8px;
+          padding: 10px 16px; font-size: .9rem; margin: 0 0 1.4em; color: #3f3f46; }
+.banner b { color: var(--fg); }
+.badge-prop { background: #fde8d7; color: #8a5a2e; }
+.prop-mark { display: inline-block; font-size: .7rem; font-weight: 600; color: #8a5a2e;
+             background: #fde8d7; border-radius: 8px; padding: 0 6px; margin-left: 6px; vertical-align: 2px; }
+.kw-caveat { color: var(--muted); font-size: .84rem; margin: -.9em 0 1.2em; }
+.chip { display: inline-block; font-size: .72rem; font-weight: 600; color: #4a5a7a;
+        background: #e3eaf6; border-radius: 8px; padding: 0 7px; margin-left: 6px; vertical-align: 1px; }
+.tstrip { display: flex; align-items: flex-end; gap: 2px; height: 56px; margin: .5em 0 .15em; }
+.tslot { position: relative; width: 9px; height: 52px; }
+.tslot .c1 { position: absolute; bottom: 0; left: 0; width: 4px; background: #d9d9d0; border-radius: 1px; }
+.tslot .c2 { position: absolute; bottom: 0; right: 0; width: 4px; background: var(--accent);
+             border-radius: 1px; opacity: .85; }
+.taxis { font-size: .75rem; color: var(--muted); margin-bottom: .6em; }
+.sig-group { margin: .25em 0 .5em; }
+.sig-group .glabel { display: inline-block; min-width: 7.5em; color: var(--muted);
+                     font-size: .85rem; vertical-align: top; }
+.curated { background: #fbf7ee; border: 1px solid #eadfc8; border-radius: 8px;
+           padding: 10px 16px; margin: 0 0 1.2em; font-size: .93rem; }
+.curated .clabel { font-weight: 600; font-size: .78rem; letter-spacing: .02em;
+                   color: #7a6a2e; text-transform: uppercase; margin-right: .5em; }
+.spark { display: inline-flex; align-items: flex-end; gap: 1px; height: 14px; margin-left: 8px; }
+.spark i { display: inline-block; width: 3px; background: var(--bar); }
+tr.formative td { background: #f7f3e6; }
+.badge-proto { background: #e7e0f4; color: #4a3a7a; }
+.methods h2 { margin-top: 1.8em; border-bottom: 1px solid var(--rule); padding-bottom: .25em; }
+.methods p { max-width: 72ch; }
+.methods code { background: var(--soft); border-radius: 4px; padding: 0 4px; font-size: .9em; }
+</style>
+</head><body><div class="wrap methods">
+
+<nav class="crumbs">
+  <a href="index.html">Home</a> ›
+  <a href="cluster_evidence.html">All clusters</a> ›
+  <span>Methods &amp; labels</span>
+</nav>
+
+<h1>Methods &amp; labels</h1>
+<p class="lede">How every number and badge on these pages is computed. Partition:
+2026-07-07 NOS-verified run (k=25, seed 42, 6,466 characters from 494 plays).
+Added 2026-07-10; every methodological decision is recorded in the repository's
+<a href="https://github.com/hkim1596/early-modern-drama-character-clustering/blob/main/PROVENANCE_LOG.md">PROVENANCE_LOG</a>.</p>
+
+<h2>Corpus and characters</h2>
+<p>The corpus is the drama subset of EEBO-TCP: 9,638
+speaking characters extracted from 557 playbook transcriptions, each character
+represented by everything they speak. Speech prefixes were mapped to characters
+play-by-play (with an LLM-assisted, fully recorded speaker-mapping pass). Two kinds of
+row are excluded from clustering, not from the data: characters speaking fewer than
+150 words (no stable stylistic signature), and duplicate editions of the same play —
+one edition is kept per work, confirmed by cast overlap, with New Oxford Shakespeare
+canonical choices for Shakespeare adopted under an explicit provenance note. That leaves
+the 6,466 clustered characters shown here.</p>
+
+<h2>From speeches to a character space</h2>
+<p>Character and place names in the speeches are masked (<code>someone</code>,
+<code>that place</code>, …) and spelling is modernized, so clusters reflect register
+rather than named content. Each character's masked speech is embedded with
+<code>gte-Qwen2-1.5B-instruct</code> in 1024-token
+chunks, token-weighted mean-pooled into one vector. Two corrections then make the space
+about <em>characters</em> rather than plays: leave-one-out play centering (each character
+minus the mean of its play-mates — "how does this voice differ from its own play?") and
+linear removal of the document-length direction (length R² 0.78 → 0.35). Spherical k-means
+with k=25 (seed 42) partitions the result.</p>
+
+<h2>Read clusters as regions, not boxes</h2>
+<p>The space is a continuum with dense regions: silhouette 0.021, seed-to-seed ARI 0.29 (0.26–0.35 over 5 refits; report 2026-07-08).
+Clusters are density peaks in that continuum — membership is graded, boundary members
+are blends, and cluster ids reshuffle on every re-run. Nothing on these pages should be
+read as a hard Theophrastan pigeonhole.</p>
+
+<h2>The labels, one by one</h2>
+<p><b>Typicality.</b> Cosine similarity between a character and its cluster's centroid
+in the processed space. High = close to the heart of the register; low = a blend of
+several regions. It measures representativeness, never quality or importance — canonical
+protagonists are often <em>low</em>-typicality blends.</p>
+
+<p><b>Three year bases.</b> (1) <em>Catalogued year</em> — the year in the DEEP/TCP
+catalogue record, largely the <em>print</em> year: used by the historical-profile strip
+and its badges, matching the published report (6,040 dated members,
+median 1611). (2) <em>Performance-first dating</em> — the first-performance
+year where the catalogue records one (5,911 of 6,040 dated members),
+else the catalogued year: used by the roster, its Year column and sort, the emergence
+line, prototype badges, index year-ranges and sparklines. Performance years run a median
+of ~3 years earlier than print years, sometimes decades. (3) <em>Display fills</em> —
+426 characters from metadata-bare collection items carry an
+approved parent-volume print year as a last-resort display date (marked in the
+provenance log); these never enter the emergence computation. Character pages still show
+the catalogued year until their next regeneration.</p>
+
+<p><b>First recorded / established by (emergence).</b> Computed per cluster on
+performance-first dating, for clusters with ≥20 dated members.
+<em>First recorded</em> is the earliest dated member. <em>Established by</em> is the year
+the first tenth of the cluster's dated members had appeared — the point where the type
+stops being sporadic and becomes an available resource. (Fixed-count burst rules were
+tested and rejected: they collapse to the corpus onset for nearly every cluster,
+tracking survival of playbooks rather than the type's own take-off.)</p>
+
+<p><b>Prototype.</b> A member of the formative era (dated up to the establishment year)
+whose typicality is at or above the cluster median; the top 5 by typicality
+are badged. This replaces an earlier "early" badge that marked the five oldest dated
+members regardless of typicality (on average those sat at the 35th typicality percentile
+of their cluster — old, but mostly blends, and weak evidence for a prototype claim).
+Prototype badges assert kinship and priority within the corpus, not proven indebtedness:
+a directed temporal nearest-neighbour genealogy is planned as the real lineage
+instrument.</p>
+
+<p><b>early-rooted / late register.</b> Historical-profile badges on the catalogued-year
+basis, for clusters with ≥20 dated members: <em>early-rooted</em> =
+pre-1590 share ≥ 1.4× the corpus share; <em>late register</em> =
+post-1625 share ≥ 1.15× corpus <em>and</em> median year above the corpus
+median (1611).</p>
+
+<p><b>Signatures (×lift).</b> For authors, genres, companies, theaters and play types:
+the share of the cluster's members carrying the facet ÷ the same share over all
+6,466 clustered characters. Shown only for facets carried by ≥5
+members (authors ≥4) with lift ≥ 1.2; top 5.
+Multi-valued fields are split into atomic facets first.</p>
+
+<p><b>Distinguishing vocabulary.</b> c-TF-IDF over the masked, modernized speech text,
+with stoplists and a character-name blocklist. Name-like tokens that survive
+(e.g. <code>mephastophilis</code>) are residue of incomplete masking, not register —
+a second masking pass is a recorded open item. These words drive the excerpt
+highlighting.</p>
+
+<p><b>Cluster names and families.</b> Names are curation, not computation: they are
+assigned by the author (Heejin Kim) against the cluster profiles; assistant-proposed
+names awaiting revision are marked <span class="prop-mark">proposed</span> with their
+evidence in the tooltip. c-TF-IDF fallback labels appear where no name is curated yet.
+Family groupings on the index are curated the same way.</p>
+
+<h2>What these pages do not claim</h2>
+<p>Survival is not production: dating and counts describe the <em>extant, dated</em>
+record. Priority is not influence: "prototype" marks the earliest typical exemplars in
+the corpus, not demonstrated imitation. Membership is not essence: a low-typicality
+member is evidence of blending, not misclassification. The partition is one defensible
+view of a continuous space, published with its instability measured and stated.</p>
+
+<h2>Provenance</h2>
+<p>Every data-affecting change — canonical-edition choices, approved metadata fills,
+year-basis decisions, label-rule changes — is logged with dates, approvals and commit
+hashes in <a href="https://github.com/hkim1596/early-modern-drama-character-clustering/blob/main/PROVENANCE_LOG.md">PROVENANCE_LOG.md</a>.
+The full pipeline (stages 01–07) and all derived tables are in the
+<a href="https://github.com/hkim1596/early-modern-drama-character-clustering">repository</a>;
+re-running stages 04–07 regenerates this site.</p>
+
+<div class="footer">
+  Generated automatically by <code>code/07_generate_site.py</code> ·
+  <a href="cluster_evidence.html">All clusters</a>
+</div>
+</div></body></html>

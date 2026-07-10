@@ -354,6 +354,87 @@ approval.
 
 ---
 
+## Entry 007 — 2026-07-10: emergence + prototype labels replace the "early" badges; performance-first roster dating; methods page (approved)
+
+Heejin asked what "the earliest members (early)" are, noted they were counted
+"regardless of typicality scores," and requested a more optimal method — identify when
+each cluster meaningfully emerged, then identify archetype/prototype members — plus a
+page explaining how the labels are computed. Four decisions were put to her and
+approved the same day: (1) emergence + typicality-gate method; (2) performance-first
+year basis for the genealogical elements; (3) roster re-dated to performance-first;
+(4) concise one-page methods page. Implemented in `code/07_generate_site.py` only.
+
+**Defect in the old rule (measured on this partition).** "early" = the first 5 dated
+roster rows in display-year order, typicality ignored; the page called them "the
+candidate prototypes of this voice." Those five sat at the **35th typicality percentile**
+of their cluster on average; in 16/25 clusters at most one reached the cluster median
+(in 5 clusters none); ties at the 5-boundary were broken arbitrarily by word count; and
+Entry-005 display fill years counted as dates.
+
+**New dating columns (display/derived layer only; no source file modified).**
+- `year_perf` = parsed `date_first_performance` (numeric, else first 4-digit run;
+  values outside 1400–1700 treated as missing). Covers 5,911 of 6,466 clustered
+  characters (91.4%). Performance years run a median of 3 years earlier than the print
+  year (mean ≈ 6.8; e.g. *The Spanish Tragedy* 1592 → 1587); 0.3% parse later.
+- `year_gen` = `year_perf` else the catalogued year (`year_analysis`): the ANALYSIS
+  basis for emergence/prototypes, 6,040 dated members; Entry-005 fill years never enter.
+- `year_roster` = `year_gen` else the display fill year: what rosters display/sort by.
+The performance datings are the DEEP catalogue's editorial datings, adopted here with
+this explicit note (standing rule 3). The published report keeps the print-year basis;
+each page element now states its basis, and the historical-profile strip + its
+early-rooted/late-register badges are **unchanged** (catalogued basis, still reproducing
+the report: dated n=6,040, median 1611, pre-1590 8.6%, post-1625 31.8%).
+
+**Emergence + prototype rules (constants `EMERGE_*`, `PROTO_*` in 07).** Per cluster
+with ≥20 `year_gen`-dated members: *first recorded* = earliest dated member;
+*established by* = the year the first tenth (⌈10%⌉) of dated members had appeared;
+*formative era* = members dated up to that year (tinted rows); *prototype* = formative
+member with `centroid_sim` ≥ the cluster median, top 5 by typicality — badged in the
+roster, shown first among landmarks and excerpts (chips now read prototype/typical/
+familiar). Simple sustained-window rules ("first decade with ≥3 members, recurring")
+were tested and **rejected**: they collapse to the corpus onset (1544–84) for nearly
+every cluster — they track playbook survival, not the type's take-off. Prototype badges
+assert kinship and corpus priority, not proven indebtedness (the temporal kNN genealogy
+remains the planned lineage instrument, proposal Tier 3.1).
+
+**Also switched to performance-first on cluster pages/index:** roster Year column +
+sort, header date range, landmark/excerpt/exemplar years, index card ranges + medians +
+new "est. by YYYY", decade sparklines, collapsed decade bars (labeled). Character pages
+are untouched this pass (still catalogued year; noted on the methods page) — their
+template did not change and they were not regenerated.
+
+**New `docs/methods.html`** (concise one-pager): pipeline summary and how every on-page
+number/badge is computed (typicality, the three year bases, emergence, prototype,
+early-rooted/late register, ×lift signatures, c-TF-IDF vocabulary + masking-residue
+caveat, name curation/proposed badges), plus a "what these pages do not claim" section
+(survival ≠ production; priority ≠ influence; membership ≠ essence). Linked from the
+reading banner, roster ledes, strip axis note, index lede, and page footers.
+
+**Emergence values published by this run (performance-first; first / established by,
+dated n):** cl00 1550/1589 (307) · cl01 1528/1589 (284) · cl02 1528/1565 (273) ·
+cl03 1528/1581 (266) · cl04 1538/1590 (264) · cl05 1553/1589 (267) · cl06 1538/1588
+(259) · cl07 1537/1583 (247) · cl08 1538/1588 (255) · cl09 1538/1590 (256) ·
+cl10 1537/1575 (256) · cl11 1537/1577 (242) · cl12 1528/1589 (245) · cl13 1553/1590
+(241) · cl14 1538/1578 (221) · cl15 1528/1567 (227) · cl16 1528/1576 (224) ·
+cl17 1550/1588 (223) · cl18 1537/1590 (225) · cl19 1550/1587 (228) · cl20 1528/1584
+(227) · cl21 1528/1584 (214) · cl22 1537/1577 (213) · cl23 1537/1578 (204) ·
+cl24 1560/1585 (172). Like cluster names, these are partition-bound and stale after any
+re-cluster.
+
+**Verification (cloud re-run against the published table, pandas 2.2.3).** Prototype
+lists match the calibration run — cl5 Romantic leads: Pythias (*Damon and Pithias*,
+perf 1564), Tellus (*Endymion*, 1588), Alvida (*A Looking Glass*, 1588), Cornelia
+(*Wounds of Civil War*, 1588), Margaret (*Friar Bacon*, 1589); cl22 Ghosts/horror:
+God's Vengeance (Bale, *Three Laws*), Conscience (*Appius and Virginia*), Nature
+(*Interlude of Vice*), Horror (*Conflict of Conscience*), Damnation (*All for Money*).
+Historical-profile numbers unchanged in basis (cl5: 267 dated of 281, median 1609 vs
+corpus 1611). No stale "early" badges remain; `docs/characters/` untouched.
+
+**Scope of this commit:** `code/07_generate_site.py`, `docs/cluster_00–24.html` (25),
+`docs/cluster_evidence.html`, `docs/methods.html` (new), this log. No data file changed.
+
+---
+
 ### 7. Open items requiring explicit approval before any action
 
 1. ~~§4e year imputation~~ — **resolved 2026-07-07: keep, with explicit note** (recorded
