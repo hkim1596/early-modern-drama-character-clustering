@@ -230,6 +230,30 @@ verification record.
 
 ---
 
+## Entry 004 — 2026-07-10: names for the remaining 14 clusters (assistant-proposed at Heejin's request)
+
+Heejin requested: "Give appropriate cluster names." The 14 clusters left unnamed after
+the Entry-002 re-clustering (fallback c-TF-IDF labels) were named by the assistant from
+recorded evidence — top and distinctive speaker names, c-TF-IDF register keywords, and
+highest-typicality members — with the evidence stored per entry in
+`data/cluster_names__archetype.json` (field `proposed`). Two names adapt Heejin's earlier
+curation where the reading clearly matched ("Allegory, Nature & pageant voices";
+"Law & judgment"). The 11 previously transferred names are unchanged. Stages 05–07
+regenerated; site pushed (commit `7d2f33b`). These 14 names remain open to Heejin's
+revision like any curation.
+
+| id | name (proposed) | id | name (proposed) |
+|---|---|---|---|
+| 2 | Allegory, Nature & pageant voices | 14 | Law & judgment |
+| 3 | Citizens, tradesfolk & neighbors | 16 | Errand servants & brief parts |
+| 4 | Constant hearts & virtuous ladies | 18 | Chronicle statesmen & prelates |
+| 9 | Boon companions & bluff banter | 19 | Grieving nobles & tragicomic sufferers |
+| 10 | Mourners, mothers & doleful voices | 21 | Old fathers & plain counsel |
+| 11 | Tosspots & tavern railers | 22 | Ghosts, curses & horror voices |
+| 12 | Wooers, gallants & courtly love-talk | 23 | Gulls, fops & laughing-stocks |
+
+---
+
 ### 7. Open items requiring explicit approval before any action
 
 1. ~~§4e year imputation~~ — **resolved 2026-07-07: keep, with explicit note** (recorded
