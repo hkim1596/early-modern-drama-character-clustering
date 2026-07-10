@@ -254,6 +254,44 @@ revision like any curation.
 
 ---
 
+## Entry 005 — 2026-07-10: manual metadata fills for TCP-titled plays + F3 resolution
+
+Heejin: "I am seeing plays whose titles are TCP numbers. Can we fix them? … Let us figure
+out here one by one." Of the 109 metadata-bare plays (F5), 58 are visible on the site.
+All 58 received titles, with evidence, reviewed and **approved by Heejin as a batch
+(Groups A–D)**; stored in `data/manual_metadata_fills.json` (evidence per entry) and
+applied at page/map build time by `utils.derive_display_columns` — **display layer only;
+no source file was modified**.
+
+- **Group A (29):** undotted plays titled from their own title pages in `TCP.csv`
+  (modern short titles proposed by the assistant; raw transcription kept as evidence).
+  Includes *Ane Satyre of the Thrie Estaitis*, *The Antipodes*, *The Broken Heart*,
+  *Aglaura*, *Everyman*, *The Cid*, Heywood interludes, and Caroline plays by
+  Glapthorne, Nabbes, Lower, Berkeley, Freeman, Harding, Suckling, Shirley.
+- **Group B (7):** the NOS-verified canonical Folio texts (Hamlet, Romeo, Wiv, 3H6, R3,
+  Troilus, Othello) titled from their dedup groups.
+- **Group C (22):** collection items identified by cast (unambiguous character sets):
+  Jonson 1616/1631/1641 Works items (Every Man In (F), The Devil Is an Ass, The Magnetic
+  Lady, eight masques/entertainments), Seneca *Medea* and *Hercules Oetaeus* (Tenne
+  Tragedies), Alexander's *Julius Caesar*, *2 Troublesome Reign*, Medwall's *Nature*,
+  *Of Gentleness and Nobility* 1–2. Years = parent-volume print years.
+- **Group D (3) — F3 RESOLVED:** cast evidence + the 1607 title-page order
+  ("Crœsus, Darius, The Alexandræan, Iulius Cæsar") establish that A16527.1 is
+  **Croesus** (was mislabeled "Alexandraean") and A16527.3 is **The Alexandraean
+  Tragedy** (was "Julius Caesar"; cast = Eumenes, Seleucus, Ghost of Alexander); and in
+  Jonson's 1631 volume A04633.3 is **The Staple of News** (was "The Devil Is an Ass";
+  cast = Pennyboy, Lickfinger). Corrections applied in the fills file (display layer);
+  the underlying `item_title` columns remain as-is in source files.
+- Also noted: A04632.10 / A04637.1 are the same work (the 1604 King's Entertainment) in
+  two printings — too few distinctive names for the cast-dedup to merge automatically;
+  left as two entries, flagged for a possible future dedup decision.
+- Remaining bare plays: 51, none visible on the site (excluded duplicates or
+  below-threshold only).
+
+Site regenerated (map + all pages); pushed with the fills file and this entry.
+
+---
+
 ### 7. Open items requiring explicit approval before any action
 
 1. ~~§4e year imputation~~ — **resolved 2026-07-07: keep, with explicit note** (recorded
@@ -267,7 +305,8 @@ revision like any curation.
 4. ~~Committing and pushing this log file~~ — **approved 2026-07-07**.
 5. Cluster names for ids 2, 3, 4, 9, 10, 11, 12, 14, 16, 18, 19, 21, 22, 23 —
    awaiting Heejin (Entry 002).
-6. A16527.x / A16564.x item-title assignments — awaiting Heejin's manual review (F3).
+6. ~~A16527.x / A16564.x item-title assignments~~ — **resolved 2026-07-10 (Entry 005,
+   Group D)**: cast + title-page evidence; corrections applied at display layer.
 7. ~~873 orphan character pages in `docs/characters/`~~ — **resolved 2026-07-07:
    deletion approved and executed** (F6; file list in the deleting commit).
 8. Stage 07 auto-pruning of stale character pages on each run — code change awaiting
