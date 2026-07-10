@@ -292,6 +292,68 @@ Site regenerated (map + all pages); pushed with the fills file and this entry.
 
 ---
 
+## Entry 006 — 2026-07-10: Tier-1 evidence-page update (approved)
+
+Heejin approved implementation of Tier 1 (items 1.1–1.7) of
+`Evidence_Pages_Update_Proposal_2026-07-10.md` (project root): "I approve Tier 1 in one
+05/07 pass (1.1–1.7)." Implemented by the assistant the same day. **Only
+`code/07_generate_site.py` needed changes** (05 required none — curated fields are read
+directly from the names JSON at page-build time). No source data file was modified; the
+names JSON gained one documentation key (below). Character pages are untouched by any of
+this (their template did not change); a `--no-characters` flag was added to stage 07 so a
+cluster-page-only regeneration is possible without rewriting 6,466 unchanged files.
+
+What the regenerated cluster pages + master index now show:
+
+1. **Reading-guidance banner (1.1)** on all 25 cluster pages + index: partition identity
+   ("2026-07-07 NOS-verified run", k/seed/n and silhouette read from
+   `cluster_summary__archetype.json`) and the continuum framing (RQ1/RQ30). Seed-to-seed
+   ARI 0.29 (0.26–0.35) is quoted from Clustering_Results_Report_2026-07-08 (it is not in
+   any data file) — noted in a code comment; re-measure after any re-cluster.
+2. **Name-status badges (1.2)**: the 14 assistant-proposed names (Entry 004) render
+   "name proposed — pending curation" (tooltip = the recorded evidence); the index carries
+   a matching marker + legend. Removing/replacing the `proposed` field clears the badge.
+3. **Historical profile (1.3)**, promoted out of `<details>`: paired 5-year-bin share
+   bars (cluster vs corpus), median / pre-1590 / post-1625 with ×lift vs corpus.
+   **Year basis**: the performance year as catalogued (numeric parse + 4-digit
+   extraction), EXCLUDING the Entry-005 display-layer fill years (parent-volume print
+   years, late-skewed) — this reproduces the report's dated base exactly
+   (n=6,040, median 1611, pre-1590 8.6%, post-1625 31.8%). Roster/landmark Year columns
+   keep the display year; the page says so.
+   **Badge rules** (≥20 dated members): early-rooted = pre-1590 share ≥1.40× corpus;
+   late register = post-1625 share ≥1.15× corpus AND median > corpus median. On this
+   partition: early-rooted → cl2 (×2.01), cl15 (×1.59), cl22 (×1.59), cl11 (×1.49) —
+   the report's list — plus cl23 (×1.43), which qualifies under the rule though the
+   report quoted only the top four; late register → cl20/cl19/cl4, matching the report.
+4. **Signature panels (1.4)**: authors / genres / companies / theaters / play types as
+   ×lift vs the clustered corpus (share-of-members basis, facets atomized by
+   `utils.split_facets`; authors need n≥4, other facets n≥5, lift ≥1.2, top 5).
+   Verified against the report: cl19 Massinger ×3.00, Field ×3.51, Tragicomedy ×2.09;
+   cl24 Masque ×3.09 (report: 3.0 / 3.5 / 2.1 / 3.1). Raw counts remain in the
+   collapsed details.
+5. **Curated interpretation fields (1.5)**: optional per-cluster `historical_types`,
+   `note`, `criticism` and top-level `families`, `attested_types` in
+   `cluster_names__archetype.json` render when present (nothing curated yet, so nothing
+   renders); a `_schema` key documenting them was added to the JSON — the only change to
+   that file; all 25 entries untouched.
+6. **Excerpt provenance (1.6)**: each representative excerpt now carries
+   typical/early/familiar chips explaining why it was sampled; the distinguishing-
+   vocabulary lede carries a caveat that name-like tokens are masking residue (until the
+   §7.3 masking round 2); optional curated `display_keywords` per cluster replace the
+   lede list when present (the algorithmic list then moves to the collapsed details and
+   still drives excerpt highlighting).
+7. **Index upgrades (1.7)**: median year + decade sparkline per card; family-description
+   and attested-type-coverage sections render once curated.
+
+Verification (cloud re-run against published outputs, pandas 2.2.3): corpus baselines
+and all quoted lifts match the 2026-07-08 report to rounding, as listed above. Scope of
+regeneration: `docs/cluster_00.html`–`cluster_24.html` + `docs/cluster_evidence.html`
+(26 files); `docs/index.html`, the map, and `docs/characters/` untouched. The open
+"(perf.)" year-marker item (§7.3) was NOT implemented — it remains awaiting its own
+approval.
+
+---
+
 ### 7. Open items requiring explicit approval before any action
 
 1. ~~§4e year imputation~~ — **resolved 2026-07-07: keep, with explicit note** (recorded

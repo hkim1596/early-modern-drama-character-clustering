@@ -113,6 +113,31 @@ th.sortable::after { content: " ↕"; color: var(--muted); font-size: .8em; }
 details { margin: 1em 0; }
 details > summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; padding: .3em 0; }
 h2.fam { margin-top: 2.2em; border-bottom: 1px solid var(--rule); padding-bottom: .3em; }
+.fam-desc { color: var(--muted); font-size: .9rem; margin: .2em 0 .6em; }
+.banner { background: #f4f1fa; border: 1px solid #ddd3ee; border-radius: 8px;
+          padding: 10px 16px; font-size: .9rem; margin: 0 0 1.4em; color: #3f3f46; }
+.banner b { color: var(--fg); }
+.badge-prop { background: #fde8d7; color: #8a5a2e; }
+.prop-mark { display: inline-block; font-size: .7rem; font-weight: 600; color: #8a5a2e;
+             background: #fde8d7; border-radius: 8px; padding: 0 6px; margin-left: 6px; vertical-align: 2px; }
+.kw-caveat { color: var(--muted); font-size: .84rem; margin: -.9em 0 1.2em; }
+.chip { display: inline-block; font-size: .72rem; font-weight: 600; color: #4a5a7a;
+        background: #e3eaf6; border-radius: 8px; padding: 0 7px; margin-left: 6px; vertical-align: 1px; }
+.tstrip { display: flex; align-items: flex-end; gap: 2px; height: 56px; margin: .5em 0 .15em; }
+.tslot { position: relative; width: 9px; height: 52px; }
+.tslot .c1 { position: absolute; bottom: 0; left: 0; width: 4px; background: #d9d9d0; border-radius: 1px; }
+.tslot .c2 { position: absolute; bottom: 0; right: 0; width: 4px; background: var(--accent);
+             border-radius: 1px; opacity: .85; }
+.taxis { font-size: .75rem; color: var(--muted); margin-bottom: .6em; }
+.sig-group { margin: .25em 0 .5em; }
+.sig-group .glabel { display: inline-block; min-width: 7.5em; color: var(--muted);
+                     font-size: .85rem; vertical-align: top; }
+.curated { background: #fbf7ee; border: 1px solid #eadfc8; border-radius: 8px;
+           padding: 10px 16px; margin: 0 0 1.2em; font-size: .93rem; }
+.curated .clabel { font-weight: 600; font-size: .78rem; letter-spacing: .02em;
+                   color: #7a6a2e; text-transform: uppercase; margin-right: .5em; }
+.spark { display: inline-flex; align-items: flex-end; gap: 1px; height: 14px; margin-left: 8px; }
+.spark i { display: inline-block; width: 3px; background: var(--bar); }
 """
 
 # Authors whose plays general readers are most likely to know — used to pick
@@ -130,6 +155,267 @@ def load_cluster_meta() -> dict:
     import json as _json
     with open(path, encoding="utf-8") as f:
         return {int(k): v for k, v in _json.load(f).get("clusters", {}).items()}
+
+
+def load_cluster_meta_top() -> dict:
+    """Whole cluster_names JSON (top-level optional keys: families, attested_types)."""
+    path = config.DATA_DIR / f"cluster_names__{config.CLUSTER_TABLES[0]}.json"
+    if not path.exists():
+        return {}
+    import json as _json
+    with open(path, encoding="utf-8") as f:
+        return _json.load(f)
+
+
+def load_cluster_summary() -> dict:
+    """Run parameters + audited stats from data/cluster_summary__<name>.json."""
+    path = config.DATA_DIR / f"cluster_summary__{config.CLUSTER_TABLES[0]}.json"
+    if not path.exists():
+        return {}
+    import json as _json
+    with open(path, encoding="utf-8") as f:
+        return _json.load(f)
+
+
+# -------------------------------------------------------------------
+# Tier-1 evidence-page update (2026-07-10, PROVENANCE_LOG Entry 006)
+# -------------------------------------------------------------------
+# Partition identity shown in the reading-guidance banner. Update when the
+# partition changes (ids reshuffle on every stage-04 re-run).
+PARTITION_NOTE = "2026-07-07 NOS-verified run"
+# Seed-to-seed stability is not recorded in cluster_summary__*.json; the value
+# is from Clustering_Results_Report_2026-07-08 (5 refits: ARI 0.292,
+# range 0.260–0.345). Re-measure and update after any re-cluster.
+SEED_ARI_TEXT = "seed-to-seed ARI 0.29 (0.26–0.35 over 5 refits; report 2026-07-08)"
+
+# Historical-profile badge rules (documented in PROVENANCE_LOG Entry 006):
+# a cluster is badged from its DATED members only, and only if ≥20 are dated.
+#   early-rooted : pre-1590 share ≥ 1.4 × the corpus pre-1590 share
+#   late register: post-1625 share ≥ 1.15 × corpus AND median year > corpus median
+# On the 2026-07-07 partition these rules reproduce the report's early
+# (cl2/15/22/11) and late (cl20/19/4) lists.
+BADGE_EARLY_LIFT = 1.40
+BADGE_LATE_LIFT  = 1.15
+MIN_DATED_FOR_BADGES = 20
+
+# Signature panels: minimum members carrying a facet before a lift is shown,
+# and the minimum lift that counts as a signature.
+SIG_MIN_N = {"author": 4, "genre": 5, "company": 5, "theater": 5, "play_type": 5}
+SIG_MIN_LIFT = 1.2
+SIG_TOP = 5
+
+
+def render_reading_banner(summary: dict) -> str:
+    """RQ1/RQ30 framing + partition identity (proposal item 1.1)."""
+    k    = summary.get("k", "?")
+    n    = summary.get("n_clustered")
+    seed = summary.get("random_state", "?")
+    sil  = summary.get("silhouette_cosine_full")
+    n_s  = f"{n:,}" if isinstance(n, int) else "?"
+    sil_s = f"{sil:.3f}" if isinstance(sil, (int, float)) else "?"
+    return (f'<div class="banner"><b>How to read these pages.</b> '
+            f'Partition: {PARTITION_NOTE} (k={k}, seed {seed}, {n_s} characters). '
+            f'Character-space is a <b>continuum with dense prototype regions</b>, not a set of '
+            f'discrete boxes (silhouette {sil_s}; {SEED_ARI_TEXT}): read each cluster as a '
+            f'density peak, membership as graded, and low-typicality members as blends of '
+            f'several regions. Cluster ids are not stable across re-clustering runs.</div>')
+
+
+def _analysis_years(frame: pd.DataFrame) -> pd.Series:
+    """Year series used for the historical profile: the performance year as
+    recorded in the master table (numeric + 4-digit extraction), WITHOUT the
+    Entry-005 display-layer fill years (parent-volume print years, late-
+    skewed). This reproduces the report's dated base exactly (n=6,040,
+    median 1611, pre-1590 8.6%, post-1625 31.8% on the 2026-07-07 partition);
+    the roster/landmark 'Year' columns keep the display year."""
+    col = "year_analysis" if "year_analysis" in frame.columns else "year"
+    return frame[col].dropna().astype(int)
+
+
+def corpus_context(df: pd.DataFrame) -> dict:
+    """Corpus-wide baselines (clustered characters only) shared by all pages:
+    5-year-bin date shares, median/pre-1590/post-1625, and facet base rates."""
+    from utils import split_facets
+    cl = df[df.cluster >= 0]
+    dated = _analysis_years(cl)
+    bin_of = lambda y: int(y) // 5 * 5
+    bins = sorted({bin_of(y) for y in dated})
+    bin_counts = Counter(bin_of(y) for y in dated)
+    nd = len(dated)
+
+    facet_base: dict[str, Counter] = {}
+    facet_known: dict[str, int] = {}
+    for col, kind in [("author", "author"), ("genre", None), ("company", None),
+                      ("theater", None), ("play_type", None)]:
+        c: Counter = Counter()
+        known = 0
+        if col in cl.columns:
+            for v in cl[col]:
+                f = set(split_facets(v, kind=kind))
+                if f:
+                    known += 1
+                    c.update(f)
+        facet_base[col] = c
+        facet_known[col] = known
+
+    return {
+        "n": len(cl),
+        "dated_n": nd,
+        "median": int(dated.median()) if nd else None,
+        "pre_share": float((dated < 1590).mean()) if nd else 0.0,
+        "post_share": float((dated > 1625).mean()) if nd else 0.0,
+        "bins": bins,
+        "bin_share": {b: bin_counts[b] / nd for b in bins} if nd else {},
+        "facet_base": facet_base,
+        "facet_known": facet_known,
+    }
+
+
+def render_temporal_strip(sub: pd.DataFrame, ctx: dict) -> tuple[str, list[str]]:
+    """Historical profile (proposal item 1.3): paired 5-year-bin share bars
+    (cluster vs corpus), headline stats, and early/late badges per the rules
+    above. Returns (html, badge_names)."""
+    dated = _analysis_years(sub)
+    nd, n = len(dated), len(sub)
+    if nd < 10:
+        return (f"<p class='lede' style='font-size:.92rem'><em>Only {nd} of {n} members "
+                f"are dated — temporal profile omitted.</em></p>", [])
+
+    med = int(dated.median())
+    pre, post = float((dated < 1590).mean()), float((dated > 1625).mean())
+    cmed, cpre, cpost = ctx["median"], ctx["pre_share"], ctx["post_share"]
+    pre_lift  = pre / cpre if cpre else float("nan")
+    post_lift = post / cpost if cpost else float("nan")
+
+    badges = []
+    if nd >= MIN_DATED_FOR_BADGES and pre_lift >= BADGE_EARLY_LIFT:
+        badges.append("early-rooted")
+    if nd >= MIN_DATED_FOR_BADGES and post_lift >= BADGE_LATE_LIFT and med > cmed:
+        badges.append("late register")
+
+    bin_of = lambda y: int(y) // 5 * 5
+    counts = Counter(bin_of(y) for y in dated)
+    shares = {b: counts.get(b, 0) / nd for b in ctx["bins"]}
+    max_share = max(max(shares.values(), default=0.0),
+                    max(ctx["bin_share"].values(), default=0.0)) or 1.0
+    slots = []
+    for b in ctx["bins"]:
+        cs, ks = ctx["bin_share"].get(b, 0.0), shares.get(b, 0.0)
+        h1 = max(1, round(50 * cs / max_share))
+        h2 = max(1 if counts.get(b, 0) else 0, round(50 * ks / max_share))
+        lift = (ks / cs) if cs else float("nan")
+        tip = (f"{b}–{b+4}: {counts.get(b, 0)} member(s), {ks:.1%} of cluster "
+               f"(corpus {cs:.1%}" + (f", ×{lift:.1f}" if cs else "") + ")")
+        slots.append(f'<div class="tslot" title="{esc(tip)}">'
+                     f'<div class="c1" style="height:{h1}px"></div>'
+                     + (f'<div class="c2" style="height:{h2}px"></div>' if h2 else "")
+                     + '</div>')
+    axis = (f'<div class="taxis">{ctx["bins"][0]}–{ctx["bins"][-1] + 4} in 5-year bins · '
+            f'<span style="color:var(--accent)">▮</span> this cluster vs '
+            f'<span style="color:#b7b7ac">▮</span> corpus (share of dated members; hover for '
+            f'numbers). Performance years as catalogued; the display-only fill years of '
+            f'PROVENANCE_LOG Entry 005 are excluded here, so a member can show a year in the '
+            f'roster yet not count as dated above.</div>')
+
+    stats = (f'<div class="kvp">'
+             f'<span><b>{nd}</b> dated of {n}</span>'
+             f'<span>median <b>{med}</b> (corpus {cmed})</span>'
+             f'<span>pre-1590 <b>{pre:.0%}</b> (corpus {cpre:.0%}, ×{pre_lift:.1f})</span>'
+             f'<span>post-1625 <b>{post:.0%}</b> (corpus {cpost:.0%}, ×{post_lift:.1f})</span>'
+             f'</div>')
+    return (stats + f'<div class="tstrip">{"".join(slots)}</div>' + axis, badges)
+
+
+def render_signature_panel(sub: pd.DataFrame, ctx: dict) -> str:
+    """Signatures as lift vs the clustered corpus (proposal item 1.4):
+    share-of-members-carrying-facet in cluster ÷ same share in corpus."""
+    from utils import split_facets
+    n_sub, n_corpus = len(sub), ctx["n"]
+    groups = [("Authors", "author", "author"), ("Genres", "genre", None),
+              ("Companies", "company", None), ("Theaters", "theater", None),
+              ("Play types", "play_type", None)]
+    out = []
+    for label, col, kind in groups:
+        if col not in sub.columns:
+            continue
+        c: Counter = Counter()
+        known = 0
+        for v in sub[col]:
+            f = set(split_facets(v, kind=kind))
+            if f:
+                known += 1
+                c.update(f)
+        base = ctx["facet_base"][col]
+        rows = []
+        for facet, cn in c.items():
+            if cn < SIG_MIN_N[col]:
+                continue
+            bn = base.get(facet, 0)
+            if not bn:
+                continue
+            lift = (cn / n_sub) / (bn / n_corpus)
+            if lift >= SIG_MIN_LIFT:
+                rows.append((lift, cn, facet))
+        rows.sort(reverse=True)
+        if rows:
+            tags = "".join(f'<span class="tag">{esc(f)} ×{l:.1f}<span class="n">n={cn}</span></span>'
+                           for l, cn, f in rows[:SIG_TOP])
+        else:
+            tags = '<span class="tag" style="color:var(--muted)">no strong signature</span>'
+        cov = ""
+        if known / n_sub < 0.9:
+            cov = (f' <span style="color:var(--muted); font-size:.82rem">'
+                   f'(known for {known / n_sub:.0%} of members)</span>')
+        out.append(f'<div class="sig-group"><span class="glabel">{label}</span> {tags}{cov}</div>')
+    note = ('<p class="lede" style="font-size:.88rem">×lift = share of this cluster\'s members '
+            f'with the facet ÷ the same share over all {n_corpus:,} clustered characters '
+            f'(only facets carried by ≥{SIG_MIN_N["genre"]} members, lift ≥ {SIG_MIN_LIFT}, top {SIG_TOP} shown; '
+            f'authors ≥{SIG_MIN_N["author"]}). Raw counts are in the collapsed list below.</p>')
+    return note + "".join(out)
+
+
+def render_curated_block(entry: dict) -> str:
+    """Curated interpretation (proposal item 1.5): optional per-cluster fields
+    historical_types / note / criticism in cluster_names__<name>.json."""
+    if not entry:
+        return ""
+    types = entry.get("historical_types") or []
+    note  = (entry.get("note") or "").strip()
+    crit  = (entry.get("criticism") or "").strip()
+    if not (types or note or crit):
+        return ""
+    parts = []
+    if types:
+        tags = "".join(f'<span class="tag">{esc(t)}</span>' for t in types)
+        parts.append(f'<div><span class="clabel">Historical identifications</span> {tags}</div>')
+    if note:
+        parts.append(f'<div style="margin-top:.35em">{esc(note)}</div>')
+    if crit:
+        parts.append(f'<div style="margin-top:.35em"><span class="clabel">Criticism hooks</span> '
+                     f'{esc(crit)}</div>')
+    return f'<div class="curated">{"".join(parts)}</div>'
+
+
+def render_name_badge(entry: dict) -> str:
+    """Name-status marker (proposal item 1.2): assistant-proposed names stay
+    visibly provisional until Heejin revises them (PROVENANCE_LOG Entry 004)."""
+    if not entry or "proposed" not in entry:
+        return ""
+    return (f'<span class="badge badge-prop" title="{esc(entry["proposed"])}">'
+            f'name proposed — pending curation</span>')
+
+
+def render_decade_spark(sub: pd.DataFrame) -> str:
+    """Tiny inline decade sparkline for index cards (proposal item 1.7)."""
+    counts = sub["Date_Decade"].dropna().astype(str).value_counts()
+    counts = counts[~counts.index.str.lower().str.startswith("unknown")]
+    if counts.empty:
+        return ""
+    decades = sort_decades(list(counts.index))
+    mx = counts.max()
+    bars = "".join(f'<i style="height:{max(2, round(13 * counts[d] / mx))}px"></i>'
+                   for d in decades)
+    return f'<span class="spark" title="decades {esc(decades[0])}–{esc(decades[-1])}">{bars}</span>'
 
 
 SORT_JS = """
@@ -322,8 +608,11 @@ def render_author_tags(author_counts: pd.Series, limit: int = 18) -> str:
     return "\n".join(tags)
 
 
-def render_character_block_for_cluster_page(row: pd.Series, keywords: list[str]) -> str:
-    """Block rendered inside a cluster page: header + 2 excerpts + 'full' link."""
+def render_character_block_for_cluster_page(row: pd.Series, keywords: list[str],
+                                            why: list[str] | None = None) -> str:
+    """Block rendered inside a cluster page: header + 2 excerpts + 'full' link.
+    `why` = which landmark set(s) selected this member (typical/early/familiar),
+    rendered as chips so the excerpt section explains its own sampling (item 1.6a)."""
     char_id = row.get("character_id", "")
     slug = slugify(char_id)
     display = row.get("display_name") or row.get("normalized_name") or "?"
@@ -344,11 +633,12 @@ def render_character_block_for_cluster_page(row: pd.Series, keywords: list[str])
         ex_html = ('<div class="excerpt"><em>No keyword-matching excerpt found; '
                    'see the full speech on the character page.</em></div>')
 
+    chips = "".join(f'<span class="chip">{esc(w)}</span>' for w in (why or []))
     return f"""
 <div class="character-block">
   <div class="ch-head">
     <div class="name"><a href="characters/{slug}.html">{esc(display)}</a>
-      <span class="muted"> in <em>{esc(play)}</em></span>
+      <span class="muted"> in <em>{esc(play)}</em></span>{chips}
     </div>
     <div class="meta">{meta}<br>{n_words} words</div>
   </div>
@@ -388,7 +678,8 @@ def facet_counts(series: pd.Series, unknown_label: str | None = None,
     return out
 
 
-def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame) -> str:
+def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame,
+                        meta: dict, ctx: dict, summary: dict) -> str:
     # Chronological order: the genealogical reading — earliest members first,
     # successors after suit.
     sub = (df[df.cluster == cluster_id].copy()
@@ -396,7 +687,11 @@ def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame)
            .reset_index(drop=True))
     n = len(sub)
     label = cluster_label_for(cluster_id, df)
+    meta_entry = meta.get(cluster_id, {})
     top_words_str = labels.loc[cluster_id, "top_words"] if cluster_id in labels.index else ""
+    # Excerpt extraction always uses the algorithmic c-TF-IDF words (they are
+    # what the highlighting explains); curated display_keywords only change
+    # what the lede SHOWS (item 1.6c).
     keywords = _parse_top_words(top_words_str)
     if "centroid_sim" not in sub.columns:
         sub["centroid_sim"] = float("nan")
@@ -460,9 +755,18 @@ def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame)
     # ---- Representative excerpts: typical ∪ earliest ∪ familiar --------
     rep_ids = list(dict.fromkeys(          # preserve order, drop dupes
         list(typical.index) + dated_pos[:5] + list(familiar.index)))[:12]
+    # why-chips: which landmark set(s) put each member here (item 1.6a)
+    rep_why: dict[int, list[str]] = {}
+    for i in typical.index:
+        rep_why.setdefault(i, []).append("typical")
+    for i in dated_pos[:5]:
+        rep_why.setdefault(i, []).append("early")
+    for i in familiar.index:
+        rep_why.setdefault(i, []).append("familiar")
     rep = sub.loc[rep_ids].sort_values("year", na_position="last")
     excerpt_blocks = "\n".join(
-        render_character_block_for_cluster_page(r, keywords) for _, r in rep.iterrows()
+        render_character_block_for_cluster_page(r, keywords, rep_why.get(i, []))
+        for i, r in rep.iterrows()
     )
 
     # ---- Plot summaries (collapsed) ------------------------------------
@@ -482,6 +786,33 @@ def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame)
 
     gtop = " · ".join(f"{esc(k)} {v / n:.0%}" for k, v in genre_counts.head(3).items())
 
+    # ---- Tier-1 sections (2026-07-10): banner, vocabulary lede, curated
+    # block, historical profile, signatures --------------------------------
+    banner = render_reading_banner(summary)
+    name_badge = render_name_badge(meta_entry)
+    curated_block = render_curated_block(meta_entry)
+
+    disp_kw = meta_entry.get("display_keywords") or ""
+    if isinstance(disp_kw, list):
+        disp_kw = ", ".join(disp_kw)
+    if disp_kw.strip():
+        vocab_lede = (f'<p class="lede">Register keywords (curated): <em>{esc(disp_kw)}</em></p>')
+        algo_vocab_details = (f"<h3>Algorithmic distinguishing vocabulary (c-TF-IDF)</h3>"
+                              f"<p><em>{esc(top_words_str)}</em> — these drive the excerpt "
+                              f"highlighting below.</p>")
+        kw_caveat = ""
+    else:
+        vocab_lede = f'<p class="lede">Distinguishing vocabulary: <em>{esc(top_words_str)}</em></p>'
+        algo_vocab_details = ""
+        kw_caveat = ('<p class="kw-caveat">Tokens that look like proper names in this list '
+                     '(e.g. <code>massinissa</code>, <code>faukenbridge</code>) are residue of '
+                     'incomplete name-masking, not register — a second masking pass is pending '
+                     '(PROVENANCE_LOG §7.3).</p>')
+
+    temporal_html, time_badges = render_temporal_strip(sub, ctx)
+    time_badge_html = "".join(f'<span class="badge">{esc(b)}</span>' for b in time_badges)
+    signature_html = render_signature_panel(sub, ctx)
+
     return f"""<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8">
@@ -496,8 +827,10 @@ def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame)
   <span>Cluster {cluster_id}</span>
 </nav>
 
-<h1>{esc(title)}</h1>
-<p class="lede">Distinguishing vocabulary: <em>{esc(top_words_str)}</em></p>
+<h1>{esc(title)}{name_badge}</h1>
+{vocab_lede}
+{kw_caveat}
+{banner}
 
 <div class="kvp">
   <span><b>{n}</b> characters</span>
@@ -506,6 +839,14 @@ def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame)
   <span>dates <b>{yr_str}</b></span>
   <span>{gtop}</span>
 </div>
+
+{curated_block}
+
+<h2>Historical profile {time_badge_html}</h2>
+{temporal_html}
+
+<h2>Signatures</h2>
+{signature_html}
 
 <h2>Landmarks</h2>
 <p class="lede" style="font-size:.92rem">The most <b>typical</b> members (closest to the
@@ -524,11 +865,12 @@ members follow suit. Click a column header to re-sort.</p>
 members above — passages containing the cluster's distinguishing words (highlighted).</p>
 {excerpt_blocks}
 
-<details><summary>Authorship &amp; decade distribution</summary>
-<h3>Authorship</h3>
+<details><summary>Full authorship list &amp; decade counts</summary>
+<h3>Authorship (raw counts)</h3>
 {render_author_tags(author_counts)}
-<h3>Decade distribution</h3>
+<h3>Decade distribution (raw counts)</h3>
 {render_decade_bars(decade_counts)}
+{algo_vocab_details}
 </details>
 
 <details><summary>Plot summaries for the {sub['TCP'].nunique()} plays represented</summary>
@@ -658,21 +1000,33 @@ def render_character_page(row: pd.Series, df: pd.DataFrame, labels: pd.DataFrame
 </div></body></html>"""
 
 
-def render_master_index(df: pd.DataFrame, labels: pd.DataFrame) -> str:
+def render_master_index(df: pd.DataFrame, labels: pd.DataFrame,
+                        ctx: dict, summary: dict) -> str:
     meta = load_cluster_meta()
+    top = load_cluster_meta_top()
+    family_desc = top.get("families", {}) if isinstance(top.get("families"), dict) else {}
     family_order = list(dict.fromkeys(
         [meta[c].get("family", "Other") for c in sorted(meta)] + ["Other"]))
     by_family: dict[str, list[str]] = {f: [] for f in family_order}
+    any_proposed = False
 
     for cid in sorted(c for c in df.cluster.unique() if c != -1):
         sub = df[df.cluster == cid]
         n = len(sub)
         top_words = labels.loc[cid, "top_words"] if cid in labels.index else ""
-        name = meta.get(cid, {}).get("name", "")
+        entry = meta.get(cid, {})
+        name = entry.get("name", "")
         headline = f"Cluster {cid} — {esc(name)}" if name \
             else f"Cluster {cid} — {esc(cluster_label_for(cid, df))}"
+        prop_mark = ""
+        if "proposed" in entry:
+            any_proposed = True
+            prop_mark = (f'<span class="prop-mark" title="{esc(entry["proposed"])}">'
+                         f'proposed</span>')
         years = sub["year"].dropna()
         yr_str = f"{int(years.min())}–{int(years.max())}" if len(years) else ""
+        med_str = f" · median {int(years.median())}" if len(years) else ""
+        spark = render_decade_spark(sub)
 
         # Three exemplar members: familiar-author roles first, then most typical
         s = sub.copy()
@@ -687,18 +1041,54 @@ def render_master_index(df: pd.DataFrame, labels: pd.DataFrame) -> str:
                       f"<span style='color:var(--muted)'>({esc(truncate(str(r.get('title') or ''), 34))},{yr})</span>")
         card = f"""
 <a class="idx-card" href="cluster_{cid:02d}.html">
-  <h3>{headline}</h3>
+  <h3>{headline}{prop_mark}</h3>
   <p>{' · '.join(ex)}<br>
-     {n} characters · {sub['TCP'].nunique()} plays · {yr_str}<br>
+     {n} characters · {sub['TCP'].nunique()} plays · {yr_str}{med_str}{spark}<br>
      <small>{esc(top_words)}</small></p>
 </a>"""
-        fam = meta.get(cid, {}).get("family", "Other")
+        fam = entry.get("family", "Other")
         by_family.setdefault(fam, []).append(card)
 
     sections = []
     for fam in family_order:
         if by_family.get(fam):
-            sections.append(f"<h2 class='fam'>{esc(fam)}</h2>" + "".join(by_family[fam]))
+            desc = family_desc.get(fam, "")
+            desc_html = f"<p class='fam-desc'>{esc(desc)}</p>" if desc else ""
+            sections.append(f"<h2 class='fam'>{esc(fam)}</h2>" + desc_html
+                            + "".join(by_family[fam]))
+
+    # Historical type coverage (item 1.5): only rendered once curated —
+    # top-level "attested_types" list vs per-cluster "historical_types".
+    coverage_html = ""
+    attested = top.get("attested_types") or []
+    if attested:
+        mapped: dict[str, list[int]] = {}
+        for cid, entry in meta.items():
+            for t in entry.get("historical_types") or []:
+                mapped.setdefault(t.lower(), []).append(cid)
+        rows = []
+        misses = []
+        for t in attested:
+            cids = sorted(mapped.get(str(t).lower(), []))
+            if cids:
+                links = ", ".join(f'<a href="cluster_{c:02d}.html">cl{c}</a>' for c in cids)
+                rows.append(f"<tr><td>{esc(t)}</td><td>{links}</td></tr>")
+            else:
+                misses.append(esc(str(t)))
+        miss_html = (f"<p class='lede' style='font-size:.9rem'>Attested types with <b>no "
+                     f"corresponding cluster</b> (the misses are evidence too): "
+                     f"{', '.join(misses)}.</p>") if misses else ""
+        coverage_html = (f"<h2 class='fam'>Historical type coverage</h2>"
+                         f"<table><thead><tr><th>Attested type</th><th>Cluster(s)</th></tr>"
+                         f"</thead><tbody>{''.join(rows)}</tbody></table>{miss_html}")
+
+    banner = render_reading_banner(summary)
+    prop_legend = ""
+    if any_proposed:
+        prop_legend = ('<p class="lede" style="font-size:.9rem">Names marked '
+                       '<span class="prop-mark">proposed</span> were assistant-proposed from '
+                       'recorded evidence (PROVENANCE_LOG Entry 004) and await curation; '
+                       'hover a marker for the evidence.</p>')
 
     return f"""<!doctype html>
 <html lang="en"><head>
@@ -715,8 +1105,11 @@ characters from {df.loc[df.cluster >= 0, "TCP"].nunique()} plays, grouped into f
 Each cluster page lists every member chronologically (candidate prototypes first), with
 landmarks, typicality scores, and speech evidence. Characters speaking fewer than 150
 words are not clustered, and only one edition of each play is included.</p>
-
+{banner}
+{prop_legend}
 {''.join(sections)}
+
+{coverage_html}
 
 <div class="footer">
   Generated automatically by <code>code/07_generate_site.py</code>.
@@ -728,13 +1121,29 @@ words are not clustered, and only one edition of each play is included.</p>
 # Main
 # -------------------------------------------------------------------
 def main() -> None:
+    import argparse
+    ap = argparse.ArgumentParser(description="Generate the static evidence site")
+    ap.add_argument("--no-characters", action="store_true",
+                    help="regenerate cluster pages + master index only; leave the "
+                         "existing docs/characters/ pages untouched (they do not "
+                         "depend on the cluster-page template)")
+    args = ap.parse_args()
+
     cxy = config.DATA_DIR / f"cluster_xy_table__{config.CLUSTER_TABLES[0]}.csv"
     if not cxy.exists():
         raise FileNotFoundError(f"{cxy} not found. Run 04_cluster.py first.")
     df = pd.read_csv(cxy, low_memory=False)
+    # Analysis-grade year (performance year, pre-fill) captured BEFORE
+    # derive_display_columns applies the Entry-005 display fills — the
+    # historical-profile strip and its badges use this; see _analysis_years.
+    _yr = pd.to_numeric(df["year"], errors="coerce")
+    _need = _yr.isna() & df["year"].notna()
+    _yr.loc[_need] = pd.to_numeric(
+        df.loc[_need, "year"].astype(str).str.extract(r"(\d{4})")[0], errors="coerce")
     from utils import derive_display_columns
     df = derive_display_columns(
         df, fills_path=config.DATA_DIR / "manual_metadata_fills.json")
+    df["year_analysis"] = _yr
     df["cluster"] = df["cluster"].astype(int)
 
     lbl_path = config.DATA_DIR / f"cluster_labels__{config.CLUSTER_TABLES[0]}.csv"
@@ -742,6 +1151,13 @@ def main() -> None:
         labels = pd.read_csv(lbl_path).set_index("cluster")
     else:
         labels = pd.DataFrame(columns=["top_words"]).set_index(pd.Index([], name="cluster"))
+
+    meta = load_cluster_meta()
+    summary = load_cluster_summary()
+    ctx = corpus_context(df)
+    print(f"📊 Corpus baselines (clustered, dated n={ctx['dated_n']}): "
+          f"median {ctx['median']}, pre-1590 {ctx['pre_share']:.1%}, "
+          f"post-1625 {ctx['post_share']:.1%}")
 
     out_dir = config.RESULTS_DIR
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -752,25 +1168,28 @@ def main() -> None:
     clusters = sorted(c for c in df.cluster.unique() if c != -1)
     for cid in clusters:
         (out_dir / f"cluster_{cid:02d}.html").write_text(
-            render_cluster_page(cid, df, labels), encoding="utf-8"
+            render_cluster_page(cid, df, labels, meta, ctx, summary), encoding="utf-8"
         )
     print(f"✅ {len(clusters)} cluster pages written")
 
     # 2) master cluster index
     (out_dir / "cluster_evidence.html").write_text(
-        render_master_index(df, labels), encoding="utf-8"
+        render_master_index(df, labels, ctx, summary), encoding="utf-8"
     )
     print(f"✅ cluster_evidence.html written")
 
     # 3) character pages (only for characters in non-outlier clusters)
-    clustered = df[df.cluster != -1].copy()
-    n_written = 0
-    for _, row in clustered.iterrows():
-        slug = slugify(row.get("character_id", ""))
-        page = render_character_page(row, df, labels)
-        (chars_dir / f"{slug}.html").write_text(page, encoding="utf-8")
-        n_written += 1
-    print(f"✅ {n_written} character pages written to {chars_dir}")
+    if args.no_characters:
+        print("⏭  character pages skipped (--no-characters)")
+    else:
+        clustered = df[df.cluster != -1].copy()
+        n_written = 0
+        for _, row in clustered.iterrows():
+            slug = slugify(row.get("character_id", ""))
+            page = render_character_page(row, df, labels)
+            (chars_dir / f"{slug}.html").write_text(page, encoding="utf-8")
+            n_written += 1
+        print(f"✅ {n_written} character pages written to {chars_dir}")
 
     print(f"\n📂 Site is at: {out_dir}")
     print(f"   Open {out_dir}/index.html locally, or push to GitHub Pages.")
