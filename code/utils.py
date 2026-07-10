@@ -37,7 +37,7 @@ def clean_speech_text(s: str) -> str:
     return s.strip()
 
 
-def derive_display_columns(df):
+def derive_display_columns(df, fills_path=None):
     """Add the flat display columns stages 06/07 expect (author, genre,
     company, play_type, Date_Decade) on top of the raw master-table schema.
 
@@ -45,6 +45,12 @@ def derive_display_columns(df):
     keeps the source-specific columns (authors_display, genre_brit_display,
     …), so 06/07 derive them here at load time instead of stage 04 baking
     them in. Idempotent: existing columns are left untouched.
+
+    `fills_path` (data/manual_metadata_fills.json): Heejin-approved
+    display-layer title/author/year fills for metadata-bare plays and
+    corrections of mislabeled collection items (PROVENANCE_LOG Entry 005).
+    Titles in the fills take precedence; author/year fill only where missing.
+    Source files are never modified.
     """
     import pandas as pd
 
@@ -86,6 +92,25 @@ def derive_display_columns(df):
         clean = clean.fillna(df["TCP"])
     df["title_raw"] = df.get("title")
     df["title"] = clean
+
+    # Heejin-approved manual fills/corrections (display layer only)
+    if fills_path is not None and "TCP" in df.columns:
+        import json as _json
+        from pathlib import Path as _Path
+        if _Path(fills_path).exists():
+            fills = _json.load(open(fills_path, encoding="utf-8")).get("fills", {})
+            t_map = {k: v["title"] for k, v in fills.items() if v.get("title")}
+            a_map = {k: v["author"] for k, v in fills.items() if v.get("author")}
+            y_map = {k: float(v["year"]) for k, v in fills.items() if v.get("year")}
+            tcp_s = df["TCP"].astype(str)
+            m = tcp_s.isin(t_map)
+            df.loc[m, "title"] = tcp_s[m].map(t_map)          # fills take precedence
+            if "authors_display" in df.columns:
+                need_a = tcp_s.isin(a_map) & df["authors_display"].isna()
+                df.loc[need_a, "authors_display"] = tcp_s[need_a].map(a_map)
+            if "year" in df.columns:
+                need_y = tcp_s.isin(y_map) & df["year"].isna()
+                df.loc[need_y, "year"] = tcp_s[need_y].map(y_map)
 
     if "author" not in df.columns:
         df["author"] = first_filled("authors_display", "title_page_author", "Author")

@@ -733,7 +733,8 @@ def main() -> None:
         raise FileNotFoundError(f"{cxy} not found. Run 04_cluster.py first.")
     df = pd.read_csv(cxy, low_memory=False)
     from utils import derive_display_columns
-    df = derive_display_columns(df)
+    df = derive_display_columns(
+        df, fills_path=config.DATA_DIR / "manual_metadata_fills.json")
     df["cluster"] = df["cluster"].astype(int)
 
     lbl_path = config.DATA_DIR / f"cluster_labels__{config.CLUSTER_TABLES[0]}.csv"

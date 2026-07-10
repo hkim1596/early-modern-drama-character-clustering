@@ -219,7 +219,8 @@ def main() -> None:
             continue
         df = pd.read_csv(path, low_memory=False)
         from utils import derive_display_columns
-        df = derive_display_columns(df)
+        df = derive_display_columns(
+            df, fills_path=config.DATA_DIR / "manual_metadata_fills.json")
         # keep only the columns the figure uses — the full table (speech text
         # etc.) would otherwise be serialized into the HTML (>100 MB)
         keep = ["x", "y", "cluster", "topic_label", "display_name",
