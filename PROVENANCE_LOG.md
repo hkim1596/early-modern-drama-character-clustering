@@ -475,6 +475,38 @@ scope = **full site including the 6,466 character pages, via a shared stylesheet
 
 ---
 
+## Entry 009 — 2026-07-10: the fourteen assistant-proposed cluster names approved by Heejin (Entry 004 closed)
+
+Heejin approved all fourteen assistant-proposed names (Entry 004: clusters 2, 3, 4, 9,
+10, 11, 12, 14, 16, 18, 19, 21, 22, 23) — approval executed in a **parallel working
+session** on 2026-07-10 and confirmed by Heejin in this session ("I think I approve
+those names in another session"). All 25 cluster names are now Heejin's curation.
+
+What the parallel session changed in `data/cluster_names__archetype.json` (verified
+here against the committed version before adoption): names and families of all 25
+clusters **byte-identical**; the 14 `proposed` flags removed; each cluster's drafting
+evidence preserved verbatim in a new `name_provenance` field with "; approved by
+Heejin 2026-07-10 (…)" appended; an update note added to `_note`. File reformatted
+(indent width) by that session's JSON writer.
+
+**Numbering reconciliation.** The parallel session's update note cited "PROVENANCE_LOG
+Entry 008", and its own log entry — if it wrote one — was overwritten by this session's
+concurrent Entry-008 (site redesign) commit `7eecf77`, which bridged the log file
+without a staleness guard. This entry reconstructs the approval record; the only edit
+made to the approved json here is correcting that one citation to Entry 009 (recorded
+in the `_note` itself). Lesson noted: cross-session commits to this log must re-stage
+the current on-disk log first.
+
+**Site effect:** the "name proposed — pending curation" badges and the index legend
+clear (they render from the `proposed` field). Cluster pages + master index
+regenerated; character pages and all computed values untouched. §7 item 5 (names
+awaiting Heejin) is closed.
+
+**Scope of this commit:** `data/cluster_names__archetype.json`,
+`docs/cluster_00–24.html`, `docs/cluster_evidence.html`, this log.
+
+---
+
 ### 7. Open items requiring explicit approval before any action
 
 1. ~~§4e year imputation~~ — **resolved 2026-07-07: keep, with explicit note** (recorded
@@ -486,8 +518,8 @@ scope = **full site including the 6,466 character pages, via a shared stylesheet
    ~20% missing DEEP titles (F5)); consensus clustering; fixed-budget chunk pooling
    experiment; "(perf.)" year marker on site pages for the §4e values.
 4. ~~Committing and pushing this log file~~ — **approved 2026-07-07**.
-5. Cluster names for ids 2, 3, 4, 9, 10, 11, 12, 14, 16, 18, 19, 21, 22, 23 —
-   awaiting Heejin (Entry 002).
+5. ~~Cluster names for ids 2, 3, 4, 9, 10, 11, 12, 14, 16, 18, 19, 21, 22, 23~~ —
+   **resolved 2026-07-10 (Entry 009): all fourteen approved by Heejin.**
 6. ~~A16527.x / A16564.x item-title assignments~~ — **resolved 2026-07-10 (Entry 005,
    Group D)**: cast + title-page evidence; corrections applied at display layer.
 7. ~~873 orphan character pages in `docs/characters/`~~ — **resolved 2026-07-07:
