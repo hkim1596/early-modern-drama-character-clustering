@@ -507,6 +507,29 @@ awaiting Heejin) is closed.
 
 ---
 
+## Entry 010 — 2026-07-10: "proposed" badge mechanism removed from the site (Heejin's direction; presentation-only)
+
+Heejin: "I don't want to have 'proposed' label at all." Beyond Entry 009 (which had
+already cleared the badges by data, since no cluster carries a `proposed` field), the
+rendering mechanism itself is now removed from `code/07_generate_site.py`: the name
+badge on cluster-page titles, the index card marker and its legend, and the
+`prop-mark`/`badge-prop` styles are gone; the methods page's names paragraph now states
+that drafting provenance is recorded in the names file and this log, never displayed.
+The `_schema` doc-string in `data/cluster_names__archetype.json` updated to match (its
+only change). Should future assistant-proposed names ever exist again, they are to be
+recorded in `name_provenance` + this log — not surfaced on pages.
+
+Provenance records themselves are untouched: Entries 004/009 and the per-cluster
+`name_provenance` fields remain the citable record of how each name was drafted and
+approved. No displayed data value or computation changed.
+
+**Scope of this commit:** `code/07_generate_site.py`,
+`data/cluster_names__archetype.json` (doc-string), `docs/site.css`,
+`docs/methods.html`, this log (plus any pages whose bytes change from the CSS/template
+cleanup).
+
+---
+
 ### 7. Open items requiring explicit approval before any action
 
 1. ~~§4e year imputation~~ — **resolved 2026-07-07: keep, with explicit note** (recorded

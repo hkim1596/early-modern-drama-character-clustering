@@ -59,7 +59,6 @@ SITE_CSS = """
   --b-typ-bg:  #e3ebf3;  --b-typ-fg:  #3c5570;
   --b-fam-bg:  #ececec;  --b-fam-fg:  #55555f;
   --b-time-bg: #f5eecb;  --b-time-fg: #7a6a2e;
-  --b-prop-bg: #fde8d7;  --b-prop-fg: #8a5a2e;
   --highlight: #fff3a8;
   --maxw: 1060px; --mast-h: 47px;
 }
@@ -129,7 +128,7 @@ code { background: var(--soft); border-radius: 4px; padding: 1px 5px; font-size:
                    color: #7a6a2e; text-transform: uppercase; margin-right: .5em; }
 
 /* ---- badges & chips (one system) ----------------------------------- */
-.badge, .chip, .prop-mark {
+.badge, .chip {
   display: inline-block; font-size: .64rem; font-weight: 700; letter-spacing: .05em;
   text-transform: uppercase; border-radius: 999px; padding: 2px 8px;
   margin-left: 6px; vertical-align: 2px;
@@ -137,8 +136,6 @@ code { background: var(--soft); border-radius: 4px; padding: 1px 5px; font-size:
 .badge-proto, .chip-prototype { background: var(--b-proto-bg); color: var(--b-proto-fg); }
 .chip-typical { background: var(--b-typ-bg); color: var(--b-typ-fg); }
 .badge-time { background: var(--b-time-bg); color: var(--b-time-fg); }
-.badge-prop, .prop-mark { background: var(--b-prop-bg); color: var(--b-prop-fg);
-                          text-transform: none; letter-spacing: .01em; font-size: .7rem; }
 
 /* ---- cards --------------------------------------------------------- */
 .idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
@@ -580,13 +577,11 @@ def render_curated_block(entry: dict) -> str:
     return f'<div class="curated">{"".join(parts)}</div>'
 
 
-def render_name_badge(entry: dict) -> str:
-    """Name-status marker (proposal item 1.2): assistant-proposed names stay
-    visibly provisional until Heejin revises them (PROVENANCE_LOG Entry 004)."""
-    if not entry or "proposed" not in entry:
-        return ""
-    return (f'<span class="badge badge-prop" title="{esc(entry["proposed"])}">'
-            f'name proposed — pending curation</span>')
+# render_name_badge removed 2026-07-10 (Entry 010, at Heejin's direction):
+# no "proposed" marker renders anywhere. Name provenance lives only in
+# data/cluster_names__<name>.json (name_provenance) and the PROVENANCE_LOG
+# (Entries 004/009). Future assistant-proposed names, if any, are recorded
+# the same way — never surfaced as on-page badges.
 
 
 def render_decade_spark(sub: pd.DataFrame) -> str:
@@ -1042,7 +1037,7 @@ def render_cluster_page(cluster_id: int, df: pd.DataFrame, labels: pd.DataFrame,
     # ---- Tier-1 sections (2026-07-10): banner, vocabulary lede, curated
     # block, historical profile, signatures --------------------------------
     banner = render_reading_banner(summary)
-    name_badge = render_name_badge(meta_entry)
+    name_badge = ""   # proposed-name badges removed (Entry 010)
     curated_block = render_curated_block(meta_entry)
 
     disp_kw = meta_entry.get("display_keywords") or ""
@@ -1306,7 +1301,6 @@ def render_master_index(df: pd.DataFrame, labels: pd.DataFrame,
     family_order = list(dict.fromkeys(
         [meta[c].get("family", "Other") for c in sorted(meta)] + ["Other"]))
     by_family: dict[str, list[str]] = {f: [] for f in family_order}
-    any_proposed = False
 
     for cid in sorted(c for c in df.cluster.unique() if c != -1):
         sub = df[df.cluster == cid]
@@ -1316,11 +1310,6 @@ def render_master_index(df: pd.DataFrame, labels: pd.DataFrame,
         name = entry.get("name", "")
         headline = f"Cluster {cid} — {esc(name)}" if name \
             else f"Cluster {cid} — {esc(cluster_label_for(cid, df))}"
-        prop_mark = ""
-        if "proposed" in entry:
-            any_proposed = True
-            prop_mark = (f'<span class="prop-mark" title="{esc(entry["proposed"])}">'
-                         f'proposed</span>')
         years = sub["year_roster"].dropna() if "year_roster" in sub.columns else sub["year"].dropna()
         yr_str = f"{int(years.min())}–{int(years.max())}" if len(years) else ""
         med_str = f" · median {int(years.median())}" if len(years) else ""
@@ -1342,7 +1331,7 @@ def render_master_index(df: pd.DataFrame, labels: pd.DataFrame,
                       f"<span style='color:var(--muted)'>({esc(truncate(str(r.get('title') or ''), 34))},{yr})</span>")
         card = f"""
 <a class="idx-card" href="cluster_{cid:02d}.html">
-  <h3>{headline}{prop_mark}</h3>
+  <h3>{headline}</h3>
   <p>{' · '.join(ex)}<br>
      {n} characters · {sub['TCP'].nunique()} plays · {yr_str}{med_str}{est_str}{spark}<br>
      <small>{esc(top_words)}</small></p>
@@ -1384,12 +1373,6 @@ def render_master_index(df: pd.DataFrame, labels: pd.DataFrame,
                          f"</thead><tbody>{''.join(rows)}</tbody></table>{miss_html}")
 
     banner = render_reading_banner(summary)
-    prop_legend = ""
-    if any_proposed:
-        prop_legend = ('<p class="lede" style="font-size:.9rem">Names marked '
-                       '<span class="prop-mark">proposed</span> were assistant-proposed from '
-                       'recorded evidence (PROVENANCE_LOG Entry 004) and await curation; '
-                       'hover a marker for the evidence.</p>')
 
     return f"""<!doctype html>
 <html lang="en"><head>
@@ -1411,7 +1394,6 @@ establishment year. Characters speaking fewer than 150 words are not clustered, 
 one edition of each play is included. Full rules: <a href="methods.html">Methods &amp;
 labels</a>.</p>
 {banner}
-{prop_legend}
 {''.join(sections)}
 
 {coverage_html}
@@ -1645,11 +1627,12 @@ with stoplists and a character-name blocklist. Name-like tokens that survive
 a second masking pass is a recorded open item. These words drive the excerpt
 highlighting.</p>
 
-<p><b>Cluster names and families.</b> Names are curation, not computation: they are
-assigned by the author (Heejin Kim) against the cluster profiles; assistant-proposed
-names awaiting revision are marked <span class="prop-mark">proposed</span> with their
-evidence in the tooltip. c-TF-IDF fallback labels appear where no name is curated yet.
-Family groupings on the index are curated the same way.</p>
+<p><b>Cluster names and families.</b> Names are curation, not computation: all 25 are
+assigned by the author (Heejin Kim) against the cluster profiles, and the drafting
+provenance of each name is recorded in the names file and the provenance log
+(Entries 004 and 009) rather than displayed on the pages. c-TF-IDF fallback labels
+appear where no name is curated yet (e.g. after a re-clustering). Family groupings on
+the index are curated the same way.</p>
 
 <h2>What these pages do not claim</h2>
 <p>Survival is not production: dating and counts describe the <em>extant, dated</em>
