@@ -1,90 +1,88 @@
 <!doctype html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Early Modern Drama — Character Clustering</title>
-<style>
-  :root {
-    --fg: #1d1d1f;
-    --muted: #6b6b73;
-    --accent: #5a4a8a;
-    --bg: #fafaf7;
-    --card: #ffffff;
-    --rule: #e5e5e0;
-  }
-  * { box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    color: var(--fg); background: var(--bg);
-    margin: 0; padding: 0;
-    line-height: 1.55;
-  }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 96px; }
-  h1 { font-size: 1.9rem; margin: 0 0 .25em; letter-spacing: -.01em; }
-  .lede { color: var(--muted); font-size: 1.05rem; margin: 0 0 2.5em; }
-  h2 { font-size: 1.15rem; margin: 2em 0 .75em; }
-  .cards { display: grid; gap: 14px; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--rule);
-    border-radius: 10px;
-    padding: 18px 22px;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color .15s, transform .15s;
-  }
-  .card:hover { border-color: var(--accent); transform: translateY(-1px); }
-  .card h3 { margin: 0 0 .25em; font-size: 1.05rem; color: var(--accent); }
-  .card p { margin: 0; color: var(--muted); font-size: .94rem; }
-  .meta { color: var(--muted); font-size: .9rem; margin-top: 1.5em; }
-  code { background: #f2f2ec; padding: 1px 6px; border-radius: 4px; font-size: .92em; }
-  a.repo { color: var(--accent); }
-  .footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
-</style>
-</head>
-<body>
+<title>Early Modern Drama — Character Archetypes · Character Clustering</title>
+<link rel="stylesheet" href="site.css">
+</head><body>
+<header class="masthead"><div class="in"><a class="brand" href="index.html">Early Modern Drama <span>· Character Archetypes</span></a><nav><a href="interactive_clusters__archetype.html">Map</a><a href="cluster_evidence.html">Clusters</a><a href="methods.html">Methods</a><a href="https://github.com/hkim1596/early-modern-drama-character-clustering">GitHub</a></nav></div></header>
 <div class="wrap">
 
-  <h1>Character Clustering in Early Modern English Drama</h1>
-  <p class="lede">An interactive map of dramatic-character archetypes built from the full speech of every named character in the early modern English repertoire. Each point is a character; color encodes cluster.</p>
-
-  <h2>Cluster map</h2>
-  <div class="cards">
-    <a class="card" href="interactive_clusters__archetype.html">
-      <h3>Archetype clustering</h3>
-      <p>Chunked speech embeddings (1,024-token windows, mean-pooled), leave-one-out play
-      centering, spherical k-means (k=25). Characters with fewer than 150 spoken words are
-      left unclustered. UMAP 2-D projection for display only.</p>
-    </a>
-  </div>
-
-  <h2>Per-cluster evidence</h2>
-  <p>
-    For each cluster, a dedicated page names the archetype, shows its most typical and most
-    familiar members, then lists every character in chronological order — the earliest members
-    are the candidate prototypes of that voice; later ones follow suit. Each row links to the
-    character's full speech; typicality (cosine similarity to the cluster centre) shows how
-    central a member is. Use these pages to verify the archetypal interpretation against the raw data.
-  </p>
-  <p><a class="repo" href="cluster_evidence.html">→ Browse all clusters with evidence</a></p>
-
-  <h2>How to read the map</h2>
-  <p>Each point is a single character; color encodes its archetype cluster. Hover for play,
-  author, date, genre, role, and the cluster's distinguishing words. Click a legend entry to
-  hide that cluster, double-click to isolate it. The dropdown menus highlight a single decade,
-  genre, author, play, play type, theater, or company — everything else dims. Characters
-  speaking fewer than 150 words are not shown (too little text for a stable stylistic
-  signature), and only one edition of each play is included.</p>
-
-  <h2>About</h2>
-  <p>Characters were extracted from <a href="https://textcreationpartnership.org/" target="_blank" rel="noopener">EEBO-TCP</a>; play metadata is merged from Wiggins &amp; Richardson's <em>British Drama: A Catalogue of Plays</em> and from <a href="https://deep.sas.upenn.edu/" target="_blank" rel="noopener">DEEP</a>. Speech is typographically normalized, spelling-modernized (MorphAdorner), and proper nouns are masked so clusters reflect register rather than shared names. Each character's speech is embedded with <code>Alibaba-NLP/gte-Qwen2-1.5B-instruct</code> in ~1,024-token windows, mean-pooled per character; play-level signal is removed by leave-one-out play centering; the typology is spherical k-means (k=25). The visible 2-D map is a UMAP projection for display only — cluster membership comes from the full 1,536-dimensional space.</p>
-
-  <p><a class="repo" href="https://github.com/hkim1596/early-modern-drama-character-clustering">→ View the source code on GitHub</a></p>
-
-  <div class="footer">
-    Built with Python, transformers, scikit-learn, UMAP, and Plotly.
-  </div>
+<div class="hero">
+<h1>Character archetypes in early modern English drama</h1>
+<p class="lede">A computational typology of dramatic voice, built from the complete
+speech of every speaking character in the early modern English repertoire — 6,466
+characters from 494 plays, grouped into 25 register clusters and traceable
+across a century of theatre (1520–1641).</p>
 </div>
-</body>
-</html>
+
+<div class="facts">
+  <div class="f"><b>6,466</b><i>characters</i></div>
+  <div class="f"><b>494</b><i>plays</i></div>
+  <div class="f"><b>25</b><i>clusters</i></div>
+  <div class="f"><b>1520–1641</b><i>years covered</i></div>
+</div>
+
+<div class="entries">
+  <a class="entry" href="interactive_clusters__archetype.html">
+    <h3>Interactive map</h3>
+    <p>Every character as a point in archetype space. Hover for play, author, date and
+    role; filter by decade, genre, author, company or theater.</p>
+    <span class="go">Open the map →</span>
+  </a>
+  <a class="entry" href="cluster_evidence.html">
+    <h3>Cluster evidence</h3>
+    <p>One page per cluster: when the type emerged, its prototype candidates,
+    historical profile, signatures, and every member with speech excerpts.</p>
+    <span class="go">Browse the 25 clusters →</span>
+  </a>
+  <a class="entry" href="methods.html">
+    <h3>Methods &amp; labels</h3>
+    <p>How every number and badge is computed — typicality, emergence, prototypes,
+    year bases, signatures — and what the pages do and do not claim.</p>
+    <span class="go">Read the methods →</span>
+  </a>
+</div>
+
+<h2>What the cluster pages show</h2>
+<p>Each cluster page names an archetype and lays out its evidence: a historical profile
+against the corpus baseline, author and genre signatures, landmark members, and a full
+chronological roster under performance-first dating. An emergence line dates when the
+type became an established resource ("established by" = the year the first tenth of its
+dated members had appeared), and <b>prototype</b> badges mark the formative-era members
+that are also strongly typical of the voice — the best candidates for its founding
+exemplars. Typicality (cosine similarity to the cluster centre) shows how central any
+member is; low-typicality members are blends of several registers, not misfits. Every
+row links to the character's full speech, so each archetypal reading can be verified
+against the raw text.</p>
+
+<h2>How to read the map</h2>
+<p>Each point is a single character; color encodes its archetype cluster. Hover for
+play, author, date, genre, role, and the cluster's distinguishing words. Click a legend
+entry to hide that cluster, double-click to isolate it. The dropdown menus highlight a
+single decade, genre, author, play, play type, theater, or company — everything else
+dims. Characters speaking fewer than 150 words are not shown (too little text for a
+stable stylistic signature), and only one edition of each play is included. The 2-D
+layout is a UMAP projection for display only — cluster membership comes from the full
+embedding space.</p>
+
+<h2>Data &amp; method in brief</h2>
+<p>Characters were extracted from <a href="https://textcreationpartnership.org/"
+target="_blank" rel="noopener">EEBO-TCP</a> drama transcriptions; play metadata is
+merged from Wiggins &amp; Richardson's <em>British Drama: A Catalogue of Plays</em> and
+from <a href="https://deep.sas.upenn.edu/" target="_blank" rel="noopener">DEEP</a>.
+Speech is typographically normalized, spelling-modernized (MorphAdorner), and proper
+nouns are masked so clusters reflect register rather than shared names. Each
+character's speech is embedded with <code>gte-Qwen2-1.5B-instruct</code> in
+~1024-token windows, mean-pooled per character; play-level
+signal is removed by leave-one-out play centering; the typology is spherical k-means
+(k=25). The space is a continuum with dense regions — read clusters as density peaks,
+not boxes; the <a href="methods.html">methods page</a> spells out every rule, and every
+data-affecting decision is recorded in the project's
+<a href="https://github.com/hkim1596/early-modern-drama-character-clustering/blob/main/PROVENANCE_LOG.md">provenance log</a>.</p>
+
+<div class="footer">
+  Heejin Kim · built with Python, transformers, scikit-learn, UMAP, and Plotly ·
+  <a href="https://github.com/hkim1596/early-modern-drama-character-clustering">source on GitHub</a> · <a href="methods.html">Methods &amp; labels</a>
+</div>
+</div></body></html>

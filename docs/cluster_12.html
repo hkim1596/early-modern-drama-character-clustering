@@ -3,110 +3,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Cluster 12 — Wooers, gallants &amp; courtly love-talk · Character Clustering</title>
-<style>
-:root {
-  --fg: #1d1d1f; --muted: #6b6b73; --accent: #5a4a8a;
-  --bg: #fafaf7; --card: #ffffff; --rule: #e5e5e0;
-  --soft: #f2f2ec; --bar: #c9bfe0; --highlight: #fff3a8;
-}
-* { box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-       color: var(--fg); background: var(--bg); margin: 0; padding: 0; line-height: 1.55; }
-.wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 96px; }
-nav.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1em; }
-nav.crumbs a { color: var(--accent); text-decoration: none; }
-nav.crumbs a:hover { text-decoration: underline; }
-h1 { font-size: 1.6rem; margin: 0 0 .15em; letter-spacing: -.005em; }
-.lede { color: var(--muted); margin: 0 0 1.5em; }
-h2 { font-size: 1.1rem; margin: 2em 0 .6em; letter-spacing: -.005em; }
-h3 { font-size: 1rem; margin: 1.5em 0 .4em; }
-.kvp { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; color: var(--muted); margin-bottom: .8em; }
-.kvp b { color: var(--fg); font-weight: 600; }
-.tag { display: inline-block; background: var(--soft); border-radius: 10px; padding: 1px 9px; font-size: .85rem; margin: 0 4px 4px 0; }
-.tag .n { color: var(--muted); margin-left: 4px; }
-.bar { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 1px 0; }
-.bar .label { width: 5.5em; text-align: right; }
-.bar .fill { background: var(--bar); height: 12px; border-radius: 4px; min-width: 1px; }
-.bar .count { width: 3em; }
-table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: .6em; }
-th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
-th { background: var(--soft); font-weight: 600; }
-td.num { text-align: right; font-variant-numeric: tabular-nums; }
-td a { color: var(--accent); text-decoration: none; }
-td a:hover { text-decoration: underline; }
-.character-block { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
-                   padding: 14px 18px; margin: 16px 0; }
-.character-block .ch-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-.character-block .ch-head .name { font-weight: 600; font-size: 1.02rem; }
-.character-block .ch-head .name a { color: var(--accent); text-decoration: none; }
-.character-block .ch-head .name a:hover { text-decoration: underline; }
-.character-block .ch-head .meta { color: var(--muted); font-size: .9rem; text-align: right; }
-.excerpt { background: var(--soft); border-left: 3px solid var(--accent);
-           border-radius: 4px; padding: 8px 14px; margin: 8px 0;
-           font-family: Georgia, "Times New Roman", serif; font-size: .96rem; line-height: 1.5; }
-mark { background: var(--highlight); padding: 0 2px; border-radius: 2px; }
-.plot { background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
-        padding: 12px 16px; margin: 10px 0; }
-.plot .title { font-weight: 600; margin-bottom: .25em; }
-.plot .meta { color: var(--muted); font-size: .88rem; margin-bottom: .5em; }
-.plot .body { font-size: .94rem; }
-.full-speech { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
-               padding: 18px 22px; font-family: Georgia, "Times New Roman", serif;
-               font-size: 1.0rem; line-height: 1.65;
-               max-height: 620px; overflow-y: auto; }
-.idx-card { display: block; background: var(--card); border: 1px solid var(--rule);
-            border-radius: 8px; padding: 14px 18px; margin: 10px 0;
-            text-decoration: none; color: inherit; }
-.idx-card:hover { border-color: var(--accent); }
-.idx-card h3 { margin: 0 0 .2em; color: var(--accent); font-size: 1.02rem; }
-.idx-card p { margin: 0; color: var(--muted); font-size: .9rem; }
-.footer { color: var(--muted); font-size: .85rem; margin-top: 3em; border-top: 1px solid var(--rule); padding-top: 1.5em; }
-th.sortable { cursor: pointer; user-select: none; }
-th.sortable:hover { background: #e8e8df; }
-th.sortable::after { content: " ↕"; color: var(--muted); font-size: .8em; }
-.badge { display: inline-block; font-size: .72rem; font-weight: 600; color: #7a6a2e;
-         background: #f5eecb; border-radius: 8px; padding: 0 7px; margin-left: 6px; vertical-align: 1px; }
-.landmarks { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; margin: .6em 0 1em; }
-.lm-card { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 14px; font-size: .9rem; }
-.lm-card .who { font-weight: 600; }
-.lm-card .who a { color: var(--accent); text-decoration: none; }
-.lm-card .who a:hover { text-decoration: underline; }
-.lm-card .whence { color: var(--muted); font-size: .86rem; }
-details { margin: 1em 0; }
-details > summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; padding: .3em 0; }
-h2.fam { margin-top: 2.2em; border-bottom: 1px solid var(--rule); padding-bottom: .3em; }
-.fam-desc { color: var(--muted); font-size: .9rem; margin: .2em 0 .6em; }
-.banner { background: #f4f1fa; border: 1px solid #ddd3ee; border-radius: 8px;
-          padding: 10px 16px; font-size: .9rem; margin: 0 0 1.4em; color: #3f3f46; }
-.banner b { color: var(--fg); }
-.badge-prop { background: #fde8d7; color: #8a5a2e; }
-.prop-mark { display: inline-block; font-size: .7rem; font-weight: 600; color: #8a5a2e;
-             background: #fde8d7; border-radius: 8px; padding: 0 6px; margin-left: 6px; vertical-align: 2px; }
-.kw-caveat { color: var(--muted); font-size: .84rem; margin: -.9em 0 1.2em; }
-.chip { display: inline-block; font-size: .72rem; font-weight: 600; color: #4a5a7a;
-        background: #e3eaf6; border-radius: 8px; padding: 0 7px; margin-left: 6px; vertical-align: 1px; }
-.tstrip { display: flex; align-items: flex-end; gap: 2px; height: 56px; margin: .5em 0 .15em; }
-.tslot { position: relative; width: 9px; height: 52px; }
-.tslot .c1 { position: absolute; bottom: 0; left: 0; width: 4px; background: #d9d9d0; border-radius: 1px; }
-.tslot .c2 { position: absolute; bottom: 0; right: 0; width: 4px; background: var(--accent);
-             border-radius: 1px; opacity: .85; }
-.taxis { font-size: .75rem; color: var(--muted); margin-bottom: .6em; }
-.sig-group { margin: .25em 0 .5em; }
-.sig-group .glabel { display: inline-block; min-width: 7.5em; color: var(--muted);
-                     font-size: .85rem; vertical-align: top; }
-.curated { background: #fbf7ee; border: 1px solid #eadfc8; border-radius: 8px;
-           padding: 10px 16px; margin: 0 0 1.2em; font-size: .93rem; }
-.curated .clabel { font-weight: 600; font-size: .78rem; letter-spacing: .02em;
-                   color: #7a6a2e; text-transform: uppercase; margin-right: .5em; }
-.spark { display: inline-flex; align-items: flex-end; gap: 1px; height: 14px; margin-left: 8px; }
-.spark i { display: inline-block; width: 3px; background: var(--bar); }
-tr.formative td { background: #f7f3e6; }
-.badge-proto { background: #e7e0f4; color: #4a3a7a; }
-.methods h2 { margin-top: 1.8em; border-bottom: 1px solid var(--rule); padding-bottom: .25em; }
-.methods p { max-width: 72ch; }
-.methods code { background: var(--soft); border-radius: 4px; padding: 0 4px; font-size: .9em; }
-</style>
-</head><body><div class="wrap">
+<link rel="stylesheet" href="site.css">
+</head><body>
+<header class="masthead"><div class="in"><a class="brand" href="index.html">Early Modern Drama <span>· Character Archetypes</span></a><nav><a href="interactive_clusters__archetype.html">Map</a><a class="active" href="cluster_evidence.html">Clusters</a><a href="methods.html">Methods</a><a href="https://github.com/hkim1596/early-modern-drama-character-clustering">GitHub</a></nav></div></header>
+<div class="wrap">
 
 <nav class="crumbs">
   <a href="index.html">Home</a> ›
@@ -117,15 +17,9 @@ tr.formative td { background: #f7f3e6; }
 <h1>Cluster 12 — Wooers, gallants &amp; courtly love-talk<span class="badge badge-prop" title="by assistant 2026-07-07 at Heejin&#x27;s request; evidence: queen/love/valentine; signor, handkerchief, dissemble, blushes; Romeo (F), Wittipol">name proposed — pending curation</span></h1>
 <p class="lede">Distinguishing vocabulary: <em>signor, sal, zelmane, handkerchief, absolon, dissemble, thrall, dois, blushes, creation</em></p>
 <p class="kw-caveat">Tokens that look like proper names in this list (e.g. <code>massinissa</code>, <code>faukenbridge</code>) are residue of incomplete name-masking, not register — a second masking pass is pending (PROVENANCE_LOG §7.3).</p>
+<div class="facts"><div class="f"><b>262</b><i>characters</i></div><div class="f"><b>184</b><i>plays</i></div><div class="f"><b>82</b><i>authors</i></div><div class="f"><b>1528–1640</b><i>median 1607 · perf-first</i></div><div class="f"><b>est. 1589</b><i>type established</i></div></div>
+<div class="kvp" style="margin-top:-.6em">Comedy 41% · Tragedy 18% · Tragicomedy 8%</div>
 <div class="banner"><b>How to read these pages.</b> Partition: 2026-07-07 NOS-verified run (k=25, seed 42, 6,466 characters). Character-space is a <b>continuum with dense prototype regions</b>, not a set of discrete boxes (silhouette 0.021; seed-to-seed ARI 0.29 (0.26–0.35 over 5 refits; report 2026-07-08)): read each cluster as a density peak, membership as graded, and low-typicality members as blends of several regions. Cluster ids are not stable across re-clustering runs. How every label and number here is computed: <a href="methods.html">Methods &amp; labels</a>.</div>
-
-<div class="kvp">
-  <span><b>262</b> characters</span>
-  <span><b>184</b> plays</span>
-  <span><b>82</b> authors</span>
-  <span>dates <b>1528–1640 (median 1607)</b></span>
-  <span>Comedy 41% · Tragedy 18% · Tragicomedy 8%</span>
-</div>
 
 
 
@@ -137,7 +31,7 @@ tr.formative td { background: #f7f3e6; }
 
 <h2>Landmarks</h2>
 <p class="lede" style="font-size:.92rem">The candidate <b>prototypes</b> (formative-era members with above-median typicality — see the roster below), the most <b>typical</b> members (closest to the cluster centroid) and the most <b>familiar</b> ones (major-author roles). Typicality is cosine similarity to the cluster centre — low values mean a blended, atypical member.</p>
-<div class="landmarks"><div class="lm-card"><div class="who"><a href="characters/A04942_BALTHAZAR.html">BALTHAZAR</a><span class="badge badge-proto">prototype</span></div><div class="whence">The Spanish Tragedy (Hieronimo is Mad Again), 1587 · Kyd · typicality 0.58</div></div><div class="lm-card"><div class="who"><a href="characters/A10041_2_LORD.html">2 LORD</a><span class="badge badge-proto">prototype</span></div><div class="whence">Cambises, King of Persia, 1561 · Preston · typicality 0.57</div></div><div class="lm-card"><div class="who"><a href="characters/A03181_GENTLEWOMAN.html">GENTLEWOMAN</a><span class="badge badge-proto">prototype</span></div><div class="whence">The Play of the Weather, 1528 · Heywood · typicality 0.57</div></div><div class="lm-card"><div class="who"><a href="characters/A06621_AMERULA.html">AMERULA</a><span class="badge badge-proto">prototype</span></div><div class="whence">Midas, 1589 · Lyly · typicality 0.50</div></div><div class="lm-card"><div class="who"><a href="characters/A06185_CILICIA.html">CILICIA</a><span class="badge badge-proto">prototype</span></div><div class="whence">A Looking Glass for London and England, 1588 · Lodge · typicality 0.49</div></div><div class="lm-card"><div class="who"><a href="characters/A19260_GERTRUDE.html">GERTRUDE</a><span class="badge">typical</span></div><div class="whence">Greene&#x27;s Tu Quoque, or The City Gallant, 1611 · Cooke · typicality 0.69</div></div><div class="lm-card"><div class="who"><a href="characters/A20100_EARL.html">EARL</a><span class="badge">typical</span></div><div class="whence">Westward Ho, 1604 · Dekker · typicality 0.62</div></div><div class="lm-card"><div class="who"><a href="characters/A11954_28_ROMEO.html">ROMEO</a><span class="badge">typical</span></div><div class="whence">Romeo and Juliet, 1595 · Shakespeare · typicality 0.61</div></div><div class="lm-card"><div class="who"><a href="characters/A04633_2_WITTIPOL.html">WITTIPOL</a><span class="badge">typical</span></div><div class="whence">The Devil Is an Ass, 1631 · Jonson · typicality 0.61</div></div><div class="lm-card"><div class="who"><a href="characters/A20083_HAMMON.html">HAMMON</a><span class="badge">typical</span></div><div class="whence">The Shoemaker&#x27;s Holiday, or The Gentle Craft, 1599 · Dekker · typicality 0.58</div></div><div class="lm-card"><div class="who"><a href="characters/A19183_ANSELM.html">ANSELM</a><span class="badge">typical</span></div><div class="whence">How a Man May Choose a Good Wife from a Bad, 1602 · Anonymous · typicality 0.58</div></div><div class="lm-card"><div class="who"><a href="characters/A21144_KING_EDWARD.html">KING EDWARD</a><span class="badge">familiar</span></div><div class="whence">The Reign of King Edward the Third, 1590 · Anonymous · typicality 0.36</div></div><div class="lm-card"><div class="who"><a href="characters/A11954_34_OTHELLO.html">OTHELLO</a><span class="badge">familiar</span></div><div class="whence">Othello, the Moor of Venice, 1604 · Shakespeare · typicality 0.31</div></div><div class="lm-card"><div class="who"><a href="characters/A06389_ELDER_LOVELESS.html">ELDER LOVELESS</a><span class="badge">familiar</span></div><div class="whence">The Scornful Lady, 1613 · Beaumont · typicality 0.38</div></div><div class="lm-card"><div class="who"><a href="characters/A11954_10_ROSALIND.html">ROSALIND</a><span class="badge">familiar</span></div><div class="whence">As You Like It, 1599 · Shakespeare · typicality 0.41</div></div></div>
+<div class="landmarks"><div class="lm-card"><div class="who"><a href="characters/A04942_BALTHAZAR.html">BALTHAZAR</a><span class="badge badge-proto">prototype</span></div><div class="whence">The Spanish Tragedy (Hieronimo is Mad Again), 1587 · Kyd · typicality 0.58</div></div><div class="lm-card"><div class="who"><a href="characters/A10041_2_LORD.html">2 LORD</a><span class="badge badge-proto">prototype</span></div><div class="whence">Cambises, King of Persia, 1561 · Preston · typicality 0.57</div></div><div class="lm-card"><div class="who"><a href="characters/A03181_GENTLEWOMAN.html">GENTLEWOMAN</a><span class="badge badge-proto">prototype</span></div><div class="whence">The Play of the Weather, 1528 · Heywood · typicality 0.57</div></div><div class="lm-card"><div class="who"><a href="characters/A06621_AMERULA.html">AMERULA</a><span class="badge badge-proto">prototype</span></div><div class="whence">Midas, 1589 · Lyly · typicality 0.50</div></div><div class="lm-card"><div class="who"><a href="characters/A06185_CILICIA.html">CILICIA</a><span class="badge badge-proto">prototype</span></div><div class="whence">A Looking Glass for London and England, 1588 · Lodge · typicality 0.49</div></div><div class="lm-card"><div class="who"><a href="characters/A19260_GERTRUDE.html">GERTRUDE</a><span class="badge chip-typical">typical</span></div><div class="whence">Greene&#x27;s Tu Quoque, or The City Gallant, 1611 · Cooke · typicality 0.69</div></div><div class="lm-card"><div class="who"><a href="characters/A20100_EARL.html">EARL</a><span class="badge chip-typical">typical</span></div><div class="whence">Westward Ho, 1604 · Dekker · typicality 0.62</div></div><div class="lm-card"><div class="who"><a href="characters/A11954_28_ROMEO.html">ROMEO</a><span class="badge chip-typical">typical</span></div><div class="whence">Romeo and Juliet, 1595 · Shakespeare · typicality 0.61</div></div><div class="lm-card"><div class="who"><a href="characters/A04633_2_WITTIPOL.html">WITTIPOL</a><span class="badge chip-typical">typical</span></div><div class="whence">The Devil Is an Ass, 1631 · Jonson · typicality 0.61</div></div><div class="lm-card"><div class="who"><a href="characters/A20083_HAMMON.html">HAMMON</a><span class="badge chip-typical">typical</span></div><div class="whence">The Shoemaker&#x27;s Holiday, or The Gentle Craft, 1599 · Dekker · typicality 0.58</div></div><div class="lm-card"><div class="who"><a href="characters/A19183_ANSELM.html">ANSELM</a><span class="badge chip-typical">typical</span></div><div class="whence">How a Man May Choose a Good Wife from a Bad, 1602 · Anonymous · typicality 0.58</div></div><div class="lm-card"><div class="who"><a href="characters/A21144_KING_EDWARD.html">KING EDWARD</a><span class="badge">familiar</span></div><div class="whence">The Reign of King Edward the Third, 1590 · Anonymous · typicality 0.36</div></div><div class="lm-card"><div class="who"><a href="characters/A11954_34_OTHELLO.html">OTHELLO</a><span class="badge">familiar</span></div><div class="whence">Othello, the Moor of Venice, 1604 · Shakespeare · typicality 0.31</div></div><div class="lm-card"><div class="who"><a href="characters/A06389_ELDER_LOVELESS.html">ELDER LOVELESS</a><span class="badge">familiar</span></div><div class="whence">The Scornful Lady, 1613 · Beaumont · typicality 0.38</div></div><div class="lm-card"><div class="who"><a href="characters/A11954_10_ROSALIND.html">ROSALIND</a><span class="badge">familiar</span></div><div class="whence">As You Like It, 1599 · Shakespeare · typicality 0.41</div></div></div>
 
 <h2>All 262 characters, oldest first</h2>
 <p class="lede" style="font-size:.92rem">A genealogical reading under <b>performance-first dating</b>: first-performance year where known (241 of 245 dated members), else the catalogued year — so years here can sit earlier than in the historical profile above, which keeps the published print-year basis. First recorded <b>1528</b> (GENTLEWOMAN, <em>The Play of the Weather</em>); established by <b>1589</b> — the year the first tenth of the cluster's dated members had appeared. Tinted rows fall in that formative era; <span class="badge badge-proto">prototype</span> marks its most typical members (typicality ≥ cluster median 0.37; top 5 of 16 qualifying of 25 formative) — the strongest candidates for this voice's founding exemplars. Early members below the gate are more likely blends than models; kinship, not proven indebtedness. Click a column header to re-sort. Full rules: <a href="methods.html">Methods &amp; labels</a>.</p>
@@ -150,7 +44,7 @@ members above — passages containing the cluster's distinguishing words (highli
 <div class="character-block">
   <div class="ch-head">
     <div class="name"><a href="characters/A03181_GENTLEWOMAN.html">GENTLEWOMAN</a>
-      <span class="muted"> in <em>The Play of the Weather</em></span><span class="chip">prototype</span>
+      <span class="muted"> in <em>The Play of the Weather</em></span><span class="chip chip-prototype">prototype</span>
     </div>
     <div class="meta">Heywood, John · 1528 · Comedy<br>477 words</div>
   </div>
@@ -166,7 +60,7 @@ members above — passages containing the cluster's distinguishing words (highli
 <div class="character-block">
   <div class="ch-head">
     <div class="name"><a href="characters/A10041_2_LORD.html">2 LORD</a>
-      <span class="muted"> in <em>Cambises, King of Persia</em></span><span class="chip">prototype</span>
+      <span class="muted"> in <em>Cambises, King of Persia</em></span><span class="chip chip-prototype">prototype</span>
     </div>
     <div class="meta">Preston, Thomas · 1561 · Tragedy<br>162 words</div>
   </div>
@@ -182,7 +76,7 @@ members above — passages containing the cluster's distinguishing words (highli
 <div class="character-block">
   <div class="ch-head">
     <div class="name"><a href="characters/A04942_BALTHAZAR.html">BALTHAZAR</a>
-      <span class="muted"> in <em>The Spanish Tragedy (Hieronimo is Mad Again)</em></span><span class="chip">prototype</span>
+      <span class="muted"> in <em>The Spanish Tragedy (Hieronimo is Mad Again)</em></span><span class="chip chip-prototype">prototype</span>
     </div>
     <div class="meta">Kyd, Thomas · 1587 · Tragedy · Unknown<br>1332 words</div>
   </div>
@@ -199,7 +93,7 @@ members above — passages containing the cluster's distinguishing words (highli
 <div class="character-block">
   <div class="ch-head">
     <div class="name"><a href="characters/A06185_CILICIA.html">CILICIA</a>
-      <span class="muted"> in <em>A Looking Glass for London and England</em></span><span class="chip">prototype</span>
+      <span class="muted"> in <em>A Looking Glass for London and England</em></span><span class="chip chip-prototype">prototype</span>
     </div>
     <div class="meta">Lodge, Thomas; Greene, Robert · 1588 · Biblical Moral · Derby&#x27;s (Strange&#x27;s) Men<br>224 words</div>
   </div>
@@ -215,7 +109,7 @@ members above — passages containing the cluster's distinguishing words (highli
 <div class="character-block">
   <div class="ch-head">
     <div class="name"><a href="characters/A06621_AMERULA.html">AMERULA</a>
-      <span class="muted"> in <em>Midas</em></span><span class="chip">prototype</span>
+      <span class="muted"> in <em>Midas</em></span><span class="chip chip-prototype">prototype</span>
     </div>
     <div class="meta">Lyly, John · 1589 · Comedy · Children of Paul&#x27;s (first) · before the Court;<br>181 words</div>
   </div>
@@ -231,7 +125,7 @@ members above — passages containing the cluster's distinguishing words (highli
 <div class="character-block">
   <div class="ch-head">
     <div class="name"><a href="characters/A21144_KING_EDWARD.html">KING EDWARD</a>
-      <span class="muted"> in <em>The Reign of King Edward the Third</em></span><span class="chip">familiar</span>
+      <span class="muted"> in <em>The Reign of King Edward the Third</em></span><span class="chip chip-familiar">familiar</span>
     </div>
     <div class="meta">Anonymous; Shakespeare, William (?) · 1590 · History · Derby&#x27;s (Strange&#x27;s) Men (?)<br>6528 words</div>
   </div>
@@ -248,7 +142,7 @@ members above — passages containing the cluster's distinguishing words (highli
 <div class="character-block">
   <div class="ch-head">
     <div class="name"><a href="characters/A11954_28_ROMEO.html">ROMEO</a>
-      <span class="muted"> in <em>Romeo and Juliet</em></span><span class="chip">typical</span>
+      <span class="muted"> in <em>Romeo and Juliet</em></span><span class="chip chip-typical">typical</span>
     </div>
     <div class="meta">Shakespeare, William · 1595<br>4662 words</div>
   </div>
@@ -265,7 +159,7 @@ members above — passages containing the cluster's distinguishing words (highli
 <div class="character-block">
   <div class="ch-head">
     <div class="name"><a href="characters/A20083_HAMMON.html">HAMMON</a>
-      <span class="muted"> in <em>The Shoemaker&#x27;s Holiday, or The Gentle Craft</em></span><span class="chip">typical</span>
+      <span class="muted"> in <em>The Shoemaker&#x27;s Holiday, or The Gentle Craft</em></span><span class="chip chip-typical">typical</span>
     </div>
     <div class="meta">Dekker, Thomas · 1599 · Comedy · Admiral&#x27;s (Nottingham&#x27;s) Men · before the Court;<br>1280 words</div>
   </div>
@@ -281,7 +175,7 @@ members above — passages containing the cluster's distinguishing words (highli
 <div class="character-block">
   <div class="ch-head">
     <div class="name"><a href="characters/A19183_ANSELM.html">ANSELM</a>
-      <span class="muted"> in <em>How a Man May Choose a Good Wife from a Bad</em></span><span class="chip">typical</span>
+      <span class="muted"> in <em>How a Man May Choose a Good Wife from a Bad</em></span><span class="chip chip-typical">typical</span>
     </div>
     <div class="meta">Anonymous (?) · 1602 · Comedy · Worcester&#x27;s Men<br>1972 words</div>
   </div>
@@ -298,7 +192,7 @@ members above — passages containing the cluster's distinguishing words (highli
 <div class="character-block">
   <div class="ch-head">
     <div class="name"><a href="characters/A20100_EARL.html">EARL</a>
-      <span class="muted"> in <em>Westward Ho</em></span><span class="chip">typical</span>
+      <span class="muted"> in <em>Westward Ho</em></span><span class="chip chip-typical">typical</span>
     </div>
     <div class="meta">Dekker, Thomas; Webster, John · 1604 · Comedy · Children of Paul&#x27;s (second)<br>1196 words</div>
   </div>
@@ -314,7 +208,7 @@ members above — passages containing the cluster's distinguishing words (highli
 <div class="character-block">
   <div class="ch-head">
     <div class="name"><a href="characters/A19260_GERTRUDE.html">GERTRUDE</a>
-      <span class="muted"> in <em>Greene&#x27;s Tu Quoque, or The City Gallant</em></span><span class="chip">typical</span>
+      <span class="muted"> in <em>Greene&#x27;s Tu Quoque, or The City Gallant</em></span><span class="chip chip-typical">typical</span>
     </div>
     <div class="meta">Cooke, John · 1611 · Comedy · Queen Anne&#x27;s Men<br>1450 words</div>
   </div>
@@ -330,7 +224,7 @@ members above — passages containing the cluster's distinguishing words (highli
 <div class="character-block">
   <div class="ch-head">
     <div class="name"><a href="characters/A04633_2_WITTIPOL.html">WITTIPOL</a>
-      <span class="muted"> in <em>The Devil Is an Ass</em></span><span class="chip">typical</span>
+      <span class="muted"> in <em>The Devil Is an Ass</em></span><span class="chip chip-typical">typical</span>
     </div>
     <div class="meta">Jonson, Ben · 1631<br>4232 words</div>
   </div>

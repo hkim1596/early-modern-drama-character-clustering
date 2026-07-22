@@ -435,6 +435,46 @@ corpus 1611). No stale "early" badges remain; `docs/characters/` untouched.
 
 ---
 
+## Entry 008 — 2026-07-10: site redesign ("clean modern academic"), shared stylesheet, generated landing page (approved; presentation-only)
+
+Heejin: "The design of the web page is not really organized. Make it more pleasing as
+well as organized design wise." Two recorded choices: direction = **clean modern
+academic** (over a serif "scholarly print edition" and a bolder editorial option);
+scope = **full site including the 6,466 character pages, via a shared stylesheet**.
+
+- All styling moved out of per-page inline `<style>` blocks into **`docs/site.css`**,
+  written by stage 07 (single source of truth — future redesigns touch one file, not
+  6,500). Every page gains a sticky masthead (Map · Clusters · Methods · GitHub), a
+  typographic scale, and one unified badge/chip palette (prototype violet · typical
+  blue · familiar gray · time amber · proposed orange — previously four ad-hoc schemes).
+  Rosters get sticky column headers under the masthead; formative-era rows keep their
+  tint plus an accent edge; layout is responsive.
+- Cluster-page header reorganized (presentation only): title → vocabulary lede → fact
+  strip (characters / plays / authors / year span / **est. YYYY**) → reading banner →
+  curated block. The establishment year is thereby surfaced as a headline figure. No
+  displayed value, rule, or computation changed.
+- **`docs/index.html` is now generated** by 07 (`render_landing_page`); it was a
+  hand-maintained static file. Prose refreshed with approval-consistent semantics: the
+  stale pre-Entry-007 sentence ("the earliest members are the candidate prototypes of
+  that voice") is retired in favor of the emergence/prototype wording; a Methods entry
+  card and dynamic corpus numbers (from the published table at build time) added.
+- **Character pages regenerated** (all 6,466): masthead + stylesheet link; the metadata
+  table's "Year" row is relabeled "Year (catalogued)" and a "**First performance**" row
+  (parsed `year_perf`, where the catalogue records one) is added — the Entry-007 dating
+  extended to character pages at their promised "next regeneration"; the cluster label
+  no longer doubles its id prefix ("Cluster 22 — 22: …" → "Cluster 22 — …"). The
+  methods-page sentence about character-page dating updated to match.
+- Verification: full rebuild reproduces Entry-007 values exactly (emergence table
+  identical; cl5 prototypes Pythias/Tellus/Alvida/Cornelia/Margaret; historical-profile
+  stats unchanged). Pages rendered and visually inspected (landing, index, cluster,
+  roster mid-scroll, character, methods) before shipping.
+- **Scope of this commit:** `code/07_generate_site.py`, `docs/site.css` (new),
+  `docs/index.html`, `docs/methods.html`, `docs/cluster_00–24.html`,
+  `docs/cluster_evidence.html`, `docs/characters/*.html` (6,466), this log.
+  No data file changed. The interactive map file is untouched.
+
+---
+
 ### 7. Open items requiring explicit approval before any action
 
 1. ~~§4e year imputation~~ — **resolved 2026-07-07: keep, with explicit note** (recorded
